@@ -20,6 +20,11 @@ body {
   line-height: 1.8;
   min-height: 100vh;
   transition: background-color 0.8s ease, color 0.8s ease;
+  /* 가이드 2부 반영: 프리미엄한 질감을 위한 미세 노이즈 텍스처 */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
 }
 
 a {
@@ -77,7 +82,7 @@ body.spring .card {
 
 body.spring .card:hover {
   border-color: #f4a0c0;
-  box-shadow: 0 8px 28px rgba(210, 100, 140, 0.18);
+  box-shadow: 0 12px 30px rgba(210, 100, 140, 0.18);
 }
 
 body.spring .card-tag {
@@ -155,7 +160,7 @@ body.summer .card {
 
 body.summer .card:hover {
   border-color: #4dd0e1;
-  box-shadow: 0 8px 28px rgba(0, 150, 180, 0.18);
+  box-shadow: 0 12px 30px rgba(0, 150, 180, 0.18);
 }
 
 body.summer .card-tag {
@@ -233,7 +238,7 @@ body.autumn .card {
 
 body.autumn .card:hover {
   border-color: #ff8a65;
-  box-shadow: 0 8px 28px rgba(180, 80, 20, 0.18);
+  box-shadow: 0 12px 30px rgba(180, 80, 20, 0.18);
 }
 
 body.autumn .card-tag {
@@ -311,7 +316,7 @@ body.winter .card {
 
 body.winter .card:hover {
   border-color: #90caf9;
-  box-shadow: 0 8px 28px rgba(30, 70, 120, 0.15);
+  box-shadow: 0 12px 30px rgba(30, 70, 120, 0.15);
 }
 
 body.winter .card-tag {
@@ -471,10 +476,13 @@ body.winter .post-body a { color: #1565c0; }
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  /* 가이드 2부 반영: 깊이감 있는 쉐도우 */
+  box-shadow: 0 10px 30px -10px rgba(0,0,0,0.1);
 }
 
 .card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px -15px rgba(0,0,0,0.15);
 }
 
 .card-tag {
@@ -514,10 +522,13 @@ body.winter .post-body a { color: #1565c0; }
   border: none;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
+  /* 가이드 2부 반영: 버튼 글로우 효과 */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
 /* ── 글 상세 페이지 ── */
