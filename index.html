@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>생생 정보통</title>
+  <meta name="description" content="생활에 도움이 되는 정보를 모아두는 아카이브입니다." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 계절 파티클 캔버스 -->
+  <canvas id="season-canvas"></canvas>
+
+  <div class="content-wrapper">
+
+    <!-- ── 헤더 ── -->
+    <header class="site-header">
+      <a href="index.html" class="logo">생생 정보통</a>
+      <nav class="site-nav">
+        <a href="index.html" class="nav-link">홈</a>
+        <a href="posts.html" class="nav-link">전체 글</a>
+        <!-- 현재 계절이 자동으로 표시됩니다 -->
+        <span class="season-badge">🌸 봄</span>
+      </nav>
+    </header>
+
+    <!-- ── 히어로 ── -->
+    <section class="hero">
+      <h1 class="hero-title">생생 정보통</h1>
+      <p class="hero-sub">생활에 꼭 필요한 정보를<br />한곳에 모아두었어요.</p>
+      <a href="posts.html" class="btn-primary">전체 글 보기 →</a>
+    </section>
+
+    <!-- ── 최근 글 ── -->
+    <section class="section">
+      <h2 class="section-title">최근 글</h2>
+
+      <div class="card-grid">
+
+        <!-- =====================================================
+             ✏️ 새 글을 추가할 때:
+             아래 카드 하나를 복사해서 붙여넣고
+             data-href, 태그, 제목, 요약, 날짜를 수정하세요.
+             ===================================================== -->
+
+        <!-- 카드 1 -->
+        <article class="card" data-href="post-001.html">
+          <span class="card-tag">생활정보</span>
+          <h3 class="card-title">알아두면 유용한 생활 꿀팁 모음</h3>
+          <p class="card-excerpt">일상에서 바로 써먹을 수 있는 꿀팁들을 모아봤어요. 시간과 돈을 아끼는 작은 습관들...</p>
+          <span class="card-meta">2025년 3월 29일</span>
+        </article>
+
+        <!-- 카드 2 -->
+        <article class="card" data-href="post-002.html">
+          <span class="card-tag">건강</span>
+          <h3 class="card-title">봄철 건강 관리, 이렇게 하세요</h3>
+          <p class="card-excerpt">환절기 면역력 높이는 방법과 봄에 특히 주의해야 할 건강 체크리스트를 정리했습니다...</p>
+          <span class="card-meta">2025년 3월 20일</span>
+        </article>
+
+        <!-- 카드 3 -->
+        <article class="card" data-href="post-003.html">
+          <span class="card-tag">절약</span>
+          <h3 class="card-title">공과금 줄이는 실전 방법 7가지</h3>
+          <p class="card-excerpt">전기세, 가스비, 수도세까지 — 크게 불편하지 않으면서도 매달 요금을 줄일 수 있는 방법...</p>
+          <span class="card-meta">2025년 3월 12일</span>
+        </article>
+
+      </div>
+
+      <!-- 더 보기 버튼 -->
+      <div style="text-align:center; margin-top: 2.5rem;">
+        <a href="posts.html" class="btn-primary">글 전체 보기</a>
+      </div>
+    </section>
+
+    <!-- ── 푸터 ── -->
+    <footer class="site-footer">
+      <p>© 2025 생생 정보통 · 계절마다 새로운 이야기</p>
+    </footer>
+
+  </div><!-- /content-wrapper -->
+
+  <script src="script.js"></script>
+</body>
+</html>

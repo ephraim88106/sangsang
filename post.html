@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--
+    ✏️ [수정 1] 아래 <title> 을 글 제목으로 바꾸세요.
+    예: <title>알아두면 유용한 생활 꿀팁 모음 — 생생 정보통</title>
+  -->
+  <title>글 제목 — 생생 정보통</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <canvas id="season-canvas"></canvas>
+
+  <div class="content-wrapper">
+
+    <!-- ── 헤더 ── -->
+    <header class="site-header">
+      <a href="index.html" class="logo">생생 정보통</a>
+      <nav class="site-nav">
+        <a href="index.html" class="nav-link">홈</a>
+        <a href="posts.html" class="nav-link">전체 글</a>
+        <span class="season-badge">🌸 봄</span>
+      </nav>
+    </header>
+
+    <!-- ── 글 본문 ── -->
+    <main class="post-container">
+
+      <!-- 뒤로가기 -->
+      <a href="posts.html" class="back-link">← 전체 글 목록</a>
+
+      <!-- 글 헤더 -->
+      <div class="post-header-inner">
+
+        <!--
+          ✏️ [수정 2] 태그를 바꾸세요.
+          예: 생활정보 / 건강 / 절약 / 요리 / 여행 등
+        -->
+        <span class="card-tag post-tag">태그</span>
+
+        <!--
+          ✏️ [수정 3] 글 제목을 바꾸세요.
+        -->
+        <h1 class="post-title">여기에 글 제목을 입력하세요</h1>
+
+        <!--
+          ✏️ [수정 4] 날짜를 바꾸세요.
+        -->
+        <p class="post-meta">2025년 3월 29일</p>
+      </div>
+
+      <!-- ── 글 본문 시작 ── -->
+      <!--
+        ✏️ [수정 5] 아래 <div class="post-body"> 안의 내용을 글로 채우세요.
+        사용 가능한 HTML 태그:
+          <h2>소제목</h2>
+          <h3>소소제목</h3>
+          <p>단락</p>
+          <ul><li>항목</li></ul>   (순서 없는 목록)
+          <ol><li>항목</li></ol>   (번호 목록)
+          <blockquote>인용문</blockquote>
+          <strong>굵은 글씨</strong>
+      -->
+      <div class="post-body">
+
+        <p>
+          여기에 글의 첫 번째 단락을 씁니다. 읽는 사람이 어떤 내용인지 바로 파악할 수 있도록
+          핵심을 먼저 언급하면 좋아요.
+        </p>
+
+        <h2>첫 번째 소제목</h2>
+
+        <p>
+          소제목 아래에 본문 내용을 씁니다. 단락이 길어지면 <code>&lt;p&gt;</code> 태그를
+          새로 열어서 나눠 주세요.
+        </p>
+
+        <ul>
+          <li>목록 항목 1</li>
+          <li>목록 항목 2</li>
+          <li>목록 항목 3</li>
+        </ul>
+
+        <h2>두 번째 소제목</h2>
+
+        <p>
+          계속해서 글을 써 내려가시면 됩니다.
+        </p>
+
+        <blockquote>
+          강조하고 싶은 문장은 이렇게 인용문 형태로 표시할 수 있어요.
+        </blockquote>
+
+        <p>
+          마지막 단락으로 글을 마무리합니다.
+        </p>
+
+      </div>
+      <!-- ── 글 본문 끝 ── -->
+
+    </main>
+
+    <!-- ── 푸터 ── -->
+    <footer class="site-footer">
+      <p>© 2025 생생 정보통 · 계절마다 새로운 이야기</p>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

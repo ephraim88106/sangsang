@@ -1,0 +1,688 @@
+/* =============================================
+   생생 정보통 - 공통 스타일 + 계절 테마
+   계절은 script.js가 자동으로 감지해서
+   <body>에 class="spring" / "summer" / "autumn" / "winter" 를 붙여줍니다.
+   ============================================= */
+
+/* ── 기본 리셋 ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
+  line-height: 1.8;
+  min-height: 100vh;
+  transition: background-color 0.8s ease, color 0.8s ease;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* =============================================
+   봄 테마 (3~5월) — 벚꽃 핑크 + 연두
+   ============================================= */
+body.spring {
+  background-color: #fff8f9;
+  color: #3d2b2e;
+}
+
+body.spring .site-header {
+  background: linear-gradient(135deg, #ffd6e0, #c8f7c5);
+}
+
+body.spring .nav-link,
+body.spring .logo {
+  color: #a0466a;
+}
+
+body.spring .nav-link:hover {
+  color: #d4688e;
+}
+
+body.spring .hero {
+  background: linear-gradient(160deg, #ffe4ec 0%, #e8fce8 100%);
+}
+
+body.spring .hero-title {
+  color: #8c2d4d;
+}
+
+body.spring .hero-sub {
+  color: #a0566a;
+}
+
+body.spring .season-badge {
+  background: #ffd6e7;
+  color: #a0466a;
+}
+
+body.spring .card {
+  background: #fff;
+  border: 1.5px solid #ffd6e0;
+  box-shadow: 0 4px 18px rgba(210, 100, 140, 0.08);
+}
+
+body.spring .card:hover {
+  border-color: #f4a0c0;
+  box-shadow: 0 8px 28px rgba(210, 100, 140, 0.18);
+}
+
+body.spring .card-tag {
+  background: #ffe0ec;
+  color: #b05070;
+}
+
+body.spring .card-title {
+  color: #7a2040;
+}
+
+body.spring .btn-primary {
+  background: linear-gradient(90deg, #f48fb1, #a5d6a7);
+  color: #fff;
+}
+
+body.spring .btn-primary:hover {
+  background: linear-gradient(90deg, #e879a0, #81c784);
+}
+
+body.spring .site-footer {
+  background: #fce8f0;
+  color: #a0566a;
+}
+
+body.spring .section-title::after {
+  background: linear-gradient(90deg, #f48fb1, #a5d6a7);
+}
+
+body.spring .post-body a { color: #c0406a; }
+
+/* =============================================
+   여름 테마 (6~8월) — 민트 + 하늘색
+   ============================================= */
+body.summer {
+  background-color: #f0fbff;
+  color: #1a3340;
+}
+
+body.summer .site-header {
+  background: linear-gradient(135deg, #b2ebf2, #80deea);
+}
+
+body.summer .nav-link,
+body.summer .logo {
+  color: #006064;
+}
+
+body.summer .nav-link:hover {
+  color: #00838f;
+}
+
+body.summer .hero {
+  background: linear-gradient(160deg, #e0f7fa 0%, #b2dfdb 100%);
+}
+
+body.summer .hero-title {
+  color: #004d40;
+}
+
+body.summer .hero-sub {
+  color: #00695c;
+}
+
+body.summer .season-badge {
+  background: #b2ebf2;
+  color: #006064;
+}
+
+body.summer .card {
+  background: #fff;
+  border: 1.5px solid #b2ebf2;
+  box-shadow: 0 4px 18px rgba(0, 150, 180, 0.08);
+}
+
+body.summer .card:hover {
+  border-color: #4dd0e1;
+  box-shadow: 0 8px 28px rgba(0, 150, 180, 0.18);
+}
+
+body.summer .card-tag {
+  background: #e0f7fa;
+  color: #00838f;
+}
+
+body.summer .card-title {
+  color: #004d40;
+}
+
+body.summer .btn-primary {
+  background: linear-gradient(90deg, #4dd0e1, #80cbc4);
+  color: #fff;
+}
+
+body.summer .btn-primary:hover {
+  background: linear-gradient(90deg, #26c6da, #4db6ac);
+}
+
+body.summer .site-footer {
+  background: #e0f7fa;
+  color: #00695c;
+}
+
+body.summer .section-title::after {
+  background: linear-gradient(90deg, #4dd0e1, #80cbc4);
+}
+
+body.summer .post-body a { color: #00838f; }
+
+/* =============================================
+   가을 테마 (9~11월) — 주황 + 갈색
+   ============================================= */
+body.autumn {
+  background-color: #fff9f4;
+  color: #3b2010;
+}
+
+body.autumn .site-header {
+  background: linear-gradient(135deg, #ffccbc, #ffe0b2);
+}
+
+body.autumn .nav-link,
+body.autumn .logo {
+  color: #7c3900;
+}
+
+body.autumn .nav-link:hover {
+  color: #bf360c;
+}
+
+body.autumn .hero {
+  background: linear-gradient(160deg, #fff3e0 0%, #ffe0b2 100%);
+}
+
+body.autumn .hero-title {
+  color: #6d2400;
+}
+
+body.autumn .hero-sub {
+  color: #934900;
+}
+
+body.autumn .season-badge {
+  background: #ffe0b2;
+  color: #7c3900;
+}
+
+body.autumn .card {
+  background: #fff;
+  border: 1.5px solid #ffccbc;
+  box-shadow: 0 4px 18px rgba(180, 80, 20, 0.08);
+}
+
+body.autumn .card:hover {
+  border-color: #ff8a65;
+  box-shadow: 0 8px 28px rgba(180, 80, 20, 0.18);
+}
+
+body.autumn .card-tag {
+  background: #fff3e0;
+  color: #bf360c;
+}
+
+body.autumn .card-title {
+  color: #6d2400;
+}
+
+body.autumn .btn-primary {
+  background: linear-gradient(90deg, #ff8a65, #ffca28);
+  color: #fff;
+}
+
+body.autumn .btn-primary:hover {
+  background: linear-gradient(90deg, #ff7043, #ffb300);
+}
+
+body.autumn .site-footer {
+  background: #fbe9e7;
+  color: #934900;
+}
+
+body.autumn .section-title::after {
+  background: linear-gradient(90deg, #ff8a65, #ffca28);
+}
+
+body.autumn .post-body a { color: #bf360c; }
+
+/* =============================================
+   겨울 테마 (12~2월) — 아이보리 + 슬레이트 블루
+   ============================================= */
+body.winter {
+  background-color: #f4f7fb;
+  color: #1e2a38;
+}
+
+body.winter .site-header {
+  background: linear-gradient(135deg, #cfd8dc, #b0bec5);
+}
+
+body.winter .nav-link,
+body.winter .logo {
+  color: #263238;
+}
+
+body.winter .nav-link:hover {
+  color: #1565c0;
+}
+
+body.winter .hero {
+  background: linear-gradient(160deg, #eceff1 0%, #cfd8dc 100%);
+}
+
+body.winter .hero-title {
+  color: #102030;
+}
+
+body.winter .hero-sub {
+  color: #37474f;
+}
+
+body.winter .season-badge {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+body.winter .card {
+  background: #fff;
+  border: 1.5px solid #cfd8dc;
+  box-shadow: 0 4px 18px rgba(30, 70, 120, 0.07);
+}
+
+body.winter .card:hover {
+  border-color: #90caf9;
+  box-shadow: 0 8px 28px rgba(30, 70, 120, 0.15);
+}
+
+body.winter .card-tag {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+body.winter .card-title {
+  color: #102030;
+}
+
+body.winter .btn-primary {
+  background: linear-gradient(90deg, #90caf9, #80deea);
+  color: #0d1b2a;
+}
+
+body.winter .btn-primary:hover {
+  background: linear-gradient(90deg, #64b5f6, #4dd0e1);
+}
+
+body.winter .site-footer {
+  background: #eceff1;
+  color: #455a64;
+}
+
+body.winter .section-title::after {
+  background: linear-gradient(90deg, #90caf9, #80deea);
+}
+
+body.winter .post-body a { color: #1565c0; }
+
+/* =============================================
+   공통 레이아웃 컴포넌트
+   ============================================= */
+
+/* 헤더 */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  transition: background 0.8s ease;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.site-nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-link {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* 시즌 뱃지 */
+.season-badge {
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.25rem 0.8rem;
+  border-radius: 50px;
+  letter-spacing: 0.5px;
+}
+
+/* 히어로 섹션 */
+.hero {
+  padding: 5rem 2rem 4rem;
+  text-align: center;
+  transition: background 0.8s ease;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  letter-spacing: -1px;
+  margin-bottom: 1rem;
+}
+
+.hero-sub {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 파티클 캔버스 (계절 효과) */
+#season-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.45;
+}
+
+/* 메인 컨텐츠 래퍼 */
+.content-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+/* 섹션 */
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 4px;
+  transition: background 0.8s ease;
+}
+
+/* 카드 그리드 */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* 카드 */
+.card {
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.7rem;
+  border-radius: 50px;
+  display: inline-block;
+  width: fit-content;
+  letter-spacing: 0.5px;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.card-excerpt {
+  font-size: 0.9rem;
+  opacity: 0.75;
+  flex: 1;
+}
+
+.card-meta {
+  font-size: 0.78rem;
+  opacity: 0.55;
+}
+
+/* 버튼 */
+.btn-primary {
+  display: inline-block;
+  padding: 0.7rem 1.8rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+/* ── 글 상세 페이지 ── */
+.post-container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 3rem 2rem 5rem;
+}
+
+.post-header {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1.5px solid currentColor;
+  opacity: 0.15;
+}
+
+.post-header {
+  opacity: 1;
+}
+
+.post-header-inner {
+  padding-bottom: 1.5rem;
+  border-bottom: 1.5px solid rgba(0,0,0,0.1);
+}
+
+.post-tag {
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.2rem 0.7rem;
+  border-radius: 50px;
+  display: inline-block;
+  margin-bottom: 0.8rem;
+}
+
+.post-title {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  line-height: 1.3;
+  margin-bottom: 0.75rem;
+}
+
+.post-meta {
+  font-size: 0.85rem;
+  opacity: 0.55;
+}
+
+.post-body {
+  font-size: 1.05rem;
+  line-height: 2;
+}
+
+.post-body h2 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin: 2.5rem 0 1rem;
+}
+
+.post-body h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 2rem 0 0.75rem;
+}
+
+.post-body p {
+  margin-bottom: 1.4rem;
+}
+
+.post-body ul, .post-body ol {
+  margin: 1rem 0 1.4rem 1.5rem;
+}
+
+.post-body li {
+  margin-bottom: 0.4rem;
+}
+
+.post-body blockquote {
+  border-left: 4px solid currentColor;
+  padding: 0.8rem 1.2rem;
+  margin: 1.5rem 0;
+  opacity: 0.75;
+  font-style: italic;
+  border-radius: 0 8px 8px 0;
+}
+
+.post-body strong {
+  font-weight: 800;
+}
+
+/* 글 목록 페이지 */
+.posts-header {
+  padding: 3rem 2rem 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* 검색바 */
+.search-bar {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  max-width: 480px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border-radius: 50px;
+  border: 1.5px solid rgba(0,0,0,0.15);
+  background: rgba(255,255,255,0.7);
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.search-input:focus {
+  border-color: rgba(0,0,0,0.4);
+}
+
+/* 푸터 */
+.site-footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.85rem;
+  transition: background 0.8s ease;
+  margin-top: 4rem;
+}
+
+/* 뒤로가기 링크 */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  opacity: 0.65;
+  transition: opacity 0.2s;
+}
+
+.back-link:hover {
+  opacity: 1;
+}
+
+/* 반응형 */
+@media (max-width: 640px) {
+  .site-header {
+    padding: 0 1rem;
+  }
+  .logo {
+    font-size: 1.1rem;
+  }
+  .site-nav {
+    gap: 1rem;
+  }
+  .hero {
+    padding: 3rem 1.2rem 2.5rem;
+  }
+  .section {
+    padding: 2.5rem 1.2rem;
+  }
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+  .post-container {
+    padding: 2rem 1.2rem 4rem;
+  }
+}
