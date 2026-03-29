@@ -658,6 +658,55 @@ body.winter .post-body a { color: #1565c0; }
   border-top: 1px solid rgba(0,0,0,0.05);
 }
 
+/* 포스트 본문 내 CTA */
+.post-cta {
+  margin: 3rem 0;
+  padding: 2rem;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.6);
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.post-cta h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-cta p {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  background: #3b82f6;
+  color: #fff !important;
+  text-decoration: none !important;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+}
+
+.ad-notice {
+  display: block;
+  margin-top: 1.2rem;
+  font-size: 0.75rem;
+  opacity: 0.5;
+}
+
 .footer-links {
   display: flex;
   justify-content: center;
