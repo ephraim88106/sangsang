@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-adsense-account" content="ca-pub-9118774019383180">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9118774019383180"
+     crossorigin="anonymous"></script>
+  <title>문의하기 — 생생 정보통</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .contact-form {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .form-group label {
+      font-weight: 600;
+      color: var(--text-color);
+    }
+    .form-group input, .form-group textarea {
+      padding: 0.8rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 1rem;
+    }
+    .form-group input:focus, .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    }
+    .submit-btn {
+      align-self: flex-start;
+      padding: 0.8rem 2rem;
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    .submit-btn:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+
+  <canvas id="season-canvas"></canvas>
+
+  <div class="content-wrapper">
+
+    <!-- ── 헤더 ── -->
+    <header class="site-header">
+      <a href="index.html" class="logo">생생 정보통</a>
+      <nav class="site-nav">
+        <a href="index.html" class="nav-link">홈</a>
+        <a href="posts.html" class="nav-link">전체 글</a>
+        <span class="season-badge">🌸 봄</span>
+      </nav>
+    </header>
+
+    <!-- ── 글 본문 ── -->
+    <main class="post-container">
+
+      <!-- 뒤로가기 -->
+      <a href="index.html" class="back-link">← 홈으로 돌아가기</a>
+
+      <!-- 글 헤더 -->
+      <div class="post-header-inner">
+        <span class="card-tag post-tag">소통</span>
+        <h1 class="post-title">문의하기</h1>
+        <p class="post-meta">언제든 소중한 의견을 남겨주세요.</p>
+      </div>
+
+      <div class="post-body">
+        <p>
+          서비스 이용 중 불편한 점이나 제안하고 싶은 내용, 혹은 비즈니스 협력 문의가 있으시면 아래 양식을 통해 연락해주세요. 확인 후 빠른 시일 내에 답변드리도록 하겠습니다.
+        </p>
+
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('문의가 접수되었습니다. (데모)');">
+          <div class="form-group">
+            <label for="name">이름</label>
+            <input type="text" id="name" name="name" placeholder="성함을 입력해주세요" required />
+          </div>
+          <div class="form-group">
+            <label for="email">이메일</label>
+            <input type="email" id="email" name="email" placeholder="답변받으실 이메일 주소를 입력해주세요" required />
+          </div>
+          <div class="form-group">
+            <label for="message">문의 내용</label>
+            <textarea id="message" name="message" rows="6" placeholder="문의하실 내용을 상세히 적어주세요" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">문의 보내기</button>
+        </form>
+      </div>
+
+    </main>
+
+    <!-- ── 푸터 ── -->
+    <footer class="site-footer">
+      <p>© 2025 생생 정보통 · 계절마다 새로운 이야기</p>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
