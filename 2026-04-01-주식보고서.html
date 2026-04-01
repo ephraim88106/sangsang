@@ -3,317 +3,320 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="google-adsense-account" content="ca-pub-9118774019383180">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9118774019383180"
-     crossorigin="anonymous"></script>
-  <title>2026-04-01 주식 테마 영향 분석 보고서 - 생생 정보통</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <title>2026-04-01 주식 테마 영향 분석</title>
   <style>
-    /* 보고서 전용 추가 스타일 */
-    .report-header {
-      background: linear-gradient(135deg, #1a1a2e, #16213e);
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif; background: #f5f7fa; color: #1a1a2e; line-height: 1.7; }
+    .wrapper { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+    header { background: linear-gradient(135deg, #1a1a2e, #16213e); color: #fff; padding: 2rem; border-radius: 16px; margin-bottom: 2rem; position: relative; overflow: hidden; }
+    header::after { content: '📊'; position: absolute; right: 2rem; top: 1rem; font-size: 5rem; opacity: 0.08; }
+    header h1 { font-size: 1.6rem; margin-bottom: 0.4rem; }
+    header p { opacity: 0.7; font-size: 0.9rem; }
+    .header-meta { display: flex; gap: 1.5rem; margin-top: 1rem; flex-wrap: wrap; }
+    .header-meta .meta-item { background: rgba(255,255,255,0.1); padding: 0.3rem 0.8rem; border-radius: 50px; font-size: 0.8rem; }
+    .disclaimer { background: #fff8e1; border-left: 4px solid #ffc107; padding: 1rem 1.2rem; border-radius: 0 8px 8px 0; margin-bottom: 2rem; font-size: 0.85rem; color: #7a6000; }
+    .market-summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.8rem; margin-bottom: 2rem; }
+    @media(max-width:700px){ .market-summary { grid-template-columns: repeat(2, 1fr); } }
+    .market-card { background: #fff; border-radius: 10px; padding: 0.9rem 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.06); text-align: center; }
+    .market-card .label { font-size: 0.75rem; color: #888; margin-bottom: 0.2rem; }
+    .market-card .value { font-size: 1.1rem; font-weight: 800; }
+    .market-card .change { font-size: 0.8rem; margin-top: 0.1rem; }
+    .up-color { color: #ef5350; }
+    .down-color { color: #42a5f5; }
+    .section { margin-bottom: 2rem; }
+    .section h2 { font-size: 1.15rem; font-weight: 800; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #e0e0e0; }
+    .issue-list { display: flex; flex-direction: column; gap: 0.8rem; }
+    .issue-item { background: #fff; padding: 1rem 1.2rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 4px solid #90caf9; display: flex; gap: 1rem; align-items: flex-start; }
+    .issue-item.hot { border-left-color: #ef5350; }
+    .issue-item.positive { border-left-color: #66bb6a; }
+    .issue-number { background: #e3f2fd; color: #1565c0; border-radius: 50%; width: 2rem; height: 2rem; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; flex-shrink: 0; margin-top: 0.1rem; }
+    .issue-item.hot .issue-number { background: #ffebee; color: #c62828; }
+    .issue-item.positive .issue-number { background: #e8f5e9; color: #2e7d32; }
+    .issue-content { flex: 1; }
+    .issue-item .label { font-size: 0.72rem; font-weight: 700; color: #1565c0; margin-bottom: 0.3rem; }
+    .issue-item.hot .label { color: #c62828; }
+    .issue-item.positive .label { color: #2e7d32; }
+    .issue-item .title { font-size: 0.98rem; font-weight: 700; margin-bottom: 0.2rem; }
+    .issue-item p { font-size: 0.88rem; color: #555; }
+    .theme-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+    @media(max-width:600px){ .theme-grid { grid-template-columns: 1fr; } }
+    .theme-card { background: #fff; border-radius: 12px; padding: 1.2rem; box-shadow: 0 2px 10px rgba(0,0,0,0.07); }
+    .theme-card.up { border-top: 4px solid #ef5350; }
+    .theme-card.down { border-top: 4px solid #42a5f5; }
+    .theme-card h3 { font-size: 1rem; font-weight: 800; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.4rem; }
+    .theme-card.up h3 { color: #c62828; }
+    .theme-card.down h3 { color: #1565c0; }
+    .badge { display: inline-block; padding: 0.15rem 0.6rem; border-radius: 50px; font-size: 0.75rem; font-weight: 700; margin-bottom: 0.5rem; margin-right: 0.3rem; }
+    .badge.sector-up { background: #fce4ec; color: #c62828; }
+    .badge.sector-down { background: #e3f2fd; color: #1565c0; }
+    .stocks { font-size: 0.85rem; margin: 0.5rem 0 0.2rem; color: #444; }
+    .stocks span { background: #f5f5f5; padding: 0.1rem 0.5rem; border-radius: 4px; margin-right: 0.3rem; font-weight: 600; display: inline-block; margin-bottom: 0.2rem; }
+    .stocks span.up-stock { background: #ffebee; color: #c62828; }
+    .stocks span.down-stock { background: #e3f2fd; color: #1565c0; }
+    .reason { font-size: 0.85rem; color: #666; margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid #f0f0f0; }
+    .sources { background: #fff; border-radius: 10px; padding: 1rem 1.2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.06); font-size: 0.82rem; color: #777; margin-bottom: 2rem; }
+    .sources strong { color: #444; display: block; margin-bottom: 0.4rem; }
+    .sources a { color: #1565c0; text-decoration: none; }
+    .cta-button-container { text-align: center; margin: 3rem 0; }
+    .cta-button {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      background: linear-gradient(135deg, #ff9800, #f44336);
       color: #fff;
-      padding: 2.5rem;
-      border-radius: 20px;
-      margin-bottom: 2.5rem;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-    }
-    .report-header::after {
-      content: '📊';
-      position: absolute;
-      right: 2rem;
-      top: 1rem;
-      font-size: 6rem;
-      opacity: 0.1;
-    }
-    .report-header h1 {
-      font-size: 1.8rem;
-      font-weight: 900;
-      margin-bottom: 0.5rem;
-    }
-    .report-header p {
-      opacity: 0.8;
-      font-size: 1rem;
-    }
-    .header-meta {
-      display: flex;
-      gap: 1rem;
-      margin-top: 1.5rem;
-      flex-wrap: wrap;
-    }
-    .header-meta span {
-      background: rgba(255,255,255,0.15);
-      padding: 0.4rem 1rem;
+      text-decoration: none;
+      font-weight: 800;
       border-radius: 50px;
-      font-size: 0.85rem;
-      backdrop-filter: blur(5px);
-    }
-    .disclaimer-box {
-      background: rgba(255, 193, 7, 0.1);
-      border-left: 5px solid #ffc107;
-      padding: 1.2rem;
-      border-radius: 4px 12px 12px 4px;
-      margin-bottom: 2.5rem;
-      font-size: 0.9rem;
-    }
-    .issue-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.2rem;
-      margin-bottom: 3rem;
-    }
-    .issue-card {
-      background: #fff;
-      padding: 1.5rem;
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-      border-left: 6px solid #90caf9;
-      display: flex;
-      gap: 1.5rem;
-      transition: transform 0.3s ease;
-    }
-    .issue-card:hover {
-      transform: translateX(10px);
-    }
-    .issue-card.hot { border-left-color: #ef5350; }
-    .issue-card.positive { border-left-color: #66bb6a; }
-    .issue-num {
-      width: 40px;
-      height: 40px;
-      background: #f0f7ff;
-      color: #1565c0;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 900;
-      flex-shrink: 0;
-    }
-    .issue-card.hot .issue-num { background: #ffebee; color: #c62828; }
-    .issue-card.positive .issue-num { background: #e8f5e9; color: #2e7d32; }
-    .issue-content h3 {
+      box-shadow: 0 10px 20px rgba(244, 67, 54, 0.2);
+      transition: all 0.3s ease;
       font-size: 1.1rem;
-      font-weight: 800;
-      margin-bottom: 0.5rem;
+      border: none;
+      cursor: pointer;
     }
-    .issue-content p {
-      font-size: 0.95rem;
-      color: #555;
-      line-height: 1.6;
+    .cta-button:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 15px 25px rgba(244, 67, 54, 0.3);
+      background: linear-gradient(135deg, #ffa726, #ff5252);
     }
-    .issue-tag {
-      font-size: 0.75rem;
-      font-weight: 800;
-      margin-bottom: 0.4rem;
-      display: block;
-      color: #1565c0;
-    }
-    .issue-card.hot .issue-tag { color: #c62828; }
-    .issue-card.positive .issue-tag { color: #2e7d32; }
-
-    .theme-grid-report {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1.5rem;
-    }
-    .theme-item-card {
-      background: #fff;
-      border-radius: 16px;
-      padding: 1.5rem;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-      border: 1px solid rgba(0,0,0,0.03);
-    }
-    .theme-item-card.up { border-top: 5px solid #ef5350; }
-    .theme-item-card.down { border-top: 5px solid #42a5f5; }
-    .theme-item-card h3 {
-      font-size: 1.2rem;
-      font-weight: 900;
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .theme-item-card.up h3 { color: #c62828; }
-    .theme-item-card.down h3 { color: #1565c0; }
-    .stock-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 1rem;
-    }
-    .stock-tag {
-      padding: 0.2rem 0.6rem;
-      border-radius: 6px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      background: #f5f5f5;
-    }
-    .stock-tag.up { background: #ffebee; color: #c62828; }
-    .stock-tag.down { background: #e3f2fd; color: #1565c0; }
-    .theme-reason {
-      font-size: 0.9rem;
-      color: #666;
-      padding-top: 0.8rem;
-      border-top: 1px solid #f0f0f0;
-      line-height: 1.6;
-    }
+    footer { text-align: center; font-size: 0.8rem; color: #999; margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #e0e0e0; }
   </style>
 </head>
 <body>
+<div class="wrapper">
+  <header>
+    <h1>📊 2026-04-01 주식 테마 영향 분석 보고서</h1>
+    <p>전일(2026-03-31) 주요 이슈 기반 분석 · 자동 생성</p>
+    <div class="header-meta">
+      <span class="meta-item">🗓️ 분석 기준일: 2026-03-31</span>
+      <span class="meta-item">📅 보고서 발행: 2026-04-01 08:00</span>
+      <span class="meta-item">🔍 이슈 7건 선별</span>
+    </div>
+  </header>
 
-  <!-- 계절 파티클 캔버스 -->
-  <canvas id="season-canvas"></canvas>
+  <div class="disclaimer">
+    ⚠️ 이 보고서는 <strong>투자 참고용 정보</strong>이며, 투자 권유나 추천이 아닙니다. 수집된 뉴스 기반의 테마 분석으로 실제 주가와 다를 수 있습니다.
+  </div>
 
-  <div class="content-wrapper">
+  <!-- 시장 현황 요약 -->
+  <div class="market-summary">
+    <div class="market-card">
+      <div class="label">코스피</div>
+      <div class="value down-color">5,052.46</div>
+      <div class="change down-color">▼ 4.26%</div>
+    </div>
+    <div class="market-card">
+      <div class="label">S&amp;P 500</div>
+      <div class="value up-color">6,528.52</div>
+      <div class="change up-color">▲ 2.91%</div>
+    </div>
+    <div class="market-card">
+      <div class="label">WTI 유가</div>
+      <div class="value">$102.12</div>
+      <div class="change down-color">하락 전환</div>
+    </div>
+    <div class="market-card">
+      <div class="label">원/달러 환율</div>
+      <div class="value up-color">1,530원</div>
+      <div class="change up-color">▲ 20원+</div>
+    </div>
+  </div>
 
-    <!-- ── 헤더 ── -->
-    <header class="site-header">
-      <a href="index.html" class="logo">생생 정보통</a>
-      <nav class="site-nav">
-        <a href="index.html" class="nav-link">홈</a>
-        <a href="posts.html" class="nav-link">전체 글</a>
-        <a href="contact.html" class="nav-link">문의</a>
-        <span class="season-badge"></span>
-      </nav>
-    </header>
+  <!-- 전일 주요 이슈 -->
+  <div class="section">
+    <h2>📰 전일 주요 이슈 (2026-03-31)</h2>
+    <div class="issue-list">
 
-    <!-- ── 메인 컨텐츠 ── -->
-    <main class="post-container" style="max-width: 900px;">
-      
-      <div class="report-header">
-        <h1>2026-04-01 주식 테마 영향 분석 보고서</h1>
-        <p>전일(2026-03-31) 주요 이슈 기반 분석 · 자동 생성</p>
-        <div class="header-meta">
-          <span>🗓️ 분석 기준일: 2026-03-31</span>
-          <span>📅 발행: 2026-04-01 08:00</span>
-          <span>🔍 이슈 7건 선별</span>
+      <div class="issue-item positive">
+        <div class="issue-number">1</div>
+        <div class="issue-content">
+          <div class="label">긍정 · 글로벌</div>
+          <div class="title">이란, 미국과 종전 의향 시그널 — S&amp;P 500 급등</div>
+          <p>이란이 미국과의 분쟁 종식 의향을 밝히면서 뉴욕증시가 급반등. S&amp;P 500이 2.91% 상승하며 5월 이후 최대 일일 상승폭을 기록했습니다. 다우지수도 1,100포인트 이상 급등했습니다.</p>
         </div>
       </div>
 
-      <div class="disclaimer-box">
-        ⚠️ <strong>주의사항:</strong> 이 보고서는 투자 참고용 정보이며, 투자 권유나 추천이 아닙니다. 수집된 뉴스 기반의 테마 분석으로 실제 주가와 다를 수 있습니다.
+      <div class="issue-item hot">
+        <div class="issue-number">2</div>
+        <div class="issue-content">
+          <div class="label">부정 · 국내증시</div>
+          <div class="title">코스피 4.26% 급락, 5,100선 붕괴</div>
+          <p>중동 리스크 여파로 코스피가 4%대 급락하며 5,052.46에 마감. 3월 한 달간 국내 증시 시가총액 약 840조원이 증발했습니다. 삼성전자·SK하이닉스 두 종목에서만 372조원 시총 감소.</p>
+        </div>
       </div>
 
-      <!-- 시장 현황 -->
-      <section style="margin-bottom: 3rem;">
-        <h2 class="section-title">📊 시장 현황 요약</h2>
-        <div class="stat-row">
-          <div class="stat-card">
-            <div class="stat-desc">코스피</div>
-            <div class="stat-num blue">5,052.46</div>
-            <div class="stat-desc blue">▼ 4.26%</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-desc">S&P 500</div>
-            <div class="stat-num red">6,528.52</div>
-            <div class="stat-desc red">▲ 2.91%</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-desc">원/달러 환율</div>
-            <div class="stat-num red">1,530원</div>
-            <div class="stat-desc red">▲ 20원+</div>
-          </div>
+      <div class="issue-item hot">
+        <div class="issue-number">3</div>
+        <div class="issue-content">
+          <div class="label">부정 · 환율</div>
+          <div class="title">원/달러 환율 1,530원 돌파 — 17년래 최고</div>
+          <p>환율이 장중 20원 넘게 급등해 1,530원을 넘어섰습니다. 2009년 글로벌 금융위기 이후 17년 만의 최고치로, 수입물가 상승 압력이 가중되고 있습니다.</p>
         </div>
-      </section>
-
-      <!-- 전일 주요 이슈 -->
-      <section style="margin-bottom: 3rem;">
-        <h2 class="section-title">📰 전일 주요 이슈</h2>
-        <div class="issue-grid">
-          
-          <div class="issue-card positive">
-            <div class="issue-num">1</div>
-            <div class="issue-content">
-              <span class="issue-tag">긍정 · 글로벌</span>
-              <h3>이란, 미국과 종전 의향 시그널 — S&P 500 급등</h3>
-              <p>이란이 미국과의 분쟁 종식 의향을 밝히면서 뉴욕증시가 급반등했습니다. 에너지 가격 하락 기대감이 시장에 온기를 불어넣고 있습니다.</p>
-            </div>
-          </div>
-
-          <div class="issue-card hot">
-            <div class="issue-num">2</div>
-            <div class="issue-content">
-              <span class="issue-tag">긴급 · 환율</span>
-              <h3>환율 1,530원 돌파 — 수출입 기업 비상</h3>
-              <p>원/달러 환율이 1,530원을 넘어서며 심리적 마지노선을 위협하고 있습니다. 원자재 수입 비용 상승으로 제조 기업들의 수익성 악화가 우려됩니다.</p>
-            </div>
-          </div>
-
-          <div class="issue-card">
-            <div class="issue-num">3</div>
-            <div class="issue-content">
-              <span class="issue-tag">IT · 반도체</span>
-              <h3>차세대 HBM4 양산 가속화 — 삼성/SK 경쟁 심화</h3>
-              <p>고대역폭 메모리(HBM) 4세대 양산 일정이 앞당겨지면서 반도체 장비주들에 대한 관심이 다시 집중되고 있습니다.</p>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- 주요 테마 및 종목 -->
-      <section style="margin-bottom: 3rem;">
-        <h2 class="section-title">🎯 주목해야 할 테마</h2>
-        <div class="theme-grid-report">
-          
-          <div class="theme-item-card up">
-            <h3>📈 반도체 장비 (HBM)</h3>
-            <div class="stock-tags">
-              <span class="stock-tag up">한미반도체</span>
-              <span class="stock-tag up">HPSP</span>
-              <span class="stock-tag">이오테크닉스</span>
-            </div>
-            <p class="theme-reason">AI 서버 수요 지속과 HBM4 조기 양산 소식으로 메모리 공정 장비주 수혜 예상.</p>
-          </div>
-
-          <div class="theme-item-card down">
-            <h3>📉 항공/여행 (환율 압박)</h3>
-            <div class="stock-tags">
-              <span class="stock-tag down">대한항공</span>
-              <span class="stock-tag down">하나투어</span>
-              <span class="stock-tag">제주항공</span>
-            </div>
-            <p class="theme-reason">고환율로 인한 유류비 부담 가중 및 해외여행 수요 위축 우려로 단기 약세 전망.</p>
-          </div>
-
-          <div class="theme-item-card up">
-            <h3>📈 원전 (에너지 전환)</h3>
-            <div class="stock-tags">
-              <span class="stock-tag up">두산에너빌리티</span>
-              <span class="stock-tag">우리기술</span>
-              <span class="stock-tag up">비에이치아이</span>
-            </div>
-            <p class="theme-reason">글로벌 에너지 안보 강화와 체코 원전 수주 기대감 지속으로 정책 수혜 기대.</p>
-          </div>
-
-        </div>
-      </section>
-
-      <div class="post-cta">
-        <h3>💡 투자의 중심은 '정보'입니다</h3>
-        <p>매일 아침 업데이트되는 생생 정보통의 주식 테마 분석으로 시장의 흐름을 놓치지 마세요.</p>
-        <a href="posts.html" class="cta-button">다른 정보 더 보기</a>
-        <span class="ad-notice">※ 본 콘텐츠는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받을 수 있습니다.</span>
       </div>
 
-    </main>
-
-    <!-- ── 푸터 ── -->
-    <footer class="site-footer">
-      <div class="footer-links">
-        <a href="privacy.html">개인정보 처리방침</a>
-        <a href="contact.html">문의하기</a>
+      <div class="issue-item hot">
+        <div class="issue-number">4</div>
+        <div class="issue-content">
+          <div class="label">부정 · 반도체</div>
+          <div class="title">글로벌 반도체주 동반 하락 — 필라델피아 반도체지수 -4.23%</div>
+          <p>뉴욕증시에서 마이크론, 인텔 등 주요 반도체 기업 동반 하락. 삼성전자 -4%, SK하이닉스 -7% 이상 급락했으나 이후 미국 장에서 종전 기대감으로 반등 조짐.</p>
+        </div>
       </div>
-      <p>© 2025 생생 정보통 · 계절마다 새로운 이야기</p>
-    </footer>
 
-  </div><!-- /content-wrapper -->
+      <div class="issue-item">
+        <div class="issue-number">5</div>
+        <div class="issue-content">
+          <div class="label">중립 · 에너지</div>
+          <div class="title">WTI $102, 종전 시그널에 하락 전환</div>
+          <p>중동 긴장으로 $106~107까지 치솟았던 유가가 이란 종전 시그널 이후 $102선으로 하락 전환. 카타르 LNG 단지 공격으로 글로벌 LNG 공급 20% 차질 우려는 지속.</p>
+        </div>
+      </div>
 
-  <script src="script.js"></script>
+      <div class="issue-item positive">
+        <div class="issue-number">6</div>
+        <div class="issue-content">
+          <div class="label">긍정 · 수출</div>
+          <div class="title">국내 반도체 수출 호조세 지속</div>
+          <p>중동 리스크에도 불구하고 국내 반도체 수출은 호조세를 이어가며, 수출 경쟁력 유지를 확인. AI 서버·HBM 수요가 뒷받침하고 있습니다.</p>
+        </div>
+      </div>
+
+      <div class="issue-item">
+        <div class="issue-number">7</div>
+        <div class="issue-content">
+          <div class="label">중립 · AI</div>
+          <div class="title">AI 투자 수익성 의구심 확대</div>
+          <p>AI 관련 대규모 투자 대비 수익 회수에 대한 시장의 의구심이 커지며, 기술주 밸류에이션 부담이 작용. 다만 주가 조정으로 밸류에이션 부담은 일부 해소.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 상승/하락 테마 -->
+  <div class="section">
+    <h2>📈 상승 예상 테마 &amp; 📉 하락 예상 테마</h2>
+    <div class="theme-grid">
+
+      <!-- 상승 1 -->
+      <div class="theme-card up">
+        <h3>📈 낙폭과대 반등 (반도체)</h3>
+        <span class="badge sector-up">반도체·IT</span>
+        <div class="stocks">
+          <span class="up-stock">삼성전자</span>
+          <span class="up-stock">SK하이닉스</span>
+          <span class="up-stock">한미반도체</span>
+        </div>
+        <div class="reason">미국 증시 급반등(S&amp;P +2.91%) + 이란 종전 시그널로 전일 4~7% 급락한 반도체주 기술적 반등 기대. 반도체 수출 호조세도 뒷받침.</div>
+      </div>
+
+      <!-- 하락 1 -->
+      <div class="theme-card down">
+        <h3>📉 정유·에너지</h3>
+        <span class="badge sector-down">에너지·정유</span>
+        <div class="stocks">
+          <span class="down-stock">SK이노베이션</span>
+          <span class="down-stock">S-Oil</span>
+          <span class="down-stock">GS</span>
+        </div>
+        <div class="reason">이란 종전 의향으로 유가 $106→$102 하락 전환. 전쟁 프리미엄 축소 시 정유주 차익실현 매물 출회 예상.</div>
+      </div>
+
+      <!-- 상승 2 -->
+      <div class="theme-card up">
+        <h3>📈 항공·여행·레저</h3>
+        <span class="badge sector-up">항공·여행</span>
+        <div class="stocks">
+          <span class="up-stock">대한항공</span>
+          <span class="up-stock">하나투어</span>
+          <span class="up-stock">제주항공</span>
+        </div>
+        <div class="reason">중동 긴장 완화 기대 + 유가 하락 전환으로 항공사 유류비 부담 경감. 여행 수요 회복 기대감 유입.</div>
+      </div>
+
+      <!-- 하락 2 -->
+      <div class="theme-card down">
+        <h3>📉 방산</h3>
+        <span class="badge sector-down">방위산업</span>
+        <div class="stocks">
+          <span class="down-stock">한화에어로스페이스</span>
+          <span class="down-stock">LIG넥스원</span>
+          <span class="down-stock">현대로템</span>
+        </div>
+        <div class="reason">이란 종전 시그널로 방산주 전쟁 프리미엄 축소. 그간 급등한 방산주에 차익실현 매도 압력 예상.</div>
+      </div>
+
+      <!-- 상승 3 -->
+      <div class="theme-card up">
+        <h3>📈 2차전지·전기차</h3>
+        <span class="badge sector-up">2차전지</span>
+        <div class="stocks">
+          <span class="up-stock">LG에너지솔루션</span>
+          <span class="up-stock">삼성SDI</span>
+          <span class="up-stock">에코프로비엠</span>
+        </div>
+        <div class="reason">고유가($100+) 장기화 전망 속 전기차 전환 가속 기대. 환율 상승으로 수출 경쟁력도 개선.</div>
+      </div>
+
+      <!-- 하락 3 -->
+      <div class="theme-card down">
+        <h3>📉 해운·물류</h3>
+        <span class="badge sector-down">해운·물류</span>
+        <div class="stocks">
+          <span class="down-stock">HMM</span>
+          <span class="down-stock">팬오션</span>
+          <span class="down-stock">대한해운</span>
+        </div>
+        <div class="reason">중동 리스크 프리미엄(운임 할증)이 종전 기대로 축소될 가능성. 우회 항로 정상화 시 해운사 운임 하락 압력.</div>
+      </div>
+
+      <!-- 상승 4 -->
+      <div class="theme-card up">
+        <h3>📈 수출주·자동차</h3>
+        <span class="badge sector-up">자동차·수출</span>
+        <div class="stocks">
+          <span class="up-stock">현대차</span>
+          <span class="up-stock">기아</span>
+          <span class="up-stock">현대모비스</span>
+        </div>
+        <div class="reason">원/달러 1,530원 고환율이 수출기업에 유리하게 작용. 글로벌 리스크 완화 시 소비 심리 회복도 긍정적.</div>
+      </div>
+
+      <!-- 하락 4 -->
+      <div class="theme-card down">
+        <h3>📉 금·안전자산</h3>
+        <span class="badge sector-down">귀금속·안전자산</span>
+        <div class="stocks">
+          <span class="down-stock">고려아연</span>
+          <span class="down-stock">풍산</span>
+          <span class="down-stock">KODEX 골드선물(H)</span>
+        </div>
+        <div class="reason">이란 종전 기대로 지정학적 리스크 프리미엄 해소 시 안전자산 선호 약화. 위험자산 선호 전환 예상.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 출처 -->
+  <div class="sources">
+    <strong>📌 참고 출처</strong>
+    <a href="https://www.cliktoday.com/2026/03/20260331-today-news.html" target="_blank">오늘의클릭 - 3/31 주요 뉴스</a> ·
+    <a href="https://www.cnbc.com/2026/03/30/stock-market-today-live-updates.html" target="_blank">CNBC - S&amp;P 500 Best Day</a> ·
+    <a href="https://www.bloomberg.com/news/articles/2026-03-31/traders-trigger-euphoric-stock-rally-with-iran-ready-to-end-war" target="_blank">Bloomberg - Iran Signals End</a> ·
+    <a href="https://fxdailyreport.com/wti-crude-oil-price-analysis-for-march-31-2026/" target="_blank">FX Daily - WTI Analysis</a> ·
+    <a href="https://www.new1cm.com/2026/03/2026-03-31_01532746663.html" target="_blank">뉴원 - 국내 경제 뉴스</a> ·
+    <a href="https://v.daum.net/v/20260328121708962" target="_blank">다음 - 글로벌 증시 동향</a> ·
+    <a href="https://markets.financialcontent.com/stocks/article/marketminute-2026-3-31-oil-prices-retreat-to-100-range-as-middle-east-tensions-ease-on-march-31-2026" target="_blank">MarketMinute - Oil Prices</a>
+  </div>
+
+  <div class="cta-button-container">
+    <a href="https://link.coupang.com/a/efzKkK" target="_blank" class="cta-button">
+      ✨ 오늘의 추천 특가 확인하기
+    </a>
+  </div>
+
+  <footer>
+    자동 생성 보고서 · 2026-04-01 08:00 · 투자 권유 아님<br>
+    <small>전일(2026-03-31) 뉴스 기반 분석 | 실제 시장 결과와 다를 수 있습니다</small>
+  </footer>
+</div>
 </body>
 </html>
