@@ -495,6 +495,12 @@ body.winter .post-body a { color: #1565c0; }
   letter-spacing: 0.5px;
 }
 
+/* 증시 카테고리 태그 색상 */
+.card-tag.tag-stock {
+  background: #dcfce7;
+  color: #166534;
+}
+
 .card-title {
   font-size: 1.1rem;
   font-weight: 800;
