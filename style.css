@@ -495,11 +495,16 @@ body.winter .post-body a { color: #1565c0; }
   letter-spacing: 0.5px;
 }
 
-/* 증시 카테고리 태그 색상 */
-.card-tag.tag-stock {
-  background: #dcfce7;
-  color: #166534;
-}
+/* 카테고리별 태그 색상 (계절 스타일보다 우선) */
+.card-tag[data-cat="증시"]       { background: #dcfce7 !important; color: #166534 !important; }
+.card-tag[data-cat="경제"]       { background: #dbeafe !important; color: #1e40af !important; }
+.card-tag[data-cat="긴급 경제"]  { background: #fee2e2 !important; color: #991b1b !important; }
+.card-tag[data-cat="긴급 복지"]  { background: #fce7f3 !important; color: #9d174d !important; }
+.card-tag[data-cat="청년정책"]   { background: #ede9fe !important; color: #5b21b6 !important; }
+.card-tag[data-cat="생활정보"]   { background: #fef3c7 !important; color: #92400e !important; }
+.card-tag[data-cat="건강"]       { background: #d1fae5 !important; color: #065f46 !important; }
+.card-tag[data-cat="절약"]       { background: #fff7ed !important; color: #c2410c !important; }
+.card-tag[data-cat="BTS"]        { background: #f3e8ff !important; color: #7c3aed !important; }
 
 .card-title {
   font-size: 1.1rem;

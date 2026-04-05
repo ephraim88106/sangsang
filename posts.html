@@ -60,14 +60,14 @@
 
       <!-- 카테고리 필터 -->
       <div class="category-filter" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;">
-        <button class="filter-btn active" data-category="전체" style="padding:8px 18px;border-radius:20px;border:1.5px solid #ddd;background:#111;color:#fff;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;">전체</button>
-        <button class="filter-btn" data-category="증시" style="padding:8px 18px;border-radius:20px;border:1.5px solid #ddd;background:#fff;color:#333;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;">📈 증시</button>
-        <button class="filter-btn" data-category="경제" style="padding:8px 18px;border-radius:20px;border:1.5px solid #ddd;background:#fff;color:#333;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;">💰 경제</button>
-        <button class="filter-btn" data-category="긴급 경제" style="padding:8px 18px;border-radius:20px;border:1.5px solid #ddd;background:#fff;color:#333;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;">🚨 긴급 경제</button>
-        <button class="filter-btn" data-category="긴급 복지" style="padding:8px 18px;border-radius:20px;border:1.5px solid #ddd;background:#fff;color:#333;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;">🏥 긴급 복지</button>
-        <button class="filter-btn" data-category="청년정책" style="padding:8px 18px;border-radius:20px;border:1.5px solid #ddd;background:#fff;color:#333;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;">🎓 청년정책</button>
-        <button class="filter-btn" data-category="생활정보" style="padding:8px 18px;border-radius:20px;border:1.5px solid #ddd;background:#fff;color:#333;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;">🏠 생활정보</button>
-        <button class="filter-btn" data-category="건강" style="padding:8px 18px;border-radius:20px;border:1.5px solid #ddd;background:#fff;color:#333;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;">💪 건강</button>
+        <button class="filter-btn active" data-category="전체" data-bg="#111" data-color="#fff" style="padding:8px 18px;border-radius:20px;border:none;background:#111;color:#fff;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;">전체</button>
+        <button class="filter-btn" data-category="증시" data-bg="#dcfce7" data-color="#166534" style="padding:8px 18px;border-radius:20px;border:none;background:#f3f4f6;color:#6b7280;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;">📈 증시</button>
+        <button class="filter-btn" data-category="경제" data-bg="#dbeafe" data-color="#1e40af" style="padding:8px 18px;border-radius:20px;border:none;background:#f3f4f6;color:#6b7280;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;">💰 경제</button>
+        <button class="filter-btn" data-category="긴급 경제" data-bg="#fee2e2" data-color="#991b1b" style="padding:8px 18px;border-radius:20px;border:none;background:#f3f4f6;color:#6b7280;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;">🚨 긴급 경제</button>
+        <button class="filter-btn" data-category="긴급 복지" data-bg="#fce7f3" data-color="#9d174d" style="padding:8px 18px;border-radius:20px;border:none;background:#f3f4f6;color:#6b7280;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;">🏥 긴급 복지</button>
+        <button class="filter-btn" data-category="청년정책" data-bg="#ede9fe" data-color="#5b21b6" style="padding:8px 18px;border-radius:20px;border:none;background:#f3f4f6;color:#6b7280;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;">🎓 청년정책</button>
+        <button class="filter-btn" data-category="생활정보" data-bg="#fef3c7" data-color="#92400e" style="padding:8px 18px;border-radius:20px;border:none;background:#f3f4f6;color:#6b7280;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;">🏠 생활정보</button>
+        <button class="filter-btn" data-category="건강" data-bg="#d1fae5" data-color="#065f46" style="padding:8px 18px;border-radius:20px;border:none;background:#f3f4f6;color:#6b7280;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;">💪 건강</button>
       </div>
     </div>
 
@@ -254,14 +254,16 @@
       btn.addEventListener('click', function() {
         const category = this.dataset.category;
 
-        // 버튼 활성화 토글
+        // 모든 버튼 비활성화 (회색)
         filterBtns.forEach(function(b) {
-          b.style.background = '#fff';
-          b.style.color = '#333';
+          b.style.background = '#f3f4f6';
+          b.style.color = '#6b7280';
           b.classList.remove('active');
         });
-        this.style.background = '#111';
-        this.style.color = '#fff';
+
+        // 클릭한 버튼 활성화 (카테고리 색상)
+        this.style.background = this.dataset.bg;
+        this.style.color = this.dataset.color;
         this.classList.add('active');
 
         // 카드 필터링

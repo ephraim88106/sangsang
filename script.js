@@ -176,9 +176,17 @@ function initFadeIn() {
 }
 
 // ── 초기화 ────────────────────────────────────
+// ── 카테고리 태그 색상 자동 적용 ──
+function applyTagColors() {
+  document.querySelectorAll('.card-tag').forEach(tag => {
+    tag.setAttribute('data-cat', tag.textContent.trim());
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initFadeIn();
   applySeason();
   initCardLinks();
   initSearch();
+  applyTagColors();
 });
