@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2026-04-05 주식 테마 영향 분석</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif; background: #f5f7fa; color: #1a1a2e; line-height: 1.7; }
+    .wrapper { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+    header { background: linear-gradient(135deg, #1a1a2e, #16213e); color: #fff; padding: 2rem; border-radius: 16px; margin-bottom: 2rem; position: relative; overflow: hidden; }
+    header::after { content: '📊'; position: absolute; right: 2rem; top: 1rem; font-size: 5rem; opacity: 0.08; }
+    header h1 { font-size: 1.6rem; margin-bottom: 0.4rem; }
+    header p { opacity: 0.7; font-size: 0.9rem; }
+    .header-meta { display: flex; gap: 1.5rem; margin-top: 1rem; flex-wrap: wrap; }
+    .header-meta .meta-item { background: rgba(255,255,255,0.1); padding: 0.3rem 0.8rem; border-radius: 50px; font-size: 0.8rem; }
+    .disclaimer { background: #fff8e1; border-left: 4px solid #ffc107; padding: 1rem 1.2rem; border-radius: 0 8px 8px 0; margin-bottom: 2rem; font-size: 0.85rem; color: #7a6000; }
+    .market-summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.8rem; margin-bottom: 2rem; }
+    @media(max-width:700px){ .market-summary { grid-template-columns: repeat(2, 1fr); } }
+    .market-card { background: #fff; border-radius: 10px; padding: 0.9rem 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.06); text-align: center; }
+    .market-card .label { font-size: 0.75rem; color: #888; margin-bottom: 0.2rem; }
+    .market-card .value { font-size: 1.1rem; font-weight: 800; }
+    .market-card .change { font-size: 0.8rem; margin-top: 0.1rem; }
+    .up-color { color: #ef5350; }
+    .down-color { color: #42a5f5; }
+    .section { margin-bottom: 2rem; }
+    .section h2 { font-size: 1.15rem; font-weight: 800; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #e0e0e0; }
+    .issue-list { display: flex; flex-direction: column; gap: 0.8rem; }
+    .issue-item { background: #fff; padding: 1rem 1.2rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 4px solid #90caf9; display: flex; gap: 1rem; align-items: flex-start; }
+    .issue-item.hot { border-left-color: #ef5350; }
+    .issue-item.positive { border-left-color: #66bb6a; }
+    .issue-number { background: #e3f2fd; color: #1565c0; border-radius: 50%; width: 2rem; height: 2rem; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; flex-shrink: 0; margin-top: 0.1rem; }
+    .issue-item.hot .issue-number { background: #ffebee; color: #c62828; }
+    .issue-item.positive .issue-number { background: #e8f5e9; color: #2e7d32; }
+    .issue-content { flex: 1; }
+    .issue-item .label { font-size: 0.72rem; font-weight: 700; color: #1565c0; margin-bottom: 0.3rem; }
+    .issue-item.hot .label { color: #c62828; }
+    .issue-item.positive .label { color: #2e7d32; }
+    .issue-item .title { font-size: 0.98rem; font-weight: 700; margin-bottom: 0.2rem; }
+    .issue-item p { font-size: 0.88rem; color: #555; }
+    .theme-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+    @media(max-width:600px){ .theme-grid { grid-template-columns: 1fr; } }
+    .theme-card { background: #fff; border-radius: 12px; padding: 1.2rem; box-shadow: 0 2px 10px rgba(0,0,0,0.07); }
+    .theme-card.up { border-top: 4px solid #ef5350; }
+    .theme-card.down { border-top: 4px solid #42a5f5; }
+    .theme-card h3 { font-size: 1rem; font-weight: 800; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.4rem; }
+    .theme-card.up h3 { color: #c62828; }
+    .theme-card.down h3 { color: #1565c0; }
+    .badge { display: inline-block; padding: 0.15rem 0.6rem; border-radius: 50px; font-size: 0.75rem; font-weight: 700; margin-bottom: 0.5rem; margin-right: 0.3rem; }
+    .badge.sector-up { background: #fce4ec; color: #c62828; }
+    .badge.sector-down { background: #e3f2fd; color: #1565c0; }
+    .stocks { font-size: 0.85rem; margin: 0.5rem 0 0.2rem; color: #444; }
+    .stocks span { background: #f5f5f5; padding: 0.1rem 0.5rem; border-radius: 4px; margin-right: 0.3rem; font-weight: 600; display: inline-block; margin-bottom: 0.2rem; }
+    .stocks span.up-stock { background: #ffebee; color: #c62828; }
+    .stocks span.down-stock { background: #e3f2fd; color: #1565c0; }
+    .reason { font-size: 0.85rem; color: #666; margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid #f0f0f0; }
+    .sources { background: #fff; border-radius: 10px; padding: 1rem 1.2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.06); font-size: 0.82rem; color: #777; margin-bottom: 2rem; }
+    .sources strong { color: #444; display: block; margin-bottom: 0.4rem; }
+    .sources a { color: #1565c0; text-decoration: none; }
+    footer { text-align: center; font-size: 0.8rem; color: #999; margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #e0e0e0; }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <header>
+    <h1>📊 2026-04-05 주식 테마 영향 분석 보고서</h1>
+    <p>전일(2026-04-04) 주요 이슈 기반 분석 · 자동 생성</p>
+    <div class="header-meta">
+      <span class="meta-item">🗓️ 분석 기준일: 2026-04-03 (금)</span>
+      <span class="meta-item">📅 보고서 발행: 2026-04-05 08:00</span>
+      <span class="meta-item">🔍 이슈 7건 선별</span>
+    </div>
+  </header>
+
+  <div class="disclaimer">
+    ⚠️ 이 보고서는 <strong>투자 참고용 정보</strong>이며, 투자 권유나 추천이 아닙니다. 수집된 뉴스 기반의 테마 분석으로 실제 주가와 다를 수 있습니다.
+  </div>
+
+  <!-- 시장 현황 요약 -->
+  <div class="market-summary">
+    <div class="market-card">
+      <div class="label">코스피</div>
+      <div class="value down-color">5,234</div>
+      <div class="change down-color">▼ 4.47%</div>
+    </div>
+    <div class="market-card">
+      <div class="label">S&P 500</div>
+      <div class="value up-color">6,571</div>
+      <div class="change up-color">▲ 1.2%</div>
+    </div>
+    <div class="market-card">
+      <div class="label">WTI 유가</div>
+      <div class="value up-color">$101.5</div>
+      <div class="change up-color">▲ 2.8%</div>
+    </div>
+    <div class="market-card">
+      <div class="label">원/달러 환율</div>
+      <div class="value up-color">1,525원</div>
+      <div class="change up-color">▲ 15.2원</div>
+    </div>
+  </div>
+
+  <!-- 전일 주요 이슈 -->
+  <div class="section">
+    <h2>📰 전일 주요 이슈 (2026-04-03~04)</h2>
+    <div class="issue-list">
+
+      <div class="issue-item hot">
+        <div class="issue-number">1</div>
+        <div class="issue-content">
+          <div class="label">🔴 지정학 리스크</div>
+          <div class="title">코스피 4.47% 급락, 지정학적 우려 확산</div>
+          <p>중동 전쟁 장기화 우려와 환율 급등이 겹치며 코스피가 5,234로 급락. 메모리 반도체 3사도 최근 2주간 20~30% 단기 하락세 시현.</p>
+        </div>
+      </div>
+
+      <div class="issue-item positive">
+        <div class="issue-number">2</div>
+        <div class="issue-content">
+          <div class="label">🟢 종전 협상</div>
+          <div class="title">미국-이란 종전 협상 급진전, 기대감 부상</div>
+          <p>트럼프 대통령이 이란과의 종전 협상이 진전되고 있다고 발언. 이란 대통령도 추가 공격이 없을 경우 종전 준비가 되어 있다고 언급하며 미 증시 반등.</p>
+        </div>
+      </div>
+
+      <div class="issue-item hot">
+        <div class="issue-number">3</div>
+        <div class="issue-content">
+          <div class="label">🔴 환율 리스크</div>
+          <div class="title">원/달러 환율 1,525원 돌파, 2009년 이후 최약세</div>
+          <p>외환보유액 40억달러 감소, 국민연금 외환 스와프 적극 시행에도 원화 약세 지속. 수입 원가 상승 및 외국인 이탈 우려 확대.</p>
+        </div>
+      </div>
+
+      <div class="issue-item">
+        <div class="issue-number">4</div>
+        <div class="issue-content">
+          <div class="label">🔵 유가 변동</div>
+          <div class="title">WTI 유가 100달러대 진입, 호르무즈 해협 리스크</div>
+          <p>중동 리스크 프리미엄 10~15달러/배럴 반영. 트럼프의 호르무즈 해협 개방 조건부 휴전 발언으로 유가 변동성 확대.</p>
+        </div>
+      </div>
+
+      <div class="issue-item positive">
+        <div class="issue-number">5</div>
+        <div class="issue-content">
+          <div class="label">🟢 반도체 반등</div>
+          <div class="title">필라델피아 반도체지수 6.24% 급등, 기술주 반등</div>
+          <p>미 증시에서 기술주가 반등을 주도. AI 데이터센터 설비투자 확대 기조 유지, 2분기 메모리 주문 상향 흐름 확인.</p>
+        </div>
+      </div>
+
+      <div class="issue-item positive">
+        <div class="issue-number">6</div>
+        <div class="issue-content">
+          <div class="label">🟢 IPO 이슈</div>
+          <div class="title">SpaceX, 비공개 기업공개(IPO) 신청</div>
+          <p>로이터 보도에 따르면 SpaceX가 비공개로 IPO를 신청. 우주·항공 관련주 상승 촉매. 글로벌 우주산업 투자 관심 재점화.</p>
+        </div>
+      </div>
+
+      <div class="issue-item">
+        <div class="issue-number">7</div>
+        <div class="issue-content">
+          <div class="label">🔵 정책 이슈</div>
+          <div class="title">이재명 대통령 시정연설, 추경안 신속 처리 촉구</div>
+          <p>시정연설에서 '위기' 28회 언급하며 추경안 신속 처리 요청. 1분기 외국인직접투자 도착액 역대 최대 기록.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 상승/하락 테마 그리드 -->
+  <div class="section">
+    <h2>📈 상승 예상 테마 &amp; 📉 하락 예상 테마</h2>
+    <div class="theme-grid">
+
+      <!-- 상승 1: 방산/군수 -->
+      <div class="theme-card up">
+        <h3>📈 방산·군수</h3>
+        <span class="badge sector-up">방위산업</span>
+        <span class="badge sector-up">K-방산</span>
+        <div class="stocks">
+          <span class="up-stock">한화에어로스페이스</span>
+          <span class="up-stock">현대로템</span>
+          <span class="up-stock">LIG넥스원</span>
+        </div>
+        <div class="reason">중동 전쟁 장기화 가능성 + 글로벌 방산 지출 확대. 한국 방산 수출 수주 잔고 사상 최대 수준. 종전 시에도 전후 복구 수요로 방산 모멘텀 유지 전망.</div>
+      </div>
+
+      <!-- 하락 1: 항공/여행 -->
+      <div class="theme-card down">
+        <h3>📉 항공·여행</h3>
+        <span class="badge sector-down">항공운송</span>
+        <span class="badge sector-down">여행·레저</span>
+        <div class="stocks">
+          <span class="down-stock">대한항공</span>
+          <span class="down-stock">제주항공</span>
+          <span class="down-stock">하나투어</span>
+        </div>
+        <div class="reason">유가 100달러대 진입으로 항공유 비용 급증. 중동 노선 운항 차질 지속. 원화 약세로 해외여행 수요 위축 예상.</div>
+      </div>
+
+      <!-- 상승 2: 반도체 -->
+      <div class="theme-card up">
+        <h3>📈 반도체·HBM</h3>
+        <span class="badge sector-up">메모리</span>
+        <span class="badge sector-up">AI반도체</span>
+        <div class="stocks">
+          <span class="up-stock">삼성전자</span>
+          <span class="up-stock">SK하이닉스</span>
+          <span class="up-stock">한미반도체</span>
+        </div>
+        <div class="reason">필라델피아 반도체지수 6.24% 급등으로 글로벌 반도체 센티먼트 개선. 2분기 HBM 주문 상향, AI 데이터센터 CAPEX 확대 지속. 최근 20~30% 급락은 과매도 구간으로 기술적 반등 예상.</div>
+      </div>
+
+      <!-- 하락 2: 수입유통/식품 -->
+      <div class="theme-card down">
+        <h3>📉 수입유통·식품</h3>
+        <span class="badge sector-down">식품</span>
+        <span class="badge sector-down">유통</span>
+        <div class="stocks">
+          <span class="down-stock">CJ제일제당</span>
+          <span class="down-stock">오뚜기</span>
+          <span class="down-stock">BGF리테일</span>
+        </div>
+        <div class="reason">원/달러 1,525원 돌파로 수입 원재료 비용 급증. 밀·대두·원유 등 원자재 가격 상승 압력. 소비자 물가 상승으로 내수 소비 위축 우려.</div>
+      </div>
+
+      <!-- 상승 3: 정유/에너지 -->
+      <div class="theme-card up">
+        <h3>📈 정유·에너지</h3>
+        <span class="badge sector-up">정유</span>
+        <span class="badge sector-up">석유화학</span>
+        <div class="stocks">
+          <span class="up-stock">SK이노베이션</span>
+          <span class="up-stock">S-Oil</span>
+          <span class="up-stock">HD현대오일뱅크</span>
+        </div>
+        <div class="reason">WTI 100달러대 진입으로 정제마진 확대 기대. 중동 리스크 프리미엄 10~15달러/배럴 반영 지속. 고유가 수혜 업종으로 실적 모멘텀 강화.</div>
+      </div>
+
+      <!-- 하락 3: 자동차 -->
+      <div class="theme-card down">
+        <h3>📉 자동차·부품</h3>
+        <span class="badge sector-down">완성차</span>
+        <span class="badge sector-down">자동차부품</span>
+        <div class="stocks">
+          <span class="down-stock">현대차</span>
+          <span class="down-stock">기아</span>
+          <span class="down-stock">현대모비스</span>
+        </div>
+        <div class="reason">환율 급등에 따른 원가 불확실성 확대. 유가 상승으로 소비심리 위축. 글로벌 자동차 수요 둔화 우려 + 중동 시장 수출 차질 가능성.</div>
+      </div>
+
+      <!-- 상승 4: 우주/항공 -->
+      <div class="theme-card up">
+        <h3>📈 우주·항공기술</h3>
+        <span class="badge sector-up">우주산업</span>
+        <span class="badge sector-up">위성</span>
+        <div class="stocks">
+          <span class="up-stock">한화시스템</span>
+          <span class="up-stock">쎄트렉아이</span>
+          <span class="up-stock">AP위성</span>
+        </div>
+        <div class="reason">SpaceX IPO 비공개 신청으로 글로벌 우주산업 투자 관심 재점화. 한국 우주항공청 출범 이후 정책 수혜 기대. 저궤도 위성 시장 급성장 수혜.</div>
+      </div>
+
+      <!-- 하락 4: 건설/부동산 -->
+      <div class="theme-card down">
+        <h3>📉 건설·부동산</h3>
+        <span class="badge sector-down">건설</span>
+        <span class="badge sector-down">부동산</span>
+        <div class="stocks">
+          <span class="down-stock">대우건설</span>
+          <span class="down-stock">GS건설</span>
+          <span class="down-stock">DL이앤씨</span>
+        </div>
+        <div class="reason">환율 리스크 및 원자재 가격 상승으로 건설 원가 부담 증가. 고금리 장기화에 따른 부동산 시장 위축. 해외 건설 프로젝트 수익성 악화 우려.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 출처 -->
+  <div class="sources">
+    <strong>📌 참고 출처</strong>
+    <a href="https://www.hankyung.com/economy" target="_blank">한국경제</a> ·
+    <a href="https://kr.investing.com/news/headlines" target="_blank">Investing.com 한국</a> ·
+    <a href="https://ko.tradingeconomics.com/south-korea/stock-market" target="_blank">Trading Economics</a> ·
+    <a href="https://news.nate.com/view/20260403n00338" target="_blank">네이트 뉴스 경제지표</a> ·
+    <a href="https://www.g-enews.com/article/Global-Biz/2026/03/202603271939365321fbbec65dfb_1" target="_blank">글로벌이코노믹</a> ·
+    <a href="https://www.seoul.co.kr/news/economy/2026/04/02/20260402500084" target="_blank">서울신문</a> ·
+    <a href="https://www.cliktoday.com/2026/04/20260403-today-news.html" target="_blank">오늘의 클릭</a> ·
+    <a href="https://kbthink.com/investment/trend/daily/260401.html" target="_blank">KB의 생각</a>
+  </div>
+
+  <footer>
+    자동 생성 보고서 · 2026-04-05 08:00 · 투자 권유 아님<br>
+    <small>전일(2026-04-03~04) 뉴스 기반 분석 | 실제 시장 결과와 다를 수 있습니다</small>
+  </footer>
+</div>
+
+<!-- 쿠팡 파트너스 배너 -->
+<div style="max-width:800px;margin:40px auto 0;padding:0 20px;">
+  <div style="background:linear-gradient(135deg,#514FE4,#FF6B35);border-radius:16px;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+    <div>
+      <h4 style="color:#fff;font-size:18px;font-weight:800;margin:0 0 8px;">🛒 오늘의 쇼핑 추천!</h4>
+      <p style="color:rgba(255,255,255,0.9);font-size:14px;margin:0;">쿠팡 로켓배송으로 빠르고 편리하게 쇼핑하세요!</p>
+    </div>
+    <a href="https://link.coupang.com/a/eiMhxP" target="_blank" rel="noopener noreferrer" style="background:#ffc107;color:#000;padding:12px 24px;border-radius:8px;font-weight:700;text-decoration:none;font-size:14px;white-space:nowrap;">쿠팡에서 확인하기 →</a>
+  </div>
+  <p style="font-size:11px;color:#aaa;margin-top:12px;text-align:center;">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
+</div>
+
+</body>
+</html>
