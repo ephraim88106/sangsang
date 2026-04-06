@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>환율 1,500원 시대, 내 지갑은 얼마나 얇아지나 — 중동전쟁발 경제위기 총정리</title>
+    <meta name="description" content="원달러 환율 1,500원 돌파, 유가 급등, 스태그플레이션 우려까지. 중동전쟁이 대한민국 경제와 당신의 생활비에 미치는 영향을 한눈에 정리합니다.">
+    <meta name="keywords" content="환율 1500원, 원달러 환율, 중동전쟁, 유가 급등, 스태그플레이션, 물가 상승, 생활비, 차량 2부제, 에너지 위기, 한국 경제">
+    <meta property="og:title" content="환율 1,500원 시대, 내 지갑은 얼마나 얇아지나">
+    <meta property="og:description" content="중동전쟁 한 달, 환율·유가·물가 동시 폭등. 직장인·자영업자·학생까지 모두가 알아야 할 경제위기 총정리.">
+    <meta property="og:type" content="article">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: #f8f9fa;
+            color: #1a1a1a;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            min-height: 100vh;
+        }
+        /* 헤더 */
+        .article-header {
+            padding: 40px 24px 32px;
+            border-bottom: 1px solid #eee;
+        }
+        .category-badge {
+            display: inline-block;
+            background: #dc3545;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .article-date {
+            display: block;
+            margin-top: 12px;
+            font-size: 14px;
+            color: #888;
+        }
+        .article-title {
+            font-size: 32px;
+            font-weight: 900;
+            line-height: 1.3;
+            margin-top: 16px;
+            color: #111;
+            word-break: keep-all;
+        }
+        .article-subtitle {
+            font-size: 18px;
+            color: #555;
+            margin-top: 12px;
+            font-weight: 400;
+            line-height: 1.6;
+            word-break: keep-all;
+        }
+        /* 본문 */
+        .article-body {
+            padding: 32px 24px;
+        }
+        .lead {
+            font-size: 19px;
+            font-weight: 500;
+            color: #222;
+            line-height: 1.7;
+            margin-bottom: 28px;
+            word-break: keep-all;
+        }
+        /* 핵심 요약 박스 */
+        .summary-box {
+            background: linear-gradient(135deg, #e8f4fd 0%, #f0f7ff 100%);
+            border-left: 4px solid #0d6efd;
+            border-radius: 0 12px 12px 0;
+            padding: 24px 28px;
+            margin-bottom: 36px;
+        }
+        .summary-box h3 {
+            font-size: 15px;
+            font-weight: 700;
+            color: #0d6efd;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+        .summary-box ul {
+            list-style: none;
+            padding: 0;
+        }
+        .summary-box ul li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            font-size: 15px;
+            color: #333;
+            word-break: keep-all;
+        }
+        .summary-box ul li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #0d6efd;
+            font-weight: 700;
+        }
+        /* 섹션 */
+        .section {
+            margin-bottom: 36px;
+        }
+        .section-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #111;
+            padding-left: 16px;
+            border-left: 4px solid #dc3545;
+            margin-bottom: 16px;
+            line-height: 1.4;
+            word-break: keep-all;
+        }
+        .section p {
+            margin-bottom: 16px;
+            color: #333;
+            word-break: keep-all;
+        }
+        .highlight-num {
+            font-weight: 900;
+            color: #dc3545;
+            font-size: 1.05em;
+        }
+        /* 인포그래픽 — 막대 그래프 */
+        .infographic {
+            background: #fafbfc;
+            border: 1px solid #e9ecef;
+            border-radius: 16px;
+            padding: 28px 24px;
+            margin: 32px 0;
+        }
+        .infographic-title {
+            font-size: 18px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 8px;
+            color: #111;
+        }
+        .infographic-subtitle {
+            font-size: 13px;
+            text-align: center;
+            color: #888;
+            margin-bottom: 24px;
+        }
+        .chart-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 14px;
+        }
+        .chart-label {
+            width: 100px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #555;
+            text-align: right;
+            padding-right: 12px;
+            flex-shrink: 0;
+        }
+        .chart-bar-bg {
+            flex: 1;
+            background: #e9ecef;
+            border-radius: 6px;
+            height: 32px;
+            position: relative;
+            overflow: hidden;
+        }
+        .chart-bar {
+            height: 100%;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 10px;
+            font-size: 13px;
+            font-weight: 700;
+            color: #fff;
+            transition: width 0.5s ease;
+        }
+        .bar-before { background: linear-gradient(90deg, #6c9bd2, #4a7fb5); }
+        .bar-after { background: linear-gradient(90deg, #e85d5d, #dc3545); }
+
+        .chart-legend {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 16px;
+            font-size: 13px;
+            color: #666;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .legend-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 3px;
+        }
+
+        /* 비교표 */
+        .compare-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+        .compare-table th {
+            background: #f1f3f5;
+            padding: 12px 16px;
+            text-align: center;
+            font-weight: 700;
+            color: #333;
+            border-bottom: 2px solid #dee2e6;
+        }
+        .compare-table td {
+            padding: 12px 16px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+            color: #444;
+        }
+        .compare-table .up {
+            color: #dc3545;
+            font-weight: 700;
+        }
+
+        /* 영향 박스 */
+        .impact-box {
+            background: linear-gradient(135deg, #fff9e6 0%, #fffdf5 100%);
+            border-left: 4px solid #ffc107;
+            border-radius: 0 12px 12px 0;
+            padding: 24px 28px;
+            margin: 32px 0;
+        }
+        .impact-box h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #e6a000;
+            margin-bottom: 16px;
+        }
+        .impact-item {
+            margin-bottom: 14px;
+            padding-left: 8px;
+        }
+        .impact-item strong {
+            display: block;
+            font-size: 15px;
+            color: #333;
+            margin-bottom: 4px;
+        }
+        .impact-item p {
+            font-size: 14px;
+            color: #666;
+            margin: 0;
+        }
+
+        /* 타임라인 */
+        .timeline {
+            position: relative;
+            padding-left: 28px;
+            margin: 24px 0;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: #dee2e6;
+            border-radius: 2px;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -24px;
+            top: 6px;
+            width: 12px;
+            height: 12px;
+            background: #dc3545;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            box-shadow: 0 0 0 2px #dc3545;
+        }
+        .timeline-date {
+            font-size: 13px;
+            font-weight: 700;
+            color: #dc3545;
+        }
+        .timeline-text {
+            font-size: 14px;
+            color: #444;
+            margin-top: 2px;
+        }
+
+        /* 푸터 */
+        .article-footer {
+            padding: 24px;
+            border-top: 1px solid #eee;
+            background: #fafbfc;
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+        .tag {
+            background: #e9ecef;
+            color: #555;
+            font-size: 12px;
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+        .disclaimer {
+            font-size: 12px;
+            color: #aaa;
+            line-height: 1.6;
+            margin-top: 16px;
+        }
+
+        /* 반응형 */
+        @media (max-width: 600px) {
+            .article-header { padding: 24px 16px 20px; }
+            .article-title { font-size: 24px; }
+            .article-subtitle { font-size: 16px; }
+            .article-body { padding: 24px 16px; }
+            .lead { font-size: 17px; }
+            .section-title { font-size: 19px; }
+            .chart-label { width: 72px; font-size: 12px; }
+            .chart-bar { font-size: 11px; padding-right: 6px; }
+            .compare-table { font-size: 12px; }
+            .compare-table th, .compare-table td { padding: 8px 6px; }
+            .infographic { padding: 20px 16px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 헤더 -->
+        <header class="article-header">
+            <span class="category-badge">긴급 경제</span>
+            <time class="article-date" datetime="2026-04-06">2026년 4월 6일 월요일</time>
+            <h1 class="article-title">환율 1,500원 시대, 내 지갑은 얼마나 얇아지나</h1>
+            <p class="article-subtitle">중동전쟁 한 달 — 유가 2배, 환율 17년 최고, 내일부터 차량 2부제까지. 직장인·자영업자·학생 모두에게 닥친 경제 한파 총정리</p>
+        </header>
+
+        <!-- 본문 -->
+        <article class="article-body">
+            <!-- 리드 -->
+            <p class="lead">
+                3월 3일 미국-이란 전쟁이 본격화된 지 한 달, 원달러 환율은 1,530원까지 치솟고 국제유가는 두 배 가까이 뛰었다. OECD는 한국 성장률 전망을 2.1%에서 1.7%로 낮추고, 전문가들은 "스태그플레이션에 이미 진입했다"고 경고한다. 내일(4월 8일)부터 공공기관 차량 2부제까지 시행되는 지금, 당신의 생활비에 무슨 일이 벌어지고 있는지 정리했다.
+            </p>
+
+            <!-- 핵심 요약 -->
+            <div class="summary-box">
+                <h3>📌 3줄 요약</h3>
+                <ul>
+                    <li>원달러 환율 <strong>1,530원</strong> 돌파 — 2009년 금융위기 이후 17년 만에 최고치</li>
+                    <li>두바이유 <strong>169.75달러</strong> 기록, 전쟁 전 대비 2.4배 급등 → 수입물가 직격탄</li>
+                    <li>내일(4/8)부터 공공기관 차량 2부제·공영주차장 5부제 시행, 민간 의무화 가능성도</li>
+                </ul>
+            </div>
+
+            <!-- 섹션 1: 무슨 일이 벌어졌나 -->
+            <section class="section">
+                <h2 class="section-title">한 달 만에 뒤바뀐 경제 지표</h2>
+                <p>
+                    2월 27일만 해도 브렌트유는 배럴당 72.5달러, 원달러 환율은 1,400원대 중반이었다. 그러나 3월 3일 미-이란 전면전이 시작되면서 모든 지표가 급변했다. 호르무즈 해협 항행이 제한되자 원유 수급 불안이 폭발했고, 안전자산 선호 심리가 달러 강세를 부추기면서 원화 가치는 급락했다.
+                </p>
+                <p>
+                    3월 31일 원달러 환율은 <span class="highlight-num">1,530.1원</span>을 기록하며 2009년 3월 이후 17년 만에 최고치를 경신했다. 두바이유는 같은 기간 71.2달러에서 <span class="highlight-num">169.75달러</span>까지 치솟았다. 대외경제정책연구원(KIEP)은 전쟁 장기화 시 유가가 배럴당 174달러까지 오를 수 있다고 전망한다.
+                </p>
+
+                <!-- 타임라인 -->
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-date">2월 27일</span>
+                        <p class="timeline-text">브렌트유 72.5달러, 환율 1,460원대 — 전쟁 전 마지막 평온</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">3월 3일</span>
+                        <p class="timeline-text">미-이란 전면전 개시, 환율 첫 1,500원 돌파</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">3월 19일</span>
+                        <p class="timeline-text">정부 "과도한 원화 약세에 적기 대응" 발표</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">3월 31일</span>
+                        <p class="timeline-text">환율 1,530원, 두바이유 169.75달러 — 위기 최고조</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">4월 1일</span>
+                        <p class="timeline-text">환율 1,501원으로 소폭 하락, 원유 위기 경보 '경계' 격상</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">4월 8일</span>
+                        <p class="timeline-text">공공기관 차량 2부제·공영주차장 5부제 시행 예정</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 인포그래픽: 전쟁 전후 비교 -->
+            <div class="infographic">
+                <div class="infographic-title">중동전쟁 전후 주요 경제지표 비교</div>
+                <div class="infographic-subtitle">2026년 2월 27일 vs 3월 31일</div>
+
+                <!-- 환율 -->
+                <div style="font-size:13px; font-weight:600; color:#444; margin: 20px 0 10px 112px;">원달러 환율 (원)</div>
+                <div class="chart-row">
+                    <span class="chart-label">전쟁 전</span>
+                    <div class="chart-bar-bg">
+                        <div class="chart-bar bar-before" style="width: 85%;">1,460</div>
+                    </div>
+                </div>
+                <div class="chart-row">
+                    <span class="chart-label">현재</span>
+                    <div class="chart-bar-bg">
+                        <div class="chart-bar bar-after" style="width: 100%;">1,530</div>
+                    </div>
+                </div>
+
+                <!-- 두바이유 -->
+                <div style="font-size:13px; font-weight:600; color:#444; margin: 24px 0 10px 112px;">두바이유 (달러/배럴)</div>
+                <div class="chart-row">
+                    <span class="chart-label">전쟁 전</span>
+                    <div class="chart-bar-bg">
+                        <div class="chart-bar bar-before" style="width: 42%;">71.2</div>
+                    </div>
+                </div>
+                <div class="chart-row">
+                    <span class="chart-label">현재</span>
+                    <div class="chart-bar-bg">
+                        <div class="chart-bar bar-after" style="width: 100%;">169.8</div>
+                    </div>
+                </div>
+
+                <!-- 성장률 -->
+                <div style="font-size:13px; font-weight:600; color:#444; margin: 24px 0 10px 112px;">OECD 한국 성장률 전망 (%)</div>
+                <div class="chart-row">
+                    <span class="chart-label">기존 전망</span>
+                    <div class="chart-bar-bg">
+                        <div class="chart-bar bar-before" style="width: 70%;">2.1%</div>
+                    </div>
+                </div>
+                <div class="chart-row">
+                    <span class="chart-label">수정 전망</span>
+                    <div class="chart-bar-bg">
+                        <div class="chart-bar bar-after" style="width: 57%;">1.7%</div>
+                    </div>
+                </div>
+
+                <!-- 물가상승률 -->
+                <div style="font-size:13px; font-weight:600; color:#444; margin: 24px 0 10px 112px;">OECD 한국 물가상승률 전망 (%)</div>
+                <div class="chart-row">
+                    <span class="chart-label">기존 전망</span>
+                    <div class="chart-bar-bg">
+                        <div class="chart-bar bar-before" style="width: 45%;">1.8%</div>
+                    </div>
+                </div>
+                <div class="chart-row">
+                    <span class="chart-label">수정 전망</span>
+                    <div class="chart-bar-bg">
+                        <div class="chart-bar bar-after" style="width: 68%;">2.7%</div>
+                    </div>
+                </div>
+
+                <div class="chart-legend">
+                    <div class="legend-item"><div class="legend-dot" style="background:#4a7fb5;"></div> 전쟁 전 / 기존</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#dc3545;"></div> 현재 / 수정</div>
+                </div>
+            </div>
+
+            <!-- 섹션 2: 스태그플레이션 -->
+            <section class="section">
+                <h2 class="section-title">"이미 스태그플레이션에 진입했다"</h2>
+                <p>
+                    성장은 멈추는데 물가는 오르는 스태그플레이션. 전문가들은 한국 경제가 이미 이 국면에 들어섰다고 진단한다. OECD가 한국의 성장률 전망을 0.4%포인트 낮추고 물가상승률은 0.9%포인트 높여 잡은 것이 이를 방증한다.
+                </p>
+                <p>
+                    3월 소비자물가는 전년 대비 <span class="highlight-num">2.2%</span> 상승했다. 유가 100달러 시대가 본격화되면서 항공·화학·물류 산업은 급등하는 비용에 신음하고 있다. 중소기업 피해도 심각하다. 운송 차질(59.9%), 계약 취소·보류(35.6%), 물류비 상승(33.8%), 대금 미지급(25.4%) 순으로 피해가 집중되고 있다.
+                </p>
+                <p>
+                    딜로이트는 전쟁 장기화 시 본격적인 스태그플레이션 충격이 올 수 있다고 경고했으며, UN은 위기 지속 시 2026년 상반기까지 글로벌 물가가 평균 15~20% 더 높아질 수 있다고 전망했다.
+                </p>
+            </section>
+
+            <!-- 섹션 3: 내일부터 달라지는 것 -->
+            <section class="section">
+                <h2 class="section-title">내일(4/8)부터 달라지는 것 — 차량 2부제 시행</h2>
+                <p>
+                    기후에너지환경부는 4월 8일부터 중앙행정기관, 공공기관, 지자체, 국공립 학교 등 약 <span class="highlight-num">1만 1,000개</span> 기관에 승용차 2부제(홀짝제)를 시행한다. 공영주차장에는 승용차 5부제(요일제)가 적용된다.
+                </p>
+                <p>
+                    민간 차량은 현재 권고 수준이지만, 에너지 수급 상황에 따라 의무화될 가능성이 열려 있다. 출퇴근 교통 패턴의 변화가 불가피한 만큼, 대중교통 이용 계획을 미리 세워두는 것이 좋다.
+                </p>
+            </section>
+
+            <!-- 섹션 4: 나에게 어떤 영향이? -->
+            <div class="impact-box">
+                <h3>💡 나에게 어떤 영향이?</h3>
+                <div class="impact-item">
+                    <strong>🛒 장바구니가 무거워진다</strong>
+                    <p>에너지·식량·원자재 대부분을 수입에 의존하는 한국 특성상, 환율 상승은 곧바로 식료품·생필품 가격 인상으로 이어진다. 커피·밀가루·식용유 등 수입 원재료 비중이 높은 품목부터 체감될 전망.</p>
+                </div>
+                <div class="impact-item">
+                    <strong>⛽ 주유비·교통비 부담 급증</strong>
+                    <p>유가 두 배 급등은 휘발유·경유 가격에 직접 반영된다. 차량 5부제 확대 가능성까지 고려하면 출퇴근 방식 재편이 필요할 수 있다.</p>
+                </div>
+                <div class="impact-item">
+                    <strong>💴 해외직구·여행 비용 폭등</strong>
+                    <p>환율 1,500원은 달러 결제 비용이 10% 이상 늘어난다는 뜻. 해외직구 가격, 항공권, 유학비·어학연수비 모두 부담이 커진다.</p>
+                </div>
+                <div class="impact-item">
+                    <strong>🏠 대출 이자 부담 장기화</strong>
+                    <p>물가 상승으로 한국은행의 기준금리 인하 여력이 줄어들면서, 주담대·신용대출 고금리가 당분간 유지될 가능성이 높다.</p>
+                </div>
+                <div class="impact-item">
+                    <strong>📈 반도체 수출만은 호조</strong>
+                    <p>3월 반도체 수출 151% 급증, 전체 수출 861억 달러 역대 최대. 원화 약세가 수출 기업 실적에는 긍정적으로 작용하고 있어, 관련 기업 종사자에게는 긍정 신호.</p>
+                </div>
+            </div>
+
+            <!-- 섹션 5: 정부 대응 -->
+            <section class="section">
+                <h2 class="section-title">정부는 뭘 하고 있나</h2>
+                <p>
+                    구윤철 경제부총리 겸 재정경제부 장관은 비상경제본부회의를 열어 "펀더멘탈과 괴리된 과도한 원화 약세는 경제에 도움이 되지 않는다"며 적극 대응을 예고했다. 한국은행도 환율 변동성이 심화될 경우 시장 개입에 나설 준비가 되어 있음을 시사했다.
+                </p>
+                <p>
+                    에너지 분야에서는 원유 위기 경보를 '경계' 단계로 격상하고, 공공 부문 에너지 절약 대책을 강화했다. 부동산 시장에서는 비거주 1주택자 전세대출 보증 축소, 수도권 다주택자 담보대출 만기 연장 제한(4/17부터) 등 규제 강화 카드도 꺼내들었다.
+                </p>
+            </section>
+
+            <!-- 섹션 6: 전망 -->
+            <section class="section">
+                <h2 class="section-title">앞으로 어떻게 될까</h2>
+                <p>
+                    트럼프 대통령이 이란과의 협상 타결을 시사하고 있지만, 전문가들은 단기 종료되더라도 유가가 배럴당 90달러 수준에서 쉽게 내려오지 않을 것으로 본다. 에너지 시설 타격이 현실화되면 174달러까지 치솟을 수 있다는 KIEP의 경고도 여전히 유효하다.
+                </p>
+                <p>
+                    환율 역시 중동 불확실성이 해소되기 전까지 1,500원대 안팎에서 높은 변동성을 보일 전망이다. 뉴스1은 유가가 120달러를 넘으면 환율 1,550원까지 열릴 수 있다고 분석했다.
+                </p>
+                <p>
+                    결국 당분간은 고유가·고환율·고물가의 '3고(高)' 시대가 이어질 가능성이 높다. 불필요한 외화 지출을 줄이고, 에너지 절약에 동참하며, 생활비 지출을 점검하는 것이 개인이 할 수 있는 가장 현실적인 대비책이다.
+                </p>
+            </section>
+        </article>
+
+        <!-- 푸터 -->
+        <footer class="article-footer">
+            <div class="tags">
+                <span class="tag">#환율1500원</span>
+                <span class="tag">#중동전쟁</span>
+                <span class="tag">#유가급등</span>
+                <span class="tag">#스태그플레이션</span>
+                <span class="tag">#물가상승</span>
+                <span class="tag">#차량2부제</span>
+                <span class="tag">#에너지위기</span>
+                <span class="tag">#한국경제</span>
+                <span class="tag">#생활비</span>
+                <span class="tag">#OECD전망</span>
+            </div>
+            <p class="disclaimer">
+                작성일: 2026년 4월 6일 | 이 글은 공개된 뉴스 보도를 바탕으로 정리·작성되었으며, 특정 투자 또는 재정 결정에 대한 조언이 아닙니다. 정확한 정보는 관련 기관의 공식 발표를 확인하시기 바랍니다.
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
