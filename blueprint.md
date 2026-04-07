@@ -67,6 +67,10 @@
         - 직장인, 청년, 은퇴자별 맞춤형 경제 영향도(대출 금리 등) 시각화.
         - 모든 게시글에 Google Analytics, Microsoft Clarity, AdSense 스크립트 통합 준수.
         - `index.html` 및 `posts.html` 최신 글 업데이트 완료.
+    *   **2026-04-07 주식 테마 영향 분석 보고서 (2) 추가:**
+        - 코스피 5,450선 회복 및 반도체·IT 강세 주도 시장 상황 분석.
+        - 미·이란 휴전 기대감에 따른 위험자산 선호 회복 및 섹터별(반도체, 헬스케어 등) 분석.
+        - `index.html` 및 `posts.html` 최신 글 업데이트 완료.
 7. **Google Analytics 설정:** 모든 페이지에 방문자 분석 서비스(GA4, ID: G-N28MJLW4W9) 연동 완료.
 8. **Microsoft Clarity 설정:** 사용자 행동 분석 및 히트맵 확인을 위해 모든 페이지에 Microsoft Clarity 스크립트(ID: w59aji6ixc) 삽입 완료.
 
