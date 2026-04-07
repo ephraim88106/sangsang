@@ -62,6 +62,11 @@
             - 게시글 하단에 맞춤형 정보성 배너(오피넷 연동) 삽입.
             - 쿠팡 파트너스 다이내믹 배너(iframe) 및 공정위 표준 문구 삽입.
         - `index.html` 및 `posts.html` 최신 글 카드 업데이트(최상단 노출) 완료.
+    *   **2026-04-07 채권형 펀드 자금 유출 심층 분석 포스트 추가:**
+        - 한 달 새 4조 원이 유출된 채권 시장의 위기 신호와 WGBI 편입 효과 분석.
+        - 직장인, 청년, 은퇴자별 맞춤형 경제 영향도(대출 금리 등) 시각화.
+        - 모든 게시글에 Google Analytics, Microsoft Clarity, AdSense 스크립트 통합 준수.
+        - `index.html` 및 `posts.html` 최신 글 업데이트 완료.
 7. **Google Analytics 설정:** 모든 페이지에 방문자 분석 서비스(GA4, ID: G-N28MJLW4W9) 연동 완료.
 8. **Microsoft Clarity 설정:** 사용자 행동 분석 및 히트맵 확인을 위해 모든 페이지에 Microsoft Clarity 스크립트(ID: w59aji6ixc) 삽입 완료.
 

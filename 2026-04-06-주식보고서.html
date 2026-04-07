@@ -1,486 +1,204 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Daily Market Report - 2026년 4월 6일</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N28MJLW4W9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-N28MJLW4W9');
+    </script>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w59aji6ixc");
+</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-adsense-account" content="ca-pub-9118774019383180">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9118774019383180"
+     crossorigin="anonymous"></script>
+<title>2026-04-06 주식 테마 영향 분석</title>
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    background: #080f1a;
-    color: #e2e8f0;
-    font-family: 'Noto Sans KR', sans-serif;
-    line-height: 1.7;
-    padding: 20px;
-  }
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  /* Header */
-  .header {
-    text-align: center;
-    padding: 40px 20px 30px;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    margin-bottom: 32px;
-  }
-  .header .date-badge {
-    display: inline-block;
-    background: rgba(59,130,246,0.15);
-    color: #93c5fd;
-    font-size: 13px;
-    font-weight: 500;
-    padding: 4px 14px;
-    border-radius: 20px;
-    margin-bottom: 14px;
-    letter-spacing: 0.5px;
-  }
-  .header h1 {
-    font-size: 28px;
-    font-weight: 900;
-    color: #f8fafc;
-    margin-bottom: 12px;
-    letter-spacing: -0.5px;
-  }
-  .header .summary {
-    font-size: 15px;
-    color: #94a3b8;
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.6;
-  }
-  .header .mood {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    margin-top: 16px;
-    background: rgba(239,68,68,0.12);
-    color: #fca5a5;
-    font-size: 13px;
-    font-weight: 500;
-    padding: 6px 16px;
-    border-radius: 20px;
-  }
-
-  /* Section titles */
-  .section-title {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid;
-  }
-  .section-title .icon { font-size: 22px; }
-  .kr .section-title { border-color: #3b82f6; color: #93c5fd; }
-  .us .section-title { border-color: #f59e0b; color: #fcd34d; }
-  .global .section-title { border-color: #8b5cf6; color: #c4b5fd; }
-  .insight .section-title { border-color: #22c55e; color: #86efac; }
-
-  /* Cards grid */
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 14px;
-    margin-bottom: 24px;
-  }
-  .card {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.06);
-    border-radius: 14px;
-    padding: 18px 16px;
-    text-align: center;
-    transition: transform 0.2s;
-  }
-  .card:hover { transform: translateY(-2px); }
-  .card .label {
-    font-size: 12px;
-    color: #64748b;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 8px;
-  }
-  .card .value {
-    font-size: 22px;
-    font-weight: 700;
-    color: #f1f5f9;
-    margin-bottom: 4px;
-  }
-  .card .change {
-    font-size: 13px;
-    font-weight: 600;
-    border-radius: 6px;
-    padding: 2px 8px;
-    display: inline-block;
-  }
-  .card .change.up { color: #22c55e; background: rgba(34,197,94,0.1); }
-  .card .change.down { color: #ef4444; background: rgba(239,68,68,0.1); }
-  .card .change.flat { color: #94a3b8; background: rgba(148,163,184,0.1); }
-  .card .change.warn { color: #f59e0b; background: rgba(245,158,11,0.1); }
-
-  /* Section blocks */
-  .section {
-    margin-bottom: 36px;
-  }
-
-  /* Issues list */
-  .issues {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-bottom: 16px;
-  }
-  .issues li {
-    background: rgba(255,255,255,0.03);
-    border-left: 3px solid;
-    padding: 14px 18px;
-    border-radius: 0 10px 10px 0;
-    font-size: 14px;
-    line-height: 1.65;
-  }
-  .kr .issues li { border-left-color: #3b82f6; }
-  .us .issues li { border-left-color: #f59e0b; }
-  .issue-tag {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 600;
-    padding: 2px 8px;
-    border-radius: 4px;
-    margin-right: 6px;
-    vertical-align: middle;
-  }
-  .kr .issue-tag { background: rgba(59,130,246,0.2); color: #93c5fd; }
-  .us .issue-tag { background: rgba(245,158,11,0.2); color: #fcd34d; }
-
-  /* Bar chart */
-  .bar-chart {
-    margin: 20px 0 28px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .bar-row {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  .bar-label {
-    width: 90px;
-    font-size: 13px;
-    font-weight: 500;
-    color: #94a3b8;
-    text-align: right;
-    flex-shrink: 0;
-  }
-  .bar-track {
-    flex: 1;
-    height: 28px;
-    background: rgba(255,255,255,0.04);
-    border-radius: 6px;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
-  .bar-fill {
-    height: 100%;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding-right: 10px;
-    font-size: 12px;
-    font-weight: 600;
-    color: #fff;
-    min-width: 50px;
-    transition: width 1s ease;
-  }
-  .bar-fill.up { background: linear-gradient(90deg, rgba(34,197,94,0.3), #22c55e); }
-  .bar-fill.down { background: linear-gradient(90deg, rgba(239,68,68,0.3), #ef4444); }
-
-  /* Insight cards */
-  .insight-list {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
-  .insight-item {
-    background: rgba(34,197,94,0.05);
-    border: 1px solid rgba(34,197,94,0.15);
-    border-radius: 12px;
-    padding: 18px 20px;
-  }
-  .insight-item .num {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
-    background: rgba(34,197,94,0.2);
-    color: #86efac;
-    font-size: 12px;
-    font-weight: 700;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-  .insight-item .title {
-    font-weight: 700;
-    color: #f1f5f9;
-    font-size: 15px;
-  }
-  .insight-item .desc {
-    margin-top: 6px;
-    font-size: 13px;
-    color: #94a3b8;
-    line-height: 1.65;
-    padding-left: 34px;
-  }
-
-  /* Footer */
-  .footer {
-    text-align: center;
-    padding: 32px 20px;
-    border-top: 1px solid rgba(255,255,255,0.06);
-    margin-top: 20px;
-  }
-  .footer p {
-    font-size: 12px;
-    color: #475569;
-    line-height: 1.7;
-  }
-  .footer .disclaimer {
-    background: rgba(239,68,68,0.06);
-    border: 1px solid rgba(239,68,68,0.12);
-    border-radius: 10px;
-    padding: 16px 20px;
-    margin-bottom: 16px;
-    font-size: 12px;
-    color: #94a3b8;
-  }
-
-  /* Responsive */
-  @media (max-width: 600px) {
-    body { padding: 12px; }
-    .header h1 { font-size: 22px; }
-    .cards { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-    .card .value { font-size: 18px; }
-    .bar-label { width: 70px; font-size: 12px; }
-  }
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif;background:#f5f7fa;color:#1a1a2e;line-height:1.7}
+.wrapper{max-width:900px;margin:0 auto;padding:2rem 1.5rem 4rem}
+header{background:linear-gradient(135deg,#1a1a2e,#16213e);color:#fff;padding:2rem;border-radius:16px;margin-bottom:2rem;position:relative;overflow:hidden}
+header::after{content:'📊';position:absolute;right:2rem;top:1rem;font-size:5rem;opacity:.08}
+header h1{font-size:1.6rem;margin-bottom:.4rem}
+header p{opacity:.7;font-size:.9rem}
+.header-meta{display:flex;gap:1.5rem;margin-top:1rem;flex-wrap:wrap}
+.header-meta .meta-item{background:rgba(255,255,255,.1);padding:.3rem .8rem;border-radius:50px;font-size:.8rem}
+.disclaimer{background:#fff8e1;border-left:4px solid #ffc107;padding:1rem 1.2rem;border-radius:0 8px 8px 0;margin-bottom:2rem;font-size:.85rem;color:#7a6000}
+.market-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin-bottom:2rem}
+@media(max-width:700px){.market-summary{grid-template-columns:repeat(2,1fr)}}
+.market-card{background:#fff;border-radius:10px;padding:.9rem 1rem;box-shadow:0 2px 8px rgba(0,0,0,.06);text-align:center}
+.market-card .label{font-size:.75rem;color:#888;margin-bottom:.2rem}
+.market-card .value{font-size:1.1rem;font-weight:800}
+.market-card .change{font-size:.8rem;margin-top:.1rem}
+.up-color{color:#ef5350}
+.down-color{color:#42a5f5}
+.section{margin-bottom:2rem}
+.section h2{font-size:1.15rem;font-weight:800;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid #e0e0e0}
+.issue-list{display:flex;flex-direction:column;gap:.8rem}
+.issue-item{background:#fff;padding:1rem 1.2rem;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.06);border-left:4px solid #90caf9;display:flex;gap:1rem;align-items:flex-start}
+.issue-item.hot{border-left-color:#ef5350}
+.issue-item.positive{border-left-color:#66bb6a}
+.issue-number{background:#e3f2fd;color:#1565c0;border-radius:50%;width:2rem;height:2rem;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem;flex-shrink:0;margin-top:.1rem}
+.issue-item.hot .issue-number{background:#ffebee;color:#c62828}
+.issue-item.positive .issue-number{background:#e8f5e9;color:#2e7d32}
+.issue-content{flex:1}
+.issue-item .label{font-size:.72rem;font-weight:700;color:#1565c0;margin-bottom:.3rem}
+.issue-item.hot .label{color:#c62828}
+.issue-item.positive .label{color:#2e7d32}
+.issue-item .title{font-size:.98rem;font-weight:700;margin-bottom:.2rem}
+.issue-item p{font-size:.88rem;color:#555}
+.theme-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media(max-width:600px){.theme-grid{grid-template-columns:1fr}}
+.theme-card{background:#fff;border-radius:12px;padding:1.2rem;box-shadow:0 2px 10px rgba(0,0,0,.07)}
+.theme-card.up{border-top:4px solid #ef5350}
+.theme-card.down{border-top:4px solid #42a5f5}
+.theme-card h3{font-size:1rem;font-weight:800;margin-bottom:.8rem;display:flex;align-items:center;gap:.4rem}
+.theme-card.up h3{color:#c62828}
+.theme-card.down h3{color:#1565c0}
+.badge{display:inline-block;padding:.15rem .6rem;border-radius:50px;font-size:.75rem;font-weight:700;margin-bottom:.5rem;margin-right:.3rem}
+.badge.sector-up{background:#fce4ec;color:#c62828}
+.badge.sector-down{background:#e3f2fd;color:#1565c0}
+.stocks{font-size:.85rem;margin:.5rem 0 .2rem;color:#444}
+.stocks span{background:#f5f5f5;padding:.1rem .5rem;border-radius:4px;margin-right:.3rem;font-weight:600;display:inline-block;margin-bottom:.2rem}
+.stocks span.up-stock{background:#ffebee;color:#c62828}
+.stocks span.down-stock{background:#e3f2fd;color:#1565c0}
+.reason{font-size:.85rem;color:#666;margin-top:.5rem;padding-top:.5rem;border-top:1px solid #f0f0f0}
+.sources{background:#fff;border-radius:10px;padding:1rem 1.2rem;box-shadow:0 2px 8px rgba(0,0,0,.06);font-size:.82rem;color:#777;margin-bottom:2rem}
+.sources strong{color:#444;display:block;margin-bottom:.4rem}
+.sources a{color:#1565c0;text-decoration:none}
+.sources li{margin-bottom:.3rem;list-style:none}
+footer{text-align:center;font-size:.8rem;color:#999;margin-top:3rem;padding-top:1rem;border-top:1px solid #e0e0e0}
 </style>
 </head>
 <body>
-<div class="container">
-
-  <!-- Header -->
-  <div class="header">
-    <div class="date-badge">2026년 4월 6일 월요일</div>
-    <h1>Daily Market Report</h1>
-    <p class="summary">중동 지정학적 긴장과 고유가 속 미국 고용 서프라이즈가 연준 동결 기대를 강화. 한국은 환율 1,500원대 돌파 부담 속 반도체 호조가 버팀목.</p>
-    <div class="mood">&#x26A0;&#xFE0F; 시장 분위기: 불안·경계</div>
-  </div>
-
-  <!-- 한국 시장 -->
-  <div class="section kr">
-    <div class="section-title">
-      <span class="icon">&#x1F1F0;&#x1F1F7;</span> 한국 시장
-    </div>
-    <div class="cards">
-      <div class="card">
-        <div class="label">코스피</div>
-        <div class="value">5,234</div>
-        <div class="change down">&#x25BC; 하락</div>
-      </div>
-      <div class="card">
-        <div class="label">코스닥</div>
-        <div class="value">1,056</div>
-        <div class="change down">&#x25BC; 하락</div>
-      </div>
-      <div class="card">
-        <div class="label">원/달러 환율</div>
-        <div class="value">1,510.26</div>
-        <div class="change down">&#x25BC; 0.18%</div>
-      </div>
-    </div>
-
-    <ul class="issues">
-      <li>
-        <span class="issue-tag">환율</span>
-        <strong>원/달러 1,500원대 고착화</strong> — 중동발 지정학적 리스크와 국제유가 급등으로 달러 강세 지속. 글로벌 금융위기 이후 17년 만의 최고 수준 근접.
-      </li>
-      <li>
-        <span class="issue-tag">수출</span>
-        <strong>반도체 수출 역대 최대</strong> — 고환율·고유가 악재 속에서도 반도체 수출 호조가 시장의 하방 지지력을 제공.
-      </li>
-      <li>
-        <span class="issue-tag">물가</span>
-        <strong>소비자물가 3개월 최대 상승</strong> — 석유류 가격 급등과 고환율이 겹치며 인플레이션 부담 확대. 한은 통화정책 기조에 영향 가능성.
-      </li>
-    </ul>
-  </div>
-
-  <!-- 미국 시장 -->
-  <div class="section us">
-    <div class="section-title">
-      <span class="icon">&#x1F1FA;&#x1F1F8;</span> 미국 시장
-    </div>
-    <div class="cards">
-      <div class="card">
-        <div class="label">다우존스</div>
-        <div class="value">46,504.67</div>
-        <div class="change down">&#x25BC; 0.13%</div>
-      </div>
-      <div class="card">
-        <div class="label">S&P 500</div>
-        <div class="value">6,582.69</div>
-        <div class="change up">&#x25B2; 0.11%</div>
-      </div>
-      <div class="card">
-        <div class="label">나스닥</div>
-        <div class="value">21,879.18</div>
-        <div class="change up">&#x25B2; 0.18%</div>
-      </div>
-      <div class="card">
-        <div class="label">미국채 10Y</div>
-        <div class="value">4.31%</div>
-        <div class="change flat">&#x25CF; 보합</div>
-      </div>
-      <div class="card">
-        <div class="label">VIX</div>
-        <div class="value">23.87</div>
-        <div class="change warn">&#x25B2; 경계</div>
-      </div>
-      <div class="card">
-        <div class="label">달러 인덱스</div>
-        <div class="value">100.0</div>
-        <div class="change flat">&#x25CF; 보합</div>
-      </div>
-    </div>
-
-    <ul class="issues">
-      <li>
-        <span class="issue-tag">고용</span>
-        <strong>3월 비농업 고용 17.8만 명 서프라이즈</strong> — 시장 예상(6만)의 3배 수준. 실업률 4.3%로 소폭 하락, 임금 상승률은 둔화. 연준 금리 동결 기조 강화.
-      </li>
-      <li>
-        <span class="issue-tag">연준</span>
-        <strong>기준금리 3.50~3.75% 유지</strong> — 2연속 동결. 시장은 연내 추가 인하 기대를 대부분 소멸. 파월 의장 관망 기조 지속.
-      </li>
-      <li>
-        <span class="issue-tag">지정학</span>
-        <strong>미·이란 긴장 최고조</strong> — 트럼프, "2~3주 내 이란에 강력한 타격" 발언. 호르무즈 해협 통행 합의 뉴스로 장중 변동성 확대. 4/3 Good Friday 휴장.
-      </li>
-    </ul>
-  </div>
-
-  <!-- 주요 지수 등락 바 차트 -->
-  <div class="section">
-    <div class="section-title" style="border-color:#64748b; color:#94a3b8;">
-      <span class="icon">&#x1F4CA;</span> 주요 지수 등락률
-    </div>
-    <div class="bar-chart">
-      <div class="bar-row">
-        <span class="bar-label">나스닥</span>
-        <div class="bar-track">
-          <div class="bar-fill up" style="width: 60%;">+0.18%</div>
-        </div>
-      </div>
-      <div class="bar-row">
-        <span class="bar-label">S&P 500</span>
-        <div class="bar-track">
-          <div class="bar-fill up" style="width: 50%;">+0.11%</div>
-        </div>
-      </div>
-      <div class="bar-row">
-        <span class="bar-label">다우존스</span>
-        <div class="bar-track">
-          <div class="bar-fill down" style="width: 48%;">-0.13%</div>
-        </div>
-      </div>
-      <div class="bar-row">
-        <span class="bar-label">원/달러</span>
-        <div class="bar-track">
-          <div class="bar-fill down" style="width: 52%;">-0.18%</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 글로벌 변수 -->
-  <div class="section global">
-    <div class="section-title">
-      <span class="icon">&#x1F30D;</span> 글로벌 변수
-    </div>
-    <div class="cards">
-      <div class="card">
-        <div class="label">WTI 유가</div>
-        <div class="value">$112.06</div>
-        <div class="change warn">&#x25B2; 고유가</div>
-      </div>
-      <div class="card">
-        <div class="label">금 (Gold)</div>
-        <div class="value">$4,702.7</div>
-        <div class="change up">&#x25B2; 상승</div>
-      </div>
-      <div class="card">
-        <div class="label">비트코인</div>
-        <div class="value">$66,951</div>
-        <div class="change flat">&#x25CF; 참고</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 오늘의 핵심 포인트 -->
-  <div class="section insight">
-    <div class="section-title">
-      <span class="icon">&#x1F4A1;</span> 내일 시장에 영향을 줄 핵심 변수 3가지
-    </div>
-    <div class="insight-list">
-      <div class="insight-item">
-        <span class="num">1</span>
-        <span class="title">중동 지정학 리스크 & 유가 흐름</span>
-        <div class="desc">트럼프의 대이란 강경 발언과 호르무즈 해협 이슈가 국제유가 $110+ 고착을 유발. 추가 군사행동 시 유가 $120 돌파 가능성. 에너지·운송 섹터에 직접 영향.</div>
-      </div>
-      <div class="insight-item">
-        <span class="num">2</span>
-        <span class="title">미 고용 서프라이즈 후 연준 정책 방향</span>
-        <div class="desc">3월 고용 17.8만 명 서프라이즈로 연내 금리인하 기대가 거의 소멸. 달러 강세·고금리 장기화는 신흥국 자금 유출 압력과 성장주 밸류에이션에 부담.</div>
-      </div>
-      <div class="insight-item">
-        <span class="num">3</span>
-        <span class="title">원/달러 환율 1,500원대 고착화</span>
-        <div class="desc">글로벌 금융위기 이후 최고 수준의 환율. 수입 물가 상승 → 소비자물가 압력 → 한은 정책 딜레마. 외국인 수급 변화와 반도체 수출 모멘텀이 핵심 변수.</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <div class="footer">
-    <div class="disclaimer">
-      &#x26A0;&#xFE0F; <strong>면책 고지</strong><br>
-      본 보고서는 공개된 시장 데이터를 기반으로 자동 생성된 정보성 자료입니다. 특정 종목이나 투자 방향에 대한 추천이 아니며, 투자 판단과 그에 따른 결과는 전적으로 투자자 본인의 책임입니다. 정확한 데이터는 한국거래소(KRX), 각 증권사 HTS/MTS를 통해 반드시 확인하시기 바랍니다.
-    </div>
-    <p>Generated by Daily Market Report Bot &middot; 기준일: 2026년 4월 3일 (금) 마감가 기준<br>미국 시장은 4/3 Good Friday 휴장으로 4/2 마감가 기준</p>
-  </div>
-
+<div class="wrapper">
+<header>
+<h1>📊 2026-04-06 주식 테마 영향 분석 보고서</h1>
+<p>전일(2026-04-05) 주요 이슈 기반 분석 · 자동 생성</p>
+<div class="header-meta">
+<span class="meta-item">🗓️ 분석 기준일: 2026-04-05</span>
+<span class="meta-item">📅 보고서 발행: 2026-04-06 08:00</span>
+<span class="meta-item">🔍 이슈 6건 선별</span>
+</div>
+</header>
+<div class="disclaimer">
+⚠️ 이 보고서는 <strong>투자 참고용 정보</strong>이며, 투자 권유나 추천이 아닙니다. 수집된 뉴스 기반의 테마 분석으로 실제 주가와 다를 수 있습니다.
 </div>
 
-<!-- 쿠팡 파트너스 배너 -->
-<div style="max-width:800px;margin:40px auto 0;padding:0 20px;">
-  <div style="background:linear-gradient(135deg,#514FE4,#FF6B35);border-radius:16px;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
-    <div>
-      <h4 style="color:#fff;font-size:18px;font-weight:800;margin:0 0 8px;">🛒 오늘의 쇼핑 추천!</h4>
-      <p style="color:rgba(255,255,255,0.9);font-size:14px;margin:0;">쿠팡 로켓배송으로 빠르고 편리하게 쇼핑하세요!</p>
-    </div>
-    <a href="https://link.coupang.com/a/eiMhxP" target="_blank" rel="noopener noreferrer" style="background:#ffc107;color:#000;padding:12px 24px;border-radius:8px;font-weight:700;text-decoration:none;font-size:14px;white-space:nowrap;">쿠팡에서 확인하기 →</a>
-  </div>
-  <p style="font-size:11px;color:#aaa;margin-top:12px;text-align:center;">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
+<div class="market-summary">
+<div class="market-card"><div class="label">원/달러 환율</div><div class="value">1,512.00</div><div class="change up-color">▲ 고환율 지속</div></div>
+<div class="market-card"><div class="label">S&P 500</div><div class="value">+0.4%</div><div class="change up-color">▲ 상승 마감</div></div>
+<div class="market-card"><div class="label">WTI 유가</div><div class="value">하락</div><div class="change down-color">▼ 휴전 기대</div></div>
+<div class="market-card"><div class="label">나스닥</div><div class="value">+0.5%</div><div class="change up-color">▲ 반도체 강세</div></div>
 </div>
 
+<div class="section">
+<h2>📰 전일 주요 이슈 (2026-04-05)</h2>
+<div class="issue-list">
+
+<div class="issue-item positive"><div class="issue-number">1</div><div class="issue-content"><div class="label">🇺🇸 글로벌</div><div class="title">미·이란 휴전 협상 진전, 유가 하락 전환</div><p>미국·이란·중동 중재국이 45일 휴전안을 논의 중. 호르무즈 해협 재개방 가능성에 유가가 하락하며 위험자산 선호 회복.</p></div></div>
+
+<div class="issue-item positive"><div class="issue-number">2</div><div class="issue-content"><div class="label">📈 미국증시</div><div class="title">S&P500 0.4%↑, 모건스탠리 "바닥 형성 중"</div><p>모건스탠리 마이크 윌슨 "미 증시가 단기 저점을 형성 중, 경기민감·퀄리티 성장주 비중 확대 권고". 넷플릭스는 골드만 매수상향에 1.5% 상승.</p></div></div>
+
+<div class="issue-item hot"><div class="issue-number">3</div><div class="issue-content"><div class="label">⚠️ 환율</div><div class="title">원/달러 1,512원, 2009년 이후 최약세권</div><p>중동발 리스크와 글로벌 위험회피로 원화 약세 심화. 수입물가·실질소득 위축 우려.</p></div></div>
+
+<div class="issue-item hot"><div class="issue-number">4</div><div class="issue-content"><div class="label">⚠️ 물가</div><div class="title">글로벌 IB 8곳, 한국 물가전망 일제히 상향</div><p>고환율·고유가 더블쇼크로 인플레 압력 상승. 내수 경기 위축 리스크 부각.</p></div></div>
+
+<div class="issue-item positive"><div class="issue-number">5</div><div class="issue-content"><div class="label">💎 반도체</div><div class="title">3월 반도체 수출 +151.4%, 월 300억$ 사상 최대</div><p>AI 반도체 수요 폭증과 공급부족이 견인. 한국 수출 모멘텀 강화.</p></div></div>
+
+<div class="issue-item hot"><div class="issue-number">6</div><div class="issue-content"><div class="label">🏠 부동산</div><div class="title">금융당국, 다주택자 대출 만기연장 제한 17일 시행</div><p>비거주 1주택자 전세대출 보증 축소 검토. 부동산·건설·은행권 영향 불가피.</p></div></div>
+
+</div>
+</div>
+
+<div class="section">
+<h2>📈 상승 예상 테마 &amp; 📉 하락 예상 테마</h2>
+<div class="theme-grid">
+
+<div class="theme-card up">
+<h3>📈 AI 반도체 / HBM</h3>
+<span class="badge sector-up">반도체</span>
+<div class="stocks"><span class="up-stock">삼성전자</span><span class="up-stock">SK하이닉스</span><span class="up-stock">한미반도체</span></div>
+<div class="reason">3월 반도체 수출 +151% 사상 최대, AI 수요·공급부족 지속. 미 나스닥 반도체 강세도 우호적.</div>
+</div>
+
+<div class="theme-card down">
+<h3>📉 정유 / 석유화학</h3>
+<span class="badge sector-down">에너지</span>
+<div class="stocks"><span class="down-stock">S-Oil</span><span class="down-stock">SK이노베이션</span><span class="down-stock">GS</span></div>
+<div class="reason">미·이란 휴전 협상 진전으로 유가 하락 전환. 정제마진 축소 우려.</div>
+</div>
+
+<div class="theme-card up">
+<h3>📈 수출 대형주 (고환율 수혜)</h3>
+<span class="badge sector-up">자동차·IT</span>
+<div class="stocks"><span class="up-stock">현대차</span><span class="up-stock">기아</span><span class="up-stock">LG전자</span></div>
+<div class="reason">원/달러 1,512원 고환율 지속으로 수출기업 환차익 기대.</div>
+</div>
+
+<div class="theme-card down">
+<h3>📉 은행 / 부동산금융</h3>
+<span class="badge sector-down">금융</span>
+<div class="stocks"><span class="down-stock">KB금융</span><span class="down-stock">신한지주</span><span class="down-stock">하나금융</span></div>
+<div class="reason">다주택자 대출 만기연장 제한·전세대출 보증 축소로 가계대출 성장 둔화 우려.</div>
+</div>
+
+<div class="theme-card up">
+<h3>📈 조선 / 방산</h3>
+<span class="badge sector-up">중공업</span>
+<div class="stocks"><span class="up-stock">HD현대중공업</span><span class="up-stock">한화오션</span><span class="up-stock">한화에어로스페이스</span></div>
+<div class="reason">중동 지정학 리스크 잔존 + 고환율 수주 경쟁력 + 글로벌 방산 수요 지속.</div>
+</div>
+
+<div class="theme-card down">
+<h3>📉 항공 / 여행</h3>
+<span class="badge sector-down">소비재</span>
+<div class="stocks"><span class="down-stock">대한항공</span><span class="down-stock">아시아나항공</span><span class="down-stock">하나투어</span></div>
+<div class="reason">고환율로 해외여행 수요 둔화·달러 부채 부담 확대. 유가 하락은 일부 상쇄 요인.</div>
+</div>
+
+<div class="theme-card up">
+<h3>📈 K-콘텐츠 / 미디어</h3>
+<span class="badge sector-up">콘텐츠</span>
+<div class="stocks"><span class="up-stock">스튜디오드래곤</span><span class="up-stock">CJ ENM</span><span class="up-stock">에스엠</span></div>
+<div class="reason">넷플릭스 골드만 매수상향 등 글로벌 OTT 투자 확대 기대. 위험자산 선호 회복 수혜.</div>
+</div>
+
+<div class="theme-card down">
+<h3>📉 내수 소비재 / 유통</h3>
+<span class="badge sector-down">소비재</span>
+<div class="stocks"><span class="down-stock">이마트</span><span class="down-stock">롯데쇼핑</span><span class="down-stock">CJ제일제당</span></div>
+<div class="reason">물가전망 상향·실질소득 위축으로 내수 소비 둔화. 원재료 수입 부담 가중.</div>
+</div>
+
+</div>
+</div>
+
+<div class="sources">
+<strong>📌 참고 출처</strong>
+<ul>
+<li><a href="https://www.cnbc.com/2026/04/05/stock-market-today-live-updates.html">CNBC: S&P 500 rises as investors await Iran-US ceasefire</a></li>
+<li><a href="https://www.new1cm.com/2026/04/2026-04-05_01950438841.html">2026-04-05 국내 경제 뉴스</a></li>
+<li><a href="https://ko.tradingeconomics.com/south-korea/currency">대한민국 원 환율 데이터</a></li>
+<li><a href="https://www.itinsight.kr/news/444675">트럼프 행정부 관세 환급 신호 - IT인사이트</a></li>
+<li><a href="https://www.cliktoday.com/2026/04/20260403-today-news.html">반도체 수출 사상 최대 - 오늘의 클릭</a></li>
+</ul>
+</div>
+
+<footer>
+자동 생성 보고서 · 2026-04-06 08:00 · 투자 권유 아님<br>
+<small>전일(2026-04-05) 뉴스 기반 분석 | 실제 시장 결과와 다를 수 있습니다</small>
+</footer>
+</div>
 </body>
 </html>
