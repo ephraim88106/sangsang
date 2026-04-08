@@ -25,6 +25,23 @@
 - **반응형 디자인:** 모바일, 태블릿, 데스크탑 환경에 최적화된 레이아웃.
 
 ## 현재 작업 계획
+### 광고 수익화 모델 다각화 (Phase 3 시작)
+1. **Kakao AdFit 광고 단위 통합:**
+    *   **목표:** 사이트 전체에 Kakao AdFit 광고 단위를 추가하여 광고 수익화 강화.
+    *   **적용 범위:** `404.html`을 제외한 모든 `.html` 파일.
+    *   **구현:** 각 파일의 `</body>` 태그 바로 앞에 Kakao AdFit 광고 코드 삽입.
+    *   **광고 코드:**
+        ```html
+        <ins class="kakao_ad_area"
+        style="display:none;"
+        data-ad-unit = "DAN-KMCr4AoIjIDsi9XA"
+        data-ad-width = "320"
+        data-ad-height = "480"></ins>
+        <script type="text/javascript"
+        src="//t1.daumcdn.net/kas/static/ba.min.js"
+        async></script>
+        ```
+
 ### Google AdSense 승인을 위한 최적화 및 설정 (Phase 2 완료)
 1.  **AdSense 코드 통합:** 모든 페이지에 자동 광고 스크립트 및 메타 태그 삽입 완료.
 2.  **보안 및 인증:** `ads.txt` 생성 및 게시자 정보 등록 완료.
@@ -62,6 +79,9 @@
             - 게시글 하단에 맞춤형 정보성 배너(오피넷 연동) 삽입.
             - 쿠팡 파트너스 다이내믹 배너(iframe) 및 공정위 표준 문구 삽입.
         - `index.html` 및 `posts.html` 최신 글 카드 업데이트(최상단 노출) 완료.
+    *   **Kakao Ad (Kakao AdFit) 통합:**
+        - 모든 주요 HTML 페이지(404.html 제외) 하단에 Kakao AdFit 320x480 광고 단위 삽입.
+        - `ins` 태그 및 `ba.min.js` 스크립트 비동기 로딩 설정.
     *   **2026-04-07 채권형 펀드 자금 유출 심층 분석 포스트 추가:**
         - 한 달 새 4조 원이 유출된 채권 시장의 위기 신호와 WGBI 편입 효과 분석.
         - 직장인, 청년, 은퇴자별 맞춤형 경제 영향도(대출 금리 등) 시각화.
