@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>딥페이크 피해 227% 폭증하는데, 법은 아직 '계도기간' 중 — AI기본법 시행 80일의 민낯 | 한국이슈 아티클</title>
+  <meta name="description" content="2026년 1월 AI기본법이 시행됐지만 딥페이크 피해는 폭증하고 기업 처벌은 내년 이후다. 고영향 AI가 채용·대출·의료까지 침투하는 시대, 우리는 정말 보호받고 있는가.">
+  <meta name="keywords" content="AI기본법, 딥페이크, 인공지능 규제, 고영향AI, 워터마크, 딥페이크 피해, 2026 AI법, 생성형AI">
+  <meta property="og:title" content="딥페이크 피해 227% 폭증하는데, 법은 아직 '계도기간' 중 — AI기본법 시행 80일의 민낯">
+  <meta property="og:description" content="AI기본법이 시행됐지만 과태료는 내년부터, 딥페이크는 지금도 폭증 중이다. 당신의 채용·대출·의료 결정을 AI가 내린다면, 지금 무엇이 보호하는가.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ko_KR">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 17px;
+      line-height: 1.8;
+      color: #1a1a2e;
+      background: #ffffff;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+
+    /* ── 헤더 ── */
+    .article-header {
+      background: linear-gradient(135deg, #4a1a8c 0%, #2d0d57 100%);
+      color: #fff;
+      padding: 48px 24px 40px;
+      margin-bottom: 0;
+    }
+    .header-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .category-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.4);
+      color: #e0c8ff;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }
+    .article-date {
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: clamp(22px, 4vw, 32px);
+      font-weight: 900;
+      line-height: 1.4;
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-subtitle {
+      font-size: 16px;
+      color: rgba(255,255,255,0.78);
+      line-height: 1.65;
+      word-break: keep-all;
+    }
+
+    /* ── 본문 ── */
+    .article-body {
+      padding-top: 40px;
+    }
+
+    p {
+      margin-bottom: 20px;
+      word-break: keep-all;
+    }
+
+    /* ── 핵심 요약 박스 ── */
+    .summary-box {
+      background: #f3eeff;
+      border-left: 5px solid #4a1a8c;
+      border-radius: 0 12px 12px 0;
+      padding: 24px 28px;
+      margin: 32px 0;
+    }
+    .summary-box h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #4a1a8c;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .summary-box ul {
+      list-style: none;
+      padding: 0;
+    }
+    .summary-box ul li {
+      padding: 6px 0 6px 22px;
+      position: relative;
+      font-size: 15.5px;
+      font-weight: 500;
+      color: #2d0d57;
+      border-bottom: 1px solid #ddd0ff;
+    }
+    .summary-box ul li:last-child { border-bottom: none; }
+    .summary-box ul li::before {
+      content: '▶';
+      position: absolute;
+      left: 0;
+      color: #7c3aed;
+      font-size: 11px;
+      top: 10px;
+    }
+
+    /* ── 소제목 ── */
+    h2 {
+      font-size: 21px;
+      font-weight: 900;
+      color: #2d0d57;
+      margin: 42px 0 16px;
+      padding-left: 16px;
+      border-left: 4px solid #4a1a8c;
+      line-height: 1.4;
+      word-break: keep-all;
+    }
+
+    /* ── 강조 텍스트 ── */
+    .highlight {
+      background: linear-gradient(transparent 60%, #ddd0ff 60%);
+      font-weight: 700;
+    }
+
+    /* ── 수치 강조 ── */
+    .stat-inline {
+      display: inline-block;
+      background: #4a1a8c;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 2px 10px;
+      border-radius: 4px;
+      margin: 0 3px;
+    }
+
+    /* ── 인포그래픽: 딥페이크 피해 추이 ── */
+    .infographic {
+      background: #fafafa;
+      border: 1px solid #e8e0ff;
+      border-radius: 16px;
+      padding: 32px 28px;
+      margin: 36px 0;
+    }
+    .infographic h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #2d0d57;
+      margin-bottom: 8px;
+    }
+    .infographic .sub {
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 28px;
+    }
+
+    /* 막대 그래프 */
+    .bar-chart {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .bar-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .bar-label {
+      font-size: 14px;
+      font-weight: 700;
+      color: #444;
+      width: 48px;
+      text-align: right;
+      flex-shrink: 0;
+    }
+    .bar-wrap {
+      flex: 1;
+      background: #ede8ff;
+      border-radius: 6px;
+      height: 38px;
+      position: relative;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 6px;
+      background: linear-gradient(90deg, #4a1a8c, #7c3aed);
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 10px;
+      transition: width 0.6s ease;
+    }
+    .bar-fill.accent {
+      background: linear-gradient(90deg, #c0392b, #e74c3c);
+    }
+    .bar-value {
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+      white-space: nowrap;
+    }
+    .bar-value-outside {
+      font-size: 13px;
+      font-weight: 700;
+      color: #4a1a8c;
+      white-space: nowrap;
+      padding-left: 8px;
+    }
+    .chart-note {
+      font-size: 12px;
+      color: #999;
+      margin-top: 18px;
+      border-top: 1px solid #e0d8ff;
+      padding-top: 12px;
+    }
+
+    /* ── 고영향 AI 분야 표 ── */
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+      margin: 20px 0;
+    }
+    .impact-card {
+      background: #f3eeff;
+      border-radius: 10px;
+      padding: 14px 16px;
+      border-top: 3px solid #7c3aed;
+    }
+    .impact-card .ic-icon { font-size: 22px; margin-bottom: 6px; }
+    .impact-card .ic-title { font-size: 14px; font-weight: 700; color: #2d0d57; }
+    .impact-card .ic-desc { font-size: 12px; color: #666; margin-top: 4px; line-height: 1.5; }
+
+    /* ── 처벌 비교 타임라인 ── */
+    .timeline {
+      position: relative;
+      margin: 24px 0;
+      padding-left: 32px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(to bottom, #4a1a8c, #e0d8ff);
+      border-radius: 2px;
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 24px;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -26px;
+      top: 7px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #4a1a8c;
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 2px #4a1a8c;
+    }
+    .timeline-item.future::before { background: #aaa; box-shadow: 0 0 0 2px #aaa; }
+    .timeline-date {
+      font-size: 13px;
+      font-weight: 700;
+      color: #7c3aed;
+      margin-bottom: 4px;
+    }
+    .timeline-item.future .timeline-date { color: #aaa; }
+    .timeline-content {
+      font-size: 15px;
+      color: #333;
+    }
+
+    /* ── 영향 섹션: 독자별 ── */
+    .audience-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 20px 0;
+    }
+    @media (max-width: 580px) {
+      .audience-grid { grid-template-columns: 1fr; }
+    }
+    .audience-card {
+      border: 1px solid #ddd0ff;
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .audience-card h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #2d0d57;
+      margin-bottom: 10px;
+    }
+    .audience-card ul {
+      list-style: disc;
+      padding-left: 18px;
+      font-size: 14px;
+      color: #444;
+    }
+    .audience-card ul li { margin-bottom: 6px; }
+
+    /* ── 과태료 박스 ── */
+    .penalty-box {
+      display: flex;
+      gap: 12px;
+      margin: 20px 0;
+      flex-wrap: wrap;
+    }
+    .penalty-item {
+      flex: 1;
+      min-width: 160px;
+      background: #2d0d57;
+      color: #fff;
+      border-radius: 12px;
+      padding: 18px 16px;
+      text-align: center;
+    }
+    .penalty-item .p-label { font-size: 13px; opacity: 0.7; margin-bottom: 6px; }
+    .penalty-item .p-amount { font-size: 24px; font-weight: 900; color: #e0c8ff; }
+    .penalty-item .p-unit { font-size: 13px; opacity: 0.8; margin-top: 4px; }
+
+    /* ── 행동 제안 ── */
+    .action-box {
+      background: linear-gradient(135deg, #4a1a8c 0%, #2d0d57 100%);
+      color: #fff;
+      border-radius: 16px;
+      padding: 28px 28px;
+      margin: 36px 0;
+    }
+    .action-box h3 { font-size: 17px; font-weight: 700; margin-bottom: 16px; color: #e0c8ff; }
+    .action-box ol {
+      padding-left: 20px;
+      font-size: 15px;
+      line-height: 1.9;
+    }
+    .action-box ol li { margin-bottom: 6px; }
+
+    /* ── 키워드 태그 ── */
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 32px 0 20px;
+    }
+    .tag {
+      background: #f3eeff;
+      color: #4a1a8c;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 5px 14px;
+      border-radius: 20px;
+      border: 1px solid #ddd0ff;
+    }
+
+    /* ── 면책조항 ── */
+    .disclaimer {
+      font-size: 12.5px;
+      color: #999;
+      border-top: 1px solid #eee;
+      padding-top: 20px;
+      line-height: 1.7;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 480px) {
+      .article-header { padding: 36px 16px 32px; }
+      .summary-box { padding: 20px 18px; }
+      .infographic { padding: 22px 16px; }
+      .bar-label { width: 38px; font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- 헤더 -->
+<header class="article-header">
+  <div class="header-inner">
+    <div class="category-badge">📱 기술 · AI</div>
+    <div class="article-date">2026년 4월 9일 목요일</div>
+    <h1 class="article-title">딥페이크 피해 227% 폭증하는데,<br>법은 아직 '계도기간' 중<br>— AI기본법 시행 80일의 민낯</h1>
+    <p class="article-subtitle">AI가 당신의 취업 합격·대출 승인·의료 진단까지 결정하는 시대가 왔다.<br>
+    법은 있다. 그런데 아직 처벌하지 않는다. 그 틈에 무슨 일이 벌어지고 있나.</p>
+  </div>
+</header>
+
+<!-- 본문 -->
+<div class="container">
+  <article class="article-body">
+
+    <!-- 훅 문단 -->
+    <p>
+      지난해 어느 대학교 단체 채팅방에 한 여학생의 얼굴이 합성된 영상이 유포됐다. 피해자는 신고했고, 수사가 시작됐지만 영상은 이미 수십 개의 텔레그램 채널을 타고 퍼진 뒤였다.
+      이런 사건이 2024년 한 해에만 <span class="highlight">1,384건</span> 신고됐다. 2023년(423건)과 비교하면 단 1년 만에 <span class="highlight">227.2% 폭증</span>한 수치다.
+      그리고 2026년 1월 22일, 한국에서 '인공지능기본법(AI기본법)'이 시행됐다. 세계에서 손꼽히는 속도로 AI를 규율하는 법이 만들어졌다. 그런데 법 시행 80일이 지난 지금, 딥페이크 영상은 오늘도 만들어지고 있다. 과태료는 아직 없다. 처벌은 내년 이후다.
+    </p>
+
+    <!-- 핵심 요약 박스 -->
+    <div class="summary-box">
+      <h3>⚡ 이 기사의 핵심 3줄</h3>
+      <ul>
+        <li>한국 AI기본법이 2026년 1월 22일 시행 — 채용·대출·의료 결정하는 AI에 고지 의무 부과</li>
+        <li>딥페이크 피해는 1년 새 227% 폭증, 피해자의 96.6%가 여성·92%가 10~20대</li>
+        <li>그러나 과태료 계도기간 최소 1년 — 실제 처벌은 2027년 이후, 지금은 '무늬만 시행' 논란</li>
+      </ul>
+    </div>
+
+    <!-- 1. 배경과 맥락 -->
+    <h2>법이 만들어지기까지 — 왜 지금인가</h2>
+    <p>
+      한국이 AI 규제법을 서두른 건 단순한 우연이 아니다. 2022년부터 챗GPT 등 생성형 AI가 폭발적으로 확산되면서
+      딥페이크 성범죄, 가짜뉴스, 채용 차별, 의료 오판 등 사회적 피해가 눈에 띄게 늘었다.
+      유럽연합(EU)이 2024년 AI Act를 통과시켰지만 단계적 시행을 택하면서 실제 적용은 한참 뒤로 밀렸다.
+      반면 한국은 2025년 말 법안을 통과시키고 2026년 1월 22일 전면 시행에 돌입했다.
+      "EU보다 빠르다"는 수식어가 붙었다.
+    </p>
+    <p>
+      하지만 속도가 곧 실효성을 보장하진 않는다. 법 조문에는 의무가 명시됐지만, 과태료 시행령에는 최소 1년의 계도기간이 적혔다.
+      즉, <span class="highlight">2027년 1월 이전까지 기업이 의무를 어겨도 과태료 부과는 없다</span>는 뜻이다.
+    </p>
+
+    <!-- 2. 핵심 팩트 -->
+    <h2>AI기본법 핵심 내용 — 당신의 일상에 어떻게 침투하나</h2>
+    <p>
+      이 법이 특별한 이유는 단순히 AI 기업을 규제하는 게 아니라, AI가 '당신의 삶에서 내리는 결정'을 직접 건드리기 때문이다.
+    </p>
+
+    <p style="font-size:15px; font-weight:700; color:#2d0d57; margin-bottom: 12px;">🔴 10개 고영향 AI 영역 — 더 엄격한 규제 적용</p>
+    <div class="impact-grid">
+      <div class="impact-card">
+        <div class="ic-icon">💼</div>
+        <div class="ic-title">채용·인사평가</div>
+        <div class="ic-desc">AI가 서류 필터링, 면접 점수 산정에 개입하는 모든 서비스</div>
+      </div>
+      <div class="impact-card">
+        <div class="ic-icon">🏦</div>
+        <div class="ic-title">대출 심사</div>
+        <div class="ic-desc">신용점수 산정, 대출 승인 여부를 AI가 결정하는 금융 서비스</div>
+      </div>
+      <div class="impact-card">
+        <div class="ic-icon">🏥</div>
+        <div class="ic-title">보건·의료</div>
+        <div class="ic-desc">AI 진단 보조, 의료기기 AI, 수술 지원 시스템</div>
+      </div>
+      <div class="impact-card">
+        <div class="ic-icon">🎓</div>
+        <div class="ic-title">교육·학생 평가</div>
+        <div class="ic-desc">AI가 학생 성취도, 진단 평가에 관여하는 에듀테크</div>
+      </div>
+      <div class="impact-card">
+        <div class="ic-icon">🚌</div>
+        <div class="ic-title">교통·인프라</div>
+        <div class="ic-desc">자율주행, 교통 관제, 에너지·수도 공급 AI</div>
+      </div>
+      <div class="impact-card">
+        <div class="ic-icon">⚖️</div>
+        <div class="ic-title">수사·재판 지원</div>
+        <div class="ic-desc">범죄 예측, 증거 분석, 판결 보조 AI 도구</div>
+      </div>
+    </div>
+
+    <p>
+      이 영역의 AI 서비스 사업자는 위험 관리 체계를 갖추고, 사전에 이용자에게 'AI가 개입함'을 고지해야 한다.
+      설명 가능성(왜 이런 결정이 나왔는지)도 제공해야 한다. 쉽게 말해, <span class="highlight">AI가 당신의 취업을 떨어뜨렸다면 왜 떨어뜨렸는지 알 권리</span>가 생겼다는 것이다.
+    </p>
+
+    <p style="font-size:15px; font-weight:700; color:#2d0d57; margin-bottom: 12px; margin-top: 28px;">🟣 생성형 AI — 워터마크·고지 의무</p>
+    <p>
+      챗GPT, 이미지 생성 AI, 영상 합성 도구 등 생성형 AI 결과물에는 반드시 'AI가 만든 것'임을 알려야 한다.
+      딥페이크처럼 실제와 구분하기 어려운 영상·이미지·음향은 눈에 보이는 방식으로 표시해야 한다.
+      웹툰·애니메이션 같은 일반 AI 창작물은 눈에 보이지 않는 디지털 워터마크도 허용된다.
+    </p>
+
+    <!-- 3. 과태료 타임라인 -->
+    <h2>지금 처벌은 없다 — 계도기간의 함정</h2>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">2026년 1월 22일</div>
+        <div class="timeline-content">AI기본법 전면 시행 — 법적 의무 발생. 고지·워터마크·위험관리 의무 시작</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2026년 1월 22일 ~ (최소 1년)</div>
+        <div class="timeline-content">과태료 <strong>계도기간</strong>. 의무를 어겨도 과태료 부과 없음. 정부 지원 플랫폼 운영, 기업 가이드 배포</div>
+      </div>
+      <div class="timeline-item future">
+        <div class="timeline-date">2027년 1월 이후 (예상)</div>
+        <div class="timeline-content">과태료 본격 부과 시작. AI 고지 의무 위반 시 최대 1,500만원, 해외 사업자 국내대리인 미지정 시 최대 2,000만원</div>
+      </div>
+    </div>
+
+    <div class="penalty-box">
+      <div class="penalty-item">
+        <div class="p-label">AI 미고지·워터마크 위반</div>
+        <div class="p-amount">최대 1,500만</div>
+        <div class="p-unit">원 과태료 (1회 500만→가중)</div>
+      </div>
+      <div class="penalty-item">
+        <div class="p-label">해외 사업자 대리인 미지정</div>
+        <div class="p-amount">2,000만</div>
+        <div class="p-unit">원 과태료</div>
+      </div>
+    </div>
+
+    <p>
+      여기서 핵심적인 모순이 드러난다. 법적 의무는 2026년 1월부터 발생하지만, 처벌은 빨라도 2027년부터다.
+      이 1년의 공백기 동안 기업들은 자율에 맡겨진다.
+      IT 업계에서는 "계도기간이 있으니 굳이 서두를 필요 없다"는 인식이 퍼진다고 한다.
+      소비자는 AI에 의한 불이익을 겪어도 지금은 구제받기 어렵다.
+    </p>
+
+    <!-- 4. 딥페이크 인포그래픽 -->
+    <h2>숨겨진 이면 — 법이 시행되는 동안 딥페이크는 어떻게 됐나</h2>
+    <p>
+      AI기본법의 핵심 목적 중 하나는 딥페이크 성범죄 차단이었다. 현실은 어떤가.
+      2024년 딥페이크 피해 신고는 <strong>1,384건</strong>으로 전년 423건 대비 <span class="stat-inline">+227%</span> 급증했다.
+      피해자의 <span class="stat-inline">96.6%</span>가 여성이고, <span class="stat-inline">92.6%</span>가 10~20대다.
+      학교 단체 채팅방, SNS 계정, 지인 사진 — 일상적인 디지털 흔적이 범죄의 재료가 된다.
+    </p>
+
+    <div class="infographic">
+      <h3>📊 한국 딥페이크 피해 신고 건수 추이</h3>
+      <div class="sub">출처: 여성가족부 디지털성범죄피해자지원센터 / 한국형사법무정책연구원</div>
+
+      <div class="bar-chart">
+        <div class="bar-row">
+          <span class="bar-label">2021</span>
+          <div class="bar-wrap">
+            <div class="bar-fill" style="width:12%">
+              <span class="bar-value">156건</span>
+            </div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">2022</span>
+          <div class="bar-wrap">
+            <div class="bar-fill" style="width:19%">
+              <span class="bar-value">243건</span>
+            </div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">2023</span>
+          <div class="bar-wrap">
+            <div class="bar-fill" style="width:33%">
+              <span class="bar-value">423건</span>
+            </div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">2024</span>
+          <div class="bar-wrap">
+            <div class="bar-fill accent" style="width:100%">
+              <span class="bar-value">1,384건 (+227%)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="chart-note">
+        ※ 2024년 디지털 성범죄 피해 지원자 총 1만 305명 (전년 대비 +14.7%) / 피해자 중 96.6% 여성, 92.6% 10~20대<br>
+        ※ AI기본법은 2026년 1월 22일 시행. 워터마크 의무·고지 의무가 딥페이크 억제에 기여할지 2026년 데이터 주목 필요
+      </p>
+    </div>
+
+    <p>
+      더 충격적인 사실은 피해자 92.6%가 10~20대라는 점이다. 청소년들이 가장 많은 가해자인 동시에 가장 많은 피해자다.
+      2026년 현재 불법 영상물 삭제 지원 건수는 이미 전년 전체 건수를 넘어섰다.
+      AI기본법이 딥페이크 워터마크를 의무화했지만, 텔레그램 비공개 채널이나 다크웹을 통한 유포에는 사실상 속수무책이라는 비판이 나온다.
+    </p>
+
+    <!-- 5. 나에게 미치는 영향 -->
+    <h2>나에게 미치는 영향 — 직업·연령별로 달라지는 현실</h2>
+
+    <div class="audience-grid">
+      <div class="audience-card">
+        <h4>💼 취업 준비생·직장인</h4>
+        <ul>
+          <li>AI 채용 심사 고지 받을 권리 생김</li>
+          <li>"왜 떨어졌는지" 설명 요구 가능 (고영향 AI 해당 시)</li>
+          <li>AI 면접·서류 탈락 시 불복 근거 마련 중</li>
+          <li>단, 계도기간 중엔 실질적 구제 어려움</li>
+        </ul>
+      </div>
+      <div class="audience-card">
+        <h4>🏦 대출·금융 이용자</h4>
+        <ul>
+          <li>AI 신용 평가·대출 거절 시 고지 의무</li>
+          <li>이의 제기 채널 마련 요구 가능</li>
+          <li>아직 대부분 금융사 시스템 정비 중</li>
+          <li>2027년 이후 실질 적용 전망</li>
+        </ul>
+      </div>
+      <div class="audience-card">
+        <h4>🎓 학생·청소년</h4>
+        <ul>
+          <li>딥페이크 성범죄 피해 위험도 가장 높은 집단</li>
+          <li>AI 워터마크 의무로 장기적 억제 기대</li>
+          <li>학교 내 AI 성적 평가 도구 사용 시 고지 받을 권리</li>
+          <li>지금 당장은 디지털 리터러시 강화가 최우선</li>
+        </ul>
+      </div>
+      <div class="audience-card">
+        <h4>🏥 환자·의료 이용자</h4>
+        <ul>
+          <li>AI 진단 보조 활용 시 고지 의무 발생</li>
+          <li>AI 판독 오류 시 책임 소재 명확화 논의 중</li>
+          <li>의료 AI 도입 병원 빠르게 증가 중</li>
+          <li>현재는 안전성·투명성 기준 정비 단계</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 6. AI 일자리 현실 -->
+    <h2>AI가 일자리를 빼앗는다 — 한국의 현주소</h2>
+    <p>
+      AI기본법은 규제만 담은 게 아니다. AI 산업 육성과 인력 양성도 함께 다룬다.
+      그런데 지금 한국 노동시장은 어떤가. 한국개발연구원(KDI) 조사에 따르면 국내 10인 이상 민간기업의 AI 도입률은
+      아직 <span class="highlight">2.7%</span> 수준이지만, 250인 이상 대기업에서는 <span class="highlight">약 20%</span>에 달한다.
+    </p>
+    <p>
+      직종별 영향을 보면 정보통신 전문직은 AI 덕분에 오히려 고용이 늘었다. 반면 <span class="highlight">사무·서비스직 여성, 청년층 30대 남성</span>에서 임금 감소와 고용 감소가 뚜렷하게 나타났다.
+      세계경제포럼 예측대로라면 AI·머신러닝 전문가 수요는 35% 이상 늘겠지만, 프롬프트 엔지니어 한 명을 키우는 동안 사무직 다섯 자리가 사라질 수 있다는 우려도 현실이다.
+    </p>
+
+    <!-- 7. 전망과 행동 -->
+    <h2>이제 어떻게 될까 — 2026년 이후 전망</h2>
+    <p>
+      AI기본법 계도기간이 끝나는 2027년 이후, 기업들은 본격적인 컴플라이언스 압박을 받는다.
+      법률·컨설팅 업계는 "AI 거버넌스 전담 부서를 두지 않은 기업은 2027년에 혼란을 겪을 것"이라 경고한다.
+      소비자 입장에서는 점차 AI 사용 사실을 고지받는 경험이 늘고, '이 채용 결과는 AI가 냈습니다'라는 문구가 일상화될 것이다.
+    </p>
+    <p>
+      딥페이크 문제는 워터마크 의무만으로는 해결되지 않는다는 게 전문가들의 중론이다.
+      워터마크를 제거하는 기술도 이미 유통되고 있다.
+      피해자 지원 인프라 확충, 플랫폼 사업자의 자율 규제, 청소년 디지털 교육이 함께 가야 한다는 목소리가 높다.
+    </p>
+
+    <div class="action-box">
+      <h3>✅ 지금 당장 할 수 있는 것</h3>
+      <ol>
+        <li><strong>AI 채용 시스템 확인:</strong> 취업 지원 시 "AI 심사를 사용하나요?"라고 기업에 직접 문의할 수 있다. AI기본법상 고지 의무가 있다.</li>
+        <li><strong>딥페이크 피해 신고:</strong> 피해 발생 시 디지털성범죄피해자지원센터(02-735-8994) 또는 경찰청 사이버범죄 신고시스템(ecrm.cyber.go.kr)에 신고.</li>
+        <li><strong>SNS 개인정보 최소화:</strong> 본인 사진·영상의 공개 범위를 정기적으로 점검하고, 얼굴이 선명한 사진은 공개 범위를 제한한다.</li>
+        <li><strong>AI 결정에 이의 제기:</strong> 대출 거절·채용 탈락이 AI 판단에 의한 것이라면 금융기관·기업에 설명을 요구할 수 있다 (고영향 AI 해당 시).</li>
+        <li><strong>계도기간 모니터링:</strong> 2027년부터 AI기본법 과태료가 본격화된다. 소비자 단체나 관련 뉴스레터를 구독해 권리 강화 시점을 파악하자.</li>
+      </ol>
+    </div>
+
+    <!-- 키워드 태그 -->
+    <div class="tag-list">
+      <span class="tag">#AI기본법</span>
+      <span class="tag">#딥페이크</span>
+      <span class="tag">#고영향AI</span>
+      <span class="tag">#워터마크의무</span>
+      <span class="tag">#계도기간</span>
+      <span class="tag">#AI규제</span>
+      <span class="tag">#생성형AI</span>
+      <span class="tag">#디지털성범죄</span>
+      <span class="tag">#AI일자리</span>
+      <span class="tag">#인공지능기본법</span>
+    </div>
+
+    <!-- 면책조항 -->
+    <p class="disclaimer">
+      ※ 이 기사는 정부 정책브리핑, 한국형사법무정책연구원, KDI, 법무법인 공개 자료 등 공개된 자료를 바탕으로 작성되었으며,
+      전문적인 법률·금융 조언이 아닙니다. 개인의 법적 권리 및 대응에 관해서는 반드시 전문가와 상담하시기 바랍니다.<br>
+      작성일: 2026년 4월 9일
+    </p>
+
+  </article>
+</div>
+
+    <footer style="text-align: center; padding: 40px 20px; color: #666; font-size: 14px; border-top: 1px solid #eee; margin-top: 40px;">
+      <p>© 2026 에브라임 시드(Ephraim Seed) · 모든 권리 보유</p>
+    </footer>
+</body>
+</html>
