@@ -40,16 +40,20 @@
             <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
             ```
     *   **하단 사이드바/피드 광고 (전체 페이지):**
-        *   **목표:** 사이트 하단에 추가적인 광고 단위를 배치하여 수익 보완.
+        *   **목표:** 사이트 우측에 고정 광고 단위를 배치하여 수익 보완 및 가독성 유지.
         *   **적용 범위:** `404.html`을 제외한 모든 `.html` 파일.
-        *   **구현:** 각 파일의 `</body>` 태그 바로 앞에 Kakao AdFit 광고 코드 삽입.
+        *   **구현:** 각 파일의 `</body>` 태그 바로 앞에 `.fixed-side-ad` 컨테이너로 감싼 Kakao AdFit 광고 코드 삽입.
+        *   **디자인:** 데스크탑(1400px 이상)에서 우측 중앙에 고정 배치되며, 모바일에서는 레이아웃 보호를 위해 숨김 처리.
         *   **광고 코드:**
             ```html
-            <ins class="kakao_ad_area" style="display:none;"
-              data-ad-unit = "DAN-KMCr4AoIjIDsi9XA"
-              data-ad-width = "320"
-              data-ad-height = "480"></ins>
-            <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+            <!-- 우측 고정 사이드바 광고 -->
+            <div class="fixed-side-ad">
+              <ins class="kakao_ad_area" style="display:none;"
+                data-ad-unit = "DAN-KMCr4AoIjIDsi9XA"
+                data-ad-width = "320"
+                data-ad-height = "480"></ins>
+              <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+            </div>
             ```
 
 ### Google AdSense 승인을 위한 최적화 및 설정 (Phase 2 완료)
