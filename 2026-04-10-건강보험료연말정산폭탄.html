@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4월 월급날 통장이 비어있다 — 건강보험료 연말정산, 올해는 얼마나 빠져나가나 | 한국이슈 아티클</title>
+  <meta name="description" content="직장인 수천만 명의 4월 월급에서 조용히 빠져나가는 건강보험료 연말정산. 2026년 평균 추가납부액, 이중 충격의 구조, 내가 할 수 있는 방어법까지 완전 해설." />
+  <meta name="keywords" content="건강보험료 연말정산, 건보료 폭탄, 4월 월급, 2026 건강보험료 인상, 직장인 건강보험, 건강보험 추가납부, 분할납부" />
+  <meta property="og:title" content="4월 월급날 통장이 비어있다 — 건강보험료 연말정산의 진실" />
+  <meta property="og:description" content="2026년 4월, 직장인의 통장에서 조용히 사라지는 건보료 연말정산 완전 해부" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="ko_KR" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background: #f5f7f5;
+      color: #1a1a1a;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      padding-bottom: 60px;
+    }
+
+    /* ── 헤더 ── */
+    .article-header {
+      background: linear-gradient(135deg, #1a5c3a 0%, #0f3d26 100%);
+      color: #fff;
+      padding: 48px 40px 40px;
+    }
+    .category-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.4);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+    }
+    .article-date {
+      font-size: 13px;
+      opacity: 0.75;
+      margin-bottom: 20px;
+      display: block;
+    }
+    .article-title {
+      font-size: 2rem;
+      font-weight: 900;
+      line-height: 1.35;
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+    .article-subtitle {
+      font-size: 1.05rem;
+      opacity: 0.88;
+      line-height: 1.6;
+      border-top: 1px solid rgba(255,255,255,0.25);
+      padding-top: 16px;
+      margin-top: 4px;
+    }
+
+    /* ── 본문 공통 ── */
+    .article-body {
+      padding: 40px 40px 0;
+    }
+    p { margin-bottom: 1.15em; }
+
+    /* ── 핵심 요약 박스 ── */
+    .summary-box {
+      background: #eaf4ee;
+      border-left: 5px solid #1a5c3a;
+      border-radius: 0 8px 8px 0;
+      padding: 22px 24px;
+      margin: 28px 0 36px;
+    }
+    .summary-box .summary-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #1a5c3a;
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+    .summary-box ul {
+      list-style: none;
+      padding: 0;
+    }
+    .summary-box ul li {
+      padding: 5px 0 5px 22px;
+      position: relative;
+      font-size: 0.97rem;
+      font-weight: 500;
+    }
+    .summary-box ul li::before {
+      content: '▶';
+      position: absolute;
+      left: 0;
+      color: #1a5c3a;
+      font-size: 0.7rem;
+      top: 9px;
+    }
+
+    /* ── 소제목 ── */
+    h2.section-title {
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: #0f3d26;
+      margin: 44px 0 16px;
+      padding-left: 14px;
+      border-left: 4px solid #1a5c3a;
+      line-height: 1.4;
+    }
+
+    /* ── 강조 텍스트 ── */
+    .highlight {
+      background: linear-gradient(to bottom, transparent 60%, #b8e4c8 60%);
+      font-weight: 700;
+    }
+    .num-em {
+      color: #1a5c3a;
+      font-weight: 900;
+      font-size: 1.05em;
+    }
+
+    /* ── 인포그래픽: 보험료 비교 막대 ── */
+    .infographic {
+      background: #f9fdf9;
+      border: 1px solid #c8e6d0;
+      border-radius: 12px;
+      padding: 28px 24px;
+      margin: 32px 0;
+    }
+    .infographic-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #1a5c3a;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .bar-chart { width: 100%; }
+    .bar-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 14px;
+      gap: 10px;
+    }
+    .bar-label {
+      width: 130px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #2a2a2a;
+      flex-shrink: 0;
+      line-height: 1.3;
+    }
+    .bar-wrap {
+      flex: 1;
+      background: #e0ede4;
+      border-radius: 4px;
+      height: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 10px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #fff;
+      transition: width 0.5s ease;
+    }
+    .bar-fill.green { background: #1a5c3a; }
+    .bar-fill.lightgreen { background: #3a9c6a; }
+    .bar-note {
+      font-size: 0.78rem;
+      color: #888;
+      margin-top: 4px;
+      text-align: right;
+    }
+
+    /* ── 인포그래픽: 연말정산 흐름 타임라인 ── */
+    .timeline {
+      margin: 28px 0;
+    }
+    .tl-item {
+      display: flex;
+      gap: 18px;
+      margin-bottom: 0;
+    }
+    .tl-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 44px;
+      flex-shrink: 0;
+    }
+    .tl-dot {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #1a5c3a;
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 2px #1a5c3a;
+      flex-shrink: 0;
+      margin-top: 4px;
+    }
+    .tl-dot.red { background: #c0392b; box-shadow: 0 0 0 2px #c0392b; }
+    .tl-line {
+      width: 2px;
+      flex: 1;
+      background: #c8e6d0;
+      min-height: 30px;
+    }
+    .tl-right {
+      padding-bottom: 24px;
+      flex: 1;
+    }
+    .tl-month {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #1a5c3a;
+      margin-bottom: 2px;
+    }
+    .tl-month.red { color: #c0392b; }
+    .tl-content {
+      font-size: 0.93rem;
+      line-height: 1.55;
+      color: #2a2a2a;
+    }
+
+    /* ── 영향 박스 ── */
+    .impact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 24px 0;
+    }
+    .impact-card {
+      background: #f9fdf9;
+      border: 1px solid #c8e6d0;
+      border-radius: 10px;
+      padding: 16px;
+    }
+    .impact-card .ic-label {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #1a5c3a;
+      margin-bottom: 6px;
+    }
+    .impact-card .ic-body {
+      font-size: 0.9rem;
+      line-height: 1.55;
+      color: #333;
+    }
+
+    /* ── 행동 제안 ── */
+    .action-box {
+      background: #0f3d26;
+      color: #fff;
+      border-radius: 12px;
+      padding: 24px 26px;
+      margin: 28px 0;
+    }
+    .action-box .ab-title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+      color: #7dd4a0;
+    }
+    .action-box ol {
+      padding-left: 20px;
+    }
+    .action-box ol li {
+      margin-bottom: 8px;
+      font-size: 0.93rem;
+      line-height: 1.6;
+      opacity: 0.92;
+    }
+
+    /* ── 키워드 태그 ── */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 36px 0 20px;
+    }
+    .tag {
+      background: #eaf4ee;
+      color: #1a5c3a;
+      border-radius: 16px;
+      padding: 4px 12px;
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
+    /* ── 면책조항 ── */
+    .disclaimer {
+      background: #f5f5f5;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: #888;
+      line-height: 1.6;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 600px) {
+      .article-header { padding: 32px 20px 28px; }
+      .article-title { font-size: 1.5rem; }
+      .article-body { padding: 28px 20px 0; }
+      .impact-grid { grid-template-columns: 1fr; }
+      .bar-label { width: 100px; font-size: 0.78rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 헤더 -->
+  <header class="article-header">
+    <span class="category-badge">🏥 의료·복지</span>
+    <span class="article-date">2026년 4월 10일 (금)</span>
+    <h1 class="article-title">4월 월급날 통장이 비어있다<br>— 건강보험료 연말정산, 올해는 얼마나 빠져나가나</h1>
+    <p class="article-subtitle">직장인 수천만 명의 4월 급여에서 조용히 사라지는 '건보료 폭탄'. 연말정산이 뭔지도 모르다가 한 방에 맞는 이유, 그리고 지금 당장 확인해야 할 것들.</p>
+  </header>
+
+  <!-- 본문 -->
+  <div class="article-body">
+
+    <!-- 훅 문단 -->
+    <p style="margin-top:32px; font-size:1.05rem; font-weight:500; color:#111;">
+      이달 급여 명세서를 받아 든 직장인 김민준 씨(34, 마케팅팀)는 눈을 비볐다. 평소보다 <span class="num-em">23만 원</span>이 적었다. 연봉이 삭감된 것도, 지각을 한 것도 아니었다. 항목란 한 줄 — '<span class="highlight">건강보험료 연말정산 추가징수</span>'가 원인이었다. 매년 4월이면 반복되는 이 일을 그는 또 잊고 있었다.
+    </p>
+
+    <!-- 핵심 요약 박스 -->
+    <div class="summary-box">
+      <div class="summary-title">이 기사의 핵심 3줄</div>
+      <ul>
+        <li>2026년 4월, 직장인 건강보험료 연말정산이 이번 달 급여에서 일괄 차감 — 2025년 소득이 오른 사람은 추가 납부</li>
+        <li>과거 통계 기준 추가납부 평균 <strong>20만 3,122원</strong>. 여기에 2026년 보험료율 인상(7.09%→7.19%)까지 겹쳐 이중 부담</li>
+        <li>억울하면 분할납부 신청 가능(최대 12회). 환급 대상인데 모르는 사람도 많아 — 지금 바로 조회해야</li>
+      </ul>
+    </div>
+
+    <!-- 1. 배경과 맥락 -->
+    <h2 class="section-title">🔍 건강보험료 연말정산이란 무엇인가</h2>
+    <p>국민건강보험은 직장가입자의 경우 <strong>전년도 보수총액</strong>을 기준으로 매달 보험료를 미리 떼어간다. 문제는, 매달 받는 '월급 외 소득'— 성과급, 연장근로수당, 명절상여금 등이 연도 중간에는 반영되지 않는다는 것이다. 그래서 다음 해 4월에 '작년에 실제로 얼마나 벌었나'를 다시 계산해 차액을 정산한다. 이것이 건강보험료 연말정산이다.</p>
+    <p>여기서 두 가지 상황이 나뉜다. 작년 총소득이 올랐다면 <strong>추가 납부</strong>, 줄었다면 <strong>환급</strong>이다. 한국의 임금 구조상 성과급 지급, 호봉 인상, 승진 등이 다수 발생하기 때문에 <span class="highlight">추가 납부자가 환급자보다 압도적으로 많다.</span> 그 결과 4월 급여일은 직장인들 사이에서 '건보료 폭탄의 날'로 불린다.</p>
+    <p>더 불공평하게 느껴지는 건, 이 정산이 근로자 본인이 신청하거나 동의해야 이루어지는 절차가 아니라는 점이다. 고지도 없이 그냥 <strong>공제</strong>된다. 처음 당하는 직장인들이 "회사가 내 월급을 잘못 계산했나"라고 생각하는 이유다.</p>
+
+    <!-- 타임라인 인포그래픽 -->
+    <div class="infographic">
+      <div class="infographic-title">📅 건강보험료 연말정산 연간 사이클</div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div>
+          <div class="tl-right">
+            <div class="tl-month">매년 1~12월</div>
+            <div class="tl-content">전년도 보수총액 기준 월 보험료 부과 → 급여에서 자동 공제</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div>
+          <div class="tl-right">
+            <div class="tl-month">다음해 2~3월</div>
+            <div class="tl-content">회사가 국민건강보험공단에 전년도 실제 보수총액 신고</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot red"></div><div class="tl-line"></div></div>
+          <div class="tl-right">
+            <div class="tl-month red">4월 (징수 발생!)</div>
+            <div class="tl-content"><strong>정산 결과 → 실제 소득 > 기준 소득이면 추가 납부 / 적으면 환급</strong>. 이달 급여에서 일괄 공제</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot"></div></div>
+          <div class="tl-right">
+            <div class="tl-month">5월~</div>
+            <div class="tl-content">새 보수총액 기준으로 이후 월 보험료 재산정</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. 핵심 팩트 -->
+    <h2 class="section-title">📊 숫자로 보는 2026년 건보료 이중 충격</h2>
+    <p>올해 4월 직장인들이 체감하는 '이중 충격'은 두 가지가 겹쳤기 때문이다.</p>
+    <p><strong>첫 번째 충격: 연말정산 추가납부.</strong> 과거 통계(2023년도 보수 기준)에 따르면 추가납부 대상 직장인 1인 평균 추가납부액은 <span class="num-em">20만 3,122원</span>이었다(ZDNet Korea 보도). 2025년 임금 상승률이 꾸준했던 만큼 2026년 4월 정산액은 이보다 늘어날 가능성이 높다.</p>
+    <p><strong>두 번째 충격: 2026년 보험료율 인상.</strong> 정부는 2026년 건강보험료율을 <span class="num-em">7.09% → 7.19%</span>로 인상했다. 직장인 기준 월평균 본인 부담은 <span class="num-em">월 2,235원</span> 오른다. 지역가입자는 월 <span class="num-em">1,280원</span> 인상이다. 수치만 보면 작아 보이지만, 연간으로 환산하면 직장인 <span class="num-em">연 2만 6,820원</span>이 추가 지출된다.</p>
+
+    <!-- 막대 그래프 인포그래픽 -->
+    <div class="infographic">
+      <div class="infographic-title">📈 건강보험료율 추이 및 월평균 본인부담 비교 (직장가입자)</div>
+      <div class="bar-chart">
+        <div class="bar-row">
+          <div class="bar-label">2024년 보험료율<br><span style="font-weight:400;color:#555;">6.99%</span></div>
+          <div class="bar-wrap">
+            <div class="bar-fill lightgreen" style="width:93%;">154,000원</div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">2025년 보험료율<br><span style="font-weight:400;color:#555;">7.09%</span></div>
+          <div class="bar-wrap">
+            <div class="bar-fill lightgreen" style="width:96%;">158,464원</div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">2026년 보험료율<br><span style="font-weight:400;color:#555;">7.19%</span></div>
+          <div class="bar-wrap">
+            <div class="bar-fill green" style="width:100%;">160,699원</div>
+          </div>
+        </div>
+      </div>
+      <div class="bar-note">※ 본인부담 기준 (회사 50% 분담 전). 출처: 보건복지부 건강보험료율 고시</div>
+    </div>
+
+    <!-- 3. 숨겨진 이면 -->
+    <h2 class="section-title">🔦 대부분의 기사가 말하지 않는 것</h2>
+    <p>직장인들이 분노하는 포인트는 단순히 돈이 많이 나가서가 아니다. <span class="highlight">이 제도의 구조 자체가 정보 비대칭 위에 서 있다는 점</span>이다.</p>
+    <p>먼저, 연말정산 결과 통보가 사전에 거의 이뤄지지 않는다. 근로자 입장에서는 4월 급여명세서를 받아보기 전까지 얼마가 빠져나갈지 알 방법이 사실상 없다. 소득세 연말정산처럼 조회 서비스가 대중화되어 있지 않기 때문이다.</p>
+    <p>다음으로, <strong>분할납부 제도가 있음에도 대부분 모른다.</strong> 추가징수액이 해당 월 보수월액 보험료 이상일 경우, 회사 신청을 통해 <span class="num-em">최대 12개월 분할납부</span>가 가능하다. 그러나 이 신청은 '회사'가 해야 한다. 근로자가 원한다고 자동으로 되는 게 아니다. 결국 직장에서 HR 담당자가 챙겨주지 않으면, 수십만 원이 그냥 한꺼번에 빠진다.</p>
+    <p>더 나아가, <strong>환급 대상자도 못 받는 경우가 발생한다.</strong> 퇴직자나 이직자의 경우 이전 회사가 보수총액 신고를 늦게 하거나 누락하면, 마땅히 돌아와야 할 환급금이 제때 돌아오지 않는다. 2026년 외래진료 300회 초과 시 본인부담 90% 규정 신설(2027년 시행 예정)과 맞물려, 의료 이용 부담은 올라가는데 보험료까지 오르는 구조에 대한 비판도 커지고 있다.</p>
+
+    <!-- 4. 나에게 미치는 영향 -->
+    <h2 class="section-title">🙋 나는 얼마나 영향받나 — 유형별 실제 시나리오</h2>
+    <div class="impact-grid">
+      <div class="impact-card">
+        <div class="ic-label">👔 일반 직장인 (중견기업, 연봉 4,500만원)</div>
+        <div class="ic-body">2025년 성과급 300만원 추가 수령 시, 올해 4월 추가징수 예상 약 <strong>21~24만원</strong>. 여기에 2026년 인상분(월 +2,235원) 별도 적용.</div>
+      </div>
+      <div class="impact-card">
+        <div class="ic-label">🏢 대기업 직원 (연봉 7,000만원, 성과급 있음)</div>
+        <div class="ic-body">성과급·인센티브 포함 총보수 증가 폭이 클수록 추가납부액도 증가. 연간 보수 1,000만원 증가 시 추가납부 약 <strong>35만원</strong> 이상 예상.</div>
+      </div>
+      <div class="impact-card">
+        <div class="ic-label">🚗 지역가입자 (프리랜서·자영업자)</div>
+        <div class="ic-body">연말정산 대상 아님. 그러나 2026년 보험료율 인상으로 월 <strong>+1,280원</strong>. 재산·소득 합산 부과 특성상 부동산 가격 상승시 보험료 추가 급등 가능.</div>
+      </div>
+      <div class="impact-card">
+        <div class="ic-label">👶 육아휴직자·경력단절 여성</div>
+        <div class="ic-body">육아휴직 기간 중 보수가 없다면 환급 대상. 그러나 복직 직후 이 정산이 발생하면 환급인지 추가납부인지 혼란. HR 담당자에게 반드시 사전 확인 필요.</div>
+      </div>
+    </div>
+
+    <!-- 5. 전망과 행동 제안 -->
+    <h2 class="section-title">🔮 앞으로 어떻게 될까 — 전망</h2>
+    <p>건강보험 재정은 고령화와 필수의료 확충 수요로 인해 지출이 지속 증가할 구조다. 2026년 국민건강보험 종합계획은 '지속 가능한 재정'을 4대 목표 중 하나로 명시했으며, 전문가들은 2027~2028년에도 보험료율 인상이 불가피할 것으로 본다. 현재 7.19%인 요율이 2028년에는 7.4~7.5% 수준으로 올라갈 수 있다는 관측도 나온다.</p>
+    <p>동시에 <span class="highlight">외래진료 연 300회 초과 시 본인부담 90% 규정이 2027년부터 시행</span>된다. 보험료는 올리되 과잉 의료이용은 줄이겠다는 '투트랙' 전략이다. 만성질환자나 노인들이 부당하게 타격을 받을 수 있다는 우려가 이미 시민단체에서 나오고 있다.</p>
+
+    <h2 class="section-title">✅ 지금 바로 할 수 있는 것 3가지</h2>
+    <div class="action-box">
+      <div class="ab-title">💡 건보료 연말정산 대응 체크리스트</div>
+      <ol>
+        <li><strong>내역 즉시 조회:</strong> 국민건강보험공단 홈페이지(nhis.or.kr) 또는 앱 접속 → 민원여기요 → '직장보험료 개인별 연말정산 내역조회' 확인. 추가납부인지 환급인지 금액 확인 가능.</li>
+        <li><strong>분할납부 신청 요청:</strong> 추가징수액이 이번 달 보수월액보험료 이상이라면, 회사 HR 부서에 '분할납부 신청'을 요청하세요. 최대 12개월 분산 가능. 기한 내 신청해야 이번 달 급여 공제를 막을 수 있습니다.</li>
+        <li><strong>환급금 확인:</strong> 2025년에 소득이 줄었거나 이직·휴직 기간이 있었다면 환급 대상일 수 있습니다. 건강보험공단 앱에서 '환급금 조회'로 바로 확인 가능.</li>
+      </ol>
+    </div>
+
+    <!-- 태그 -->
+    <div class="tags">
+      <span class="tag">#건강보험료연말정산</span>
+      <span class="tag">#건보료폭탄</span>
+      <span class="tag">#4월월급</span>
+      <span class="tag">#2026건강보험료</span>
+      <span class="tag">#직장인건강보험</span>
+      <span class="tag">#분할납부</span>
+      <span class="tag">#건강보험재정</span>
+      <span class="tag">#의료복지</span>
+    </div>
+
+    <!-- 면책조항 -->
+    <div class="disclaimer">
+      이 기사는 공개된 자료(보건복지부 보도자료, 국민건강보험공단, 언론 보도)를 바탕으로 작성되었으며, 전문적 법률·금융·의료 조언이 아닙니다. 개인별 정확한 보험료 및 정산액은 국민건강보험공단(☎ 1577-1000)에 직접 문의하거나 nhis.or.kr에서 조회하시기 바랍니다. | 작성일: 2026-04-10
+    </div>
+
+  </div><!-- /article-body -->
+</div><!-- /container -->
+</body>
+</html>
