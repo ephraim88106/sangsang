@@ -353,6 +353,16 @@ body.winter .post-body a { color: #1565c0; }
    ============================================= */
 
 /* 헤더 */
+.top-ad-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 0 0.5rem;
+  width: 100%;
+  background: transparent;
+  overflow: hidden;
+}
+
 .site-header {
   position: sticky;
   top: 0;
@@ -821,6 +831,9 @@ body.winter .post-body a { color: #1565c0; }
 
 /* 반응형 */
 @media (max-width: 640px) {
+  .top-ad-container {
+    padding: 1rem 0 0;
+  }
   .site-header {
     padding: 0 1rem;
   }

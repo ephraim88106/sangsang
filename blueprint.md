@@ -25,22 +25,35 @@
 - **반응형 디자인:** 모바일, 태블릿, 데스크탑 환경에 최적화된 레이아웃.
 
 ## 현재 작업 계획
-### 광고 수익화 모델 다각화 (Phase 3 시작)
+### 광고 수익화 모델 다각화 (Phase 3 진행 중)
 1. **Kakao AdFit 광고 단위 통합:**
-    *   **목표:** 사이트 전체에 Kakao AdFit 광고 단위를 추가하여 광고 수익화 강화.
-    *   **적용 범위:** `404.html`을 제외한 모든 `.html` 파일.
-    *   **구현:** 각 파일의 `</body>` 태그 바로 앞에 Kakao AdFit 광고 코드 삽입.
-    *   **광고 코드:**
-        ```html
-        <ins class="kakao_ad_area"
-        style="display:none;"
-        data-ad-unit = "DAN-KMCr4AoIjIDsi9XA"
-        data-ad-width = "320"
-        data-ad-height = "480"></ins>
-        <script type="text/javascript"
-        src="//t1.daumcdn.net/kas/static/ba.min.js"
-        async></script>
-        ```
+    *   **상단 리더보드 광고 (홈페이지 전용):**
+        *   **목표:** 홈페이지 최상단에 눈에 띄는 리더보드 광고를 배치하여 클릭률 및 수익 극대화.
+        *   **위치:** `index.html`의 `.content-wrapper` 최상단 (헤더 위).
+        *   **디자인:** 사이트 테마와 어울리도록 중앙 정렬 및 적절한 여백 제공 (`.top-ad-container`).
+        *   **광고 코드:**
+            ```html
+            <ins class="kakao_ad_area" style="display:none;"
+              data-ad-unit = "DAN-EVlth33UH8CTDu2u"
+              data-ad-width = "728"
+              data-ad-height = "90"></ins>
+            <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+            ```
+    *   **하단 사이드바/피드 광고 (전체 페이지):**
+        *   **목표:** 사이트 하단에 추가적인 광고 단위를 배치하여 수익 보완.
+        *   **적용 범위:** `404.html`을 제외한 모든 `.html` 파일.
+        *   **구현:** 각 파일의 `</body>` 태그 바로 앞에 Kakao AdFit 광고 코드 삽입.
+        *   **광고 코드:**
+            ```html
+            <ins class="kakao_ad_area"
+            style="display:none;"
+            data-ad-unit = "DAN-KMCr4AoIjIDsi9XA"
+            data-ad-width = "320"
+            data-ad-height = "480"></ins>
+            <script type="text/javascript"
+            src="//t1.daumcdn.net/kas/static/ba.min.js"
+            async></script>
+            ```
 
 ### Google AdSense 승인을 위한 최적화 및 설정 (Phase 2 완료)
 1.  **AdSense 코드 통합:** 모든 페이지에 자동 광고 스크립트 및 메타 태그 삽입 완료.
