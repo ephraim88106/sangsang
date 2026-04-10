@@ -1072,3 +1072,29 @@ body.winter .post-body a { color: #1565c0; }
   .bar-row { grid-template-columns: 80px 1fr 50px; }
   .impact-grid { grid-template-columns: 1fr; }
   }
+
+/* 고정 사이드바 광고 (오른쪽) */
+.fixed-side-ad {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* 화면 높이가 너무 낮을 경우 사이드바 광고 숨김 (겹침 방지) */
+@media (max-height: 850px) {
+  .fixed-side-ad {
+    display: none;
+  }
+}
+
+/* 모바일 및 작은 화면에서는 사이드바 광고 숨김 (레이아웃 보호) */
+@media (max-width: 1400px) {
+  .fixed-side-ad {
+    display: none;
+  }
+}
