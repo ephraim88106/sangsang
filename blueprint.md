@@ -45,14 +45,11 @@
         *   **구현:** 각 파일의 `</body>` 태그 바로 앞에 Kakao AdFit 광고 코드 삽입.
         *   **광고 코드:**
             ```html
-            <ins class="kakao_ad_area"
-            style="display:none;"
-            data-ad-unit = "DAN-KMCr4AoIjIDsi9XA"
-            data-ad-width = "320"
-            data-ad-height = "480"></ins>
-            <script type="text/javascript"
-            src="//t1.daumcdn.net/kas/static/ba.min.js"
-            async></script>
+            <ins class="kakao_ad_area" style="display:none;"
+              data-ad-unit = "DAN-KMCr4AoIjIDsi9XA"
+              data-ad-width = "320"
+              data-ad-height = "480"></ins>
+            <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
             ```
 
 ### Google AdSense 승인을 위한 최적화 및 설정 (Phase 2 완료)
