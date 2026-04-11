@@ -132,6 +132,52 @@
 - **하이라이트 효과:** 텍스트 강조를 위한 부드러운 배경색 스타일(.highlight) 추가.
 - **시각화 라이브러리:** `style.css` 내 데이터 시각화(바 차트, 통계 카드 등) 스타일 시트 확장.
 
+## 광고 코드 스니펫 (Ad Code Snippets)
+
+게시글이나 페이지를 새로 만들 때 아래 코드를 복사하여 사용하세요.
+
+### 1. Kakao AdFit (카카오 애드핏)
+
+#### A. 상단 리더보드 광고 (728x90) - 주로 index.html 상단용
+```html
+<div class="top-ad-container">
+  <ins class="kakao_ad_area" style="display:none;"
+    data-ad-unit = "DAN-EVlth33UH8CTDu2u"
+    data-ad-width = "728"
+    data-ad-height = "90"></ins>
+  <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+```
+
+#### B. 우측 고정 사이드바 광고 (320x480) - 모든 페이지 공통
+```html
+<!-- 우측 고정 사이드바 광고 -->
+<div class="fixed-side-ad">
+  <ins class="kakao_ad_area" style="display:none;"
+    data-ad-unit = "DAN-KMCr4AoIjIDsi9XA"
+    data-ad-width = "320"
+    data-ad-height = "480"></ins>
+  <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+```
+
+### 2. 쿠팡 파트너스 (Coupang Partners)
+
+#### A. 게시글 본문 하단 추천 배너 (CTA)
+```html
+<!-- 쿠팡 파트너스 추천 배너 -->
+<div style="max-width:800px;margin:40px auto 0;padding:0 20px;">
+  <div style="background:linear-gradient(135deg,#514FE4,#FF6B35);border-radius:16px;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+    <div>
+      <h4 style="color:#fff;font-size:18px;font-weight:800;margin:0 0 8px;">🛒 오늘의 쇼핑 추천!</h4>
+      <p style="color:rgba(255,255,255,0.9);font-size:14px;margin:0;">쿠팡 로켓배송으로 빠르고 편리하게 쇼핑하세요!</p>
+    </div>
+    <a href="https://link.coupang.com/a/eiMhxP" target="_blank" rel="noopener noreferrer" style="background:#ffc107;color:#000;padding:12px 24px;border-radius:8px;font-weight:700;text-decoration:none;font-size:14px;white-space:nowrap;">쿠팡에서 확인하기 →</a>
+  </div>
+  <p style="font-size:11px;color:#aaa;margin-top:12px;text-align:center;">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
+</div>
+```
+
 ## 핵심 원칙
 > "사용자에게 초점을 맞추면 나머지는 저절로 따라옵니다."
 
