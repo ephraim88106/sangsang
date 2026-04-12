@@ -1086,14 +1086,14 @@ body.winter .post-body a { color: #1565c0; }
 }
 
 /* 화면 높이가 너무 낮을 경우 사이드바 광고 숨김 (겹침 방지) */
-@media (max-height: 850px) {
+@media (max-height: 600px) {
   .fixed-side-ad {
     display: none;
   }
 }
 
 /* 모바일 및 작은 화면에서는 사이드바 광고 숨김 (레이아웃 보호) */
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
   .fixed-side-ad {
     display: none;
   }
