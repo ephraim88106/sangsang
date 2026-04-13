@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>2026-04-13 오늘의 시장 브리핑</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg: #0a0e1a;
+      --surface: #111827;
+      --surface2: #1a2235;
+      --border: #1e2d45;
+      --up: #00c896;
+      --down: #ff4757;
+      --neutral: #ffd32a;
+      --text: #e2e8f0;
+      --text-muted: #8a99b3;
+      --accent: #3b82f6;
+      --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px 16px 60px;
+    }
+
+    /* ── 헤더 ── */
+    .header {
+      background: linear-gradient(135deg, #0d1b3e 0%, #0a1628 60%, #091428 100%);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px 28px;
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .header::before {
+      content: '';
+      position: absolute;
+      top: -40px; right: -40px;
+      width: 200px; height: 200px;
+      background: radial-gradient(circle, rgba(59,130,246,0.12) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .date-badge {
+      background: rgba(59,130,246,0.15);
+      border: 1px solid rgba(59,130,246,0.3);
+      border-radius: 6px;
+      padding: 4px 12px;
+      font-size: 12px;
+      color: #93c5fd;
+      font-family: var(--font-mono);
+      letter-spacing: 1px;
+    }
+    .sentiment-badge {
+      background: rgba(255,71,87,0.15);
+      border: 1px solid rgba(255,71,87,0.3);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 12px;
+      color: var(--down);
+      font-weight: 700;
+    }
+    .header h1 {
+      font-size: 26px;
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+    }
+    .header-sub {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+    .alert-bar {
+      margin-top: 16px;
+      background: rgba(255,71,87,0.1);
+      border-left: 3px solid var(--down);
+      border-radius: 4px;
+      padding: 10px 14px;
+      font-size: 13px;
+      color: #fca5a5;
+    }
+    .alert-bar strong { color: var(--down); }
+
+    /* ── 섹션 타이틀 ── */
+    .section-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ── 지수 카드 그리드 ── */
+    .index-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .index-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .index-card:hover {
+      transform: translateY(-2px);
+    }
+    .index-card.up  { border-top: 3px solid var(--up); }
+    .index-card.down{ border-top: 3px solid var(--down); }
+    .index-card.flat{ border-top: 3px solid var(--neutral); }
+    .index-name {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-muted);
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    .index-value {
+      font-family: var(--font-mono);
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+    .index-change {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .index-change.up  { color: var(--up); }
+    .index-change.down{ color: var(--down); }
+    .index-change.flat{ color: var(--neutral); }
+    .arrow-up::before   { content: '▲ '; font-size: 10px; }
+    .arrow-down::before { content: '▼ '; font-size: 10px; }
+    .arrow-flat::before { content: '● '; font-size: 10px; }
+    .index-note {
+      margin-top: 6px;
+      font-size: 10px;
+      color: var(--text-muted);
+    }
+
+    /* ── 원자재/환율 카드 ── */
+    .commodity-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .commodity-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .commodity-icon {
+      font-size: 20px;
+    }
+    .commodity-name {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .commodity-value {
+      font-family: var(--font-mono);
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+    }
+    .commodity-change {
+      font-family: var(--font-mono);
+      font-size: 12px;
+    }
+    .commodity-change.up   { color: var(--up); }
+    .commodity-change.down { color: var(--down); }
+
+    /* ── 핵심 분석 ── */
+    .analysis-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    .analysis-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .analysis-card h3 .dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: inline-block;
+    }
+    .analysis-card p {
+      color: var(--text-muted);
+      font-size: 14px;
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+    .analysis-card p:last-child { margin-bottom: 0; }
+    .highlight {
+      color: var(--neutral);
+      font-weight: 600;
+    }
+    .highlight-up   { color: var(--up);   font-weight: 600; }
+    .highlight-down { color: var(--down); font-weight: 600; }
+
+    /* ── 섹터 히트맵 ── */
+    .heatmap-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    .heatmap-cell {
+      border-radius: 8px;
+      padding: 14px 10px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 700;
+      transition: transform 0.15s;
+    }
+    .heatmap-cell:hover { transform: scale(1.03); }
+    .heatmap-cell .sector-name {
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .heatmap-cell .sector-change {
+      font-family: var(--font-mono);
+      font-size: 14px;
+    }
+    .heat-strong-up   { background: rgba(0,200,150,0.25); border: 1px solid rgba(0,200,150,0.4); color: #00c896; }
+    .heat-up          { background: rgba(0,200,150,0.12); border: 1px solid rgba(0,200,150,0.2); color: #52d4a8; }
+    .heat-flat        { background: rgba(255,211,42,0.1);  border: 1px solid rgba(255,211,42,0.2); color: var(--neutral); }
+    .heat-down        { background: rgba(255,71,87,0.12);  border: 1px solid rgba(255,71,87,0.2);  color: #ff7885; }
+    .heat-strong-down { background: rgba(255,71,87,0.25);  border: 1px solid rgba(255,71,87,0.4);  color: var(--down); }
+
+    /* ── 주목 종목/이슈 ── */
+    .watch-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .watch-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 16px;
+      align-items: start;
+    }
+    .watch-number {
+      width: 32px; height: 32px;
+      background: rgba(59,130,246,0.15);
+      border: 1px solid rgba(59,130,246,0.3);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 900;
+      font-size: 14px;
+      color: #93c5fd;
+      flex-shrink: 0;
+    }
+    .watch-content h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+    .watch-content p {
+      color: var(--text-muted);
+      font-size: 13px;
+      line-height: 1.7;
+      margin-bottom: 8px;
+    }
+    .watch-tag {
+      display: inline-block;
+      background: rgba(59,130,246,0.12);
+      border: 1px solid rgba(59,130,246,0.25);
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 11px;
+      color: #93c5fd;
+      margin-right: 4px;
+      margin-bottom: 4px;
+    }
+    .watch-tag.red {
+      background: rgba(255,71,87,0.12);
+      border-color: rgba(255,71,87,0.25);
+      color: #fca5a5;
+    }
+    .watch-tag.green {
+      background: rgba(0,200,150,0.12);
+      border-color: rgba(0,200,150,0.25);
+      color: #6ee7c7;
+    }
+
+    /* ── 내일의 체크포인트 ── */
+    .checkpoint-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 24px;
+    }
+    .checkpoint-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .checkpoint-item:last-child { border-bottom: none; }
+    .checkpoint-time {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--neutral);
+      background: rgba(255,211,42,0.1);
+      border: 1px solid rgba(255,211,42,0.2);
+      border-radius: 4px;
+      padding: 2px 8px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .checkpoint-desc {
+      font-size: 13px;
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .checkpoint-desc strong { color: #fff; }
+    .importance-high { border-left: 3px solid var(--down); padding-left: 10px; }
+    .importance-med  { border-left: 3px solid var(--neutral); padding-left: 10px; }
+
+    /* ── 면책 ── */
+    .disclaimer {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      font-size: 11px;
+      color: #475569;
+      line-height: 1.7;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 600px) {
+      .header h1 { font-size: 20px; }
+      .index-grid { grid-template-columns: repeat(2, 1fr); }
+      .commodity-grid { grid-template-columns: repeat(2, 1fr); }
+      .heatmap-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ══ 헤더 ══ -->
+  <div class="header">
+    <div class="header-top">
+      <span class="date-badge">2026 · 04 · 13 (MON)</span>
+      <span class="sentiment-badge">😨 공포 (FEAR)</span>
+    </div>
+    <h1>오늘의 시장 브리핑</h1>
+    <div class="header-sub">Daily Market Intelligence Report · 주식보고서</div>
+    <div class="alert-bar">
+      ⚡ <strong>긴급 이슈:</strong> 미·이란 1차 종전협상 합의 없이 결렬 — JD 밴스 부통령 빈손 귀국. 코스피 개장 직후 -2% 급락 후 5,800선 사수.
+    </div>
+  </div>
+
+  <!-- ══ 주요 지수 ══ -->
+  <div class="section-title">📊 주요 지수 — 한국 / 미국</div>
+  <div class="index-grid">
+
+    <div class="index-card down">
+      <div class="index-name">KOSPI</div>
+      <div class="index-value">5,808</div>
+      <div class="index-change down"><span class="arrow-down"></span>-50.25 (-0.86%)</div>
+      <div class="index-note">장중 5,730 → 5,808 회복</div>
+    </div>
+
+    <div class="index-card up">
+      <div class="index-name">KOSDAQ</div>
+      <div class="index-value">1,099</div>
+      <div class="index-change up"><span class="arrow-up"></span>+6.21 (+0.57%)</div>
+      <div class="index-note">바이오·중소형 강세</div>
+    </div>
+
+    <div class="index-card down">
+      <div class="index-name">DOW JONES</div>
+      <div class="index-value">47,917</div>
+      <div class="index-change down"><span class="arrow-down"></span>-269 (-0.56%)</div>
+      <div class="index-note">4/10 종가 (금요일)</div>
+    </div>
+
+    <div class="index-card down">
+      <div class="index-name">S&amp;P 500</div>
+      <div class="index-value">6,817</div>
+      <div class="index-change down"><span class="arrow-down"></span>-7.8 (-0.11%)</div>
+      <div class="index-note">4/10 종가 (금요일)</div>
+    </div>
+
+    <div class="index-card up">
+      <div class="index-name">NASDAQ</div>
+      <div class="index-value">22,903</div>
+      <div class="index-change up"><span class="arrow-up"></span>+80 (+0.35%)</div>
+      <div class="index-note">4/10 종가 (금요일)</div>
+    </div>
+
+  </div>
+
+  <!-- ══ 환율·원자재 ══ -->
+  <div class="section-title">💱 환율 · 원자재 · 디지털자산</div>
+  <div class="commodity-grid">
+
+    <div class="commodity-card">
+      <div class="commodity-icon">💵</div>
+      <div class="commodity-name">USD / KRW</div>
+      <div class="commodity-value">1,482.94</div>
+      <div class="commodity-change down">▼ 전주 고점 1,511 대비 안정</div>
+    </div>
+
+    <div class="commodity-card">
+      <div class="commodity-icon">🛢️</div>
+      <div class="commodity-name">WTI 원유 ($/bbl)</div>
+      <div class="commodity-value">$95.68</div>
+      <div class="commodity-change down">▲ 중동 전쟁 리스크 반영</div>
+    </div>
+
+    <div class="commodity-card">
+      <div class="commodity-icon">🥇</div>
+      <div class="commodity-name">금 ($/oz)</div>
+      <div class="commodity-value">$4,749</div>
+      <div class="commodity-change up">▲ 안전자산 수요 급증</div>
+    </div>
+
+    <div class="commodity-card">
+      <div class="commodity-icon">₿</div>
+      <div class="commodity-name">비트코인 (BTC)</div>
+      <div class="commodity-value">$71,491</div>
+      <div class="commodity-change flat">● 횡보 구간</div>
+    </div>
+
+  </div>
+
+  <!-- ══ 핵심 분석 ══ -->
+  <div class="section-title">🔍 오늘의 핵심 분석</div>
+  <div class="analysis-card">
+
+    <h3><span class="dot"></span> ① 협상 결렬이 증시에 던진 충격파</h3>
+    <p>
+      지난주 코스피는 <span class="highlight-up">주간 +8.96%</span>라는 폭발적 반등을 기록했다. 배경은 단 하나—미·이란 휴전 합의였다. 그러나 이번 주 월요일 개장 전, JD 밴스 부통령이 핵 개발 포기와 호르무즈 해협 통제권 이견을 좁히지 못한 채 협상 테이블을 떠났다는 뉴스가 전해졌다.
+      코스피는 개장 직후 <span class="highlight-down">5,730선으로 2% 이상 급락</span>했다. 그러나 흥미롭게도 장중에 개인투자자들이 대거 저가매수에 나서며 낙폭을 절반 이상 만회, 5,808선으로 마감했다. 이는 단순한 공포 패닉이 아닌, "협상 결렬은 일시적 이벤트"라는 시장의 합리적 판단이 작동하고 있음을 시사한다.
+    </p>
+
+    <h3><span class="dot"></span> ② 인플레이션과 연준 — 한국 증시를 누르는 보이지 않는 손</h3>
+    <p>
+      미국 3월 소비자물가지수(CPI)는 전년 동기 대비 <span class="highlight-down">+3.3%</span>로 발표되며 시장 전망을 크게 상회했다. 2월의 2.4%에서 한 달 만에 큰 폭 상승한 것은 에너지 가격의 기여 때문이다. 중동 전쟁 여파로 에너지 가격은 <span class="highlight-down">월간 +10.9%</span>, 휘발유는 무려 <span class="highlight-down">+21.2%</span> 급등했다. 이에 더해 트럼프 행정부의 광범위한 관세 정책은 수입 물가 상승을 통해 근원 인플레이션에 추가적 상방 압력을 가하고 있다.
+      결과적으로 연준의 금리 인하 기대는 사실상 소멸했고, 일부 시장 참여자들은 올해 내 추가 긴축 가능성까지 염두에 두고 있다. 고금리 장기화는 한국 수출 기업의 달러 부채 부담을 키우고, 원달러 환율 상승 압력을 통해 외국인 투자 매력을 감소시킨다.
+    </p>
+
+    <h3><span class="dot"></span> ③ 외국인 반도체 팔기 vs. 삼성 실적 버팀목</h3>
+    <p>
+      올해 1월 말부터 현재까지 외국인 투자자들은 국내 반도체 업종에서만 <span class="highlight-down">49조 원</span>을 순매도했다. 이는 전체 외국인 순매도 54조 원의 86%에 달하는 수치다. 주요 원인으로는 삼성전자의 높은 실적 변동성, 중국 메모리 반도체 업체들의 빠른 성장, 그리고 지정학적 불확실성이 꼽힌다. 그러나 이러한 매도세 속에서도 <span class="highlight-up">삼성전자의 역대급 실적</span>이 시장 심리를 일부 지지하고 있으며, 외국인 보유 비중이 코로나19 이후 최저 수준(48%)까지 내려온 만큼 추가 매도 여력이 제한적이라는 분석도 있다. 반도체 업종의 역설적인 반전 시점에 주목할 필요가 있다.
+    </p>
+
+  </div>
+
+  <!-- ══ 섹터 히트맵 ══ -->
+  <div class="section-title">🗺 섹터 히트맵 — KOSPI200 기준 추정</div>
+  <div class="heatmap-grid">
+
+    <div class="heatmap-cell heat-strong-down">
+      <div class="sector-name">반도체</div>
+      <div class="sector-change">▼ -1.8%</div>
+    </div>
+
+    <div class="heatmap-cell heat-up">
+      <div class="sector-name">건설</div>
+      <div class="sector-change">▲ +1.4%</div>
+    </div>
+
+    <div class="heatmap-cell heat-down">
+      <div class="sector-name">방산·항공</div>
+      <div class="sector-change">▼ -0.9%</div>
+    </div>
+
+    <div class="heatmap-cell heat-up">
+      <div class="sector-name">바이오</div>
+      <div class="sector-change">▲ +1.1%</div>
+    </div>
+
+    <div class="heatmap-cell heat-down">
+      <div class="sector-name">2차전지</div>
+      <div class="sector-change">▼ -0.6%</div>
+    </div>
+
+    <div class="heatmap-cell heat-flat">
+      <div class="sector-name">금융·은행</div>
+      <div class="sector-change">● +0.2%</div>
+    </div>
+
+    <div class="heatmap-cell heat-down">
+      <div class="sector-name">에너지·정유</div>
+      <div class="sector-change">▼ -0.4%</div>
+    </div>
+
+    <div class="heatmap-cell heat-strong-up">
+      <div class="sector-name">의료·헬스케어</div>
+      <div class="sector-change">▲ +2.1%</div>
+    </div>
+
+    <div class="heatmap-cell heat-flat">
+      <div class="sector-name">통신·IT</div>
+      <div class="sector-change">● +0.1%</div>
+    </div>
+
+    <div class="heatmap-cell heat-up">
+      <div class="sector-name">소비재</div>
+      <div class="sector-change">▲ +0.7%</div>
+    </div>
+
+  </div>
+  <p style="font-size:11px; color:var(--text-muted); margin-top:-16px; margin-bottom:24px;">
+    ※ 섹터별 등락률은 장중 흐름 및 뉴스 분석 기반 추정치입니다. 세부 수치는 KRX 데이터를 참고하십시오.
+  </p>
+
+  <!-- ══ 주목 종목/이슈 ══ -->
+  <div class="section-title">👁 주목 종목 &amp; 이슈 TOP 3</div>
+  <div class="watch-list">
+
+    <div class="watch-card">
+      <div class="watch-number">1</div>
+      <div class="watch-content">
+        <h4>삼성전자 — 실적은 역대급, 주가는 억눌려</h4>
+        <p>
+          삼성전자는 2026년 1분기 역대급 실적을 발표하며 증시의 버팀목 역할을 하고 있다. 그러나 외국인 반도체 매도세와 중국 메모리 업체들의 추격이 주가 상단을 제한하고 있다. 외국인 보유 비중이 48%로 코로나 이후 최저치에 도달, 추가 매도 여력 감소로 반전 모멘텀 시작 여부가 이번 주 핵심 변수다.
+        </p>
+        <span class="watch-tag red">외국인 순매도</span>
+        <span class="watch-tag green">실적 서프라이즈</span>
+        <span class="watch-tag">반전 대기</span>
+      </div>
+    </div>
+
+    <div class="watch-card">
+      <div class="watch-number">2</div>
+      <div class="watch-content">
+        <h4>건설 테마 ETF — 중동 재건 수혜 수급 집중</h4>
+        <p>
+          미·이란 협상 결렬에도 불구하고 중동 전쟁이 종결될 경우 막대한 재건 수요가 예상된다는 기대감이 건설 섹터에 선반영되고 있다. 현대건설·삼성물산 등 대형 건설주와 중동 특화 ETF에 개인·기관 자금이 유입 중이다. 종전 협상 재개 일정이 확정될 경우 추가 상승 탄력 예상.
+        </p>
+        <span class="watch-tag green">중동 재건 기대</span>
+        <span class="watch-tag">섹터 ETF</span>
+        <span class="watch-tag red">협상 불확실성</span>
+      </div>
+    </div>
+
+    <div class="watch-card">
+      <div class="watch-number">3</div>
+      <div class="watch-content">
+        <h4>WTI $95 돌파 — 정유·에너지주 방향 갈림길</h4>
+        <p>
+          WTI 유가가 배럴당 $95를 상회하며 에너지 인플레이션 우려를 키우고 있다. 국내 정유주는 정제마진 개선 기대로 단기 수혜 가능성이 있으나, 고유가 지속은 소비심리 위축과 기업 비용 증가로 이어져 중장기적 부정 요인이 된다. 특히 운송·항공업종은 유가 상승에 직격탄을 맞고 있어 실적 전망 하향 조정이 불가피하다.
+        </p>
+        <span class="watch-tag red">유가 $95+ 고공행진</span>
+        <span class="watch-tag green">정유 단기 수혜</span>
+        <span class="watch-tag red">항공 직격탄</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ══ 내일의 체크포인트 ══ -->
+  <div class="section-title">📅 내일(4/14) &amp; 이번 주 체크포인트</div>
+  <div class="checkpoint-card">
+
+    <div class="checkpoint-item importance-high">
+      <span class="checkpoint-time">4/14 밤 09:30</span>
+      <div class="checkpoint-desc importance-high">
+        <strong>미국 3월 PPI(생산자물가지수) 발표</strong> — 전월 CPI가 3.3%로 급등한 상황에서 PPI까지 예상 상회 시 연준 긴축 압박 재부상. S&amp;P 500 선물 변동성 확대 예상.
+      </div>
+    </div>
+
+    <div class="checkpoint-item importance-high">
+      <span class="checkpoint-time">4/14 ~ 주중</span>
+      <div class="checkpoint-desc">
+        <strong>미·이란 2차 종전협상 재개 여부</strong> — JD 밴스 부통령 귀국 후 미국 정부의 다음 행보 주목. 협상 재개 발표 시 코스피 즉각 반응 예상 (+2~3%). 협상 완전 파국 시 유가 $100 상향 돌파 가능성.
+      </div>
+    </div>
+
+    <div class="checkpoint-item importance-med">
+      <span class="checkpoint-time">4/15 (수)</span>
+      <div class="checkpoint-desc">
+        <strong>미국 주요 기업 1분기 실적 발표 시즌 개막</strong> — JP모건, 골드만삭스 등 금융주 선발대 등장. 글로벌 매크로 환경 가늠자 역할.
+      </div>
+    </div>
+
+    <div class="checkpoint-item importance-med">
+      <span class="checkpoint-time">4/16 (목)</span>
+      <div class="checkpoint-desc">
+        <strong>한국 2월 경상수지 발표</strong> — 수출 회복 속도 확인. 반도체 수출 데이터가 시장 심리에 영향 줄 전망.
+      </div>
+    </div>
+
+    <div class="checkpoint-item">
+      <span class="checkpoint-time">주간 지속 모니터링</span>
+      <div class="checkpoint-desc">
+        <strong>원달러 환율 1,500원 저항선</strong> — 전주 고점 1,511원에서 현재 1,483원으로 하락했으나, 협상 재결렬·유가 급등 시 재차 1,500원 돌파 가능. 외국인 자금 흐름 결정 변수.
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ══ 면책 ══ -->
+  <div class="disclaimer">
+    ⚠️ <strong>면책 고지</strong> — 본 보고서는 공개된 시장 데이터와 뉴스 기반으로 AI가 자동 생성한 정보 제공용 자료로, 투자 권유·매매 조언이 아닙니다. 섹터 등락률 등 일부 수치는 추정치를 포함하며, 실제 시장 데이터와 차이가 있을 수 있습니다. 모든 투자 결정의 책임은 투자자 본인에게 있으며, 투자 전 공식 금융기관 자료 및 전문가 의견을 반드시 참고하시기 바랍니다. 생성 시각: 2026-04-13 (자동 스케줄 실행)
+  </div>
+
+</div>
+</body>
+</html>
