@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4월 9일 이후, 한국인은 매일 지구에 빚을 지고 있다 — '환경 부도의 날'이 드러낸 충격적 진실</title>
+  <meta name="description" content="2026년 4월 9일, 대한민국은 1년치 지구 자원을 모두 써버렸다. 남은 266일은 미래 세대에게 빌린 것이다. 플라스틱 세계 1위, 탄소 배출 세계 7위의 한국이 직면한 생태 위기의 민낯을 파헤친다." />
+  <meta name="keywords" content="환경 부도의 날, 한국 생태용량 초과, 지구 오버슈트, 탄소발자국, 한국 환경위기, 기후변화, 생태발자국, 2026 한국환경" />
+  <meta property="og:title" content="4월 9일 이후, 한국인은 매일 지구에 빚을 지고 있다" />
+  <meta property="og:description" content="2026년 한국 '환경 부도의 날' 충격 보고서 — 플라스틱 세계 1위, 탄소 7위 한국의 생태 적자 실태" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="ko_KR" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 17px;
+      line-height: 1.8;
+      color: #1a1a1a;
+      background: #ffffff;
+    }
+
+    /* ── 최상단 카테고리 바 ── */
+    .top-bar {
+      background: #1a6c6c;
+      color: #fff;
+      text-align: center;
+      padding: 8px 16px;
+      font-size: 13px;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    /* ── 헤더 ── */
+    header {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px 24px;
+    }
+
+    .category-badge {
+      display: inline-block;
+      background: #1a6c6c;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      padding: 4px 12px;
+      border-radius: 2px;
+      margin-bottom: 14px;
+    }
+
+    .article-date {
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: clamp(22px, 4vw, 32px);
+      font-weight: 900;
+      line-height: 1.4;
+      color: #0d0d0d;
+      margin-bottom: 14px;
+      word-break: keep-all;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+      border-left: 4px solid #1a6c6c;
+      padding-left: 14px;
+      margin-bottom: 10px;
+    }
+
+    /* ── 본문 컨테이너 ── */
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+
+    /* ── 핵심 요약 박스 ── */
+    .summary-box {
+      background: #e8f5f5;
+      border-left: 6px solid #1a6c6c;
+      border-radius: 6px;
+      padding: 22px 26px;
+      margin: 28px 0;
+    }
+
+    .summary-box h2 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #1a6c6c;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .summary-box ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .summary-box ul li {
+      padding: 6px 0;
+      padding-left: 20px;
+      position: relative;
+      font-weight: 500;
+      font-size: 15.5px;
+      color: #1a1a1a;
+    }
+
+    .summary-box ul li::before {
+      content: "▶";
+      position: absolute;
+      left: 0;
+      color: #1a6c6c;
+      font-size: 10px;
+      top: 10px;
+    }
+
+    /* ── 본문 단락 ── */
+    p {
+      margin-bottom: 20px;
+      word-break: keep-all;
+    }
+
+    /* ── 소제목 ── */
+    h2.section-title {
+      font-size: 20px;
+      font-weight: 900;
+      color: #0d0d0d;
+      margin: 40px 0 16px;
+      padding-left: 14px;
+      border-left: 4px solid #1a6c6c;
+      word-break: keep-all;
+    }
+
+    /* ── 강조 인용 ── */
+    blockquote {
+      background: #f5f5f5;
+      border-left: 4px solid #ccc;
+      padding: 16px 20px;
+      margin: 24px 0;
+      font-size: 16px;
+      color: #444;
+      font-style: italic;
+    }
+
+    /* ── 데이터 하이라이트 박스 ── */
+    .data-highlight {
+      background: #1a6c6c;
+      color: #fff;
+      border-radius: 8px;
+      padding: 24px 28px;
+      margin: 28px 0;
+      text-align: center;
+    }
+
+    .data-highlight .big-number {
+      font-size: clamp(40px, 8vw, 64px);
+      font-weight: 900;
+      line-height: 1;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .data-highlight .big-label {
+      font-size: 16px;
+      opacity: 0.85;
+    }
+
+    /* ── 인포그래픽: 국가별 환경 부도의 날 ── */
+    .infographic {
+      background: #f9fbfb;
+      border: 1px solid #d0e8e8;
+      border-radius: 8px;
+      padding: 28px 24px;
+      margin: 32px 0;
+    }
+
+    .infographic h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #1a6c6c;
+      margin-bottom: 6px;
+    }
+
+    .infographic .infographic-sub {
+      font-size: 13px;
+      color: #777;
+      margin-bottom: 24px;
+    }
+
+    .bar-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 14px;
+      gap: 12px;
+    }
+
+    .bar-label {
+      width: 120px;
+      flex-shrink: 0;
+      font-size: 14px;
+      font-weight: 500;
+      color: #333;
+      text-align: right;
+    }
+
+    .bar-wrap {
+      flex: 1;
+      background: #e0eeee;
+      border-radius: 4px;
+      height: 28px;
+      position: relative;
+      overflow: visible;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      padding-left: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #fff;
+      transition: width 0.3s;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .bar-korea { background: #e63312; }
+    .bar-qatar { background: #8b0000; }
+    .bar-usa   { background: #c47000; }
+    .bar-world { background: #1a8c5c; }
+    .bar-india { background: #2a6c9c; }
+
+    .bar-day {
+      font-size: 13px;
+      color: #555;
+      min-width: 60px;
+      font-weight: 700;
+    }
+
+    /* ── 독자 영향 카드 ── */
+    .impact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    @media (max-width: 600px) {
+      .impact-grid { grid-template-columns: 1fr; }
+    }
+
+    .impact-card {
+      background: #f5fafa;
+      border: 1px solid #c6e0e0;
+      border-radius: 8px;
+      padding: 18px;
+    }
+
+    .impact-card .card-emoji {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .impact-card h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #1a6c6c;
+      margin-bottom: 6px;
+    }
+
+    .impact-card p {
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 0;
+      color: #444;
+    }
+
+    /* ── 타임라인 ── */
+    .timeline {
+      margin: 24px 0;
+      position: relative;
+      padding-left: 24px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 8px;
+      top: 6px;
+      bottom: 6px;
+      width: 2px;
+      background: #1a6c6c;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 20px;
+      padding-left: 16px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -20px;
+      top: 8px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #1a6c6c;
+    }
+
+    .timeline-item .tl-date {
+      font-size: 13px;
+      font-weight: 700;
+      color: #1a6c6c;
+    }
+
+    .timeline-item .tl-text {
+      font-size: 15px;
+      color: #333;
+      margin-top: 2px;
+    }
+
+    /* ── 해시태그 ── */
+    .hashtags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 32px 0 16px;
+    }
+
+    .hashtag {
+      background: #e8f5f5;
+      color: #1a6c6c;
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    /* ── 면책조항 ── */
+    .disclaimer {
+      background: #f5f5f5;
+      border-radius: 4px;
+      padding: 14px 18px;
+      font-size: 12.5px;
+      color: #888;
+      line-height: 1.6;
+      margin-top: 24px;
+    }
+
+    /* ── 푸터 ── */
+    footer {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px 20px 40px;
+      border-top: 1px solid #e0e0e0;
+      font-size: 13px;
+      color: #aaa;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    /* ── 강조 텍스트 ── */
+    strong.teal { color: #1a6c6c; }
+    strong.red  { color: #e63312; }
+
+    /* ── 인포그래픽 내 플라스틱 비교 ── */
+    .plastic-compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+      margin: 24px 0;
+      text-align: center;
+    }
+
+    @media (max-width: 500px) {
+      .plastic-compare { grid-template-columns: 1fr; }
+    }
+
+    .plastic-card {
+      border-radius: 8px;
+      padding: 16px 12px;
+      border: 1px solid #d0e8e8;
+    }
+
+    .plastic-card .p-num {
+      font-size: 28px;
+      font-weight: 900;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .plastic-card .p-label {
+      font-size: 12px;
+      color: #666;
+    }
+
+    .pc-korea { background: #fff0ee; }
+    .pc-korea .p-num { color: #e63312; }
+
+    .pc-oecd { background: #e8f5f5; }
+    .pc-oecd .p-num { color: #1a6c6c; }
+
+    .pc-global { background: #f5f5f5; }
+    .pc-global .p-num { color: #555; }
+
+    hr.divider {
+      border: none;
+      border-top: 1px solid #e8e8e8;
+      margin: 32px 0;
+    }
+  </style>
+</head>
+<body>
+
+<div class="top-bar">🌱 환경·기후 탐사 리포트</div>
+
+<header>
+  <div class="category-badge">🌱 환경 · 기후</div>
+  <div class="article-date">2026년 4월 15일 수요일</div>
+  <h1>4월 9일 이후, 한국인은 매일 지구에 빚을 지고 있다<br>— '환경 부도의 날'이 드러낸 충격적 진실</h1>
+  <p class="subtitle">
+    전 세계 192개국 중 한국의 '생태용량 초과일'은 고작 99번째 날. 나머지 266일은 미래 세대의 지구를 당겨 쓰는 것이다.
+  </p>
+</header>
+
+<main>
+
+  <!-- ── 핵심 요약 박스 ── -->
+  <div class="summary-box">
+    <h2>📌 이 기사의 핵심 3줄</h2>
+    <ul>
+      <li>2026년 4월 9일, 한국은 올해 지구가 감당할 수 있는 자원을 모두 소진했다 — 지구 전체 기준보다 4개월 빠르다.</li>
+      <li>한국의 1인당 플라스틱 폐기물 배출량은 연 208kg으로 선진국 중 세계 1위, OECD 평균의 4배에 달한다.</li>
+      <li>정부는 '에너지 대전환'을 선언했지만 석탄발전 21기는 여전히 가동 중이며, 정책과 현실 사이의 간극이 커지고 있다.</li>
+    </ul>
+  </div>
+
+  <!-- ── 훅 문단 ── -->
+  <p>
+    지금 이 기사를 읽는 당신이 오늘 숨 쉬고, 먹고, 이동한 그 모든 것에는 대가가 따른다. 하지만 그 대가를 지구가 더 이상 감당하지 못하는 날이 있다. <strong class="red">그 날이 2026년 한국에서는 4월 9일이었다.</strong> 그 이후로 우리는 지구의 '마이너스 통장'에서 미래를 꺼내 쓰고 있다.
+  </p>
+  <p>
+    국제 환경 연구기관 글로벌 풋프린트 네트워크(Global Footprint Network)가 매년 발표하는 '국가별 생태용량 초과일(Country Overshoot Day)'에 따르면, 2026년 기준 대한민국의 날짜는 <strong>4월 9일</strong>로 측정됐다. 이는 전 세계가 지속 가능한 방식으로 쓸 수 있는 자원의 한도를 한국이 단 99일 만에 써버린다는 뜻이다. 나머지 <strong class="red">266일은 빚</strong>이다.
+  </p>
+
+  <!-- ── 소제목 1 ── -->
+  <h2 class="section-title">🌍 '환경 부도의 날'이란 무엇인가</h2>
+
+  <p>
+    '생태용량 초과일(Overshoot Day)'은 단순히 환경 단체의 구호가 아니다. 이 지표는 해당 국가 국민 모두가 전 세계에 살고 있다고 가정했을 때, 지구가 1년 치 자원을 공급하고 이산화탄소를 흡수하는 능력을 모두 소진하는 날짜를 계산한다. 즉, <strong>"모든 인류가 당신처럼 살면 지구가 언제 한계에 도달하는가"</strong>를 보여주는 숫자다.
+  </p>
+  <p>
+    이 날짜 이후부터는 인류가 지구의 자생 능력을 넘어서 자원을 소비하는 것이다. 산림이 흡수할 수 없는 양의 이산화탄소를 내뿜고, 바다가 분해할 수 없는 양의 플라스틱을 버리고, 토지가 재생할 수 없는 속도로 먹을거리를 요구한다.
+  </p>
+
+  <div class="data-highlight">
+    <span class="big-number">99일</span>
+    <span class="big-label">한국이 1년 치 지구 자원을 소진하는 데 걸리는 시간<br><small style="font-size:13px;opacity:0.7;">나머지 266일 = 미래 세대에게 빌린 자원</small></span>
+  </div>
+
+  <!-- ── 인포그래픽: 국가별 비교 ── -->
+  <div class="infographic">
+    <h3>📊 2026년 국가별 '환경 부도의 날' 비교</h3>
+    <p class="infographic-sub">해당 날짜가 빠를수록 자원 소비가 과도함을 의미합니다 (365일 = 1년 내내 지속 가능)</p>
+
+    <div class="bar-row">
+      <div class="bar-label">🇶🇦 카타르</div>
+      <div class="bar-wrap">
+        <div class="bar-fill bar-qatar" style="width:9.6%">2월 4일</div>
+      </div>
+      <div class="bar-day">35일째</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">🇺🇸 미국</div>
+      <div class="bar-wrap">
+        <div class="bar-fill bar-usa" style="width:20%">3월 14일</div>
+      </div>
+      <div class="bar-day">73일째</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">🇰🇷 한국</div>
+      <div class="bar-wrap">
+        <div class="bar-fill bar-korea" style="width:27.1%">4월 9일</div>
+      </div>
+      <div class="bar-day">99일째</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">🌍 지구 전체</div>
+      <div class="bar-wrap">
+        <div class="bar-fill bar-world" style="width:58.4%">8월 1일 (예상)</div>
+      </div>
+      <div class="bar-day">213일째</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">🇮🇳 인도</div>
+      <div class="bar-wrap">
+        <div class="bar-fill bar-india" style="width:85.5%">11월 3일</div>
+      </div>
+      <div class="bar-day">307일째</div>
+    </div>
+
+    <p style="font-size:12px;color:#999;margin-top:16px;">출처: Global Footprint Network, 2026 Country Overshoot Days / 지구 전체 초과일은 추정치</p>
+  </div>
+
+  <!-- ── 소제목 2 ── -->
+  <h2 class="section-title">📉 숫자로 보는 한국의 생태 적자</h2>
+
+  <p>
+    환경 부도의 날을 만든 원인은 복합적이다. 한국은 2023년 기준 온실가스 총배출량 <strong>7억 720만 톤(CO₂ 환산)</strong>으로 전 세계 7위의 탄소 배출국이다. 1인당 배출량은 OECD 회원국 중 <strong>다섯 번째로 높다.</strong> 5,100만 명의 인구를 감안하면 놀라운 수치다.
+  </p>
+  <p>
+    더 충격적인 것은 플라스틱이다. 한국의 1인당 연간 플라스틱 폐기물 배출량은 <strong class="red">약 208kg</strong>으로 선진국 가운데 세계 1위다. OECD 평균의 무려 4배에 달한다. 하루에 한 사람이 버리는 플라스틱을 계산하면 569g — 물 500mL 페트병 하나보다 더 무거운 양을 매일 쏟아내는 셈이다.
+  </p>
+
+  <!-- 플라스틱 비교 카드 -->
+  <div class="plastic-compare">
+    <div class="plastic-card pc-korea">
+      <span class="p-num">208kg</span>
+      <span class="p-label">🇰🇷 한국<br>1인당 연간 플라스틱 폐기물</span>
+    </div>
+    <div class="plastic-card pc-oecd">
+      <span class="p-num">~52kg</span>
+      <span class="p-label">🌐 OECD 평균<br>1인당 연간 플라스틱 폐기물</span>
+    </div>
+    <div class="plastic-card pc-global">
+      <span class="p-num">568개</span>
+      <span class="p-label">🍱 한국인 1인<br>연간 일회용 배달용기 소비</span>
+    </div>
+  </div>
+
+  <p>
+    한국인 1인이 1년에 소비하는 일회용 플라스틱을 구체적으로 보면 현기증이 날 정도다. 생수 PET병 109개, 일회용 플라스틱 컵 102개, 비닐봉투 533개, 배달 플라스틱 용기 568개 — 이것들이 모두 당신 한 사람의 몫이다.
+  </p>
+
+  <!-- ── 소제목 3 ── -->
+  <h2 class="section-title">🕵️ 대부분의 기사가 다루지 않는 이면 — 정책의 두 얼굴</h2>
+
+  <p>
+    한국 정부는 2026년 들어 '에너지 대전환'을 핵심 국정과제로 내세우고 있다. 2030년까지 재생에너지 100GW를 보급하겠다는 선언은 야심 차게 들린다. 그러나 현실을 들여다보면 이야기가 달라진다.
+  </p>
+  <p>
+    현재 한국에는 <strong>석탄발전소가 여전히 수십 기 가동 중</strong>이며, 에너지 안보를 이유로 석탄발전 감축 로드맵은 구체적 연도별 목표 없이 원론적 수준에 머무르고 있다. 정책 전문가들은 탈석탄의 일정을 '정치적 선언'이 아닌 '법과 시장 규칙'으로 못 박아야 한다고 입을 모은다. 탈석탄동맹 참여에 걸맞은 연도별 석탄 감축 경로가 지금도 명확하지 않다.
+  </p>
+
+  <blockquote>
+    "한국의 환경 부도의 날이 4월 초로 앞당겨진 것은 단순한 에너지 문제가 아니다. 자원 소비 패턴, 산업 구조, 도시화 방식, 소비 문화가 모두 지속 불가능한 방향으로 가고 있음을 보여주는 종합적 지표다."<br>
+    <small>— 그린피스 코리아, 2026년 4월 9일 성명</small>
+  </blockquote>
+
+  <p>
+    더 아이러니한 것은 타이밍이다. 그린피스 코리아가 '환경 부도의 날'을 선언한 <strong>4월 9일</strong>은 대한민국 정부가 '2026 에너지 대전환 성과 원년'을 자축하는 보도자료를 배포한 날과 겹친다. 같은 날, 두 개의 대한민국이 존재했다.
+  </p>
+
+  <!-- ── 소제목 4: 타임라인 ── -->
+  <h2 class="section-title">📅 한국 환경 부도의 날 — 최근 5년 타임라인</h2>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="tl-date">2022년 4월 19일</div>
+      <div class="tl-text">한국 생태용량 초과일 — 4월 중순 기록</div>
+    </div>
+    <div class="timeline-item">
+      <div class="tl-date">2023년 4월 15일</div>
+      <div class="tl-text">전년 대비 4일 앞당겨짐 — 코로나 이후 소비 반등 영향</div>
+    </div>
+    <div class="timeline-item">
+      <div class="tl-date">2024년 4월 12일</div>
+      <div class="tl-text">배달 경제 급성장, 플라스틱 폐기물 사상 최고치 갱신</div>
+    </div>
+    <div class="timeline-item">
+      <div class="tl-date">2025년 4월 10일</div>
+      <div class="tl-text">산업 구조 전환 지연으로 소폭 개선 실패</div>
+    </div>
+    <div class="timeline-item">
+      <div class="tl-date" style="color:#e63312;">2026년 4월 9일 ◀ 현재</div>
+      <div class="tl-text">그린피스 코리아, '환경 부도의 날' 공식 선언 — 역대 최조기 기록</div>
+    </div>
+  </div>
+
+  <p>
+    지난 5년간 한국의 생태용량 초과일은 꾸준히 앞당겨지는 추세다. 기후 위기 대응을 위한 탄소중립 목표를 표방하면서도 실제 소비 행태와 산업 구조의 변화는 느리다. 그 간극이 날짜로 드러나는 것이다.
+  </p>
+
+  <!-- ── 소제목 5: 나에게 미치는 영향 ── -->
+  <h2 class="section-title">🧑‍💼 나에게 어떻게 영향을 미치나</h2>
+
+  <div class="impact-grid">
+    <div class="impact-card">
+      <div class="card-emoji">👨‍💼</div>
+      <h4>직장인</h4>
+      <p>탄소세 도입이 현실화될 경우 에너지 집약 산업 종사자의 일자리 구조 변화 불가피. 기후 위기 관련 ESG 공시 의무화로 기업 비용 증가 → 간접적 임금 압박.</p>
+    </div>
+    <div class="impact-card">
+      <div class="card-emoji">🍱</div>
+      <h4>배달·외식 소비자</h4>
+      <p>연간 568개의 배달 용기를 버리는 한국인의 소비 패턴. 2027년 예정된 일회용 배달 용기 규제 강화 시 배달 음식 가격 5~15% 상승 가능성.</p>
+    </div>
+    <div class="impact-card">
+      <div class="card-emoji">🏠</div>
+      <h4>주거·에너지 소비자</h4>
+      <p>재생에너지 전환 비용은 결국 전기요금에 반영된다. 전문가들은 2027~2028년 사이 전기료 월 1만~2만 5천원 추가 인상 시나리오를 제시하고 있다.</p>
+    </div>
+    <div class="impact-card">
+      <div class="card-emoji">🎒</div>
+      <h4>청년·미래 세대</h4>
+      <p>지금 속도라면 금세기 말 한반도 여름 최고기온은 최대 5℃ 이상 상승한다. 2050년 서울의 폭염일수는 현재의 3배 이상이 될 것으로 예측된다.</p>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- ── 소제목 6: 전망 ── -->
+  <h2 class="section-title">🔭 이제 어떻게 될까 — 전망과 행동 제안</h2>
+
+  <p>
+    낙관적인 신호도 있다. 한국 정부는 2030년까지 재생에너지 100GW 보급 계획을 발표했으며, 태양광·해상풍력 투자는 빠르게 늘고 있다. 국제 사회에서 여수가 유엔기후변화협약 기후주간의 개최지로 선정된 것도 한국의 역할 확대 의지를 보여준다. 그러나 선언과 이행 사이의 거리를 좁히지 않으면 '환경 부도의 날'은 3월로, 2월로 더 당겨질 것이다.
+  </p>
+
+  <p><strong>독자가 지금 당장 할 수 있는 것들:</strong></p>
+  <ul style="padding-left:20px;margin-bottom:20px;line-height:2;">
+    <li>배달 주문 시 '일회용 수저·포크 안 받기' 선택 — 연간 약 1.5kg 플라스틱 감축</li>
+    <li>육류 소비를 주 1회 줄이면 1년에 약 200kg의 CO₂ 절감 효과</li>
+    <li>에너지 소비 효율 1등급 가전으로 교체 시 연간 전기세 10~20만원 절약 + 탄소 감축</li>
+    <li>탄소중립 실천포털(gihoo.or.kr)에서 내 탄소발자국 직접 측정해보기</li>
+    <li>2026 지구의 날(4월 22일) 전국 행사 참여 — 각 지자체 별 무료 행사 진행 중</li>
+  </ul>
+
+  <p>
+    지구는 아직 회복 가능성이 있다. 하지만 4월 9일이 3월 20일이 되기 전에, 지금 시작해야 한다.
+  </p>
+
+  <!-- ── 해시태그 ── -->
+  <div class="hashtags">
+    <span class="hashtag">#환경부도의날</span>
+    <span class="hashtag">#생태용량초과</span>
+    <span class="hashtag">#한국환경위기</span>
+    <span class="hashtag">#탄소발자국</span>
+    <span class="hashtag">#기후변화</span>
+    <span class="hashtag">#플라스틱위기</span>
+    <span class="hashtag">#탄소중립</span>
+    <span class="hashtag">#에너지대전환</span>
+    <span class="hashtag">#지구의날2026</span>
+    <span class="hashtag">#그린피스코리아</span>
+  </div>
+
+  <!-- ── 면책조항 ── -->
+  <div class="disclaimer">
+    ※ 이 기사는 그린피스 코리아, 글로벌 풋프린트 네트워크, 기후에너지환경부, OECD 보고서 등 공개된 자료를 바탕으로 작성되었으며, 전문적 법률·금융·환경 조언이 아닙니다. 통계 수치는 출처별 발표 시점에 따라 차이가 있을 수 있습니다.
+  </div>
+
+</main>
+
+<footer>
+  <span>🌱 환경·기후 | 탐사 저널 리포트</span>
+  <span>발행일: 2026년 4월 15일</span>
+  <span>자동 생성 아티클</span>
+</footer>
+
+</body>
+</html>
