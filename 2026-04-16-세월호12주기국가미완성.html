@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>살아있었다면 올해 서른 — 12년이 지나도 국가는 왜 아직도 '미완성'인가 | 한국이슈 아티클</title>
+  <meta name="description" content="2014년 4월 16일 세월호 참사 이후 12년. 304명의 희생자, 5명의 미수습자, 무죄로 끝난 책임자들, 그리고 반복되는 재난. 우리는 무엇을 바꿨는가.">
+  <meta name="keywords" content="세월호, 세월호12주기, 4월16일, 304명, 진상규명, 재난안전, 이태원참사, 국가책임, 미수습자">
+  <meta property="og:title" content="살아있었다면 올해 서른 — 12년이 지나도 국가는 왜 아직도 '미완성'인가">
+  <meta property="og:description" content="세월호 12주기, 오늘 4월 16일. 304명의 이름, 5명의 미수습자, 그리고 여전히 미완인 진실과 책임.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ko_KR">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 17px;
+      line-height: 1.8;
+      color: #1a1a2e;
+      background: #f5f6fa;
+    }
+
+    /* ── 헤더 영역 ── */
+    .hero {
+      background: linear-gradient(135deg, #0d1f3c 0%, #1a3a5c 60%, #2a5080 100%);
+      color: #fff;
+      padding: 60px 24px 50px;
+      text-align: center;
+    }
+
+    .badge-wrap {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    .badge-category { background: #f0c040; color: #1a3a5c; }
+    .badge-date { background: rgba(255,255,255,0.15); color: #fff; border: 1px solid rgba(255,255,255,0.3); }
+    .badge-special { background: #e63312; color: #fff; animation: pulse 2s infinite; }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+
+    .hero h1 {
+      font-size: clamp(22px, 4vw, 34px);
+      font-weight: 900;
+      line-height: 1.4;
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+
+    .hero .sub-title {
+      font-size: clamp(15px, 2.5vw, 18px);
+      color: rgba(255,255,255,0.8);
+      font-weight: 400;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .hero .ribbon {
+      margin-top: 24px;
+      font-size: 32px;
+      opacity: 0.9;
+    }
+
+    /* ── 본문 컨테이너 ── */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px 60px;
+    }
+
+    /* ── 핵심 요약 박스 ── */
+    .summary-box {
+      background: #fff;
+      border-left: 6px solid #1a3a5c;
+      border-radius: 0 12px 12px 0;
+      padding: 28px 28px 24px;
+      margin: -20px auto 40px;
+      max-width: 800px;
+      position: relative;
+      box-shadow: 0 4px 20px rgba(26,58,92,0.12);
+    }
+
+    .summary-box .label {
+      font-size: 12px;
+      font-weight: 700;
+      color: #1a3a5c;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 12px;
+    }
+
+    .summary-box ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .summary-box ul li {
+      padding: 8px 0;
+      border-bottom: 1px solid #eef0f5;
+      font-size: 15.5px;
+      font-weight: 500;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .summary-box ul li:last-child { border-bottom: none; }
+
+    .summary-box ul li .icon { font-size: 16px; flex-shrink: 0; margin-top: 2px; }
+
+    /* ── 본문 ── */
+    article {
+      background: #fff;
+      border-radius: 16px;
+      padding: 40px 36px;
+      box-shadow: 0 2px 16px rgba(26,58,92,0.06);
+      margin-bottom: 32px;
+    }
+
+    @media (max-width: 600px) {
+      article { padding: 24px 18px; }
+    }
+
+    .hook {
+      font-size: 19px;
+      font-weight: 700;
+      color: #1a3a5c;
+      border-left: 5px solid #f0c040;
+      padding: 16px 20px;
+      background: #f7f9ff;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 800;
+      color: #1a3a5c;
+      border-left: 4px solid #1a3a5c;
+      padding-left: 14px;
+      margin: 40px 0 18px;
+    }
+
+    p { margin-bottom: 18px; word-break: keep-all; }
+
+    .highlight { color: #1a3a5c; font-weight: 700; }
+    .red { color: #e63312; font-weight: 700; }
+    .em { font-style: italic; color: #444; }
+
+    /* ── 통계 카드 ── */
+    .stat-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+      margin: 28px 0;
+    }
+
+    .stat-card {
+      background: linear-gradient(135deg, #1a3a5c, #2a5080);
+      color: #fff;
+      border-radius: 12px;
+      padding: 20px 16px;
+      text-align: center;
+    }
+
+    .stat-card .num {
+      font-size: 32px;
+      font-weight: 900;
+      color: #f0c040;
+      display: block;
+      line-height: 1.1;
+    }
+
+    .stat-card .desc {
+      font-size: 13px;
+      margin-top: 6px;
+      opacity: 0.9;
+      line-height: 1.5;
+    }
+
+    /* ── 인포그래픽: 타임라인 ── */
+    .infographic {
+      background: #f7f9ff;
+      border-radius: 16px;
+      padding: 30px 24px;
+      margin: 36px 0;
+    }
+
+    .infographic h3 {
+      font-size: 16px;
+      font-weight: 800;
+      color: #1a3a5c;
+      text-align: center;
+      margin-bottom: 28px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 32px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(to bottom, #1a3a5c, #e63312);
+      border-radius: 2px;
+    }
+
+    .tl-item {
+      position: relative;
+      margin-bottom: 22px;
+    }
+
+    .tl-item::before {
+      content: '';
+      position: absolute;
+      left: -26px;
+      top: 6px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 2px #1a3a5c;
+    }
+
+    .tl-item.red-dot::before { box-shadow: 0 0 0 2px #e63312; background: #e63312; }
+    .tl-item.yellow-dot::before { background: #f0c040; box-shadow: 0 0 0 2px #c0900a; }
+
+    .tl-year {
+      font-size: 12px;
+      font-weight: 700;
+      color: #888;
+      margin-bottom: 2px;
+    }
+
+    .tl-text {
+      font-size: 14.5px;
+      color: #1a1a2e;
+      font-weight: 500;
+    }
+
+    .tl-note {
+      font-size: 12.5px;
+      color: #666;
+      margin-top: 2px;
+    }
+
+    /* ── 비교 표 ── */
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 14.5px;
+    }
+
+    .compare-table th {
+      background: #1a3a5c;
+      color: #fff;
+      padding: 12px 14px;
+      font-weight: 700;
+      text-align: left;
+    }
+
+    .compare-table td {
+      padding: 11px 14px;
+      border-bottom: 1px solid #e8ecf5;
+      vertical-align: top;
+    }
+
+    .compare-table tr:nth-child(even) td { background: #f3f6fb; }
+
+    .tag-good { color: #1a5c3a; font-weight: 700; }
+    .tag-bad { color: #e63312; font-weight: 700; }
+
+    /* ── 재난 반복 막대그래프 ── */
+    .bar-chart {
+      margin: 20px 0;
+    }
+
+    .bar-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+      gap: 12px;
+    }
+
+    .bar-label {
+      font-size: 13px;
+      font-weight: 600;
+      min-width: 120px;
+      text-align: right;
+      color: #333;
+      flex-shrink: 0;
+    }
+
+    .bar-wrap {
+      flex: 1;
+      background: #e8ecf5;
+      border-radius: 4px;
+      height: 28px;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      padding-right: 8px;
+      justify-content: flex-end;
+      transition: width 1s ease;
+    }
+
+    .bar-fill span {
+      font-size: 12px;
+      font-weight: 700;
+      color: #fff;
+      white-space: nowrap;
+    }
+
+    /* ── 개인 영향 섹션 ── */
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    .impact-card {
+      border: 1.5px solid #dde3f0;
+      border-radius: 12px;
+      padding: 20px 16px;
+      background: #fff;
+    }
+
+    .impact-card .role {
+      font-size: 13px;
+      font-weight: 800;
+      color: #1a3a5c;
+      margin-bottom: 8px;
+    }
+
+    .impact-card p {
+      font-size: 14px;
+      color: #444;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* ── 인용구 ── */
+    blockquote {
+      border-left: 4px solid #f0c040;
+      margin: 28px 0;
+      padding: 16px 20px;
+      background: #fffdf0;
+      font-style: italic;
+      color: #333;
+      border-radius: 0 8px 8px 0;
+      font-size: 15.5px;
+    }
+
+    blockquote cite {
+      display: block;
+      margin-top: 8px;
+      font-size: 13px;
+      color: #888;
+      font-style: normal;
+    }
+
+    /* ── 전망 및 행동 제안 ── */
+    .action-box {
+      background: linear-gradient(135deg, #1a3a5c, #0d1f3c);
+      color: #fff;
+      border-radius: 16px;
+      padding: 30px 28px;
+      margin: 36px 0;
+    }
+
+    .action-box h2 {
+      color: #f0c040;
+      border-color: #f0c040;
+      margin-top: 0;
+    }
+
+    .action-box p { color: rgba(255,255,255,0.9); margin-bottom: 14px; }
+
+    .action-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .action-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+      font-size: 15px;
+      color: rgba(255,255,255,0.9);
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .action-list li:last-child { border-bottom: none; }
+
+    /* ── 해시태그 ── */
+    .hashtags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 28px 0 20px;
+    }
+
+    .hashtag {
+      background: #eef1fa;
+      color: #1a3a5c;
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    /* ── 면책 조항 ── */
+    .disclaimer {
+      background: #f3f6fb;
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-size: 12.5px;
+      color: #777;
+      line-height: 1.7;
+      margin-top: 20px;
+    }
+
+    /* ── 푸터 ── */
+    footer {
+      text-align: center;
+      padding: 30px 24px;
+      font-size: 13px;
+      color: #aaa;
+    }
+
+    /* ── 노란 리본 SVG ── */
+    .ribbon-svg { display: block; margin: 0 auto 20px; }
+  </style>
+</head>
+<body>
+
+<!-- 히어로 헤더 -->
+<div class="hero">
+  <div class="badge-wrap">
+    <span class="badge badge-special">🕯 오늘이 그날</span>
+    <span class="badge badge-category">🏛️ 정치·사법</span>
+    <span class="badge badge-date">2026년 4월 16일</span>
+  </div>
+
+  <svg class="ribbon-svg" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M30 5 C20 5, 10 14, 10 24 C10 38, 30 55, 30 55 C30 55, 50 38, 50 24 C50 14, 40 5, 30 5Z" fill="#f0c040" opacity="0.9"/>
+    <path d="M30 55 C30 55, 22 42, 22 36 C22 30, 25 27, 30 27 C35 27, 38 30, 38 36 C38 42, 30 55, 30 55Z" fill="#c0900a" opacity="0.5"/>
+  </svg>
+
+  <h1>살아있었다면 올해 서른<br>— 12년이 지나도 국가는 왜 아직도 '미완성'인가</h1>
+  <p class="sub-title">304명의 희생자, 5명의 미수습자, 무죄로 끝난 책임자들. 오늘 4월 16일, 우리는 무엇을 바꿨는지 묻는다.</p>
+</div>
+
+<div class="container">
+
+  <!-- 핵심 요약 박스 -->
+  <div class="summary-box">
+    <div class="label">📌 이 기사의 핵심 3줄</div>
+    <ul>
+      <li><span class="icon">🟡</span><span>오늘 4월 16일은 세월호 참사 12주기 — 2014년 이날, 476명 탑승 선박에서 304명이 목숨을 잃었고 단원고 학생들은 살아있었다면 올해 서른 살이다.</span></li>
+      <li><span class="icon">🔴</span><span>12년이 지났지만 5명은 아직 바다 속 미수습, 해경 수뇌부를 비롯한 대부분 책임자는 법원에서 무죄 판결을 받았다.</span></li>
+      <li><span class="icon">⚠️</span><span>이태원 참사·오송 지하차도 침수·대전 공장 화재까지 — '다시는 이런 일 없겠다'는 약속이 반복되는 동안 재난도 반복됐다.</span></li>
+    </ul>
+  </div>
+
+  <!-- 본문 기사 -->
+  <article>
+
+    <!-- 훅 -->
+    <div class="hook">
+      오늘이 바로 그날입니다. 2014년 4월 16일 오전 8시 50분, 진도 앞바다에서 배 한 척이 기울기 시작했습니다. 그 배 안에는 수학여행을 떠난 안산 단원고 2학년 학생 325명이 타고 있었습니다. "가만히 있으라"는 방송이 흘렀고, 국가는 그 자리에 없었습니다. 12년이 흘렀습니다. 그 아이들은 살아있었다면 올해 서른 살이 됩니다.
+    </div>
+
+    <!-- 통계 카드 -->
+    <div class="stat-cards">
+      <div class="stat-card">
+        <span class="num">304</span>
+        <div class="desc">사망·실종자<br>총 인원</div>
+      </div>
+      <div class="stat-card">
+        <span class="num">250</span>
+        <div class="desc">단원고 학생<br>희생자</div>
+      </div>
+      <div class="stat-card">
+        <span class="num">5</span>
+        <div class="desc">12년 후 아직<br>미수습자</div>
+      </div>
+      <div class="stat-card">
+        <span class="num">12</span>
+        <div class="desc">오늘로 12년<br>아직 미완성</div>
+      </div>
+    </div>
+
+    <!-- 배경과 맥락 -->
+    <h2>왜 배는 가라앉았고, 왜 아이들은 구조되지 못했나</h2>
+    <p>
+      세월호는 단순한 사고가 아니었습니다. <span class="highlight">선사의 탐욕, 해운당국의 방조, 해경의 무능, 정부의 부재</span>가 겹겹이 쌓인 구조적 참사였습니다. 해양안전심판원의 판단에 따르면 기준에 못 미치는 복원력을 가진 배에 과적(過積)을 허용하고, 화물을 제대로 고정하지 않은 상태에서 항해하다 조타기 이상으로 침몰이 시작됐습니다.
+    </p>
+    <p>
+      배가 기울기 시작하고 완전히 침몰하기까지 <span class="highlight">약 2시간의 골든타임</span>이 있었습니다. 그 시간 동안 해경 함정은 구조 다이빙은커녕 선내 진입조차 하지 않았습니다. 헬기는 허공을 맴돌았고, 진도 VTS(해상교통관제센터)는 혼선을 반복했습니다. 청와대 위기관리 매뉴얼에서 '컨트롤타워' 항목이 삭제된 사실은 나중에야 드러났습니다.
+    </p>
+    <p>
+      325명의 단원고 학생 중 <span class="red">250명이 사망</span>했습니다. 나머지 75명은 자력으로 탈출하거나 극적으로 구조됐습니다. "가만히 있으라"는 방송을 지키지 않고 혼자 뛰쳐나온 아이들이 살아남았습니다.
+    </p>
+
+    <!-- 타임라인 인포그래픽 -->
+    <div class="infographic">
+      <h3>📅 세월호 참사 12년 타임라인</h3>
+      <div class="timeline">
+        <div class="tl-item red-dot">
+          <div class="tl-year">2014년 4월 16일</div>
+          <div class="tl-text">세월호 침몰 — 304명 사망·실종, 172명 생존</div>
+          <div class="tl-note">단원고 학생 325명 중 250명 사망</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2014년 11월</div>
+          <div class="tl-text">세월호 특별법 제정 — 특별조사위원회 출범</div>
+          <div class="tl-note">그러나 정부의 방해로 활동 파행</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2017년 3월</div>
+          <div class="tl-text">세월호 선체 인양 — 목포신항 이동</div>
+          <div class="tl-note">5명 미수습자 발굴 작업 지속됐으나 미완</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2018년~2020년</div>
+          <div class="tl-text">사회적참사특별조사위원회 활동</div>
+          <div class="tl-note">이준석 선장 등 선원들 유죄, 해경 지휘부는 줄줄이 무죄</div>
+        </div>
+        <div class="tl-item red-dot">
+          <div class="tl-year">2022년 10월</div>
+          <div class="tl-text">이태원 참사 — 159명 사망</div>
+          <div class="tl-note">'세월호 이후 달라진 재난대응' 다시 의문 부호</div>
+        </div>
+        <div class="tl-item red-dot">
+          <div class="tl-year">2023년 7월</div>
+          <div class="tl-text">오송 지하차도 침수 — 14명 사망</div>
+          <div class="tl-note">늑장 대응·골든타임 실패 반복</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2025년 2월</div>
+          <div class="tl-text">해경 지휘부 항소심 무죄 확정</div>
+          <div class="tl-note">"구조 실패에 형사책임 묻기 어렵다"</div>
+        </div>
+        <div class="tl-item yellow-dot">
+          <div class="tl-year">2026년 4월 16일 (오늘)</div>
+          <div class="tl-text">세월호 12주기 — 전국 추모 행사</div>
+          <div class="tl-note">진실·책임 여전히 미완. 미수습자 5명 여전히 행방불명</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 핵심 팩트 -->
+    <h2>"책임자를 처벌하라" — 그 결말은 어떻게 됐나</h2>
+    <p>
+      세월호 참사 이후 수많은 수사와 재판이 진행됐습니다. 그러나 그 결과는 많은 이들의 기대와 달랐습니다.
+    </p>
+    <p>
+      이준석 선장과 일부 선원들은 유죄 판결을 받았습니다. 하지만 정작 구조에 실패한 <span class="highlight">해경 지휘부</span>는 2025년 항소심에서 대부분 무죄를 선고받았습니다. "구조 의무는 있었지만 형사 처벌 수준의 고의성은 없다"는 논리였습니다. <span class="red">피해자 가족들은 법정 밖에서 오열했습니다.</span>
+    </p>
+    <p>
+      청와대 위기관리 매뉴얼에서 컨트롤타워 조항을 삭제한 혐의로 기소된 김기춘 전 비서실장도 무죄가 확정됐습니다. 특조위 활동을 방해한 청와대 세력 중 일부를 제외한 나머지 전원도 무죄 판결을 받았습니다.
+    </p>
+    <blockquote>
+      "12년이 지났는데, 국가가 아직 공식 사과를 하지 않았습니다. 책임자는 법정에서 무죄를 받았습니다. 저는 제 아이가 어떻게 죽었는지 여전히 정확히 모릅니다."
+      <cite>— 2026년 4월 16일 세월호 12주기 시민 기억식 유가족 발언</cite>
+    </blockquote>
+
+    <!-- 숨겨진 이면 -->
+    <h2>대부분의 기사가 말하지 않는 것 — 재난은 '반복' 중이다</h2>
+    <p>
+      세월호 이후 정부는 <span class="highlight">1조 5,000억 원</span>을 들여 전국 단일 재난안전통신망을 구축했습니다. 국민안전처를 창설했다가 행정안전부로 통합했고, 대통령 직속 국민생명안전위원회도 신설됐습니다. 숫자로 보면 대한민국의 재난 대응 시스템은 분명 진화했습니다.
+    </p>
+    <p>
+      그런데 2022년 이태원에서 159명이 군중 압사로 숨졌습니다. 2023년 오송 지하차도에서 14명이 폭우에 갇혀 사망했습니다. 최근에는 대전 안전공업 화재 참사로 또 다수가 희생됐습니다. 세월호 이후 반복된 약속이 공허했음을 보여주는 숫자들입니다.
+    </p>
+    <p>
+      국민일보가 실시한 세월호 12주기 설문조사에서 <span class="red">"변한 것이 없다"와 "오히려 나빠졌다"는 응답이 합산 29.6%</span>에 달했습니다. '시민 안전의식 향상'이 27.9%로 가장 높은 긍정 응답이었지만, 정작 '국가 대응 시스템 개선'을 체감한다는 답은 낮았습니다. 제도는 만들어졌지만, 현장에서 작동하는 문화와 책임 구조는 여전히 제자리라는 뜻입니다.
+    </p>
+
+    <!-- 비교 표 -->
+    <div class="infographic">
+      <h3>📊 세월호 이후 12년 — 무엇이 바뀌었고, 무엇이 남았나</h3>
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>항목</th>
+            <th>바뀐 것</th>
+            <th>여전한 문제</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>법·제도</strong></td>
+            <td><span class="tag-good">▲</span> 재난안전법 개정, 특별법 다수 제정</td>
+            <td><span class="tag-bad">✕</span> 현장 이행·집행력 미흡</td>
+          </tr>
+          <tr>
+            <td><strong>통신·장비</strong></td>
+            <td><span class="tag-good">▲</span> 재난안전통신망 1.5조 구축</td>
+            <td><span class="tag-bad">✕</span> 일부 지역 음영지역 여전</td>
+          </tr>
+          <tr>
+            <td><strong>해상안전</strong></td>
+            <td><span class="tag-good">▲</span> 여객선 안전검사 강화</td>
+            <td><span class="tag-bad">✕</span> 2026 특별단속서 안전위반 220건 적발</td>
+          </tr>
+          <tr>
+            <td><strong>책임 구조</strong></td>
+            <td><span class="tag-good">▲</span> 선장·일부 선원 처벌</td>
+            <td><span class="tag-bad">✕</span> 해경 지휘부·청와대 관계자 대부분 무죄</td>
+          </tr>
+          <tr>
+            <td><strong>진상 규명</strong></td>
+            <td><span class="tag-good">▲</span> 특조위·사참위 조사 일부 결과 공개</td>
+            <td><span class="tag-bad">✕</span> 국정원 자료 비공개, 미수습자 5명 행불</td>
+          </tr>
+          <tr>
+            <td><strong>재난 반복</strong></td>
+            <td><span class="tag-good">▲</span> 재난 인식 사회적 확대</td>
+            <td><span class="tag-bad">✕</span> 이태원·오송·대전 화재 등 대형 참사 반복</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 나에게 미치는 영향 -->
+    <h2>나는 지금 어디에 있는가 — 연령대별 체감 영향</h2>
+
+    <div class="impact-grid">
+      <div class="impact-card">
+        <div class="role">👩‍👧 부모세대 (40~50대)</div>
+        <p>세월호 참사 당시 초중고 자녀를 키우던 세대. 수학여행, 배, 버스, 학교 건물 안전에 대한 불안이 여전히 일상 속에 깔려 있습니다. '이번엔 다를까'라는 질문이 12년째 반복됩니다.</p>
+      </div>
+      <div class="impact-card">
+        <div class="role">🎓 MZ세대 (현재 20~30대)</div>
+        <p>세월호 참사 당시 중고생이었던 세대. 생존자 75명과 같은 나이대입니다. 국가를 믿어야 할 이유를 찾지 못한 세대이며, 이태원 참사도 직격탄으로 경험했습니다.</p>
+      </div>
+      <div class="impact-card">
+        <div class="role">🏢 직장인·시민 전반</div>
+        <p>매년 세월호 추모일에 노란 리본을 달지만, 일상에서 여전히 '내가 재난을 당하면 국가가 나를 구해줄까'라는 의구심이 해소되지 않고 있습니다.</p>
+      </div>
+      <div class="impact-card">
+        <div class="role">⚖️ 납세자·시민</div>
+        <p>1조 5,000억 원이 재난안전통신망에 투입됐습니다. 그 돈이 실제 생명을 구하는 데 제대로 쓰이고 있는지, 예산 사용과 효과 검증에 시민 감시가 필요합니다.</p>
+      </div>
+    </div>
+
+    <!-- 재난 사망자 막대그래프 -->
+    <div class="infographic">
+      <h3>📊 세월호 이후 대한민국 주요 재난 참사 사망자</h3>
+      <div class="bar-chart">
+        <div class="bar-row">
+          <div class="bar-label">세월호 (2014)</div>
+          <div class="bar-wrap">
+            <div class="bar-fill" style="width:100%; background: linear-gradient(90deg,#e63312,#c02a00);">
+              <span>304명</span>
+            </div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">이태원 (2022)</div>
+          <div class="bar-wrap">
+            <div class="bar-fill" style="width:52%; background: linear-gradient(90deg,#c02a00,#a02000);">
+              <span>159명</span>
+            </div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">오송 지하차도 (2023)</div>
+          <div class="bar-wrap">
+            <div class="bar-fill" style="width:15%; background: linear-gradient(90deg,#1a3a5c,#2a5080);">
+              <span>14명</span>
+            </div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">대전 화재 (2025)</div>
+          <div class="bar-wrap">
+            <div class="bar-fill" style="width:12%; background: linear-gradient(90deg,#1a3a5c,#2a5080);">
+              <span>14명+</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p style="font-size:12px; color:#888; text-align:center; margin-top:8px;">* 각 참사의 공식 사망·실종 집계 기준</p>
+    </div>
+
+    <!-- 전망과 행동 제안 -->
+    <div class="action-box">
+      <h2>이제 어떻게 될까 — 전망과 독자가 할 수 있는 것</h2>
+      <p>세월호 12주기, 아직 남은 법적·사회적 과제들이 있습니다. 대법원 판결이 남은 특조위 방해 세력 사건, 국정원 자료 비공개 행정소송, 그리고 5명의 미수습자 수습 문제가 현재진행형입니다. 이재명 정부는 '안전한 나라'를 약속하고 있지만, 약속이 제도와 문화로 정착되려면 시민의 지속적 감시가 필요합니다.</p>
+      <ul class="action-list">
+        <li>🕯️ <span>오늘 하루 노란 리본 배지를 달거나 SNS 프로필에 노란 리본을 추가해 304명의 이름을 기억해 주세요.</span></li>
+        <li>📋 <span>우리 동네 지하철·체육관·공연장의 비상구와 대피 안내를 직접 확인해 보세요. 재난 대응은 국가보다 나의 준비가 먼저입니다.</span></li>
+        <li>🗳️ <span>지방선거·국회의원 선거 때 후보자의 '재난안전 정책'을 반드시 확인하세요. 안전 예산을 삭감하는 후보에게는 명확한 의사를 표현할 수 있습니다.</span></li>
+        <li>🔍 <span>세월호참사 특조위·사참위 보고서는 공개 자료입니다. 4·16재단 홈페이지(416foundation.org)에서 직접 확인할 수 있습니다.</span></li>
+      </ul>
+    </div>
+
+    <!-- 해시태그 -->
+    <div class="hashtags">
+      <span class="hashtag">#세월호12주기</span>
+      <span class="hashtag">#4월16일</span>
+      <span class="hashtag">#304명</span>
+      <span class="hashtag">#진상규명</span>
+      <span class="hashtag">#미수습자</span>
+      <span class="hashtag">#재난안전</span>
+      <span class="hashtag">#국가책임</span>
+      <span class="hashtag">#기억과행동</span>
+      <span class="hashtag">#살아있었다면서른</span>
+    </div>
+
+    <!-- 면책 조항 -->
+    <div class="disclaimer">
+      ⚠️ 이 기사는 공개된 뉴스 보도 및 공공 자료를 바탕으로 작성되었으며, 전문적 법률·금융 조언이 아닙니다. 사실 오류 또는 업데이트된 정보가 있을 경우 해당 공식 기관의 자료를 참고하시기 바랍니다.
+    </div>
+
+  </article>
+</div>
+
+<footer>
+  한국이슈 데일리 아티클 | 작성일: 2026년 4월 16일 | AI 저널리즘 기반 탐사 기사
+</footer>
+
+</body>
+</html>
