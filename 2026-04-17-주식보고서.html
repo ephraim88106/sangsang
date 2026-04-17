@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>2026-04-17 | 코스피 6,000 사수 실패?! 美 나스닥은 12일 연속 신고가 폭주 | 오늘의 시장 브리핑</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: #0a0e1a;
+    color: #e6e9f2;
+    font-family: 'Noto Sans KR', system-ui, -apple-system, sans-serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .num, .mono { font-family: 'JetBrains Mono', 'Courier New', monospace; font-variant-numeric: tabular-nums; }
+  .wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+
+  /* Header */
+  header {
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding-bottom: 28px;
+    margin-bottom: 36px;
+  }
+  .meta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 13px;
+    color: #8b93a7;
+    letter-spacing: 0.5px;
+  }
+  .fear-greed {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 211, 42, 0.08);
+    border: 1px solid rgba(255, 211, 42, 0.35);
+    color: #ffd32a;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 12px;
+  }
+  .fear-greed .dot { width: 8px; height: 8px; border-radius: 50%; background: #ffd32a; box-shadow: 0 0 10px #ffd32a; }
+  h1.title {
+    margin-top: 18px;
+    font-size: clamp(26px, 4vw, 38px);
+    font-weight: 900;
+    line-height: 1.25;
+    letter-spacing: -0.5px;
+    background: linear-gradient(120deg, #ffffff 0%, #8ec5ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .subtitle {
+    margin-top: 10px;
+    color: #a5acc0;
+    font-size: 15px;
+  }
+  .hashtags { margin-top: 14px; font-size: 13px; color: #6aa9ff; }
+  .hashtags span { margin-right: 10px; }
+
+  /* Section */
+  section { margin: 44px 0; }
+  h2 {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 18px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  h2::before {
+    content: "";
+    display: inline-block;
+    width: 4px; height: 18px;
+    background: linear-gradient(180deg, #00c896, #6aa9ff);
+    border-radius: 2px;
+  }
+  h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 18px 0 8px;
+    color: #e6e9f2;
+  }
+  p { color: #c8cddb; font-size: 15px; }
+
+  /* Index cards */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 12px;
+  }
+  .card {
+    background: linear-gradient(180deg, #131826 0%, #0f1421 100%);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 14px;
+    padding: 16px 18px;
+    position: relative;
+    overflow: hidden;
+    transition: transform .2s ease, border-color .2s ease;
+  }
+  .card:hover { transform: translateY(-2px); border-color: rgba(255,255,255,0.14); }
+  .card .name {
+    font-size: 12px;
+    color: #8b93a7;
+    letter-spacing: 0.8px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .card .val {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 6px;
+    color: #ffffff;
+  }
+  .card .chg {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    margin-top: 4px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .up { color: #00c896; }
+  .down { color: #ff4757; }
+  .flat { color: #ffd32a; }
+  .arrow { font-size: 12px; }
+
+  /* Analysis */
+  .analysis {
+    background: linear-gradient(180deg, rgba(106,169,255,0.06), rgba(0,200,150,0.03));
+    border: 1px solid rgba(106,169,255,0.18);
+    border-radius: 14px;
+    padding: 22px 24px;
+  }
+  .analysis p + h3 { margin-top: 20px; }
+  .analysis p { margin-top: 8px; line-height: 1.85; }
+
+  /* Sector heatmap */
+  .heatmap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 8px;
+  }
+  .tile {
+    padding: 18px 14px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    position: relative;
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+  .tile .sname { font-size: 13px; opacity: 0.85; font-weight: 500; }
+  .tile .sval { font-family: 'JetBrains Mono', monospace; font-size: 18px; margin-top: 6px; }
+  .h-up-strong { background: rgba(0, 200, 150, 0.35); }
+  .h-up { background: rgba(0, 200, 150, 0.18); }
+  .h-flat { background: rgba(255, 211, 42, 0.18); }
+  .h-down { background: rgba(255, 71, 87, 0.18); }
+  .h-down-strong { background: rgba(255, 71, 87, 0.35); }
+
+  /* Highlights */
+  .highlights .item {
+    background: #131826;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-left: 3px solid #00c896;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 10px;
+  }
+  .highlights .item.bad { border-left-color: #ff4757; }
+  .highlights .item.warn { border-left-color: #ffd32a; }
+  .highlights .item h4 { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+  .highlights .item p { font-size: 14px; color: #b5bccf; }
+
+  /* Checkpoint list */
+  .checklist {
+    list-style: none;
+    padding: 0;
+  }
+  .checklist li {
+    padding: 10px 0;
+    border-bottom: 1px dashed rgba(255,255,255,0.06);
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    font-size: 14px;
+    color: #c8cddb;
+  }
+  .checklist li:last-child { border-bottom: none; }
+  .checklist .tag {
+    background: rgba(106,169,255,0.12);
+    color: #6aa9ff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 6px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .checklist .tag.red { background: rgba(255,71,87,0.12); color: #ff4757; }
+  .checklist .tag.green { background: rgba(0,200,150,0.12); color: #00c896; }
+
+  /* Disclaimer */
+  .disclaimer {
+    margin-top: 48px;
+    padding: 18px 20px;
+    background: rgba(255,255,255,0.02);
+    border: 1px dashed rgba(255,255,255,0.1);
+    border-radius: 10px;
+    color: #7a8299;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 600px) {
+    .wrap { padding: 24px 16px 60px; }
+    .card .val { font-size: 19px; }
+    h1.title { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="meta-row">
+      <span class="mono">2026-04-17 (금) · 장 마감 브리핑</span>
+      <span class="fear-greed"><span class="dot"></span>시장 심리 : 중립 (관망 · 53)</span>
+    </div>
+    <h1 class="title">코스피 6,200 고지서 미끄러진 날<br/>美 나스닥은 12일 연속 신고가 폭주 중</h1>
+    <p class="subtitle">미·이란 종전 협상 줄다리기, 원달러 1,470원대 고착, 유가 $90 vs 비트코인 $74K — 오늘 진짜 시장이 반응한 건 따로 있었다.</p>
+    <div class="hashtags">
+      <span>#코스피</span><span>#나스닥</span><span>#미이란협상</span><span>#FOMC</span><span>#반도체</span><span>#2차전지</span><span>#고환율</span><span>#비트코인</span>
+    </div>
+  </header>
+
+  <!-- 주요 지수 -->
+  <section>
+    <h2>주요 지수</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="name">KOSPI</div>
+        <div class="val">6,191.92</div>
+        <div class="chg down"><span class="arrow">▼</span>−34.13 (−0.55%)</div>
+      </div>
+      <div class="card">
+        <div class="name">KOSDAQ</div>
+        <div class="val">871.40</div>
+        <div class="chg down"><span class="arrow">▼</span>−4.22 (−0.48%)</div>
+      </div>
+      <div class="card">
+        <div class="name">DOW JONES</div>
+        <div class="val">48,580.10</div>
+        <div class="chg up"><span class="arrow">▲</span>+116.38 (+0.24%)</div>
+      </div>
+      <div class="card">
+        <div class="name">S&amp;P 500</div>
+        <div class="val">7,041.12</div>
+        <div class="chg up"><span class="arrow">▲</span>+18.17 (+0.26%)</div>
+      </div>
+      <div class="card">
+        <div class="name">NASDAQ</div>
+        <div class="val">24,102.50</div>
+        <div class="chg up"><span class="arrow">▲</span>+86.48 (+0.36%)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 환율·원자재 -->
+  <section>
+    <h2>환율 · 원자재 · 크립토</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="name">USD/KRW</div>
+        <div class="val">1,473.50</div>
+        <div class="chg flat"><span class="arrow">▬</span>+0.80 (+0.05%)</div>
+      </div>
+      <div class="card">
+        <div class="name">WTI CRUDE</div>
+        <div class="val">$90.12</div>
+        <div class="chg down"><span class="arrow">▼</span>−1.25 (−1.37%)</div>
+      </div>
+      <div class="card">
+        <div class="name">GOLD (oz)</div>
+        <div class="val">$4,877.70</div>
+        <div class="chg up"><span class="arrow">▲</span>+22.40 (+0.46%)</div>
+      </div>
+      <div class="card">
+        <div class="name">BITCOIN</div>
+        <div class="val">$74,556</div>
+        <div class="chg up"><span class="arrow">▲</span>+241 (+0.32%)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 핵심 분석 -->
+  <section>
+    <h2>오늘의 핵심 분석</h2>
+    <div class="analysis">
+      <h3>① 코스피가 빠진 진짜 이유 — '협상 피로감'</h3>
+      <p>표면적으로는 외국인·기관 동반 매도가 지수를 끌어내렸지만, 본질은 <strong>미·이란 종전 협상을 둘러싼 피로감</strong>이다. 지난주 협상 결렬 우려에 출렁였던 시장이 이번 주 들어 중재안 기대로 반등했으나, 오늘은 '기대만으로 더 오르기엔 호가 부담'이라는 판단이 우세했다. 특히 코스피 6,200선에서 매물대가 두껍다는 점이 확인되며 차익 실현이 선행됐다. 원달러 환율이 1,470원대 중반에 고착되면서 외국인 자금 유입의 구조적 제약도 계속되고 있다.</p>
+
+      <h3>② 미국 시장은 왜 또 올랐나 — 나스닥 12일 연속 신고가</h3>
+      <p>뉴욕 증시는 Q1 실적 시즌 초입에서 예상을 상회하는 테크·금융 가이던스가 이어지자 투자심리가 개선됐다. 나스닥은 역사적 기록인 <strong>12거래일 연속 신고가</strong>를 이어갔고 S&amp;P500도 사상 최고가를 경신했다. Fed 4월 FOMC(28–29일)에서 금리 동결 확률이 94.8%로 굳어지면서, '금리는 고정, 실적은 서프라이즈'라는 이상적 조합이 형성됐다. 단, 다우는 에너지·산업재가 유가 하락에 눌리며 상승폭이 제한됐다.</p>
+
+      <h3>③ 글로벌 연결고리 — 유가 하락이 보내는 이중 신호</h3>
+      <p>WTI가 $100대에서 $90대로 내려앉은 것은 표면적으로는 호재지만, 한국 시장엔 복잡한 메시지다. <strong>인플레이션 압력 완화</strong>는 Fed의 연내 한 차례 인하 가능성을 되살리지만, 동시에 <strong>중동 긴장 완화 기대</strong>가 현실화되면 '전쟁 프리미엄'에 올랐던 조선·방산·정유 섹터 차익 실현으로 이어질 수 있다. 오늘 코스피 약세에 조선주와 정유주 비중 조절이 반영된 배경이다. 결국 내일 뉴욕장의 에너지·방산 섹터 방향이 월요일 한국 시장 초반 흐름을 좌우할 가능성이 크다.</p>
+    </div>
+  </section>
+
+  <!-- 섹터 히트맵 -->
+  <section>
+    <h2>KOSPI200 섹터 히트맵</h2>
+    <div class="heatmap">
+      <div class="tile h-up-strong">
+        <div class="sname">반도체</div>
+        <div class="sval">+1.42%</div>
+      </div>
+      <div class="tile h-up">
+        <div class="sname">2차전지</div>
+        <div class="sval">+0.68%</div>
+      </div>
+      <div class="tile h-flat">
+        <div class="sname">바이오</div>
+        <div class="sval">+0.12%</div>
+      </div>
+      <div class="tile h-down">
+        <div class="sname">금융</div>
+        <div class="sval">−0.55%</div>
+      </div>
+      <div class="tile h-down-strong">
+        <div class="sname">에너지</div>
+        <div class="sval">−1.87%</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 주목 이슈 -->
+  <section class="highlights">
+    <h2>오늘 주목할 3가지</h2>
+    <div class="item">
+      <h4>① 삼성전자·SK하이닉스, 기관 순매수 상위권 복귀</h4>
+      <p>HBM4 양산 가시화와 북미 하이퍼스케일러 CAPEX 상향이 맞물리며 반도체 대형주로 기관 자금이 다시 몰렸다. 삼성전자는 52주 신고가에서 1.8% 아래, 관전 포인트는 <strong>다음 주 TSMC·ASML 실적과 가이던스</strong>.</p>
+    </div>
+    <div class="item warn">
+      <h4>② 2차전지 ESS 스토리, '두 번째 불씨'</h4>
+      <p>전고체·로봇향 수요 언급이 잇따르며 섹터 ETF가 3주 연속 상승. 다만 밸류에이션 부담이 제기되며 오늘은 상승 폭이 제한됐다. <strong>관전 포인트는 5월 초 美 ESS 보조금 세부안</strong>.</p>
+    </div>
+    <div class="item bad">
+      <h4>③ 정유·조선 차익 실현, 에너지 섹터 –1.87%</h4>
+      <p>유가가 $90으로 내려앉자 '전쟁 프리미엄'이 빠진 에너지·조선이 동반 약세. S-OIL, HD한국조선해양 등 주요 종목에서 기관 매도 집중. <strong>다음 모멘텀은 미·이란 협상 결과 발표(주말 예상)</strong>.</p>
+    </div>
+  </section>
+
+  <!-- 내일의 체크포인트 -->
+  <section>
+    <h2>다음 거래일 체크포인트</h2>
+    <ul class="checklist">
+      <li><span class="tag">주말 이벤트</span>미·이란 종전 협상 진행 상황 및 트럼프 대통령 주말 담화 여부. 중동 리스크 재점화 시 월요일 시초가 갭 가능.</li>
+      <li><span class="tag red">리스크</span>원달러 환율 1,480원 재돌파 시 외국인 추가 매도 압력. 레벨 방어 실패 시 당국 스무딩 오퍼레이션 여부 주목.</li>
+      <li><span class="tag green">호재 후보</span>다음 주 국내 주요 기업(삼성SDI·LG에너지솔루션) 1분기 실적 발표. 2차전지 모멘텀 추가 연장 여부.</li>
+      <li><span class="tag">美 경제지표</span>4/22 美 기존주택판매, 4/24 美 내구재주문, 4/25 美 PCE 물가 — 특히 PCE가 FOMC 직전 최후 변수.</li>
+      <li><span class="tag">FOMC</span>4/28–29 연방공개시장위원회. 금리 동결 94.8% 반영. 파월 기자회견의 <strong>연내 인하 가능성 코멘트</strong>가 핵심.</li>
+    </ul>
+  </section>
+
+  <div class="disclaimer">
+    <strong>면책조항 (Disclaimer)</strong><br/>
+    본 보고서는 공개된 시장 데이터와 뉴스를 바탕으로 자동 생성된 분석 리포트이며, 특정 종목 또는 자산의 매수·매도를 권유하지 않습니다. 수록된 수치는 집계 시점과 출처에 따라 실제 종가와 차이가 있을 수 있으며, 최종 투자 결정은 반드시 본인의 판단과 책임하에 이루어져야 합니다. 투자 원금의 손실 가능성이 있습니다.
+  </div>
+
+</div>
+</body>
+</html>
