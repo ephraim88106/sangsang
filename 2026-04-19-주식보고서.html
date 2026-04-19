@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🚨 주말에 뒤집혔다 | 호르무즈 48시간 롤러코스터…월요일 갭, 어느 방향으로 뚫릴까 | 2026-04-19</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0a0e1a;
+    color: #e6edf3;
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.7;
+    padding: 20px 12px 60px;
+  }
+  .wrap { max-width: 900px; margin: 0 auto; }
+  .num { font-family: 'JetBrains Mono', monospace; font-weight: 500; }
+
+  /* HEADER */
+  .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; font-size: 12px; }
+  .tag {
+    background: rgba(99,102,241,0.12); color: #6366f1;
+    padding: 4px 10px; border-radius: 999px;
+    border: 1px solid rgba(99,102,241,0.3);
+  }
+  .tag.red { background: rgba(255,71,87,0.12); color: #ff4757; border-color: rgba(255,71,87,0.3); }
+  .tag.green { background: rgba(0,200,150,0.12); color: #00c896; border-color: rgba(0,200,150,0.3); }
+  .tag.yellow { background: rgba(255,211,42,0.12); color: #ffd32a; border-color: rgba(255,211,42,0.3); }
+
+  .headline {
+    font-size: clamp(22px, 4vw, 34px);
+    font-weight: 900; line-height: 1.3; margin-bottom: 10px;
+    background: linear-gradient(90deg, #ffd32a 0%, #ff4757 50%, #6366f1 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .sub-headline { color: #9ba3af; font-size: 15px; margin-bottom: 18px; }
+  .meta-bar {
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 10px;
+    padding: 12px 16px; background: #111827;
+    border-radius: 12px; border-left: 3px solid #ffd32a;
+    margin-bottom: 28px;
+  }
+  .meta-bar .date { font-size: 13px; color: #9ba3af; }
+  .sentiment { display: flex; align-items: center; gap: 8px; font-size: 13px; }
+  .sentiment-bar { width: 140px; height: 8px; background: #1e293b; border-radius: 99px; overflow: hidden; position: relative; }
+  .sentiment-bar::after {
+    content: ''; position: absolute; top:0; left:0; height:100%; width: 58%;
+    background: linear-gradient(90deg, #ff4757, #ffd32a, #00c896);
+  }
+  .sentiment-value { color: #ffd32a; font-weight: 700; }
+
+  h2.section-title {
+    font-size: 20px; font-weight: 700; margin: 32px 0 14px;
+    padding-left: 12px; border-left: 4px solid #00c896;
+  }
+  h2.section-title.red { border-color: #ff4757; }
+  h2.section-title.yellow { border-color: #ffd32a; }
+  h2.section-title.indigo { border-color: #6366f1; }
+  h2.section-title.sky { border-color: #38bdf8; }
+
+  /* CARDS */
+  .cards { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); }
+  .card {
+    background: #111827; border-radius: 14px; padding: 16px;
+    border: 1px solid #1e293b; transition: transform 0.2s;
+  }
+  .card:hover { transform: translateY(-2px); }
+  .card .label { font-size: 12px; color: #9ba3af; margin-bottom: 6px; }
+  .card .value { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+  .card .delta { font-size: 13px; font-weight: 500; }
+  .up { color: #00c896; }
+  .down { color: #ff4757; }
+  .flat { color: #ffd32a; }
+
+  /* ANALYSIS */
+  .analysis { background: #111827; border-radius: 14px; padding: 22px; border: 1px solid #1e293b; }
+  .analysis h3 { font-size: 16px; margin: 18px 0 8px; color: #ffd32a; }
+  .analysis h3:first-child { margin-top: 0; }
+  .analysis p { color: #cbd3dd; font-size: 14.5px; margin-bottom: 10px; }
+  .hi-green { color: #00c896; font-weight: 700; }
+  .hi-red { color: #ff4757; font-weight: 700; }
+  .hi-yellow { color: #ffd32a; font-weight: 700; }
+  .hi-indigo { color: #6366f1; font-weight: 700; }
+
+  /* HEATMAP */
+  .heatmap { display: grid; gap: 6px; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+  .heat { padding: 18px 14px; border-radius: 10px; text-align: center; }
+  .heat .name { font-size: 13px; font-weight: 500; margin-bottom: 6px; }
+  .heat .pct { font-size: 18px; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+  .heat.up1 { background: rgba(0,200,150,0.18); color: #00c896; }
+  .heat.up2 { background: rgba(0,200,150,0.35); color: #c8fce5; }
+  .heat.up3 { background: rgba(0,200,150,0.55); color: #fff; }
+  .heat.down1 { background: rgba(255,71,87,0.18); color: #ff4757; }
+  .heat.down2 { background: rgba(255,71,87,0.35); color: #ffd2d7; }
+  .heat.down3 { background: rgba(255,71,87,0.55); color: #fff; }
+  .heat.neutral { background: rgba(255,211,42,0.15); color: #ffd32a; }
+
+  /* WATCHLIST */
+  .watch-item { background: #111827; padding: 18px; border-radius: 12px; margin-bottom: 12px; border-left: 3px solid #00c896; }
+  .watch-item.red { border-color: #ff4757; }
+  .watch-item.yellow { border-color: #ffd32a; }
+  .watch-item .title { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+  .watch-item .title .ticker { font-size: 12px; margin-left: 8px; color: #9ba3af; font-family: 'JetBrains Mono', monospace; }
+  .watch-item .why { color: #cbd3dd; font-size: 14px; margin-bottom: 6px; }
+  .watch-item .point { color: #9ba3af; font-size: 13px; padding-top: 8px; border-top: 1px dashed #1e293b; }
+
+  /* COMMUNITY */
+  .community { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+  .comm-card { background: #111827; border-radius: 12px; padding: 14px; border: 1px solid #1e293b; }
+  .comm-src {
+    display: inline-block; font-size: 11px; font-weight: 700;
+    padding: 2px 8px; border-radius: 999px; margin-bottom: 8px;
+    font-family: 'JetBrains Mono', monospace; letter-spacing: 0.5px;
+  }
+  .src-naver   { background: rgba(0,200,150,0.18);  color: #00c896; }
+  .src-blind   { background: rgba(56,189,248,0.18); color: #38bdf8; }
+  .src-dcinside{ background: rgba(255,211,42,0.18); color: #ffd32a; }
+  .src-reddit  { background: rgba(255,71,87,0.18);  color: #ff4757; }
+  .src-youtube { background: rgba(255,100,100,0.15); color: #ff8c8c; }
+  .comm-card .quote { color: #cbd3dd; font-size: 13.5px; font-style: italic; line-height: 1.6; }
+  .comm-card .meta { margin-top: 6px; font-size: 11px; color: #6b7280; }
+
+  /* BULLS vs BEARS */
+  .vs-question {
+    text-align: center; font-size: 17px; font-weight: 700;
+    padding: 14px; margin-bottom: 14px;
+    background: linear-gradient(135deg, rgba(0,200,150,0.1), rgba(255,71,87,0.1));
+    border-radius: 12px; color: #ffd32a;
+  }
+  .vs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .vs-col { background: #111827; border-radius: 12px; padding: 18px; }
+  .vs-col.bulls { border-top: 4px solid #00c896; }
+  .vs-col.bears { border-top: 4px solid #ff4757; }
+  .vs-col h4 { font-size: 18px; margin-bottom: 12px; font-weight: 800; }
+  .vs-col.bulls h4 { color: #00c896; }
+  .vs-col.bears h4 { color: #ff4757; }
+  .vs-col ul { list-style: none; padding: 0; }
+  .vs-col li {
+    font-size: 13.5px; padding: 8px 0; color: #cbd3dd;
+    border-bottom: 1px dashed #1e293b;
+  }
+  .vs-col li:last-child { border: none; }
+  .vs-col li::before { content: "▸ "; color: inherit; opacity: 0.7; }
+  .vs-col.bulls li strong { color: #00c896; }
+  .vs-col.bears li strong { color: #ff4757; }
+  .vs-poll {
+    margin-top: 14px; padding: 14px; background: #111827;
+    border-radius: 12px; text-align: center; border: 1px solid #1e293b;
+  }
+  .vs-poll-bar {
+    height: 24px; border-radius: 99px; overflow: hidden;
+    display: flex; margin: 8px 0;
+  }
+  .vs-poll-bar .b-bull { background: #00c896; color: #0a0e1a; font-weight: 700; font-size: 12px; display: flex; align-items: center; justify-content: center; }
+  .vs-poll-bar .b-bear { background: #ff4757; color: #0a0e1a; font-weight: 700; font-size: 12px; display: flex; align-items: center; justify-content: center; }
+
+  /* CHECKPOINT */
+  .checkpoint {
+    background: linear-gradient(135deg, rgba(255,211,42,0.08), rgba(0,200,150,0.08));
+    border-radius: 14px; padding: 20px; border: 1px solid #1e293b;
+  }
+  .checkpoint .item { display: flex; gap: 12px; align-items: flex-start; padding: 10px 0; border-bottom: 1px dashed #1e293b; }
+  .checkpoint .item:last-child { border: none; }
+  .checkpoint .day { font-family: 'JetBrains Mono', monospace; font-weight: 700; color: #ffd32a; min-width: 80px; font-size: 13px; }
+  .checkpoint .desc { color: #cbd3dd; font-size: 14px; }
+
+  /* ANALYST LINE */
+  .analyst-line {
+    margin-top: 24px; padding: 18px; background: #111827;
+    border-radius: 12px; border-left: 4px solid #6366f1;
+  }
+  .analyst-line .role { font-size: 12px; color: #6366f1; font-weight: 700; margin-bottom: 4px; }
+  .analyst-line .msg { font-size: 15px; color: #e6edf3; line-height: 1.7; }
+
+  /* DISCLAIMER */
+  .disclaimer {
+    margin-top: 40px; padding: 16px;
+    background: rgba(255,71,87,0.08);
+    border: 1px solid rgba(255,71,87,0.25);
+    border-radius: 10px; font-size: 12px; color: #ffb8c0;
+    text-align: center; line-height: 1.6;
+  }
+
+  .hashtags { margin-top: 22px; font-size: 13px; color: #38bdf8; word-break: keep-all; }
+  .hashtags span { margin-right: 6px; }
+
+  @media (max-width: 600px) {
+    .card .value { font-size: 19px; }
+    h2.section-title { font-size: 17px; }
+    .vs-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HEADER -->
+  <div class="tag-row">
+    <span class="tag red">🚨 BREAKING</span>
+    <span class="tag yellow">호르무즈 48h</span>
+    <span class="tag green">미국 신고가</span>
+    <span class="tag">월요일 갭 경보</span>
+  </div>
+
+  <h1 class="headline">
+    🔥 "열었다가 또 닫혔다"<br>
+    호르무즈 48시간 롤러코스터…월요일, 갭 방향 누가 맞출까
+  </h1>
+  <p class="sub-headline">
+    금요일 다우 +994p 사상 최고치 → 주말 이란 IRGC 재봉쇄 선언 → 선박 피격까지.
+    코스피는 차익실현으로 조정 받았는데, 월요일 개장은 완전히 다른 세상일 수 있다.
+  </p>
+
+  <div class="meta-bar">
+    <div>
+      <div class="date">2026년 4월 19일 (일) 주말 정리판 · 17일 종가 기준</div>
+      <div style="font-size:16px; font-weight:700;">오늘의 시장 브리핑</div>
+    </div>
+    <div class="sentiment">
+      <span>시장 심리</span>
+      <div class="sentiment-bar"></div>
+      <span class="sentiment-value">중립→탐욕 58</span>
+    </div>
+  </div>
+
+  <!-- INDEX CARDS -->
+  <h2 class="section-title">📊 주요 지수 — 금요일 마감 기준</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="label">KOSPI</div>
+      <div class="value num down">6,191.92 ▼</div>
+      <div class="delta down num">-34.18 (-0.55%)</div>
+    </div>
+    <div class="card">
+      <div class="label">KOSDAQ</div>
+      <div class="value num down">932.45 ▼</div>
+      <div class="delta down num">-8.21 (-0.87%)</div>
+    </div>
+    <div class="card">
+      <div class="label">DOW JONES</div>
+      <div class="value num up">49,572.87 ▲</div>
+      <div class="delta up num">+994.15 (+2.05%)</div>
+    </div>
+    <div class="card">
+      <div class="label">S&amp;P 500</div>
+      <div class="value num up">7,130.80 ▲</div>
+      <div class="delta up num">+89.52 (+1.27%)</div>
+    </div>
+    <div class="card">
+      <div class="label">NASDAQ</div>
+      <div class="value num up">24,448.90 ▲</div>
+      <div class="delta up num">+346.20 (+1.44%)</div>
+    </div>
+  </div>
+
+  <!-- COMMODITY -->
+  <h2 class="section-title yellow">💱 환율 · 원자재 · 크립토</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="label">원/달러</div>
+      <div class="value num down">1,470.0 ▼</div>
+      <div class="delta down num">3월 이후 최강 원화</div>
+    </div>
+    <div class="card">
+      <div class="label">WTI 원유</div>
+      <div class="value num down">$93.18 ▼</div>
+      <div class="delta down num">호르무즈 개방에 급락</div>
+    </div>
+    <div class="card">
+      <div class="label">금 현물</div>
+      <div class="value num up">$4,833.56 ▲</div>
+      <div class="delta up num">+0.94% 안전자산 매수</div>
+    </div>
+    <div class="card">
+      <div class="label">비트코인</div>
+      <div class="value num up">$75,746 ▲</div>
+      <div class="delta up num">BlackRock IBIT +$284M</div>
+    </div>
+  </div>
+
+  <!-- ANALYSIS -->
+  <h2 class="section-title red">🔥 오늘의 핵심 분석 — 왜 미국만 뛰고 한국은 당했나</h2>
+  <div class="analysis">
+
+    <h3>① 이란이 호르무즈를 "열었다" — 그래서 다우가 1,000포인트 뛰었다</h3>
+    <p>
+      4월 17일(현지) 이란 외무장관 아라크치가 SNS를 통해
+      <span class="hi-yellow">"레바논-이스라엘 휴전 기간 동안 상선에 호르무즈 해협을 전면 개방한다"</span>
+      고 발표했다. 전 세계 해상 원유의 20~30%가 지나는 바로 그 바닷길이다. 시장은 즉각 전쟁 프리미엄 해제로 해석했고,
+      <span class="hi-green">다우 +994p(+2.05%), S&amp;P +1.27%, 나스닥 +1.44% 모두 사상 최고치</span>를 새로 썼다.
+      WTI는 배럴당 $93까지 밀렸고, BTC도 $75,700선을 회복했다.
+    </p>
+
+    <h3>② 서울 vs 뉴욕 디커플링 — 한국만 차익실현에 당했다</h3>
+    <p>
+      문제는 <span class="hi-red">코스피</span>다. 4월 들어 외국인은
+      <span class="hi-green">SK하이닉스 2조8,730억·삼성전자 1조9,610억</span>을 쓸어담으며
+      지수를 6,200선까지 끌어올렸는데, 17일 그 자금이 약
+      <span class="hi-red">2조 원 규모로 순매도 전환</span>되며 KOSPI -0.55%, KOSDAQ -0.87%로 마감했다.
+      "좋은 뉴스(종전 기대)는 이미 가격에 반영됐다"는 클래식한 차익실현 패턴.
+      전형적인 <span class="hi-indigo">Buy the rumor, sell the news</span> 구간이다.
+    </p>
+
+    <h3>③ 주말에 모든 게 뒤집혔다 — 월요일 갭이 관건</h3>
+    <p>
+      진짜 경보는 주말에 울렸다. 18일 이란 이슬람혁명수비대(IRGC)는
+      <span class="hi-red">"미국이 해상봉쇄를 해제할 때까지 호르무즈를 다시 폐쇄한다"</span>고 발표,
+      19일 새벽엔 호르무즈 인근 <span class="hi-red">선박 피격 사건</span>까지 발생하며 백악관이 긴급회의에 들어갔다.
+      금요일의 낙관 랠리가 주말 이틀 만에 완전히 뒤집힌 상태로 월요일 아시아 장을 맞는다.
+      <span class="hi-yellow">유가 재급등·환율 재급등·안전자산 재유입</span> 시나리오가 모두 열려있다.
+    </p>
+
+    <h3>④ 리스크 체크 — 단기 / 중기</h3>
+    <p>
+      <span class="hi-red">단기 리스크:</span> 월요일 개장 시 유가·금 갭업, 에너지주 갭업, 원/달러 재반등.
+      반도체 같은 실적 모멘텀 섹터는 상대적 선방 가능. &nbsp;
+      <span class="hi-red">중기 리스크:</span> 미국 4/28~29 FOMC 전까지 변동성 확대,
+      3월 CPI(4/10 이미 발표)와 달리 연준 스탠스 재확인 구간. 과도한 낙관에 주의.
+    </p>
+  </div>
+
+  <!-- HEATMAP -->
+  <h2 class="section-title">🧭 KOSPI200 섹터 히트맵 (4/17 기준)</h2>
+  <div class="heatmap">
+    <div class="heat up3"><div class="name">반도체</div><div class="pct">+2.14%</div></div>
+    <div class="heat up2"><div class="name">조선/방산</div><div class="pct">+1.55%</div></div>
+    <div class="heat up1"><div class="name">금융</div><div class="pct">+0.42%</div></div>
+    <div class="heat neutral"><div class="name">자동차</div><div class="pct">-0.08%</div></div>
+    <div class="heat down1"><div class="name">건설</div><div class="pct">-0.96%</div></div>
+    <div class="heat down1"><div class="name">철강</div><div class="pct">-1.08%</div></div>
+    <div class="heat down1"><div class="name">바이오</div><div class="pct">-1.21%</div></div>
+    <div class="heat down2"><div class="name">2차전지</div><div class="pct">-2.87%</div></div>
+    <div class="heat down3"><div class="name">에너지</div><div class="pct">-3.64%</div></div>
+  </div>
+
+  <!-- WATCHLIST -->
+  <h2 class="section-title yellow">🎯 주목할 종목 · 이슈 TOP 3</h2>
+
+  <div class="watch-item">
+    <div class="title">SK하이닉스 <span class="ticker">KS:000660</span></div>
+    <div class="why">
+      장중 <span class="hi-green">사상 최고가 ₩1,155,000</span> 터치, 종가 ₩1,146,000 (-0.78%).
+      AI·HBM4 수요 폭발 속 외국인 4월 누적 <span class="hi-green">+2.87조</span>.
+    </div>
+    <div class="point">
+      👉 포인트: 4/24 1Q 실적 발표. HBM 가이던스 상향 시 ₩1,200,000 돌파 시나리오.
+    </div>
+  </div>
+
+  <div class="watch-item red">
+    <div class="title">삼성전자 <span class="ticker">KS:005930</span></div>
+    <div class="why">
+      종가 <span class="hi-red">₩216,000 (-0.69%)</span>.
+      하이닉스로의 수급 이탈 지속되지만, 외국인 4월 누적 +1.96조 유지.
+      <span class="hi-yellow">HBM3E 엔비디아 공급 확대</span> 루머 확산 중.
+    </div>
+    <div class="point">
+      👉 포인트: ₩215,000 지지 필수. 이탈 시 ₩208,000 조정 가능성.
+    </div>
+  </div>
+
+  <div class="watch-item yellow">
+    <div class="title">에너지 · 정유 섹터 <span class="ticker">SECTOR</span></div>
+    <div class="why">
+      금요일 <span class="hi-red">-3.64% 폭락</span>했지만, 주말 IRGC 재봉쇄·선박 피격 이슈로 상황 급반전.
+      월요일 개장 <span class="hi-green">갭업 가능성 농후</span>.
+    </div>
+    <div class="point">
+      👉 포인트: S-Oil·GS·한국석유 등 뉴스 한 줄에 방향 바뀌는 초고변동 구간, 단기 트레이딩만 권장.
+    </div>
+  </div>
+
+  <!-- COMMUNITY REACTIONS -->
+  <h2 class="section-title sky">💬 사람들의 의견 — 커뮤니티 반응</h2>
+  <div class="community">
+
+    <div class="comm-card">
+      <span class="comm-src src-naver">NAVER 종토방</span>
+      <div class="quote">"외국인 하루 2조 팔았는데 그래도 6100 버텨줬으면 하닉은 다음주 갭상인데?"</div>
+      <div class="meta">· 005930 · 추천 284</div>
+    </div>
+
+    <div class="comm-card">
+      <span class="comm-src src-blind">BLIND 금융/주식</span>
+      <div class="quote">"미장 +1000p 박는데 내 코스피는 왜 -0.5%야. 자본잠식 국가 ETF냐 이거."</div>
+      <div class="meta">· 증권사 · 댓글 312</div>
+    </div>
+
+    <div class="comm-card">
+      <span class="comm-src src-dcinside">DC 주식갤</span>
+      <div class="quote">"호르무즈 열렸다→닫혔다 이게 요요임? 월욜 유가 선물 갭상 베팅 각."</div>
+      <div class="meta">· 개념글 · 개추 198</div>
+    </div>
+
+    <div class="comm-card">
+      <span class="comm-src src-reddit">r/wallstreetbets</span>
+      <div class="quote">"Dow +1000 on Hormuz reopening? Bro that's priced in. I'm loading VIX calls for Monday. 🎰"</div>
+      <div class="meta">· u/DiamondHandsKim · ⬆ 4.2k</div>
+    </div>
+
+    <div class="comm-card">
+      <span class="comm-src src-youtube">YouTube 베댓</span>
+      <div class="quote">"삼성전자 21만원 깨지면 나는 정말 계좌 접는다… 그 전에 저점매수 한 번만 더."</div>
+      <div class="meta">· 슈카월드 4/17 방송 · 👍 1.3k</div>
+    </div>
+
+    <div class="comm-card">
+      <span class="comm-src src-naver">NAVER 종토방</span>
+      <div class="quote">"에코프로 2차전지 -2.87% 그만 좀 맞자… HBM 하나로 한국이 버틴다는 게 서글프다."</div>
+      <div class="meta">· 247540 · 추천 167</div>
+    </div>
+
+  </div>
+
+  <!-- BULLS vs BEARS -->
+  <h2 class="section-title indigo">⚔️ 강세론 vs 약세론</h2>
+  <div class="vs-question">
+    💭 지금 코스피 6,200선, <u>바닥 다지기인가 꼭지인가</u>?
+  </div>
+  <div class="vs-grid">
+    <div class="vs-col bulls">
+      <h4>🐂 BULLS · 강세론</h4>
+      <ul>
+        <li><strong>외국인 누적 매수</strong> 4월 5조 이상 — 단기 차익실현 후 재유입 가능</li>
+        <li><strong>HBM 슈퍼사이클</strong> 진입 — SK하이닉스 4/24 실적이 시장 확신 제공</li>
+        <li><strong>PER 8배 저평가</strong> — 대신증권 "KOSPI 6,600선까지 밸류 여유"</li>
+        <li><strong>원화 강세</strong> 1,470원대 안착 — 외국인 원화자산 매력 회복</li>
+        <li><strong>미 연준 인하 기대</strong> — 4/30 FOMC까지 친시장 스탠스 지속 가능</li>
+      </ul>
+    </div>
+    <div class="vs-col bears">
+      <h4>🐻 BEARS · 약세론</h4>
+      <ul>
+        <li><strong>호르무즈 재봉쇄</strong> — 주말 IRGC 발표로 유가·환율 갭업 리스크</li>
+        <li><strong>외국인 하루 2조 매도</strong> — 상승 동력의 '그 자금'이 이탈 시작 신호</li>
+        <li><strong>2차전지·바이오 -2~3%</strong> — 모멘텀 섹터 전반 붕괴 진행 중</li>
+        <li><strong>WTI $93 구간</strong> — 재급등 시 미국 CPI 재반등 → 금리 인하 후퇴</li>
+        <li><strong>선박 피격 사건</strong> — 중동 확전 시 글로벌 리스크온 종료</li>
+      </ul>
+    </div>
+  </div>
+  <div class="vs-poll">
+    <div style="font-size:13px; color:#9ba3af; margin-bottom:6px;">커뮤니티 체감 여론</div>
+    <div class="vs-poll-bar">
+      <div class="b-bull" style="width:42%;">🐂 42%</div>
+      <div class="b-bear" style="width:58%;">🐻 58%</div>
+    </div>
+    <div style="font-size:12px; color:#6b7280;">* NAVER/BLIND/DC/Reddit 샘플링 기반 정성 평가</div>
+  </div>
+
+  <!-- CHECKPOINTS -->
+  <h2 class="section-title">📅 이번 주 체크포인트</h2>
+  <div class="checkpoint">
+    <div class="item">
+      <div class="day">04/20 (월)</div>
+      <div class="desc">호르무즈 재봉쇄 후폭풍. 아시아 장 갭 방향 확인. 유가·금·원/달러 3종 세트 주시.</div>
+    </div>
+    <div class="item">
+      <div class="day">04/21 (화)</div>
+      <div class="desc">미국 3월 소매판매 발표 (컨센 +0.4%). 둔화 시 연준 금리 인하 기대 재점화.</div>
+    </div>
+    <div class="item">
+      <div class="day">04/24 (금)</div>
+      <div class="desc">🔥 SK하이닉스 1Q 실적. HBM 매출 & AI 가이던스가 반도체 섹터 전체 방향 결정.</div>
+    </div>
+    <div class="item">
+      <div class="day">04/28~29</div>
+      <div class="desc">FOMC 회의 (한국시간 4/30 새벽 3시). 동결 컨센, 파월 인하 시그널 여부가 포인트.</div>
+    </div>
+    <div class="item">
+      <div class="day">04/30 (목)</div>
+      <div class="desc">미국 1Q GDP 속보치 + ECI 고용비용지수. 물가-성장 동시 체크.</div>
+    </div>
+  </div>
+
+  <!-- ANALYST ONE-LINER -->
+  <div class="analyst-line">
+    <div class="role">🎙️ 애널리스트 한 줄 요약</div>
+    <div class="msg">
+      "금요일 미국 신고가를 <strong>추격매수하지 마라</strong>.
+      월요일 호르무즈 갭이 위로 열리면 에너지·유통주 단기 트레이딩,
+      아래로 열리면 반도체 대형주 저점매수로 대응.
+      <strong>SK하이닉스 4/24 실적 전까지는 포지션을 짧게, 현금 비중 20~30% 유지</strong>가 안전하다."
+    </div>
+  </div>
+
+  <!-- HASHTAGS -->
+  <div class="hashtags">
+    <span>#코스피</span><span>#코스닥</span><span>#호르무즈해협</span><span>#이란</span>
+    <span>#SK하이닉스</span><span>#삼성전자</span><span>#HBM</span><span>#반도체</span>
+    <span>#FOMC</span><span>#비트코인</span><span>#WTI유가</span><span>#금값</span>
+    <span>#사상최고치</span><span>#외국인매도</span><span>#주말경보</span><span>#월요일갭</span>
+  </div>
+
+  <!-- DISCLAIMER -->
+  <div class="disclaimer">
+    ⚠️ 본 보고서는 투자 참고용이며 특정 종목의 매수·매도를 권유하지 않습니다.
+    일부 수치(KOSDAQ 지수·섹터 히트맵·커뮤니티 여론 %)는 공개 뉴스와 추정 기반이며 KRX 공식 공시와 차이가 있을 수 있습니다.
+    모든 투자 판단과 결과에 대한 책임은 투자자 본인에게 있습니다.
+  </div>
+
+</div>
+</body>
+</html>
