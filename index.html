@@ -63,11 +63,16 @@
       <h1 class="masthead-title">생생 정보통</h1>
       <p class="masthead-tagline">당신의 지갑과 일상을 흔드는 뉴스,<br/>매일 아침 가장 먼저.</p>
 
-      <form class="subscribe-bar" onsubmit="event.preventDefault(); alert('구독 기능은 곧 오픈됩니다. 조금만 기다려 주세요!');">
-        <input type="email" placeholder="이메일 주소를 입력하세요" required aria-label="이메일 주소" />
+      <form class="subscribe-bar"
+            action="https://docs.google.com/forms/d/e/1FAIpQLSetiUR0PirFvrgmA56LY4aoH7LRw0kJtJAE73qUmuv7IZZFmg/viewform"
+            method="GET"
+            target="_blank"
+            rel="noopener">
+        <input type="hidden" name="usp" value="pp_url" />
+        <input type="email" name="entry.364764606" placeholder="이메일 주소를 입력하세요" required aria-label="이메일 주소" />
         <button type="submit">무료 구독</button>
       </form>
-      <p class="subscribe-note">매일 아침 7시, 5분 안에 다 읽는 뉴스 한 통.</p>
+      <p class="subscribe-note">이메일 입력 → 1분이면 구독 완료. 매일 아침 7시 배달.</p>
     </section>
 
     <!-- ── 📰 오늘의 헤드라인 ── -->
