@@ -1130,3 +1130,414 @@ body {
     padding-top: 0;
   }
 }
+
+/* =============================================
+   뉴스레터 홈 레이아웃 (index.html)
+   ============================================= */
+
+/* 마스트헤드 */
+.newsletter-masthead {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 4rem 2rem 3rem;
+  text-align: center;
+}
+
+.masthead-meta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.issue-label {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  opacity: 0.65;
+  border: 1.5px solid currentColor;
+  padding: 0.3rem 0.9rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.masthead-title {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  margin-bottom: 0.6rem;
+  line-height: 1.1;
+}
+
+.masthead-tagline {
+  font-size: 1.05rem;
+  opacity: 0.75;
+  margin-bottom: 2.2rem;
+  line-height: 1.6;
+}
+
+/* 구독 바 */
+.subscribe-bar {
+  display: flex;
+  max-width: 480px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50px;
+  padding: 0.4rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.subscribe-bar input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 0.65rem 1.2rem;
+  font-size: 0.95rem;
+  outline: none;
+  font-family: inherit;
+  color: inherit;
+  min-width: 0;
+}
+
+.subscribe-bar button {
+  border: none;
+  border-radius: 50px;
+  padding: 0.65rem 1.6rem;
+  font-weight: 800;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-family: inherit;
+  white-space: nowrap;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.subscribe-bar button:hover {
+  transform: translateY(-1px);
+}
+
+.subscribe-note {
+  font-size: 0.82rem;
+  opacity: 0.55;
+  margin-top: 0.9rem;
+  font-weight: 600;
+}
+
+/* 뉴스레터 섹션 */
+.newsletter-section {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+}
+
+.ns-header {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  border-bottom: 2.5px solid currentColor;
+  padding-bottom: 0.7rem;
+  margin-bottom: 1.8rem;
+}
+
+.ns-emoji {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.ns-title {
+  font-size: 1.3rem;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+/* 헤드라인 카드 (대표 글) */
+.headline-card {
+  display: block;
+  padding: 2rem 2.2rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.headline-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.12);
+}
+
+.headline-title {
+  font-size: clamp(1.35rem, 3.2vw, 1.85rem);
+  font-weight: 900;
+  line-height: 1.3;
+  margin: 0.9rem 0 1rem;
+  letter-spacing: -0.5px;
+}
+
+.headline-summary {
+  font-size: 1.02rem;
+  line-height: 1.75;
+  opacity: 0.82;
+  margin-bottom: 1.4rem;
+}
+
+.headline-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  opacity: 0.65;
+  padding-top: 1rem;
+  border-top: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+.headline-link {
+  font-weight: 800;
+  font-size: 0.95rem;
+  opacity: 1;
+}
+
+/* 증시 — 컴팩트 가로 리스트 */
+.market-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.market-item {
+  display: grid;
+  grid-template-columns: 60px 1fr 24px;
+  gap: 1.2rem;
+  align-items: center;
+  padding: 1.1rem 1.4rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.market-item:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateX(3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.market-date {
+  font-size: 0.85rem;
+  font-weight: 800;
+  opacity: 0.6;
+  letter-spacing: 0.5px;
+  font-variant-numeric: tabular-nums;
+}
+
+.market-title {
+  font-size: 0.98rem;
+  font-weight: 700;
+  line-height: 1.45;
+  margin: 0 0 0.25rem;
+}
+
+.market-sub {
+  font-size: 0.85rem;
+  opacity: 0.65;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.market-arrow {
+  font-size: 1.25rem;
+  opacity: 0.4;
+  text-align: right;
+}
+
+/* 깊이 보기 — 카드 그리드 */
+.deep-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.deep-grid .card {
+  padding: 1.3rem 1.4rem;
+}
+
+.deep-grid .card-title {
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.deep-grid .card-summary {
+  font-size: 0.88rem;
+  opacity: 0.78;
+  line-height: 1.65;
+  flex: 1;
+}
+
+.deep-grid .card-date {
+  font-size: 0.78rem;
+  opacity: 0.55;
+  font-weight: 600;
+  margin: 0;
+}
+
+.deep-grid .card-link {
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-top: 0.4rem;
+  color: inherit;
+  opacity: 0.85;
+}
+
+/* 지난 이슈 — 아카이브 리스트 */
+.archive-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.archive-list li {
+  margin: 0;
+}
+
+.archive-item {
+  display: grid;
+  grid-template-columns: 60px 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.9rem 0.4rem;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s, padding 0.15s;
+}
+
+.archive-item:hover {
+  background: rgba(255, 255, 255, 0.5);
+  padding-left: 0.9rem;
+}
+
+.archive-date {
+  font-size: 0.82rem;
+  font-weight: 700;
+  opacity: 0.55;
+  font-variant-numeric: tabular-nums;
+}
+
+.archive-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.archive-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.65rem;
+  border-radius: 50px;
+  white-space: nowrap;
+}
+
+/* 아카이브 태그 색상 (카드와 동일) */
+.archive-tag[data-cat="증시"]       { background: #dcfce7; color: #166534; }
+.archive-tag[data-cat="경제"]       { background: #dbeafe; color: #1e40af; }
+.archive-tag[data-cat="긴급 경제"]  { background: #fee2e2; color: #991b1b; }
+.archive-tag[data-cat="긴급 복지"]  { background: #fce7f3; color: #9d174d; }
+.archive-tag[data-cat="청년정책"]   { background: #ede9fe; color: #5b21b6; }
+.archive-tag[data-cat="생활정보"]   { background: #fef3c7; color: #92400e; }
+.archive-tag[data-cat="건강"]       { background: #d1fae5; color: #065f46; }
+.archive-tag[data-cat="교육"]       { background: #e0e7ff; color: #3730a3; }
+.archive-tag[data-cat="사회"]       { background: #f3f4f6; color: #374151; }
+.archive-tag[data-cat="BTS"]        { background: #f3e8ff; color: #7c3aed; }
+
+.archive-more {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* 계절별 강조선 색상 */
+body.spring .ns-header { border-bottom-color: #f48fb1; }
+body.summer .ns-header { border-bottom-color: #4dd0e1; }
+body.autumn .ns-header { border-bottom-color: #ff8a65; }
+body.winter .ns-header { border-bottom-color: #90caf9; }
+
+body.spring .issue-label { color: #b05070; }
+body.summer .issue-label { color: #00838f; }
+body.autumn .issue-label { color: #bf360c; }
+body.winter .issue-label { color: #1565c0; }
+
+/* 계절별 구독 버튼 */
+body.spring .subscribe-bar button {
+  background: linear-gradient(90deg, #f48fb1, #a5d6a7);
+  color: #fff;
+}
+body.summer .subscribe-bar button {
+  background: linear-gradient(90deg, #4dd0e1, #80cbc4);
+  color: #fff;
+}
+body.autumn .subscribe-bar button {
+  background: linear-gradient(90deg, #ff8a65, #ffca28);
+  color: #fff;
+}
+body.winter .subscribe-bar button {
+  background: linear-gradient(90deg, #90caf9, #80deea);
+  color: #0d1b2a;
+}
+
+/* 계절별 헤드라인 강조 */
+body.spring .headline-title { color: #7a2040; }
+body.summer .headline-title { color: #004d40; }
+body.autumn .headline-title { color: #6d2400; }
+body.winter .headline-title { color: #102030; }
+
+/* 모바일 대응 */
+@media (max-width: 640px) {
+  .newsletter-masthead {
+    padding: 2.5rem 1.2rem 2rem;
+  }
+  .newsletter-section {
+    padding: 2rem 1.2rem;
+  }
+  .headline-card {
+    padding: 1.5rem 1.4rem;
+  }
+  .market-item {
+    grid-template-columns: 50px 1fr 20px;
+    gap: 0.8rem;
+    padding: 1rem;
+  }
+  .archive-item {
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: auto auto;
+    gap: 0.2rem 0.8rem;
+    padding: 0.9rem 0.4rem;
+  }
+  .archive-date {
+    grid-row: 1 / 3;
+    align-self: center;
+  }
+  .archive-tag {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: start;
+    margin-top: 0.3rem;
+  }
+  .subscribe-bar {
+    flex-direction: column;
+    border-radius: 16px;
+    padding: 0.5rem;
+    gap: 0.4rem;
+  }
+  .subscribe-bar input {
+    text-align: center;
+  }
+  .subscribe-bar button {
+    width: 100%;
+    padding: 0.75rem;
+  }
+}

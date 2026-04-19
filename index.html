@@ -22,8 +22,8 @@
   <meta name="google-adsense-account" content="ca-pub-9118774019383180">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9118774019383180"
      crossorigin="anonymous"></script>
-  <title>생생 정보통</title>
-  <meta name="description" content="생활에 도움이 되는 정보를 모아두는 아카이브입니다." />
+  <title>생생 정보통 — 매일 아침 배달되는 경제·사회 뉴스레터</title>
+  <meta name="description" content="당신의 지갑과 일상을 흔드는 뉴스를 매일 아침 가장 먼저 전해드리는 뉴스레터." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
@@ -45,7 +45,7 @@
   <div class="content-wrapper">
 
     <!-- ── 헤더 ── -->
-            <header class="site-header">
+    <header class="site-header">
       <a href="index.html" class="logo">생생 정보통</a>
       <nav class="site-nav">
         <a href="index.html" class="nav-link">홈</a>
@@ -55,417 +55,201 @@
       </nav>
     </header>
 
-    <!-- ── 히어로 ── -->
-    <section class="hero">
-      <h1 class="hero-title">생활의 지혜를 더하다</h1>
-      <p class="hero-sub">검증된 정보와 실전 노하우로<br />여러분의 일상을 더 풍요롭게 만듭니다.</p>
-      <a href="posts.html" class="btn-primary">유용한 정보 찾아보기 →</a>
+    <!-- ── 뉴스레터 마스트헤드 ── -->
+    <section class="newsletter-masthead">
+      <div class="masthead-meta">
+        <span class="issue-label">VOL. 2026.04.19 · 일요일</span>
+      </div>
+      <h1 class="masthead-title">생생 정보통</h1>
+      <p class="masthead-tagline">당신의 지갑과 일상을 흔드는 뉴스,<br/>매일 아침 가장 먼저.</p>
+
+      <form class="subscribe-bar" onsubmit="event.preventDefault(); alert('구독 기능은 곧 오픈됩니다. 조금만 기다려 주세요!');">
+        <input type="email" placeholder="이메일 주소를 입력하세요" required aria-label="이메일 주소" />
+        <button type="submit">무료 구독</button>
+      </form>
+      <p class="subscribe-note">매일 아침 7시, 5분 안에 다 읽는 뉴스 한 통.</p>
     </section>
 
-    <!-- ── 최근 글 ── -->
-    <section class="section"><h2 class="section-title">최근 글</h2>
+    <!-- ── 📰 오늘의 헤드라인 ── -->
+    <section class="newsletter-section">
+      <div class="ns-header">
+        <span class="ns-emoji">📰</span>
+        <h2 class="ns-title">오늘의 헤드라인</h2>
+      </div>
 
-      <div class="card-grid">
-        <!-- 카드: AI 청년 일자리 2026-04-18 -->
-        <article class="card" data-href="2026-04-18-AI청년일자리17만.html">
-          <span class="card-tag">사회</span>
-          <h2 class="card-title">AI가 집어삼킨 청년 일자리 17만 개 — "전문직은 안전하다"는 거짓말</h2>
-          <p class="card-date">2026년 04월 18일</p>
-          <p class="card-summary">챗GPT 출시 3년, 한국 청년 고용률 5년 만의 최저치. 정보통신·전문직에서 2030 취업자 13만명 증발. 통계청 숫자가 말하는 'AI 해고'의 민낯을 데이터로 파헤친다.</p>
-          <a href="2026-04-18-AI청년일자리17만.html" class="card-link">자세히 보기 →</a>
-        </article>
+      <a href="2026-04-18-AI청년일자리17만.html" class="headline-card">
+        <span class="card-tag" data-cat="사회">사회</span>
+        <h3 class="headline-title">AI가 집어삼킨 청년 일자리 17만 개 — "전문직은 안전하다"는 거짓말</h3>
+        <p class="headline-summary">챗GPT 출시 3년, 한국 청년 고용률은 5년 만의 최저치. 정보통신·전문직에서만 2030 취업자 13만 명이 증발했다. 통계청 숫자가 말하는 'AI 해고'의 민낯을 데이터로 파헤친다.</p>
+        <div class="headline-meta">
+          <span>2026년 04월 18일</span>
+          <span class="headline-link">→ 전문 읽기</span>
+        </div>
+      </a>
+    </section>
 
-        <!-- 카드: 주식보고서 2026-04-18 -->
-        <article class="card" data-href="2026-04-18-2-주식보고서.html">
-          <span class="card-tag">증시</span>
-          <h2 class="card-title">🚨 외국인 2조 '팔자 폭탄' 터졌다! 코스피 6,200 붕괴 vs 美증시 사상 최고가 폭죽</h2>
-          <p class="card-date">2026년 04월 18일</p>
-          <p class="card-summary">서울은 차익실현 쓰나미, 뉴욕은 '이란 종전 랠리' 축포. 코스피 -0.55%, 다우 +1.79%… 돈은 지금 어디로 흐르고 있는가?</p>
-          <a href="2026-04-18-2-주식보고서.html" class="card-link">자세히 보기 →</a>
-        </article>
+    <!-- ── 📈 오늘의 증시 ── -->
+    <section class="newsletter-section">
+      <div class="ns-header">
+        <span class="ns-emoji">📈</span>
+        <h2 class="ns-title">오늘의 증시</h2>
+      </div>
 
-        <!-- 카드: 의료급여 개편 2026-04-17 -->
+      <div class="market-list">
+        <a href="2026-04-18-2-주식보고서.html" class="market-item">
+          <span class="market-date">04.18</span>
+          <div>
+            <p class="market-title">🚨 외국인 2조 '팔자 폭탄'! 코스피 6,200 붕괴 vs 美증시 사상 최고가 폭죽</p>
+            <p class="market-sub">서울은 차익실현, 뉴욕은 '이란 종전 랠리'. 돈은 지금 어디로 흐르는가?</p>
+          </div>
+          <span class="market-arrow">→</span>
+        </a>
+
+        <a href="2026-04-17-주식보고서.html" class="market-item">
+          <span class="market-date">04.17</span>
+          <div>
+            <p class="market-title">코스피 6,200 미끄러진 날, 美 나스닥은 12일 연속 신고가 폭주</p>
+            <p class="market-sub">미·이란 종전 협상, 원달러 1,470원대, 유가 $90 vs 비트코인 $74K.</p>
+          </div>
+          <span class="market-arrow">→</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ── 🔍 깊이 보기 ── -->
+    <section class="newsletter-section">
+      <div class="ns-header">
+        <span class="ns-emoji">🔍</span>
+        <h2 class="ns-title">이번 주 깊이 보기</h2>
+      </div>
+
+      <div class="deep-grid">
         <article class="card" data-href="2026-04-17-의료급여개편163만명.html">
-          <span class="card-tag">사회</span>
-          <h2 class="card-title">163만 명 병원비가 바뀐다 — 초고령사회 첫해, 의료급여 10조 2천억 대개편의 두 얼굴</h2>
+          <span class="card-tag" data-cat="사회">사회</span>
+          <h3 class="card-title">163만 명 병원비가 바뀐다 — 초고령사회 첫해, 의료급여 10조 2천억 대개편의 두 얼굴</h3>
           <p class="card-date">2026년 04월 17일</p>
-          <p class="card-summary">보건복지부가 제4차 의료급여 기본계획 수립에 착수했다. 수급자 163만 명, 추경 2,828억 원, 통합돌봄 연계… 초고령사회 첫해에 시작된 거대한 개편이 당신의 부모와 노후에 미칠 진짜 영향을 탐사했다.</p>
+          <p class="card-summary">수급자 163만 명, 추경 2,828억 원, 통합돌봄 연계 — 초고령사회 첫해의 거대한 개편이 당신의 부모와 노후에 미칠 진짜 영향.</p>
           <a href="2026-04-17-의료급여개편163만명.html" class="card-link">자세히 보기 →</a>
         </article>
 
-        <!-- 카드: 주식보고서 2026-04-17 -->
-        <article class="card" data-href="2026-04-17-주식보고서.html">
-          <span class="card-tag">증시</span>
-          <h2 class="card-title">2026-04-17 시장 브리핑 — 코스피 6,200 미끄러진 날, 美 나스닥은 12일 연속 신고가 폭주</h2>
-          <p class="card-date">2026년 04월 17일</p>
-          <p class="card-summary">미·이란 종전 협상 줄다리기, 원달러 1,470원대 고착, 유가 $90 vs 비트코인 $74K — 오늘 진짜 시장이 반응한 건 따로 있었다.</p>
-          <a href="2026-04-17-주식보고서.html" class="card-link">자세히 보기 →</a>
-        </article>
-
-        <!-- 카드: 세월호 12주기 2026-04-16 -->
         <article class="card" data-href="2026-04-16-세월호12주기국가미완성.html">
-          <span class="card-tag">사회</span>
-          <h2 class="card-title">살아있었다면 올해 서른 — 12년이 지나도 국가는 왜 아직도 '미완성'인가</h2>
+          <span class="card-tag" data-cat="사회">사회</span>
+          <h3 class="card-title">살아있었다면 올해 서른 — 12년이 지나도 국가는 왜 아직도 '미완성'인가</h3>
           <p class="card-date">2026년 04월 16일</p>
-          <p class="card-summary">2014년 4월 16일 세월호 참사 이후 12년. 304명의 희생자, 5명의 미수습자, 무죄로 끝난 책임자들, 그리고 반복되는 재난. 우리는 무엇을 바꿨는가.</p>
+          <p class="card-summary">304명의 희생자, 5명의 미수습자, 무죄로 끝난 책임자들, 그리고 반복되는 재난. 우리는 무엇을 바꿨는가.</p>
           <a href="2026-04-16-세월호12주기국가미완성.html" class="card-link">자세히 보기 →</a>
         </article>
 
-        <!-- 카드: 주식보고서 2026-04-16 -->
-        <article class="card" data-href="2026-04-16-주식보고서.html">
-          <span class="card-tag">증시</span>
-          <h2 class="card-title">2026.04.16 시장 브리핑 — 코스피 6226 사상 첫 종전 이후 신고가 돌파 임박!</h2>
-          <p class="card-date">2026년 04월 16일</p>
-          <p class="card-summary">코스피 6226 돌파 및 사상 최고치 경신 임박, 종전 이후 시장의 강력한 상승 동력 분석.</p>
-          <a href="2026-04-16-주식보고서.html" class="card-link">자세히 보기 →</a>
-        </article>
-
-        <!-- 카드: AI 일자리 대체 2026-04-15 -->
         <article class="card" data-href="2026-04-15-AI일자리대체71퍼센트.html">
-          <span class="card-tag">사회</span>
-          <h2 class="card-title">AI가 내 자리를 차지했다 — 한국 기업 71%가 이미 업무 대체 시작, 당신 차례는?</h2>
+          <span class="card-tag" data-cat="사회">사회</span>
+          <h3 class="card-title">AI가 내 자리를 차지했다 — 한국 기업 71%가 이미 업무 대체 시작, 당신 차례는?</h3>
           <p class="card-date">2026년 04월 15일</p>
-          <p class="card-summary">한국 기업 71%가 AI로 업무를 대체 중이다. 세계 최고 로봇 밀도, AI 기본법 시행, 취약계층 불균형까지 — 한국 직장인이 반드시 알아야 할 AI 일자리 위기의 실체를 데이터로 파헤친다.</p>
+          <p class="card-summary">세계 최고 로봇 밀도, AI 기본법 시행, 취약계층 불균형까지 — 한국 직장인이 반드시 알아야 할 AI 일자리 위기의 실체.</p>
           <a href="2026-04-15-AI일자리대체71퍼센트.html" class="card-link">자세히 보기 →</a>
         </article>
 
-        <!-- 카드: 주식보고서 2026-04-15 -->
-        <article class="card" data-href="2026-04-15-주식보고서.html">
-          <span class="card-tag">증시</span>
-          <h2 class="card-title">🔥 코스피 6000 돌파! 미·이란 종전 협상에 증시 폭등 — 2026.04.15 시장 브리핑</h2>
-          <p class="card-date">2026년 04월 15일</p>
-          <p class="card-summary">코스피 6,000선 돌파와 미·이란 종전 협상 기대감으로 시장이 폭등하고 있습니다. 오늘의 시장 상황과 주요 업종별 분석을 전해드립니다.</p>
-          <a href="2026-04-15-주식보고서.html" class="card-link">자세히 보기 →</a>
-        </article>
-
-        <!-- 카드: 환경 부도의 날 2026-04-15 -->
         <article class="card" data-href="2026-04-15-환경부도의날.html">
-          <span class="card-tag">사회</span>
-          <h2 class="card-title">4월 9일 이후, 한국인은 매일 지구에 빚을 지고 있다 — '환경 부도의 날'이 드러낸 충격적 진실</h2>
+          <span class="card-tag" data-cat="사회">사회</span>
+          <h3 class="card-title">4월 9일 이후, 한국인은 매일 지구에 빚을 지고 있다 — '환경 부도의 날'의 진실</h3>
           <p class="card-date">2026년 04월 15일</p>
-          <p class="card-summary">2026년 4월 9일, 대한민국은 1년치 지구 자원을 모두 써버렸다. 남은 266일은 미래 세대에게 빌린 것이다. 플라스틱 세계 1위, 탄소 배출 세계 7위의 한국이 직면한 생태 위기의 민낯을 파헤친다.</p>
+          <p class="card-summary">2026년 4월 9일, 대한민국은 1년치 지구 자원을 모두 써버렸다. 남은 266일은 미래 세대에게 빌린 것이다.</p>
           <a href="2026-04-15-환경부도의날.html" class="card-link">자세히 보기 →</a>
         </article>
+      </div>
+    </section>
 
-        <!-- 카드: 주식보고서 2026-04-15 -->
-        <article class="card" data-href="2026-04-15-2-주식보고서.html">
-          <span class="card-tag">증시</span>
-          <h2 class="card-title">2026-04-15 오늘의 시장 브리핑 — 코스피 6,000선 안착 시도 및 기술주 중심 강세</h2>
-          <p class="card-date">2026년 04월 15일</p>
-          <p class="card-summary">코스피가 6,000선 안착을 시도하며 기술주 중심의 강세를 보이고 있습니다. 글로벌 증시 훈풍과 외국인 매수세 유입에 따른 시장 분석을 전해드립니다.</p>
-          <a href="2026-04-15-2-주식보고서.html" class="card-link">자세히 보기 →</a>
-        </article>
-
-        <!-- 카드: 전세 소멸 2026-04-14 -->
-        <article class="card" data-href="2026-04-14-전세소멸월세시대.html">
-          <span class="card-tag">사회</span>
-          <h2 class="card-title">전세가 사라진다 — 보증금 3억짜리 서울 세입자, 이제 매달 얼마를 더 내야 하나</h2>
-          <p class="card-date">2026년 04월 14일</p>
-          <p class="card-summary">서울 전세 매물 3만 건 붕괴, 월세 거래 60% 돌파. 전세가 구조적으로 사라지는 이유와 내 주거비에 미치는 진짜 영향을 숫자로 파헤칩니다.</p>
-          <a href="2026-04-14-전세소멸월세시대.html" class="card-link">자세히 보기 →</a>
-        </article>
-
-        <!-- 카드: 주식보고서 2026-04-14 -->
-        <article class="card" data-href="2026-04-14-주식보고서.html">
-          <span class="card-tag">증시</span>
-          <h2 class="card-title">2026-04-14 오늘의 시장 브리핑 — 미·이란 협상 기대감 및 외인·기관 매수에 코스피 5,967 강세 마감</h2>
-          <p class="card-date">2026년 04월 14일</p>
-          <p class="card-summary">미·이란 후속 협상 기대감과 외국인·기관의 동반 매수세에 힘입어 코스피가 5,900선을 돌파하며 6,000선에 육박했습니다. 반도체와 2차전지 중심의 시장 분석을 전해드립니다.</p>
-          <a href="2026-04-14-주식보고서.html" class="card-link">자세히 보기 →</a>
-        </article>
-
-        <!-- 카드: 사교육비 진실 2026-04-13 -->
-        <article class="card" data-href="2026-04-13-사교육비월60만원진실.html">
-          <span class="card-tag">교육</span>
-          <h2 class="card-title">정부는 "줄었다" 했지만, 학원비는 왜 월 60만원을 넘었나 — 사교육비의 불편한 진실</h2>
-          <p class="card-date">2026년 04월 13일</p>
-          <p class="card-summary">2025년 사교육비 총액은 5년 만에 감소했지만, 실제 학원 다니는 학생의 부담은 역대 최고인 월 60만4천원. 통계 이면에 숨은 진짜 숫자를 파헤칩니다.</p>
-          <a href="2026-04-13-사교육비월60만원진실.html" class="card-link">자세히 보기 →</a>
-        </article>
-
-        <!-- 카드: 주식보고서 2026-04-13 -->
-        <article class="card" data-href="2026-04-13-주식보고서.html">
-          <span class="card-tag">증시</span>
-          <h2 class="card-title">2026-04-13 오늘의 시장 브리핑 — 미·이란 협상 결렬 충격 및 코스피 5,800선 사수</h2>
-          <p class="card-date">2026년 04월 13일</p>
-          <p class="card-summary">미·이란 종전 협상 결렬 소식에 코스피가 장중 급락했으나 5,800선을 지켜냈습니다. 인플레이션 우려와 반도체 수급 분석을 담은 오늘의 주식 시장 보고서입니다.</p>
-          <a href="2026-04-13-주식보고서.html" class="card-link">자세히 보기 →</a>
-        </article>
-
-        <!-- 카드: 청년 쉬었음 2026-04-12 -->
-        <article class="card" data-href="2026-04-12-청년쉬었음76만.html">
-          <span class="card-tag">사회</span>
-          <h2 class="card-title">AI가 막은 '신입의 문' — 76만 청년이 취업 대신 '쉬었음'을 선택하는 진짜 이유</h2>
-          <p class="card-date">2026년 04월 12일</p>
-          <p class="card-summary">20~30대 '쉬었음' 인구 76만명 역대 최고. 개인의 나태함이 아니라 AI와 경력직 채용이 신입의 문을 닫고 있다는 구조적 진실을 파헤칩니다.</p>
-          <a href="2026-04-12-청년쉬었음76만.html" class="card-link">자세히 보기 →</a>
-        </article>
-
-        <!-- 카드: 주식보고서 2026-04-12 -->
-        <article class="card" data-href="2026-04-10-2-주식보고서.html">
-          <span class="card-tag">증시</span>
-          <h2 class="card-title">2026-04-12 주식보고서</h2>
-          <p class="card-date">2026년 04월 12일</p>
-          <p class="card-summary">코스피 6,100선 돌파 시도 및 글로벌 시장 훈풍 지속. 반도체와 금융주 중심의 수급 분석 및 향후 전망을 담은 오늘의 주식 시장 보고서입니다.</p>
-          <a href="2026-04-10-2-주식보고서.html" class="card-link">자세히 보기 →</a>
-        </article>
-
-        <!-- 카드: 낙태죄 입법 공백 2026-04-11 -->
-        <article class="card" data-href="2026-04-11-낙태죄입법공백7년.html">
-          <span class="card-tag">사회</span>
-          <h2 class="card-title">오늘로 7년째, 국회는 아직도 '모르쇠' — 낙태죄 입법 공백의 민낯</h2>
-          <p class="card-date">2026년 04월 11일</p>
-          <p class="card-summary">2019년 헌법재판소 낙태죄 헌법불합치 결정 7주년 — 입법 시한은 5년 전에 지났지만 국회는 여전히 침묵하고 있다. 합법도 불법도 아닌 회색지대에 방치된 여성들의 현실을 파헤친다.</p>
-          <a href="2026-04-11-낙태죄입법공백7년.html" class="card-link">자세히 보기 →</a>
-        </article>
-
-        <!-- 카드: 주식보고서 2026-04-11 -->
-        <article class="card" data-href="2026-04-11-주식보고서.html">
-          <span class="card-tag">증시</span>
-          <h2 class="card-title">2026-04-11 오늘의 시장 브리핑 (주간 결산)</h2>
-          <p class="card-date">2026년 04월 11일</p>
-          <p class="card-summary">SK하이닉스의 AI HBM 수혜, 美 국채 10년물 5.0% 돌파 위협, 이란전쟁 장기화에 따른 K-방산 수출 기대감 등 이번 주 주요 시장 이슈를 정리한 주간 결산 보고서입니다.</p>
-          <a href="2026-04-11-주식보고서.html" class="card-link">자세히 보기 →</a>
-        </article>
-
-        <!-- 카드: 건강보험료 연말정산 2026-04-10 -->
-        <article class="card" data-href="2026-04-10-건강보험료연말정산폭탄.html">
-          <span class="card-tag">긴급 복지</span>
-          <h2 class="card-title">4월 월급날 통장이 비어있다 — 건강보험료 연말정산, 올해는 얼마나 빠져나가나</h2>
-          <p class="card-date">2026년 04월 10일</p>
-          <p class="card-summary">직장인 수천만 명의 4월 월급에서 조용히 빠져나가는 건강보험료 연말정산. 2026년 평균 추가납부액과 대응법을 정리했습니다. #건보료폭탄 #4월월급 #직장인필독</p>
-          <a href="2026-04-10-건강보험료연말정산폭탄.html" class="card-link">자세히 보기 →</a>
-        </article>
-
-        <!-- 카드: 주식보고서 2026-04-10 -->
-        <article class="card" data-href="2026-04-10-주식보고서.html">
-          <span class="card-tag">증시</span>
-          <h2 class="card-title">2026-04-10 오늘의 시장 브리핑 — 코스피 반등 성공, 반도체 수급 집중</h2>
-          <p class="card-date">2026년 04월 10일</p>
-          <p class="card-summary">코스피 1.72% 반등! 외국인의 삼성전자·SK하이닉스 집중 매수세와 미-이란 휴전 지속 기대감 속 시장 분석 보고서입니다. #주식시장 #코스피반등 #재테크</p>
-          <a href="2026-04-10-주식보고서.html" class="card-link">자세히 보기 →</a>
-        </article>
-
-        <!-- 카드: AI기본법 딥페이크 2026-04-09 -->
-        <article class="card" data-href="2026-04-09-AI기본법딥페이크.html">
-          <span class="card-tag">사회</span>
-          <h2 class="card-title">딥페이크 피해 227% 폭증하는데, 법은 아직 '계도기간' 중 — AI기본법 시행 80일의 민낯</h2>
-          <p class="card-date">2026년 04월 09일</p>
-          <p class="card-summary">AI기본법이 시행됐지만 과태료는 내년부터, 딥페이크는 지금도 폭증 중이다. 당신의 채용·대출·의료 결정을 AI가 내린다면, 지금 무엇이 보호하는가.</p>
-          <a href="2026-04-09-AI기본법딥페이크.html" class="card-link">자세히 보기 →</a>
-        </article>
-
-        <!-- 카드: 주식보고서 2026-04-09 -->
-        <article class="card" data-href="2026-04-09-주식보고서.html">
-          <span class="card-tag">증시</span>
-          <h2 class="card-title">2026-04-09 주식 시장 브리핑 — 코스피 6,000선 돌파 시도, 반도체·금융주 강세</h2>
-          <p class="card-date">2026년 04월 09일</p>
-          <p class="card-summary">미·이란 휴전 합의 이후 글로벌 증시 훈풍 지속. 코스피는 사상 최고치 경신을 눈앞에 두고 있으며, 외국인과 기관의 동반 매수세가 유입되고 있습니다.</p>
-          <a href="2026-04-09-주식보고서.html" class="card-link">자세히 보기 →</a>
-        </article>
-
-        <!-- 카드: 주식보고서 2026-04-08 -->
-        <article class="card" data-href="2026-04-08-주식보고서.html">
-          <span class="card-tag">증시</span>
-          <h2 class="card-title">2026-04-08 주식 시장 브리핑 — 미·이란 휴전 소식에 코스피 6.97% 폭등, 환율 하락</h2>
-          <p class="card-date">2026년 04월 08일</p>
-          <p class="card-summary">트럼프 대통령의 미·이란 2주 휴전 발표로 글로벌 증시가 동반 급등했습니다. 코스피는 5,800선을 돌파하며 6.9%대 폭등을 기록했고, 원달러 환율은 1,450원대로 내려앉았습니다.</p>
-          <a href="2026-04-08-주식보고서.html" class="card-link">자세히 보기 →</a>
-        </article>
-
-        <!-- 카드: 주식보고서 2026-04-07 (2) -->
-        <article class="card" data-href="2026-04-07-2 주식보고서.html">
-          <span class="card-tag">증시</span>
-          <h2 class="card-title">2026-04-07 주식 테마 영향 분석 보고서 — 코스피 5,450선 회복, 반도체·IT 강세 주도</h2>
-          <p class="card-date">2026년 04월 07일</p>
-          <p class="card-summary">코스피 5,450선 회복, 삼성전자·SK하이닉스 동반 급등. 미·이란 휴전 기대감 속 위험자산 선호 회복 분석.</p>
-          <a href="2026-04-07-2 주식보고서.html" class="card-link">자세히 보기 →</a>
-        </article>
-
-        <!-- 카드: 채권형펀드 자금이탈 2026-04-07 -->
-        <article class="card" data-href="2026-04-07-채권형펀드자금이탈.html">
-          <span class="card-tag">경제</span>
-          <h2 class="card-title">한 달 만에 4조원이 사라졌다 — 채권펀드 대탈출, 내 대출이자는 괜찮을까?</h2>
-          <p class="card-date">2026년 04월 07일</p>
-          <p class="card-summary">채권형 펀드에서 4조원이 빠져나간 진짜 이유와 직장인·청년·은퇴자에게 미치는 영향을 정리했습니다.</p>
-          <a href="2026-04-07-채권형펀드자금이탈.html" class="card-link">자세히 보기 →</a>
-        </article>
-
-        <!-- 카드: 중동발 에너지위기 2026-04-07 -->
-        <article class="card" data-href="2026-04-07-중동발에너지위기.html">
-          <span class="card-tag">경제</span>
-          <h2 class="card-title">직장인이라면 반드시 봐야 할 환율 1,500원 시대, 내 지갑은 얼마나 털릴까?</h2>
-          <p class="card-date">2026년 04월 07일</p>
-          <p class="card-summary">중동발 에너지 위기가 내 월급과 장바구니에 미치는 충격, 숫자로 확인하세요.</p>
-          <a href="2026-04-07-중동발에너지위기.html" class="card-link">자세히 보기 →</a>
-        </article>
-
-        <!-- 카드: 주식보고서 2026-04-07 -->
-        <article class="card" data-href="2026-04-07-주식보고서.html">
-          <span class="card-tag">증시</span>
-          <h2 class="card-title">2026-04-07 한·미 주식시장 보고서</h2>
-          <p class="card-date">2026년 04월 07일</p>
-          <p class="card-summary">부활절 연휴 이후 거래 재개, 코스피 5500선 안착 · 미 증시 혼조 마감.</p>
-          <a href="2026-04-07-주식보고서.html" class="card-link">자세히 보기 →</a>
-        </article>
-
-        <!-- 카드: 환율1500원 경제위기 2026-04-06 -->
-        <article class="card" data-href="2026-04-06-환율1500원경제위기.html">
-          <span class="card-tag">경제</span>
-          <h2 class="card-title">환율 1,500원 시대, 내 지갑은 얼마나 얇아지나 — 중동전쟁발 경제위기 총정리</h2>
-          <p class="card-date">2026년 04월 06일</p>
-          <p class="card-summary">원달러 환율 1,500원 돌파, 유가 급등, 스태그플레이션 우려까지. 중동전쟁이 대한민국 경제와 당신의 생활비에 미치는 영향을 한눈에 정리합니다.</p>
-          <a href="2026-04-06-환율1500원경제위기.html" class="card-link">자세히 보기 →</a>
-        </article>
-
-        <!-- 카드: 주식보고서 2026-04-06 -->
-        <article class="card" data-href="2026-04-06-주식보고서.html">
-          <span class="card-tag">증시</span>
-          <h2 class="card-title">2026-04-06 Daily Market Report — 중동 긴장·고유가 속 미국 고용 서프라이즈, 반도체 호조가 버팀목</h2>
-          <p class="card-date">2026년 04월 06일</p>
-          <p class="card-summary">중동 지정학적 긴장과 고유가 속 미국 고용 서프라이즈가 연준 동결 기대를 강화. 한국은 환율 1,500원대 돌파 부담 속 반도체 호조가 버팀목.</p>
-          <a href="2026-04-06-주식보고서.html" class="card-link">자세히 보기 →</a>
-        </article>
-
-        <!-- 카드: 민생지원금 3차 2026-04-06 -->
-        <article class="card" data-href="2026-04-06-민생지원금-3차.html">
-          <span class="card-tag">긴급 복지</span>
-          <h2 class="card-title">2026 고유가 3차 민생지원금, 최대 60만원 받는 법</h2>
-          <p class="card-date">2026년 04월 06일</p>
-          <p class="card-summary">소득 하위 70% 대상 최대 60만원 지급 — 기초수급자·차상위 자동 지급, 일반 가구 6월 30일까지 신청. 지역·계층별 차등 지급 총정리.</p>
-          <a href="2026-04-06-민생지원금-3차.html" class="card-link">자세히 보기 →</a>
-        </article>
-
-        <!-- 카드: 주식보고서 2026-04-05 -->
-        <article class="card" data-href="2026-04-05-주식보고서.html">
-          <span class="card-tag">증시</span>
-          <h2 class="card-title">2026-04-05 주식 테마 영향 분석 — 코스피 4.47% 급락, 반도체 반등 신호와 방산·우주 테마 주목</h2>
-          <p class="card-date">2026년 04월 05일</p>
-          <p class="card-summary">코스피 급락·환율 1,525원·유가 100달러 속 방산·반도체·우주 상승 테마와 항공·자동차·건설 하락 테마를 분석한 주식 보고서입니다.</p>
-          <a href="2026-04-05-주식보고서.html" class="card-link">자세히 보기 →</a>
-        </article>
-
-        <!-- 카드: 에너지위기 차량부제 -->
-        <article class="card" data-href="2026-04-05-에너지위기-차량부제.html">
-          <span class="card-tag">긴급 경제</span>
-          <h2 class="card-title">다음 주부터 내 차 못 탄다? 4월 8일 차량 2부제 시행, 운전자라면 지금 당장 확인하세요</h2>
-          <p class="card-date">2026년 04월 05일</p>
-          <p class="card-summary">중동 전쟁 장기화로 원유 위기경보 '경계' 격상 — 공공기관 2부제·민간 공영주차장 5부제, 휘발유 2,000원 임박까지 총정리.</p>
-          <a href="2026-04-05-에너지위기-차량부제.html" class="card-link">자세히 보기 →</a>
-        </article>
-
-        <!-- 카드: 청년이사비지원 -->
-        <article class="card" data-href="2026-04-04-청년이사비지원.html">
-          <span class="card-tag">청년정책</span>
-          <h2 class="card-title">서울 청년이라면 지금 당장 신청하세요 — 이사비·중개보수 최대 40만원, 4월 14일 마감</h2>
-          <p class="card-date">2026년 04월 04일</p>
-          <p class="card-summary">만 19~39세 서울 거주 청년 4,000명에게 최대 40만원 지원! 신청 자격·서류·방법·꿀팁까지 한번에 정리했습니다.</p>
-          <a href="2026-04-04-청년이사비지원.html" class="card-link">자세히 보기 →</a>
-        </article>
-
-        <!-- 카드: 고유가 피해지원금 -->
-        <article class="card" data-href="2026-04-04-고유가피해지원금.html">
-          <span class="card-tag">경제</span>
-          <h2 class="card-title">3,577만 명에게 최대 60만원 — 고유가 피해지원금, 내가 받을 수 있을까?</h2>
-          <p class="card-date">2026년 04월 04일</p>
-          <p class="card-summary">26.2조 추경 통과 임박! 소득 하위 70% 대상 고유가 피해지원금 대상 기준·금액·신청방법·지급시기를 한눈에 정리했습니다.</p>
-          <a href="2026-04-04-고유가피해지원금.html" class="card-link">자세히 보기 →</a>
-        </article>
-
-        <!-- 카드: 에너지 위기 차량 제한 -->
-        <article class="card" data-href="2026-04-03-에너지위기차량제한.html">
-          <span class="card-tag">경제</span>
-          <h2 class="card-title">4월 8일부터 내 차 못 몬다? 원유 위기 '경계' 격상으로 달라지는 것 총정리</h2>
-          <p class="card-date">2026년 04월 03일</p>
-          <p class="card-summary">공공기관 차량 2부제·공영주차장 5부제 시행, 휘발유 2,000원 돌파 임박! 직장인이라면 반드시 알아야 할 에너지 위기 생존 가이드를 정리했습니다.</p>
-          <a href="2026-04-03-에너지위기차량제한.html" class="card-link">자세히 보기 →</a>
-        </article>
-
-        <!-- 카드: WGBI 편입 -->
-
-        <!-- 카드: 스태그플레이션 (최신) -->
-        <article class="card" data-href="2026-04-02-stagflation.html">
-          <span class="card-tag">경제</span>
-          <h2 class="card-title">유가 100달러·환율 1500원 동시 돌파 — 내 월급만 빼고 다 오른다</h2>
-          <p class="card-date">2026년 04월 02일</p>
-          <p class="card-summary">중동 전쟁 장기화로 한국 경제가 스태그플레이션 문턱에 섰습니다. 밥상·기름값·전기요금이 동시에 치솟는 지금, 우리 생활에 무슨 일이 일어나고 있는 걸까요?</p>
-          <a href="2026-04-02-stagflation.html" class="card-link">자세히 보기 →</a>
-        </article>
-
-        <!-- 카드: 주식 보고서 -->
-        <article class="card" data-href="2026-04-01-주식보고서.html">
-          <span class="card-tag">증시</span>
-          <h2 class="card-title">2026-04-01 주식 테마 영향 분석 보고서 — 전일 이슈 기반</h2>
-          <p class="card-date">2026년 04월 01일</p>
-          <p class="card-summary">이란 종전 시그널과 환율 1,530원 돌파 등 전일 주요 이슈를 바탕으로 분석한 오늘의 주식 테마 보고서입니다.</p>
-          <a href="2026-04-01-주식보고서.html" class="card-link">자세히 보기 →</a>
-        </article>
-
-        <!-- 카드: 유가 (이전) -->
-        <article class="card" data-href="post-20260331-2.html">
-          <span class="card-tag">경제</span>
-          <h2 class="card-title">유가 100달러 돌파 — 지금 당장 내 지갑에 생기는 일 5가지</h2>
-          <p class="card-date">2026년 03월 31일</p>
-          <p class="card-summary">WTI 원유 배럴당 100달러 돌파! 에너지 위기가 우리 일상과 지갑에 미치는 5가지 핵심 변화를 정리했습니다.</p>
-          <a href="post-20260331-2.html" class="card-link">자세히 보기 →</a>
-        </article>
-
-        <!-- 카드: 환율 -->
-        <article class="card" data-href="post-20260331.html">
-          <span class="card-tag">경제</span>
-          <h2 class="card-title">1,530원의 경고음: 거시적 위기와 미시적 생존의 갈림길</h2>
-          <p class="card-date">2026년 03월 31일</p>
-          <p class="card-summary">환율 1,530원 돌파! 고환율 시대를 관통하는 날카로운 통찰과 실천적 대응 전략을 제시합니다.</p>
-          <a href="post-20260331.html" class="card-link">자세히 보기 →</a>
-        </article>
-
-      <article class="card" data-href="post-20260330-1.html">
-        <span class="card-tag">BTS</span>
-        <h2 class="card-title">BTS 정규 5집 '아리랑' 컴백 10일, 월드투어 카운트다운 시작</h2>
-        <p class="card-date">2026년 03월 30일</p>
-        <p class="card-summary">3년 9개월 만의 완전체 컴백 앨범 '아리랑' 발매 첫날 400만 장 돌파, 4월 9일 시작되는 월드투어 핵심 정보를 정리했습니다.</p>
-        <a href="post-20260330-1.html" class="card-link">자세히 보기 →</a>
-      </article>
-
-        <!-- =====================================================
-             ✏️ 새 글을 추가할 때:
-             아래 카드 하나를 복사해서 붙여넣고
-             data-href, 태그, 제목, 요약, 날짜를 수정하세요.
-             ===================================================== -->
-
-                <!-- 카드 1 -->
-        <article class="card" data-href="post-20260330.html">
-          <span class="card-tag">건강</span>
-          <h3 class="card-title">봄비 내리는 환절기, 면역력 지키는 건강관리법 총정리</h3>
-          <p class="card-excerpt">전국에 봄비가 내리는 환절기, 일교차 대비 옷차림부터 면역력 높이는 식습관과 운동법까지 실천 가능한 건강관리 팁을 총정리했습니다.</p>
-          <span class="card-meta">2026년 03월 30일</span>
-        </article>
-
-        <!-- 카드 2 -->
-        <article class="card" data-href="post-001.html">
-          <span class="card-tag">생활정보</span>
-          <h3 class="card-title">알아두면 유용한 생활 꿀팁 모음</h3>
-          <p class="card-excerpt">일상에서 바로 써먹을 수 있는 꿀팁들을 모아봤어요. 시간과 돈을 아끼는 작은 습관들...</p>
-          <span class="card-meta">2025년 3월 29일</span>
-        </article>
-
-        <!-- 카드 3 -->
-        <article class="card" data-href="post-002.html">
-          <span class="card-tag">건강</span>
-          <h3 class="card-title">봄철 건강 관리, 이렇게 하세요</h3>
-          <p class="card-excerpt">환절기 면역력 높이는 방법과 봄에 특히 주의해야 할 건강 체크리스트를 정리했습니다...</p>
-          <span class="card-meta">2025년 3월 20일</span>
-        </article>
-
+    <!-- ── 🗂 지난 이슈 아카이브 ── -->
+    <section class="newsletter-section">
+      <div class="ns-header">
+        <span class="ns-emoji">🗂</span>
+        <h2 class="ns-title">지난 이슈</h2>
       </div>
 
-      <!-- 더 보기 버튼 -->
-      <div style="text-align:center; margin-top: 2.5rem;">
-        <a href="posts.html" class="btn-primary">글 전체 보기</a>
-      </div></section>
+      <ul class="archive-list">
+        <li><a class="archive-item" href="2026-04-16-주식보고서.html">
+          <span class="archive-date">04.16</span>
+          <span class="archive-title">코스피 6226, 사상 첫 종전 이후 신고가 돌파 임박</span>
+          <span class="archive-tag" data-cat="증시">증시</span>
+        </a></li>
+        <li><a class="archive-item" href="2026-04-15-주식보고서.html">
+          <span class="archive-date">04.15</span>
+          <span class="archive-title">🔥 코스피 6000 돌파! 미·이란 종전 협상에 증시 폭등</span>
+          <span class="archive-tag" data-cat="증시">증시</span>
+        </a></li>
+        <li><a class="archive-item" href="2026-04-15-2-주식보고서.html">
+          <span class="archive-date">04.15</span>
+          <span class="archive-title">코스피 6,000선 안착 시도 및 기술주 중심 강세</span>
+          <span class="archive-tag" data-cat="증시">증시</span>
+        </a></li>
+        <li><a class="archive-item" href="2026-04-14-전세소멸월세시대.html">
+          <span class="archive-date">04.14</span>
+          <span class="archive-title">전세가 사라진다 — 보증금 3억짜리 서울 세입자, 이제 매달 얼마를 더 내야 하나</span>
+          <span class="archive-tag" data-cat="사회">사회</span>
+        </a></li>
+        <li><a class="archive-item" href="2026-04-14-주식보고서.html">
+          <span class="archive-date">04.14</span>
+          <span class="archive-title">미·이란 협상 기대감 및 외인·기관 매수에 코스피 5,967 강세 마감</span>
+          <span class="archive-tag" data-cat="증시">증시</span>
+        </a></li>
+        <li><a class="archive-item" href="2026-04-13-사교육비월60만원진실.html">
+          <span class="archive-date">04.13</span>
+          <span class="archive-title">정부는 "줄었다" 했지만, 학원비는 왜 월 60만원을 넘었나 — 사교육비의 불편한 진실</span>
+          <span class="archive-tag" data-cat="교육">교육</span>
+        </a></li>
+        <li><a class="archive-item" href="2026-04-13-주식보고서.html">
+          <span class="archive-date">04.13</span>
+          <span class="archive-title">미·이란 협상 결렬 충격 및 코스피 5,800선 사수</span>
+          <span class="archive-tag" data-cat="증시">증시</span>
+        </a></li>
+        <li><a class="archive-item" href="2026-04-12-청년쉬었음76만.html">
+          <span class="archive-date">04.12</span>
+          <span class="archive-title">AI가 막은 '신입의 문' — 76만 청년이 취업 대신 '쉬었음'을 선택하는 진짜 이유</span>
+          <span class="archive-tag" data-cat="사회">사회</span>
+        </a></li>
+        <li><a class="archive-item" href="2026-04-11-낙태죄입법공백7년.html">
+          <span class="archive-date">04.11</span>
+          <span class="archive-title">오늘로 7년째, 국회는 아직도 '모르쇠' — 낙태죄 입법 공백의 민낯</span>
+          <span class="archive-tag" data-cat="사회">사회</span>
+        </a></li>
+        <li><a class="archive-item" href="2026-04-10-건강보험료연말정산폭탄.html">
+          <span class="archive-date">04.10</span>
+          <span class="archive-title">4월 월급날 통장이 비어있다 — 건강보험료 연말정산, 올해는 얼마나 빠져나가나</span>
+          <span class="archive-tag" data-cat="긴급 복지">긴급 복지</span>
+        </a></li>
+        <li><a class="archive-item" href="2026-04-09-AI기본법딥페이크.html">
+          <span class="archive-date">04.09</span>
+          <span class="archive-title">딥페이크 피해 227% 폭증하는데, 법은 아직 '계도기간' 중 — AI기본법 80일의 민낯</span>
+          <span class="archive-tag" data-cat="사회">사회</span>
+        </a></li>
+        <li><a class="archive-item" href="2026-04-07-채권형펀드자금이탈.html">
+          <span class="archive-date">04.07</span>
+          <span class="archive-title">한 달 만에 4조원이 사라졌다 — 채권펀드 대탈출, 내 대출이자는 괜찮을까?</span>
+          <span class="archive-tag" data-cat="경제">경제</span>
+        </a></li>
+        <li><a class="archive-item" href="2026-04-06-환율1500원경제위기.html">
+          <span class="archive-date">04.06</span>
+          <span class="archive-title">환율 1,500원 시대, 내 지갑은 얼마나 얇아지나 — 중동전쟁발 경제위기 총정리</span>
+          <span class="archive-tag" data-cat="경제">경제</span>
+        </a></li>
+        <li><a class="archive-item" href="2026-04-06-민생지원금-3차.html">
+          <span class="archive-date">04.06</span>
+          <span class="archive-title">2026 고유가 3차 민생지원금, 최대 60만원 받는 법</span>
+          <span class="archive-tag" data-cat="긴급 복지">긴급 복지</span>
+        </a></li>
+        <li><a class="archive-item" href="2026-04-05-에너지위기-차량부제.html">
+          <span class="archive-date">04.05</span>
+          <span class="archive-title">다음 주부터 내 차 못 탄다? 4월 8일 차량 2부제 시행</span>
+          <span class="archive-tag" data-cat="긴급 경제">긴급 경제</span>
+        </a></li>
+      </ul>
+
+      <div class="archive-more">
+        <a href="posts.html" class="btn-primary">전체 이슈 모두 보기 →</a>
+      </div>
+    </section>
 
     <!-- ── 푸터 ── -->
-            <footer class="site-footer">
+    <footer class="site-footer">
       <div class="footer-links">
         <a href="privacy.html">개인정보 처리방침</a>
         <a href="contact.html">문의하기</a>
