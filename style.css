@@ -1252,6 +1252,13 @@ body {
   margin: 0;
 }
 
+/* 헤드라인 그리드 (2개) */
+.headline-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
 /* 헤드라인 카드 (대표 글) */
 .headline-card {
   display: block;
