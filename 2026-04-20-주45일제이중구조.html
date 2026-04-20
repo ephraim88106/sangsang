@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>월 최대 80만원 준다는 '주 4.5일제'… 그런데 당신 회사는 해당이 안 된다 | 한국이슈</title>
+<meta name="description" content="정부가 324억원을 푼 주 4.5일제 시범사업. 직장인 78%가 찬성하지만 중소기업·교대근무자·비정규직에겐 '그림의 떡'인 이유. 노동시장 이중구조의 민낯을 숫자로 파헤친다.">
+<meta name="keywords" content="주 4.5일제, 워라밸, 노동시간, 노동시장 이중구조, 중소기업, 교대근무, 비정규직, 324억, 80만원, OECD 근로시간">
+<meta property="og:title" content="월 최대 80만원 준다는 '주 4.5일제'… 그런데 당신 회사는 해당이 안 된다">
+<meta property="og:description" content="금요일 오후 퇴근은 누구의 것인가 — 주 4.5일제가 감춘 불편한 진실">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #ffffff;
+    color: #1a1a1a;
+    line-height: 1.8;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+  .category-badge {
+    display: inline-block;
+    background: #2a3a5c;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 18px;
+  }
+  .article-date {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  h1.title {
+    font-size: 34px;
+    font-weight: 900;
+    line-height: 1.35;
+    color: #111;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+  }
+  h2.subtitle {
+    font-size: 19px;
+    font-weight: 400;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #f0f0f0;
+  }
+  .summary-box {
+    background: #f4f6fa;
+    border-left: 5px solid #2a3a5c;
+    padding: 24px 28px;
+    margin: 36px 0;
+    border-radius: 6px;
+  }
+  .summary-box .label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #2a3a5c;
+    letter-spacing: 1.2px;
+    margin-bottom: 12px;
+  }
+  .summary-box ul { list-style: none; }
+  .summary-box li {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 6px 0;
+    position: relative;
+    padding-left: 24px;
+    line-height: 1.6;
+  }
+  .summary-box li::before {
+    content: "▸";
+    color: #2a3a5c;
+    position: absolute;
+    left: 0;
+    font-weight: 900;
+  }
+  h3.section {
+    font-size: 25px;
+    font-weight: 800;
+    margin: 52px 0 20px;
+    padding-left: 16px;
+    border-left: 4px solid #2a3a5c;
+    line-height: 1.4;
+    color: #111;
+  }
+  p {
+    margin-bottom: 20px;
+    color: #2a2a2a;
+  }
+  .highlight {
+    background: linear-gradient(180deg, transparent 60%, #fff3a3 60%);
+    font-weight: 700;
+  }
+  .num {
+    color: #2a3a5c;
+    font-weight: 900;
+  }
+  .quote {
+    background: #fafafa;
+    border-left: 4px solid #ccc;
+    padding: 18px 24px;
+    margin: 24px 0;
+    font-style: italic;
+    color: #444;
+    font-size: 16px;
+  }
+  /* 인포그래픽 1: 막대 그래프 */
+  .infographic {
+    background: #fbfbfb;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 30px 26px;
+    margin: 32px 0;
+  }
+  .infographic .ig-title {
+    font-weight: 800;
+    font-size: 17px;
+    margin-bottom: 6px;
+    color: #111;
+  }
+  .infographic .ig-sub {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 22px;
+  }
+  .bar-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+    font-size: 14px;
+  }
+  .bar-label {
+    width: 140px;
+    font-weight: 600;
+    color: #333;
+    flex-shrink: 0;
+  }
+  .bar-track {
+    flex: 1;
+    background: #eceff4;
+    height: 28px;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+  }
+  .bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #2a3a5c, #4a5a7c);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+    transition: width 0.8s;
+  }
+  .bar-fill.gray { background: linear-gradient(90deg, #999, #bbb); color: #fff; }
+  .bar-fill.red { background: linear-gradient(90deg, #c0392b, #e55039); }
+
+  /* 인포그래픽 2: 비교표 */
+  .compare-table {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 24px 0;
+  }
+  .compare-card {
+    padding: 22px;
+    border-radius: 10px;
+    border: 2px solid;
+  }
+  .compare-card.good {
+    background: #f0f6ff;
+    border-color: #2a3a5c;
+  }
+  .compare-card.bad {
+    background: #fff5f5;
+    border-color: #c0392b;
+  }
+  .compare-card h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 800;
+  }
+  .compare-card.good h4 { color: #2a3a5c; }
+  .compare-card.bad h4 { color: #c0392b; }
+  .compare-card ul {
+    list-style: none;
+    font-size: 14px;
+  }
+  .compare-card li {
+    padding: 5px 0;
+    padding-left: 18px;
+    position: relative;
+  }
+  .compare-card.good li::before { content: "●"; position: absolute; left: 0; color: #2a3a5c; font-size: 10px; top: 10px; }
+  .compare-card.bad li::before { content: "✕"; position: absolute; left: 0; color: #c0392b; font-weight: 900; }
+
+  /* 타임라인 */
+  .timeline {
+    position: relative;
+    margin: 28px 0 28px 20px;
+    padding-left: 30px;
+    border-left: 3px solid #2a3a5c;
+  }
+  .tl-item {
+    position: relative;
+    padding-bottom: 22px;
+  }
+  .tl-item::before {
+    content: "";
+    position: absolute;
+    left: -39px;
+    top: 5px;
+    width: 14px;
+    height: 14px;
+    background: #2a3a5c;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #2a3a5c;
+  }
+  .tl-year {
+    font-weight: 900;
+    color: #2a3a5c;
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+  .tl-desc {
+    font-size: 14px;
+    color: #444;
+  }
+
+  /* 경고 박스 */
+  .warning-box {
+    background: #fff8e1;
+    border: 1px solid #f5c842;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 28px 0;
+  }
+  .warning-box .w-label {
+    font-weight: 800;
+    color: #b07800;
+    margin-bottom: 8px;
+    font-size: 15px;
+  }
+
+  /* 태그 */
+  .tags {
+    margin-top: 52px;
+    padding-top: 28px;
+    border-top: 2px solid #f0f0f0;
+  }
+  .tag {
+    display: inline-block;
+    background: #f0f2f7;
+    color: #2a3a5c;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin: 4px 4px 4px 0;
+    font-weight: 500;
+  }
+  .footer {
+    margin-top: 36px;
+    padding: 20px;
+    background: #fafafa;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #888;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 640px) {
+    .container { padding: 24px 16px 60px; }
+    h1.title { font-size: 26px; }
+    h2.subtitle { font-size: 16px; }
+    h3.section { font-size: 20px; }
+    body { font-size: 16px; }
+    .compare-table { grid-template-columns: 1fr; }
+    .bar-label { width: 100px; font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <span class="category-badge">💼 취업·노동</span>
+  <div class="article-date">2026년 4월 20일 | 한국이슈 탐사리포트</div>
+
+  <h1 class="title">월 최대 80만원 준다는 '주 4.5일제'… 그런데 당신 회사는 해당이 안 된다</h1>
+  <h2 class="subtitle">정부가 324억원을 푼 워라밸+4.5 프로젝트, 직장인 78%가 찬성하는 이 제도의 진짜 수혜자는 누구인가. 금요일 오후 퇴근이 결국 '대기업 화이트칼라의 특권'이 되는 구조를 숫자로 뜯어본다.</h2>
+
+  <div class="summary-box">
+    <div class="label">⚡ 이 기사의 핵심 3줄</div>
+    <ul>
+      <li>정부는 2026년 <b>324억원</b> 예산으로 주 4.5일제 도입 기업에 근로자 1인당 월 최대 <b>80만원</b>을 지원한다.</li>
+      <li>직장인 <b>78%가 찬성</b>하지만, 중소기업·교대근무·비정규직은 신청 자체가 구조적으로 불가능하다.</li>
+      <li>한국은 OECD 평균보다 연 <b>130시간</b> 더 일한다. 그러나 이 격차를 줄이는 혜택이 모두에게 돌아갈지는 지극히 회의적이다.</li>
+    </ul>
+  </div>
+
+  <h3 class="section">"다음 달부터 금요일은 반나절만 일합니다"… 어느 과장의 메일</h3>
+  <p>지난 2026년 1월, 수도권 한 IT 중견기업에 '금요일 오후 1시 퇴근'이 공지됐다. 사내 게시판은 순식간에 댓글로 덮였다. <span class="highlight">"드디어 우리 회사도 문명에 편입됐다"</span>는 반응이 주를 이뤘다. 이 회사는 정부의 <b>'워라밸+4.5 프로젝트'</b>에 1호 신청 기업이었다. 노사 합의로 실근로시간을 주 40시간에서 36시간으로 단축하는 대신, 정부로부터 직원 1인당 매월 <span class="num">60만원</span>을 6개월간 지원받았다. 신규 채용까지 얹은 덕에 일부 인원에 대해서는 월 <span class="num">80만원</span>까지 수령했다.</p>
+
+  <p>그러나 같은 주, 서울 강서구 한 물류센터의 40대 야간 분류 작업자는 이 뉴스를 듣고 한참을 웃었다. <span class="highlight">"4.5일제? 우리는 일요일도 새벽 3시까지 분류해야 해요. 누가 우리한테 그 돈 주나"</span> 그의 말은 농담 같지만 구조를 정확히 관통한다. 정부가 324억원짜리 선물상자를 풀었지만, 그 상자는 '노사 합의가 가능하고', '교대제가 아니며', '정규직 비율이 높은 회사'에만 열린다.</p>
+
+  <h3 class="section">숫자가 말해주는 '주 4.5일제' 지원 구조</h3>
+  <p>정부가 2026년 주 4.5일제 시범사업에 배정한 예산은 <span class="num">약 324억원</span>이다. 기업 규모와 유형에 따라 지원금이 달라진다.</p>
+
+  <div class="infographic">
+    <div class="ig-title">📊 2026년 주 4.5일제 시범사업 지원금 구조</div>
+    <div class="ig-sub">근로자 1인당 월 지급액, 6개월 기준 (출처: 고용노동부)</div>
+
+    <div class="bar-row">
+      <div class="bar-label">20인 미만 중기</div>
+      <div class="bar-track"><div class="bar-fill" style="width: 25%;">20만원</div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">20~50인 중기</div>
+      <div class="bar-track"><div class="bar-fill" style="width: 50%;">40만원</div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">50인 이상 중견</div>
+      <div class="bar-track"><div class="bar-fill" style="width: 75%;">60만원</div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">신규채용 가산</div>
+      <div class="bar-track"><div class="bar-fill red" style="width: 100%;">최대 80만원</div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">인프라 구축</div>
+      <div class="bar-track"><div class="bar-fill gray" style="width: 80%;">비용의 80% 지원</div></div>
+    </div>
+  </div>
+
+  <p>총 편성액은 고용노동부 '워라밸+4.5 프로젝트' 276억원과 기획재정부 관련 예산을 합쳐 약 <b>324억원</b> 수준으로 집계된다. 경기도는 별도로 도 차원 시범사업을 운영하며, 참여 기업은 <span class="highlight">채용 지원금이 10배 급증</span>하는 것으로 나타났다.</p>
+
+  <h3 class="section">"찬성 78% vs 혜택 받는 건 몇 %?" — 찬반 아닌 균열의 지점</h3>
+  <p>한 설문 결과, 직장인 응답자의 <span class="num">78%</span>가 주 4.5일제 도입에 찬성했다. 반대는 14%에 그쳤다. 찬반 비율로만 보면 국민적 공감대는 이미 형성됐다고 해도 과언이 아니다. 특히 주 4.5일제를 경험해 본 직장인 중 <span class="num">52%</span>가 "생산성이 오히려 증가했다"고 답했다. 이는 워라밸이 '놀기'가 아니라 '효율'이라는 국제 연구 결과와 일치한다.</p>
+
+  <p>그러나 찬성률의 이면에는 뚜렷한 균열이 있다. <span class="highlight">주 52시간 이하로 일하는 그룹의 찬성률은 80%를 넘지만, 주 60시간 이상 고강도 노동 집단일수록 '내 이야기가 아니다'라며 냉소를 보인다.</span> 즉, 가장 이 제도가 절실한 사람들일수록 '그림의 떡'이라고 여기는 역설이 생긴다.</p>
+
+  <div class="compare-table">
+    <div class="compare-card good">
+      <h4>✅ 혜택이 닿는 영역</h4>
+      <ul>
+        <li>IT·금융·서비스 사무직</li>
+        <li>노조가 있는 대기업 정규직</li>
+        <li>재택·유연근무가 가능한 직종</li>
+        <li>인프라 구축 여력이 있는 기업</li>
+        <li>수도권 중견·중소기업 일부</li>
+      </ul>
+    </div>
+    <div class="compare-card bad">
+      <h4>❌ 사각지대에 놓인 영역</h4>
+      <ul>
+        <li>교대·야간 근무 제조·물류</li>
+        <li>병원·요양시설 필수노동자</li>
+        <li>판매·외식업 서비스직</li>
+        <li>건설·운수 일용직·특수고용</li>
+        <li>영세 자영업 종사자</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="section">중소기업 현장의 속내 — "그 돈 받으려다 더 큰 손해 본다"</h3>
+  <p>정부는 "중소기업도 똑같이 지원받는다"고 홍보하지만, 실제 현장의 셈법은 다르다. 중소기업 인사담당자들이 가장 많이 언급하는 현실은 세 가지다.</p>
+
+  <p><b>첫째, 대체인력 구인난.</b> 주 4.5일제를 도입하려면 누군가는 빈자리를 메워야 한다. 그러나 2026년 현재 생산가능인구 감소와 구인난이 겹친 상태라, 월 80만원을 준다 해도 <span class="highlight">인력 자체가 오지 않는다</span>. 지방 중소기업일수록 이 문제가 심각하다.</p>
+
+  <p><b>둘째, 유연근무 인프라 부재.</b> 스마트 근태관리, 원격근무 시스템, 업무 디지털화 등 기본 인프라가 없는 영세 사업장에서는 4.5일제 자체가 운용 불가능하다. 정부가 인프라 구축비의 80%를 지원한다 해도, 나머지 20%가 당장의 매출에 타격을 준다는 반응이 지배적이다.</p>
+
+  <p><b>셋째, 6개월 뒤의 막막함.</b> 지원은 6개월~1년짜리다. 지원이 끝난 뒤에도 같은 임금을 유지할 여력이 없다는 목소리가 크다. 한 봉제업체 대표는 <span class="highlight">"지원금 끊기면 결국 임금을 깎거나 주 5일로 돌아가야 한다. 차라리 시작을 안 한다"</span>고 털어놓았다.</p>
+
+  <div class="warning-box">
+    <div class="w-label">⚠️ 이중구조 가속화 우려</div>
+    <p style="margin:0; font-size:15px;">자유기업원·한국노동연구원 등 서로 다른 입장의 연구기관들이 공통적으로 경고하는 지점. 주 4.5일제가 대기업·화이트칼라 중심으로 확산될 경우, 한국 노동시장의 <b>'좋은 일자리-나쁜 일자리' 격차</b>는 시간 차원에서도 더 벌어진다. 임금 격차에 이어 <b>시간 격차</b>까지 생기는 셈이다.</p>
+  </div>
+
+  <h3 class="section">해외는 어떻게 했나 — 아이슬란드·벨기에의 교훈</h3>
+  <p>주 4일제 실험의 원조 격인 <b>아이슬란드</b>는 2015~2019년 노동인구의 1.5%인 2,500명을 대상으로 주 4일제 시범을 실시했다. 결과는 예상보다 극적이었다. <span class="highlight">노동생산성 연 성장률이 1.7%→3.8%로 오히려 두 배 이상 뛰었고, 번아웃·스트레스는 현저히 감소</span>했다. 현재 아이슬란드 노동자의 약 <span class="num">85%</span>가 주 4일 근무 혜택을 받는다.</p>
+
+  <p><b>벨기에</b>는 2022년 세계 최초로 주 4일제 <b>'청구권'</b>을 법제화했다. 주 40시간을 유지하되 4일로 압축해 일할 권리를 개별 근로자에게 준 것이다. 핵심은 '정부가 지원금을 주는 방식'이 아니라 '법적 권리로 보장하는 방식'이라는 점이다.</p>
+
+  <p>한국 정부는 2030년까지 연간 근로시간을 현재의 1,872시간에서 <span class="num">1,717시간</span>으로 줄이겠다고 공언했다. OECD 평균(1,742시간) 아래로 내려가겠다는 야심찬 목표다. 하지만 이 목표를 <b>시범사업+지원금</b>이라는 한시적 수단만으로 달성할 수 있을지는 의문이다.</p>
+
+  <div class="infographic">
+    <div class="ig-title">🕒 한국 노동시간 단축 로드맵 vs OECD</div>
+    <div class="ig-sub">연간 근로시간 추이 및 목표</div>
+
+    <div class="bar-row">
+      <div class="bar-label">1988 한국 최고</div>
+      <div class="bar-track"><div class="bar-fill red" style="width: 100%;">2,934시간</div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">2023 한국</div>
+      <div class="bar-track"><div class="bar-fill" style="width: 64%;">1,872시간</div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">OECD 평균</div>
+      <div class="bar-track"><div class="bar-fill gray" style="width: 59%;">1,742시간</div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">2030 한국 목표</div>
+      <div class="bar-track"><div class="bar-fill" style="width: 59%; background: linear-gradient(90deg, #1e7e34, #28a745);">1,717시간</div></div>
+    </div>
+  </div>
+
+  <h3 class="section">숨겨진 이면 — 주 4.5일제가 '임금삭감'의 입구가 될 수 있다</h3>
+  <p>정부 브리핑에서 잘 언급되지 않는 논점이 하나 있다. <span class="highlight">"임금 감소 없이"라는 전제 조건</span>이다. 시범사업 요건은 '임금 동결 또는 증가'를 전제로 하지만, 현장에서는 이미 '기본급은 유지하되 성과급·수당을 축소'하는 편법이 논의되고 있다. 총 보수 기준으로 보면 실질 임금이 깎이는 효과가 발생한다.</p>
+
+  <p>또한 '실근로시간 단축'의 정의 자체가 모호하다. 대기업은 이미 포괄임금제·유연근로제를 통해 서류상 근로시간과 실근로시간이 다른 경우가 많다. <b>포괄임금제로 연장근로수당이 월급에 포함되어 있던 사무직의 경우</b>, 주 4.5일제 도입이 '서류상 시간 줄이기'에 그칠 우려가 크다는 지적이 노동계에서 나온다.</p>
+
+  <div class="quote">
+    "제도의 명분은 근로시간 단축이지만, 현장에서는 '퇴근 시간은 똑같은데 공식 기록만 줄이는' 꼼수로 악용될 여지가 있다. 지원금 받으면서 여전히 야근하는 기업이 나올 것이다." — 노동법 전문 변호사 A씨
+  </div>
+
+  <h3 class="section">당신에게는 어떤 영향이 미치나 — 직종·계층별 체감 지도</h3>
+
+  <p><b>🏢 대기업·중견기업 사무직 (수혜 확률 높음)</b><br>
+  노조와 인사팀이 합의하면 2026년 하반기부터 격주 금요일 반일 근무가 현실화될 가능성이 높다. 주당 <b>최대 4시간</b>이 확보되는 셈이며, 연간으로 환산하면 <span class="num">약 200시간</span>의 자유시간이 생긴다.</p>
+
+  <p><b>🏭 중소 제조업 정규직 (조건부 수혜)</b><br>
+  회사가 신청 의지가 있더라도 인력 구조상 지연될 가능성이 높다. 지원금이 종료되는 6개월 뒤 원상복귀되는 '요요 현상'에 주의해야 한다.</p>
+
+  <p><b>🛒 서비스·유통·외식업 종사자 (사각지대)</b><br>
+  매출이 곧 인력인 구조상 주 4.5일제는 사실상 불가능하다. 오히려 타 업종의 금요일 오후 퇴근이 늘수록 <b>주말 소비·외식 수요가 증가</b>하면서 노동 강도가 더 올라갈 수 있다.</p>
+
+  <p><b>🏥 간호·요양·돌봄 필수노동자 (역풍 위험)</b><br>
+  24시간 운영이 필수인 직역은 주 4.5일제의 직접 수혜는 어렵지만, 타 업종 근로시간 단축으로 <b>가족돌봄 부담이 되려 이들에게 몰릴 가능성</b>이 있다.</p>
+
+  <p><b>🚚 플랫폼·특수고용 노동자 (완전 사각지대)</b><br>
+  근로기준법 적용을 받지 않는 라이더·대리기사·보험설계사 등은 지원 대상에서 원천적으로 제외된다. 2026년 한국 노동시장에서 특수고용·플랫폼 종사자는 <span class="num">약 220만명</span>으로 추산된다.</p>
+
+  <h3 class="section">타임라인 — 한국 근로시간 단축의 길</h3>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-year">1988년</div>
+      <div class="tl-desc">연간 근로시간 2,934시간 — 한국 역대 최고치. OECD 꼴찌 수준.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">2004년</div>
+      <div class="tl-desc">주 5일제 단계적 도입 시작. 토요일 출근 폐지의 시작.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">2018년</div>
+      <div class="tl-desc">주 52시간 상한제 시행. 대기업부터 순차 적용.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">2022년</div>
+      <div class="tl-desc">벨기에 세계 최초 주 4일제 법제화.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">2026년 1월</div>
+      <div class="tl-desc">한국 정부 '워라밸+4.5 프로젝트' 시행. 324억원 예산 투입.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">2026년 4월</div>
+      <div class="tl-desc">참여 기업 모집 및 1호 사업장 가동. 현재 시점.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">2030년 목표</div>
+      <div class="tl-desc">연간 근로시간 1,717시간 — OECD 평균 이하 진입 목표.</div>
+    </div>
+  </div>
+
+  <h3 class="section">전망 — 이 제도가 성공하려면 무엇이 필요한가</h3>
+  <p>시범사업이 '대기업의 복지 강화' 프로젝트로 끝나지 않으려면, 전문가들은 세 가지를 지목한다.</p>
+
+  <p><b>① 교대근무·필수노동자를 위한 별도 트랙.</b> 지금의 지원금 구조는 일반 사무직을 전제한다. 병원·물류·제조의 교대근무자에게는 '지원금'이 아니라 <b>충분한 인력 확충을 위한 공공투자</b>가 필요하다.</p>
+
+  <p><b>② 포괄임금제 손질.</b> 주 4.5일제와 포괄임금제가 공존하는 한, 시간 단축은 서류 위에서만 이뤄진다. 포괄임금제 전면 재검토 없이는 '형식적 근로시간 단축'에 머물 수밖에 없다.</p>
+
+  <p><b>③ 법제화 로드맵.</b> 벨기에처럼 <b>근로자의 청구권</b>으로 전환하는 것이 근본적 해법이다. 기업이 신청하면 지원하는 방식에서, 근로자가 요구하면 제공해야 하는 방식으로 바뀌어야 사각지대가 좁혀진다.</p>
+
+  <h3 class="section">독자가 지금 할 수 있는 것 4가지</h3>
+  <p><b>1.</b> 내가 다니는 회사의 인사팀에 '주 4.5일제 시범사업 참여 여부'를 정식으로 문의해보자. 공공기관 업무보고와 지자체 공고에 모두 올라와 있으므로 회사가 "몰랐다"고 답하면 그 자체가 문제의 신호다.</p>
+  <p><b>2.</b> 경기도 등 일부 지자체는 <b>별도의 주 4.5일제 시범사업</b>을 운영 중이다. 내 회사 소재지가 해당되는지 지자체 일자리재단 공고를 확인하자.</p>
+  <p><b>3.</b> 노조가 있다면 2026년 하반기 단체협상에서 '실근로시간 단축'을 의제에 포함시키도록 요청할 수 있다.</p>
+  <p><b>4.</b> 노조가 없다면, 동료들과 함께 <b>근로자대표를 선출</b>해 사측과 협의할 법적 근거를 마련하는 것이 출발점이다. 근로기준법 제24조 등에 따라 근로자대표의 서면 합의는 법적 효력을 가진다.</p>
+
+  <div class="summary-box" style="background:#fff3e0; border-left-color:#e67e22;">
+    <div class="label" style="color:#b34700;">🎯 결론</div>
+    <p style="font-size:15px; margin:0; font-weight:500;">주 4.5일제는 <b>좋은 제도의 출발점</b>이지만, 지금의 설계만으로는 한국 노동시장의 <b>이중구조를 오히려 고착화</b>할 위험이 있다. 324억원이라는 돈의 흐름을 따라가 보면, 결국 <b>'시간 주권'을 이미 어느 정도 가진 사람들이 더 많이 가져가는 구조</b>임을 부정하기 어렵다. 진짜 전선은 '금요일 반나절 퇴근'이 아니라 '누가 이 시간을 가질 권리가 있는가'라는 질문이다.</p>
+  </div>
+
+  <div class="tags">
+    <span class="tag">#주4.5일제</span>
+    <span class="tag">#워라밸</span>
+    <span class="tag">#노동시장이중구조</span>
+    <span class="tag">#중소기업</span>
+    <span class="tag">#비정규직</span>
+    <span class="tag">#교대근무</span>
+    <span class="tag">#OECD근로시간</span>
+    <span class="tag">#고용노동부</span>
+    <span class="tag">#324억</span>
+    <span class="tag">#워라밸+4.5</span>
+    <span class="tag">#포괄임금제</span>
+    <span class="tag">#노동개혁</span>
+  </div>
+
+  <div class="footer">
+    <b>작성:</b> 한국이슈 탐사리포트 | <b>작성일:</b> 2026년 4월 20일<br>
+    <b>면책조항:</b> 이 기사는 공개된 자료(고용노동부 보도자료, 한국개발연구원 KDI, 한국노동연구원 KLI, 언론 보도 등)를 바탕으로 작성되었으며, 전문적 법률·금융 조언이 아닙니다. 구체적 지원 신청은 각 기관 공고문을 직접 확인해야 합니다.<br>
+    <b>주요 참고:</b> 고용노동부 2026년 업무보고, KDI 'OECD 연간근로시간 비교분석', 경기도일자리재단 주 4.5일제 시범사업 공고, 머니투데이·서울신문·헤럴드경제 관련 보도.
+  </div>
+
+</div>
+</body>
+</html>
