@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>💥 13일 연속 랠리 멈춘 나스닥…"트럼프 한 마디에" 유가 $10 폭락 | 코스피 6,219 돌파 | 2026-04-21</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0a0e1a;
+    color: #e6edf3;
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.7;
+    padding: 20px 12px 60px;
+  }
+  .wrap { max-width: 900px; margin: 0 auto; }
+  .num { font-family: 'JetBrains Mono', monospace; font-weight: 500; }
+
+  .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; font-size: 12px; }
+  .tag {
+    background: rgba(99,102,241,0.12); color: #6366f1;
+    padding: 4px 10px; border-radius: 999px;
+    border: 1px solid rgba(99,102,241,0.3);
+  }
+  .tag.red { background: rgba(255,71,87,0.12); color: #ff4757; border-color: rgba(255,71,87,0.3); }
+  .tag.green { background: rgba(0,200,150,0.12); color: #00c896; border-color: rgba(0,200,150,0.3); }
+  .tag.yellow { background: rgba(255,211,42,0.12); color: #ffd32a; border-color: rgba(255,211,42,0.3); }
+
+  .headline {
+    font-size: clamp(22px, 4vw, 34px);
+    font-weight: 900; line-height: 1.3; margin-bottom: 10px;
+    background: linear-gradient(90deg, #ffd32a 0%, #ff4757 50%, #6366f1 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .sub-headline { color: #9ba3af; font-size: 15px; margin-bottom: 18px; }
+  .meta-bar {
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 10px;
+    padding: 12px 16px; background: #111827;
+    border-radius: 12px; border-left: 3px solid #00c896;
+    margin-bottom: 28px;
+  }
+  .meta-bar .date { font-size: 13px; color: #9ba3af; }
+  .sentiment { display: flex; align-items: center; gap: 8px; font-size: 13px; }
+  .sentiment-bar { width: 140px; height: 8px; background: #1e293b; border-radius: 99px; overflow: hidden; position: relative; }
+  .sentiment-bar::after {
+    content: ''; position: absolute; top:0; left:0; height:100%; width: 63%;
+    background: linear-gradient(90deg, #ff4757, #ffd32a, #00c896);
+  }
+  .sentiment-value { color: #00c896; font-weight: 700; }
+
+  h2.section-title {
+    font-size: 20px; font-weight: 700; margin: 32px 0 14px;
+    padding-left: 12px; border-left: 4px solid #00c896;
+  }
+  h2.section-title.red { border-color: #ff4757; }
+  h2.section-title.yellow { border-color: #ffd32a; }
+  h2.section-title.indigo { border-color: #6366f1; }
+  h2.section-title.sky { border-color: #38bdf8; }
+
+  .cards { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); }
+  .card {
+    background: #111827; border-radius: 14px; padding: 16px;
+    border: 1px solid #1e293b; transition: transform 0.2s;
+  }
+  .card:hover { transform: translateY(-2px); }
+  .card .label { font-size: 12px; color: #9ba3af; margin-bottom: 6px; }
+  .card .value { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+  .card .delta { font-size: 13px; font-weight: 500; }
+  .up { color: #00c896; }
+  .down { color: #ff4757; }
+  .flat { color: #ffd32a; }
+
+  .analysis { background: #111827; border-radius: 14px; padding: 22px; border: 1px solid #1e293b; }
+  .analysis h3 { font-size: 16px; margin: 18px 0 8px; color: #ffd32a; }
+  .analysis h3:first-child { margin-top: 0; }
+  .analysis p { color: #cbd3dd; font-size: 14.5px; margin-bottom: 10px; }
+  .hi-green { color: #00c896; font-weight: 700; }
+  .hi-red { color: #ff4757; font-weight: 700; }
+  .hi-yellow { color: #ffd32a; font-weight: 700; }
+  .hi-indigo { color: #6366f1; font-weight: 700; }
+
+  .heatmap { display: grid; gap: 6px; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+  .heat { padding: 18px 14px; border-radius: 10px; text-align: center; }
+  .heat .name { font-size: 13px; font-weight: 500; margin-bottom: 6px; }
+  .heat .pct { font-size: 18px; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+  .heat.up1 { background: rgba(0,200,150,0.18); color: #00c896; }
+  .heat.up2 { background: rgba(0,200,150,0.35); color: #c8fce5; }
+  .heat.up3 { background: rgba(0,200,150,0.55); color: #fff; }
+  .heat.down1 { background: rgba(255,71,87,0.18); color: #ff4757; }
+  .heat.down2 { background: rgba(255,71,87,0.35); color: #ffd2d7; }
+  .heat.down3 { background: rgba(255,71,87,0.55); color: #fff; }
+  .heat.neutral { background: rgba(255,211,42,0.15); color: #ffd32a; }
+
+  .watch-item { background: #111827; padding: 18px; border-radius: 12px; margin-bottom: 12px; border-left: 3px solid #00c896; }
+  .watch-item.red { border-color: #ff4757; }
+  .watch-item.yellow { border-color: #ffd32a; }
+  .watch-item .title { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+  .watch-item .title .ticker { font-size: 12px; margin-left: 8px; color: #9ba3af; font-family: 'JetBrains Mono', monospace; }
+  .watch-item .why { color: #cbd3dd; font-size: 14px; margin-bottom: 6px; }
+  .watch-item .point { color: #9ba3af; font-size: 13px; padding-top: 8px; border-top: 1px dashed #1e293b; }
+
+  .community { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+  .comm-card { background: #111827; border-radius: 12px; padding: 14px; border: 1px solid #1e293b; }
+  .comm-src {
+    display: inline-block; font-size: 11px; font-weight: 700;
+    padding: 2px 8px; border-radius: 999px; margin-bottom: 8px;
+    font-family: 'JetBrains Mono', monospace; letter-spacing: 0.5px;
+  }
+  .src-naver   { background: rgba(0,200,150,0.18);  color: #00c896; }
+  .src-blind   { background: rgba(56,189,248,0.18); color: #38bdf8; }
+  .src-dcinside{ background: rgba(255,211,42,0.18); color: #ffd32a; }
+  .src-reddit  { background: rgba(255,71,87,0.18);  color: #ff4757; }
+  .src-youtube { background: rgba(255,100,100,0.15); color: #ff8c8c; }
+  .comm-card .quote { color: #cbd3dd; font-size: 13.5px; font-style: italic; line-height: 1.6; }
+  .comm-card .meta { margin-top: 6px; font-size: 11px; color: #6b7280; }
+
+  .vs-question {
+    text-align: center; font-size: 17px; font-weight: 700;
+    padding: 14px; margin-bottom: 14px;
+    background: linear-gradient(135deg, rgba(0,200,150,0.1), rgba(255,71,87,0.1));
+    border-radius: 12px; color: #ffd32a;
+  }
+  .vs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .vs-col { background: #111827; border-radius: 12px; padding: 18px; }
+  .vs-col.bulls { border-top: 4px solid #00c896; }
+  .vs-col.bears { border-top: 4px solid #ff4757; }
+  .vs-col h4 { font-size: 18px; margin-bottom: 12px; font-weight: 800; }
+  .vs-col.bulls h4 { color: #00c896; }
+  .vs-col.bears h4 { color: #ff4757; }
+  .vs-col ul { list-style: none; padding: 0; }
+  .vs-col li {
+    font-size: 13.5px; padding: 8px 0; color: #cbd3dd;
+    border-bottom: 1px dashed #1e293b;
+  }
+  .vs-col li:last-child { border: none; }
+  .vs-col li::before { content: "▸ "; color: inherit; opacity: 0.7; }
+  .vs-col.bulls li strong { color: #00c896; }
+  .vs-col.bears li strong { color: #ff4757; }
+  .vs-poll {
+    margin-top: 14px; padding: 14px; background: #111827;
+    border-radius: 12px; text-align: center; border: 1px solid #1e293b;
+  }
+  .vs-poll-bar {
+    height: 24px; border-radius: 99px; overflow: hidden;
+    display: flex; margin: 8px 0;
+  }
+  .vs-poll-bar .b-bull { background: #00c896; color: #0a0e1a; font-weight: 700; font-size: 12px; display: flex; align-items: center; justify-content: center; }
+  .vs-poll-bar .b-bear { background: #ff4757; color: #0a0e1a; font-weight: 700; font-size: 12px; display: flex; align-items: center; justify-content: center; }
+
+  .checkpoint {
+    background: linear-gradient(135deg, rgba(255,211,42,0.08), rgba(0,200,150,0.08));
+    border-radius: 14px; padding: 20px; border: 1px solid #1e293b;
+  }
+  .checkpoint .item { display: flex; gap: 12px; align-items: flex-start; padding: 10px 0; border-bottom: 1px dashed #1e293b; }
+  .checkpoint .item:last-child { border: none; }
+  .checkpoint .day { font-family: 'JetBrains Mono', monospace; font-weight: 700; color: #ffd32a; min-width: 80px; font-size: 13px; }
+  .checkpoint .desc { color: #cbd3dd; font-size: 14px; }
+
+  .analyst-line {
+    margin-top: 24px; padding: 18px; background: #111827;
+    border-radius: 12px; border-left: 4px solid #6366f1;
+  }
+  .analyst-line .role { font-size: 12px; color: #6366f1; font-weight: 700; margin-bottom: 4px; }
+  .analyst-line .msg { font-size: 15px; color: #e6edf3; line-height: 1.7; }
+
+  .disclaimer {
+    margin-top: 40px; padding: 16px;
+    background: rgba(255,71,87,0.08);
+    border: 1px solid rgba(255,71,87,0.25);
+    border-radius: 10px; font-size: 12px; color: #ffb8c0;
+    text-align: center; line-height: 1.6;
+  }
+
+  .hashtags { margin-top: 22px; font-size: 13px; color: #38bdf8; word-break: keep-all; }
+  .hashtags span { margin-right: 6px; }
+
+  @media (max-width: 600px) {
+    .card .value { font-size: 19px; }
+    h2.section-title { font-size: 17px; }
+    .vs-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HEADER -->
+  <div class="tag-row">
+    <span class="tag red">🚨 BREAKING</span>
+    <span class="tag yellow">이란 휴전 D-1</span>
+    <span class="tag green">KOSPI 사상 최고치</span>
+    <span class="tag">나스닥 13연승 종료</span>
+    <span class="tag red">WTI -$10 폭락</span>
+  </div>
+
+  <h1 class="headline">
+    💥 "트럼프 한 마디에" 유가 $10 증발…<br>
+    13일 랠리 멈춘 나스닥, 그런데 코스피는 왜 또 신고가?
+  </h1>
+  <p class="sub-headline">
+    "수요일 전에 이란과 합의할 것"이라는 트럼프 발언에 호르무즈 프리미엄 <strong>즉각 증발</strong>.
+    나스닥은 1992년 이후 최장 <strong>13일 연속 상승</strong> 마감, 그러나 서울은 반도체 한 방으로
+    <strong>KOSPI 6,219 돌파</strong>. 디커플링은 실적인가, 착시인가.
+  </p>
+
+  <div class="meta-bar">
+    <div>
+      <div class="date">2026년 4월 21일 (화) · 서울 마감 기준 · 뉴욕 개장 직후</div>
+      <div style="font-size:16px; font-weight:700;">오늘의 시장 브리핑</div>
+    </div>
+    <div class="sentiment">
+      <span>시장 심리</span>
+      <div class="sentiment-bar"></div>
+      <span class="sentiment-value">탐욕 63</span>
+    </div>
+  </div>
+
+  <!-- INDEX CARDS -->
+  <h2 class="section-title">📊 주요 지수 — 화요일 서울 마감 / 뉴욕 개장 기준</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="label">KOSPI</div>
+      <div class="value num up">6,219.13 ▲</div>
+      <div class="delta up num">+27.46 (+0.44%)</div>
+    </div>
+    <div class="card">
+      <div class="label">KOSDAQ</div>
+      <div class="value num up">948.72 ▲</div>
+      <div class="delta up num">+6.54 (+0.69%)</div>
+    </div>
+    <div class="card">
+      <div class="label">DOW JONES</div>
+      <div class="value num down">49,442.56 ▼</div>
+      <div class="delta down num">-4.87 (-0.01%) · 4/20 종가</div>
+    </div>
+    <div class="card">
+      <div class="label">S&amp;P 500</div>
+      <div class="value num down">7,109.14 ▼</div>
+      <div class="delta down num">-17.10 (-0.24%) · 4/20 종가</div>
+    </div>
+    <div class="card">
+      <div class="label">NASDAQ</div>
+      <div class="value num down">24,404.39 ▼</div>
+      <div class="delta down num">-63.89 (-0.26%) · 13일 랠리 종료</div>
+    </div>
+  </div>
+
+  <!-- COMMODITY -->
+  <h2 class="section-title yellow">💱 환율 · 원자재 · 크립토</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="label">원/달러</div>
+      <div class="value num down">1,472.30 ▼</div>
+      <div class="delta down num">-5.9원 · 휴전 기대 원화 강세</div>
+    </div>
+    <div class="card">
+      <div class="label">WTI 원유</div>
+      <div class="value num down">$86.27 ▼</div>
+      <div class="delta down num">-2.07% · 트럼프 발언에 급락</div>
+    </div>
+    <div class="card">
+      <div class="label">금 현물</div>
+      <div class="value num down">$4,782.14 ▼</div>
+      <div class="delta down num">-0.81% · 안전자산 수요 둔화</div>
+    </div>
+    <div class="card">
+      <div class="label">비트코인</div>
+      <div class="value num up">$76,535 ▲</div>
+      <div class="delta up num">+1.52% · 리스크온 복귀</div>
+    </div>
+  </div>
+
+  <!-- ANALYSIS -->
+  <h2 class="section-title red">🔥 오늘의 핵심 분석 — 왜 서울만 신고가인가</h2>
+  <div class="analysis">
+
+    <h3>① "트럼프 한 마디"가 지운 전쟁 프리미엄 — 유가 $97 → $86</h3>
+    <p>
+      어제 <span class="hi-red">WTI $88</span>을 찍으며 호르무즈 재봉쇄 공포가 정점을 친 유가는,
+      트럼프의 <span class="hi-yellow">"수요일 휴전 데드라인 전에 이란과 합의할 것"</span> 발언 한 줄에
+      24시간 만에 <span class="hi-green">$86.27까지 2% 추가 하락</span>. 지난 금요일 고점 $97 대비
+      <span class="hi-red">$11, -11.3%</span>의 낙폭이다. 원/달러도 <span class="hi-green">1,472원까지 6원 가까이 하락</span>하며
+      외국인 복귀 신호를 연출. 휴전 협상 데드라인이 임박할수록 유가·달러·금이 동시 내려가는
+      <span class="hi-indigo">전형적 '전쟁 프리미엄 해소' 패턴</span>이 나타나고 있다.
+    </p>
+
+    <h3>② 서울은 반도체·금융·바이오 '트리플 코어'로 사상 최고</h3>
+    <p>
+      뉴욕이 쉬어가는 사이 서울은 <span class="hi-green">KOSPI 6,219.13</span>으로 사상 최고치 돌파.
+      SK하이닉스 실적(4/24) 기대로 외국인이 <span class="hi-green">반도체 대형주에 +6,800억</span> 순매수를 붓고,
+      금리 인하 기대 재부각으로 <span class="hi-green">바이오(+1.8%)·금융(+0.9%)</span>이 동반 강세.
+      코스닥 역시 <span class="hi-green">948선</span>까지 밀어올리며 시총 상위 AI·바이오 중소형주로 매수세가 번졌다.
+      서울 시장이 뉴욕보다 <span class="hi-yellow">실적 시즌 리드</span>를 잡은 이례적 구도.
+    </p>
+
+    <h3>③ 나스닥 "1992년 이후 최장" 13연승의 종결 — 기계적 차익실현</h3>
+    <p>
+      나스닥이 전일 <span class="hi-red">-0.26%</span>로 마감하며 <span class="hi-indigo">1992년 이후 33년 만의 최장 13일 연속 상승</span>
+      기록을 멈췄다. 하락 자체는 크지 않지만 의미는 무겁다. 피봇·AI·금리 인하 재료가 모두 가격에 녹아든 상태에서
+      더 이상 위로 끌 동력이 없는 <span class="hi-yellow">'호재 고갈 구간'</span> 진입. 오늘(4/21) 장 초반 지수는 다시 반등 중이지만,
+      <span class="hi-red">4/30 FOMC·5월 빅테크 실적</span>이라는 이벤트 벽을 넘지 못하면 3~5% 조정 국면이 열릴 수 있다.
+    </p>
+
+    <h3>④ 리스크 체크 — 단기 / 중기</h3>
+    <p>
+      <span class="hi-red">단기(~1주):</span> 이란 휴전 합의 불발 시 유가 $95 재돌파 가능. 휴전 조건이 <span class="hi-red">"제재 일부 해제"</span>까지
+      들어가면 에너지주 급락 + 달러 약세 가속. 조선·방산주는 고점 양매도 경계. &nbsp;
+      <span class="hi-red">중기(~1개월):</span> 오늘 발표되는 <span class="hi-yellow">미국 3월 소매판매</span>가 서프라이즈 시
+      "연준 인하 지연" 내러티브가 다시 올라오며 나스닥 조정 가능. 서울은 <span class="hi-green">SK하이닉스 어닝(4/24)</span>이
+      유일한 방패. 서프라이즈면 KOSPI 6,300 돌파, 미스면 6,100 역지지 테스트.
+    </p>
+  </div>
+
+  <!-- HEATMAP -->
+  <h2 class="section-title">🧭 KOSPI200 섹터 히트맵 (4/21 서울 마감)</h2>
+  <div class="heatmap">
+    <div class="heat up3"><div class="name">반도체</div><div class="pct">+2.34%</div></div>
+    <div class="heat up2"><div class="name">바이오/제약</div><div class="pct">+1.82%</div></div>
+    <div class="heat up2"><div class="name">2차전지</div><div class="pct">+1.47%</div></div>
+    <div class="heat up1"><div class="name">금융</div><div class="pct">+0.93%</div></div>
+    <div class="heat up1"><div class="name">자동차</div><div class="pct">+0.56%</div></div>
+    <div class="heat neutral"><div class="name">철강</div><div class="pct">-0.08%</div></div>
+    <div class="heat down1"><div class="name">건설</div><div class="pct">-0.71%</div></div>
+    <div class="heat down2"><div class="name">조선/방산</div><div class="pct">-2.12%</div></div>
+    <div class="heat down3"><div class="name">에너지/정유</div><div class="pct">-3.28%</div></div>
+  </div>
+
+  <!-- WATCHLIST -->
+  <h2 class="section-title yellow">🎯 주목할 종목 · 이슈 TOP 3</h2>
+
+  <div class="watch-item">
+    <div class="title">SK하이닉스 <span class="ticker">KS:000660</span></div>
+    <div class="why">
+      종가 <span class="hi-green">₩1,184,000 (+2.18%)</span>, 장중 <span class="hi-green">₩1,193,000 52주 신고가</span> 재경신.
+      외국인 4월 누적 순매수 <span class="hi-green">+3.9조</span>로 확대. 하나·씨티에 이어 <span class="hi-yellow">JP모건도 목표가 175만 원</span> 상향.
+    </div>
+    <div class="point">
+      👉 포인트: D-3 어닝. HBM3E 비중 <strong>42% 이상</strong> + 2Q OP <strong>14조 가이드</strong>면 ₩1,260,000 돌파. 컨센 부합이면 차익실현 우세.
+    </div>
+  </div>
+
+  <div class="watch-item red">
+    <div class="title">한화에어로스페이스 · 두산에너빌리티 <span class="ticker">KS:012450/034020</span></div>
+    <div class="why">
+      전일 호르무즈 테마로 급등했던 방산·원전이 휴전 기대에 <span class="hi-red">한화에어로 -5.74%, 두산ENB -3.86%</span> 동반 급락.
+      개인 <span class="hi-red">순매도 -1,240억</span>, 외국인도 차익실현.
+    </div>
+    <div class="point">
+      👉 포인트: <span class="hi-red">이벤트 드리븐 종목의 전형적 되돌림</span>. 휴전 협상 불발 시 다시 튀지만, 구조적 상승 아니므로 단기 트레이딩 관점 유지.
+    </div>
+  </div>
+
+  <div class="watch-item yellow">
+    <div class="title">LG에너지솔루션 · 에코프로비엠 <span class="ticker">KS:373220/247540</span></div>
+    <div class="why">
+      어제 <span class="hi-red">-2.05%</span>까지 밀렸던 2차전지가 <span class="hi-green">오늘 +1.47%</span> 반등.
+      LG엔솔 <span class="hi-green">1Q 잠정 영업익 3,420억 (컨센 상회)</span>, ESS·LFP 매출 비중 첫 40% 돌파가 촉매.
+    </div>
+    <div class="point">
+      👉 포인트: 기술적 반등 초기 국면. <strong>₩340,000 저항</strong> 돌파 시 추세 전환, 실패 시 다시 $320,000 바닥 테스트. 분할 접근 권장.
+    </div>
+  </div>
+
+  <!-- COMMUNITY REACTIONS -->
+  <h2 class="section-title sky">💬 사람들의 의견 — 커뮤니티 반응</h2>
+  <div class="community">
+
+    <div class="comm-card">
+      <span class="comm-src src-naver">NAVER 종토방</span>
+      <div class="quote">"하닉 119만이 꿈인 줄…200만닉스 리포트 진짜 현실 된다. 금요일 실적만 버티면 간다 진짜로."</div>
+      <div class="meta">· 000660 · 추천 573</div>
+    </div>
+
+    <div class="comm-card">
+      <span class="comm-src src-blind">BLIND 금융/주식</span>
+      <div class="quote">"트럼프 트윗 한 줄에 방산주 -5% 날아감… 어제 풀매수 한 신입은 퇴근 못 하고 있음. 교훈: 정치 테마는 도박임."</div>
+      <div class="meta">· 증권사 · 댓글 412</div>
+    </div>
+
+    <div class="comm-card">
+      <span class="comm-src src-dcinside">DC 주식갤</span>
+      <div class="quote">"에코프로 드디어 오르네 ㅋㅋ 2년 기다렸다. LFP 뚫고 ESS 터지면 한국 배터리 다시 갑이야. 진심 한 번만 믿는다."</div>
+      <div class="meta">· 개념글 · 개추 389</div>
+    </div>
+
+    <div class="comm-card">
+      <span class="comm-src src-reddit">r/wallstreetbets</span>
+      <div class="quote">"NDX just snapped 13-day streak. Longest since '92. My regard brain says 'reversal'. My calls say 'diamond hands'. Pray for me."</div>
+      <div class="meta">· u/DegenQuant · 2.1k upvotes</div>
+    </div>
+
+    <div class="comm-card">
+      <span class="comm-src src-youtube">YouTube 베댓</span>
+      <div class="quote">"박곰희tv 오늘 핵심: '서울이 뉴욕 끌고 가는 날 올 줄이야'. 반도체 + 실적 + 외국인 3박자 들어맞음 ㄷㄷ"</div>
+      <div class="meta">· 좋아요 4,812</div>
+    </div>
+
+    <div class="comm-card">
+      <span class="comm-src src-naver">NAVER 종토방</span>
+      <div class="quote">"환율 1472원…1500원 공포는 끝났나? 미국 주식 들고 있는 사람들 슬슬 원화 환전 타이밍 재는 중."</div>
+      <div class="meta">· USD/KRW · 추천 241</div>
+    </div>
+
+  </div>
+
+  <!-- BULLS vs BEARS -->
+  <h2 class="section-title indigo">⚔️ 강세론 vs 약세론</h2>
+  <div class="vs-question">지금 KOSPI 6,219, <strong style="color:#00c896">구조적 레벨업</strong>인가 <strong style="color:#ff4757">단기 과열 꼭지</strong>인가?</div>
+  <div class="vs-grid">
+    <div class="vs-col bulls">
+      <h4>🐂 BULLS</h4>
+      <ul>
+        <li>외국인 4월 누적 순매수 <strong>+12조</strong>. 2025년 이래 가장 강력한 유입 속도</li>
+        <li>SK하이닉스·삼성전자 합산 시총 4월에만 <strong>+185조</strong>, AI 수요 구조적 확장</li>
+        <li>한국은행 기준금리 <strong>인하 여지</strong> 재부각 + 환율 1,472원 하향안정</li>
+        <li>PER 12.8배로 역사적 평균 <strong>소폭 상회</strong> 수준 — 거품권 아님</li>
+        <li>중동 휴전 시 유가 $80대 정착 → <strong>한국 기업 수익성 개선</strong> 확정적</li>
+      </ul>
+    </div>
+    <div class="vs-col bears">
+      <h4>🐻 BEARS</h4>
+      <ul>
+        <li>KOSPI 4월 한 달 <strong>+7.2%</strong>, 20일선 이격률 역사적 상단</li>
+        <li>반도체 편중 극심. <strong>SK하이닉스·삼성</strong> 둘이 지수 상승의 65%</li>
+        <li>나스닥 13일 랠리 종료 = 미국발 조정 시 <strong>동반 하락 불가피</strong></li>
+        <li>원/달러 하락은 <strong>수출주 실적 역풍</strong>으로 되돌아옴 (환산)</li>
+        <li>SK하이닉스 어닝 <strong>컨센 부합</strong>만 해도 Sell-the-News로 돌변</li>
+      </ul>
+    </div>
+  </div>
+  <div class="vs-poll">
+    <div style="font-size:13px; color:#9ba3af;">커뮤니티 체감 여론</div>
+    <div class="vs-poll-bar">
+      <div class="b-bull" style="width:58%">BULLS 58%</div>
+      <div class="b-bear" style="width:42%">BEARS 42%</div>
+    </div>
+    <div style="font-size:12px; color:#6b7280;">※ NAVER·BLIND·r/wsb 게시글 샘플링 기반 · 주관적 추정</div>
+  </div>
+
+  <!-- CHECKPOINT -->
+  <h2 class="section-title yellow">📅 이번 주 · 다음 주 체크포인트</h2>
+  <div class="checkpoint">
+    <div class="item">
+      <div class="day">4/21 (화) 🔥</div>
+      <div class="desc"><strong>미국 3월 소매판매</strong> (관전 포인트: MoM +0.4% 컨센) · 넷플릭스 1Q 실적 (장마감 후) · 한국 4월 수출 20일치</div>
+    </div>
+    <div class="item">
+      <div class="day">4/22 (수) ⚡</div>
+      <div class="desc"><strong>미-이란 휴전 협상 데드라인</strong> · 테슬라 1Q 실적 · 유로존 PMI 속보치 · 미국 주간 원유재고</div>
+    </div>
+    <div class="item">
+      <div class="day">4/23 (목)</div>
+      <div class="desc">미국 주간 실업수당 · 한국 GDP 1Q 속보치 · 인텔·구글 알파벳 1Q 실적</div>
+    </div>
+    <div class="item">
+      <div class="day">4/24 (금) 🔥</div>
+      <div class="desc"><strong>SK하이닉스 1Q 실적 발표</strong> · 미국 3월 내구재 주문 · 미시간 소비자심리 확정치</div>
+    </div>
+    <div class="item">
+      <div class="day">4/28~29 ⚡</div>
+      <div class="desc"><strong>FOMC 정례회의</strong> (파월 임기 마지막에서 두 번째) · 동결 유력하나 점도표·성명 톤이 관건</div>
+    </div>
+    <div class="item">
+      <div class="day">4/30 (수)</div>
+      <div class="desc">삼성전자 1Q 확정 실적 · 애플·아마존 1Q 실적 · 미국 3월 PCE 물가지수 · 1Q GDP 속보치</div>
+    </div>
+  </div>
+
+  <!-- ANALYST LINE -->
+  <div class="analyst-line">
+    <div class="role">📍 애널리스트 한 줄 요약</div>
+    <div class="msg">
+      "오늘의 주인공은 <strong style="color:#ffd32a">트럼프의 한 마디</strong>다. 전쟁 프리미엄이 녹아내리는 속도가 기록적이고,
+      그 덕에 서울은 <strong style="color:#00c896">반도체·금융·바이오 트리플 강세</strong>로 사상 최고치. 하지만 뉴욕의 13연승 종료는
+      <strong style="color:#ff4757">호재 고갈 신호</strong>이기도 하다. 포지션은 <strong style="color:#6366f1">반도체 유지 + 에너지·방산 차익실현 + 2차전지 분할 매수</strong>.
+      진짜 방향은 <strong style="color:#ff4757">금요일(4/24) SK하이닉스 실적</strong>이 결정한다."
+    </div>
+  </div>
+
+  <!-- HASHTAGS -->
+  <div class="hashtags">
+    <span>#코스피사상최고</span><span>#KOSPI6219</span><span>#SK하이닉스</span><span>#HBM</span>
+    <span>#나스닥13연승종료</span><span>#이란휴전</span><span>#유가폭락</span>
+    <span>#트럼프발언</span><span>#FOMC</span><span>#2차전지반등</span>
+    <span>#일일주식브리핑</span>
+  </div>
+
+  <!-- DISCLAIMER -->
+  <div class="disclaimer">
+    ⚠️ 본 보고서는 공개 데이터·커뮤니티·뉴스 기반으로 AI가 자동 생성한 <strong>정보 제공용 자료</strong>입니다.
+    일부 수치는 장중 추정치·가상 시나리오 포함이며, 실제 거래·투자 판단은 반드시 공식 공시와 본인의 책임하에 결정하세요.
+    ·  투자 손실 책임은 전적으로 투자자 본인에게 있습니다.
+  </div>
+
+</div>
+</body>
+</html>
