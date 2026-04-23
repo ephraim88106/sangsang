@@ -1308,59 +1308,109 @@ body {
   opacity: 1;
 }
 
-/* 증시 — 컴팩트 가로 리스트 */
+/* 증시 — 티커 스타일 강조 카드 */
 .market-list {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
 .market-item {
   display: grid;
-  grid-template-columns: 60px 1fr 24px;
-  gap: 1.2rem;
+  grid-template-columns: 76px 1fr 28px;
+  gap: 1.3rem;
   align-items: center;
-  padding: 1.1rem 1.4rem;
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.55);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 1.5rem 1.7rem;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18), inset 0 0 0 1px rgba(255, 255, 255, 0.03);
   text-decoration: none;
-  color: inherit;
-  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  color: #e6e9f0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.market-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, #10b981, #34d399);
 }
 
 .market-item:hover {
-  background: rgba(255, 255, 255, 0.95);
-  transform: translateX(3px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28), inset 0 0 0 1px rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.55);
+}
+
+.market-item:first-child {
+  background: linear-gradient(135deg, #0b1120 0%, #172554 50%, #1e3a8a 100%);
+  border-color: rgba(250, 204, 21, 0.4);
+  box-shadow: 0 14px 36px rgba(30, 58, 138, 0.35), inset 0 0 0 1px rgba(250, 204, 21, 0.08);
+}
+
+.market-item:first-child::before {
+  background: linear-gradient(180deg, #facc15, #f59e0b);
+}
+
+.market-item:first-child .market-date {
+  background: linear-gradient(135deg, #facc15, #f59e0b);
+  color: #0b1120;
 }
 
 .market-date {
-  font-size: 0.85rem;
-  font-weight: 800;
-  opacity: 0.6;
+  font-size: 0.95rem;
+  font-weight: 900;
   letter-spacing: 0.5px;
   font-variant-numeric: tabular-nums;
+  font-family: 'JetBrains Mono', 'SF Mono', 'Menlo', monospace;
+  background: linear-gradient(135deg, #10b981, #34d399);
+  color: #0f172a;
+  padding: 0.45rem 0.6rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
 }
 
 .market-title {
-  font-size: 0.98rem;
-  font-weight: 700;
+  font-size: 1.08rem;
+  font-weight: 800;
   line-height: 1.45;
-  margin: 0 0 0.25rem;
+  margin: 0 0 0.4rem;
+  color: #f8fafc;
+  letter-spacing: -0.3px;
+}
+
+.market-item:first-child .market-title {
+  font-size: 1.18rem;
 }
 
 .market-sub {
-  font-size: 0.85rem;
-  opacity: 0.65;
-  line-height: 1.5;
+  font-size: 0.9rem;
+  color: rgba(226, 232, 240, 0.72);
+  line-height: 1.55;
   margin: 0;
 }
 
 .market-arrow {
-  font-size: 1.25rem;
-  opacity: 0.4;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #10b981;
   text-align: right;
+  transition: transform 0.2s ease;
+}
+
+.market-item:first-child .market-arrow {
+  color: #facc15;
+}
+
+.market-item:hover .market-arrow {
+  transform: translateX(4px);
 }
 
 /* 깊이 보기 — 카드 그리드 */
@@ -1514,9 +1564,23 @@ body.winter .headline-title { color: #102030; }
     padding: 1.5rem 1.4rem;
   }
   .market-item {
-    grid-template-columns: 50px 1fr 20px;
-    gap: 0.8rem;
-    padding: 1rem;
+    grid-template-columns: 62px 1fr 22px;
+    gap: 0.9rem;
+    padding: 1.2rem 1.1rem;
+    border-radius: 14px;
+  }
+  .market-title {
+    font-size: 0.98rem;
+  }
+  .market-item:first-child .market-title {
+    font-size: 1.05rem;
+  }
+  .market-sub {
+    font-size: 0.82rem;
+  }
+  .market-date {
+    font-size: 0.82rem;
+    padding: 0.35rem 0.4rem;
   }
   .archive-item {
     grid-template-columns: 50px 1fr;
