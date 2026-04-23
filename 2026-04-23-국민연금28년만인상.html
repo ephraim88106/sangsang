@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>당신 월급에서 매달 1만원이 사라진다 — 28년 침묵 깬 국민연금, 건강보험까지 동시 공격 | 한국이슈 탐사보도</title>
+<meta name="description" content="1998년 이후 28년 만의 국민연금 보험료율 첫 인상. 건강보험·장기요양까지 3대 보험 동시 인상으로 직장인 월급에서 매달 빠져나가는 돈의 실제 계산과 8년 단계 인상 로드맵을 파헤친다.">
+<meta name="keywords" content="국민연금, 건강보험, 보험료율 인상, 9.5%, 7.19%, 실수령액, 4대보험, 연금개혁, 소득대체율, 세대갈등, 장기요양보험">
+<meta property="og:title" content="당신 월급에서 매달 1만원이 사라진다 — 28년 침묵 깬 국민연금, 건강보험까지 동시 공격">
+<meta property="og:description" content="1998년 이후 28년 만의 국민연금 첫 인상. 건강보험·장기요양까지 3대 보험 동시 인상의 실체.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: #ffffff;
+    color: #1a1a1a;
+    line-height: 1.8;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #1a5c3a;
+    margin-bottom: 32px;
+    font-size: 14px;
+    color: #555;
+  }
+  .badge {
+    display: inline-block;
+    background: #1a5c3a;
+    color: white;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  h1 {
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 1.35;
+    margin: 24px 0 16px;
+    letter-spacing: -0.8px;
+    color: #0f0f0f;
+  }
+  .subtitle {
+    font-size: 19px;
+    color: #444;
+    font-weight: 400;
+    margin-bottom: 36px;
+    line-height: 1.55;
+  }
+  .byline {
+    font-size: 14px;
+    color: #777;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 14px 0;
+    margin-bottom: 36px;
+  }
+  .summary-box {
+    background: #eef6f0;
+    border-left: 6px solid #1a5c3a;
+    padding: 24px 28px;
+    margin: 32px 0;
+    border-radius: 4px;
+  }
+  .summary-box h3 {
+    font-size: 14px;
+    color: #1a5c3a;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-bottom: 14px;
+    font-weight: 700;
+  }
+  .summary-box ul {
+    list-style: none;
+    padding: 0;
+  }
+  .summary-box li {
+    font-size: 17px;
+    font-weight: 500;
+    padding: 8px 0 8px 22px;
+    position: relative;
+    color: #1a1a1a;
+  }
+  .summary-box li:before {
+    content: "▶";
+    position: absolute;
+    left: 0;
+    color: #1a5c3a;
+    font-size: 12px;
+    top: 12px;
+  }
+  h2 {
+    font-size: 26px;
+    font-weight: 800;
+    margin: 48px 0 18px;
+    padding-left: 16px;
+    border-left: 5px solid #1a5c3a;
+    line-height: 1.4;
+    color: #0f0f0f;
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 28px 0 12px;
+    color: #1a3a2a;
+  }
+  p {
+    margin-bottom: 18px;
+    color: #2a2a2a;
+  }
+  .highlight {
+    background: linear-gradient(transparent 60%, #fff19a 60%);
+    font-weight: 600;
+  }
+  .pull-quote {
+    font-size: 22px;
+    font-weight: 500;
+    color: #1a5c3a;
+    border-top: 2px solid #1a5c3a;
+    border-bottom: 2px solid #1a5c3a;
+    padding: 24px 16px;
+    margin: 32px 0;
+    text-align: center;
+    line-height: 1.5;
+    font-style: italic;
+  }
+  .stat-card {
+    display: inline-block;
+    background: #1a5c3a;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 6px;
+    margin: 4px 4px;
+    font-weight: 700;
+  }
+  .stat-card .num {
+    font-size: 28px;
+    display: block;
+    line-height: 1.2;
+  }
+  .stat-card .label {
+    font-size: 12px;
+    font-weight: 400;
+    opacity: 0.9;
+  }
+  .stats-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 24px 0;
+    justify-content: center;
+  }
+
+  /* Bar chart */
+  .chart-container {
+    background: #fafafa;
+    padding: 28px 24px;
+    border-radius: 8px;
+    margin: 32px 0;
+    border: 1px solid #e8e8e8;
+  }
+  .chart-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f0f0f;
+    margin-bottom: 6px;
+  }
+  .chart-subtitle {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 24px;
+  }
+  .bar-row {
+    display: grid;
+    grid-template-columns: 60px 1fr 70px;
+    align-items: center;
+    margin-bottom: 12px;
+    gap: 12px;
+  }
+  .bar-year {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+  }
+  .bar-track {
+    background: #ececec;
+    height: 28px;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+  }
+  .bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 1s ease;
+    background: linear-gradient(90deg, #1a5c3a, #2c8c5a);
+  }
+  .bar-fill.danger {
+    background: linear-gradient(90deg, #c53030, #e63312);
+  }
+  .bar-fill.current {
+    background: linear-gradient(90deg, #d97706, #f59e0b);
+  }
+  .bar-num {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0f0f0f;
+    text-align: right;
+  }
+  .chart-source {
+    font-size: 12px;
+    color: #888;
+    margin-top: 14px;
+    text-align: right;
+  }
+
+  /* Comparison table */
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    font-size: 15px;
+  }
+  .compare-table th {
+    background: #1a5c3a;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    font-weight: 700;
+  }
+  .compare-table td {
+    padding: 12px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .compare-table tr:nth-child(even) td {
+    background: #f4f8f5;
+  }
+  .compare-table strong {
+    color: #c53030;
+  }
+
+  /* Timeline */
+  .timeline {
+    position: relative;
+    padding-left: 30px;
+    margin: 24px 0;
+  }
+  .timeline:before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #1a5c3a;
+  }
+  .timeline-item {
+    position: relative;
+    padding-bottom: 20px;
+  }
+  .timeline-item:before {
+    content: '';
+    position: absolute;
+    left: -25px;
+    top: 4px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #1a5c3a;
+    border: 3px solid white;
+    box-shadow: 0 0 0 2px #1a5c3a;
+  }
+  .timeline-year {
+    font-weight: 700;
+    color: #1a5c3a;
+    font-size: 15px;
+  }
+  .timeline-event {
+    font-size: 16px;
+    color: #2a2a2a;
+    margin-top: 2px;
+  }
+
+  .impact-box {
+    background: #fef3e8;
+    border: 1px solid #f59e0b;
+    padding: 20px 24px;
+    border-radius: 6px;
+    margin: 24px 0;
+  }
+  .impact-box h4 {
+    color: #92400e;
+    font-size: 17px;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+
+  .tags {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid #e0e0e0;
+  }
+  .tag {
+    display: inline-block;
+    background: #f0f2f5;
+    color: #1a5c3a;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 13px;
+    margin: 3px;
+    font-weight: 500;
+  }
+  .disclaimer {
+    margin-top: 32px;
+    padding: 16px;
+    background: #f7f7f7;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #666;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 28px; }
+    h2 { font-size: 22px; }
+    .subtitle { font-size: 17px; }
+    body { font-size: 16px; }
+    .container { padding: 24px 16px 60px; }
+    .bar-row { grid-template-columns: 50px 1fr 60px; gap: 8px; }
+    .stat-card .num { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="top-bar">
+    <span class="badge">🏥 의료·복지</span>
+    <span>2026년 4월 23일 · 한국이슈 탐사보도</span>
+  </div>
+
+  <h1>당신 월급에서 매달 1만원이 사라진다 — 28년 침묵 깬 국민연금, 건강보험까지 '동시 공격'</h1>
+  <p class="subtitle">
+    1998년 이후 한 번도 꿈쩍 않던 국민연금 보험료율이 28년 만에 처음 오른다.
+    건강보험·장기요양보험까지 함께 인상되면서 직장인 4명 중 3명이 체감할 '3중 공격'의 실체와,
+    2033년까지 이어질 8년 단계 인상 로드맵을 숫자로 해부한다.
+  </p>
+
+  <div class="byline">
+    📰 <strong>한국이슈 탐사보도팀</strong> · 보건복지부·국민연금공단·건강보험공단 공개자료 종합 · 작성일 2026.04.23
+  </div>
+
+  <div class="summary-box">
+    <h3>📍 이 기사의 핵심 3줄</h3>
+    <ul>
+      <li>국민연금 보험료율이 1998년 이후 <strong>28년 만에 처음</strong> 9% → 9.5%로 올라갔고, 2033년까지 매년 0.5%p씩 계속 오른다.</li>
+      <li>건강보험은 7.09% → 7.19%, 장기요양보험료도 2.90% 동시 인상 — 연봉 4,000만원 직장인 기준 <strong>연간 약 13만원</strong>이 실수령액에서 사라진다.</li>
+      <li>2033년 보험료율이 13%에 도달하면, 지금 20·30대는 <strong>평생 부담액이 5,000만원 이상</strong> 늘어나는데 받는 돈(소득대체율 43%)은 큰 차이가 없다는 게 청년들의 분노 지점이다.</li>
+    </ul>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-card">
+      <span class="num">9.5%</span>
+      <span class="label">2026년 국민연금 보험료율</span>
+    </div>
+    <div class="stat-card">
+      <span class="num">28년</span>
+      <span class="label">보험료율 동결 기간</span>
+    </div>
+    <div class="stat-card">
+      <span class="num">+13만원</span>
+      <span class="label">연봉 4천만원 연간 추가부담</span>
+    </div>
+    <div class="stat-card">
+      <span class="num">13%</span>
+      <span class="label">2033년 목표 보험료율</span>
+    </div>
+  </div>
+
+  <h2>1998년 이후 '얼어붙은 9%' — 왜 갑자기 올랐나</h2>
+
+  <p>
+    <span class="highlight">1998년 4월, 김대중 정부가 국민연금 보험료율을 9%로 올린 이후 28년 동안 이 숫자는 단 한 번도 움직이지 않았다.</span>
+    그 사이 국민소득은 3배 가까이 늘었고, 65세 이상 고령 인구는 3배로 불어났으며, 출생아 수는 70만 명대에서 23만 명대로 3분의 1토막이 났다.
+    그러나 '연금'이라는 정치적 지뢰밭을 건드리는 순간 표가 날아간다는 현실 앞에서 역대 어느 정부도 보험료율에 손대지 못했다.
+  </p>
+
+  <p>
+    결국 올해, 여야가 '보험료율 13% · 소득대체율 43%'라는 모수 개혁안에 합의하면서 이 침묵이 깨졌다.
+    2026년 1월부터 보험료율은 9%에서 9.5%로 0.5%p 오른다. 그리고 거기서 멈추지 않는다.
+    <strong>2027년 10.0% → 2028년 10.5% → … → 2033년 13.0%.</strong> 매년 0.5%p씩 8년간 꼬박 오른다.
+    그동안 서랍 속에 잠자던 연금 시한폭탄이, 한꺼번에 터진 게 아니라 '분할 폭발' 모드로 들어간 것이다.
+  </p>
+
+  <div class="pull-quote">
+    "28년 동안 쌓인 부담을 8년 안에 청산한다. 그 청구서는 지금 당신의 월급명세서로 날아오고 있다."
+  </div>
+
+  <h2>숫자로 보는 인상 로드맵 — 2033년까지 매년 오른다</h2>
+
+  <div class="chart-container">
+    <div class="chart-title">📊 국민연금 보험료율 8년 로드맵 (2025~2033)</div>
+    <div class="chart-subtitle">자료: 보건복지부 연금개혁 확정안</div>
+
+    <div class="bar-row">
+      <span class="bar-year">2025</span>
+      <div class="bar-track"><div class="bar-fill" style="width: 69%"></div></div>
+      <span class="bar-num">9.0%</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-year">2026</span>
+      <div class="bar-track"><div class="bar-fill current" style="width: 73%"></div></div>
+      <span class="bar-num">9.5% ◀</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-year">2027</span>
+      <div class="bar-track"><div class="bar-fill" style="width: 77%"></div></div>
+      <span class="bar-num">10.0%</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-year">2028</span>
+      <div class="bar-track"><div class="bar-fill" style="width: 81%"></div></div>
+      <span class="bar-num">10.5%</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-year">2029</span>
+      <div class="bar-track"><div class="bar-fill" style="width: 85%"></div></div>
+      <span class="bar-num">11.0%</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-year">2030</span>
+      <div class="bar-track"><div class="bar-fill" style="width: 88%"></div></div>
+      <span class="bar-num">11.5%</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-year">2031</span>
+      <div class="bar-track"><div class="bar-fill" style="width: 92%"></div></div>
+      <span class="bar-num">12.0%</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-year">2032</span>
+      <div class="bar-track"><div class="bar-fill" style="width: 96%"></div></div>
+      <span class="bar-num">12.5%</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-year">2033</span>
+      <div class="bar-track"><div class="bar-fill danger" style="width: 100%"></div></div>
+      <span class="bar-num">13.0%</span>
+    </div>
+
+    <div class="chart-source">※ 매년 0.5%p 인상 · 1998년 이후 28년 만의 첫 인상</div>
+  </div>
+
+  <h2>건강보험·장기요양까지… 3중 타격의 실체</h2>
+
+  <p>
+    문제는 국민연금 하나가 아니라는 점이다. 2026년 시작과 함께 <strong>국민연금·건강보험·장기요양보험이 동시에</strong> 올랐다.
+    마치 각기 다른 창구에서 세 번 돈을 뽑아가는 격이다.
+  </p>
+
+  <table class="compare-table">
+    <tr>
+      <th>구분</th>
+      <th>2025년</th>
+      <th>2026년</th>
+      <th>인상폭</th>
+    </tr>
+    <tr>
+      <td><strong>국민연금</strong></td>
+      <td>9.00%</td>
+      <td>9.50%</td>
+      <td><strong>+0.50%p</strong></td>
+    </tr>
+    <tr>
+      <td><strong>건강보험</strong></td>
+      <td>7.09%</td>
+      <td>7.19%</td>
+      <td><strong>+0.10%p (1.48%↑)</strong></td>
+    </tr>
+    <tr>
+      <td><strong>장기요양보험</strong><br><small>(건보료의 일정 비율)</small></td>
+      <td>0.9182%</td>
+      <td>0.9448%</td>
+      <td><strong>+2.90%↑</strong></td>
+    </tr>
+    <tr>
+      <td>고용보험</td>
+      <td>1.8%</td>
+      <td>1.8%</td>
+      <td>동결</td>
+    </tr>
+  </table>
+
+  <p>
+    직장가입자는 사용자(회사)가 절반을 부담하기 때문에 '체감 인상분'은 위 수치의 절반이다.
+    그러나 <span class="highlight">자영업자·프리랜서 등 지역가입자는 보험료의 100%를 혼자 낸다.</span>
+    가뜩이나 자영업 폐업률이 역대 최고치를 찍고 있는 지금, 이 차이는 단순한 퍼센트가 아니라 한 가정의 생활비 그 자체다.
+  </p>
+
+  <h2>내 월급에서 얼마가 빠지나 — 연봉별 시뮬레이션</h2>
+
+  <div class="chart-container">
+    <div class="chart-title">💸 연봉별 4대보험 추가 부담액 (연간 기준)</div>
+    <div class="chart-subtitle">2025년 대비 2026년 실수령액 감소분 · 직장가입자 본인부담 기준</div>
+
+    <div class="bar-row">
+      <span class="bar-year">3천만</span>
+      <div class="bar-track"><div class="bar-fill" style="width: 38%"></div></div>
+      <span class="bar-num">-11만원</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-year">4천만</span>
+      <div class="bar-track"><div class="bar-fill" style="width: 52%"></div></div>
+      <span class="bar-num">-13만원</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-year">5천만</span>
+      <div class="bar-track"><div class="bar-fill" style="width: 62%"></div></div>
+      <span class="bar-num">-15만원</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-year">6천만</span>
+      <div class="bar-track"><div class="bar-fill" style="width: 74%"></div></div>
+      <span class="bar-num">-18만원</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-year">8천만</span>
+      <div class="bar-track"><div class="bar-fill danger" style="width: 92%"></div></div>
+      <span class="bar-num">-24만원</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-year">1억</span>
+      <div class="bar-track"><div class="bar-fill danger" style="width: 100%"></div></div>
+      <span class="bar-num">-30만원</span>
+    </div>
+
+    <div class="chart-source">※ 국민연금·건강보험·장기요양 합산 추정치 (기업 부담 제외)</div>
+  </div>
+
+  <p>
+    "고작 월 1만원, 그게 무슨 난리냐"고 할 사람도 있을 것이다.
+    그러나 이 계산은 <strong>첫 해</strong>의 이야기일 뿐이다. 2033년에 13%가 되면 같은 연봉 4,000만원 기준
+    <span class="highlight">연간 부담액은 100만원 이상 늘어난다.</span> 누적 8년이면 400만원이 넘는다.
+    그리고 이 돈은 '인플레이션으로 돌려받는다'는 보장이 전혀 없다.
+  </p>
+
+  <h2>'더 내지만 더 받는다'는 말의 진짜 의미</h2>
+
+  <p>
+    정부는 이번 개혁을 "더 내고 더 받는" 개혁이라고 설명한다.
+    실제로 소득대체율(은퇴 전 평균소득 대비 연금액 비율)은 현재 41.5%에서 <strong>43%</strong>로 오른다.
+    표면적으로는 보험료와 혜택이 함께 오르는 것처럼 보인다.
+  </p>
+
+  <p>
+    그러나 숫자를 조금만 뜯어보면 이야기가 달라진다. 보험료율은 9% → 13%로 <strong>44% 증가</strong>하는데,
+    소득대체율은 41.5% → 43%로 <strong>3.6% 증가</strong>에 그친다.
+    부담은 44% 늘고 혜택은 3.6% 늘어나는 개혁, 이것이 "더 내지만 더 받는" 개혁의 실체다.
+  </p>
+
+  <div class="pull-quote">
+    "부담은 44% 늘고, 혜택은 3.6% 늘어난다. 이걸 개혁이라고 부르는 이유는 간단하다. 안 하면 기금이 2056년 바닥나기 때문이다."
+  </div>
+
+  <p>
+    사실 이번 개혁의 진짜 목적은 '혜택 확대'가 아니다. <strong>기금 고갈 시점을 2056년에서 2071년으로 15년 미루는 것.</strong>
+    더 정확히 말하면, 지금 20·30대가 연금을 받기 시작할 시점에 '기금이 이미 바닥나 있는 상황'을 조금이라도 늦추는 조치다.
+    그런데 이 15년을 벌기 위해 청년 세대는 평생 수천만원을 더 내야 한다.
+  </p>
+
+  <h2>숨겨진 이면 — 왜 20·30대가 이토록 분노하나</h2>
+
+  <p>
+    이번 개혁에서 가장 격렬하게 반발한 건 청년 세대다. '국민연금 개혁 대응 전국 대학 총학생회'가 결성됐고,
+    온라인에서는 "세대 간 폰지사기"라는 말까지 나왔다. 왜일까?
+  </p>
+
+  <div class="impact-box">
+    <h4>📌 세대 간 부담·혜택 불균형</h4>
+    <p style="margin-bottom: 0;">
+      <strong>1965년생(현재 61세):</strong> 평생 9% 보험료율로 납부 완료. 상향된 43% 소득대체율 적용.<br>
+      <strong>1985년생(현재 41세):</strong> 인생의 절반은 9%, 남은 절반은 10~13%로 납부. 소득대체율 43% 적용.<br>
+      <strong>2005년생(현재 21세):</strong> 사회생활 시작부터 이미 13%. 평생 최고 보험료. 소득대체율은 같은 43%.
+    </p>
+  </div>
+
+  <p>
+    즉, 혜택 인상분(+1.5%p)은 기성세대에게 즉시 적용되지만, 부담 인상분(+4%p)은 주로 청년 세대가 떠맡는 구조다.
+    <span class="highlight">기성세대는 '내가 낸 만큼보다 많이 받는' 구조, 청년 세대는 '낸 것의 상당 부분을 못 받을 수 있는' 구조.</span>
+    통계청 추계에 따르면 기금이 2071년 소진된 이후엔 "그해 걷어서 그해 지급"하는 부과방식으로 전환해야 하는데,
+    그러려면 당시 경제활동 인구가 소득의 <strong>20~25%</strong>를 보험료로 내야 한다는 계산이 나온다.
+    이 수치는 이미 '세대 간 폰지'라는 비판이 나오기 충분한 숫자다.
+  </p>
+
+  <h2>연령대·직업별로 본 나의 현실</h2>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-year">🎓 20대 신입사원 (월급 250만원)</div>
+      <div class="timeline-event">올해 연간 약 9만원 추가 부담. 그러나 평생 누적 기준으론 4,000만~6,000만원의 추가 부담을 질 첫 세대. 실수령액 방어를 위해 IRP·연금저축 세액공제(최대 16.5%)를 적극 활용할 필요.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">💼 30·40대 직장인 (월급 400만원)</div>
+      <div class="timeline-event">연간 약 13만원 추가. 아이 교육비·주담대 이자까지 겹친 '지출 3종 세트'의 한가운데. 이번 인상분은 연말정산 환급에서도 되찾기 어려운 구조적 감소다.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">🏪 자영업자·프리랜서</div>
+      <div class="timeline-event">지역가입자는 회사 부담분이 없어 <strong>인상분 100%를 본인이 감당.</strong> 매출 3억 자영업자 기준 연간 50만~80만원 추가 부담. 가뜩이나 폐업률 역대 최고치를 찍고 있는 업종엔 치명타.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">👵 50·60대 은퇴 직전</div>
+      <div class="timeline-event">2033년 13% 도달 전에 은퇴하면 '높은 보험료'는 피할 수 있음. 게다가 소득대체율 43% 상향 혜택은 그대로 적용 — 이번 개혁의 가장 큰 수혜자.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">🏠 60대 은퇴자</div>
+      <div class="timeline-event">지역 건보료는 2026년부터 재산·소득 반영 비율 조정 동시 진행. 아파트 공시가격 상승분까지 반영돼 '건보료 폭탄' 가능성. 국민연금 수급자에겐 이번 개혁은 상대적 호재.</div>
+    </div>
+  </div>
+
+  <h2>지금 당장 할 수 있는 3가지</h2>
+
+  <p>
+    월급에서 빠져나가는 돈을 완벽히 되돌릴 수는 없다. 그러나 <strong>세액공제와 제도</strong>를 활용하면 일부는 상쇄 가능하다.
+  </p>
+
+  <div class="impact-box">
+    <h4>🛡️ 체크해야 할 3가지</h4>
+    <p style="margin-bottom: 10px;">
+      <strong>1. 연금저축·IRP 세액공제 풀로 활용:</strong>
+      연 최대 900만원(연금저축 600만 + IRP 300만)까지 납입 시 최대 148.5만원 세액공제. 국민연금 인상분의 10배 이상을 돌려받을 수 있다.
+    </p>
+    <p style="margin-bottom: 10px;">
+      <strong>2. 연말정산 의료비·기부금 꼼꼼히:</strong>
+      건강보험료 인상으로 의료비 지출이 늘었다면 의료비 세액공제 한도 체크. 본인부담 700만원 초과분은 전액 공제 대상.
+    </p>
+    <p style="margin-bottom: 0;">
+      <strong>3. 지역가입자라면 '소득월액 신고' 검토:</strong>
+      최근 수입이 줄었다면 소득월액 재신고로 보험료 감면 가능. 자영업자는 건강보험공단 홈페이지에서 '조정 신청'을 확인할 것.
+    </p>
+  </div>
+
+  <h2>결론 — 28년의 빚, 누가 갚을 것인가</h2>
+
+  <p>
+    1998년에 국민연금 보험료율이 9%로 결정될 때, 정부는 "2030년께 한 번 더 올려야 한다"고 이미 예고했다.
+    그러나 그 약속은 매 정권마다 '다음 정권이 하겠지'라는 미루기로 이어졌고,
+    결국 28년 치 빚이 지금 이 순간 청년 세대의 월급명세서로 청구되고 있다.
+  </p>
+
+  <p>
+    이번 인상은 단순히 '매달 몇 천원 더 내는' 문제가 아니다.
+    <span class="highlight">한국 사회가 세대 간 부담 배분을 어떻게 할 것인가에 대한 첫 스트레스 테스트</span>이며,
+    2033년 13% 달성 이후에도 '구조 개혁(연금 지급 방식 자체의 개편)'은 숙제로 남아 있다.
+    지금 당신이 20대라면 이번이 시작일 뿐이고, 50대라면 이번이 마지막 혜택일 수 있다.
+  </p>
+
+  <p>
+    연금개혁은 끝나지 않았다. 다만 28년 만에 처음으로, 누구도 외면할 수 없는 형태로 청구서가 날아온 것뿐이다.
+    이제 문제는 하나다. <strong>이 청구서를 공평하게 나누려면 앞으로 어떤 개혁이 더 필요한가.</strong>
+  </p>
+
+  <div class="tags">
+    <span class="tag">#국민연금</span>
+    <span class="tag">#건강보험</span>
+    <span class="tag">#보험료인상</span>
+    <span class="tag">#28년만의인상</span>
+    <span class="tag">#연금개혁</span>
+    <span class="tag">#소득대체율43</span>
+    <span class="tag">#세대갈등</span>
+    <span class="tag">#4대보험</span>
+    <span class="tag">#실수령액</span>
+    <span class="tag">#9.5퍼센트</span>
+    <span class="tag">#직장인월급</span>
+    <span class="tag">#자영업자부담</span>
+    <span class="tag">#2033로드맵</span>
+    <span class="tag">#기금고갈</span>
+    <span class="tag">#IRP세액공제</span>
+  </div>
+
+  <div class="disclaimer">
+    ※ 이 기사는 보건복지부·국민연금공단·국민건강보험공단의 공개 보도자료와 정부정책브리핑, 언론 보도 자료를 바탕으로 재구성한 것이며,
+    개인별 실제 보험료와 세액공제 금액은 소득 수준·부양가족·지역 등에 따라 다를 수 있습니다.
+    <strong>본 기사는 전문적 세무·금융 조언이 아니며, 정확한 수치는 4대사회보험 정보연계센터(www.4insure.or.kr) 또는 국민연금공단에 확인하시기 바랍니다.</strong>
+  </div>
+
+</div>
+</body>
+</html>
