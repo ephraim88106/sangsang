@@ -1,0 +1,16 @@
+# 🔐 Secrets — 절대 커밋 금지
+.secrets/
+*github_token*
+*.token
+*.env
+.env.*
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
