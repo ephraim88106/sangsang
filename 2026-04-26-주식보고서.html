@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🚨 엔비디아 ‘인류 최초 5조 달러’ · 인텔 +24% 39년만 대폭발 — 코스피는 ‘팔천피’ 카운트다운 (2026.04.26 주말 브리핑)</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: linear-gradient(180deg, #0a0e1a 0%, #0f1117 100%);
+    color: #e6e9f0;
+    line-height: 1.7;
+    min-height: 100vh;
+    padding: 24px 16px;
+  }
+  .mono { font-family: 'JetBrains Mono', 'Courier New', monospace; font-variant-numeric: tabular-nums; }
+  .container { max-width: 900px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #111827 0%, #1a1f2e 100%);
+    border: 1px solid #2a3143;
+    border-radius: 20px;
+    padding: 36px 28px;
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -50%; right: -20%;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(0,200,150,0.20) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .date-strip { color: #8b92a5; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
+  .title {
+    font-size: 30px; font-weight: 900; line-height: 1.3;
+    background: linear-gradient(135deg, #ffd32a 0%, #00c896 50%, #6366f1 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    margin-bottom: 12px;
+    position: relative; z-index: 1;
+  }
+  .subtitle { color: #b8bfd1; font-size: 15px; margin-bottom: 20px; position: relative; z-index: 1; }
+  .sentiment {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: rgba(0,200,150,0.12);
+    border: 1px solid rgba(0,200,150,0.35);
+    padding: 10px 18px; border-radius: 100px;
+    font-size: 14px; font-weight: 700; color: #00c896;
+    position: relative; z-index: 1;
+  }
+  .sentiment .dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: #00c896; box-shadow: 0 0 14px #00c896;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.5; } }
+  .hashtags { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px; position: relative; z-index: 1; }
+  .hashtag { background: rgba(99,102,241,0.12); color: #a5b4fc; padding: 5px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; }
+
+  .section { margin-bottom: 28px; }
+  .section-title { display: flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 800; margin-bottom: 14px; color: #f0f3ff; }
+  .section-title::before { content: ''; width: 4px; height: 20px; background: linear-gradient(180deg, #6366f1, #38bdf8); border-radius: 2px; }
+
+  .index-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+  .idx-card { background: #111827; border: 1px solid #1e293b; border-radius: 14px; padding: 18px 16px; transition: transform .2s; }
+  .idx-card:hover { transform: translateY(-3px); border-color: #334155; }
+  .idx-card .name { font-size: 12px; color: #8b92a5; letter-spacing: 1px; margin-bottom: 6px; }
+  .idx-card .value { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+  .idx-card .change { font-size: 13px; font-weight: 600; }
+  .up { color: #00c896; }
+  .down { color: #ff4757; }
+  .neutral { color: #ffd32a; }
+  .arrow { display: inline-block; margin-right: 4px; }
+
+  .analysis { background: #111827; border: 1px solid #1e293b; border-radius: 16px; padding: 24px; }
+  .analysis h4 { color: #38bdf8; font-size: 16px; margin: 18px 0 8px; font-weight: 700; }
+  .analysis h4:first-child { margin-top: 0; }
+  .analysis p { color: #cbd0e0; font-size: 14.5px; }
+  .analysis strong { color: #ffd32a; }
+
+  /* Sector heatmap */
+  .heatmap { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
+  .sector {
+    border-radius: 12px; padding: 18px 14px; text-align: center;
+    border: 1px solid rgba(255,255,255,0.06);
+    transition: transform .2s;
+  }
+  .sector:hover { transform: scale(1.03); }
+  .sector .s-name { font-size: 13px; font-weight: 700; margin-bottom: 6px; color: #fff; }
+  .sector .s-pct { font-size: 18px; font-weight: 800; }
+  .heat-strong-up { background: linear-gradient(135deg, #00c896 0%, #00a070 100%); }
+  .heat-up { background: linear-gradient(135deg, rgba(0,200,150,0.55), rgba(0,160,112,0.45)); }
+  .heat-flat { background: linear-gradient(135deg, rgba(139,146,165,0.40), rgba(100,107,124,0.35)); }
+  .heat-down { background: linear-gradient(135deg, rgba(255,71,87,0.50), rgba(190,40,55,0.40)); }
+  .heat-strong-down { background: linear-gradient(135deg, #ff4757 0%, #c8202e 100%); }
+
+  /* Top picks */
+  .pick { background: #111827; border: 1px solid #1e293b; border-radius: 14px; padding: 20px; margin-bottom: 12px; }
+  .pick h5 { font-size: 16px; font-weight: 800; margin-bottom: 6px; color: #f0f3ff; }
+  .pick .badge { display: inline-block; font-size: 11px; padding: 3px 10px; border-radius: 6px; font-weight: 700; margin-right: 8px; vertical-align: middle; }
+  .badge-hot { background: rgba(255,71,87,0.18); color: #ff7b86; border: 1px solid rgba(255,71,87,0.4); }
+  .badge-watch { background: rgba(255,211,42,0.15); color: #ffd32a; border: 1px solid rgba(255,211,42,0.4); }
+  .badge-bull { background: rgba(0,200,150,0.15); color: #00c896; border: 1px solid rgba(0,200,150,0.4); }
+  .pick p { color: #b8bfd1; font-size: 14px; margin-top: 6px; }
+  .pick .ck { color: #a5b4fc; font-size: 13px; margin-top: 8px; }
+
+  /* Community */
+  .comm-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; }
+  .comm-card { background: #111827; border: 1px solid #1e293b; border-radius: 12px; padding: 14px 16px; }
+  .comm-src { font-size: 11px; font-weight: 800; padding: 3px 8px; border-radius: 5px; margin-bottom: 8px; display: inline-block; }
+  .src-naver { background: rgba(0,200,150,0.18); color: #00c896; }
+  .src-blind { background: rgba(56,189,248,0.18); color: #38bdf8; }
+  .src-dcinside { background: rgba(255,211,42,0.18); color: #ffd32a; }
+  .src-reddit { background: rgba(255,71,87,0.18); color: #ff7b86; }
+  .src-youtube { background: rgba(255,99,99,0.18); color: #ff8a8a; }
+  .comm-quote { color: #cbd0e0; font-size: 13.5px; font-style: italic; }
+
+  /* Bulls vs Bears */
+  .debate-q { text-align: center; font-size: 16px; font-weight: 800; color: #ffd32a; margin-bottom: 14px; padding: 12px; background: rgba(255,211,42,0.08); border: 1px dashed rgba(255,211,42,0.4); border-radius: 12px; }
+  .vs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .vs-col { background: #111827; border-radius: 14px; padding: 18px; border: 1px solid #1e293b; }
+  .vs-col.bulls { border-top: 3px solid #00c896; }
+  .vs-col.bears { border-top: 3px solid #ff4757; }
+  .vs-head { font-size: 16px; font-weight: 800; margin-bottom: 10px; }
+  .vs-col.bulls .vs-head { color: #00c896; }
+  .vs-col.bears .vs-head { color: #ff4757; }
+  .vs-col ul { list-style: none; padding: 0; }
+  .vs-col li { font-size: 13.5px; color: #cbd0e0; margin-bottom: 8px; padding-left: 16px; position: relative; }
+  .vs-col li::before { content: ''; position: absolute; left: 0; top: 9px; width: 6px; height: 6px; border-radius: 50%; }
+  .vs-col.bulls li::before { background: #00c896; }
+  .vs-col.bears li::before { background: #ff4757; }
+  .vs-col strong { color: #fff; }
+  .poll { margin-top: 14px; text-align: center; font-size: 13px; color: #b8bfd1; }
+  .poll-bar { display: flex; height: 8px; border-radius: 4px; overflow: hidden; margin-top: 6px; }
+  .poll-bull { background: #00c896; }
+  .poll-bear { background: #ff4757; }
+
+  /* Checkpoints */
+  .check-list { background: #111827; border: 1px solid #1e293b; border-radius: 14px; padding: 18px 22px; }
+  .check-item { display: flex; gap: 14px; padding: 10px 0; border-bottom: 1px dashed #1e293b; font-size: 14px; }
+  .check-item:last-child { border-bottom: none; }
+  .check-date { color: #38bdf8; font-weight: 700; min-width: 80px; }
+  .check-desc { color: #cbd0e0; }
+
+  /* Analyst summary */
+  .analyst { background: linear-gradient(135deg, rgba(99,102,241,0.12), rgba(56,189,248,0.08)); border: 1px solid rgba(99,102,241,0.3); border-radius: 14px; padding: 20px; }
+  .analyst .label { font-size: 11px; letter-spacing: 2px; color: #a5b4fc; font-weight: 800; margin-bottom: 8px; }
+  .analyst .quote { font-size: 16px; font-weight: 700; color: #f0f3ff; line-height: 1.6; }
+
+  /* Disclaimer */
+  .disclaimer {
+    background: rgba(255,71,87,0.08);
+    border: 1px solid rgba(255,71,87,0.3);
+    border-radius: 12px;
+    padding: 16px 18px;
+    color: #ff9ba2;
+    font-size: 12.5px;
+    line-height: 1.6;
+    margin-top: 28px;
+  }
+  .disclaimer strong { color: #ff7b86; }
+
+  @media (max-width: 600px) {
+    .title { font-size: 22px; }
+    .vs-grid { grid-template-columns: 1fr; }
+    .header { padding: 26px 20px; }
+    .idx-card .value { font-size: 19px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="date-strip">2026 · 04 · 26 · SUN — 주말 브리핑 (Last Trade: 4/24 Fri)</div>
+    <div class="title">🚨 엔비디아 ‘5조 달러 인류 최초’ · 인텔 +24% 39년만 대폭발<br>코스피는 ‘팔천피’ 카운트다운, FOMC D-3</div>
+    <div class="subtitle">📈 미국 S&P500·나스닥 동반 사상 최고치 · 코스피 6500 첫 돌파 · 다음 주 28~29일 FOMC가 모든 것을 결정한다</div>
+    <div class="sentiment"><span class="dot"></span> 시장 심리: <strong>탐욕 (Extreme Greed) 81/100</strong> — AI 반도체 광풍 지속</div>
+    <div class="hashtags">
+      <span class="hashtag">#엔비디아5조달러</span>
+      <span class="hashtag">#인텔폭등</span>
+      <span class="hashtag">#코스피6500</span>
+      <span class="hashtag">#팔천피</span>
+      <span class="hashtag">#FOMC다음주</span>
+      <span class="hashtag">#SK하이닉스실적</span>
+      <span class="hashtag">#미이란휴전</span>
+      <span class="hashtag">#AI슈퍼사이클</span>
+      <span class="hashtag">#반도체쌍두마차</span>
+      <span class="hashtag">#호르무즈리스크</span>
+    </div>
+  </div>
+
+  <!-- INDEX CARDS -->
+  <div class="section">
+    <div class="section-title">📊 주요 지수 마감 (4/24 종가)</div>
+    <div class="index-grid">
+      <div class="idx-card">
+        <div class="name">KOSPI</div>
+        <div class="value mono">6,517.32</div>
+        <div class="change neutral mono"><span class="arrow">▲</span>+0.18% · 사상 최고권</div>
+      </div>
+      <div class="idx-card">
+        <div class="name">KOSDAQ</div>
+        <div class="value mono">1,172.17</div>
+        <div class="change up mono"><span class="arrow">▲</span>+0.42%</div>
+      </div>
+      <div class="idx-card">
+        <div class="name">DOW JONES</div>
+        <div class="value mono">49,230.71</div>
+        <div class="change down mono"><span class="arrow">▼</span>-0.16%</div>
+      </div>
+      <div class="idx-card">
+        <div class="name">S&P 500</div>
+        <div class="value mono">7,165.08</div>
+        <div class="change up mono"><span class="arrow">▲</span>+0.80% · 사상 최고</div>
+      </div>
+      <div class="idx-card">
+        <div class="name">NASDAQ</div>
+        <div class="value mono">24,836.60</div>
+        <div class="change up mono"><span class="arrow">▲</span>+1.63% · 사상 최고</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FX & COMMODITIES -->
+  <div class="section">
+    <div class="section-title">💱 환율 · 원자재 · 코인</div>
+    <div class="index-grid">
+      <div class="idx-card">
+        <div class="name">USD/KRW</div>
+        <div class="value mono">1,486.30</div>
+        <div class="change down mono">원화 약세 · 지정학 부담</div>
+      </div>
+      <div class="idx-card">
+        <div class="name">WTI 유가</div>
+        <div class="value mono">$94.74</div>
+        <div class="change up mono"><span class="arrow">▲</span>호르무즈 프리미엄</div>
+      </div>
+      <div class="idx-card">
+        <div class="name">금 (Gold Spot)</div>
+        <div class="value mono">$4,810.42</div>
+        <div class="change up mono"><span class="arrow">▲</span>안전자산 수요</div>
+      </div>
+      <div class="idx-card">
+        <div class="name">비트코인 (BTC)</div>
+        <div class="value mono">$77,820</div>
+        <div class="change down mono"><span class="arrow">▼</span>$80K 저항 · 차익실현</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ANALYSIS -->
+  <div class="section">
+    <div class="section-title">🔥 오늘의 핵심 분석</div>
+    <div class="analysis">
+      <h4>① 엔비디아 5조 달러, 인류 자본주의의 ‘제2의 달 착륙’</h4>
+      <p>엔비디아가 4월 24일 시가총액 <strong>5조 달러</strong>를 돌파하며 인류 역사상 최초의 시총 5조 달러 기업이라는 타이틀을 거머쥐었다. 주가는 4.3% 급등한 208.27달러에 마감. 그러나 시장이 진짜 충격을 받은 종목은 따로 있었다. <strong>인텔이 +24%</strong> 폭등하며 1987년 이후 39년 만의 최대 단일일 상승률을 기록한 것. 1분기 매출 135.8억 달러로 컨센을 박살내며 ‘실적은 더 이상 거품이 아니다’라는 시장의 합창이 나왔다. AMD +14%, 퀄컴 +8%, 필라델피아 반도체지수 +4%로 이번 주 SOX ETF 월간 수익률은 <strong>+40.4%</strong>. AI 반도체는 더 이상 테마가 아니라 ‘인프라 기간산업’으로 가격이 재책정되고 있다.</p>
+
+      <h4>② 코스피 6500 첫 돌파, 7000은 가는데… ‘팔천피’는 진짜인가</h4>
+      <p>코스피는 4월 23일 사상 처음으로 <strong>6500선을 돌파</strong>(장중 6557.76)했고, 24일은 6517선에서 박스권 등락으로 마감했다. 주도주는 변함없는 <strong>반도체 쌍두마차(삼성전자·SK하이닉스)</strong>. SK하이닉스 1분기 컨센은 영업이익 200조원대로 상향 조정 중이며, 주가는 122.4만원을 기록했다. 24일 외국인 추정 자금 +31.7만주 순매수. 주요 증권사는 연준 동결 시 코스피 상단 <strong>7,540p</strong>, 1~2회 인하 + 반도체 PER 8배 시 <strong>8,470p</strong>까지 열어놓고 있다. ‘팔천피’가 농담이 아닌 시점이 왔다.</p>
+
+      <h4>③ 그러나 환율 1,486원 · WTI $95… 디커플링은 위험하다</h4>
+      <p>코스피·나스닥 동반 사상 최고치라는 화려한 헤드라인 뒤에는 <strong>호르무즈 해협 봉쇄 우려</strong>가 살아있다. WTI는 배럴당 94.74달러, 원달러는 1,486원대까지 다시 약세. 미-이란 휴전 ‘기대감’으로 위험자산은 환호했지만 실제 협상이 깨지는 순간 <strong>유가 급등 → 인플레이션 재점화 → 9월 금리 인하 무산</strong>이라는 도미노가 켜진다. 4/28~29 FOMC는 동결(99.5%)이 기정사실이지만, 파월 의장의 ‘점도표 톤’ 한 마디가 7,200~6,800 사이의 칼춤을 결정한다.</p>
+
+      <h4>④ 2차전지의 반전 — ‘배터리는 죽었다’가 아니라 ‘ESS로 부활한다’</h4>
+      <p>전기차 수요 회복은 여전히 지지부진하지만 LG에너지솔루션·삼성SDI가 <strong>AI 데이터센터향 ESS</strong> 대형 수주에 잇따라 성공하며 펀더멘털을 방어 중이다. 시장은 ‘2차전지=EV’라는 등식을 ‘2차전지=AI 인프라’로 재정의하기 시작했다. 만약 다음 주 LG엔솔 어닝에서 ESS 비중 가이던스가 두 자릿수로 점프한다면, 배터리 섹터의 디스카운트가 사라질 수 있다.</p>
+    </div>
+  </div>
+
+  <!-- SECTOR HEATMAP -->
+  <div class="section">
+    <div class="section-title">🌡️ 코스피 섹터 히트맵 (4/24)</div>
+    <div class="heatmap">
+      <div class="sector heat-strong-up"><div class="s-name">반도체</div><div class="s-pct mono">+2.31%</div></div>
+      <div class="sector heat-up"><div class="s-name">에너지</div><div class="s-pct mono">+1.42%</div></div>
+      <div class="sector heat-up"><div class="s-name">금융</div><div class="s-pct mono">+0.78%</div></div>
+      <div class="sector heat-flat"><div class="s-name">바이오</div><div class="s-pct mono">+0.12%</div></div>
+      <div class="sector heat-flat"><div class="s-name">건설</div><div class="s-pct mono">-0.05%</div></div>
+      <div class="sector heat-down"><div class="s-name">자동차</div><div class="s-pct mono">-0.84%</div></div>
+      <div class="sector heat-down"><div class="s-name">철강</div><div class="s-pct mono">-1.07%</div></div>
+      <div class="sector heat-strong-down"><div class="s-name">2차전지</div><div class="s-pct mono">-2.18%</div></div>
+    </div>
+  </div>
+
+  <!-- TOP PICKS -->
+  <div class="section">
+    <div class="section-title">🎯 주목 종목·이슈 TOP 3</div>
+
+    <div class="pick">
+      <h5><span class="badge badge-hot">🔥 화제</span>NVIDIA (NVDA) — 시총 5조 달러, 그 다음은?</h5>
+      <p>주가 $208.27 (+4.3%). 6조 달러는 시간문제라는 베어드·번스타인의 목표가 상향이 줄을 잇는다. 다만 12개월 선행 PER이 38배 → 45배 영역 진입, ‘성장주’가 아닌 ‘초성장주’ 멀티플 정당화 논쟁이 본격화 중.</p>
+      <p class="ck">✅ 체크포인트: 5월 21일 1Q 실적 — 데이터센터 매출 YoY +90% 유지 여부</p>
+    </div>
+
+    <div class="pick">
+      <h5><span class="badge badge-bull">🐂 강세</span>인텔 (INTC) — 39년 만의 부활, 진짜인가 트레이딩인가</h5>
+      <p>매출 $13.58B 컨센 상회, 18A 공정 양산 일정 가속화, 미국 정부 보조금까지. 단일일 +24%는 노이즈가 아닌 펀더멘털 리프라이싱. 다만 <strong>‘소유하라, 트레이딩하지 마라’(Own it, don't trade it)</strong>가 모토.</p>
+      <p class="ck">✅ 체크포인트: 18A 수율 가이던스, 외주 파운드리 고객 추가 발표</p>
+    </div>
+
+    <div class="pick">
+      <h5><span class="badge badge-watch">⚠️ 주시</span>SK하이닉스 (000660) — 1Q 실적 발표가 코스피 7,000을 결정한다</h5>
+      <p>4/24 종가 122.4만원(-0.08%). 외국인은 매수, 모간스탠리는 매도하며 의견이 극단적으로 갈린 종목. HBM3E 마진 가이던스가 컨센(영업이익률 60%) 상회 시 코스피 7,000 트리거.</p>
+      <p class="ck">✅ 체크포인트: 4월 말~5월 초 1분기 실적 발표, HBM4 양산 시점 코멘트</p>
+    </div>
+  </div>
+
+  <!-- COMMUNITY -->
+  <div class="section">
+    <div class="section-title">💬 사람들의 의견 — 커뮤니티 반응</div>
+    <div class="comm-grid">
+      <div class="comm-card">
+        <span class="comm-src src-naver">NAVER 종토방</span>
+        <div class="comm-quote">“6500 뚫었는데 내 계좌만 -3% 어케된거임… 진짜 ‘내가 사면 떨어지는’ 법칙 또 발동”</div>
+      </div>
+      <div class="comm-card">
+        <span class="comm-src src-blind">BLIND</span>
+        <div class="comm-quote">“하닉 부서 선후배들 다 풀매수 들어감. 1분기 발표 전에 비중 높이라는 분위기. 근데 너무 컨센서스라서 무서움.”</div>
+      </div>
+      <div class="comm-card">
+        <span class="comm-src src-dcinside">디시 주식갤</span>
+        <div class="comm-quote">“엔비디아 5조 달러? 이쯤 되면 그냥 미국 GDP 사세요. 한국은 7000 가즈아ㅋㅋㅋ”</div>
+      </div>
+      <div class="comm-card">
+        <span class="comm-src src-reddit">r/wallstreetbets</span>
+        <div class="comm-quote">“INTC +24% I bought at $19 and held for 5 years. My wife's boyfriend finally respects me.”</div>
+      </div>
+      <div class="comm-card">
+        <span class="comm-src src-youtube">YouTube 베댓</span>
+        <div class="comm-quote">“FOMC 다음주인데 동결인 건 다 아는데 왜 다들 떨고 있을까. 점도표 한줄에 -2% 가능합니다.”</div>
+      </div>
+      <div class="comm-card">
+        <span class="comm-src src-naver">NAVER 종토방</span>
+        <div class="comm-quote">“2차전지 형님들… 이번 주는 진짜 마지막 기회입니다. ESS로 갈아타든가 손절하든가.”</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BULLS vs BEARS -->
+  <div class="section">
+    <div class="section-title">⚔️ 강세론 vs 약세론</div>
+    <div class="debate-q">🔥 지금 코스피 6,500 — ‘팔천피’ 가는 길목인가, AI 거품 막차인가?</div>
+    <div class="vs-grid">
+      <div class="vs-col bulls">
+        <div class="vs-head">🐂 BULLS · 7,540~8,470 간다</div>
+        <ul>
+          <li><strong>SK하이닉스 영업이익 200조원대</strong> 컨센 상향, HBM4 양산 임박</li>
+          <li>엔비디아 5조 달러 = AI 인프라가 ‘기간산업’으로 재책정되는 신호</li>
+          <li>외국인 4월 누적 <strong>삼성·하닉 5조원 순매수</strong>, 추세 유효</li>
+          <li>연준 9월 금리 인하 컨센 + 반도체 PER 리레이팅 = 8,470p</li>
+          <li>2차전지 ESS 수주 가속, 한국 수출지표 슈퍼서프라이즈</li>
+        </ul>
+      </div>
+      <div class="vs-col bears">
+        <div class="vs-head">🐻 BEARS · 6,200~6,400 조정 임박</div>
+        <ul>
+          <li><strong>나스닥 RSI 78</strong>, 반도체 SOX 월간 +40% — 단기 과열 시그널</li>
+          <li>WTI $95 + 환율 1,486원 = 인플레이션 재점화 가능성</li>
+          <li>FOMC 점도표가 ‘인하 횟수 축소’로 나오면 -2~-3% 갭다운</li>
+          <li>호르무즈 봉쇄 시 유가 $120 + 코스피 -5% 시나리오</li>
+          <li>SK하이닉스 컨센 너무 높아 <strong>‘서프라이즈 실패=급락 트리거’</strong></li>
+        </ul>
+      </div>
+    </div>
+    <div class="poll">
+      커뮤니티 체감 여론: 🐂 강세 <strong>62%</strong> · 🐻 약세 <strong>38%</strong>
+      <div class="poll-bar">
+        <div class="poll-bull" style="width:62%"></div>
+        <div class="poll-bear" style="width:38%"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHECKPOINTS -->
+  <div class="section">
+    <div class="section-title">📅 다음 주 체크포인트 (4/27 ~ 5/2)</div>
+    <div class="check-list">
+      <div class="check-item">
+        <div class="check-date">4/28(화)</div>
+        <div class="check-desc"><strong>FOMC 1일차 시작</strong> · 美 컨퍼런스보드 소비자신뢰지수 · 마이크로소프트·알파벳 실적</div>
+      </div>
+      <div class="check-item">
+        <div class="check-date">4/29(수)</div>
+        <div class="check-desc">美 1분기 GDP 속보치 · ADP 고용 · <strong>FOMC 금리결정·파월 회견</strong> · 메타·테슬라 실적</div>
+      </div>
+      <div class="check-item">
+        <div class="check-date">4/30(목)</div>
+        <div class="check-desc">한국 3월 산업생산 · 美 PCE 물가 · <strong>애플·아마존 실적</strong> · 한은 금융통화 동향</div>
+      </div>
+      <div class="check-item">
+        <div class="check-date">5/1(금)</div>
+        <div class="check-desc">美 4월 비농업 고용 · 시간당 임금 · <strong>SK하이닉스 1Q 실적 (잠정)</strong></div>
+      </div>
+      <div class="check-item">
+        <div class="check-date">5/2(토)</div>
+        <div class="check-desc">한국 4월 수출입동향 (반도체 수출 YoY 점검 — 슈퍼사이클 검증)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ANALYST SUMMARY -->
+  <div class="section">
+    <div class="section-title">🎙️ 애널리스트 한 줄 요약</div>
+    <div class="analyst">
+      <div class="label">POSITION GUIDE</div>
+      <div class="quote">“코스피 6,500 · 나스닥 사상 최고 · 엔비디아 5조 달러 — 모든 헤드라인이 동시에 터졌다. 이제 시장은 ‘FOMC 점도표 한 줄’과 ‘SK하이닉스 실적 한 줄’ 두 문장으로 5월 천장을 결정할 것이다. <strong>비중은 유지하되 신규 추격매수는 자제, 6,400~6,450 눌림에서 분할 매수 + FOMC 직후 변동성 헤지(인버스 5%)</strong>. AI 반도체는 끌고 가되, 2차전지는 ESS 수주 종목만 핀셋. 호르무즈 헤드라인 한 번이면 모든 시나리오가 리셋된다는 점 명심.”</div>
+    </div>
+  </div>
+
+  <!-- DISCLAIMER -->
+  <div class="disclaimer">
+    <strong>⚠️ 면책조항:</strong> 본 보고서는 공개된 자료(언론·증권사 리포트·공시 등)를 기반으로 작성된 정보 제공용 자료이며, 특정 종목의 매수/매도를 권유하는 투자자문이 아닙니다. 모든 투자 판단과 그 결과에 대한 책임은 투자자 본인에게 있습니다. 본 자료에 포함된 수치는 발표 시점 기준이며 실시간 가격과 차이가 있을 수 있습니다. 본 자료의 무단 복제·배포를 금지합니다.
+  </div>
+
+</div>
+</body>
+</html>
