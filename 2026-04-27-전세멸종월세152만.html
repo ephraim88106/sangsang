@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"전세는 박물관에 보내라"… 서울 월세 평균 152만 8천원, 신규계약 70%가 월세 됐다 | 한국이슈 아티클</title>
+<meta name="description" content="2026년 4월, 서울 아파트 평균 월세가 152만 8천원을 찍고 임대차 신규계약 70.5%가 월세로 전환되며 전세 시대가 사실상 막을 내렸다. 입주물량은 28% 급감, 전세값은 매매보다 빠르게 뛴다. 임차인의 지갑이 통째로 털리는 구조를 데이터로 해부한다.">
+<meta name="keywords" content="전세 멸종, 월세 시대, 서울 아파트 월세, 입주절벽, 2026 부동산, 전세대란, 월세 152만원">
+<meta property="og:title" content="전세는 박물관에 보내라… 서울 월세 152만 8천원, 신규계약 70%가 월세">
+<meta property="og:description" content="2026년 4월, 임대차 시장의 판이 통째로 뒤집혔다. 데이터로 해부한 '전세 멸종'의 진짜 이유.">
+<meta property="og:type" content="article">
+<style>
+  :root {
+    --primary: #c0392b;
+    --primary-dark: #922b21;
+    --accent: #e67e22;
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --muted: #555;
+    --line: #e5e5e5;
+    --highlight: #fef5e7;
+    --warning: #fdebd0;
+    --danger: #fadbd8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--text);
+    background: var(--bg);
+    padding: 30px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  .category-tag {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
+  }
+  h1 {
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.35;
+    color: var(--text);
+    margin-bottom: 18px;
+    letter-spacing: -0.5px;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 14px;
+    border-bottom: 2px solid var(--line);
+    padding-bottom: 18px;
+    margin-bottom: 28px;
+  }
+  .lead {
+    font-size: 19px;
+    line-height: 1.85;
+    color: #2c2c2c;
+    background: var(--highlight);
+    border-left: 5px solid var(--primary);
+    padding: 22px 26px;
+    margin-bottom: 32px;
+    border-radius: 0 6px 6px 0;
+  }
+  h2 {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--primary-dark);
+    margin: 38px 0 16px 0;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--primary);
+    line-height: 1.4;
+  }
+  h3 {
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 26px 0 12px 0;
+    padding-left: 12px;
+    border-left: 4px solid var(--accent);
+  }
+  p { margin-bottom: 16px; color: #2a2a2a; }
+  strong { color: var(--primary-dark); font-weight: 700; }
+  .summary-box {
+    background: linear-gradient(135deg, #fef5e7 0%, #fadbd8 100%);
+    border: 2px solid var(--primary);
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin: 24px 0 32px 0;
+  }
+  .summary-box h3 {
+    border-left: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 14px;
+    color: var(--primary-dark);
+    font-size: 18px;
+  }
+  .summary-box ul { list-style: none; padding-left: 0; }
+  .summary-box li {
+    padding: 8px 0 8px 32px;
+    position: relative;
+    font-weight: 500;
+    color: #2c2c2c;
+    line-height: 1.7;
+  }
+  .summary-box li::before {
+    content: '🔥';
+    position: absolute;
+    left: 0;
+    font-size: 17px;
+  }
+  .infographic {
+    background: #fafafa;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 28px 24px;
+    margin: 28px 0;
+  }
+  .infographic-title {
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--primary-dark);
+    text-align: center;
+    margin-bottom: 22px;
+    letter-spacing: -0.3px;
+  }
+  .bar-chart { margin: 20px 0; }
+  .bar-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+    gap: 12px;
+  }
+  .bar-label {
+    width: 110px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #333;
+    text-align: right;
+  }
+  .bar-track {
+    flex: 1;
+    height: 32px;
+    background: #ececec;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+  }
+  .bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 12px;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+  .bar-fill.gray {
+    background: linear-gradient(90deg, #95a5a6 0%, #bdc3c7 100%);
+  }
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin: 22px 0;
+  }
+  .stat-card {
+    background: white;
+    border: 2px solid var(--primary);
+    border-radius: 8px;
+    padding: 18px 16px;
+    text-align: center;
+  }
+  .stat-card .num {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--primary);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .stat-card .label {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.4;
+  }
+  .donut-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 16px 0;
+    flex-wrap: wrap;
+  }
+  .donut-text {
+    flex: 1;
+    min-width: 200px;
+    font-size: 14px;
+    color: #444;
+    line-height: 1.7;
+  }
+  .quote {
+    background: #f8f9fa;
+    border-left: 4px solid var(--accent);
+    padding: 18px 22px;
+    margin: 22px 0;
+    font-style: italic;
+    color: #444;
+    font-size: 16px;
+  }
+  .impact-box {
+    background: var(--danger);
+    border-radius: 8px;
+    padding: 22px 24px;
+    margin: 24px 0;
+  }
+  .impact-box h3 {
+    border-left: none;
+    padding-left: 0;
+    margin-top: 0;
+    color: var(--primary-dark);
+    margin-bottom: 12px;
+  }
+  .action-box {
+    background: #eaf6ff;
+    border: 2px dashed #2980b9;
+    border-radius: 10px;
+    padding: 22px 24px;
+    margin: 28px 0;
+  }
+  .action-box h3 {
+    border-left: none;
+    padding-left: 0;
+    margin-top: 0;
+    color: #1f618d;
+    margin-bottom: 12px;
+  }
+  .action-box ol { padding-left: 22px; }
+  .action-box li { margin-bottom: 10px; line-height: 1.7; }
+  .hashtags {
+    margin: 36px 0 18px 0;
+    padding: 18px 0;
+    border-top: 2px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .hashtags span {
+    display: inline-block;
+    background: var(--highlight);
+    color: var(--primary-dark);
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin: 4px 4px 4px 0;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .disclaimer {
+    background: #f4f4f4;
+    border-radius: 8px;
+    padding: 16px 18px;
+    font-size: 12px;
+    color: #777;
+    line-height: 1.6;
+    margin-top: 24px;
+  }
+  .sources {
+    margin-top: 22px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .sources h3 {
+    border-left: none;
+    padding-left: 0;
+    color: var(--text);
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  .sources ul { padding-left: 18px; }
+  .sources li { margin-bottom: 6px; }
+  .sources a { color: #2980b9; text-decoration: none; }
+  .sources a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <span class="category-tag">🏠 부동산·주거</span>
+  <h1>"전세는 박물관에 보내라"… 서울 월세 평균 <span style="color:var(--primary)">152만 8천원</span>, 신규계약 <span style="color:var(--primary)">70.5%</span>가 월세 됐다</h1>
+  <div class="meta">📅 2026년 4월 27일 · 한국이슈 아티클 · 데이터 기반 탐사 보도</div>
+
+  <div class="lead">
+    "올해는 전세로 옮기자"는 말이 한국에서 점점 농담이 되고 있다. <strong>2026년 1분기 서울 임대차 확정일자 중 월세 비중이 70.5%를 기록</strong>해 사상 처음 70% 선을 뚫었다. 평균 월세는 <strong>152만 8천원(3월)</strong>으로 1년 사이 18만 5천원 올라 직장인 신용카드 한 장이 통째로 사라지는 충격이다. 거기에 2026년 전국 아파트 입주물량은 <strong>17만 2,270세대로 전년 대비 28% 급감</strong>, 서울은 <strong>1만 6,412가구로 반토막</strong>이 났다. 전세는 그만큼 더 귀해지고, 귀해진 전세는 다시 월세로 떠밀린다. 임대차 시장의 판이 통째로 뒤집혔다.
+  </div>
+
+  <div class="summary-box">
+    <h3>3줄 요약 · 지금 무슨 일이 벌어졌나</h3>
+    <ul>
+      <li>서울 아파트 신규 임대차 10건 중 7건이 월세 — 전세 세입자가 '소수 종족'이 됐다</li>
+      <li>2026년 입주물량 28% 급감 → 전세값이 매매값보다 빠르게 뛰는 역전 현상 가속</li>
+      <li>강남3구 평균 월세 250만원 돌파, 청년·서민은 외곽 빌라·오피스텔로 밀려나는 중</li>
+    </ul>
+  </div>
+
+  <h2>① 통계가 말하는 '전세 멸종'의 속도</h2>
+
+  <p>한국부동산원과 서울시 자료를 교차 분석하면 임대차 시장이 단순한 '월세 증가'가 아니라 <strong>구조적 전환</strong> 단계에 진입했음을 보여준다. 2025년 1월 134만 3천원이던 서울 아파트 평균 월세는 같은 해 12월 147만 6천원, 2026년 1월 150만 4천원, 2월 151만 5천원, 3월 152만 8천원으로 <strong>14개월 연속 우상향</strong>했다. 매월 평균 1만 3천원씩 올라간 셈이다.</p>
+
+  <div class="infographic">
+    <div class="infographic-title">📊 서울 아파트 평균 월세 변화 (단위: 만원)</div>
+    <div class="bar-chart">
+      <div class="bar-row">
+        <div class="bar-label">2025.01</div>
+        <div class="bar-track"><div class="bar-fill gray" style="width:65%">134.3</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">2025.12</div>
+        <div class="bar-track"><div class="bar-fill gray" style="width:72%">147.6</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">2026.01</div>
+        <div class="bar-track"><div class="bar-fill" style="width:74%">150.4</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">2026.02</div>
+        <div class="bar-track"><div class="bar-fill" style="width:75%">151.5</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">2026.03</div>
+        <div class="bar-track"><div class="bar-fill" style="width:76%">152.8</div></div>
+      </div>
+    </div>
+    <p style="font-size:12px;color:#777;text-align:center;margin-top:8px;">* 자료: 한국부동산원 월세통합지수, 서울시 부동산정보광장</p>
+  </div>
+
+  <p>가격보다 더 충격적인 건 <strong>비중의 역전</strong>이다. 2026년 1분기 서울 임대차 확정일자 통계에서 월세 비중이 70.5%로 집계됐다. 5년 전인 2021년만 해도 같은 지표는 40% 안팎이었다. <strong>5년 만에 30%포인트가 옮겨갔다.</strong> 빌라·오피스텔로 범위를 넓히면 더 극단적이다. 신규 임대차 10건 중 7~8건이 월세고, 서울 빌라 시장에선 전세 매물 자체가 '품절' 상태다.</p>
+
+  <div class="stat-grid">
+    <div class="stat-card">
+      <span class="num">70.5%</span>
+      <div class="label">2026년 1Q 서울 임대차<br>월세 비중 (사상 첫 70% 돌파)</div>
+    </div>
+    <div class="stat-card">
+      <span class="num">152.8만</span>
+      <div class="label">2026년 3월 서울 아파트<br>평균 월세 (역대 최고)</div>
+    </div>
+    <div class="stat-card">
+      <span class="num">▲28%</span>
+      <div class="label">2026년 전국 입주물량<br>전년 대비 감소율</div>
+    </div>
+    <div class="stat-card">
+      <span class="num">1.6만호</span>
+      <div class="label">2026년 서울 입주물량<br>(전년 대비 48% 급감)</div>
+    </div>
+  </div>
+
+  <h2>② 왜 지금? — 전세 붕괴의 4가지 도미노</h2>
+
+  <h3>1️⃣ 전세사기 트라우마 — '깡통전세' 공포가 시장을 바꿨다</h3>
+  <p>2022~2024년 전국을 휩쓴 빌라·오피스텔 전세사기 피해는 한국 임차인의 행동을 영구적으로 바꿔놓았다. 큰돈을 한 번에 묶어두는 전세보증금에 대한 불신이 커지면서, 세입자 스스로가 "차라리 월세가 안전하다"고 선택하는 경향이 두드러졌다. 빌라·오피스텔의 경우 <strong>10곳 중 7곳이 월세 계약</strong>으로 굳어졌고, 이 흐름이 아파트로 옮겨붙었다.</p>
+
+  <h3>2️⃣ 입주절벽 — 새 아파트가 사라진다</h3>
+  <p>2026년 4월 발표된 전국 아파트 입주전망지수는 <strong>69.3</strong>으로, 15개월 만에 70선이 무너졌다. 전월(94.4) 대비 25.1포인트 폭락이다. 실제 입주물량도 17만 2,270세대로 2025년(23만 8,372세대) 대비 28% 줄었다. 서울은 더 심각해 1만 6,412가구로 반토막. 새 아파트가 줄면 기존 전세 매물이 풀리지 않고, 풀리지 않으면 가격이 뛴다. 그리고 가격이 뛰면 집주인은 전세를 거둬들이고 월세로 돌린다.</p>
+
+  <h3>3️⃣ 금리 역설 — 집주인이 월세를 더 좋아하게 됐다</h3>
+  <p>예금금리가 한 자릿수 후반에서 바닥을 다지는 동안, 월세 환산 수익률은 연 4~5%대를 유지하고 있다. 집주인 입장에서 전세 보증금 5억 원을 받느니, 보증금 1억 원에 월세 150만 원을 받는 쪽이 <strong>현금흐름·세무·갈아타기</strong> 모든 면에서 유리해졌다. 여기에 주담대 금리 상승, 잔금대출 규제 강화까지 겹치면서 전세 보증금 반환 자체가 부담이 된 다주택자들이 월세 전환을 가속화했다.</p>
+
+  <h3>4️⃣ 5월 양도세 중과 유예 종료 — 매물 동결</h3>
+  <p>2026년 5월 다주택자 양도세 중과 유예가 종료될 가능성이 거론되면서, 다주택자들은 매도 대신 <strong>'버티기 + 월세 받기'</strong> 전략으로 선회했다. 매물이 시장에 나오지 않으니 매매도, 전세도 마르고, 결국 월세만 살아남는 기형적 구조가 굳어진다.</p>
+
+  <h2>③ 임차인의 지갑이 통째로 털린다 — 진짜 부담의 크기</h2>
+
+  <div class="infographic">
+    <div class="infographic-title">💸 자치구별 평균 월세 (2026년 3월 기준, 단위: 만원)</div>
+    <div class="bar-chart">
+      <div class="bar-row">
+        <div class="bar-label">강남구</div>
+        <div class="bar-track"><div class="bar-fill" style="width:95%">266.3</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">용산구</div>
+        <div class="bar-track"><div class="bar-fill" style="width:96%">268.1</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">서초구</div>
+        <div class="bar-track"><div class="bar-fill" style="width:92%">258.9</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">송파구</div>
+        <div class="bar-track"><div class="bar-fill" style="width:74%">208.6</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">서울 평균</div>
+        <div class="bar-track"><div class="bar-fill gray" style="width:55%">152.8</div></div>
+      </div>
+    </div>
+    <p style="font-size:12px;color:#777;text-align:center;margin-top:8px;">* 한국부동산원 월세 시세 기준 · 보증금 별도</p>
+  </div>
+
+  <p>대기업 신입사원 평균 월급(세후 약 280만원) 기준으로 계산해 보자. 강남·서초·용산 평균 월세 250만 원을 내면 <strong>월급의 89%가 집세로 사라진다.</strong> 서울 평균(152.8만 원)으로 옮겨도 월급의 절반이 넘어간다. 청년월세지원(월 20만 원) 같은 정부 정책은 월세 한 달치를 '13.1%' 보전해주는 수준에 불과하다.</p>
+
+  <div class="quote">
+    "전세 자금 안 모이고, 월세는 매년 오르고, 새 아파트는 안 들어오고. 한국에서 자가 마련은커녕 임대료 인플레이션만 따라잡기도 벅찬 시대가 된 것 같다." — 2026년 4월 부동산 커뮤니티에 올라온 30대 직장인의 글</div>
+
+  <h3>전세→월세 전환의 '숨겨진 비용'</h3>
+  <p>전세를 월세로 갈아탈 때 표면 비용은 보증금 차액과 월세지만, 진짜 부담은 <strong>'자산 형성 기회의 소멸'</strong>이다. 전세는 만기에 보증금이 통째로 돌아오는 강제 저축 기능을 했다. 월세는 그 돈이 매달 집주인의 통장으로 흘러나가 다시는 돌아오지 않는다. 통계청 추정에 따르면 서울 평균 월세 152만 원을 30년 납부한다면 약 <strong>5억 4천만 원</strong>이 임대료로 사라진다. 이는 한 채의 아파트 가격에 맞먹는 액수다.</p>
+
+  <h2>④ 숨겨진 이면 — 통계에 잡히지 않는 '반전세' 군집</h2>
+
+  <p>현재 통계가 잡지 못하는 사각지대가 하나 있다. 바로 <strong>'반전세'</strong>다. 보증금 2억~3억 원에 월세 50만~100만 원을 얹는 형태로, 표면적으로는 '전세 비슷'이지만 실질은 월세에 가깝다. 한국부동산원이 통합 월세지수에서 반전세를 월세 항목으로 분류하기 시작한 2024년 이후, 월세 통계는 자연스럽게 부풀어 보이지만 실제 임차인의 체감 부담은 그보다 더 크다는 게 현장의 평가다.</p>
+
+  <p>또 하나 주목할 흐름은 <strong>'월세 갱신계약'의 폭증</strong>이다. 지난해 서울 아파트 전·월세 갱신계약 9만 8,480건 중 전세에서 월세로 전환된 갱신계약이 <strong>5,187건(5.26%)</strong>으로 최근 5년 새 최다를 기록했다. 만기를 맞은 임차인이 '전세 그대로'를 요청해도 집주인이 받아주지 않는 사례가 누적되고 있다는 뜻이다.</p>
+
+  <div class="impact-box">
+    <h3>🔥 한 줄 진단</h3>
+    <p style="margin-bottom:0;">한국 임대차 시장은 더 이상 '전세 vs 월세'의 선택지가 아니다. 월세는 표준이 됐고, 전세는 자산가의 잔존 옵션으로 남았다. 이는 단순한 가격 변동이 아니라 <strong>주거 사다리의 한 칸이 통째로 빠진 사건</strong>이다.</p>
+  </div>
+
+  <h2>⑤ 나에게 미치는 영향 — 세대별 시나리오</h2>
+
+  <h3>👶 사회초년생(20대 후반~30대 초반)</h3>
+  <p>월급의 40~60%가 임대료로 빠져나가는 구조가 굳어진다. 청년도약계좌, 청년주택드림청약 같은 정부 적금은 '월세 갈증'을 이기지 못한다. <strong>실질 가처분 소득의 압축</strong>이 결혼·출산 지연을 더 가속화할 가능성이 크다.</p>
+
+  <h3>👨‍👩‍👧 30~40대 가족 단위</h3>
+  <p>전세 만기 → 월세 전환 → 자녀 학군 따라 외곽 이주의 도미노가 빈번해진다. 직장 통근 시간 1시간 추가는 일상이 되고, 사교육비·교통비까지 감안한 '주거 총비용'이 가계의 가장 큰 변수가 된다.</p>
+
+  <h3>👴 50~60대 다주택자</h3>
+  <p>전세 보증금 반환 압박이 누적되면서 일부는 월세 전환으로 버틴다. 그러나 5월 양도세 유예 종료 + 종부세 부담 + 세입자 갈등으로 <strong>강제 매도 압박</strong>도 동시에 커지고 있다. 일부 강남 단지에서 8주 연속 가격 하락이 나타나는 이유다.</p>
+
+  <h2>⑥ 정부와 시장의 대응, 충분한가</h2>
+
+  <p>정부는 2026년 청년월세지원(최대 480만 원/24개월), 공공임대주택 5만호 추가 공급, 청년미래적금(최대 2,200만 원) 등을 내놨다. 그러나 <strong>월 20만 원 지원</strong>으로는 152.8만 원 월세의 13% 수준만 메울 수 있다. 공급 측면에서도 입주물량이 28% 줄어든 가운데 새 공공임대 5만호는 전체 임대 수요의 5% 미만이다.</p>
+
+  <p>전문가들은 ▲ 임대차3법(전월세상한제·계약갱신청구권·전월세신고제)의 실효성 재점검, ▲ 전세보증금반환보증의 보장 한도·심사 강화, ▲ 다주택자 매물 출회를 유도할 한시적 양도세 인하, ▲ 월세 세액공제 한도 확대(현 750만 원 → 1,500만 원) 등을 우선 카드로 거론한다. 하지만 <strong>총선 직후 정치 일정과 5월 양도세 유예 종료가 맞물려 어떤 정책도 빠른 시한 내 결론 나기 힘들다는 게 시장의 컨센서스</strong>다.</p>
+
+  <h2>⑦ 전망과 행동 제안</h2>
+
+  <div class="action-box">
+    <h3>🎯 임차인이 지금 당장 점검해야 할 5가지</h3>
+    <ol>
+      <li><strong>계약 만기 6개월 전부터 시세 모니터링</strong> — KB부동산·아실·호갱노노로 동일 평형 월세 시세를 매주 확인하라. 갱신협상에서 최강의 무기다.</li>
+      <li><strong>월세 세액공제 챙기기</strong> — 총급여 8천만 원 이하·무주택 세대주는 연 750만 원 한도로 17% 세액공제 가능. 13월의 월급이 된다.</li>
+      <li><strong>청년월세지원 신청</strong> — 만 19~34세, 월소득 기준 충족 시 월 20만 원 × 24개월(최대 480만 원). 자치구별 신청 시기 확인 필수.</li>
+      <li><strong>전세 → 월세 전환 시 보증금 활용</strong> — 회수한 전세보증금을 단순 예금이 아니라 청년도약계좌·ISA·우량 ETF로 분산해 임대료 인플레이션 헤지.</li>
+      <li><strong>전세 계약 시 보증보험 100% 가입</strong> — HUG 전세보증, 임대인 동의 없이도 가입 가능한 상품 활용. 깡통전세 시대의 최소 안전장치.</li>
+    </ol>
+  </div>
+
+  <p>2026년 하반기 임대차 시장의 핵심 변수는 ① 5월 양도세 유예 종료 여부, ② 한은 기준금리 추가 인하 폭, ③ 3기 신도시 입주 시점이다. 셋 중 하나라도 임차인에게 유리한 방향으로 움직이지 않으면, <strong>2027년 봄 또 한 번의 월세 폭등</strong>은 거의 정해진 수순이다.</p>
+
+  <p>전세는 한국이 만든 독특한 임대 제도였다. 그것이 한 세대 만에 이렇게 빨리 사라질 줄 누구도 예측하지 못했다. 통계 한 줄로는 보이지 않는 진짜 변화는, <strong>"이 도시에서 어떻게 살 것인가"</strong>라는 질문 자체가 바뀌었다는 점이다. 답은 더 이상 부동산 시장에만 있지 않다.</p>
+
+  <div class="hashtags">
+    <span>#전세멸종</span>
+    <span>#월세시대</span>
+    <span>#서울아파트월세</span>
+    <span>#입주절벽</span>
+    <span>#2026부동산</span>
+    <span>#전세대란</span>
+    <span>#임대차3법</span>
+    <span>#월세152만원</span>
+    <span>#청년월세지원</span>
+    <span>#양도세유예종료</span>
+    <span>#한국이슈</span>
+    <span>#부동산뉴스</span>
+  </div>
+
+  <div class="sources">
+    <h3>📚 출처 및 참고 자료</h3>
+    <ul>
+      <li><a href="https://www.dataeconomy.co.kr/news/articleView.html?idxno=35469">한국데이터경제신문 — 입주전망지수 69.3, 15개월 만에 최저</a></li>
+      <li><a href="https://www.munhwa.com/article/11556269">문화일보 — 내년 서울 아파트 입주 물량 반토막</a></li>
+      <li><a href="https://biz.heraldcorp.com/article/10641235">헤럴드경제 — 서울 입주 1.6만 반토막, 공급절벽 온다</a></li>
+      <li><a href="https://www.munhwa.com/article/11560326">문화일보 — 서울 아파트 월세 평균 152만 8천원</a></li>
+      <li><a href="https://www.reportera.co.kr/realestate/seoul-apartment-renewal-contract-over-50-percent-march-2026/">리포터아 — 서울 아파트 전세 월세로 진화 중</a></li>
+      <li><a href="https://econmingle.com/economy/january-2026-housing-statistics-monthly/">이코노믹밍글 — 임대시장 판도 변화, 2026년 1월 통계</a></li>
+      <li><a href="https://econmingle.com/economy/seoul-apartment-rent-exceeds-1-5-million/">이코노믹밍글 — 빌라·오피스텔 70%가 월세</a></li>
+      <li><a href="https://v.daum.net/v/20251227163004870">다음뉴스 — 2026년 주택시장, 가격보다 격차</a></li>
+    </ul>
+  </div>
+
+  <div class="disclaimer">
+    ※ 본 아티클은 공개된 통계·언론 보도를 종합·재구성한 데이터 저널리즘 콘텐츠입니다. 통계 수치는 작성 시점 기준이며 추후 발표 자료에 따라 변경될 수 있습니다. 특정 지역·단지·상품에 대한 매수·매도·임대 판단을 권유하는 투자 자문이 아니며, 투자 결정과 그 결과에 대한 책임은 독자 본인에게 있습니다.
+  </div>
+
+</div>
+</body>
+</html>
