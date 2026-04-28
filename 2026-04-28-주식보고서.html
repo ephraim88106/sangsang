@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🚨 코스피 6600 뚫었다! 시총 6000조 돌파…개미는 또 팔았다 | 2026.04.28 마켓 브리핑</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: #0a0e1a;
+  color: #e6e8ee;
+  line-height: 1.7;
+  padding: 20px 12px;
+}
+.container { max-width: 900px; margin: 0 auto; }
+.mono { font-family: 'JetBrains Mono', monospace; }
+
+/* HEADER */
+.header {
+  text-align: center;
+  padding: 32px 16px;
+  background: linear-gradient(135deg, #131a2e 0%, #0f1426 100%);
+  border-radius: 16px;
+  margin-bottom: 24px;
+  border: 1px solid #1f2740;
+  position: relative;
+  overflow: hidden;
+}
+.header::before {
+  content: '';
+  position: absolute; top:0; left:0; right:0; height:3px;
+  background: linear-gradient(90deg, #00c896, #ffd32a, #ff4757);
+}
+.header .date { color: #8b95a7; font-size: 13px; letter-spacing: 1.5px; margin-bottom: 8px;}
+.header h1 {
+  font-size: 28px; font-weight: 900; line-height:1.3;
+  background: linear-gradient(135deg, #00c896 0%, #ffd32a 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  margin-bottom: 12px;
+}
+.header .sub { color: #b8c0d2; font-size: 15px; margin-bottom: 18px;}
+.sentiment {
+  display: inline-block; padding: 8px 20px;
+  background: rgba(0,200,150,0.15);
+  border: 1px solid #00c896;
+  color: #00c896;
+  border-radius: 24px; font-weight: 700; font-size: 14px;
+}
+.sentiment .num { font-family:'JetBrains Mono', monospace; margin-left: 8px;}
+.hashtag { margin-top: 16px; color:#6e7891; font-size: 12px; }
+.hashtag span { margin-right: 6px; color: #ffd32a; }
+
+/* SECTION TITLE */
+.section-title {
+  font-size: 18px; font-weight: 700; margin: 28px 0 14px 4px;
+  color: #fff;
+  display: flex; align-items: center; gap: 10px;
+}
+.section-title::before {
+  content:''; width: 4px; height: 18px;
+  background: linear-gradient(180deg, #00c896, #ffd32a);
+  border-radius: 2px;
+}
+
+/* INDEX CARDS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
+.card {
+  background: #131a2e;
+  border: 1px solid #1f2740;
+  padding: 16px 14px;
+  border-radius: 12px;
+  transition: transform 0.2s;
+}
+.card:hover { transform: translateY(-2px); border-color: #2a3354;}
+.card .name {
+  font-size: 12px; color: #8b95a7; letter-spacing: 0.5px;
+  display:flex; justify-content: space-between; align-items:center;
+}
+.card .arrow { font-size: 14px; }
+.card .value {
+  font-family:'JetBrains Mono', monospace;
+  font-size: 22px; font-weight: 700; margin: 8px 0 4px;
+  color: #fff;
+}
+.card .change { font-family:'JetBrains Mono', monospace; font-size: 13px; font-weight:500;}
+.up { color: #00c896 !important; }
+.down { color: #ff4757 !important; }
+.neutral { color: #ffd32a !important; }
+
+/* ANALYSIS */
+.analysis {
+  background: #131a2e;
+  border: 1px solid #1f2740;
+  padding: 24px 22px;
+  border-radius: 14px;
+  margin-bottom: 8px;
+}
+.analysis h3 {
+  font-size: 17px; font-weight:700; color: #ffd32a;
+  margin-bottom: 10px; padding-bottom: 8px;
+  border-bottom: 1px dashed #2a3354;
+}
+.analysis h3:not(:first-child) { margin-top: 22px;}
+.analysis p { color: #c8cfdc; font-size: 14.5px; margin-bottom: 8px; }
+.analysis strong { color: #00c896; font-weight: 700;}
+.analysis em { color: #ff7b89; font-style: normal; font-weight: 600;}
+
+/* HEATMAP */
+.heatmap {
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px;
+  margin-bottom: 8px;
+}
+.heat {
+  padding: 18px 8px; border-radius: 8px; text-align:center;
+  font-size: 12px; font-weight: 600;
+}
+.heat .pct { font-family:'JetBrains Mono', monospace; font-size:14px; display:block; margin-top:6px; font-weight:700;}
+.h-strong-up { background: rgba(0,200,150,0.35); color: #00ffaa; border: 1px solid #00c896;}
+.h-up { background: rgba(0,200,150,0.18); color: #00c896;}
+.h-flat { background: rgba(255,211,42,0.15); color: #ffd32a;}
+.h-down { background: rgba(255,71,87,0.18); color: #ff4757;}
+
+/* STOCKS */
+.stock-item {
+  background: #131a2e; border: 1px solid #1f2740;
+  padding: 16px 18px; border-radius: 12px; margin-bottom: 10px;
+  border-left: 4px solid #00c896;
+}
+.stock-item.warn { border-left-color: #ffd32a; }
+.stock-item.danger { border-left-color: #ff4757; }
+.stock-item .head {
+  display:flex; justify-content:space-between; align-items:center;
+  margin-bottom: 8px;
+}
+.stock-item .ticker { font-weight: 800; font-size: 16px; color:#fff; }
+.stock-item .pct { font-family:'JetBrains Mono', monospace; font-weight:700; font-size: 15px;}
+.stock-item .desc { font-size: 13.5px; color: #b8c0d2;}
+
+/* CHECKPOINT */
+.checkpoint {
+  background: linear-gradient(135deg, #1a1230 0%, #131a2e 100%);
+  border: 1px solid #2a3354;
+  padding: 20px; border-radius: 14px;
+}
+.checkpoint ul { list-style: none; }
+.checkpoint li {
+  padding: 10px 0; border-bottom: 1px dashed #2a3354;
+  font-size: 14px; color: #c8cfdc;
+  display:flex; gap: 10px;
+}
+.checkpoint li:last-child { border-bottom: none;}
+.checkpoint .time {
+  color: #ffd32a; font-family:'JetBrains Mono', monospace;
+  font-size: 12px; min-width: 90px; font-weight: 600;
+}
+
+/* DISCLAIMER */
+.disclaimer {
+  margin-top: 28px; padding: 16px;
+  background: #0f1426; border: 1px dashed #2a3354;
+  border-radius: 10px;
+  font-size: 11.5px; color: #6e7891; line-height: 1.6;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .header h1 { font-size: 22px; }
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  .heatmap { grid-template-columns: repeat(2, 1fr);}
+  .card .value { font-size: 18px;}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="date">2026 · 04 · 28 (TUE) · MARKET BRIEFING</div>
+    <h1>🚨 코스피 6600 뚫었다!<br>시총 6000조 시대…개미는 또 던졌다</h1>
+    <div class="sub">"전쟁보다 실적이 무서웠다" — 외국인·기관 1.99조 쓸어담은 날, 운명의 빅테크 어닝위크 개막</div>
+    <div class="sentiment">
+      🔥 시장 심리 — <strong>EXTREME GREED</strong> <span class="num">82 / 100</span>
+    </div>
+    <div class="hashtag">
+      <span>#코스피6600</span><span>#시총6000조</span><span>#7천피카운트다운</span><span>#빅테크어닝위크</span><span>#FOMC428</span><span>#SK하이닉스</span><span>#비트코인8만달러</span>
+    </div>
+  </div>
+
+  <!-- 주요 지수 -->
+  <div class="section-title">📊 주요 지수 — 한·미 동시 사상최고치 행진</div>
+  <div class="grid">
+    <div class="card">
+      <div class="name">KOSPI <span class="arrow up">▲</span></div>
+      <div class="value">6,615.03</div>
+      <div class="change up">+139.40 (+2.15%)</div>
+    </div>
+    <div class="card">
+      <div class="name">KOSDAQ <span class="arrow up">▲</span></div>
+      <div class="value">1,218.42</div>
+      <div class="change up">+15.35 (+1.28%)</div>
+    </div>
+    <div class="card">
+      <div class="name">DOW <span class="arrow down">▼</span></div>
+      <div class="value">49,167.79</div>
+      <div class="change down">-62.92 (-0.13%)</div>
+    </div>
+    <div class="card">
+      <div class="name">S&P 500 <span class="arrow up">▲</span></div>
+      <div class="value">7,173.91</div>
+      <div class="change up">+8.83 (+0.12%) 🏆</div>
+    </div>
+    <div class="card">
+      <div class="name">NASDAQ <span class="arrow up">▲</span></div>
+      <div class="value">24,887.10</div>
+      <div class="change up">+50.50 (+0.20%) 🏆</div>
+    </div>
+  </div>
+
+  <!-- 환율 / 원자재 -->
+  <div class="section-title">💱 환율 · 원자재 · 디지털자산</div>
+  <div class="grid">
+    <div class="card">
+      <div class="name">USD/KRW <span class="arrow down">▼</span></div>
+      <div class="value">1,488.20</div>
+      <div class="change down">-3.40 (-0.23%)</div>
+    </div>
+    <div class="card">
+      <div class="name">WTI 유가 <span class="arrow up">▲</span></div>
+      <div class="value">$97.18</div>
+      <div class="change up">+0.68 (+0.70%)</div>
+    </div>
+    <div class="card">
+      <div class="name">금 (XAU) <span class="arrow up">▲</span></div>
+      <div class="value">$4,810.42</div>
+      <div class="change up">+22.10 (+0.46%)</div>
+    </div>
+    <div class="card">
+      <div class="name">BITCOIN <span class="arrow up">▲</span></div>
+      <div class="value">$79,229</div>
+      <div class="change up">+1.8% (8만달러 임박)</div>
+    </div>
+  </div>
+
+  <!-- 핵심 분석 -->
+  <div class="section-title">🔥 오늘의 핵심 분석 — 표면 너머의 진실</div>
+  <div class="analysis">
+
+    <h3>① 왜 갑자기 폭발했나 — "전쟁보다 실적이 무서웠다"</h3>
+    <p>
+      어제(27일) 코스피는 사상 처음으로 <strong>6600선을 돌파</strong>했고 시가총액은 <strong>6,000조 원</strong>을 넘어섰다.
+      불과 한 달 전까지만 해도 미국-이란 핵 갈등에 시장은 공포에 짓눌려 있었다. 그런데 결과는?
+      <em>중동 리스크가 누그러지자, 시장은 단 이틀 만에 'V자' 수직 반등을 그렸다.</em>
+      투자자들이 본 진짜 신호는 <strong>"불안 해소 + 빅테크 어닝 + HBM 슈퍼사이클"</strong>의 트리플 콤보였다.
+      개인이 1조 9,757억 원을 던지는 동안, 외국인(+8,906억)과 기관(+1조 1,008억)은 무서울 정도로 매집했다.
+      "또 올랐네"라며 익절 버튼을 누른 개미들이 가장 후회하는 하루가 됐다.
+    </p>
+
+    <h3>② 진짜 주인공 — SK하이닉스 영업이익률 72%의 충격</h3>
+    <p>
+      SK하이닉스가 1분기 매출 <strong>52조 5,763억, 영업이익 37조 6,103억(영업이익률 72%)</strong>을 발표했다.
+      이건 반도체 회사가 아니라 <em>현금 인쇄기다.</em> 주가는 단숨에 5.97% 급등하며 <strong>130만 원</strong>을 찍었고,
+      올해만 <strong>+99.7%</strong> 상승했다. 삼성전자도 22만 4,500원(+2.28%)으로 함께 신고가.
+      시장이 던지는 메시지는 명확하다 — "HBM 슈퍼사이클은 끝나지 않았다, 이제 시작이다."
+      필라델피아 반도체 지수도 <strong>17거래일 연속 상승</strong>이라는 전무후무한 기록을 쓰는 중이다.
+    </p>
+
+    <h3>③ 미국·한국 연결 고리 — 운명의 한 주</h3>
+    <p>
+      S&P500과 나스닥이 어제 또다시 <strong>사상 최고치</strong>를 경신했다. 그러나 다우는 -0.13%로 미세 하락 —
+      이는 <em>"빅테크만 살아남는 양극화"</em>를 보여주는 위험 신호다.
+      오늘 새벽(한국시간 4/30) FOMC 결과가 발표되고, 같은 날 밤 마이크로소프트·구글·메타·아마존이 한꺼번에 실적을 공개한다.
+      AI 자본지출(CAPEX)이 매출 성장률을 따라잡고 있는지가 <strong>전체 글로벌 증시의 다음 방향</strong>을 결정한다.
+      메타의 1,150~1,350억 달러 CAPEX 가이던스, 알파벳의 2025년 대비 2배 급증 — 이 숫자들이 정당화되지 않으면
+      "AI 거품" 논쟁이 다시 점화된다.
+    </p>
+
+    <h3>④ 리스크 — 너무 빨리 올라서 무서운 것들</h3>
+    <p>
+      ⚠️ <strong>WTI 97달러 돌파</strong> — 인플레이션 재점화 우려. 파월 의장이 비둘기파적 발언을 하기 어려워졌다.<br>
+      ⚠️ <strong>개인 -2조 순매도</strong> — 차익실현 압력 누적, 단기 변동성 트리거.<br>
+      ⚠️ <strong>코스피 RSI 과열권 진입</strong> — 6600 위에서는 단 한 번의 실적 미스도 -3% 갭다운으로 직결.<br>
+      ⚠️ <strong>비트코인 8만 달러 저항선</strong> — 돌파 못하면 7만 달러 되돌림 가능.
+    </p>
+  </div>
+
+  <!-- 섹터 히트맵 -->
+  <div class="section-title">🌡️ 섹터 히트맵 — 어디로 돈이 몰렸나</div>
+  <div class="heatmap">
+    <div class="heat h-strong-up">반도체<span class="pct">+4.82%</span></div>
+    <div class="heat h-up">2차전지<span class="pct">+2.15%</span></div>
+    <div class="heat h-up">금융<span class="pct">+1.93%</span></div>
+    <div class="heat h-flat">바이오<span class="pct">+0.42%</span></div>
+    <div class="heat h-down">에너지<span class="pct">-0.87%</span></div>
+  </div>
+
+  <!-- 주목 종목 -->
+  <div class="section-title">🎯 오늘 반드시 봐야 할 3종목·이슈</div>
+
+  <div class="stock-item">
+    <div class="head">
+      <span class="ticker">SK하이닉스 (000660)</span>
+      <span class="pct up">+5.97% · ₩1,295,000</span>
+    </div>
+    <div class="desc">
+      <strong>1분기 영업이익률 72%</strong>의 충격적 실적. 외국인·기관 동반 매수.
+      엔비디아 차세대 GPU에 HBM4 단독 공급 가능성 — 향후 포인트는 5월 컨콜의 <em>HBM4 양산 일정과 마이크론 견제 카드</em>.
+    </div>
+  </div>
+
+  <div class="stock-item warn">
+    <div class="head">
+      <span class="ticker">삼성전자 (005930)</span>
+      <span class="pct up">+2.28% · ₩224,500</span>
+    </div>
+    <div class="desc">
+      목표주가 줄상향 행렬. 그러나 진짜 관전 포인트는 <strong>HBM4 12단 엔비디아 퀄 통과 여부</strong>.
+      통과 시 25만 원 돌파, 실패 시 단기 차익실현 트리거 가능.
+    </div>
+  </div>
+
+  <div class="stock-item danger">
+    <div class="head">
+      <span class="ticker">에너지·석유주 — 단기 경계</span>
+      <span class="pct down">-0.87% (섹터)</span>
+    </div>
+    <div class="desc">
+      이란-미국 핵협상 재개 소식에 정유·E&P주 일제히 약세. 그러나 <em>WTI는 오히려 97달러 돌파</em>.
+      이 디커플링은 일주일 내 정상화 — 단기 추격매도 자제, 이번 주 OPEC+ 회의 코멘트 확인 필수.
+    </div>
+  </div>
+
+  <!-- 체크포인트 -->
+  <div class="section-title">⏰ 내일·이번 주 체크포인트</div>
+  <div class="checkpoint">
+    <ul>
+      <li><span class="time">04/29 (수)</span><span>🇺🇸 <strong>FOMC 금리 결정</strong> + 파월 기자회견 (한국시간 새벽 3시) — 동결 유력, 매파/비둘기 톤이 변수</span></li>
+      <li><span class="time">04/29 (수)</span><span>🇺🇸 미국 1분기 GDP 속보치 발표 — 컨센서스 +2.4%</span></li>
+      <li><span class="time">04/29 야간</span><span>🚀 <strong>빅테크 4종 동시 실적</strong>: MSFT · GOOGL · META · AMZN — AI CAPEX 정당화 시험대</span></li>
+      <li><span class="time">04/30 (목)</span><span>🇺🇸 PCE 물가지수 발표 — 연준이 가장 중시하는 지표, 핵심 PCE +0.3% MoM 예상</span></li>
+      <li><span class="time">05/01 (금)</span><span>🇰🇷 한국 4월 수출입 동향 — 반도체 단가 상승분 반영 여부 핵심</span></li>
+      <li><span class="time">05/02 (금)</span><span>🇺🇸 4월 비농업고용지표 — 시장 컨센서스 +18만 명</span></li>
+    </ul>
+  </div>
+
+  <!-- 면책 -->
+  <div class="disclaimer">
+    ⚠️ 본 보고서는 공개된 시장 데이터와 언론 보도를 바탕으로 작성된 자료이며, 특정 종목의 매수·매도를 권유하지 않습니다.<br>
+    모든 투자 판단과 그에 따른 손익은 투자자 본인의 책임이며, 본 자료의 정보 정확성에 대해 작성자는 어떠한 법적 책임도 지지 않습니다.<br>
+    © 2026 Daily Market Briefing · Generated 2026.04.28
+  </div>
+
+</div>
+</body>
+</html>
