@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🚨 코스피 6690 또 신고가! 그런데 美 빅테크는 시간외 폭락 — 4월 30일 시장 브리핑</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{
+    --bg:#0a0e1a;
+    --surface:#121826;
+    --surface-2:#1a2236;
+    --border:#26304a;
+    --text:#e8ecf5;
+    --text-dim:#9aa3b8;
+    --up:#00c896;
+    --down:#ff4757;
+    --neutral:#ffd32a;
+    --accent:#5b8def;
+  }
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Noto Sans KR',sans-serif;
+    line-height:1.7;
+    padding:20px 12px;
+    min-height:100vh;
+    background-image:radial-gradient(circle at 10% 0%,rgba(91,141,239,.08) 0%,transparent 50%),radial-gradient(circle at 90% 100%,rgba(0,200,150,.06) 0%,transparent 50%);
+  }
+  .num,code{font-family:'JetBrains Mono','Courier New',monospace;font-variant-numeric:tabular-nums}
+  .container{max-width:900px;margin:0 auto}
+
+  /* Header */
+  .header{
+    background:linear-gradient(135deg,#1a2236 0%,#0f1422 100%);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:32px 28px;
+    margin-bottom:20px;
+    position:relative;
+    overflow:hidden;
+  }
+  .header::before{
+    content:'';position:absolute;top:0;left:0;right:0;height:3px;
+    background:linear-gradient(90deg,var(--up),var(--accent),var(--down));
+  }
+  .date-badge{
+    display:inline-block;
+    background:rgba(91,141,239,.15);
+    color:var(--accent);
+    padding:5px 14px;
+    border-radius:999px;
+    font-size:13px;
+    font-weight:500;
+    letter-spacing:.5px;
+    margin-bottom:14px;
+  }
+  .header h1{
+    font-size:28px;
+    font-weight:900;
+    line-height:1.35;
+    margin-bottom:14px;
+    background:linear-gradient(135deg,#fff 0%,#a8b3cc 100%);
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+  }
+  .sentiment{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+    align-items:center;
+    margin-top:8px;
+  }
+  .sentiment-pill{
+    background:rgba(255,71,87,.12);
+    color:var(--down);
+    border:1px solid rgba(255,71,87,.3);
+    padding:6px 14px;
+    border-radius:999px;
+    font-size:13px;
+    font-weight:600;
+  }
+  .sentiment-pill.greed{background:rgba(0,200,150,.12);color:var(--up);border-color:rgba(0,200,150,.3)}
+  .sentiment-pill.neutral{background:rgba(255,211,42,.12);color:var(--neutral);border-color:rgba(255,211,42,.3)}
+  .hashtags{
+    margin-top:16px;
+    color:var(--text-dim);
+    font-size:13px;
+    line-height:1.8;
+  }
+  .hashtags span{color:var(--accent);margin-right:6px}
+
+  /* Section */
+  .section{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:24px 22px;
+    margin-bottom:18px;
+  }
+  .section h2{
+    font-size:18px;
+    font-weight:700;
+    margin-bottom:18px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .section h2::before{
+    content:'';width:4px;height:18px;background:var(--accent);border-radius:2px;
+  }
+
+  /* Index cards */
+  .index-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px}
+  .idx-card{
+    background:var(--surface-2);
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:16px 14px;
+    transition:transform .2s;
+  }
+  .idx-card:hover{transform:translateY(-2px)}
+  .idx-name{font-size:13px;color:var(--text-dim);margin-bottom:8px;font-weight:500}
+  .idx-value{font-size:22px;font-weight:700;margin-bottom:6px}
+  .idx-change{font-size:13px;font-weight:600;display:flex;align-items:center;gap:4px}
+  .up{color:var(--up)}
+  .down{color:var(--down)}
+  .flat{color:var(--neutral)}
+  .arrow{font-size:14px}
+
+  /* Analysis */
+  .analysis{font-size:15px;color:#d3d9e8}
+  .analysis h3{
+    color:var(--accent);
+    font-size:16px;
+    font-weight:700;
+    margin:22px 0 10px;
+    padding-left:10px;
+    border-left:3px solid var(--accent);
+  }
+  .analysis p{margin-bottom:12px}
+  .analysis strong{color:#fff;font-weight:700}
+  .quote-box{
+    background:rgba(255,71,87,.08);
+    border-left:3px solid var(--down);
+    padding:14px 18px;
+    border-radius:6px;
+    margin:14px 0;
+    font-size:14px;
+    color:#ffb8be;
+  }
+  .quote-box.up-box{
+    background:rgba(0,200,150,.08);
+    border-left-color:var(--up);
+    color:#a3f1d4;
+  }
+
+  /* Heatmap */
+  .heatmap{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+    gap:8px;
+  }
+  .heat{
+    padding:18px 14px;
+    border-radius:8px;
+    text-align:center;
+    color:#fff;
+    font-weight:600;
+  }
+  .heat-name{font-size:13px;opacity:.95;margin-bottom:4px}
+  .heat-val{font-size:18px;font-weight:800;font-family:'JetBrains Mono',monospace}
+
+  /* Stock highlight */
+  .pick{
+    background:var(--surface-2);
+    border-left:3px solid var(--accent);
+    padding:16px 18px;
+    border-radius:8px;
+    margin-bottom:12px;
+  }
+  .pick-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:8px;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .pick-name{font-size:16px;font-weight:700}
+  .pick-tag{
+    font-size:11px;
+    padding:3px 10px;
+    border-radius:999px;
+    font-weight:600;
+  }
+  .tag-up{background:rgba(0,200,150,.18);color:var(--up)}
+  .tag-down{background:rgba(255,71,87,.18);color:var(--down)}
+  .tag-watch{background:rgba(91,141,239,.18);color:var(--accent)}
+  .pick p{font-size:14px;color:var(--text-dim);line-height:1.65}
+
+  /* Checkpoint */
+  .check-list{list-style:none}
+  .check-list li{
+    padding:12px 0 12px 28px;
+    position:relative;
+    border-bottom:1px dashed var(--border);
+    font-size:14px;
+  }
+  .check-list li:last-child{border:none}
+  .check-list li::before{
+    content:'▸';position:absolute;left:8px;color:var(--accent);font-weight:700;
+  }
+  .check-list strong{color:#fff}
+  .time-tag{
+    display:inline-block;
+    background:rgba(91,141,239,.15);
+    color:var(--accent);
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    padding:2px 8px;
+    border-radius:4px;
+    margin-right:8px;
+  }
+
+  /* Disclaimer */
+  .disclaimer{
+    text-align:center;
+    font-size:11px;
+    color:var(--text-dim);
+    padding:18px 12px;
+    line-height:1.7;
+    border-top:1px solid var(--border);
+    margin-top:8px;
+  }
+
+  @media (max-width:600px){
+    .header h1{font-size:22px}
+    .header{padding:24px 20px}
+    .section{padding:20px 16px}
+    .idx-value{font-size:20px}
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <header class="header">
+    <span class="date-badge">2026년 4월 30일 (목요일) · 한국 마감 / 美 시간외</span>
+    <h1>🚨 코스피 6690 또 신고가… 그런데 美 빅테크는 시간외 폭락하고, 비트코인은 7만 달러 붕괴 직전</h1>
+    <div class="sentiment">
+      <span class="sentiment-pill greed">🇰🇷 한국 심리: 탐욕(Greed) — 6,700 돌파 임박</span>
+      <span class="sentiment-pill neutral">🇺🇸 미국 심리: 중립(Mixed) — 연준 분열 + 빅테크 차익실현</span>
+      <span class="sentiment-pill">⚠️ 글로벌 리스크: 이란發 유가 + 4명 매파 반대표</span>
+    </div>
+    <div class="hashtags">
+      <span>#코스피6690</span><span>#사상최고가</span><span>#FOMC분열</span><span>#빅테크실적</span>
+      <span>#이란전쟁</span><span>#비트코인붕괴</span><span>#삼성전자</span><span>#알파벳어닝서프</span>
+    </div>
+  </header>
+
+  <!-- KEY INDEXES -->
+  <section class="section">
+    <h2>📊 주요 지수 — 한·미가 정반대로 갔다</h2>
+    <div class="index-grid">
+      <div class="idx-card">
+        <div class="idx-name">코스피 (KOSPI)</div>
+        <div class="idx-value num up">6,690.90</div>
+        <div class="idx-change up"><span class="arrow">▲</span>+49.88 (+0.75%)</div>
+      </div>
+      <div class="idx-card">
+        <div class="idx-name">코스닥 (KOSDAQ)</div>
+        <div class="idx-value num up">1,220.26</div>
+        <div class="idx-change up"><span class="arrow">▲</span>+4.68 (+0.39%)</div>
+      </div>
+      <div class="idx-card">
+        <div class="idx-name">다우존스</div>
+        <div class="idx-value num down">48,861.81</div>
+        <div class="idx-change down"><span class="arrow">▼</span>-280.12 (-0.57%)</div>
+      </div>
+      <div class="idx-card">
+        <div class="idx-name">S&amp;P 500</div>
+        <div class="idx-value num flat">7,135.95</div>
+        <div class="idx-change flat"><span class="arrow">━</span>-0.04%</div>
+      </div>
+      <div class="idx-card">
+        <div class="idx-name">나스닥</div>
+        <div class="idx-value num up">24,673.24</div>
+        <div class="idx-change up"><span class="arrow">▲</span>+0.04%</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FX & COMMODITIES -->
+  <section class="section">
+    <h2>💱 환율·원자재·코인 — 안전자산도 흔들린다</h2>
+    <div class="index-grid">
+      <div class="idx-card">
+        <div class="idx-name">원달러 환율</div>
+        <div class="idx-value num up">1,473.12</div>
+        <div class="idx-change up"><span class="arrow">▼</span>-15.50 (-1.04%) <span style="color:var(--text-dim);font-weight:400">원화 강세</span></div>
+      </div>
+      <div class="idx-card">
+        <div class="idx-name">WTI 원유</div>
+        <div class="idx-value num up">$101.24</div>
+        <div class="idx-change up"><span class="arrow">▲</span>+이란發 급등 ($107 터치)</div>
+      </div>
+      <div class="idx-card">
+        <div class="idx-name">금 (Spot)</div>
+        <div class="idx-value num down">$4,548</div>
+        <div class="idx-change down"><span class="arrow">▼</span>한 달 최저권 후 반등 시도</div>
+      </div>
+      <div class="idx-card">
+        <div class="idx-name">비트코인 (BTC)</div>
+        <div class="idx-value num down">$77,160</div>
+        <div class="idx-change down"><span class="arrow">▼</span>$80K 붕괴, 7만 사수 위협</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CORE ANALYSIS -->
+  <section class="section">
+    <h2>🔥 오늘의 핵심 분석 — 표면 너머의 진실</h2>
+    <div class="analysis">
+
+      <h3>① 한국 증시: 사상 최고가지만, 손은 외국인이 아니라 '기관'이었다</h3>
+      <p>코스피가 또다시 신기록을 갈아치웠다. 4월 29일 종가 <strong>6,690.90</strong>은 4일 연속 사상 최고가 행진의 정점이다. 4월 27일 6,615 → 4월 28일 6,641 → 4월 29일 6,690으로 시가총액 6,000조 원도 사실상 굳혔다. 그러나 시장의 결을 자세히 보면 <strong>주도세력이 외국인에서 기관으로 바뀌었다</strong>. 27일까지는 외국인 현물 + 선물 쌍끌이 매수가 핵심이었지만, 29일은 <strong>기관 매수</strong>가 견인했다. OpenAI發 단기 악재(글로벌 AI 회의론)가 장 초반 지수를 짓눌렀음에도 결국 기관이 받아내면서 신고가를 만들어낸 장면이 의미심장하다.</p>
+      <p>특히 <strong>삼성전자</strong>는 외국인 순매수에 힘입어 다시 강세 전환했다. PPI 안정 → 테크주 선호 → 1분기 실적 서프라이즈의 콤보가 여전히 살아있다는 신호다. 다만 반도체가 단기 과열 구간에 진입한 것은 부정할 수 없다. 대신증권 등은 "단기 과열 해소·매물 소화 국면" 가능성을 4월 5주차 리포트에서 명시적으로 언급했다.</p>
+
+      <h3>② 미국 증시: 표면은 평온, 시간외에서 빅테크 5% 폭락</h3>
+      <p>다우 -0.57%, S&amp;P 500 -0.04%, 나스닥 +0.04%. 정규장은 거의 보합으로 마감했지만 이건 <strong>가짜 평온</strong>이다. 진짜 충격은 마감 후 80초 안에 쏟아진 <strong>MAGA 4총사 실적</strong>에서 터졌다.</p>
+      <div class="quote-box up-box">✅ <strong>알파벳(Google) +6%</strong> — 매출 1,099억 달러로 컨센서스 1,070억 달러 압도. AI 자본지출 효과를 유일하게 '증명'한 회사. EPS $2.81 (예상 $2.63)</div>
+      <div class="quote-box">❌ <strong>메타 -5%</strong> — 매출 563억 달러로 비트했지만 2분기 가이던스 '플랫'이 시장의 인내심을 깼다.<br>❌ <strong>마이크로소프트 / 아마존 각 -3%</strong> — 어닝 비트에도 AI 자본지출 부담이 매출 성장률을 갉아먹기 시작했다는 우려.</div>
+      <p>핵심은 이거다. <strong>4사 합쳐 2026년 AI 인프라 자본지출이 6,500억 달러</strong> — 인류 역사상 최대 기업 자본투자다. 알파벳만 그 돈이 매출로 돌아오는 걸 보여줬고, 나머지 셋은 못 보여줬다. 30일 정규장에서 나스닥은 변동성이 클 가능성이 매우 높다.</p>
+
+      <h3>③ 연준 4명 매파 반대 — 1992년 이후 34년 만의 '대분열'</h3>
+      <p>FOMC는 기준금리를 <strong>3.50–3.75% 동결</strong>로 결정했다. 그러나 표결 결과가 충격적이다. <strong>8 대 4 분열</strong> — 4명이 반대표를 던진 것은 <strong>1992년 10월 이후 34년 만</strong>이다. 미란(Miran) 이사는 0.25%p 인하를 주장한 반면, 해맥·캐시카리·로건 총재는 동결에 찬성하면서도 "성명문에 완화 편향(easing bias)을 넣지 말라"고 반대했다. 비둘기 1, 매파 3의 정반대 방향 반대표가 동시에 튀어나온 보기 드문 그림이다.</p>
+      <p>파월의 입에서 나온 결정적 한마디: <strong>"인플레이션이 재상승한 일부 원인은 중동 분쟁발 글로벌 유가 상승"</strong>이다. 이 한마디가 시장의 '6월 인하' 베팅을 완전히 틀어버렸다. 거기에 파월은 트럼프의 법적 공세를 언급하며 "이사회에 무기한 잔류하겠다"고 선언했다. 정치 리스크까지 가격에 들어와야 한다.</p>
+
+      <h3>④ 원자재 비대칭: 유가는 ↑, 금은 ↓, 비트코인도 ↓</h3>
+      <p>이란-미국 긴장으로 WTI는 한때 $107까지 치솟은 뒤 $101 전후로 안착. 호르무즈 해협 봉쇄 우려가 핵심이다. 그런데 신기하게도 <strong>금이 한 달 최저권($4,548)</strong>까지 밀렸다. 이건 '인플레 헤지' 수요보다 '실질금리 상승(연준 동결+매파 코멘트)' 영향이 더 컸다는 신호. 비트코인도 $80K 붕괴 후 $77K까지 밀려, 위험자산-안전자산 동반 약세라는 매우 드문 패턴을 만들었다. <strong>"오일만 안전자산"</strong>인 시장이다.</p>
+    </div>
+  </section>
+
+  <!-- SECTOR HEATMAP -->
+  <section class="section">
+    <h2>🗺️ 코스피200 섹터 히트맵</h2>
+    <div class="heatmap">
+      <div class="heat" style="background:linear-gradient(135deg,#00c896,#00a87a)">
+        <div class="heat-name">반도체</div>
+        <div class="heat-val">+1.84%</div>
+      </div>
+      <div class="heat" style="background:linear-gradient(135deg,#3dd99c,#2db384)">
+        <div class="heat-name">금융</div>
+        <div class="heat-val">+0.92%</div>
+      </div>
+      <div class="heat" style="background:linear-gradient(135deg,#7fdcb0,#5cc497)">
+        <div class="heat-name">에너지</div>
+        <div class="heat-val">+1.55%</div>
+      </div>
+      <div class="heat" style="background:linear-gradient(135deg,#ffd32a,#e6b800)">
+        <div class="heat-name">바이오</div>
+        <div class="heat-val">+0.21%</div>
+      </div>
+      <div class="heat" style="background:linear-gradient(135deg,#ff8a96,#ff6b78)">
+        <div class="heat-name">2차전지</div>
+        <div class="heat-val">-0.78%</div>
+      </div>
+      <div class="heat" style="background:linear-gradient(135deg,#ff4757,#e63946)">
+        <div class="heat-name">자동차</div>
+        <div class="heat-val">-1.32%</div>
+      </div>
+    </div>
+    <p style="font-size:12px;color:var(--text-dim);margin-top:12px;line-height:1.6">반도체와 에너지가 동반 강세. <strong style="color:var(--up)">반도체</strong>는 빅테크 AI 자본지출 6,500억 달러 모멘텀, <strong style="color:var(--up)">에너지</strong>는 이란 발 유가 급등 직접 수혜. 반면 <strong style="color:var(--down)">2차전지</strong>는 단기 과열 매물 소화, <strong style="color:var(--down)">자동차</strong>는 고환율 탈선 효과 약화 우려.</p>
+  </section>
+
+  <!-- KEY PICKS -->
+  <section class="section">
+    <h2>🎯 주목할 종목·이슈 TOP 3</h2>
+
+    <div class="pick">
+      <div class="pick-head">
+        <div class="pick-name">1️⃣ 삼성전자 — 외국인이 다시 사기 시작했다</div>
+        <span class="pick-tag tag-up">강세 지속</span>
+      </div>
+      <p>4월 29일 코스피 신고가의 <strong>실질 주역</strong>. 1분기 실적 서프라이즈 + PPI 안정 + 알파벳發 AI 자본지출 가속화의 3단 콤보. 다만 단기 RSI 과열 구간 진입. 향후 포인트: <strong>5월 첫째 주 외국인 누적 순매수 강도 유지 여부</strong>가 6,700 돌파의 핵심 트리거.</p>
+    </div>
+
+    <div class="pick">
+      <div class="pick-head">
+        <div class="pick-name">2️⃣ 알테오젠 등 코스닥 제약·바이오 — 금리 인하 기대 재점화</div>
+        <span class="pick-tag tag-watch">관전 포인트</span>
+      </div>
+      <p>FOMC 매파 메시지에도 코스닥 바이오는 <strong>알테오젠 중심 강세</strong>를 유지. 핵심은 미란 이사의 '인하 반대표' — 비둘기파 결집 가능성을 시장이 미리 가격에 반영 중. 다만 호재 선반영 우려, 5월 ASCO 학회까지 이벤트 공백.</p>
+    </div>
+
+    <div class="pick">
+      <div class="pick-head">
+        <div class="pick-name">3️⃣ Meta(META) — 가이던스 쇼크, S&amp;P 500 끌어내릴 수 있다</div>
+        <span class="pick-tag tag-down">시간외 -5%</span>
+      </div>
+      <p>Q1 매출은 비트했지만 <strong>"2분기 매출 성장률 플랫" 가이던스</strong>가 시장 인내심을 끊어버렸다. AI 자본지출은 늘리는데 매출 성장은 멈춘다는 시그널. 30일 정규장에서 -5% 갭다운 시 <strong>S&amp;P 500 0.3%포인트 하방 압력</strong>으로 작용 가능. 한국 시장은 다음 거래일(5/2) 갭다운 가능성에 유의.</p>
+    </div>
+  </section>
+
+  <!-- TOMORROW CHECKPOINT -->
+  <section class="section">
+    <h2>📅 내일·다음 주 체크포인트</h2>
+    <ul class="check-list">
+      <li><span class="time-tag">4/30 22:30</span><strong>美 1분기 GDP 속보치</strong> — 시장 컨센서스 +1.8% QoQ. 둔화 시 비둘기 베팅 강화. 빅테크 갭다운과 결합되면 위험.</li>
+      <li><span class="time-tag">4/30 22:30</span><strong>美 신규 실업수당 청구건수</strong> — 22만 건 컨센. 노동시장 균열 신호 주시.</li>
+      <li><span class="time-tag">5/1 00:00</span><strong>한국 5월 1일 근로자의 날</strong> — 한국 증시 휴장. 글로벌 변동성 흡수 못 함.</li>
+      <li><span class="time-tag">5/1 21:30</span><strong>美 PCE 인플레이션 (3월)</strong> — 연준 핵심 지표. 헤드라인 +0.3% 예상. 상회 시 6월 인하 기대 추가 후퇴.</li>
+      <li><span class="time-tag">5/2 23:00</span><strong>美 4월 비농업 고용·실업률</strong> — 17만 명 컨센. 5월 FOMC 직전 마지막 데이터.</li>
+      <li><span class="time-tag">상시</span><strong>이란-미국 협상 동향</strong> — 호르무즈 봉쇄 시나리오 시 WTI $120 시야권. 한국 정유·조선 즉시 영향.</li>
+      <li><span class="time-tag">5/2</span><strong>한국 코스피200·코스닥150 정기 변경</strong> — 4/30 종료된 심사 결과 발표. 편입·편출 종목 변동성 확대.</li>
+    </ul>
+  </section>
+
+  <!-- DISCLAIMER -->
+  <div class="disclaimer">
+    본 보고서는 공개된 시장 데이터와 보도자료를 바탕으로 자동 생성된 정보 자료입니다.<br>
+    투자 권유나 매매 추천이 아니며, 투자 판단의 최종 책임은 투자자 본인에게 있습니다.<br>
+    수치는 발표 시점·집계 출처에 따라 차이가 있을 수 있으며, 실제 투자 전 반드시 공식 거래소·금융 데이터를 재확인하시기 바랍니다.<br>
+    <span style="color:var(--text-dim);opacity:.6">© 2026-04-30 데일리 마켓 브리핑</span>
+  </div>
+
+</div>
+</body>
+</html>
