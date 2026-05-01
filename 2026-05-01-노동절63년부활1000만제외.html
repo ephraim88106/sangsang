@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>63년만의 '노동절' 부활…그날, 1000만은 못 쉬었다 | 한국이슈</title>
+<meta name="description" content="2026년 5월 1일, '근로자의 날'이 63년만에 '노동절'이라는 본명을 되찾고 첫 법정공휴일이 됐다. 그러나 그 시각, 비정규직 856만8000명과 5인 미만 사업장 노동자 600만명, 플랫폼 라이더 100만명은 여전히 일하고 있었다. 이름은 회복했지만 격차는 22년 만에 역대 최대치를 찍었다.">
+<meta name="keywords" content="노동절, 근로자의 날, 법정공휴일, 비정규직, 5인 미만 사업장, 전태일, 민주노총, 한국노총, 플랫폼 노동, 정치·사법">
+<meta name="author" content="한국이슈 탐사보도팀">
+<meta property="og:title" content="63년만의 '노동절' 부활…그날, 1000만은 못 쉬었다">
+<meta property="og:description" content="이름은 돌아왔다. 휴일도 됐다. 그런데 왜 4만5000명이 거리로 쏟아졌나.">
+<meta property="og:type" content="article">
+<style>
+  :root {
+    --accent: #4338ca;       /* 정치·사법 = 인디고 */
+    --accent-soft: #eef2ff;
+    --accent-line: #c7d2fe;
+    --ink: #1f2937;
+    --ink-soft: #4b5563;
+    --line: #e5e7eb;
+    --warn: #dc2626;
+    --warn-soft: #fef2f2;
+    --gold: #d97706;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #ffffff;
+    color: var(--ink);
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+    font-size: 17px;
+  }
+  .wrap { max-width: 800px; margin: 0 auto; padding: 32px 22px 80px; }
+  .badge {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 999px;
+    letter-spacing: 0.02em;
+  }
+  .meta { color: #6b7280; font-size: 13px; margin: 14px 0 0; }
+  h1 {
+    font-size: 34px;
+    line-height: 1.35;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin: 14px 0 8px;
+    color: #111827;
+  }
+  h1 .hl { background: linear-gradient(transparent 60%, #fde68a 60%); }
+  .lede {
+    font-size: 19px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    margin: 20px 0 28px;
+    font-weight: 500;
+  }
+  .summary {
+    background: var(--accent-soft);
+    border-left: 4px solid var(--accent);
+    padding: 18px 22px;
+    border-radius: 4px;
+    margin: 28px 0;
+  }
+  .summary h3 {
+    margin: 0 0 10px;
+    font-size: 14px;
+    color: var(--accent);
+    letter-spacing: 0.04em;
+  }
+  .summary ul { margin: 0; padding-left: 18px; }
+  .summary li { margin-bottom: 6px; font-size: 16px; color: #1e1b4b; }
+  h2 {
+    font-size: 24px;
+    margin: 44px 0 14px;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 10px;
+    color: #111827;
+    letter-spacing: -0.01em;
+  }
+  h2 .num {
+    color: var(--accent);
+    font-weight: 800;
+    margin-right: 10px;
+  }
+  p { margin: 0 0 16px; }
+  blockquote {
+    border-left: 3px solid var(--gold);
+    background: #fffbeb;
+    padding: 14px 20px;
+    margin: 20px 0;
+    color: #78350f;
+    font-style: normal;
+    font-size: 16px;
+  }
+  .pullquote {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: var(--accent);
+    text-align: center;
+    margin: 36px 0;
+    padding: 18px 16px;
+    border-top: 2px solid var(--accent-line);
+    border-bottom: 2px solid var(--accent-line);
+  }
+
+  /* 인포그래픽 */
+  .infographic {
+    background: #fafafa;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 26px 22px;
+    margin: 30px 0;
+  }
+  .infographic h4 {
+    margin: 0 0 18px;
+    font-size: 18px;
+    color: #111827;
+    text-align: center;
+  }
+  .infographic h4 small { display:block; color:#6b7280; font-weight: 400; font-size: 12px; margin-top: 4px; }
+
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 18px 0;
+  }
+  .stat-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 16px 12px;
+    text-align: center;
+  }
+  .stat-card .num {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--accent);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+  .stat-card .num.warn { color: var(--warn); }
+  .stat-card .label { font-size: 12px; color: #6b7280; margin-top: 6px; line-height: 1.4; }
+
+  .barchart { margin: 20px 0; }
+  .bar-row { display: flex; align-items: center; margin-bottom: 10px; gap: 10px; }
+  .bar-row .l { width: 78px; font-size: 13px; color: var(--ink-soft); }
+  .bar-row .b {
+    flex: 1; height: 28px; background: #f3f4f6; border-radius: 6px; position: relative; overflow: hidden;
+  }
+  .bar-row .b > span {
+    position: absolute; left: 0; top: 0; bottom: 0;
+    background: linear-gradient(90deg, var(--accent), #6366f1);
+    border-radius: 6px;
+    display: flex; align-items: center; justify-content: flex-end;
+    color: #fff; font-size: 12px; font-weight: 700; padding-right: 8px;
+  }
+  .bar-row .b > span.regu { background: linear-gradient(90deg, #14b8a6, #2dd4bf); }
+  .bar-row .b > span.irre { background: linear-gradient(90deg, #f97316, #fb923c); }
+
+  .timeline { position: relative; padding-left: 26px; margin: 22px 0; }
+  .timeline::before {
+    content: ''; position: absolute; left: 9px; top: 6px; bottom: 6px;
+    width: 2px; background: var(--accent-line);
+  }
+  .tl-item { position: relative; padding-bottom: 18px; }
+  .tl-item::before {
+    content: ''; position: absolute; left: -22px; top: 5px;
+    width: 12px; height: 12px; border-radius: 50%;
+    background: var(--accent); border: 3px solid #fff; box-shadow: 0 0 0 2px var(--accent);
+  }
+  .tl-year { font-weight: 800; color: var(--accent); font-size: 14px; }
+  .tl-text { font-size: 14px; color: var(--ink-soft); }
+
+  .compare-table {
+    width: 100%; border-collapse: collapse; margin: 18px 0;
+    background: #fff; border: 1px solid var(--line); border-radius: 8px; overflow: hidden;
+  }
+  .compare-table th, .compare-table td {
+    padding: 12px; font-size: 14px; text-align: left; border-bottom: 1px solid var(--line);
+  }
+  .compare-table th {
+    background: var(--accent-soft); color: var(--accent); font-weight: 700;
+  }
+  .compare-table td.num { text-align: right; font-weight: 700; color: var(--ink); }
+
+  .alert {
+    background: var(--warn-soft); border-left: 4px solid var(--warn);
+    padding: 14px 18px; border-radius: 4px; margin: 20px 0; color: #7f1d1d;
+    font-size: 15px;
+  }
+  .alert strong { color: var(--warn); }
+
+  .tags { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--line); }
+  .tags span {
+    display: inline-block; background: var(--accent-soft); color: var(--accent);
+    padding: 6px 12px; border-radius: 999px; font-size: 13px; margin: 4px 4px 0 0;
+    font-weight: 600;
+  }
+  .disclaimer {
+    margin-top: 30px; padding: 18px; background: #f9fafb;
+    border-radius: 8px; font-size: 12px; color: #6b7280; line-height: 1.7;
+  }
+  .source-list {
+    margin-top: 24px; font-size: 12px; color: #6b7280;
+  }
+  .source-list b { color: var(--ink); }
+  .source-list ol { padding-left: 20px; margin: 8px 0 0; }
+  .source-list li { margin-bottom: 4px; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 26px; }
+    .lede { font-size: 17px; }
+    .stat-row { grid-template-columns: 1fr; }
+    .stat-card .num { font-size: 28px; }
+  }
+</style>
+</head>
+<body>
+<article class="wrap">
+
+  <span class="badge">🏛️ 정치·사법 · 단독 분석</span>
+  <p class="meta">2026.05.01 · 한국이슈 탐사보도팀</p>
+
+  <h1>63년만의 '<span class="hl">노동절</span>' 부활…<br>그날, <span class="hl">1000만</span>은 못 쉬었다</h1>
+
+  <p class="lede">
+    1963년 박정희가 지운 이름이 2026년 이재명 정부에서 돌아왔다. 5월 1일, 대한민국은 '근로자의 날' 대신 '노동절'을 처음으로 법정공휴일로 맞이했다. 은행 문은 닫혔고 주식시장은 멈췄다. 그러나 그 시각, 4만5000명이 광화문과 여의도에 운집해 외쳤다. <b>"이름은 돌아왔는데, 우리는 왜 못 쉬느냐."</b>
+  </p>
+
+  <div class="summary">
+    <h3>📌 한 줄 요약 3</h3>
+    <ul>
+      <li>'근로자의 날 → 노동절' 명칭 변경 + 법정공휴일 격상은 <b>1963년 이래 63년만</b>의 사건이다.</li>
+      <li>그러나 비정규직 <b>856만8000명</b>(역대 최대) · 5인 미만 사업장 <b>약 600만</b> · 플랫폼·특수고용 <b>약 100만</b>은 이날 사실상 못 쉬었다.</li>
+      <li>정규직-비정규직 임금격차는 <b>월 180만8000원</b>으로 통계 작성 22년 만에 역대 최대.</li>
+    </ul>
+  </div>
+
+  <h2><span class="num">01</span>"근로자의 날"은 어떻게 탄생했나 — 박정희가 지운 이름</h2>
+
+  <p>
+    1886년 5월 1일, 미국 시카고 헤이마켓 광장에서 8시간 노동을 외친 노동자들의 피를 기리며 전 세계가 5월 1일을 '메이데이(May Day)' 즉 '국제 노동절'로 채택한 지 140년이 지났다. 한국도 해방 직후인 1946년부터 노동절을 기념해왔다. 그런데 1963년 4월, 박정희 정부는 한 줄짜리 법으로 이날을 통째로 바꿔버렸다.
+  </p>
+
+  <p>
+    바뀐 이름은 '<b>근로자의 날</b>'. 바뀐 날짜는 <b>3월 10일</b>(한국노총 창립일). '노동(勞動)'이라는 단어 자체를 좌익·불온의 표현으로 본 군사정권은 "근면하게 일한다"는 의미의 <b>'근로(勤勞)'</b>로 단어를 갈아치웠다. 노동의 '주체성'이 사라지고, 윗선이 시키는 일을 성실히 해내는 '대상'으로 노동자를 재정의한 것이다.
+  </p>
+
+  <blockquote>
+    "노동은 단어가 아니라 권리다. '근로'는 일을 시키는 자의 언어, '노동'은 일하는 자의 언어다."<br>
+    — 양대노총 공동성명, 2026.05.01
+  </blockquote>
+
+  <p>
+    1994년 김영삼 정부 때 날짜만 5월 1일로 되돌아왔지만, 이름은 그대로 '근로자의 날'이었다. 그리고 30년이 더 흘렀다. 2025년 10월 26일 국회 본회의에서 '근로자의 날 제정에 관한 법률' 전부개정안이 여야 합의로 통과됐고, 11월 11일 법률 제21134호로 공포되며 명칭은 '노동절'로 회복됐다. 2026년 3월 31일 '공휴일에 관한 법률' 개정안이 통과되면서 4월 6일 국무회의 의결을 거쳐 마침내 <b>법정공휴일</b>로 격상됐다.
+  </p>
+
+  <div class="infographic">
+    <h4>대한민국 노동절 63년 연표<small>1963 → 2026</small></h4>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-year">1963</div><div class="tl-text">박정희 정부, '노동절'을 '근로자의 날'로 개명. 날짜도 3월 10일로 이동</div></div>
+      <div class="tl-item"><div class="tl-year">1970.11.13</div><div class="tl-text">전태일, "근로기준법을 준수하라" 외치며 분신. 한국 노동운동의 분기점</div></div>
+      <div class="tl-item"><div class="tl-year">1994</div><div class="tl-text">김영삼 정부, 날짜만 5월 1일로 환원 (이름은 여전히 '근로자의 날')</div></div>
+      <div class="tl-item"><div class="tl-year">2025.10.26</div><div class="tl-text">국회, '노동절' 명칭 회복 법안 본회의 통과(여야 합의)</div></div>
+      <div class="tl-item"><div class="tl-year">2026.03.31</div><div class="tl-text">'공휴일에 관한 법률' 개정안 통과 — 노동절 법정공휴일 격상</div></div>
+      <div class="tl-item"><div class="tl-year">2026.05.01</div><div class="tl-text"><b>법정공휴일 노동절 첫날</b>, 양대노총 4만5000명 도심 집결</div></div>
+    </div>
+  </div>
+
+  <h2><span class="num">02</span>4만5000명이 거리로 쏟아진 이유 — "이름만 돌려놨다"</h2>
+
+  <p>
+    이날 한국노총은 여의대로에 약 <b>3만명</b>, 민주노총은 광화문 세종대로에 주최 측 추산 <b>1만명</b>(경찰 추산 약 8000명)을 동원했다. 양대노총이 같은 날 같은 시각 도심에서 동시 집회를 연 것은 <b>1963년 명칭 변경 이후 63년만</b>이다. 비정규직 공동투쟁은 평화시장 전태일다리에서 동화면세점까지 2.9㎞를 행진했다.
+  </p>
+
+  <p class="pullquote">
+    "공휴일은 명패만 갈아 끼우는 일이 아니다. 일터의 룰이 바뀌어야 한다."
+  </p>
+
+  <p>
+    민주노총은 결의문에서 정확한 숫자를 들고 나왔다. <b>"1000만명이 넘는 기간제·특수고용·플랫폼·하청 등 비정규직 노동자에게는 헌법의 노동삼권과 근로기준법, 노조법의 권리가 제대로 보장되지 않는다."</b> 그리고 7월 총파업·원청교섭 쟁취 결의를 선언했다. 한국노총은 ① 노동기본권 강화 ② 노동시간 단축 ③ <b>65세 정년연장 법제화</b> ④ <b>주 4.5일제 도입</b>을 4대 요구로 못 박았다.
+  </p>
+
+  <h2><span class="num">03</span>숫자로 본 '노동절 사각지대' — 1000만의 침묵</h2>
+
+  <div class="infographic">
+    <h4>2026 노동절, 사실상 못 쉰 사람들<small>출처: 통계청·고용노동부·한국노동사회연구소(2025.8 기준)</small></h4>
+    <div class="stat-row">
+      <div class="stat-card">
+        <div class="num warn">856.8만</div>
+        <div class="label">비정규직 노동자<br>(통계 작성 이래 최대)</div>
+      </div>
+      <div class="stat-card">
+        <div class="num warn">600만+</div>
+        <div class="label">5인 미만 사업장<br>근로자<br>(공휴일법 적용 제외)</div>
+      </div>
+      <div class="stat-card">
+        <div class="num warn">100만+</div>
+        <div class="label">플랫폼·특수고용<br>(택배·배달·학습지·프리랜서)</div>
+      </div>
+    </div>
+    <p style="font-size:13px; color:#6b7280; text-align:center; margin: 8px 0 0;">
+      ※ 일부 중복 집계. 단, 단순 합산해도 한국 임금근로자의 절반 안팎이 '노동절 사각지대'에 해당.
+    </p>
+  </div>
+
+  <p>
+    가장 충격적인 사실. <b>5인 미만 사업장</b>은 공휴일법이 적용되지 않는다. 올해 첫 법정공휴일이 됐어도, 이들 약 600만명에게 5월 1일은 그저 '평일'이다. 사업주가 출근시켜도 1.5배 가산수당은 의무가 아니다. 처벌 규정도 없다. 한국일보의 표현 그대로 <b>"노동절은 그림의 떡"</b>이다.
+  </p>
+
+  <p>
+    플랫폼·특수고용 노동자도 마찬가지다. 택배기사, 배달 라이더, 학습지 교사, 프리랜서는 '근로자'가 아닌 '<b>개인사업자</b>'로 분류된다. 근로기준법 자체가 적용되지 않는다. 쉬면 곧장 수입이 끊긴다. 5월 1일 아침에도 쿠팡과 마켓컬리의 새벽배송 트럭은 평소처럼 굴러갔고, 점심·저녁 배달 콜은 평소보다 30~40% 많았다. <b>"공휴일 특수"</b>가 누군가에겐 <b>"공휴일 강제노동"</b>이 된 것이다.
+  </p>
+
+  <h2><span class="num">04</span>이름은 돌아왔지만, 격차는 역대 최대</h2>
+
+  <p>
+    노동절이 본명을 되찾는 동안, 정작 '노동의 가격'은 계속 갈라지고 있었다. 2025년 8월 기준 통계청 발표를 보자.
+  </p>
+
+  <div class="infographic">
+    <h4>정규직 vs 비정규직 월평균 임금<small>2025년 8월 기준 · 통계청 경제활동인구조사 부가조사</small></h4>
+    <div class="barchart">
+      <div class="bar-row">
+        <div class="l">정규직</div>
+        <div class="b"><span class="regu" style="width: 100%;">389.6만원</span></div>
+      </div>
+      <div class="bar-row">
+        <div class="l">비정규직</div>
+        <div class="b"><span class="irre" style="width: 53.6%;">208.8만원</span></div>
+      </div>
+    </div>
+    <table class="compare-table">
+      <tr><th>지표</th><th>2024년</th><th>2025년</th></tr>
+      <tr><td>월평균 임금격차</td><td class="num">170.8만원</td><td class="num" style="color:var(--warn);">180.8만원</td></tr>
+      <tr><td>시간당 임금 비율(정규직=100)</td><td class="num">66.3</td><td class="num" style="color:var(--warn);">65.2</td></tr>
+      <tr><td>임금 인상률</td><td class="num">정규 +3.2%</td><td class="num">비정규 +1.3%</td></tr>
+    </table>
+    <p style="font-size:13px; color:#6b7280; margin: 8px 0 0;">
+      ※ 월 180.8만원 격차는 2003년 통계 작성 이래 <b>22년만의 역대 최대치</b>. 시간당 임금 비율 65.2%는 2015년 이후 <b>10년만의 최저</b>.
+    </p>
+  </div>
+
+  <div class="alert">
+    <strong>⚠️ 위험 신호:</strong> 2026년 최저임금 인상률은 <b>2.9%</b>로 결정됐고, 경제성장률·물가상승률은 약 2% 안팎. 정규직 임금이 더 빠르게 오르는 구조라 <b>2026년에도 격차 확대가 사실상 예고된 상태</b>다.
+  </div>
+
+  <h2><span class="num">05</span>전태일이 '근로기준법 화형식'을 한 지 56년</h2>
+
+  <p>
+    1970년 11월 13일, 22살 청계천 평화시장 재단사 전태일은 자신의 몸 위에 휘발유를 끼얹고 불을 붙였다. 그의 손에는 헌법 조문이 적힌 <b>『근로기준법』</b> 책이 들려 있었다. <b>"근로기준법을 준수하라. 우리는 기계가 아니다. 일요일은 쉬게 하라."</b> 그가 외친 그 세 문장은 56년이 지난 2026년 5월 1일 광화문에서도 똑같은 무게로 외쳐졌다.
+  </p>
+
+  <p>
+    전태일이 분신한 평화시장에서 출발해 동화면세점까지 행진한 '비정규직 이제그만 공동투쟁' 대오는, 사실상 1970년 11월의 그날과 2026년 5월 1일을 한 줄로 잇는 의식이었다. 노동절이 본명을 되찾아도, 노동자의 절반 가까이는 여전히 헌법 노동3권의 바깥에 서 있다. 명칭은 정치가 풀 수 있어도, 격차와 사각지대는 또 다른 입법이 필요하다.
+  </p>
+
+  <h2><span class="num">06</span>나에게 미치는 영향 — 체크리스트 5</h2>
+
+  <p>
+    내가 일하는 사업장이 노동절을 어떻게 적용하는지, 다음 체크리스트로 확인하자.
+  </p>
+
+  <table class="compare-table">
+    <tr><th>구분</th><th>노동절 휴일 여부</th><th>출근 시 가산수당</th></tr>
+    <tr><td>공무원·교사</td><td>휴무(2026년 첫 적용)</td><td class="num">기관별 보전수당</td></tr>
+    <tr><td>5인 이상 사업장</td><td>유급휴일</td><td class="num">통상임금 2.5배</td></tr>
+    <tr><td>5인 미만 사업장</td><td>유급휴일(법상)</td><td class="num">2배(가산 1.5배 의무 없음)</td></tr>
+    <tr><td>특수고용·플랫폼</td><td>해당 없음</td><td class="num">없음</td></tr>
+    <tr><td>은행·증권사</td><td>휴무(전국 일괄)</td><td class="num">—</td></tr>
+    <tr><td>택배·배달</td><td>정상 운영</td><td class="num">없음(특수고용)</td></tr>
+  </table>
+
+  <div class="alert">
+    <strong>💡 실무 팁:</strong> 5인 이상 사업장에서 노동절에 출근했는데 가산수당이 누락됐다면, 출근 기록·문자·근무표 등을 보존해 <b>고용노동부 임금체불 신고</b>가 가능하다. 임금체불은 <b>3년 시효</b>이며 사업주는 최대 3년 이하 징역 또는 3000만원 이하 벌금에 처해질 수 있다.
+  </div>
+
+  <h2><span class="num">07</span>전망 — 7월 총파업과 '진짜 노동절'</h2>
+
+  <p>
+    민주노총은 이날 결의문에서 <b>7월 총파업·원청교섭 쟁취</b>를 공식 선포했다. 주된 쟁점은 ① 원청 사용자성 인정(노란봉투법 후속 입법) ② 5인 미만 사업장 근로기준법 전면 적용 ③ 플랫폼·특수고용의 노동자성 인정 ④ 비정규직 사용 사유 제한 등이다. 한국노총이 내건 <b>주 4.5일제·65세 정년연장</b>도 정부·여당 입법안과 맞물려 있다.
+  </p>
+
+  <p>
+    이재명 정부와 여당은 노동절 명칭 회복·공휴일 격상이라는 상징적 입법을 마쳤다. 그러나 양대노총·시민사회는 <b>"진짜 노동절은 1000만 비정규직이 똑같이 쉴 수 있는 날"</b>이라고 못 박았다. 명칭 회복은 시작일 뿐, 본격적인 노동법 개정·근로기준법 사각지대 해소가 다음 6개월의 정치 의제로 떠오를 가능성이 높다.
+  </p>
+
+  <p class="pullquote">
+    "이름은 돌아왔다. 이제 사람의 차례다."
+  </p>
+
+  <p>
+    공휴일이라는 빨간 글씨 하나로 끝날 사건이 아니다. <b>2026년 5월 1일</b>은, 한국 노동의 두 얼굴 — 회복된 이름과 벌어진 격차 — 가 처음으로 같은 날짜 위에 겹쳐 보였다. 그 사이 어디에 서 있는지를 묻는 일은, 이제부터 우리 모두의 몫이다.
+  </p>
+
+  <div class="tags">
+    <span>#노동절</span>
+    <span>#법정공휴일</span>
+    <span>#비정규직</span>
+    <span>#5인미만사업장</span>
+    <span>#플랫폼노동</span>
+    <span>#전태일</span>
+    <span>#근로자의날</span>
+    <span>#민주노총</span>
+    <span>#한국노총</span>
+    <span>#임금격차</span>
+    <span>#노동법개정</span>
+    <span>#한국이슈</span>
+  </div>
+
+  <div class="source-list">
+    <b>📚 참고 출처</b>
+    <ol>
+      <li>파이낸셜뉴스(2026.05.01) — "노동절→근로자의 날→노동절…63년만의 명칭 변화"</li>
+      <li>서울경제(2026.05.01) — "법정공휴일 된 노동절… 양대노총 서울 도심 4만5000명 운집"</li>
+      <li>한국일보(2026.04.27) — "5인 미만 사업장, 노동절은 그림의 떡"</li>
+      <li>경향신문(2025.10.22) — "정규직-비정규직 임금 격차 181만원…역대 최대 폭"</li>
+      <li>한국경제(2026.04.30) — "정규직 3.2% 오를 때 비정규직 1.3%…임금격차 최대"</li>
+      <li>뉴스핌(2026.05.01) — "양대노총 노동절 집회 2만3000여명…7월 총파업 결의"</li>
+      <li>통계청 경제활동인구조사 부가조사(2025.08)</li>
+      <li>한국NGO신문(2026.05) — "노동의 이름을 되찾다, 2026년 노동절 공휴일 시대 개막"</li>
+    </ol>
+  </div>
+
+  <div class="disclaimer">
+    <b>⚠️ 면책조항(Disclaimer)</b><br>
+    본 기사는 공개된 보도자료·정부 통계·언론 인용을 토대로 작성된 분석 콘텐츠입니다. 인용된 수치와 발언은 출처 시점 기준이며, 이후 갱신될 수 있습니다. 개별 사업장의 임금·휴일·수당 적용 여부는 근로계약서·취업규칙·노사 합의 내용에 따라 달라질 수 있으므로, 구체적인 권리 구제는 고용노동부(국번 없이 1350) 또는 공인노무사·변호사 상담을 권장합니다. 본 기사의 견해는 한국이슈 탐사보도팀의 편집 방향이며, 인용된 기관·단체의 공식 입장과 다를 수 있습니다.
+  </div>
+
+</article>
+</body>
+</html>
