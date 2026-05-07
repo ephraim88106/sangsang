@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="서울 아파트 평균 매매가 15억 돌파, 전세는 6.8억 역대 최고, 공시지가 18.6% 폭등. 집 없는 당신이 몰랐던 2026 부동산 진실을 탐사합니다.">
+  <meta name="keywords" content="서울 아파트 15억, 전세 6.8억, 공시지가 18% 상승, 주거 위기, 청년 월세, 청약 경쟁률, 부동산 양극화, 2026 집값">
+  <meta property="og:title" content="서울 아파트 15억·전세 6.8억 '역대 최고'…당신만 빼고 다 오르는 집값의 진실">
+  <meta property="og:description" content="공시지가 18.6% 폭등, 청약 경쟁률 147대 1. 서울은 이미 '가진 자'들의 도시가 됐다.">
+  <meta property="og:type" content="article">
+  <title>서울 아파트 15억·전세 6.8억 '역대 최고'…당신만 빼고 다 오르는 집값의 진실</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 17px;
+      line-height: 1.8;
+      background: #f8f7f4;
+      color: #1a1a1a;
+    }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 20px 60px; }
+
+    /* 헤더 */
+    .article-header {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      color: white;
+      padding: 48px 24px 40px;
+      margin-bottom: 0;
+    }
+    .article-header .container { padding-bottom: 0; }
+    .category-badge {
+      display: inline-block;
+      background: #e94560;
+      color: white;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 20px;
+      letter-spacing: 0.5px;
+      margin-bottom: 18px;
+    }
+    .article-header h1 {
+      font-size: clamp(22px, 4vw, 32px);
+      font-weight: 900;
+      line-height: 1.4;
+      margin-bottom: 18px;
+      word-break: keep-all;
+    }
+    .article-header h1 .highlight { color: #e94560; }
+    .subtitle {
+      font-size: 16px;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.7;
+      word-break: keep-all;
+    }
+    .meta {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.15);
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+
+    /* 본문 */
+    .article-body { background: white; padding: 40px 32px; }
+    @media(max-width: 600px) { .article-body { padding: 28px 20px; } }
+
+    /* 핵심 요약 박스 */
+    .summary-box {
+      background: #fff5f5;
+      border-left: 5px solid #e94560;
+      padding: 22px 24px;
+      margin: 28px 0 36px;
+      border-radius: 0 8px 8px 0;
+    }
+    .summary-box h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #e94560;
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .summary-box ul { list-style: none; }
+    .summary-box ul li {
+      padding: 6px 0;
+      padding-left: 22px;
+      position: relative;
+      font-size: 15.5px;
+      font-weight: 500;
+      color: #222;
+    }
+    .summary-box ul li::before {
+      content: "▶";
+      position: absolute;
+      left: 0;
+      color: #e94560;
+      font-size: 11px;
+      top: 9px;
+    }
+
+    /* 소제목 */
+    h2.section-title {
+      font-size: 21px;
+      font-weight: 800;
+      color: #0f3460;
+      margin: 44px 0 18px;
+      padding-bottom: 10px;
+      border-bottom: 3px solid #0f3460;
+      word-break: keep-all;
+    }
+
+    p { margin-bottom: 18px; word-break: keep-all; color: #2d2d2d; }
+
+    /* 강조 인용 */
+    blockquote {
+      margin: 28px 0;
+      padding: 20px 24px;
+      background: #f0f4ff;
+      border-left: 5px solid #0f3460;
+      border-radius: 0 8px 8px 0;
+      font-size: 16px;
+      font-style: italic;
+      color: #333;
+      word-break: keep-all;
+    }
+
+    /* 인포그래픽 영역 */
+    .infographic {
+      background: #fafafa;
+      border: 2px solid #e8e8e8;
+      border-radius: 12px;
+      padding: 28px;
+      margin: 36px 0;
+    }
+    .infographic h3 {
+      font-size: 16px;
+      font-weight: 800;
+      text-align: center;
+      color: #0f3460;
+      margin-bottom: 24px;
+    }
+
+    /* 수평 바 차트 */
+    .bar-chart { margin-bottom: 10px; }
+    .bar-item { margin-bottom: 14px; }
+    .bar-label {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #444;
+      margin-bottom: 5px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .bar-label .val { font-weight: 700; color: #e94560; }
+    .bar-track {
+      background: #e8e8e8;
+      border-radius: 6px;
+      height: 28px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+      font-size: 12px;
+      font-weight: 700;
+      color: white;
+      transition: width 0.3s;
+    }
+
+    /* 비교 표 */
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14.5px;
+      margin-top: 16px;
+    }
+    .compare-table th {
+      background: #0f3460;
+      color: white;
+      padding: 10px 14px;
+      text-align: left;
+      font-weight: 700;
+    }
+    .compare-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #e8e8e8;
+    }
+    .compare-table tr:nth-child(even) td { background: #f7f7f7; }
+    .compare-table .up { color: #e94560; font-weight: 700; }
+    .compare-table .down { color: #1565c0; font-weight: 700; }
+
+    /* 연간 추이 SVG 차트 */
+    .chart-section { margin-top: 12px; overflow-x: auto; }
+    svg text { font-family: 'Noto Sans KR', sans-serif; }
+
+    /* 핵심 데이터 카드 */
+    .data-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 28px 0;
+    }
+    @media(max-width: 600px) { .data-cards { grid-template-columns: 1fr 1fr; } }
+    .data-card {
+      background: #0f3460;
+      color: white;
+      border-radius: 10px;
+      padding: 18px 14px;
+      text-align: center;
+    }
+    .data-card .num {
+      font-size: 26px;
+      font-weight: 900;
+      color: #e94560;
+      display: block;
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+    .data-card .label {
+      font-size: 12px;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.5;
+    }
+
+    /* 팩트 리스트 */
+    .fact-list { list-style: none; }
+    .fact-list li {
+      padding: 12px 0 12px 28px;
+      border-bottom: 1px dashed #e0e0e0;
+      position: relative;
+      font-size: 15.5px;
+    }
+    .fact-list li:last-child { border-bottom: none; }
+    .fact-list li::before {
+      content: "📌";
+      position: absolute;
+      left: 0;
+      top: 12px;
+    }
+
+    /* 해시태그 */
+    .hashtags {
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 2px solid #e8e8e8;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .hashtag {
+      display: inline-block;
+      background: #f0f4ff;
+      color: #0f3460;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 5px 14px;
+      border-radius: 20px;
+      border: 1.5px solid #c5d3f0;
+    }
+
+    /* 면책 조항 */
+    .disclaimer {
+      margin-top: 28px;
+      padding: 16px 20px;
+      background: #f5f5f5;
+      border-radius: 8px;
+      font-size: 12.5px;
+      color: #777;
+      line-height: 1.7;
+      border: 1px solid #e0e0e0;
+    }
+    .disclaimer strong { color: #555; }
+
+    .source-list {
+      margin-top: 24px;
+      font-size: 13px;
+      color: #888;
+    }
+    .source-list a { color: #0f3460; text-decoration: none; }
+    .source-list a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<div class="article-header">
+  <div class="container">
+    <span class="category-badge">🏠 부동산·주거</span>
+    <h1>서울 아파트 평균 <span class="highlight">15억·전세 6.8억</span> '역대 최고'<br>당신만 빼고 다 오르는 집값의 진실</h1>
+    <p class="subtitle">공시지가 18.6% 폭등·청약 경쟁률 146대 1·입주 물량 48% 급감<br>
+    서울은 이제 '무주택 서민'이 생존할 수 없는 도시가 됐는가</p>
+    <div class="meta">
+      <span>📅 2026년 5월 7일</span>
+      <span>✍️ 탐사저널팀</span>
+      <span>⏱️ 읽는 시간 약 8분</span>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+<div class="article-body">
+
+  <!-- 훅 문단 -->
+  <p style="font-size:18px; font-weight:600; color:#111; line-height:1.9;">
+  직장인 김모 씨(33세)는 올해 초 서울 마포구 전셋집 계약 만료를 앞두고 다섯 달을 발품 팔았다. 결론은 이렇다. "원하는 가격대 매물이 아예 없어요. 나온다 싶으면 하루 이틀 안에 사라지고, 가격은 2년 전보다 8,000만 원이 올라 있고." 그는 결국 경기도 부천으로 밀려났다. 서울 아파트 평균 매매가격이 <strong>사상 처음 15억 원</strong>을 돌파한 2026년 봄, 집 없는 사람들의 선택지는 단 두 가지로 좁혀지고 있다. 버티거나, 탈출하거나.
+  </p>
+
+  <!-- 핵심 요약 -->
+  <div class="summary-box">
+    <h3>⚡ 핵심 요약 3줄</h3>
+    <ul>
+      <li>서울 아파트 평균 전세가 <strong>6억 8,000만 원</strong>으로 역대 최고치 갱신, 매매가 평균은 <strong>15억 원</strong> 첫 돌파</li>
+      <li>2026년 공동주택 공시가격 전국 9.13% 상승, 서울만 <strong>18.6%</strong> 폭등—세금 폭탄은 세입자·서민에게도 전가</li>
+      <li>서울 신규 입주 물량 48% 급감, 청약 경쟁률 <strong>146.6대 1</strong>로 4년 만에 최고—현금 없으면 내 집 마련은 불가</li>
+    </ul>
+  </div>
+
+  <!-- 섹션 1 -->
+  <h2 class="section-title">📊 숫자가 말하는 현실: '15억·6.8억'의 충격</h2>
+
+  <p>
+  한국부동산원 통계에 따르면 2025년 12월 말 서울 아파트 평균 매매가격이 <strong>15억 원을 돌파</strong>했다. 2020년 8억 원대였던 평균값이 5년 만에 두 배로 뛴 것이다. 2026년 5월 현재에도 상승세는 멈추지 않고 있다. 전세 시장은 더 가혹하다. 서울 평균 전세가격은 <strong>6억 8,000만 원</strong>으로 통계 작성 이래 역대 최고다.
+  </p>
+  <p>
+  여기서 끝이 아니다. 정부가 발표한 2026년도 공동주택 공시가격은 전국 평균 <strong>9.13%</strong> 상승했는데, 서울만 따로 보면 <strong>18.60%</strong>로 전국 최고 상승률을 기록했다. 공시가격이 오르면 재산세·종부세가 오르고, 임대인은 세금 인상분을 세입자 월세에 얹는다. 집 없는 사람이 더 많이 부담하는 '역설적 구조'다.
+  </p>
+
+  <!-- 데이터 카드 -->
+  <div class="data-cards">
+    <div class="data-card">
+      <span class="num">15억↑</span>
+      <span class="label">서울 아파트<br>평균 매매가 (최초 돌파)</span>
+    </div>
+    <div class="data-card">
+      <span class="num">6.8억</span>
+      <span class="label">서울 아파트<br>평균 전세가 (역대 최고)</span>
+    </div>
+    <div class="data-card">
+      <span class="num">18.6%</span>
+      <span class="label">서울 공동주택<br>공시가격 상승률</span>
+    </div>
+    <div class="data-card">
+      <span class="num">146 : 1</span>
+      <span class="label">서울 평균<br>청약 경쟁률</span>
+    </div>
+    <div class="data-card">
+      <span class="num">-48%</span>
+      <span class="label">서울 신규<br>입주 물량 감소</span>
+    </div>
+    <div class="data-card">
+      <span class="num">72%</span>
+      <span class="label">전문가 전망<br>"올해도 오른다"</span>
+    </div>
+  </div>
+
+  <!-- 섹션 2 -->
+  <h2 class="section-title">🔍 배경: '공급 쇼크'가 만든 가격 폭등의 악순환</h2>
+
+  <p>
+  집값은 왜 계속 오를까. 가장 근본적인 이유는 <strong>'공급 절벽'</strong>이다. 2026년 서울 아파트 신규 입주 예정 물량은 약 1만 6,000가구로, 2025년(4만 6,738가구)보다 <strong>48% 급감</strong>했다. 재건축·재개발 인허가 지연, 공사비 폭등으로 인한 사업 포기가 이어지며 공급은 쪼그라드는데 수요는 여전히 서울로 몰린다.
+  </p>
+  <p>
+  저금리 기대감도 집값을 밀어올리고 있다. 기준금리 인하 기대가 맞물리자 "지금 사야 한다"는 심리가 퍼졌고, 전세 매물은 더욱 귀해졌다. 집주인들은 전세 대신 월세로 돌리거나 공실을 유지하는 방식으로 대응한다. 서울 전역 25개 자치구에서 동시에 전세가격이 오르는 '전체 불장(bull market)'은 역대 처음 나타난 현상이다.
+  </p>
+
+  <!-- 인포그래픽 1: 서울 입주물량 추이 -->
+  <div class="infographic">
+    <h3>📉 서울 아파트 연간 입주 물량 추이 (단위: 가구)</h3>
+    <div class="chart-section">
+      <svg viewBox="0 0 720 240" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:auto;">
+        <!-- Y축 가이드라인 -->
+        <line x1="70" y1="20" x2="70" y2="200" stroke="#ccc" stroke-width="1"/>
+        <line x1="70" y1="200" x2="700" y2="200" stroke="#ccc" stroke-width="1"/>
+        <!-- Y축 레이블 -->
+        <text x="60" y="205" text-anchor="end" font-size="11" fill="#888">0</text>
+        <text x="60" y="155" text-anchor="end" font-size="11" fill="#888">1만</text>
+        <text x="60" y="105" text-anchor="end" font-size="11" fill="#888">2만</text>
+        <text x="60" y="55" text-anchor="end" font-size="11" fill="#888">3만</text>
+        <!-- 수평 가이드 -->
+        <line x1="70" y1="150" x2="700" y2="150" stroke="#eee" stroke-width="1" stroke-dasharray="4"/>
+        <line x1="70" y1="100" x2="700" y2="100" stroke="#eee" stroke-width="1" stroke-dasharray="4"/>
+        <line x1="70" y1="50"  x2="700" y2="50"  stroke="#eee" stroke-width="1" stroke-dasharray="4"/>
+        <!-- 2022: 33,000가구 -->
+        <rect x="90"  y="34"  width="60" height="166" fill="#0f3460" rx="4"/>
+        <text x="120" y="28"  text-anchor="middle" font-size="11" font-weight="700" fill="#0f3460">3.3만</text>
+        <text x="120" y="218" text-anchor="middle" font-size="12" fill="#666">2022</text>
+        <!-- 2023: 28,000가구 -->
+        <rect x="190" y="60"  width="60" height="140" fill="#0f3460" rx="4"/>
+        <text x="220" y="54"  text-anchor="middle" font-size="11" font-weight="700" fill="#0f3460">2.8만</text>
+        <text x="220" y="218" text-anchor="middle" font-size="12" fill="#666">2023</text>
+        <!-- 2024: 35,000가구 -->
+        <rect x="290" y="25"  width="60" height="175" fill="#0f3460" rx="4"/>
+        <text x="320" y="19"  text-anchor="middle" font-size="11" font-weight="700" fill="#0f3460">3.5만</text>
+        <text x="320" y="218" text-anchor="middle" font-size="12" fill="#666">2024</text>
+        <!-- 2025: 46,738가구 → 최대치 -->
+        <rect x="390" y="7"   width="60" height="193" fill="#1565c0" rx="4"/>
+        <text x="420" y="20"  text-anchor="middle" font-size="11" font-weight="700" fill="#1565c0">4.67만</text>
+        <text x="420" y="218" text-anchor="middle" font-size="12" fill="#666">2025</text>
+        <!-- 2026: 16,000가구 → 급감 (빨간색 강조) -->
+        <rect x="490" y="120" width="60" height="80"  fill="#e94560" rx="4"/>
+        <text x="520" y="114" text-anchor="middle" font-size="11" font-weight="800" fill="#e94560">1.6만</text>
+        <text x="520" y="218" text-anchor="middle" font-size="12" font-weight="700" fill="#e94560">2026⚠</text>
+        <!-- 화살표 + 설명 -->
+        <text x="560" y="160" font-size="11" fill="#e94560" font-weight="700">← -48%</text>
+        <text x="560" y="175" font-size="10" fill="#999">역대 최저 수준</text>
+      </svg>
+    </div>
+    <p style="font-size:13px; color:#888; text-align:center; margin-top:8px;">출처: 부동산114, 한국부동산원 / 2026년 수치는 예정 물량 기준</p>
+  </div>
+
+  <!-- 섹션 3 -->
+  <h2 class="section-title">🕵️ 숨겨진 이면: '가진 자'가 더 많이 버는 구조</h2>
+
+  <p>
+  부동산 가격 상승의 가장 큰 수혜자는 다주택자와 고가 주택 보유자다. 2026년 상반기 서울 집값 상승률(약 11.3%)을 기준으로 강남 3구(강남·서초·송파)의 30억 원짜리 아파트를 보유한 다주택자는 앉아서 <strong>3억 원 이상</strong>의 평가 이익을 거뒀다. 반면 무주택자가 같은 기간 월세로 납부한 금액은 평균 700만~900만 원에 달한다.
+  </p>
+  <p>
+  정부가 다주택자 양도세 중과 완화·종부세 조정 카드를 꺼내들수록 이 격차는 더 벌어진다. "집이 투자 자산으로 기능하는 구조에서, 공급이 아닌 세금 조절만으로는 집값을 잡을 수 없다"는 것이 시장 전문가 다수의 진단이다. 전문가 설문에서 <strong>70% 이상</strong>이 "서울 집값이 2028년 이전에는 안정되기 어렵다"고 답했다.
+  </p>
+
+  <blockquote>
+  "2026년 현재 서울의 공급 문제는 단순한 시장 실패가 아닙니다. 인허가 지연, 공사비 인상, 개발 이익 사유화가 복합 작용한 정책 실패입니다." — 서울경제 부동산 전문위원 인터뷰(2026.05)
+  </blockquote>
+
+  <!-- 섹션 4 -->
+  <h2 class="section-title">🏙️ 부동산 양극화: 서울 vs. 지방의 다른 세계</h2>
+
+  <p>
+  집값이 오르는 것은 서울·수도권 이야기다. 2026년 상반기 전국 17개 광역 지역 중 집값이 오른 곳은 서울(+11.3%), 경기(+1.3%), 울산, 세종, 전북 단 5곳뿐이다. 나머지 12개 지역—대전, 광주, 경남, 전남, 경북, 강원 등—은 여전히 하락 또는 정체 상태다.
+  </p>
+  <p>
+  지방 대도시의 현실은 더 암담하다. 미분양 주택이 넘쳐나고, 청년 인구가 서울·수도권으로 빠져나가며 수요 자체가 소멸 중이다. 같은 나라에서 동시에 '서울은 품귀 전쟁', '지방은 미분양 공포'가 벌어지고 있다.
+  </p>
+
+  <!-- 인포그래픽 2: 지역별 집값 변동률 -->
+  <div class="infographic">
+    <h3>📊 2026년 상반기 지역별 아파트 매매가격 변동률</h3>
+    <div class="bar-chart">
+      <div class="bar-item">
+        <div class="bar-label"><span>서울</span><span class="val">+11.3%</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:92%; background:#e94560;">수도권 견인</div></div>
+      </div>
+      <div class="bar-item">
+        <div class="bar-label"><span>세종</span><span class="val">+2.7%</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:22%; background:#ff7043;"></div></div>
+      </div>
+      <div class="bar-item">
+        <div class="bar-label"><span>경기</span><span class="val">+1.3%</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:11%; background:#ffa726;"></div></div>
+      </div>
+      <div class="bar-item">
+        <div class="bar-label"><span>전국 평균</span><span class="val">+0.7%</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:6%; background:#bdbdbd;"></div></div>
+      </div>
+      <div class="bar-item">
+        <div class="bar-label"><span>지방 평균</span><span class="val">+0.3%</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:3%; background:#90a4ae;">사실상 정체</div></div>
+      </div>
+      <div class="bar-item">
+        <div class="bar-label"><span>경남·경북·전남 등</span><span class="val">하락</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:8%; background:#546e7a;">하락 지속</div></div>
+      </div>
+    </div>
+    <p style="font-size:13px; color:#888; text-align:center; margin-top:10px;">출처: 한국부동산원, KB국민은행 부동산 통계 (2026년 상반기)</p>
+  </div>
+
+  <!-- 섹션 5 -->
+  <h2 class="section-title">💸 나에게 미치는 영향: 무주택자·청년·세입자가 가장 아프다</h2>
+
+  <p>
+  이 모든 상승이 무주택자에게 의미하는 것은 단순하다. <strong>내 집 마련의 기회 창이 닫히고 있다</strong>는 것. 서울 아파트 청약 평균 경쟁률은 2026년 146.6대 1로 4년 만에 최고치를 기록했다. 10만 원짜리 청약통장이 수천 명 중 1명에게만 기회가 된다. 게다가 중도금 대출 한도가 분양가의 60%에서 40%로 줄어들면서 현금 자산가가 아니면 청약에서도 밀린다.
+  </p>
+
+  <ul class="fact-list">
+    <li>서울 전세 평균 6.8억—직장인 평균 연봉 5,000만 원 기준, 14년 치 소득 전액을 전세에 써야 한다</li>
+    <li>전세 대신 월세로 전환 시 강남권 기준 보증금 1억에 월 200만~280만 원. 월급의 40~50%가 주거비</li>
+    <li>서울 신규 청약 경쟁률 146대 1—공공분양도 수백 대 일 경쟁. "복권 당첨" 확률</li>
+    <li>공시가격 18.6% 급등→재산세·종부세 증가→임대인 비용 전가→결국 월세 인상으로 이어지는 악순환</li>
+    <li>서울 생활권을 유지하려는 청년들, 경기·인천으로 밀려나는 '주거 외곽화' 가속</li>
+  </ul>
+
+  <!-- 섹션 6 -->
+  <h2 class="section-title">🔭 전망과 행동 제안: 당신이 지금 할 수 있는 것</h2>
+
+  <p>
+  전문가 설문에서 72%는 "올해도 서울·수도권 집값이 오를 것"이라 전망했다. 그러나 5월 9일 이후 정부의 대출 규제 강화와 매물 유도 정책이 맞물리면 단기적으로 '숨고르기'가 나타날 수 있다는 시각도 있다. 핵심은 구조적 공급 부족이 해결되지 않는 한 중·장기 상승 기조는 꺾이지 않는다는 것이다.
+  </p>
+
+  <!-- 비교 표 -->
+  <div class="infographic">
+    <h3>📋 무주택자 선택지 비교 (2026년 5월 기준, 서울 기준)</h3>
+    <table class="compare-table">
+      <thead>
+        <tr><th>선택지</th><th>현황</th><th>장점</th><th>리스크</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>전세 유지</strong></td>
+          <td class="up">평균 6.8억</td>
+          <td>월 고정 지출 없음</td>
+          <td>매물 극소, 전세 사기 위험</td>
+        </tr>
+        <tr>
+          <td><strong>월세 전환</strong></td>
+          <td class="up">강남 월 200~280만</td>
+          <td>자금 유동성 확보</td>
+          <td>장기 지출 누적, 자산 형성 불가</td>
+        </tr>
+        <tr>
+          <td><strong>서울 청약</strong></td>
+          <td class="up">평균 146 : 1</td>
+          <td>시세보다 저렴</td>
+          <td>현금 40% 필요, 당첨 확률 낮음</td>
+        </tr>
+        <tr>
+          <td><strong>수도권 이주</strong></td>
+          <td class="down">경기 집값 +1.3%</td>
+          <td>상대적 저렴, 공급 여유</td>
+          <td>통근 시간·생활권 제약</td>
+        </tr>
+        <tr>
+          <td><strong>공공분양 신청</strong></td>
+          <td>하남·고양 등</td>
+          <td>시세 70% 수준</td>
+          <td>경쟁률 높고 입주까지 2~4년</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>
+  단기 전략으로는 ① 청약홈에서 무주택 기간·부양가족 수 등 청약 가점 정기 점검, ② 공공 전세 임대·행복주택 신청 요건 확인, ③ 전세보증보험(HUG) 가입 필수화가 있다. 장기적으로는 LH 청약, 신혼부부·청년 특별공급 적극 활용이 핵심이다. "지금 못 사면 영원히 못 산다"는 공포 심리에 무리하게 빚을 내는 것은 가계 위험을 키울 수 있음을 명심해야 한다.
+  </p>
+
+  <blockquote>
+  집은 투자 자산이기 이전에 삶의 터전이다. 가격이 오를수록 가장 크게 상처받는 것은 집이 필요한 사람들이다. 지금 필요한 것은 공급 확대와 투기 억제의 균형 잡힌 정책이지, '시장에 맡겨라'는 방임이 아니다.
+  </blockquote>
+
+  <!-- 해시태그 -->
+  <div class="hashtags">
+    <span class="hashtag">#서울집값</span>
+    <span class="hashtag">#아파트15억</span>
+    <span class="hashtag">#전세대란</span>
+    <span class="hashtag">#부동산양극화</span>
+    <span class="hashtag">#공시가격폭등</span>
+    <span class="hashtag">#청약경쟁률</span>
+    <span class="hashtag">#주거위기</span>
+    <span class="hashtag">#무주택자</span>
+    <span class="hashtag">#2026부동산</span>
+    <span class="hashtag">#공급절벽</span>
+    <span class="hashtag">#월세폭등</span>
+    <span class="hashtag">#청년주거</span>
+  </div>
+
+  <!-- 출처 -->
+  <div class="source-list">
+    <p style="font-size:13px; color:#888; margin-top:24px; margin-bottom:6px;"><strong>📎 주요 참고 출처</strong></p>
+    <p style="font-size:13px; color:#888;">
+    한국부동산원 주간아파트가격동향 | KB국민은행 부동산 통계 |
+    <a href="https://www.kairnews.com/news/485814" target="_blank">한국AI부동산신문 공시가격 18.6% 상승</a> |
+    <a href="https://issue.cyberbabarian.com/seoul-jeonse-value-2026-highest/" target="_blank">서울 전세값 역대 최고</a> |
+    <a href="https://en.sedaily.com/finance/2026/05/05/72-percent-of-property-experts-see-seoul-area-home-prices" target="_blank">서울경제 전문가 72% 전망</a> |
+    <a href="https://econmingle.com/economy/2026-apartment-subscription-polarization/" target="_blank">청약시장 양극화</a> |
+    <a href="https://koreabizreview.com/detail.php?number=7438&thread=21r08" target="_blank">서울 부동산 공급 쇼크</a>
+    </p>
+  </div>
+
+  <!-- 면책 조항 -->
+  <div class="disclaimer">
+    <strong>⚠️ 면책 조항:</strong> 본 아티클은 공개된 통계 자료와 언론 보도를 바탕으로 작성된 저널리즘 콘텐츠입니다. 부동산 투자·매수·매도에 대한 전문 재무 조언이 아니며, 개별 투자 결정에 대한 책임은 독자 본인에게 있습니다. 부동산 거래 시 공인중개사·금융 전문가와 반드시 상담하시기 바랍니다. 수치는 작성 시점 기준이며 이후 변동될 수 있습니다.
+  </div>
+
+</div><!-- /article-body -->
+</div><!-- /container -->
+
+</body>
+</html>
