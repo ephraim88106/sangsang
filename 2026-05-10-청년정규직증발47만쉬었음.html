@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>대기업 정규직 -43%, 쉬는 청년 47만명… 한국 일자리가 통째로 증발했다 | 한국이슈 아티클</title>
+  <meta name="description" content="22개월 연속 하락하는 청년 고용률, 대기업 정규직 채용 43% 급감, 47만명이 '그냥 쉬고' 있는 대한민국 청년 노동시장 붕괴 현장 리포트" />
+  <meta name="keywords" content="청년실업, 정규직감소, 쉬었음청년, 불완전취업, 대기업채용, 니트족, 청년노동시장, 취업포기" />
+  <meta property="og:title" content="대기업 정규직 -43%, 쉬는 청년 47만명… 한국 일자리가 통째로 증발했다" />
+  <meta property="og:description" content="22개월 연속 하락하는 청년 고용률. 취업해도 원하는 일자리가 없어 다시 집으로 돌아가는 청년들. 한국 노동시장의 구조적 붕괴를 파헤친다." />
+  <meta property="og:type" content="article" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 17px;
+      line-height: 1.8;
+      background: #ffffff;
+      color: #1a1a2e;
+    }
+
+    /* 상단 카테고리 배너 */
+    .category-banner {
+      background: linear-gradient(135deg, #2d6a4f 0%, #1b4332 100%);
+      color: #fff;
+      text-align: center;
+      padding: 8px 20px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* 히어로 섹션 */
+    .hero {
+      background: linear-gradient(160deg, #1b4332 0%, #2d6a4f 40%, #40916c 100%);
+      color: #fff;
+      padding: 60px 24px 50px;
+      text-align: center;
+    }
+
+    .hero .label {
+      display: inline-block;
+      background: #ff6b35;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-size: clamp(22px, 4.5vw, 36px);
+      font-weight: 900;
+      line-height: 1.35;
+      max-width: 700px;
+      margin: 0 auto 20px;
+      word-break: keep-all;
+    }
+
+    .hero h1 span.highlight {
+      color: #74c69d;
+    }
+
+    .hero .subtitle {
+      font-size: 15px;
+      opacity: 0.88;
+      max-width: 600px;
+      margin: 0 auto 30px;
+      line-height: 1.7;
+      word-break: keep-all;
+    }
+
+    .hero .meta {
+      font-size: 13px;
+      opacity: 0.7;
+      letter-spacing: 0.5px;
+    }
+
+    /* 본문 컨테이너 */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* 핵심 요약 박스 */
+    .summary-box {
+      background: #f0fdf4;
+      border-left: 5px solid #2d6a4f;
+      border-radius: 0 12px 12px 0;
+      padding: 28px 28px 24px;
+      margin: 40px 0;
+    }
+
+    .summary-box h2 {
+      font-size: 15px;
+      font-weight: 900;
+      color: #1b4332;
+      margin-bottom: 14px;
+      letter-spacing: 0.5px;
+    }
+
+    .summary-box ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .summary-box ul li {
+      padding: 6px 0 6px 22px;
+      position: relative;
+      font-size: 15px;
+      color: #2d3748;
+      line-height: 1.7;
+    }
+
+    .summary-box ul li::before {
+      content: '▶';
+      position: absolute;
+      left: 0;
+      color: #40916c;
+      font-size: 11px;
+      top: 10px;
+    }
+
+    /* 본문 섹션 */
+    .article-body {
+      padding: 10px 0 40px;
+    }
+
+    .article-body p {
+      margin-bottom: 22px;
+      color: #2d3748;
+      word-break: keep-all;
+    }
+
+    .article-body h2 {
+      font-size: 20px;
+      font-weight: 900;
+      color: #1b4332;
+      margin: 44px 0 18px;
+      padding-left: 16px;
+      border-left: 4px solid #40916c;
+      word-break: keep-all;
+    }
+
+    /* 인용/강조 박스 */
+    .quote-box {
+      background: #fff8f0;
+      border: 1.5px solid #ffa94d;
+      border-radius: 10px;
+      padding: 22px 26px;
+      margin: 28px 0;
+      font-size: 16px;
+      color: #7c4a03;
+      font-weight: 700;
+      line-height: 1.7;
+      word-break: keep-all;
+    }
+
+    .quote-box::before {
+      content: '"';
+      font-size: 40px;
+      color: #ffa94d;
+      line-height: 0.5;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    /* 데이터 인포그래픽 섹션 */
+    .infographic {
+      background: #f8fafc;
+      border-radius: 16px;
+      padding: 36px 28px;
+      margin: 40px 0;
+      border: 1px solid #e2e8f0;
+    }
+
+    .infographic h3 {
+      font-size: 16px;
+      font-weight: 900;
+      color: #1b4332;
+      text-align: center;
+      margin-bottom: 30px;
+      letter-spacing: 0.3px;
+    }
+
+    /* 채용 감소 바 차트 */
+    .bar-chart {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .bar-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .bar-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: #2d3748;
+      width: 120px;
+      flex-shrink: 0;
+      text-align: right;
+    }
+
+    .bar-track {
+      flex: 1;
+      background: #e2e8f0;
+      border-radius: 6px;
+      height: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 8px;
+      font-size: 12px;
+      font-weight: 900;
+      color: #fff;
+      transition: width 1s ease;
+    }
+
+    .bar-fill.critical { background: linear-gradient(90deg, #e74c3c, #c0392b); }
+    .bar-fill.high     { background: linear-gradient(90deg, #e67e22, #d35400); }
+    .bar-fill.medium   { background: linear-gradient(90deg, #f39c12, #e67e22); }
+    .bar-fill.low      { background: linear-gradient(90deg, #27ae60, #2d6a4f); }
+
+    /* 핵심 수치 카드 */
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 16px;
+      margin: 36px 0;
+    }
+
+    .stat-card {
+      background: linear-gradient(135deg, #1b4332, #2d6a4f);
+      border-radius: 14px;
+      padding: 22px 18px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .stat-card .number {
+      font-size: 34px;
+      font-weight: 900;
+      color: #74c69d;
+      line-height: 1.1;
+    }
+
+    .stat-card .unit {
+      font-size: 14px;
+      color: #b7e4c7;
+      margin-bottom: 6px;
+    }
+
+    .stat-card .label {
+      font-size: 13px;
+      color: #d8f3dc;
+      line-height: 1.4;
+      word-break: keep-all;
+    }
+
+    /* 도넛차트 */
+    .donut-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin: 24px 0 16px;
+    }
+
+    .donut-legend {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: #2d3748;
+    }
+
+    .legend-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* 경고 박스 */
+    .warning-box {
+      background: linear-gradient(135deg, #fff3f3, #ffe8e8);
+      border: 2px solid #e74c3c;
+      border-radius: 12px;
+      padding: 24px 26px;
+      margin: 32px 0;
+    }
+
+    .warning-box h4 {
+      color: #c0392b;
+      font-size: 16px;
+      font-weight: 900;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .warning-box p {
+      color: #4a1010;
+      margin-bottom: 0 !important;
+    }
+
+    /* 타임라인 */
+    .timeline {
+      position: relative;
+      padding-left: 30px;
+      margin: 28px 0;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, #40916c, #b7e4c7);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 22px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -24px;
+      top: 8px;
+      width: 12px;
+      height: 12px;
+      background: #2d6a4f;
+      border-radius: 50%;
+      border: 2px solid #74c69d;
+    }
+
+    .timeline-year {
+      font-size: 12px;
+      font-weight: 900;
+      color: #40916c;
+      margin-bottom: 2px;
+    }
+
+    .timeline-content {
+      font-size: 14px;
+      color: #2d3748;
+      line-height: 1.6;
+    }
+
+    /* 체크리스트 박스 */
+    .action-box {
+      background: linear-gradient(135deg, #ebfbee, #d3f9d8);
+      border-radius: 14px;
+      padding: 28px 28px 24px;
+      margin: 36px 0;
+      border: 1px solid #8ce99a;
+    }
+
+    .action-box h3 {
+      font-size: 17px;
+      font-weight: 900;
+      color: #1b4332;
+      margin-bottom: 16px;
+    }
+
+    .action-box ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .action-box ul li {
+      padding: 7px 0 7px 28px;
+      position: relative;
+      font-size: 15px;
+      color: #2d3748;
+      line-height: 1.6;
+      word-break: keep-all;
+    }
+
+    .action-box ul li::before {
+      content: '✅';
+      position: absolute;
+      left: 0;
+      font-size: 15px;
+    }
+
+    /* 해시태그 */
+    .hashtag-section {
+      padding: 30px 0 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .hashtag {
+      background: #e9faf0;
+      color: #2d6a4f;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 20px;
+      border: 1px solid #b7e4c7;
+    }
+
+    /* 면책조항 */
+    .disclaimer {
+      background: #f8f9fa;
+      border-top: 1px solid #e9ecef;
+      padding: 20px 0;
+      font-size: 12px;
+      color: #6c757d;
+      line-height: 1.7;
+      word-break: keep-all;
+    }
+
+    /* 출처 */
+    .sources {
+      font-size: 13px;
+      color: #6c757d;
+      padding: 20px 0;
+      border-top: 1px solid #e9ecef;
+    }
+
+    .sources a {
+      color: #2d6a4f;
+      text-decoration: none;
+    }
+    .sources a:hover { text-decoration: underline; }
+
+    .divider {
+      border: none;
+      border-top: 1px solid #e9ecef;
+      margin: 36px 0;
+    }
+
+    strong.em { color: #1b4332; }
+    strong.red { color: #c0392b; }
+
+    @media (max-width: 600px) {
+      .bar-label { width: 90px; font-size: 12px; }
+      .stat-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero { padding: 40px 18px 36px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="category-banner">💼 취업 · 노동 | 2026.05.10 탐사 리포트</div>
+
+  <div class="hero">
+    <span class="label">🚨 BREAKING REPORT</span>
+    <h1>대기업 정규직 <span class="highlight">-43%</span>, 쉬는 청년 <span class="highlight">47만 명</span>…<br>한국 일자리가 <span class="highlight">통째로 증발했다</span></h1>
+    <p class="subtitle">
+      22개월 연속 추락하는 청년 고용률, 취업해도 다시 집으로 돌아가는 청년들.
+      대한민국 노동시장의 구조적 붕괴를 파헤치는 긴급 심층 리포트.
+    </p>
+    <div class="meta">📅 2026년 5월 10일 | ✍️ 탐사보도팀</div>
+  </div>
+
+  <div class="container">
+
+    <!-- 핵심 요약 -->
+    <div class="summary-box">
+      <h2>⚡ 핵심 요약 3줄</h2>
+      <ul>
+        <li>청년 고용률 43.3% — <strong>22개월</strong> 연속 하락, 취업자 14만 6,000명 증발</li>
+        <li>2025년 대기업 정규직 신입 채용 공고 <strong>전년 대비 43% 감소</strong>…IT·통신은 무려 -67%</li>
+        <li>'그냥 쉬는' 청년 <strong>47만명</strong> 역대급, 4명 중 3명은 부모에게 얹혀사는 '캥거루족'</li>
+      </ul>
+    </div>
+
+    <!-- 핵심 수치 카드 -->
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="number">43.3%</div>
+        <div class="unit">청년 고용률</div>
+        <div class="label">22개월 연속 하락<br>(2026년 2월 기준)</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">7.7%</div>
+        <div class="unit">청년 실업률</div>
+        <div class="label">확장실업률은<br>17.4%</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">47만</div>
+        <div class="unit">명</div>
+        <div class="label">'쉬었음' 청년<br>역대 최다</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">53조</div>
+        <div class="unit">원</div>
+        <div class="label">니트족으로 인한<br>경제 손실 추산</div>
+      </div>
+    </div>
+
+    <div class="article-body">
+
+      <!-- 훅 문단 -->
+      <p>
+        서울 은평구에 사는 28살 이모 씨는 올해 초까지 대기업 계약직으로 일했다. 월급 185만 원. 또래 친구들이 받는 정규직 연봉의 절반도 안 됐다. 계약이 끝나자 그는 재취업 대신 "그냥 쉬겠다"고 결심했다. 부모님 집으로 다시 들어간 이 씨는 통계상 '비경제활동인구'로 분류된다. 그리고 지금 이 순간, 대한민국에는 이씨와 똑같은 선택을 한 청년이 <strong class="em">47만 명</strong>에 달한다.
+      </p>
+
+      <p>
+        단순한 개인의 선택 문제가 아니다. 이제는 숫자들이 말한다 — <strong class="red">한국의 청년 일자리 시장이 구조적으로 붕괴하고 있다</strong>고.
+      </p>
+
+      <!-- 섹션 1 -->
+      <h2>📉 22개월 연속 추락 — "이런 적이 없었다"</h2>
+
+      <p>
+        통계청이 발표한 2026년 2월 고용동향에 따르면, 15~29세 청년층 고용률은 <strong class="em">43.3%</strong>로 전년 동월 대비 1.0%포인트 하락했다. 숫자 자체도 충격이지만, 더 무서운 건 <strong class="red">22개월 연속 하락</strong>이라는 사실이다. 거의 2년에 걸쳐 한 달도 반등 없이 내리꽂히고 있다.
+      </p>
+
+      <p>
+        취업자 수는 341만 1,000명으로 14만 6,000명이 사라졌다. 청년 실업률은 7.7%로 0.7%포인트 올랐고, '실망 실업자'까지 포함한 확장실업률은 무려 <strong class="em">17.4%</strong>에 달한다. 사실상 청년 5명 중 1명은 제대로 된 일자리가 없다는 뜻이다.
+      </p>
+
+      <div class="quote-box">
+        22개월 연속 하락은 코로나 팬데믹 때도 없었던 일이다. 이건 일시적 경기침체가 아니라 노동시장 자체가 변하고 있다는 신호다."
+        <div style="font-size:13px; color:#a0522d; margin-top:10px; font-weight:500;">— 한국노동연구원 고용동향 분석 자료</div>
+      </div>
+
+      <!-- 섹션 2 -->
+      <h2>🏢 대기업 정규직이 사라졌다 — IT·통신 -67% 충격</h2>
+
+      <p>
+        더 심각한 문제는 '어디에 취업하느냐'다. 양이 줄어드는 것도 문제지만, 남아 있는 일자리의 질이 바닥으로 떨어지고 있다. 2025년 대기업 정규직 신입 채용 공고는 <strong class="red">2,145건</strong>으로 전년도 3,741건에서 <strong class="red">43%</strong>나 급감했다.
+      </p>
+
+      <p>
+        업종별 낙폭은 더 처참하다. 청년들이 가장 선호하는 IT·통신 업종은 2024년 899건에서 2025년 293건으로 <strong class="red">-67%</strong> 폭락했다. 그 빈자리를 채운 건 단기 계약직, 프로젝트형 일자리, 플랫폼 gig 노동이다.
+      </p>
+
+      <!-- 인포그래픽 — 업종별 정규직 채용 감소율 -->
+      <div class="infographic">
+        <h3>📊 2024→2025 대기업 정규직 신입 채용 감소율 (업종별)</h3>
+        <div class="bar-chart">
+          <div class="bar-item">
+            <div class="bar-label">IT · 통신</div>
+            <div class="bar-track">
+              <div class="bar-fill critical" style="width:67%">-67%</div>
+            </div>
+          </div>
+          <div class="bar-item">
+            <div class="bar-label">건설 · 토목</div>
+            <div class="bar-track">
+              <div class="bar-fill critical" style="width:53%">-53%</div>
+            </div>
+          </div>
+          <div class="bar-item">
+            <div class="bar-label">판매 · 유통</div>
+            <div class="bar-track">
+              <div class="bar-fill high" style="width:44%">-44%</div>
+            </div>
+          </div>
+          <div class="bar-item">
+            <div class="bar-label">서비스업</div>
+            <div class="bar-track">
+              <div class="bar-fill high" style="width:38%">-38%</div>
+            </div>
+          </div>
+          <div class="bar-item">
+            <div class="bar-label">제조 · 생산</div>
+            <div class="bar-track">
+              <div class="bar-fill medium" style="width:33%">-33%</div>
+            </div>
+          </div>
+          <div class="bar-item">
+            <div class="bar-label">은행 · 금융</div>
+            <div class="bar-track">
+              <div class="bar-fill medium" style="width:31%">-31%</div>
+            </div>
+          </div>
+          <div class="bar-item">
+            <div class="bar-label">전체 평균</div>
+            <div class="bar-track">
+              <div class="bar-fill high" style="width:43%">-43%</div>
+            </div>
+          </div>
+        </div>
+        <p style="font-size:12px; color:#718096; text-align:center; margin-top:14px;">출처: ZDNet Korea / 채용 공고 집계 분석 (2024~2025년)</p>
+      </div>
+
+      <p>
+        더 충격적인 사실은 전체 신입 채용 공고도 -34% 감소했다는 것이다. 정규직만 사라진 게 아니다 — 인턴, 계약직을 포함해 기업이 사람을 뽑는 행위 자체가 위축되고 있다. <strong class="em">"프로젝트가 생기면 그때 뽑고, 끝나면 내보내는"</strong> 방식이 새로운 표준이 되어가고 있다.
+      </p>
+
+      <!-- 섹션 3 -->
+      <h2>😮 47만 명이 그냥 "쉬겠다"고 했다 — 그 이유</h2>
+
+      <p>
+        올해 1월 기준, 일도 구직도 하지 않는 20~29세 '쉬었음' 청년은 <strong class="em">46만 9,000명</strong>으로 5년 만에 최대치를 기록했다. 이들이 게으르거나 의지가 없어서가 아니다. 이투데이 단독 보도에 따르면, 이들 4명 중 3명(75.5%)은 현재 부모에게 경제적으로 의존하는 <strong class="red">캥거루족</strong>이다.
+      </p>
+
+      <p>
+        놀라운 건 이들의 평균 희망 임금이 월 310만 원으로 일반 취업 준비생과 큰 차이가 없다는 것이다. '눈을 낮추지 않아서' 쉬고 있는 게 아니라는 뜻이다. 이들이 노동시장을 이탈한 결정적 이유는 <strong class="em">월 200만 원 이하의 첫 일자리</strong>에 한번 들어갔다가, 그 저임금 구조에서 탈출할 수 없다는 걸 몸으로 깨달았기 때문이다.
+      </p>
+
+      <div class="warning-box">
+        <h4>⚠️ 노동시장 영구 이탈 경고</h4>
+        <p>
+          한국은행 분석에 따르면 '쉬었음' 상태가 6개월 이상 지속되면 재취업 확률이 급격히 떨어진다. 2019년 28만 7,000명이었던 취업 포기 청년이 2025년 45만명으로 6년 만에 16만 명 증가했다. 이들이 노동시장에 영영 돌아오지 않는다면, 한국 경제가 입는 손실은 <strong>연간 53조 원</strong>에 달한다는 추산도 나온다.
+        </p>
+      </div>
+
+      <!-- 섹션 4 -->
+      <h2>🔍 숨겨진 이면 — 불완전 취업의 함정</h2>
+
+      <p>
+        '쉬는 청년'보다 어쩌면 더 큰 문제가 있다. 취업통계에서는 '취업자'로 잡히지만 실질적으로는 원하는 직장에 다니지 못하는 <strong class="em">불완전 취업자</strong>다. 2026년 1분기 청년 불완전 취업자 수는 5년 만에 최다를 기록했다.
+      </p>
+
+      <p>
+        이들의 공통점: 이름만 정규직인 소규모 사업체 취업, 전공과 무관한 저숙련 서비스직, 주 15~20시간 미만의 단기 알바. 통계상으로는 "고용률 43.3%"가 집계되지만, 그 안에는 어마어마한 질적 공동이 숨어 있다.
+      </p>
+
+      <!-- 청년 노동 변화 타임라인 -->
+      <div class="infographic">
+        <h3>📅 한국 청년 고용시장 붕괴 타임라인</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">2020년</div>
+            <div class="timeline-content">코로나 충격 — 청년 고용률 40%대 초반 붕괴. 정부 재난지원금으로 임시방편 봉합.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2021~2022년</div>
+            <div class="timeline-content">IT 호황으로 청년 채용 일시 반등. 삼성·카카오·네이버 대규모 공채 재개. '개발자 붐' 착시 효과.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2023년</div>
+            <div class="timeline-content">IT 기업 대규모 구조조정 시작. 스타트업 투자 빙하기. 공채 대신 수시·계약직 전환 본격화.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2024년</div>
+            <div class="timeline-content">대기업 정규직 신입 채용 -43%. 청년 고용률 22개월 연속 하락 시작. 니트족 45만명 돌파.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2025년</div>
+            <div class="timeline-content">AI 도입 가속화로 화이트칼라 업무 자동화 본격화. '쉬었음' 청년 47만명 역대 최다. 경제 손실 53조 추산.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2026년 현재</div>
+            <div class="timeline-content">최저임금 10,320원(+2.9%, 17년 만의 노사 합의). 청년 확장실업률 17.4%. 노동시장 구조 개혁 논의 가열.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 섹션 5 -->
+      <h2>💬 나에게 미치는 영향 — 지금 당장 알아야 할 것들</h2>
+
+      <p>
+        이 위기는 '청년만의 문제'가 아니다. 47만 명의 청년이 소비를 안 하면, 내수경제가 흔들린다. 청년이 세금을 안 내면, 노인 복지와 연금 재정이 흔들린다. 그리고 결혼·출산을 포기한 청년이 많아질수록, 한국은 더 빠르게 소멸한다.
+      </p>
+
+      <p>
+        만약 당신이 현재 구직 중인 20~30대라면, 아래 현실을 냉정하게 직시해야 한다. 대기업 정규직은 이미 <strong class="red">희귀재</strong>가 됐다. 공공기관은 2026년 역대 최대인 2만 8,000명을 채용한다고 하지만, 대부분이 '채용형 인턴' 경로를 거친다. <strong class="em">경로를 알아야 한다.</strong>
+      </p>
+
+      <!-- 도넛 차트 — 청년 취업 포기 이유 -->
+      <div class="infographic">
+        <h3>📊 '쉬었음' 청년 — 노동시장 이탈 주요 이유</h3>
+        <div class="donut-section">
+          <svg width="180" height="180" viewBox="0 0 200 200">
+            <!-- 저임금(38%) -->
+            <circle cx="100" cy="100" r="70" fill="none" stroke="#e74c3c" stroke-width="36"
+              stroke-dasharray="166 264" stroke-dashoffset="0" transform="rotate(-90 100 100)"/>
+            <!-- 원하는 일자리 없음(27%) -->
+            <circle cx="100" cy="100" r="70" fill="none" stroke="#e67e22" stroke-width="36"
+              stroke-dasharray="119 311" stroke-dashoffset="-166" transform="rotate(-90 100 100)"/>
+            <!-- 건강/취준 휴식(20%) -->
+            <circle cx="100" cy="100" r="70" fill="none" stroke="#f39c12" stroke-width="36"
+              stroke-dasharray="88 342" stroke-dashoffset="-285" transform="rotate(-90 100 100)"/>
+            <!-- 기타(15%) -->
+            <circle cx="100" cy="100" r="70" fill="none" stroke="#95a5a6" stroke-width="36"
+              stroke-dasharray="66 364" stroke-dashoffset="-373" transform="rotate(-90 100 100)"/>
+            <text x="100" y="95" text-anchor="middle" font-size="24" font-weight="900" fill="#1b4332">47만</text>
+            <text x="100" y="115" text-anchor="middle" font-size="12" fill="#4a6741">명</text>
+          </svg>
+          <div class="donut-legend">
+            <div class="legend-item"><div class="legend-dot" style="background:#e74c3c"></div>저임금·처우 불만 (38%)</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#e67e22"></div>원하는 일자리 없음 (27%)</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#f39c12"></div>건강·취준 재정비 (20%)</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#95a5a6"></div>기타 (15%)</div>
+          </div>
+        </div>
+        <p style="font-size:12px; color:#718096; text-align:center; margin-top:6px;">출처: 이투데이·고용노동부 자료 종합 추정치 (2026년 1분기)</p>
+      </div>
+
+      <!-- 섹션 6 -->
+      <h2>🌍 해외는 어떻게 대응하고 있나</h2>
+
+      <p>
+        유럽은 이미 2010년대부터 <strong class="em">'청년보장제(Youth Guarantee)'</strong>를 도입했다. 15~29세 청년이 구직·교육·훈련을 포기하면 4개월 이내에 정부가 개입해 취업 또는 훈련 기회를 반드시 제공하는 제도다. EU 국가들은 이를 통해 청년 니트율을 수년 만에 5~6%포인트 낮추는 데 성공했다.
+      </p>
+
+      <p>
+        반면 한국은? 국민취업지원제도 구직활동지원금을 월 50만 원에서 60만 원으로 올렸다. 물가 상승률조차 따라가지 못하는 수준이다. <strong class="red">구조를 바꾸지 않고 지원금만 올리는 정책은 모르핀과 다를 바 없다</strong>는 비판이 거세다.
+      </p>
+
+      <!-- 섹션 7 -->
+      <h2>🔮 전망과 행동 제안</h2>
+
+      <p>
+        한국노동연구원은 2026년 청년 고용 회복을 기대하기 어렵다고 전망했다. AI 도입 가속화, 인구구조 변화, 기업의 비용 절감 압박이 모두 정규직 채용 감소 방향을 가리키고 있다. 낙관론적 시나리오조차 "하반기에 소폭 반등 가능성 있음" 정도에 그친다.
+      </p>
+
+      <div class="action-box">
+        <h3>📌 지금 당장 해야 할 일 — 5가지 행동 제안</h3>
+        <ul>
+          <li>공공기관 '채용형 인턴' 전략 세우기 — 2026년 공기업 2만 8,000명 역대 최대 채용, 전환율 90% 이상</li>
+          <li>국민취업지원제도 1유형 신청 — 월 최대 60만 원 구직촉진수당, 취업 알선 서비스 연계</li>
+          <li>K-디지털 트레이닝 수료 후 수당 수령 — AI·클라우드·데이터 분야 빠르게 업스킬링</li>
+          <li>첫 직장에서 '불완전 취업' 함정 피하기 — 연봉 낮더라도 산업군·직군이 성장하는 곳 선택</li>
+          <li>청년월세 지원사업 상시 신청 — 2026년부터 연중 상시 접수로 전환, 놓치지 말 것</li>
+        </ul>
+      </div>
+
+      <p>
+        이 문제를 개인의 의지력 부족으로 돌리는 서사는 이제 끝내야 한다. 47만 명이 동시에 의지를 잃었다면, 그건 개인이 아니라 <strong class="em">구조</strong>의 실패다. 정부가 답해야 하고, 기업이 바뀌어야 하며, 사회 전체가 '평생직장' 환상을 버리고 새로운 노동 계약을 설계해야 할 때다.
+      </p>
+
+    </div>
+
+    <hr class="divider" />
+
+    <!-- 해시태그 -->
+    <div class="hashtag-section">
+      <span class="hashtag">#청년실업</span>
+      <span class="hashtag">#정규직증발</span>
+      <span class="hashtag">#쉬었음청년</span>
+      <span class="hashtag">#불완전취업</span>
+      <span class="hashtag">#대기업채용감소</span>
+      <span class="hashtag">#니트족47만</span>
+      <span class="hashtag">#캥거루족</span>
+      <span class="hashtag">#청년노동시장붕괴</span>
+      <span class="hashtag">#한국일자리위기</span>
+      <span class="hashtag">#취업포기세대</span>
+      <span class="hashtag">#노동시장개혁</span>
+    </div>
+
+    <!-- 출처 -->
+    <div class="sources">
+      <strong>📎 참고 출처</strong><br/>
+      <a href="https://econmingle.com/economy/youth-underemployment-q1-2026-five-year-hig/" target="_blank">취업했지만 취업자가 아니다…청년 불완전취업 5년 만에 최다 (econmingle)</a> ·
+      <a href="https://zdnet.co.kr/view/?no=20251224085828" target="_blank">대기업 정규직 신입 얼마나 줄었길래 (ZDNet Korea)</a> ·
+      <a href="https://www.etoday.co.kr/news/view/2552983" target="_blank">'쉬었음' 청년 4명 중 3명 캥거루족 (이투데이)</a> ·
+      <a href="https://ideal-life.co.kr/403" target="_blank">정규직이 사라진다 2026년 채용 트렌드 (ideal-life)</a> ·
+      <a href="https://www.bok.or.kr/portal/bbs/P0002353/view.do?nttId=10095691&menuNo=200433" target="_blank">청년세대 노동시장 진입 지연과 주거비 부담 (한국은행)</a> ·
+      <a href="https://www.kli.re.kr/kliFileDownload?fileName=AD6F8CF812B3630849258D71001EBA8C_1.pdf" target="_blank">2025 노동시장 평가와 2026 전망 (한국노동연구원)</a> ·
+      <a href="https://issue.cyberbabarian.com/democratic-labor-union-may-rally-2026/" target="_blank">2026년 5월 민주노총 집회 현황 (21세기이슈)</a>
+    </div>
+
+    <!-- 면책조항 -->
+    <div class="disclaimer">
+      <strong>※ 면책조항</strong> 본 아티클은 공개된 통계 자료, 보도, 연구 결과를 바탕으로 작성된 정보 제공용 콘텐츠입니다. 개별 취업 결정 및 경력 계획에 대한 전문 상담은 고용 전문가 또는 관련 기관을 통해 받으시기 바랍니다. 본 콘텐츠의 수치와 전망은 발행 시점 기준이며, 이후 변동될 수 있습니다.
+    </div>
+
+  </div><!-- /container -->
+
+</body>
+</html>
