@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HMM 나무호 호르무즈 피격 7일의 진실: 드론 2발, 정부 침묵, 하루 5억 손실 — 대한민국은 파병 기로에 섰다">
+  <meta name="keywords" content="나무호, 호르무즈, 피격, 이란, 파병, HMM, 한국선박, 드론공격, 트럼프, 중동리스크">
+  <meta property="og:title" content="우리 배가 드론 2발 맞는 동안 정부는 7일 침묵했다 — 이제 파병이냐, 굴욕이냐">
+  <meta property="og:description" content="호르무즈 해협에서 한국 선박 나무호가 드론에 두 차례 피격됐다. 정부는 7일을 침묵하다 공식 인정했고, 트럼프는 파병을 공개 압박했다. 하루 5억씩 손실 중인 해운업계, 한국의 선택은?">
+  <title>우리 배가 드론 2발 맞는 동안 정부는 7일 침묵했다 — 이제 파병이냐, 굴욕이냐</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #b91c1c;
+      --primary-light: #fee2e2;
+      --accent: #1d4ed8;
+      --accent-light: #dbeafe;
+      --dark: #111827;
+      --gray: #6b7280;
+      --light-gray: #f3f4f6;
+      --border: #e5e7eb;
+      --warning: #d97706;
+      --warning-light: #fef3c7;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--dark);
+      background: #ffffff;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* 헤더 */
+    .article-header {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      color: white;
+      padding: 48px 0 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .article-header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(255,255,255,0.02) 10px,
+        rgba(255,255,255,0.02) 20px
+      );
+    }
+
+    .category-badge {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+
+    .article-header h1 {
+      font-size: clamp(22px, 4vw, 32px);
+      font-weight: 900;
+      line-height: 1.4;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .highlight-red {
+      color: #fca5a5;
+    }
+
+    .article-meta {
+      display: flex;
+      gap: 20px;
+      font-size: 13px;
+      color: #94a3b8;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+
+    .article-meta span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* 긴박 알림 배너 */
+    .breaking-banner {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .breaking-banner span {
+      background: white;
+      color: var(--primary);
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-right: 8px;
+      font-size: 12px;
+    }
+
+    /* 본문 */
+    .article-body {
+      padding: 40px 0 60px;
+    }
+
+    /* 핵심 요약 */
+    .summary-box {
+      background: var(--primary-light);
+      border-left: 5px solid var(--primary);
+      border-radius: 0 12px 12px 0;
+      padding: 24px 28px;
+      margin-bottom: 40px;
+    }
+
+    .summary-box h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+
+    .summary-box ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .summary-box ul li {
+      padding: 6px 0;
+      font-size: 16px;
+      font-weight: 500;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .summary-box ul li::before {
+      content: '▶';
+      color: var(--primary);
+      font-size: 12px;
+      margin-top: 4px;
+      flex-shrink: 0;
+    }
+
+    /* 섹션 제목 */
+    h2 {
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--dark);
+      margin: 44px 0 16px;
+      padding-bottom: 10px;
+      border-bottom: 3px solid var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    p {
+      margin-bottom: 18px;
+      font-size: 17px;
+    }
+
+    /* 인용 / 강조 박스 */
+    .quote-box {
+      background: var(--light-gray);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 24px 0;
+      font-style: italic;
+      color: #374151;
+      position: relative;
+    }
+
+    .quote-box::before {
+      content: '"';
+      font-size: 60px;
+      color: var(--primary);
+      opacity: 0.3;
+      position: absolute;
+      top: -10px;
+      left: 16px;
+      font-family: serif;
+      line-height: 1;
+    }
+
+    .quote-source {
+      margin-top: 10px;
+      font-size: 13px;
+      font-style: normal;
+      color: var(--gray);
+      font-weight: 600;
+    }
+
+    /* 경고 박스 */
+    .warning-box {
+      background: var(--warning-light);
+      border: 2px solid var(--warning);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 28px 0;
+    }
+
+    .warning-box .warning-title {
+      font-weight: 700;
+      color: var(--warning);
+      font-size: 15px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* 인포그래픽 */
+    .infographic {
+      background: var(--light-gray);
+      border-radius: 16px;
+      padding: 32px;
+      margin: 36px 0;
+    }
+
+    .infographic h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 28px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(to bottom, var(--primary), var(--accent));
+      border-radius: 2px;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -22px;
+      top: 6px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--primary);
+      border: 3px solid white;
+      box-shadow: 0 0 0 2px var(--primary);
+    }
+
+    .timeline-date {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .timeline-content {
+      font-size: 15px;
+      color: var(--dark);
+      font-weight: 500;
+    }
+
+    /* 데이터 카드 */
+    .data-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+      margin: 28px 0;
+    }
+
+    .data-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px 16px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .data-card .number {
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--primary);
+      line-height: 1.1;
+    }
+
+    .data-card .unit {
+      font-size: 14px;
+      color: var(--gray);
+      margin-top: 4px;
+    }
+
+    .data-card .label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--dark);
+      margin-top: 8px;
+      line-height: 1.4;
+    }
+
+    /* 옵션 비교 */
+    .options-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin: 28px 0;
+    }
+
+    .option-card {
+      border-radius: 12px;
+      padding: 20px;
+      border: 2px solid var(--border);
+    }
+
+    .option-card.pro {
+      border-color: #16a34a;
+      background: #f0fdf4;
+    }
+
+    .option-card.con {
+      border-color: var(--primary);
+      background: var(--primary-light);
+    }
+
+    .option-card h4 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .option-card.pro h4 { color: #16a34a; }
+    .option-card.con h4 { color: var(--primary); }
+
+    .option-card ul {
+      list-style: none;
+      font-size: 14px;
+    }
+
+    .option-card ul li {
+      padding: 4px 0;
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .option-card.pro ul li::before { content: '✓'; position: absolute; left: 0; color: #16a34a; font-weight: 700; }
+    .option-card.con ul li::before { content: '✗'; position: absolute; left: 0; color: var(--primary); font-weight: 700; }
+
+    /* SVG 차트 */
+    .chart-container {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      margin: 20px 0;
+    }
+
+    .chart-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    /* 해시태그 */
+    .hashtags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 2px solid var(--border);
+    }
+
+    .hashtag {
+      background: var(--accent-light);
+      color: var(--accent);
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    /* 면책 조항 */
+    .disclaimer {
+      background: var(--light-gray);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-top: 32px;
+      font-size: 12px;
+      color: var(--gray);
+      line-height: 1.7;
+    }
+
+    /* 반응형 */
+    @media (max-width: 600px) {
+      .article-header { padding: 32px 0 28px; }
+      h2 { font-size: 19px; }
+      .data-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="breaking-banner">
+    <span>🚨 긴급</span> 정부 공식 확인: 나무호, 드론 2발 피격 — 파병 논의 급물살
+  </div>
+
+  <header class="article-header">
+    <div class="container">
+      <div class="category-badge">🏛️ 정치·외교·안보</div>
+      <h1>우리 배가 <span class="highlight-red">드론 2발 맞는 동안</span><br>정부는 7일 침묵했다<br>— 이제 파병이냐, 굴욕이냐</h1>
+      <div class="article-meta">
+        <span>📅 2026년 5월 11일</span>
+        <span>✍️ 탐사저널팀</span>
+        <span>⏱️ 읽는 시간 약 7분</span>
+        <span>🔥 긴급 심층분석</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="article-body">
+    <div class="container">
+
+      <!-- 핵심 요약 -->
+      <div class="summary-box">
+        <h3>📌 3줄 핵심 요약</h3>
+        <ul>
+          <li>5월 4일 호르무즈 해협에서 한국 선박 나무호가 미상 드론 2기에 피격, 정부는 7일 후인 10일에야 공식 인정</li>
+          <li>트럼프 "한국, 혼자 다니다 맞았다" — 미국 주도 군사 작전 참여 공개 압박, 파병 여부 기로</li>
+          <li>국내 해운사 하루 약 5억 원 손실 중 — 호르무즈 봉쇄 시 한국 경제 타격 현실화</li>
+        </ul>
+      </div>
+
+      <!-- 훅 문단 -->
+      <p>지난 5월 4일 밤 8시 40분, 호르무즈 해협 한가운데서 한국 선박이 두 번 폭발했다. HMM 소속 컨테이너선 나무호(Namuho)는 미상의 비행체 2기에 약 1분 간격으로 선미 좌현 외판을 연달아 타격당했다. 화염이 치솟고 연기가 퍼졌다. 선박은 침몰 직전까지 갔다고 정부는 뒤늦게 밝혔다. 그리고 정부가 이 사실을 공식 인정한 것은 7일 후였다.</p>
+
+      <p>이 7일간 무슨 일이 있었을까. 그리고 지금 대한민국은 어떤 선택 앞에 서 있는가.</p>
+
+      <!-- SECTION 1: 타임라인 -->
+      <h2>📅 7일의 침묵 — 무슨 일이 있었나</h2>
+
+      <p>사건은 한국 시간 5월 4일 오후 8시 40분, 아랍에미리트 움알쿠와인항 인근 해역에서 발생했다. 나무호에는 한국인 선원 6명과 외국인 선원 18명 등 총 24명이 승선해 있었다. 다행히 인명피해는 없었지만, 선박은 화재와 손상으로 항행 불능 상태에 빠졌다.</p>
+
+      <div class="infographic">
+        <h3>⏱️ 나무호 피격 사건 타임라인</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">5월 4일 오후 8:40</div>
+            <div class="timeline-content">호르무즈 해협 UAE 인근 해역에서 나무호 화재 발생 — 정부 "사고" 발표</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">5월 4일 당일</div>
+            <div class="timeline-content">트럼프, SNS에 "이란이 한국 화물선 공격" — 이란은 즉각 부인</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">5월 5~9일</div>
+            <div class="timeline-content">정부 "원인 조사 중" — 이란 연루 여부 공식 언급 회피, 野 "사실 은폐" 공격 시작</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">5월 10일</div>
+            <div class="timeline-content">외교부, 정부 합동 조사 결과 발표 — "미상 비행체 2기의 외부 타격이 화재 원인" 공식 확인</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">5월 11일 (오늘)</div>
+            <div class="timeline-content">여야 공방 격화, 파병 논의 급물살 — 청와대 "단계별 대응 준비"</div>
+          </div>
+        </div>
+      </div>
+
+      <p>정부가 7일간 "원인 조사 중"이라는 말만 반복한 이유는 복잡하다. 이란과의 외교 관계, 중동 석유 수입 의존도, 미국과의 동맹 사이에서 아슬아슬한 줄타기를 해야 했기 때문이다. 그러나 국민의힘 장동혁 원내대표는 이를 "외계인에게 공격당한 것이냐"고 작심 비판하며 이란 책임론을 정면으로 제기했다.</p>
+
+      <!-- SECTION 2: 드론 공격의 실체 -->
+      <h2>💥 "하마터면 침몰" — 드론 공격의 실체</h2>
+
+      <p>정부 합동 조사단이 밝힌 공격 경위는 충격적이다. 미상의 비행체 2기가 각각 선미 좌현 평형수 탱크 외판을 1분 간격으로 두 차례 타격했다. 첫 번째 타격으로 화염이 발생했고, 두 번째 타격이 가해지면서 화재가 급격히 확산됐다. 정밀 타격이었다.</p>
+
+      <div class="warning-box">
+        <div class="warning-title">⚠️ 정부 발표 핵심</div>
+        <p style="font-size:15px;">"피격 당시 상황이 조금 달랐다면 선박이 침몰했을 수도 있었다." — 정부 당국자 (5월 11일)</p>
+      </div>
+
+      <p>비행체 기종은 여전히 확인되지 않았다. 이란 혁명수비대(IRGC) 소속 드론이라는 의혹이 유력하지만, 이란 정부는 "우리의 공격이 아니다"라며 부인 중이다. 이란 의회는 "혁명수비대 입장이 이란 정부의 공식 입장은 아니다"라는 다소 묘한 해명을 내놓기도 했다. 예멘 후티 반군의 공격 가능성도 배제되지 않는다.</p>
+
+      <p>군사 전문가들은 이 공격 패턴을 이미 1987년 '유조선 전쟁(Tanker War)' 시기와 비교하고 있다. 당시 이란과 이라크가 서로의 석유 수출을 막기 위해 중립국 선박까지 무차별 공격했던 전례가 있기 때문이다. 약 40년 만에 호르무즈 해협에서 같은 악몽이 재현되고 있다.</p>
+
+      <!-- SECTION 3: 트럼프와 파병 압박 -->
+      <h2>🇺🇸 트럼프의 압박 — "한국, 이제 올 때"</h2>
+
+      <p>트럼프 대통령의 반응은 빠르고 직접적이었다. 나무호 피격 당일, 트럼프는 자신의 SNS에 "이란이 한국 화물선을 포함해 무관한 국가들을 향해 발포했다"고 적었다. 그러면서 "이제 한국도 이곳으로 와 이 작전에 동참할 때가 된 것 같다"고 노골적으로 파병을 촉구했다.</p>
+
+      <div class="quote-box">
+        "한국은 혼자 행동하다 맞았다. 우리와 함께 작전에 참여해야 이런 일을 막을 수 있다."
+        <div class="quote-source">— 도널드 트럼프 미국 대통령, 2026년 5월</div>
+      </div>
+
+      <p>현재 논의 중인 한국의 군사적 선택지는 크게 세 가지다. 첫째, 기존 청해부대의 작전 범위를 호르무즈까지 확대하는 방안. 둘째, 다국적 해상 연합체에 참여해 장교를 파견하는 방안. 셋째, 구축함을 직접 파견해 한국 선박 호위에 나서는 방안이다.</p>
+
+      <div class="options-grid">
+        <div class="option-card pro">
+          <h4>✈️ 파병 참여 시 이점</h4>
+          <ul>
+            <li>한미동맹 강화</li>
+            <li>자국 선박 안전 확보</li>
+            <li>국제 협력 이미지 제고</li>
+            <li>트럼프 압박에 대한 외교적 해소</li>
+          </ul>
+        </div>
+        <div class="option-card con">
+          <h4>🚫 파병 참여 시 리스크</h4>
+          <ul>
+            <li>이란과의 외교·경제 관계 악화</li>
+            <li>중동 갈등 당사자로 연루</li>
+            <li>"왜 개입하냐" 국내 여론 반발</li>
+            <li>군사적 충돌 시 한국 선원 위험</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- SECTION 4: 경제적 영향 -->
+      <h2>💸 하루 5억 원 손실 — 나와 직결된 숫자들</h2>
+
+      <p>이 사건이 정치·외교 뉴스로만 느껴진다면 착각이다. 호르무즈 해협은 한국 원유 수입의 70% 이상이 통과하는 생명선이다. 이 해협이 막히거나 위험 지역이 되면 그 비용은 고스란히 한국 소비자에게 전가된다.</p>
+
+      <div class="data-grid">
+        <div class="data-card">
+          <div class="number">~5억</div>
+          <div class="unit">원/일</div>
+          <div class="label">한국 해운사 추가 손실액<br>(보험료·유류비·선원비 포함)</div>
+        </div>
+        <div class="data-card">
+          <div class="number">70%</div>
+          <div class="unit">이상</div>
+          <div class="label">한국 원유 수입 중<br>호르무즈 통과 비율</div>
+        </div>
+        <div class="data-card">
+          <div class="number">24명</div>
+          <div class="unit">승선</div>
+          <div class="label">나무호 승선 인원<br>(한국인 6, 외국인 18)</div>
+        </div>
+        <div class="data-card">
+          <div class="number">2기</div>
+          <div class="unit">드론</div>
+          <div class="label">1분 간격 2차례<br>정밀 타격 확인</div>
+        </div>
+      </div>
+
+      <p>국내 해운업계에 따르면 현재 호르무즈 해협에 고립된 한국 선사들은 전쟁 위험 보험료(War Risk Premium), 추가 유류비, 선원 위험 수당 등으로 하루 평균 4억 9,000만 원의 추가 비용을 지출하고 있다. 이는 결국 물류비 인상으로 이어지며, 이미 고물가에 시달리는 소비자의 부담을 가중시킨다.</p>
+
+      <!-- SVG 인포그래픽: 호르무즈 리스크 구조 -->
+      <div class="infographic">
+        <h3>🌍 호르무즈 리스크가 한국 일상에 미치는 연결 구조</h3>
+        <div class="chart-container">
+          <svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:auto;">
+            <!-- 배경 -->
+            <rect width="700" height="320" fill="#f8fafc" rx="8"/>
+
+            <!-- 중심: 호르무즈 해협 -->
+            <ellipse cx="350" cy="160" rx="80" ry="45" fill="#b91c1c" opacity="0.9"/>
+            <text x="350" y="154" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="white">호르무즈</text>
+            <text x="350" y="172" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="white">해협 봉쇄</text>
+
+            <!-- 왼쪽: 원인 -->
+            <rect x="20" y="60" width="140" height="50" rx="8" fill="#1d4ed8" opacity="0.85"/>
+            <text x="90" y="80" text-anchor="middle" font-family="sans-serif" font-size="12" fill="white" font-weight="bold">중동 군사 충돌</text>
+            <text x="90" y="98" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#bfdbfe">이란·예멘 드론공격</text>
+
+            <rect x="20" y="200" width="140" height="50" rx="8" fill="#1d4ed8" opacity="0.85"/>
+            <text x="90" y="220" text-anchor="middle" font-family="sans-serif" font-size="12" fill="white" font-weight="bold">선박 피격·보험료</text>
+            <text x="90" y="238" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#bfdbfe">하루 5억 원 추가비용</text>
+
+            <!-- 오른쪽: 결과 -->
+            <rect x="540" y="40" width="145" height="50" rx="8" fill="#d97706" opacity="0.85"/>
+            <text x="612" y="60" text-anchor="middle" font-family="sans-serif" font-size="12" fill="white" font-weight="bold">유가 급등</text>
+            <text x="612" y="78" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#fef3c7">원유 70% 호르무즈 통과</text>
+
+            <rect x="540" y="115" width="145" height="50" rx="8" fill="#d97706" opacity="0.85"/>
+            <text x="612" y="135" text-anchor="middle" font-family="sans-serif" font-size="12" fill="white" font-weight="bold">물류비 인상</text>
+            <text x="612" y="153" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#fef3c7">수출입 비용 전가</text>
+
+            <rect x="540" y="195" width="145" height="50" rx="8" fill="#d97706" opacity="0.85"/>
+            <text x="612" y="215" text-anchor="middle" font-family="sans-serif" font-size="12" fill="white" font-weight="bold">물가 인상</text>
+            <text x="612" y="233" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#fef3c7">내수 소비자 부담 증가</text>
+
+            <!-- 화살표: 왼쪽 → 중심 -->
+            <line x1="162" y1="85" x2="268" y2="140" stroke="#6b7280" stroke-width="2" stroke-dasharray="5,3"/>
+            <polygon points="268,140 258,132 262,145" fill="#6b7280"/>
+            <line x1="162" y1="225" x2="268" y2="178" stroke="#6b7280" stroke-width="2" stroke-dasharray="5,3"/>
+            <polygon points="268,178 258,172 264,185" fill="#6b7280"/>
+
+            <!-- 화살표: 중심 → 오른쪽 -->
+            <line x1="430" y1="140" x2="538" y2="68" stroke="#b91c1c" stroke-width="2"/>
+            <polygon points="538,68 528,64 534,77" fill="#b91c1c"/>
+            <line x1="430" y1="155" x2="538" y2="142" stroke="#b91c1c" stroke-width="2"/>
+            <polygon points="538,142 528,136 534,149" fill="#b91c1c"/>
+            <line x1="430" y1="170" x2="538" y2="218" stroke="#b91c1c" stroke-width="2"/>
+            <polygon points="538,218 528,210 536,224" fill="#b91c1c"/>
+
+            <!-- 하단 설명 -->
+            <text x="350" y="298" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#6b7280">
+              호르무즈 위기는 군사·외교 문제를 넘어 한국 소비자 물가에 직접 연결
+            </text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- SECTION 5: 숨겨진 이면 -->
+      <h2>🔍 숨겨진 이면 — 왜 정부는 7일을 침묵했나</h2>
+
+      <p>정부가 즉각 이란 책임론을 제기하지 않은 데는 구조적 이유가 있다. 한국은 이란과 미국 사이에서 극도로 조심스러운 위치에 있다. 이란 제재로 인해 한국 기업들의 이란 내 동결 자산 문제가 여전히 해결되지 않았고, 호르무즈를 통한 원유 수입은 대체 경로를 단기에 찾기 어렵다.</p>
+
+      <div class="quote-box">
+        "트럼프도 호르무즈 해협의 늪에 빠졌다. 한국은 더더욱 이도 저도 못하는 상황이다."
+        <div class="quote-source">— 주한 이란 대사 인터뷰 (경향신문, 2026.05.09)</div>
+      </div>
+
+      <p>한편 정치권에서는 이 사건이 6·3 지방선거를 앞두고 안보 프레임 전쟁으로 비화되고 있다. 국민의힘은 "정부가 사건을 축소·은폐했다"며 즉각적인 국방위·외통위 현안질의를 요구했고, 민주당은 "공격 주체가 확인되지 않은 상황에서 성급한 정치 공세는 국익을 해친다"며 맞섰다. 이 과정에서 나무호 선원들의 안전보다 정쟁이 먼저 터지고 있다는 비판도 나온다.</p>
+
+      <!-- SECTION 6: 나에게 미치는 영향 -->
+      <h2>🏠 나에게 미치는 영향 — 이게 무슨 상관이냐고?</h2>
+
+      <p>상관이 아주 많다. 지금 당장 나무호 사건이 내 일상과 무관해 보이지만, 호르무즈 해협 긴장이 지속되면 다음과 같은 경로로 직접 영향이 온다.</p>
+
+      <p><strong>① 주유소 기름값 상승:</strong> 한국은 원유 수입의 70% 이상이 호르무즈를 통과한다. 해협이 봉쇄되면 유가는 즉각 치솟는다. 이미 중동 긴장으로 국제 유가는 불안정한 상황이다.</p>
+
+      <p><strong>② 수입 물가 인상:</strong> 해운 물류비가 오르면 수입 제품 가격이 올라간다. 식품, 전자제품, 자동차 부품까지 예외가 없다. 고물가 시대에 또 다른 악재다.</p>
+
+      <p><strong>③ 파병 비용은 세금:</strong> 만약 한국이 군사 작전에 참여한다면 그 비용은 국방 예산, 즉 세금에서 나온다. 해외 파병의 경제적 비용이 국민 부담으로 돌아오는 구조다.</p>
+
+      <p><strong>④ 수출 차질:</strong> 한국 최대 해운사 HMM의 선박이 호르무즈 해협을 기피하거나 우회 항로를 택하면 수출 일정과 비용이 모두 늘어난다.</p>
+
+      <!-- SECTION 7: 전망과 행동 제안 -->
+      <h2>🔭 전망과 행동 제안</h2>
+
+      <p>전문가들은 한국 정부가 결국 "제한적 참여" 카드를 꺼낼 가능성이 높다고 본다. 청해부대 작전 범위 확대, 또는 장교 파견 수준의 상징적 참여로 미국의 압박은 무마하되 이란과의 전면 갈등은 피하는 방식이다. 그러나 트럼프는 '상징적 참여'에 만족할 인물이 아니라는 점이 문제다.</p>
+
+      <p>6·3 지방선거를 한 달도 채 남기지 않은 시점에서, 나무호 사건은 안보 이슈가 최대 변수로 떠오르는 계기가 됐다. 어느 쪽이 "단호하고 현명하게" 이 위기를 관리하느냐에 따라 선거 지형도 흔들릴 수 있다.</p>
+
+      <div class="warning-box">
+        <div class="warning-title">📌 독자가 지금 할 수 있는 것</div>
+        <p style="font-size:15px;">1. 이 사건을 단순 외교 뉴스로 치부하지 말 것 — 유가·물가와 직결된 생활 이슈<br>
+        2. 파병 논의가 어떤 방향으로 전개되는지 국방위 현안질의 결과 추적<br>
+        3. 호르무즈 원유 의존도를 줄이기 위한 에너지 다변화 정책 점검</p>
+      </div>
+
+      <!-- 해시태그 -->
+      <div class="hashtags">
+        <span class="hashtag">#나무호피격</span>
+        <span class="hashtag">#호르무즈해협</span>
+        <span class="hashtag">#HMM</span>
+        <span class="hashtag">#파병논란</span>
+        <span class="hashtag">#이란드론</span>
+        <span class="hashtag">#트럼프압박</span>
+        <span class="hashtag">#중동리스크</span>
+        <span class="hashtag">#한국선박피격</span>
+        <span class="hashtag">#유가상승</span>
+        <span class="hashtag">#지방선거안보</span>
+        <span class="hashtag">#정치사법</span>
+        <span class="hashtag">#오늘의이슈</span>
+      </div>
+
+      <!-- 면책 조항 -->
+      <div class="disclaimer">
+        <strong>⚠️ 면책 조항:</strong> 본 아티클은 공개된 언론 보도를 기반으로 작성된 분석 콘텐츠입니다. 사건 세부 사항은 수사·외교 상황에 따라 변경될 수 있으며, 본 내용은 특정 정치적 입장을 대변하지 않습니다. 군사·외교적 사안은 전문가와 공식 정부 발표를 참고하시기 바랍니다. 출처: MBC뉴스, 뉴스핌, 파이낸셜뉴스, 이투데이, 헤럴드경제, 문화일보, 경향신문, 이투데이 등.
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>
