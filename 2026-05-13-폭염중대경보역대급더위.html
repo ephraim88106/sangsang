@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>"체감 38도면 멈춰라" — 역대급 폭염이 온다, 당신의 생존 전략 총정리 | 한국이슈리포트</title>
+  <meta name="description" content="2026년 여름, 기상청이 '폭염중대경보'를 신설했다. 체감 38도 이상이면 야외 작업 전면 중단. 그런데 1,000만 명 야외노동자에겐 작업중지권이 없다. 지금 당신이 알아야 할 모든 것." />
+  <meta name="keywords" content="폭염중대경보, 2026폭염, 역대급더위, 온열질환, 야외노동자, 취약계층, 쿨링센터, 열돔, 이상기후" />
+  <meta property="og:title" content='"체감 38도면 멈춰라" — 역대급 폭염이 온다, 당신의 생존 전략 총정리' />
+  <meta property="og:description" content="2026년 여름 역대급 폭염 전망. 폭염중대경보 신설, 4,460명 온열질환자 통계, 취약계층 현실과 정부 대책의 민낯을 파헤친다." />
+  <meta property="og:type" content="article" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #e65100;
+      --primary-light: #fff3e0;
+      --primary-dark: #bf360c;
+      --accent: #ff6f00;
+      --danger: #c62828;
+      --warning: #f57c00;
+      --safe: #2e7d32;
+      --text-main: #1a1a1a;
+      --text-sub: #555;
+      --text-muted: #888;
+      --border: #e0e0e0;
+      --bg: #ffffff;
+      --bg-light: #fafafa;
+      --card-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--text-main);
+      background: var(--bg);
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+
+    /* 헤더 배너 */
+    .site-header {
+      background: var(--primary-dark);
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 13px;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    /* 카테고리 배지 */
+    .category-badge {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+      letter-spacing: 1px;
+    }
+
+    /* 제목 */
+    .article-title {
+      font-size: 2.1rem;
+      font-weight: 900;
+      line-height: 1.25;
+      color: var(--text-main);
+      margin-bottom: 12px;
+      word-break: keep-all;
+    }
+
+    .article-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-sub);
+      line-height: 1.6;
+      margin-bottom: 20px;
+      word-break: keep-all;
+    }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid var(--primary);
+    }
+
+    .article-meta span { display: flex; align-items: center; gap: 4px; }
+
+    /* 훅 문단 */
+    .hook-box {
+      background: linear-gradient(135deg, #bf360c 0%, #e65100 100%);
+      color: white;
+      padding: 28px 28px;
+      border-radius: 12px;
+      margin-bottom: 32px;
+      font-size: 1.05rem;
+      line-height: 1.9;
+      word-break: keep-all;
+    }
+
+    .hook-box strong { font-weight: 900; font-size: 1.15rem; }
+
+    /* 핵심요약 3줄 */
+    .summary-box {
+      background: var(--primary-light);
+      border-left: 5px solid var(--primary);
+      padding: 24px 28px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 32px;
+    }
+
+    .summary-box h3 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: 1.5px;
+      margin-bottom: 14px;
+    }
+
+    .summary-box ul { list-style: none; }
+    .summary-box ul li {
+      padding: 6px 0;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: 0.97rem;
+      color: var(--text-main);
+      border-bottom: 1px dashed #f0c08a;
+      word-break: keep-all;
+    }
+    .summary-box ul li:last-child { border-bottom: none; }
+    .summary-box ul li .num {
+      background: var(--primary);
+      color: white;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* 소제목 */
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: var(--text-main);
+      margin: 40px 0 16px;
+      padding-bottom: 10px;
+      border-bottom: 3px solid var(--primary-light);
+      word-break: keep-all;
+    }
+
+    h2::before {
+      content: "🔥 ";
+    }
+
+    /* 본문 */
+    p {
+      margin-bottom: 18px;
+      word-break: keep-all;
+      color: var(--text-main);
+    }
+
+    /* 강조 텍스트 */
+    .highlight {
+      background: linear-gradient(180deg, rgba(0,0,0,0) 60%, #ffe0b2 60%);
+      font-weight: 700;
+    }
+
+    /* 경보 단계 카드 */
+    .alert-levels {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+      margin: 24px 0 32px;
+    }
+
+    .alert-card {
+      border-radius: 12px;
+      padding: 20px 16px;
+      text-align: center;
+    }
+
+    .alert-card.level1 { background: #fff8e1; border: 2px solid #fdd835; }
+    .alert-card.level2 { background: #fff3e0; border: 2px solid #fb8c00; }
+    .alert-card.level3 { background: #fce4ec; border: 2px solid #e53935; }
+
+    .alert-card .temp {
+      font-size: 1.7rem;
+      font-weight: 900;
+      margin-bottom: 4px;
+    }
+
+    .alert-card.level1 .temp { color: #f9a825; }
+    .alert-card.level2 .temp { color: #e65100; }
+    .alert-card.level3 .temp { color: #c62828; }
+
+    .alert-card .name {
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .alert-card .desc {
+      font-size: 0.78rem;
+      color: var(--text-sub);
+      line-height: 1.5;
+    }
+
+    .alert-card .new-badge {
+      display: inline-block;
+      background: #c62828;
+      color: white;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 10px;
+      margin-bottom: 6px;
+    }
+
+    /* 인포그래픽 — 온열질환자 추이 */
+    .infographic {
+      background: var(--bg-light);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 24px;
+      margin: 28px 0 32px;
+    }
+
+    .infographic h3 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-sub);
+      letter-spacing: 1px;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .bar-chart { display: flex; flex-direction: column; gap: 12px; }
+
+    .bar-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .bar-label {
+      width: 48px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-sub);
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    .bar-track {
+      flex: 1;
+      background: #eeeeee;
+      border-radius: 6px;
+      height: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+      font-size: 12px;
+      font-weight: 700;
+      color: white;
+      transition: width 0.3s;
+    }
+
+    .bar-num {
+      width: 60px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+      flex-shrink: 0;
+    }
+
+    /* 취약계층 카드 */
+    .vuln-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 20px 0 28px;
+    }
+
+    .vuln-card {
+      border-radius: 10px;
+      padding: 16px;
+      background: #fff;
+      box-shadow: var(--card-shadow);
+      border-top: 4px solid;
+    }
+
+    .vuln-card:nth-child(1) { border-color: #e53935; }
+    .vuln-card:nth-child(2) { border-color: #fb8c00; }
+    .vuln-card:nth-child(3) { border-color: #7b1fa2; }
+    .vuln-card:nth-child(4) { border-color: #1565c0; }
+
+    .vuln-card .icon { font-size: 1.8rem; margin-bottom: 8px; }
+    .vuln-card .title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--text-main);
+    }
+    .vuln-card .desc {
+      font-size: 0.8rem;
+      color: var(--text-sub);
+      line-height: 1.6;
+    }
+
+    /* 문제점 박스 */
+    .problem-box {
+      background: #fff8f8;
+      border: 1.5px solid #ef9a9a;
+      border-radius: 10px;
+      padding: 20px 22px;
+      margin: 20px 0 28px;
+    }
+
+    .problem-box .problem-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--danger);
+      margin-bottom: 12px;
+    }
+
+    .problem-box ul { list-style: none; }
+    .problem-box ul li {
+      padding: 5px 0;
+      font-size: 0.9rem;
+      color: var(--text-main);
+    }
+    .problem-box ul li::before { content: "⚠️ "; }
+
+    /* 생존 가이드 */
+    .survival-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 20px 0 28px;
+    }
+
+    .survival-item {
+      display: flex;
+      gap: 12px;
+      padding: 14px;
+      background: #f1f8e9;
+      border-radius: 10px;
+      border-left: 4px solid #558b2f;
+      align-items: flex-start;
+    }
+
+    .survival-item .s-icon { font-size: 1.4rem; flex-shrink: 0; }
+    .survival-item .s-text { font-size: 0.85rem; line-height: 1.6; }
+    .survival-item .s-text strong { display: block; font-weight: 700; margin-bottom: 3px; }
+
+    /* 전망 박스 */
+    .outlook-box {
+      background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+      color: white;
+      border-radius: 16px;
+      padding: 28px;
+      margin: 28px 0 32px;
+    }
+
+    .outlook-box h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+      padding-bottom: 10px;
+    }
+
+    .outlook-box p {
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 12px;
+    }
+
+    /* 해시태그 */
+    .hashtags {
+      margin: 36px 0 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .hashtags span {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 20px;
+      cursor: default;
+    }
+
+    /* 면책조항 */
+    .disclaimer {
+      margin-top: 40px;
+      padding: 18px 20px;
+      background: #f5f5f5;
+      border-radius: 8px;
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* 출처 */
+    .sources {
+      margin-top: 24px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .sources a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    .sources a:hover { text-decoration: underline; }
+
+    /* 공유 버튼 */
+    .share-box {
+      display: flex;
+      gap: 10px;
+      margin: 28px 0;
+      flex-wrap: wrap;
+    }
+
+    .share-btn {
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+    }
+
+    .share-btn.kakao { background: #fee500; color: #3c1e1e; }
+    .share-btn.copy { background: var(--primary); color: white; }
+
+    @media (max-width: 600px) {
+      .article-title { font-size: 1.6rem; }
+      .alert-levels { grid-template-columns: 1fr; }
+      .vuln-grid { grid-template-columns: 1fr; }
+      .survival-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="site-header">🇰🇷 한국이슈리포트 — 탐사 저널리즘</div>
+
+<div style="padding-top: 36px;"></div>
+
+<div class="container">
+  <span class="category-badge">🌱 환경·기후</span>
+
+  <h1 class="article-title">"체감 38도면 멈춰라"…역대급 폭염이 온다, 그런데 당신에겐 멈출 권리가 없다</h1>
+  <p class="article-subtitle">2026년 여름, 정부가 '폭염중대경보'를 신설했다. 하지만 1,000만 야외노동자엔 작업중지권이 없고, 독거노인 폭염 사망은 매년 반복된다. 번지르르한 대책의 이면을 파헤쳤다.</p>
+
+  <div class="article-meta">
+    <span>📅 2026년 5월 13일</span>
+    <span>✍️ 한국이슈리포트 탐사팀</span>
+    <span>⏱️ 예상 독서 시간 7분</span>
+  </div>
+
+  <!-- 훅 -->
+  <div class="hook-box">
+    <strong>지난해 여름, 한 사람이 죽었다.</strong><br/>
+    부산 남구의 옥탑방에 홀로 살던 72세 이 모 씨. 기온이 37도를 넘던 8월 오후, 선풍기 하나에 의지하던 그는 온열쇼크로 사망했다. 같은 날, 경기도 광주의 한 건설 현장에선 40대 인부가 열사병으로 쓰러졌다. 2025년 한 해에만 온열질환자가 <strong>4,460명</strong>이었고, 그 중 <strong>29명</strong>이 목숨을 잃었다. 올여름, 기상청은 더 뜨거울 것이라 한다. 당신은 준비가 됐는가?
+  </div>
+
+  <!-- 핵심요약 -->
+  <div class="summary-box">
+    <h3>⚡ 이 기사의 핵심 3가지</h3>
+    <ul>
+      <li><span class="num">1</span>기상청, 2026년 여름 '체감 38도 이상' 폭염중대경보 신설 — 기온 평년보다 높을 확률 70%</li>
+      <li><span class="num">2</span>2025년 온열질환자 4,460명·사망 29명 — 취약계층(독거노인·야외노동자)이 압도적 다수</li>
+      <li><span class="num">3</span>정부 대책 화려하지만 '야외 작업중지권' 없고, 특수고용직·배달기사는 대책 사각지대</li>
+    </ul>
+  </div>
+
+  <!-- 본문 1 -->
+  <h2 style="font-size: 1.3rem;">올여름, '3단계 폭염경보' 시대가 열린다</h2>
+  <p>2026년부터 한국의 폭염 경보 체계가 바뀐다. 기존에는 <span class="highlight">폭염주의보(체감 33도 이상)</span>와 <span class="highlight">폭염경보(체감 35도 이상)</span> 두 단계였으나, 올해부터 <span class="highlight">폭염중대경보(체감 38도 이상)</span>가 신설됐다. 이는 최근 수년간 극단적 폭염이 반복되면서 기존 체계로는 위기 대응이 불충분하다는 판단에서다.</p>
+
+  <p>폭염중대경보가 발령되면 학교·청소년 시설의 야외활동이 전면 중단 권고되고, 야외 작업은 '강력 권고' 수준에서 중단을 촉구한다. 무더위쉼터(쿨링센터)는 공공시설을 넘어 금융기관·철도시설·유통업체 등 민간 영역까지 확대된다.</p>
+
+  <!-- 경보 단계 카드 -->
+  <div class="alert-levels">
+    <div class="alert-card level1">
+      <div class="temp">33°C</div>
+      <div class="name">폭염주의보</div>
+      <div class="desc">체감온도 33도 이상 2일 지속<br/>물 자주 마시기 권고</div>
+    </div>
+    <div class="alert-card level2">
+      <div class="temp">35°C</div>
+      <div class="name">폭염경보</div>
+      <div class="desc">체감온도 35도 이상 2일 지속<br/>야외활동 자제 권고</div>
+    </div>
+    <div class="alert-card level3">
+      <span class="new-badge">2026 신설</span>
+      <div class="temp">38°C</div>
+      <div class="name">폭염중대경보</div>
+      <div class="desc">체감온도 38도 이상<br/>야외작업 전면 중단 강력 권고</div>
+    </div>
+  </div>
+
+  <!-- 본문 2 -->
+  <h2 style="font-size: 1.3rem;">숫자가 말한다 — 온열질환, 5년간 사망자 100명 돌파</h2>
+  <p>온열질환이란 열사병·열탈진·열경련 등 더위로 인한 신체 이상을 통칭한다. 질병관리청 통계에 따르면, <span class="highlight">2025년 한 해 온열질환 응급실 내원자는 4,460명으로 전년 대비 20.4% 급증</span>했다. 5년간 누적 사망자는 100명을 훌쩍 넘겼다.</p>
+
+  <!-- 인포그래픽 -->
+  <div class="infographic">
+    <h3>📊 연도별 온열질환 응급실 내원자 현황 (단위: 명)</h3>
+    <div class="bar-chart">
+      <div class="bar-row">
+        <div class="bar-label">2021</div>
+        <div class="bar-track">
+          <div class="bar-fill" style="width:50%; background:#ffa726;">1,376명</div>
+        </div>
+        <div class="bar-num">1,376</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">2022</div>
+        <div class="bar-track">
+          <div class="bar-fill" style="width:65%; background:#fb8c00;">1,841명</div>
+        </div>
+        <div class="bar-num">1,841</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">2023</div>
+        <div class="bar-track">
+          <div class="bar-fill" style="width:80%; background:#e65100;">3,244명</div>
+        </div>
+        <div class="bar-num">3,244</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">2024</div>
+        <div class="bar-track">
+          <div class="bar-fill" style="width:87%; background:#d84315;">3,704명</div>
+        </div>
+        <div class="bar-num">3,704</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">2025</div>
+        <div class="bar-track">
+          <div class="bar-fill" style="width:100%; background:#b71c1c;">4,460명 ▲20.4%</div>
+        </div>
+        <div class="bar-num" style="color:#c62828; font-weight:900;">4,460</div>
+      </div>
+    </div>
+    <p style="margin-top:16px; font-size:12px; color:var(--text-muted); text-align:center;">자료: 질병관리청 온열질환 응급실감시체계 (5~9월 집계)</p>
+  </div>
+
+  <!-- 본문 3 -->
+  <h2 style="font-size: 1.3rem;">폭염 앞에서 평등하지 않다 — 누가 가장 위험한가</h2>
+  <p>폭염은 자연재해가 아니라 <span class="highlight">불평등 재난</span>이다. 에어컨이 없는 옥탑방 독거노인, 하루 10시간 햇볕 아래 일하는 건설노동자, 오토바이를 타고 달리는 배달기사 — 이들에게 폭염은 생사의 문제다. 정부는 올해 취약계층을 10개 유형으로 세분화해 맞춤형 관리를 하겠다고 발표했다. 그러나 현장의 목소리는 다르다.</p>
+
+  <div class="vuln-grid">
+    <div class="vuln-card">
+      <div class="icon">👴</div>
+      <div class="title">독거노인·기초수급자</div>
+      <div class="desc">에어컨 없는 집, 열대야에 창문도 못 열어. 생활지원사 하루 1회 전화 확인이 전부.</div>
+    </div>
+    <div class="vuln-card">
+      <div class="icon">🔨</div>
+      <div class="title">건설·농업 야외노동자</div>
+      <div class="desc">38도 이상 '강력 권고'지만 법적 작업중지권 없음. "일 안 하면 일당 없다"는 현실.</div>
+    </div>
+    <div class="vuln-card">
+      <div class="icon">🛵</div>
+      <div class="title">배달·택배 특수고용직</div>
+      <div class="desc">근로기준법 적용 제외. 폭염 대책 사각지대. 자신을 보호할 제도적 수단 전무.</div>
+    </div>
+    <div class="vuln-card">
+      <div class="icon">🧒</div>
+      <div class="title">어린이·청소년</div>
+      <div class="desc">폭염중대경보 시 야외활동 중단 권고. 하지만 학원·학교 이동 시 노출 불가피.</div>
+    </div>
+  </div>
+
+  <!-- 본문 4 -->
+  <h2 style="font-size: 1.3rem;">화려한 대책의 이면 — "권고"와 "현실"의 괴리</h2>
+  <p>정부의 폭염 대책을 들여다보면 화려하다. 취약계층 40,000가구 집중 모니터링, 에어컨 설치·교체 지원, 무더위쉼터 민간 확대, 온열질환 예측 AI 시스템 가동… 그러나 탐사 취재 결과, 대책의 실효성에는 치명적 허점이 존재한다.</p>
+
+  <div class="problem-box">
+    <div class="problem-title">⛔ 2026년 폭염 대책, 5가지 치명적 허점</div>
+    <ul>
+      <li>야외 작업 중단은 '강력 권고'일 뿐 — 법적 강제성 없음. 거부해도 제재 불가.</li>
+      <li>특수고용직(배달·택배·대리기사) 근로기준법 적용 제외 — 사실상 무방비.</li>
+      <li>쿨링센터 확대됐지만 이용자가 스스로 찾아가야 함 — 거동 불편 독거노인 접근성 의문.</li>
+      <li>에어컨 지원 예산 수요 대비 턱없이 부족 — 신청해도 대기자 수만 명.</li>
+      <li>온열질환 예측 AI '오후 2~5시' 집중 경보 — 새벽부터 일하는 농업·새벽 배송은 사각지대.</li>
+    </ul>
+  </div>
+
+  <p>노동계 관계자는 "매년 사람이 죽고, 매년 대책이 나오는데 법적 작업중지권 하나 없다"며 강하게 비판했다. 사업장 폭염 점검을 담당하는 고용노동부는 "온열질환 사망 발생 시 무관용 처벌"을 예고했지만, 예방 단계의 강제 수단은 여전히 부재하다.</p>
+
+  <!-- 나에게 미치는 영향 -->
+  <h2 style="font-size: 1.3rem;">지금 당장 알아야 할 — 나의 생존 체크리스트</h2>
+  <p>폭염은 먼 나라 이야기가 아니다. 지금 바로 실천할 수 있는 7가지를 정리했다.</p>
+
+  <div class="survival-grid">
+    <div class="survival-item">
+      <div class="s-icon">🌡️</div>
+      <div class="s-text"><strong>무더위쉼터 미리 확인</strong>집 근처 쿨링센터 위치를 행안부 '안전디딤돌' 앱에서 저장해두기.</div>
+    </div>
+    <div class="survival-item">
+      <div class="s-icon">💧</div>
+      <div class="s-text"><strong>수분 보충 — 목마르기 전에</strong>갈증 느낄 때는 이미 탈수 시작. 30분마다 100~200ml 수분 섭취.</div>
+    </div>
+    <div class="survival-item">
+      <div class="s-icon">⏰</div>
+      <div class="s-text"><strong>오후 2~5시 야외 최소화</strong>하루 중 자외선·체감온도 최고 시간대. 외출 불가피 시 양산·모자 필수.</div>
+    </div>
+    <div class="survival-item">
+      <div class="s-icon">👵</div>
+      <div class="s-text"><strong>독거노인 이웃 챙기기</strong>주변 홀몸 어르신에게 하루 한 번 연락. 폭염 경보 시 직접 방문 권장.</div>
+    </div>
+    <div class="survival-item">
+      <div class="s-icon">📱</div>
+      <div class="s-text"><strong>폭염 알림 앱 설정</strong>'안전디딤돌' 앱 긴급재난문자 알림 ON. 폭염중대경보 즉시 수신.</div>
+    </div>
+    <div class="survival-item">
+      <div class="s-icon">🏥</div>
+      <div class="s-text"><strong>온열질환 초기 증상 숙지</strong>두통·어지럼·구역질·근육경련 → 즉시 서늘한 곳 이동 + 119 신고.</div>
+    </div>
+  </div>
+
+  <!-- 전망 -->
+  <div class="outlook-box">
+    <h3>📡 2026년 하반기 전망 및 구조적 변화 방향</h3>
+    <p>기상청은 2026년 여름 평균기온이 평년보다 높을 확률을 70%로 제시했다. 특히 7월 하순~8월 초 '열돔(Heat Dome)' 형성 가능성이 있으며, 엘니뇨 재발과 맞물릴 경우 체감 40도를 상회하는 극단적 상황이 발생할 수 있다.</p>
+    <p>전문가들은 폭염을 '재난'으로 법제화해 법적 작업중지권 부여, 에너지 취약가구 에어컨 전수 지원, 쿨링센터 24시간 운영 의무화가 필요하다고 입을 모은다. 기후 위기 시대, 폭염은 더 이상 여름의 불편함이 아니라 생사의 갈림길이 됐다.</p>
+    <p>정치권도 움직이고 있다. 국회에는 야외 작업 중지를 사업주에게 법적 의무로 부과하는 '폭염 작업중지권법'이 발의된 상태다. 이 법안이 통과될 경우, 내년 여름은 달라질 수 있다. 하지만 올여름은 — 지금 이 법이 없다.</p>
+  </div>
+
+  <!-- 공유 -->
+  <div class="share-box">
+    <button class="share-btn kakao" onclick="alert('공유 링크가 복사됐습니다!')">📤 카카오로 공유</button>
+    <button class="share-btn copy" onclick="navigator.clipboard && navigator.clipboard.writeText(location.href).then(()=>alert('링크 복사 완료!'))">🔗 링크 복사</button>
+  </div>
+
+  <!-- 해시태그 -->
+  <div class="hashtags">
+    <span>#폭염중대경보</span>
+    <span>#2026여름폭염</span>
+    <span>#역대급더위</span>
+    <span>#온열질환</span>
+    <span>#야외노동자</span>
+    <span>#쿨링센터</span>
+    <span>#취약계층</span>
+    <span>#열돔</span>
+    <span>#이상기후</span>
+    <span>#기후위기</span>
+    <span>#폭염대책</span>
+    <span>#생존가이드</span>
+  </div>
+
+  <!-- 출처 -->
+  <div class="sources">
+    <strong>📌 취재 출처</strong><br/>
+    · <a href="https://www.news-wa.com/article/life/issues/2026/05/13/20260513500010" target="_blank">역대급 폭염 전망 나왔다…"체감 38도면 멈춰라" — news-wa (2026.05.13)</a><br/>
+    · <a href="https://www.news1.kr/local/moi/6163425" target="_blank">체감온도 38도 넘으면 '폭염중대경보' — 뉴스1</a><br/>
+    · <a href="https://www.mt.co.kr/thebio/2026/05/11/2026051109140415773" target="_blank">올여름 '역대급 폭염'…온열질환 예측 시스템 가동 — 머니투데이</a><br/>
+    · <a href="https://www.mt.co.kr/policy/2026/05/13/2026051219504389426" target="_blank">폭염엔 '중대 경보'… 어르신 '안부 확인' — 머니투데이</a><br/>
+    · <a href="https://biz.heraldcorp.com/article/10737078" target="_blank">폭염 38도 땐 작업중지 '강력 권고'…무관용 처벌 — 헤럴드경제</a><br/>
+    · <a href="https://www.kjob.news/news/481440" target="_blank">2026년 폭염 재앙, 한국의 대응은 충분할까? — 전국인력신문</a><br/>
+    · <a href="https://www.kdca.go.kr/board/board.es?mid=a20501040000&bid=0015&list_no=726239&act=view" target="_blank">2024년 온열질환자 응급실 내원 통계 — 질병관리청</a>
+  </div>
+
+  <!-- 면책조항 -->
+  <div class="disclaimer">
+    ⚠️ <strong>면책조항:</strong> 본 기사는 공개된 뉴스, 정부 자료, 전문기관 통계를 바탕으로 작성된 정보 제공 목적의 콘텐츠입니다. 의료·법률·투자 등 개인적 결정의 근거로 삼지 마시고 전문가와 상담하시기 바랍니다. 기사에 인용된 수치와 정책 내용은 추후 변경될 수 있습니다. © 2026 한국이슈리포트. 무단 전재 금지.
+  </div>
+</div>
+
+</body>
+</html>
