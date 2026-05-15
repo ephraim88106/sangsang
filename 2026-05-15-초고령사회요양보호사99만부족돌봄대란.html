@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026년 초고령사회 진입했는데 요양보호사 99만 명이 없다 — 당신의 부모가 위험하다</title>
+  <meta name="description" content="한국이 초고령사회에 공식 진입한 2026년, 요양보호사는 현재도 부족하고 2043년엔 99만명이 모자란다. 건강보험료·실손보험 이중 인상에 돌봄 인프라 붕괴까지 — 의료복지 총체적 위기 심층분석.">
+  <meta name="keywords" content="초고령사회, 요양보호사 부족, 돌봄 대란, 건강보험료 인상, 실손보험 5세대, 노인돌봄, 2026 의료위기">
+  <meta property="og:title" content="2026년 초고령사회 진입했는데 요양보호사 99만 명이 없다">
+  <meta property="og:description" content="당신의 부모가 요양원에 들어가지 못하는 시대가 온다. 지금 당장 알아야 할 돌봄 대란의 실체.">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 17px;
+      line-height: 1.8;
+      background: #ffffff;
+      color: #1a1a2e;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+
+    /* 헤더 배너 */
+    .hero {
+      background: linear-gradient(135deg, #e63946 0%, #c1121f 60%, #780000 100%);
+      color: #fff;
+      padding: 48px 32px 40px;
+      margin-bottom: 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -40px; right: -40px;
+      width: 260px; height: 260px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.06);
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -60px; left: -30px;
+      width: 180px; height: 180px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.04);
+    }
+    .category-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 20px;
+      letter-spacing: 0.5px;
+      margin-bottom: 18px;
+      border: 1px solid rgba(255,255,255,0.35);
+    }
+    .hero h1 {
+      font-size: clamp(22px, 4vw, 32px);
+      font-weight: 900;
+      line-height: 1.35;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+    .hero .subtitle {
+      font-size: 15px;
+      color: rgba(255,255,255,0.85);
+      position: relative;
+      z-index: 1;
+    }
+    .meta-bar {
+      background: #f8f9fa;
+      border-bottom: 3px solid #e63946;
+      padding: 12px 32px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: #555;
+    }
+    .meta-bar span { display: flex; align-items: center; gap: 5px; }
+
+    /* 본문 */
+    article { padding: 36px 0; }
+    .hook {
+      background: #fff5f5;
+      border-left: 5px solid #e63946;
+      padding: 22px 24px;
+      margin-bottom: 30px;
+      border-radius: 0 8px 8px 0;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.75;
+      color: #2d0000;
+    }
+    .summary-box {
+      background: #1a1a2e;
+      color: #e0e0e0;
+      border-radius: 10px;
+      padding: 24px 28px;
+      margin-bottom: 36px;
+    }
+    .summary-box h3 {
+      color: #ff6b6b;
+      font-size: 14px;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+      font-weight: 700;
+    }
+    .summary-box ul { padding-left: 0; list-style: none; }
+    .summary-box ul li {
+      padding: 7px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding-left: 22px;
+      position: relative;
+      font-size: 15px;
+    }
+    .summary-box ul li::before { content: '▶'; position: absolute; left: 0; color: #ff6b6b; font-size: 10px; top: 11px; }
+    .summary-box ul li:last-child { border-bottom: none; }
+
+    h2 {
+      font-size: 21px;
+      font-weight: 900;
+      color: #c1121f;
+      margin: 44px 0 18px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #e63946;
+      line-height: 1.4;
+    }
+    p { margin-bottom: 18px; }
+    strong { color: #c1121f; }
+
+    /* 데이터 인포그래픽 */
+    .infographic {
+      background: #f8f9fa;
+      border-radius: 14px;
+      padding: 30px 24px;
+      margin: 36px 0;
+    }
+    .infographic h3 {
+      font-size: 16px;
+      font-weight: 800;
+      color: #1a1a2e;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    .chart-bars { display: flex; flex-direction: column; gap: 14px; }
+    .bar-row { display: flex; align-items: center; gap: 12px; }
+    .bar-label { width: 70px; font-size: 13px; font-weight: 700; color: #333; text-align: right; flex-shrink: 0; }
+    .bar-track { flex: 1; background: #e0e0e0; border-radius: 6px; height: 28px; overflow: hidden; }
+    .bar-fill {
+      height: 100%;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 10px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #fff;
+      transition: width 1s ease;
+    }
+    .bar-2023 { background: linear-gradient(90deg, #ff9a9e, #e63946); width: 28%; }
+    .bar-2030 { background: linear-gradient(90deg, #e63946, #c1121f); width: 45%; }
+    .bar-2040 { background: linear-gradient(90deg, #c1121f, #780000); width: 72%; }
+    .bar-2043 { background: linear-gradient(90deg, #780000, #3d0000); width: 100%; }
+
+    /* 수치 카드 */
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+      margin: 28px 0;
+    }
+    .stat-card {
+      background: #fff;
+      border: 2px solid #e63946;
+      border-radius: 12px;
+      padding: 20px 16px;
+      text-align: center;
+    }
+    .stat-card .num {
+      font-size: 32px;
+      font-weight: 900;
+      color: #e63946;
+      line-height: 1.1;
+    }
+    .stat-card .unit { font-size: 14px; font-weight: 700; color: #888; margin-top: 2px; }
+    .stat-card .desc { font-size: 13px; color: #444; margin-top: 8px; line-height: 1.4; }
+
+    /* 돌봄 위기 타임라인 */
+    .timeline { margin: 28px 0; }
+    .tl-item {
+      display: flex;
+      gap: 18px;
+      margin-bottom: 20px;
+      align-items: flex-start;
+    }
+    .tl-year {
+      background: #e63946;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 800;
+      padding: 6px 12px;
+      border-radius: 6px;
+      flex-shrink: 0;
+      min-width: 60px;
+      text-align: center;
+    }
+    .tl-content { font-size: 15px; line-height: 1.6; color: #333; }
+
+    /* 경고 박스 */
+    .warning-box {
+      background: linear-gradient(135deg, #fff5f5, #ffe8e8);
+      border: 2px dashed #e63946;
+      border-radius: 12px;
+      padding: 24px;
+      margin: 32px 0;
+    }
+    .warning-box h4 {
+      font-size: 16px;
+      font-weight: 800;
+      color: #c1121f;
+      margin-bottom: 12px;
+    }
+    .warning-box ul { padding-left: 20px; }
+    .warning-box ul li { margin-bottom: 8px; font-size: 15px; }
+
+    /* 해시태그 */
+    .hashtags {
+      margin-top: 44px;
+      padding-top: 20px;
+      border-top: 1px solid #e0e0e0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .hashtag {
+      background: #fff0f0;
+      color: #e63946;
+      border: 1px solid #ffb3b3;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    /* 면책조항 */
+    .disclaimer {
+      background: #f5f5f5;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-top: 36px;
+      font-size: 12px;
+      color: #888;
+      line-height: 1.7;
+    }
+
+    /* 출처 */
+    .sources {
+      margin-top: 28px;
+      font-size: 13px;
+      color: #777;
+    }
+    .sources a { color: #e63946; text-decoration: none; }
+    .sources a:hover { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      .hero { padding: 36px 20px 32px; }
+      .meta-bar { padding: 10px 20px; }
+      article { padding: 24px 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <div class="category-badge">🏥 의료·복지 | 심층 탐사</div>
+    <h1>2026년 초고령사회 진입했는데<br>요양보호사 99만 명이 없다<br>— 당신의 부모가 위험하다</h1>
+    <p class="subtitle">건강보험료·실손보험 이중 인상, 돌봄 인력 대란, 의료 붕괴의 3중 충돌</p>
+  </div>
+  <div class="meta-bar">
+    <span>📅 2026년 5월 15일</span>
+    <span>✍️ 탐사저널팀</span>
+    <span>⏱️ 읽는 시간 약 7분</span>
+    <span>🏷️ #초고령사회 #돌봄대란</span>
+  </div>
+
+  <div class="container">
+    <article>
+
+      <div class="hook">
+        지금 이 순간, 한국은 조용히 초고령사회에 진입했다. 노인 인구가 전체의 <strong>20.8%</strong>를 넘어선 2026년. 그러나 이 나라는 준비가 전혀 돼 있지 않다. 요양원은 대기자로 넘쳐나고, 건강보험료와 실손보험료는 동시에 오르고, 돌봄을 담당할 인력은 지금도, 앞으로도 극심하게 부족하다. 당신의 부모가, 그리고 언젠가는 당신 자신이 이 위기의 직접 피해자가 된다.
+      </div>
+
+      <div class="summary-box">
+        <h3>⚡ 오늘의 핵심 3줄 요약</h3>
+        <ul>
+          <li>한국, 2026년 공식 초고령사회 진입 — 노인 인구 20.8%, 5명 중 1명이 65세 이상</li>
+          <li>KDI 경고: 2043년 요양보호사 <strong>99만 명 부족</strong> — 수요는 2.4배 급증, 공급은 고령화·이탈로 붕괴</li>
+          <li>건강보험료 7.19% 인상 + 실손 5세대 보험료 7.8% 인상 — 의료비 이중 폭탄 2026년 동시 발사</li>
+        </ul>
+      </div>
+
+      <h2>🚨 2026년, 숫자가 말하는 충격적 현실</h2>
+      <p>
+        올해 한국은 공식적으로 <strong>초고령사회(super-aged society)</strong>에 진입했다. 65세 이상 인구가 전체의 <strong>20.8%</strong>를 넘어선 것이다. UN 기준상 14%를 넘으면 고령사회, 20%를 넘으면 초고령사회다. 일본이 이 문턱을 넘은 건 2006년. 한국은 그보다 20년 늦지만, 속도는 세계 최고다. 고령사회에서 초고령사회로 넘어가는 데 일본은 12년이 걸렸고, 독일은 36년이 걸렸다. 한국은 단 <strong>7년</strong>이었다.
+      </p>
+      <p>
+        그 속도가 문제의 본질이다. 인구 구조가 바뀌는 속도에 맞춰 의료·복지 인프라가 따라오지 못하고 있다. 지금 이 순간에도 요양원 대기 리스트는 수개월씩 늘어나고 있고, 지방 소도시 노인들은 돌봄 사각지대에 방치되고 있다.
+      </p>
+
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="num">20.8%</div>
+          <div class="unit">2026년 노인 인구 비율</div>
+          <div class="desc">5명 중 1명이 65세 이상</div>
+        </div>
+        <div class="stat-card">
+          <div class="num">99만</div>
+          <div class="unit">명 부족 (2043년)</div>
+          <div class="desc">요양보호사 추가 필요 인력 KDI 추계</div>
+        </div>
+        <div class="stat-card">
+          <div class="num">2.4배</div>
+          <div class="unit">돌봄 수요 증가</div>
+          <div class="desc">2023년 대비 2043년 수요</div>
+        </div>
+        <div class="stat-card">
+          <div class="num">7.8%</div>
+          <div class="unit">실손보험료 인상</div>
+          <div class="desc">4세대는 최대 20%↑</div>
+        </div>
+      </div>
+
+      <h2>🧓 요양보호사 대란 — 20년 후 99만 명이 사라진다</h2>
+      <p>
+        한국개발연구원(KDI)이 2026년 4월 발표한 충격적인 보고서가 있다. 현재 추세가 유지될 경우 2043년에는 요양보호사가 <strong>최대 99만 명 부족</strong>해질 것이라는 내용이다. 장기요양서비스 수요는 2043년 기준 2023년 대비 <strong>2.4배</strong>가 넘게 늘어나는데, 공급 인력은 고령화와 이탈로 오히려 줄어드는 구조다.
+      </p>
+      <p>
+        더 심각한 건 지금 일하는 요양보호사들의 연령 구조다. 현재 요양보호사 중 <strong>60세 이상 비중이 63.1%</strong>에 달한다. 이 분들이 10~20년 안에 은퇴하면 그 자리를 채울 40대 이하는 10%도 안 된다. 젊은 층이 요양보호사직을 기피하는 이유는 명확하다. 임금은 낮고(평균 월 200만 원대), 감정 노동은 극심하고, 사회적 인식은 좋지 않다.
+      </p>
+
+      <div class="infographic">
+        <h3>📊 요양보호사 인력 부족 규모 추이 (단위: 만 명)</h3>
+        <div class="chart-bars">
+          <div class="bar-row">
+            <div class="bar-label">2023년</div>
+            <div class="bar-track">
+              <div class="bar-fill bar-2023" style="width:28%">27만↓</div>
+            </div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">2030년</div>
+            <div class="bar-track">
+              <div class="bar-fill bar-2030" style="width:45%">42만↓</div>
+            </div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">2040년</div>
+            <div class="bar-track">
+              <div class="bar-fill bar-2040" style="width:72%">77만↓</div>
+            </div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">2043년</div>
+            <div class="bar-track">
+              <div class="bar-fill bar-2043" style="width:100%">99만↓</div>
+            </div>
+          </div>
+        </div>
+        <p style="font-size:12px; color:#999; margin-top:18px; text-align:center;">출처: KDI(한국개발연구원) 초고령화사회 생애말기 보고서 2026.04</p>
+      </div>
+
+      <h2>🏛️ 정부 대책 — 예산 4.2억으로 돌봄 지자체에 떠넘기기</h2>
+      <p>
+        2026년부터 전국 모든 기초 지자체에서 <strong>'지역사회 통합돌봄법'</strong>이 시행된다. 노인을 요양원 대신 살던 집에서 돌보겠다는 개념은 좋다. 문제는 돈과 사람이다.
+      </p>
+      <p>
+        정부가 이 사업에 책정한 예산은 총 <strong>777억 원</strong>. 183개 기초 지자체로 나눠보면 평균 <strong>4.2억 원</strong>이다. 시범사업 때 최소 12~18억 원이 필요했다는 걸 감안하면, 실제 필요 예산의 4분의 1에도 미치지 못한다. 행정안전부가 승인한 인력은 5,394명인데, 연구에서 필요하다고 계산한 인원은 약 1만 명이다. 절반 수준으로 사업을 강행하는 셈이다.
+      </p>
+      <p>
+        지자체 관계자들은 "돌봄 인력도 없고, 예산도 없는데 법만 만들어 놓은 것"이라고 불만을 토로한다. 시행은 됐지만 실질적인 서비스를 받지 못하는 노인들의 불만은 이미 터져나오고 있다.
+      </p>
+
+      <h2>💸 건강보험료 + 실손보험료 — 2026년 이중 의료비 폭탄</h2>
+      <p>
+        의료 접근성이 낮아지는 동안, 의료비 부담은 오히려 높아지고 있다. 2026년에는 <strong>두 가지 보험료가 동시에 올랐다.</strong>
+      </p>
+      <p>
+        먼저 건강보험료율이 <strong>7.19%</strong>로 결정됐다. 직장가입자 기준으로 월평균 본인부담 보험료가 2,235원 올라 <strong>월 160,699원</strong>이 됐다. 여기에 장기요양보험료(건보료의 12.95%)까지 합산하면 실질 부담은 더 크다.
+      </p>
+      <p>
+        더 큰 충격은 <strong>실손의료보험</strong>이다. 2026년 실손보험 평균 보험료는 전년 대비 <strong>7.8% 인상</strong>됐다. 4세대 실손 가입자는 최대 <strong>20%</strong> 오르는 경우도 있다. 정부는 새로 내놓은 '5세대 실손보험'으로 갈아타라고 하지만, 5세대는 경증 질환 보장을 대폭 축소하고 자기부담률을 높인 구조다. 보험료는 내리지만 정작 아플 때 보장받기 어려워지는 반쪽짜리 개편이라는 비판이 거세다.
+      </p>
+
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-year">2024</div>
+          <div class="tl-content">전공의 2만 명 집단 이탈, 응급실 마비 사태 — 응급의학과 지원자 50% 급락</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2025</div>
+          <div class="tl-content">의대 정원 4,567명 확정(전년대비 +1,509명), 상급종합병원 의료이용 감소 지속</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2026</div>
+          <div class="tl-content">초고령사회 공식 진입, 건강보험료 7.19% + 실손보험 7.8% 동시 인상, 통합돌봄법 시행 (예산 부족)</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2043</div>
+          <div class="tl-content">요양보호사 99만 명 부족, 장기요양 수요 2.4배 — '돌봄 대란' 임계점 도달 예상</div>
+        </div>
+      </div>
+
+      <h2>🔍 숨겨진 이면 — 누가 가장 먼저 버려지나</h2>
+      <p>
+        돌봄 위기가 모두에게 균등하게 닥치지 않는다는 게 문제의 핵심이다. <strong>서울과 수도권의 요양원은 그나마 선택지가 있지만</strong>, 지방 소도시·농촌 지역의 노인들은 이미 요양원 대기 6개월~1년이 기본이다. 공보의가 빠진 지방 보건소는 노인 만성질환 관리 기능을 잃어가고 있다.
+      </p>
+      <p>
+        돌봄 비용을 감당하지 못하는 중산층과 서민층이 가장 타격을 받는다. 부유층은 프리미엄 시니어 케어 서비스로 대안이 있고, 기초생활수급자는 국가 지원을 받는다. 정작 그 사이에 낀 <strong>월소득 300~500만 원 중산층 가정</strong>이 부모 요양비로 가계가 무너지는 구조다. 부모 요양비로 월 150~300만 원을 쓰는 '샌드위치 세대'의 고통은 통계에도 잘 잡히지 않는다.
+      </p>
+
+      <h2>🇯🇵 일본은 어떻게 했나 — 실패와 교훈</h2>
+      <p>
+        한국보다 20년 앞서 초고령사회를 맞은 일본의 경험은 반면교사다. 일본은 <strong>2000년 개호보험(장기요양보험) 제도</strong>를 도입해 돌봄을 사회 전체가 분담하는 구조를 만들었다. 하지만 2026년 현재도 일본은 요양보호사(개호사) 부족 문제를 해결하지 못했다. 외국인 인력 도입(필리핀, 베트남, 인도네시아)을 늘렸지만 언어·문화 장벽으로 성과는 제한적이다.
+      </p>
+      <p>
+        일본 사례의 핵심 교훈은 하나다. <strong>"시작이 늦을수록 비용이 기하급수적으로 커진다."</strong> 한국은 일본을 따라가면서도 시작을 더 늦추고 있다.
+      </p>
+
+      <h2>🗓️ 나에게 미치는 영향 — 지금 당장 확인해야 할 것들</h2>
+      <div class="warning-box">
+        <h4>⚠️ 당신의 가족이 이런 상황이라면 즉시 행동하세요</h4>
+        <ul>
+          <li><strong>부모님 65세 이상</strong> → 국민건강보험공단 '노인장기요양 등급 신청' 즉시 확인 (대기 줄이 빠르게 늘고 있음)</li>
+          <li><strong>1~3세대 실손보험 보유</strong> → 5세대로 바꾸기 전에 보험료 vs. 보장 범위 꼼꼼히 비교 (갈아타면 되돌리기 어려움)</li>
+          <li><strong>4세대 실손보험 보유</strong> → 2026년 보험료 최대 20% 인상 확인, 갱신 주기 점검</li>
+          <li><strong>중산층 샌드위치 세대</strong> → 노인돌봄종합서비스, 치매안심센터, 재가요양 서비스 등 국가 지원 제도 선제적 파악</li>
+          <li><strong>40~50대 본인</strong> → 노후 돌봄 비용 예상액 재산정 필요 (현재 월 200~300만 원대 → 향후 더 증가 예상)</li>
+        </ul>
+      </div>
+
+      <h2>📌 전망 — 2030년까지 무엇이 바뀌어야 하나</h2>
+      <p>
+        전문가들은 공통적으로 세 가지를 요구한다. 첫째, <strong>요양보호사 처우 대폭 개선</strong>. 현재 월 200만 원대 임금을 300만 원 이상으로 끌어올리지 않는 한 젊은 인력은 절대 유입되지 않는다. 둘째, <strong>이민 돌봄 인력의 체계적 수용</strong>. 한국이 문화적 거부감을 극복하고 동남아·중앙아시아 돌봄 인력을 체계적으로 도입하지 않으면 공백은 메워지지 않는다. 셋째, <strong>AI·로봇 보조 돌봄 기술 투자</strong>. 서울시는 요양원에 웨어러블 로봇을 도입하는 시범사업을 시작했지만, 전국적 확산은 5~10년이 더 필요하다.
+      </p>
+      <p>
+        가장 큰 문제는 정치다. 노인 돌봄 예산을 늘리면 국채가 늘거나 젊은 층의 세금이 오른다. 표를 의식한 정치인들이 장기적 구조 개혁보다 단기 선심성 정책에 집중하는 한, 2043년 '돌봄 대란'은 예정된 미래가 된다. 지금 행동하지 않으면 우리 모두가 그 청구서를 받는다.
+      </p>
+
+      <div class="hashtags">
+        <span class="hashtag">#초고령사회</span>
+        <span class="hashtag">#돌봄대란</span>
+        <span class="hashtag">#요양보호사부족</span>
+        <span class="hashtag">#건강보험료인상</span>
+        <span class="hashtag">#실손보험5세대</span>
+        <span class="hashtag">#노인돌봄</span>
+        <span class="hashtag">#샌드위치세대</span>
+        <span class="hashtag">#의료위기</span>
+        <span class="hashtag">#KDI경고</span>
+        <span class="hashtag">#2026한국사회</span>
+      </div>
+
+      <div class="sources">
+        <strong>📎 주요 출처</strong><br>
+        • <a href="https://www.newspim.com/news/view/20260416000786" target="_blank">KDI, 초고령사회 진입에 요양보호사 수요 2배 이상 증가…2043년 99만명 부족 — 뉴스핌</a><br>
+        • <a href="https://www.careyounews.org/news/articleView.html?idxno=7415" target="_blank">(팩트 체크) 2026년 초고령사회 본격 진입, 의료·돌봄 제도 이렇게 달라진다 — 캐어유뉴스</a><br>
+        • <a href="https://www.themedical.kr/news/articleView.html?idxno=2911" target="_blank">2026년 통합돌봄 시행 코앞인데…지자체는 "돈도 인력도 없다" — 더메디컬</a><br>
+        • <a href="https://www.insjournal.co.kr/news/articleView.html?idxno=29488" target="_blank">2026년 실손보험 평균 보험료 7.8% 인상…4세대는 20%↑ — 보험저널</a><br>
+        • <a href="https://www.mohw.go.kr/board.es?act=view&bid=0027&list_no=1487279&mid=a10503000000" target="_blank">2026년 건강보험료율 7.19%로 결정 — 보건복지부</a><br>
+        • <a href="https://v.daum.net/v/20260429151946545" target="_blank">요양보호사 대란 오나…2040년 최대 77만명 추가 필요 — 다음 실버뉴스</a><br>
+        • <a href="https://www.khan.co.kr/article/202604162040005" target="_blank">20년 뒤엔 돌봄인력 99만명 '마이너스' — 경향신문</a>
+      </div>
+
+      <div class="disclaimer">
+        ※ 면책조항: 본 아티클은 공개된 연구 보고서, 정부 자료, 언론 보도를 바탕으로 작성된 저널리즘 콘텐츠입니다. 건강보험·실손보험 관련 수치는 개인 상황에 따라 달라질 수 있으며, 구체적인 보험 상품 변경·의료 결정은 반드시 전문가(보험설계사, 의료기관)와 상담하시기 바랍니다. 본 아티클의 내용은 특정 금융상품·의료기관에 대한 추천이 아닙니다.
+      </div>
+
+    </article>
+  </div>
+</body>
+</html>
