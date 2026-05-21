@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="2026년 5월 출시된 5세대 실손보험으로 도수치료·연골주사가 사실상 자비 부담이 됐다. 동시에 공중보건의사는 9년 새 72% 급감하며 농어촌 의료망이 붕괴 직전에 몰렸다. 한국 의료 양극화의 민낯을 파헤친다.">
+  <meta name="keywords" content="5세대 실손보험, 도수치료, 비급여, 개원의 위기, 공중보건의, 의료공백, 의료 양극화, 건강보험, 2026">
+  <meta property="og:title" content="도수치료 이제 내 돈으로…5세대 실손보험 출시 2주, 연 9,300억 증발하는 한국 의료의 민낯">
+  <meta property="og:description" content="실손보험이 '반값'이 된 대가는 오롯이 환자 몫이다. 5세대 전환의 실체와 의료 양극화의 진실.">
+  <meta property="og:type" content="article">
+  <title>도수치료 이제 내 돈으로…5세대 실손보험 출시 2주, 연 9,300억 증발하는 한국 의료의 민낯</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 17px;
+      line-height: 1.85;
+      color: #1a1a2e;
+      background: #fff;
+      padding: 0 16px;
+    }
+    .container { max-width: 800px; margin: 0 auto; padding: 40px 0 60px; }
+
+    /* 카테고리 배지 */
+    .category-badge {
+      display: inline-block;
+      background: #e63946;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }
+
+    /* 제목 */
+    h1 {
+      font-size: clamp(22px, 4vw, 34px);
+      font-weight: 900;
+      line-height: 1.35;
+      color: #10002b;
+      margin-bottom: 14px;
+    }
+    .subtitle {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+
+    /* 메타 */
+    .meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 32px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #e63946;
+    }
+    .meta span { display: flex; align-items: center; gap: 4px; }
+
+    /* 핵심 요약 박스 */
+    .summary-box {
+      background: linear-gradient(135deg, #fff0f1 0%, #ffe3e3 100%);
+      border-left: 5px solid #e63946;
+      border-radius: 8px;
+      padding: 22px 24px;
+      margin: 28px 0;
+    }
+    .summary-box h3 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #e63946;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+    .summary-box ul { list-style: none; }
+    .summary-box ul li {
+      padding: 6px 0;
+      padding-left: 20px;
+      position: relative;
+      font-weight: 500;
+      font-size: 15px;
+    }
+    .summary-box ul li::before {
+      content: '▶';
+      position: absolute;
+      left: 0;
+      color: #e63946;
+      font-size: 11px;
+      top: 10px;
+    }
+
+    /* 소제목 */
+    h2 {
+      font-size: 21px;
+      font-weight: 800;
+      color: #10002b;
+      margin: 44px 0 16px;
+      padding-left: 14px;
+      border-left: 4px solid #e63946;
+    }
+
+    /* 본문 */
+    p { margin-bottom: 18px; }
+    strong { color: #c1121f; }
+
+    /* 강조 인용 */
+    blockquote {
+      background: #f8f9fa;
+      border-left: 4px solid #e63946;
+      padding: 18px 22px;
+      margin: 24px 0;
+      font-style: italic;
+      font-size: 16px;
+      color: #333;
+      border-radius: 0 8px 8px 0;
+    }
+
+    /* 데이터 인포그래픽 */
+    .infographic {
+      background: #fff;
+      border: 1.5px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 28px 24px;
+      margin: 32px 0;
+    }
+    .infographic h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #10002b;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    /* 비급여 부담 비교 테이블 */
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+    .compare-table th {
+      background: #10002b;
+      color: #fff;
+      padding: 10px 14px;
+      text-align: center;
+      font-size: 13px;
+    }
+    .compare-table td {
+      padding: 10px 14px;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+    .compare-table tr:nth-child(even) td { background: #f9f9f9; }
+    .bad { color: #e63946; font-weight: 700; }
+    .good { color: #2d6a4f; font-weight: 700; }
+
+    /* 공보의 감소 SVG 차트 */
+    .chart-wrap {
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    /* 경고 박스 */
+    .warn-box {
+      background: #fff3cd;
+      border: 1px solid #ffc107;
+      border-radius: 8px;
+      padding: 18px 22px;
+      margin: 24px 0;
+    }
+    .warn-box h4 { font-size: 15px; font-weight: 700; color: #856404; margin-bottom: 8px; }
+    .warn-box p { margin: 0; font-size: 14px; color: #6c4a00; }
+
+    /* 해시태그 */
+    .hashtags {
+      margin: 40px 0 20px;
+      line-height: 2.2;
+    }
+    .hashtag {
+      display: inline-block;
+      background: #f0f0f0;
+      color: #c1121f;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin: 3px 3px 3px 0;
+    }
+
+    /* 면책 */
+    .disclaimer {
+      font-size: 12px;
+      color: #999;
+      border-top: 1px solid #eee;
+      padding-top: 20px;
+      margin-top: 40px;
+      line-height: 1.7;
+    }
+
+    /* 숫자 강조 카드 */
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 14px;
+      margin: 24px 0;
+    }
+    .stat-card {
+      background: #10002b;
+      color: #fff;
+      border-radius: 10px;
+      padding: 18px 16px;
+      text-align: center;
+    }
+    .stat-card .num {
+      font-size: 30px;
+      font-weight: 900;
+      color: #ff6b6b;
+      display: block;
+    }
+    .stat-card .label {
+      font-size: 12px;
+      color: #ccc;
+      margin-top: 4px;
+      line-height: 1.5;
+    }
+
+    /* 분리선 */
+    hr { border: none; border-top: 1px solid #eee; margin: 36px 0; }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <div class="category-badge">🏥 의료·복지 긴급 리포트</div>
+
+  <h1>도수치료, 이제 내 돈으로 내야 한다<br>5세대 실손보험 출시 2주 — 연 9,300억이 사라지는 한국 의료의 민낯</h1>
+
+  <p class="subtitle">보험료는 반값으로 낮아졌다. 그 대가는? 오롯이 환자 몫이다.<br>도수치료·연골주사·비급여 주사는 이제 '보험 없는 치료'가 됐고, 농어촌 보건소에서는 의사가 사라지고 있다.</p>
+
+  <div class="meta">
+    <span>📅 2026년 5월 21일</span>
+    <span>🖊 데이터 저널리즘 탐사팀</span>
+    <span>⏱ 읽는 시간 약 6분</span>
+  </div>
+
+  <!-- 핵심 요약 -->
+  <div class="summary-box">
+    <h3>📌 이 기사의 핵심 3줄</h3>
+    <ul>
+      <li>2026년 5월 6일 출시된 5세대 실손보험, 도수치료·연골주사 등 비급여 항목을 대거 제외해 사실상 환자 전액 부담으로 전환됐다.</li>
+      <li>개원 의사들은 연간 최대 9,300억 원의 수입 감소를 예상하며, 의원당 연 3,000~6,000만 원이 사라질 수 있다.</li>
+      <li>농어촌 의료를 책임지던 공중보건의사는 9년 새 72% 급감, 농어촌 의료 안전망이 붕괴 직전에 몰렸다.</li>
+    </ul>
+  </div>
+
+  <!-- 훅 문단 -->
+  <p>무릎이 시려 동네 의원에서 연골주사를 맞아온 60대 김모 씨는 지난주 충격적인 소식을 들었다. 의원 직원이 "이제 실손보험으로 청구가 안 된다"고 안내했다. 주사 한 번에 7만~10만 원. 한 달에 두 번 맞던 주사 값이 오롯이 본인 부담이 됐다. 도수치료를 받아온 30대 회사원 이모 씨도 상황은 같다. 치료 한 번에 9만~15만 원, 이제 보험사는 5,000원만 낸다.</p>
+
+  <p><strong>이것이 2026년 5월 6일부터 판매 중인 '5세대 실손보험'의 현실이다.</strong> 보험사들은 "보험료가 최대 반값으로 낮아졌다"고 광고했다. 그러나 사람들이 가장 많이 쓰는 치료들이 보장 목록에서 사라졌고, 그 비용은 고스란히 환자 지갑으로 향하게 됐다.</p>
+
+  <hr>
+
+  <!-- 배경과 맥락 -->
+  <h2>📌 왜 갑자기 실손보험이 바뀌었나</h2>
+
+  <p>5세대 실손보험 출시는 갑작스러운 일이 아니다. 보험업계와 금융당국이 수년간 예고해온 개혁의 결과다. 핵심 이유는 하나 — <strong>실손보험 손해율이 통제 불능 수준에 이르렀기 때문이다.</strong></p>
+
+  <p>2023년 기준 실손보험 손해율은 130%를 넘어섰다. 보험사가 받은 보험료보다 30%나 많은 돈을 지급했다는 뜻이다. 특히 도수치료, 체외충격파 치료, 비급여 주사제는 "과잉 진료를 유발하는 실손보험 누수의 주범"이라는 지적을 받아왔다. 금융당국은 이를 명분으로 5세대 실손보험을 설계했다.</p>
+
+  <blockquote>
+    "보험료가 낮아지는 건 맞다. 하지만 정작 내가 자주 쓰던 치료들이 사라졌다면, 그게 진짜 싼 보험인가요?" — 50대 자영업자 박모 씨
+  </blockquote>
+
+  <!-- 핵심 팩트 -->
+  <h2>📊 5세대 실손, 구체적으로 뭐가 사라졌나</h2>
+
+  <p>5세대 실손보험에서 달라진 핵심 내용을 수치로 정리했다. 기존 4세대 실손과 비교하면 그 충격이 더 명확하게 보인다.</p>
+
+  <div class="infographic">
+    <h3>🔴 4세대 vs 5세대 실손보험 비급여 보장 비교</h3>
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>항목</th>
+          <th>4세대 실손</th>
+          <th>5세대 실손</th>
+          <th>환자 영향</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>도수치료</td>
+          <td class="good">보장 (자부담 30%)</td>
+          <td class="bad">보장 제외</td>
+          <td class="bad">전액 자비</td>
+        </tr>
+        <tr>
+          <td>체외충격파치료</td>
+          <td class="good">보장 (자부담 30%)</td>
+          <td class="bad">보장 제외</td>
+          <td class="bad">전액 자비</td>
+        </tr>
+        <tr>
+          <td>비급여 주사제<br>(연골주사, 영양주사 등)</td>
+          <td class="good">보장 (자부담 30%)</td>
+          <td class="bad">보장 제외</td>
+          <td class="bad">전액 자비</td>
+        </tr>
+        <tr>
+          <td>경증 비급여 전체</td>
+          <td class="good">자부담 30%</td>
+          <td class="bad">자부담 50%<br>(한도 1천만원)</td>
+          <td class="bad">부담 급증</td>
+        </tr>
+        <tr>
+          <td>보장 한도</td>
+          <td class="good">5,000만원</td>
+          <td class="bad">1,000만원</td>
+          <td class="bad">1/5로 축소</td>
+        </tr>
+        <tr>
+          <td>월 보험료 (60대)</td>
+          <td>17만 4,000원</td>
+          <td class="good">4만 2,000원</td>
+          <td>76% 절감</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>보험료는 내려갔다. 하지만 가장 많이 쓰이는 근골격계 치료들이 모두 '보장 제외' 목록에 올랐다. 60대 이상 고령층과 만성 통증 환자들에게는 사실상 <strong>보험이 없는 것과 같은 상황</strong>이 된 것이다.</p>
+
+  <!-- 인포그래픽 - 개원의 손실 -->
+  <div class="stat-grid">
+    <div class="stat-card">
+      <span class="num">9,300억</span>
+      <span class="label">개원의 업계 전체<br>예상 연간 손실 (원)</span>
+    </div>
+    <div class="stat-card">
+      <span class="num">3~6천만</span>
+      <span class="label">의원 1개당<br>연간 순이익 감소 (원)</span>
+    </div>
+    <div class="stat-card">
+      <span class="num">95%</span>
+      <span class="label">관리급여 도입 시<br>최대 자기부담률</span>
+    </div>
+    <div class="stat-card">
+      <span class="num">130%</span>
+      <span class="label">2023년 실손보험<br>손해율 (손해액/보험료)</span>
+    </div>
+  </div>
+
+  <!-- 숨겨진 이면 -->
+  <h2>🔍 의사들은 왜 분노하나 — 개원의 생태계 붕괴</h2>
+
+  <p>환자만 피해를 보는 게 아니다. <strong>개원의들도 생존의 기로에 섰다.</strong> 올리버 비즈니스 리서치의 분석에 따르면, 5세대 실손보험 전환으로 의원급 의료기관은 연간 약 9,300억 원의 수입이 증발할 것으로 전망된다. 의원 한 곳당 평균 3,000만~6,000만 원의 순이익이 사라지는 셈이다.</p>
+
+  <p>이미 의료계에서는 강력한 반발이 나오고 있다. 대한의사협회는 "비급여 진료는 의사의 재량이자 환자의 선택권인데, 보험사가 '과잉 진료'로 낙인찍어 사실상 규제하고 있다"고 비판한다. 하지만 금융당국은 "과잉 진료 억제를 위해 불가피한 조치"라는 입장을 유지하고 있다.</p>
+
+  <div class="warn-box">
+    <h4>⚠️ 주의: 이미 5세대 가입자도 적용 중</h4>
+    <p>2026년 5월 6일 이후 신규 가입한 가입자는 이미 5세대 약관이 적용된다. 기존 1~4세대 가입자는 당장 강제 전환되지 않지만, 갱신 시 유도 압박이 강해질 것으로 예상된다. 전환 전 반드시 본인의 자주 이용하는 치료 항목이 보장되는지 확인해야 한다.</p>
+  </div>
+
+  <hr>
+
+  <!-- 공보의 위기 -->
+  <h2>🚨 또 다른 의료 위기 — 농어촌 의사가 사라지고 있다</h2>
+
+  <p>도시 환자들이 실손보험 개편으로 지갑을 걱정하는 동안, 농어촌에서는 훨씬 근본적인 문제가 진행되고 있다. <strong>농어촌 의료를 떠받쳐온 공중보건의사가 9년 만에 72% 급감했다.</strong></p>
+
+  <!-- SVG 공보의 감소 차트 -->
+  <div class="infographic">
+    <h3>📉 공중보건의사 수 변화 (2017~2026)</h3>
+    <div class="chart-wrap">
+      <svg viewBox="0 0 680 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
+        <!-- 배경 그리드 -->
+        <rect x="70" y="20" width="580" height="210" fill="#f8f9fa" rx="4"/>
+        <line x1="70" y1="70" x2="650" y2="70" stroke="#e0e0e0" stroke-width="1"/>
+        <line x1="70" y1="120" x2="650" y2="120" stroke="#e0e0e0" stroke-width="1"/>
+        <line x1="70" y1="170" x2="650" y2="170" stroke="#e0e0e0" stroke-width="1"/>
+        <!-- Y축 레이블 -->
+        <text x="60" y="25" text-anchor="end" font-size="11" fill="#888">2,200명</text>
+        <text x="60" y="75" text-anchor="end" font-size="11" fill="#888">1,650명</text>
+        <text x="60" y="125" text-anchor="end" font-size="11" fill="#888">1,100명</text>
+        <text x="60" y="175" text-anchor="end" font-size="11" fill="#888">550명</text>
+        <text x="60" y="230" text-anchor="end" font-size="11" fill="#888">0명</text>
+        <!-- 막대 (연도별) -->
+        <!-- 2017: 2116 → 높이 약 202px -->
+        <rect x="90" y="22" width="48" height="206" fill="#e63946" opacity="0.85" rx="3"/>
+        <text x="114" y="16" text-anchor="middle" font-size="10" fill="#e63946" font-weight="bold">2,116</text>
+        <text x="114" y="248" text-anchor="middle" font-size="11" fill="#555">2017</text>
+        <!-- 2019: 1700 (추정) → 높이 약 164px -->
+        <rect x="158" y="66" width="48" height="162" fill="#e63946" opacity="0.75" rx="3"/>
+        <text x="182" y="60" text-anchor="middle" font-size="10" fill="#e63946" font-weight="bold">1,700</text>
+        <text x="182" y="248" text-anchor="middle" font-size="11" fill="#555">2019</text>
+        <!-- 2021: 1400 (추정) → 높이 약 134px -->
+        <rect x="226" y="96" width="48" height="132" fill="#e63946" opacity="0.65" rx="3"/>
+        <text x="250" y="90" text-anchor="middle" font-size="10" fill="#e63946" font-weight="bold">1,400</text>
+        <text x="250" y="248" text-anchor="middle" font-size="11" fill="#555">2021</text>
+        <!-- 2022: 1100 (추정) → 높이 약 106px -->
+        <rect x="294" y="124" width="48" height="104" fill="#e63946" opacity="0.60" rx="3"/>
+        <text x="318" y="118" text-anchor="middle" font-size="10" fill="#e63946" font-weight="bold">1,100</text>
+        <text x="318" y="248" text-anchor="middle" font-size="11" fill="#555">2022</text>
+        <!-- 2023: 950 → 높이 약 91px -->
+        <rect x="362" y="139" width="48" height="89" fill="#c1121f" opacity="0.75" rx="3"/>
+        <text x="386" y="133" text-anchor="middle" font-size="10" fill="#c1121f" font-weight="bold">945</text>
+        <text x="386" y="248" text-anchor="middle" font-size="11" fill="#555">2025</text>
+        <!-- 2026: 593 → 높이 약 57px -->
+        <rect x="430" y="171" width="48" height="57" fill="#7b0d1e" rx="3"/>
+        <text x="454" y="165" text-anchor="middle" font-size="10" fill="#7b0d1e" font-weight="bold">593</text>
+        <text x="454" y="248" text-anchor="middle" font-size="11" fill="#555">2026</text>
+        <!-- 2026 신규: 98명 (충원율 22%) -->
+        <rect x="498" y="211" width="48" height="17" fill="#ff6b6b" rx="3"/>
+        <text x="522" y="205" text-anchor="middle" font-size="10" fill="#ff6b6b" font-weight="bold">98명</text>
+        <text x="522" y="248" text-anchor="middle" font-size="10" fill="#555">2026 신규</text>
+        <!-- 충원 필요 450명 화살표 표시 -->
+        <text x="522" y="260" text-anchor="middle" font-size="9" fill="#c1121f">(필요 450명)</text>
+        <!-- 범례 -->
+        <rect x="90" y="268" width="12" height="10" fill="#e63946" rx="2"/>
+        <text x="106" y="278" font-size="11" fill="#555">전체 공중보건의사 수</text>
+        <rect x="280" y="268" width="12" height="10" fill="#ff6b6b" rx="2"/>
+        <text x="296" y="278" font-size="11" fill="#555">연도별 신규 편입</text>
+      </svg>
+    </div>
+    <p style="font-size:13px;color:#888;text-align:center;margin-top:8px;">출처: 보건복지부, 라포르시안, 시사저널 (2026년 5월)</p>
+  </div>
+
+  <p>2026년 신규 공중보건의사 편입 인원은 단 98명이다. 반면 올해 복무를 마치고 나가는 인원은 450명. 충원율은 <strong>고작 22%</strong>에 불과하다. 경북의 경우 2022년 285명에서 올해 97명으로 불과 4년 만에 65%가 사라졌다. 전남, 강원, 충북의 농어촌 지역도 사정은 비슷하다.</p>
+
+  <p>이 위기의 배경에는 복합적인 원인이 얽혀 있다. 2024년 의정 갈등으로 인한 수련 공백이 직접적인 원인이지만, 구조적으로는 <strong>현역병보다 두 배 이상 긴 복무 기간(36개월)에도 처우 개선이 없는 모순</strong>, 의대 내 여학생 비중 증가(여성은 대체복무 불가), 필수·공공의료 기피 현상이 복합적으로 작용했다.</p>
+
+  <blockquote>
+    "보건지소에 의사가 없어서 40km를 달려 읍내 병원에 가야 한다. 고령에 운전도 못 하는 어르신들은 어쩌란 말이냐." — 경북 A군 주민 인터뷰
+  </blockquote>
+
+  <!-- 나에게 미치는 영향 -->
+  <h2>💡 나에게 어떤 영향이 오는가 — 체크리스트</h2>
+
+  <p>두 가지 위기가 동시에 진행되면서 한국 의료 접근성 불평등은 더욱 심화될 것으로 전망된다. 도시 거주자는 비급여 치료비 급등을 걱정해야 하고, 농어촌 거주자는 의사 자체가 사라지는 공백을 맞닥뜨린다.</p>
+
+  <div class="infographic">
+    <h3>🩺 지금 당장 확인해야 할 체크리스트</h3>
+    <table class="compare-table">
+      <thead>
+        <tr><th>상황</th><th>지금 해야 할 일</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>실손보험 기존 가입자<br>(1~4세대)</td>
+          <td style="text-align:left">갱신 시 5세대 전환 권유를 받을 수 있음. 자주 받는 치료가 5세대에서 보장되는지 먼저 확인할 것</td>
+        </tr>
+        <tr>
+          <td>도수치료·연골주사<br>정기 이용자</td>
+          <td style="text-align:left">5세대 가입자라면 전액 자비 부담으로 전환됨. 월 치료 비용을 재계산해 의료비 예산 조정 필요</td>
+        </tr>
+        <tr>
+          <td>농어촌·지방 거주자</td>
+          <td style="text-align:left">가까운 보건지소 의사 현황 확인. 비대면 진료 플랫폼 사전 등록 및 원격 진료 기능 파악</td>
+        </tr>
+        <tr>
+          <td>신규 실손보험 가입 예정자</td>
+          <td style="text-align:left">4세대 기존 가입자 유지 vs 5세대 신규 가입 신중히 비교. 보험료 절감 vs 보장 축소 트레이드오프 검토</td>
+        </tr>
+        <tr>
+          <td>재난적 의료비 해당자<br>(저소득 중증 환자)</td>
+          <td style="text-align:left">2026년 지원 한도 5,000만원으로 상향. 신청 요건 충족 시 적극 활용 (보건복지부 사이트 참조)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 전망 -->
+  <h2>🔮 앞으로 어떻게 되나 — 전망과 과제</h2>
+
+  <p>정부는 공보의 공백을 메우기 위해 보건진료전담공무원(간호사) 151명을 보건지소에 배치하고, 비대면 진료와 원격 협진을 활성화하겠다는 방침이다. 또 4년제 국립의학전문대학원 신설 및 졸업 후 15년 의무 복무를 규정하는 법안도 통과됐다.</p>
+
+  <p>실손보험 개편에 대해서는 이미 소비자단체와 의료계 양쪽에서 비판이 나오고 있다. 소비자단체는 "보험료를 낮추면서 보장을 대폭 줄인 건 사실상 소비자 기만"이라고 주장하고, 의료계는 "비급여 의료 행위에 대한 과도한 국가 개입"이라고 맞선다. 금융당국과 보험사는 "과잉 진료 억제와 시스템 지속 가능성을 위해 불가피한 선택"이라는 입장을 고수하고 있다.</p>
+
+  <p>분명한 것은 한 가지다. <strong>2026년 대한민국 의료는 '지갑 두께'와 '사는 곳'에 따라 접근 가능한 의료의 수준이 더 크게 갈리는 시대로 접어들고 있다는 점이다.</strong> 의료는 공공재인가, 시장 상품인가 — 이 오래된 질문이 다시 한국 사회의 한복판에서 터져 나오고 있다.</p>
+
+  <hr>
+
+  <!-- 해시태그 -->
+  <div class="hashtags">
+    <span class="hashtag">#5세대실손보험</span>
+    <span class="hashtag">#도수치료보장제외</span>
+    <span class="hashtag">#비급여부담</span>
+    <span class="hashtag">#개원의위기</span>
+    <span class="hashtag">#공중보건의사급감</span>
+    <span class="hashtag">#농어촌의료공백</span>
+    <span class="hashtag">#의료양극화</span>
+    <span class="hashtag">#건강보험개혁</span>
+    <span class="hashtag">#한국의료위기</span>
+    <span class="hashtag">#실손보험개편</span>
+    <span class="hashtag">#연골주사비급여</span>
+    <span class="hashtag">#2026한국이슈</span>
+  </div>
+
+  <!-- 면책 조항 -->
+  <div class="disclaimer">
+    ⚠️ <strong>면책 조항:</strong> 본 아티클은 공개된 언론 보도, 정부 보도자료, 연구 자료를 바탕으로 작성된 정보 제공용 콘텐츠입니다. 개인의 보험 가입·해지 결정, 의료 치료 선택 등 중요 의사결정을 내리기 전에 반드시 보험 전문가 또는 의료 전문가와 상담하시기 바랍니다. 통계 수치는 작성 시점 기준이며 이후 변동될 수 있습니다.<br><br>
+    📚 <strong>주요 출처:</strong> 올리버 비즈니스 리서치 (2026 개원의 위기 분석), 파이낸셜뉴스, 보건복지부 보도자료, 라포르시안, 시사저널, 뱅크샐러드, Aboda, 오마이뉴스
+  </div>
+
+</div>
+</body>
+</html>
