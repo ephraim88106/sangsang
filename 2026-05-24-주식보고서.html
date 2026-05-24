@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>💥 코스피 7848 vs 다우 5만 돌파 — 지금 당장 알아야 할 이유 | 2026.05.22 시장 브리핑</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0e1a;
+    --bg2: #0f1525;
+    --card: #141929;
+    --card2: #1a2035;
+    --border: #1e2d4a;
+    --up: #00c896;
+    --down: #ff4757;
+    --neutral: #ffd32a;
+    --accent: #4d8eff;
+    --text: #e8eaf6;
+    --text2: #8892b0;
+    --text3: #64748b;
+    --mono: 'JetBrains Mono', 'Courier New', monospace;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Noto Sans KR', sans-serif;
+    min-height: 100vh;
+    line-height: 1.6;
+  }
+  /* BACKGROUND GRID */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(77,142,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(77,142,255,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    background: linear-gradient(135deg, #0d1b3e 0%, #0a0e1a 50%, #1a0a2e 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 36px 20px 28px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 300px;
+    background: radial-gradient(ellipse, rgba(77,142,255,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .header-tag {
+    display: inline-block;
+    background: linear-gradient(90deg, #ff4757, #ff6b35);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }
+  .header h1 {
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    font-weight: 900;
+    line-height: 1.3;
+    background: linear-gradient(90deg, #ffffff, #4d8eff, #00c896);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+  }
+  .header-sub {
+    font-size: 13px;
+    color: var(--text2);
+    margin-bottom: 16px;
+  }
+  .fear-greed {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,215,42,0.08);
+    border: 1px solid rgba(255,215,42,0.3);
+    border-radius: 30px;
+    padding: 8px 20px;
+  }
+  .fear-greed-dot {
+    width: 10px;
+    height: 10px;
+    background: var(--neutral);
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+  }
+  .fear-greed-label { font-size: 12px; color: var(--neutral); font-weight: 700; }
+  .fear-greed-value { font-size: 12px; color: var(--text2); }
+
+  /* ── SECTION TITLE ── */
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 32px 0 14px;
+  }
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--border), transparent);
+  }
+
+  /* ── INDEX CARDS ── */
+  .index-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+  }
+  .index-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px 16px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .index-card:hover { transform: translateY(-2px); }
+  .index-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    border-radius: 14px 14px 0 0;
+  }
+  .index-card.up::before { background: linear-gradient(90deg, var(--up), #00e5a8); }
+  .index-card.down::before { background: linear-gradient(90deg, var(--down), #ff6b7a); }
+  .index-card.neutral::before { background: linear-gradient(90deg, var(--neutral), #ffaa00); }
+  .index-label {
+    font-size: 11px;
+    color: var(--text3);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+  }
+  .index-value {
+    font-family: var(--mono);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .index-change {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .index-change.up { color: var(--up); }
+  .index-change.down { color: var(--down); }
+  .arrow { font-size: 14px; }
+
+  /* ── ASSET CARDS ── */
+  .asset-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(195px, 1fr));
+    gap: 12px;
+  }
+  .asset-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .asset-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+  .asset-icon.forex { background: rgba(77,142,255,0.15); }
+  .asset-icon.oil { background: rgba(255,107,53,0.15); }
+  .asset-icon.gold { background: rgba(255,211,42,0.15); }
+  .asset-icon.crypto { background: rgba(247,147,26,0.15); }
+  .asset-info { flex: 1; min-width: 0; }
+  .asset-name { font-size: 11px; color: var(--text3); font-weight: 600; margin-bottom: 4px; }
+  .asset-value { font-family: var(--mono); font-size: 1.1rem; font-weight: 700; color: var(--text); }
+  .asset-change { font-family: var(--mono); font-size: 12px; margin-top: 2px; }
+  .asset-change.up { color: var(--up); }
+  .asset-change.down { color: var(--down); }
+
+  /* ── ANALYSIS BOX ── */
+  .analysis-box {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+  }
+  .analysis-box h3 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .analysis-box p {
+    font-size: 14.5px;
+    color: var(--text2);
+    line-height: 1.85;
+    margin-bottom: 18px;
+  }
+  .analysis-box p strong { color: var(--text); }
+  .analysis-highlight {
+    background: rgba(0,200,150,0.06);
+    border-left: 3px solid var(--up);
+    border-radius: 0 8px 8px 0;
+    padding: 12px 16px;
+    margin: 14px 0;
+    font-size: 14px;
+    color: var(--text);
+    line-height: 1.7;
+  }
+  .analysis-highlight.warn {
+    background: rgba(255,71,87,0.06);
+    border-left-color: var(--down);
+  }
+  .analysis-highlight.caution {
+    background: rgba(255,211,42,0.06);
+    border-left-color: var(--neutral);
+  }
+
+  /* ── SECTOR HEATMAP ── */
+  .heatmap-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 8px;
+  }
+  .heatmap-cell {
+    border-radius: 12px;
+    padding: 14px 10px;
+    text-align: center;
+    transition: transform 0.2s;
+    cursor: default;
+  }
+  .heatmap-cell:hover { transform: scale(1.03); }
+  .heatmap-cell.strong-up  { background: rgba(0,200,150,0.30); border: 1px solid rgba(0,200,150,0.5); }
+  .heatmap-cell.mid-up     { background: rgba(0,200,150,0.18); border: 1px solid rgba(0,200,150,0.3); }
+  .heatmap-cell.slight-up  { background: rgba(0,200,150,0.08); border: 1px solid rgba(0,200,150,0.2); }
+  .heatmap-cell.flat       { background: rgba(255,211,42,0.08); border: 1px solid rgba(255,211,42,0.2); }
+  .heatmap-cell.slight-dn  { background: rgba(255,71,87,0.08);  border: 1px solid rgba(255,71,87,0.2); }
+  .heatmap-cell.mid-dn     { background: rgba(255,71,87,0.18);  border: 1px solid rgba(255,71,87,0.3); }
+  .heatmap-cell.strong-dn  { background: rgba(255,71,87,0.30);  border: 1px solid rgba(255,71,87,0.5); }
+  .heatmap-label { font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+  .heatmap-pct {
+    font-family: var(--mono);
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .strong-up .heatmap-pct, .mid-up .heatmap-pct, .slight-up .heatmap-pct { color: var(--up); }
+  .flat .heatmap-pct { color: var(--neutral); }
+  .slight-dn .heatmap-pct, .mid-dn .heatmap-pct, .strong-dn .heatmap-pct { color: var(--down); }
+
+  /* ── STOCK PICKS ── */
+  .picks-list { display: flex; flex-direction: column; gap: 14px; }
+  .pick-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    align-items: start;
+    transition: border-color 0.2s;
+  }
+  .pick-card:hover { border-color: var(--accent); }
+  .pick-rank {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--accent), #7c3aed);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 900;
+    color: white;
+    flex-shrink: 0;
+  }
+  .pick-title {
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .pick-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-left: 8px;
+    vertical-align: middle;
+    letter-spacing: 0.5px;
+  }
+  .badge-up { background: rgba(0,200,150,0.2); color: var(--up); }
+  .badge-hot { background: rgba(255,71,87,0.2); color: var(--down); }
+  .badge-watch { background: rgba(255,211,42,0.2); color: var(--neutral); }
+  .pick-body { font-size: 13.5px; color: var(--text2); line-height: 1.7; margin-bottom: 8px; }
+  .pick-point {
+    font-size: 12.5px;
+    color: var(--accent);
+    font-weight: 600;
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .pick-point::before { content: '▶'; font-size: 9px; margin-top: 3px; flex-shrink: 0; }
+
+  /* ── CHECKPOINT ── */
+  .checkpoint-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 12px;
+  }
+  .checkpoint-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px;
+  }
+  .checkpoint-date {
+    font-size: 11px;
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+  }
+  .checkpoint-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .checkpoint-desc {
+    font-size: 12.5px;
+    color: var(--text2);
+    line-height: 1.6;
+  }
+
+  /* ── HASHTAGS ── */
+  .hashtags {
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .hashtag {
+    font-size: 12px;
+    color: var(--accent);
+    background: rgba(77,142,255,0.08);
+    border: 1px solid rgba(77,142,255,0.2);
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-weight: 600;
+  }
+
+  /* ── DISCLAIMER ── */
+  .disclaimer {
+    margin-top: 40px;
+    padding: 16px 20px;
+    background: rgba(255,71,87,0.04);
+    border: 1px solid rgba(255,71,87,0.15);
+    border-radius: 12px;
+    font-size: 12px;
+    color: var(--text3);
+    line-height: 1.7;
+    text-align: center;
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+    margin: 8px 0;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 600px) {
+    .index-grid { grid-template-columns: repeat(2, 1fr); }
+    .asset-grid { grid-template-columns: 1fr 1fr; }
+    .heatmap-grid { grid-template-columns: repeat(3, 1fr); }
+    .analysis-box { padding: 18px; }
+    .pick-card { grid-template-columns: 1fr; }
+    .pick-rank { width: 28px; height: 28px; font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ HEADER ═══════════════ -->
+<div class="header">
+  <div style="position:relative;z-index:1;">
+    <div class="header-tag">🔥 LIVE MARKET REPORT</div>
+    <h1>코스피 7,848 vs 다우 역대 최고 50,580<br>지금 당신이 놓쳐선 안 될 3가지 신호</h1>
+    <div class="header-sub">
+      2026년 5월 22일 (금) 기준 | 엔비디아 어닝 서프라이즈 · 이란 리스크 · 원달러 급등
+    </div>
+    <div class="fear-greed">
+      <div class="fear-greed-dot"></div>
+      <span class="fear-greed-label">시장 심리</span>
+      <span class="fear-greed-value">중립 — 신중한 낙관 구간 (Fear&amp;Greed 56)</span>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- ═══════════════ 국내 지수 ═══════════════ -->
+  <div class="section-title">📊 국내 주요 지수</div>
+  <div class="index-grid">
+    <div class="index-card up">
+      <div class="index-label">KOSPI</div>
+      <div class="index-value">7,847.71</div>
+      <div class="index-change up"><span class="arrow">▲</span> +0.82%</div>
+    </div>
+    <div class="index-card up">
+      <div class="index-label">KOSDAQ</div>
+      <div class="index-value">1,105.97</div>
+      <div class="index-change up"><span class="arrow">▲</span> +1.14%</div>
+    </div>
+    <div class="index-card neutral">
+      <div class="index-label">코스피200 선물</div>
+      <div class="index-value">1,042.3</div>
+      <div class="index-change up"><span class="arrow">▲</span> +0.61%</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ 미국 지수 ═══════════════ -->
+  <div class="section-title">🇺🇸 미국 주요 지수</div>
+  <div class="index-grid">
+    <div class="index-card up">
+      <div class="index-label">DOW JONES</div>
+      <div class="index-value">50,579</div>
+      <div class="index-change up"><span class="arrow">▲</span> +0.58% 사상최고</div>
+    </div>
+    <div class="index-card up">
+      <div class="index-label">S&amp;P 500</div>
+      <div class="index-value">7,473.47</div>
+      <div class="index-change up"><span class="arrow">▲</span> +0.37%</div>
+    </div>
+    <div class="index-card up">
+      <div class="index-label">NASDAQ</div>
+      <div class="index-value">26,343.97</div>
+      <div class="index-change up"><span class="arrow">▲</span> +0.19%</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ 환율·원자재 ═══════════════ -->
+  <div class="section-title">💱 환율 &amp; 원자재</div>
+  <div class="asset-grid">
+    <div class="asset-card">
+      <div class="asset-icon forex">💵</div>
+      <div class="asset-info">
+        <div class="asset-name">원 / 달러 (USD/KRW)</div>
+        <div class="asset-value">1,520.06</div>
+        <div class="asset-change down">▲ +1.03% (원화 약세)</div>
+      </div>
+    </div>
+    <div class="asset-card">
+      <div class="asset-icon oil">🛢️</div>
+      <div class="asset-info">
+        <div class="asset-name">WTI 원유 ($/배럴)</div>
+        <div class="asset-value">$98.40</div>
+        <div class="asset-change down">▲ +2.1% (이란 리스크)</div>
+      </div>
+    </div>
+    <div class="asset-card">
+      <div class="asset-icon gold">🥇</div>
+      <div class="asset-info">
+        <div class="asset-name">금 ($/온스)</div>
+        <div class="asset-value">$4,500</div>
+        <div class="asset-change down">▼ -0.8% (2주 연속 하락)</div>
+      </div>
+    </div>
+    <div class="asset-card">
+      <div class="asset-icon crypto">₿</div>
+      <div class="asset-info">
+        <div class="asset-name">비트코인 (BTC/USD)</div>
+        <div class="asset-value">$77,447</div>
+        <div class="asset-change up">▲ +0.24%</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ 핵심 분석 ═══════════════ -->
+  <div class="section-title">🔍 오늘 시장을 움직인 진짜 이유</div>
+  <div class="analysis-box">
+
+    <h3>🧨 표면 뒤에 숨은 3개의 진짜 뇌관</h3>
+
+    <p>
+      5월 22일 한·미 증시는 동반 상승 마감했지만, 내면을 들여다보면 세 가지 상충하는 힘이 팽팽히 맞선 하루였다.
+      <strong>다우 50,000 돌파 + 코스피 7,800선 유지</strong>라는 숫자만 보면 낙관론이 우세한 듯 보이지만,
+      원달러 환율 1,520원 돌파·WTI 유가 98달러 급등이라는 시한폭탄이 조용히 압박을 키우고 있다.
+    </p>
+
+    <div class="analysis-highlight">
+      <strong>① 엔비디아 어닝 서프라이즈 — AI 랠리 연료 재충전</strong><br>
+      5월 21일(현지 시각) 발표된 엔비디아 FY2027 Q1 실적은 매출 816억 달러(+85% YoY), 영업이익 +147% YoY로 시장 컨센서스를 압도했다.
+      2분기 가이던스도 910억 달러로 제시하며 AI 인프라 투자 사이클이 꺾이지 않았음을 재확인시켰다.
+      이 소식은 삼성전자·SK하이닉스에 직접적 수혜 기대감으로 이어지며 코스피 반도체 섹터를 끌어올렸다.
+    </div>
+
+    <div class="analysis-highlight caution">
+      <strong>② 원달러 1,520원 — 외국인 이탈의 신호탄?</strong><br>
+      원달러 환율이 1,520원을 돌파하며 1% 넘게 급등했다. 미국 연준이 금리를 3.5~3.75%로 동결한 상황에서
+      케빈 워시 신임 연준 의장의 매파적 발언이 달러 강세를 자극했다.
+      원화 약세는 수출기업(반도체·조선) 환차익을 높이지만, 외국인 투자자의 환헤지 비용 증가로 자금 유출 압력을 키운다는 점에서 양날의 검이다.
+    </div>
+
+    <div class="analysis-highlight warn">
+      <strong>③ WTI 98달러 — 이란 리스크가 살아있다</strong><br>
+      이란 최고지도자가 핵협상에서 농축 우라늄 국내 보관 고수를 명령하면서 미국과의 협상이 또다시 교착 상태에 빠졌다.
+      이는 중동 지정학 리스크를 재점화하며 WTI 유가를 배럴당 98달러 선까지 끌어올렸다.
+      유가 급등은 연준의 금리 인하 기대를 더욱 옥죄며 인플레이션 재가속 우려를 자극한다.
+      한국 경제에는 수입 물가 상승 → 소비 위축 → 경기 둔화의 이중 압박이 우려된다.
+    </div>
+
+    <p>
+      결론적으로 이 날 시장은 <strong>AI 빅테크의 실적 서프라이즈(위)와 이란·원달러 리스크(아래)</strong> 사이에서 줄타기를 했다.
+      상승 모멘텀은 유효하지만, 다음 한 주의 방향성은 이란 협상 타결 여부와 연준 의장 발언에 달려 있다.
+    </p>
+  </div>
+
+  <!-- ═══════════════ 섹터 히트맵 ═══════════════ -->
+  <div class="section-title">🗺️ 코스피 섹터 히트맵</div>
+  <div class="heatmap-grid">
+    <div class="heatmap-cell strong-up">
+      <div class="heatmap-label">반도체</div>
+      <div class="heatmap-pct">+2.4%</div>
+    </div>
+    <div class="heatmap-cell mid-up">
+      <div class="heatmap-label">AI·소프트웨어</div>
+      <div class="heatmap-pct">+1.8%</div>
+    </div>
+    <div class="heatmap-cell mid-up">
+      <div class="heatmap-label">방산·원전</div>
+      <div class="heatmap-pct">+1.5%</div>
+    </div>
+    <div class="heatmap-cell mid-up">
+      <div class="heatmap-label">조선</div>
+      <div class="heatmap-pct">+1.3%</div>
+    </div>
+    <div class="heatmap-cell slight-up">
+      <div class="heatmap-label">금융·보험</div>
+      <div class="heatmap-pct">+0.7%</div>
+    </div>
+    <div class="heatmap-cell slight-up">
+      <div class="heatmap-label">바이오</div>
+      <div class="heatmap-pct">+0.5%</div>
+    </div>
+    <div class="heatmap-cell flat">
+      <div class="heatmap-label">통신</div>
+      <div class="heatmap-pct">+0.1%</div>
+    </div>
+    <div class="heatmap-cell slight-dn">
+      <div class="heatmap-label">화학</div>
+      <div class="heatmap-pct">-0.4%</div>
+    </div>
+    <div class="heatmap-cell mid-dn">
+      <div class="heatmap-label">2차전지</div>
+      <div class="heatmap-pct">-1.1%</div>
+    </div>
+    <div class="heatmap-cell mid-dn">
+      <div class="heatmap-label">철강·소재</div>
+      <div class="heatmap-pct">-0.9%</div>
+    </div>
+    <div class="heatmap-cell slight-dn">
+      <div class="heatmap-label">건설</div>
+      <div class="heatmap-pct">-0.6%</div>
+    </div>
+    <div class="heatmap-cell slight-up">
+      <div class="heatmap-label">에너지</div>
+      <div class="heatmap-pct">+0.9%</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ 주목 종목/이슈 ═══════════════ -->
+  <div class="section-title">🎯 지금 당장 주목해야 할 3가지</div>
+  <div class="picks-list">
+
+    <div class="pick-card">
+      <div class="pick-rank">1</div>
+      <div>
+        <div class="pick-title">SK하이닉스 <span class="pick-badge badge-up">▲ 강세</span></div>
+        <div class="pick-body">
+          엔비디아의 어닝 서프라이즈는 HBM(고대역폭 메모리) 수요가 건재함을 증명한다.
+          엔비디아 데이터센터 GPU의 핵심 파트너인 SK하이닉스는 FY2027 Q2 엔비디아 매출 가이던스 910억달러의 직접 수혜자로
+          꼽힌다. 외국인 순매수 흐름이 계속된다면 52주 신고가 재도전이 유력하다.
+        </div>
+        <div class="pick-point">향후 포인트: 6월 중순 SK하이닉스 HBM3E 12단 양산 시작 여부 + 삼성전자 HBM 공급 승인 경쟁</div>
+      </div>
+    </div>
+
+    <div class="pick-card">
+      <div class="pick-rank">2</div>
+      <div>
+        <div class="pick-title">한국 조선 3사 (HD한국조선해양·삼성중공업·한화오션) <span class="pick-badge badge-hot">🔥 급부상</span></div>
+        <div class="pick-body">
+          이란 리스크로 WTI 유가가 98달러까지 오르면서 중동산 원유 대체 수요가 늘어나고 있다.
+          동시에 LNG 운반선·VLCC(초대형 원유운반선) 수주 기대감이 함께 부상했다.
+          조선 3사는 이미 2027~2028년 도크 스케줄이 꽉 찬 상황에서 추가 발주 단가 인상 협상력이 높아졌다.
+        </div>
+        <div class="pick-point">향후 포인트: 이란-미국 핵협상 교착 → 중동 긴장 장기화 → LNG 수요 구조적 증가</div>
+      </div>
+    </div>
+
+    <div class="pick-card">
+      <div class="pick-rank">3</div>
+      <div>
+        <div class="pick-title">코스닥 국민성장펀드 수혜주 <span class="pick-badge badge-watch">👀 모니터링</span></div>
+        <div class="pick-body">
+          정부의 '국민성장펀드' 출시 기대감이 코스닥 시장으로 자금을 끌어당기고 있다.
+          코스닥이 코스피를 웃도는 +1.14% 상승을 기록한 배경이다.
+          주로 중소형 바이오·AI SaaS·2차전지 소재주 등 성장주로 자금이 집중되는 흐름이다.
+          다만 정책 기대가 실제 펀드 자금 유입으로 이어지기까지 시간이 걸린다는 점에서 단기 변동성 주의가 필요하다.
+        </div>
+        <div class="pick-point">향후 포인트: 국민성장펀드 설정 일정 공식 발표 시 코스닥 중소형 성장주 단기 급등 가능</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ 체크포인트 ═══════════════ -->
+  <div class="section-title">📅 이번 주 체크포인트</div>
+  <div class="checkpoint-grid">
+    <div class="checkpoint-card">
+      <div class="checkpoint-date">5월 26일 (월)</div>
+      <div class="checkpoint-title">🇺🇸 미국 메모리얼 데이 휴장</div>
+      <div class="checkpoint-desc">미국 시장 휴장으로 거래량 감소 예상. 한국 단독 장세 전개 가능. 아시아 시장 변동성 주의.</div>
+    </div>
+    <div class="checkpoint-card">
+      <div class="checkpoint-date">5월 27일 (화)</div>
+      <div class="checkpoint-title">🇺🇸 미국 소비자신뢰지수</div>
+      <div class="checkpoint-desc">5월 소비자신뢰지수 발표. 유가 상승과 인플레이션 우려가 소비심리를 얼마나 갉아먹었는지 확인.</div>
+    </div>
+    <div class="checkpoint-card">
+      <div class="checkpoint-date">5월 28일 (수)</div>
+      <div class="checkpoint-title">🇺🇸 미국 2분기 GDP 수정치</div>
+      <div class="checkpoint-desc">Q2 GDP 수정 발표. 예상치 하회 시 달러 약세·원화 강세 전환 신호. 연준 금리 경로에 직접 영향.</div>
+    </div>
+    <div class="checkpoint-card">
+      <div class="checkpoint-date">5월 29일 (목)</div>
+      <div class="checkpoint-title">🇺🇸 PCE 물가 지수 (연준 선호 지표)</div>
+      <div class="checkpoint-desc">핵심 PCE 발표. 유가 상승 반영 여부 주목. 예상치 상회 시 금리 인상 우려 재점화 — 최대 위험 이벤트.</div>
+    </div>
+    <div class="checkpoint-card">
+      <div class="checkpoint-date">이란 협상</div>
+      <div class="checkpoint-title">🛢️ 미·이란 핵협상 진행</div>
+      <div class="checkpoint-desc">협상 타결 시 WTI 유가 급락 → 인플레이션 우려 완화 → 시장 급반등 시나리오. 대형 카탈리스트.</div>
+    </div>
+    <div class="checkpoint-card">
+      <div class="checkpoint-date">연속 모니터링</div>
+      <div class="checkpoint-title">🔭 원달러 환율 1,530원 돌파 여부</div>
+      <div class="checkpoint-desc">외국인 자금 이탈의 심리적 경계선. 돌파 시 코스피 하방 압력 강화 가능. 환율 안정이 관건.</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ 해시태그 ═══════════════ -->
+  <div class="hashtags">
+    <span class="hashtag">#코스피7848</span>
+    <span class="hashtag">#다우50000</span>
+    <span class="hashtag">#엔비디아어닝서프라이즈</span>
+    <span class="hashtag">#SK하이닉스</span>
+    <span class="hashtag">#원달러1520</span>
+    <span class="hashtag">#WTI98달러</span>
+    <span class="hashtag">#이란리스크</span>
+    <span class="hashtag">#HBM메모리</span>
+    <span class="hashtag">#국민성장펀드</span>
+    <span class="hashtag">#코스닥급등</span>
+    <span class="hashtag">#연준금리동결</span>
+    <span class="hashtag">#AI반도체</span>
+    <span class="hashtag">#글로벌증시</span>
+    <span class="hashtag">#2026주식</span>
+  </div>
+
+  <!-- ═══════════════ DISCLAIMER ═══════════════ -->
+  <div class="disclaimer">
+    ⚠️ <strong>면책 조항</strong><br>
+    본 보고서는 공개된 시장 데이터 및 뉴스를 기반으로 AI가 자동 생성한 정보 제공용 콘텐츠입니다.
+    투자 권유 또는 특정 종목 추천이 아니며, 모든 투자 결정의 책임은 투자자 본인에게 있습니다.
+    주식·파생상품·암호화폐 투자는 원금 손실 위험을 수반합니다.
+    전문 금융 상담사와 상담 후 신중히 결정하시기 바랍니다.
+  </div>
+
+</div>
+</body>
+</html>
