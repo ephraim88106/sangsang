@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🔥 코스피 8228 폭등! 삼전닉스 레버리지 ETF 상장 충격 | 2026.05.27 시장 브리핑</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-primary: #0a0e1a;
+    --bg-secondary: #0f1525;
+    --bg-card: #141929;
+    --bg-card-hover: #1a2035;
+    --border: #1e2d4a;
+    --text-primary: #e8eaf6;
+    --text-secondary: #8892b0;
+    --text-muted: #4a5568;
+    --up: #00c896;
+    --down: #ff4757;
+    --neutral: #ffd32a;
+    --accent: #5c6bc0;
+    --accent-bright: #7986cb;
+    --glow-up: rgba(0,200,150,0.15);
+    --glow-down: rgba(255,71,87,0.15);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans KR', -apple-system, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+    line-height: 1.6;
+  }
+
+  /* 배경 그라디언트 효과 */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(ellipse at 20% 0%, rgba(92,107,192,0.08) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 100%, rgba(0,200,150,0.05) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 16px 60px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ========== HEADER ========== */
+  .header {
+    text-align: center;
+    padding: 40px 20px 32px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 28px;
+  }
+
+  .header-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+  }
+
+  .header-title {
+    font-size: clamp(22px, 4vw, 32px);
+    font-weight: 900;
+    line-height: 1.3;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #ffffff 0%, #c3cfe2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .header-sub {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+  }
+
+  .fear-greed {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 13px;
+  }
+
+  .fear-greed-label { color: var(--text-secondary); }
+  .fear-greed-value {
+    font-weight: 700;
+    color: var(--neutral);
+    font-size: 14px;
+  }
+  .fear-greed-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--neutral);
+    box-shadow: 0 0 8px var(--neutral);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.3); }
+  }
+
+  /* ========== SECTION TITLE ========== */
+  .section-title {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* ========== INDEX CARDS ========== */
+  .index-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+
+  .index-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px 16px;
+    transition: transform 0.2s, border-color 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .index-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+
+  .index-card.up::before { background: linear-gradient(90deg, var(--up), transparent); }
+  .index-card.down::before { background: linear-gradient(90deg, var(--down), transparent); }
+  .index-card.up { border-color: rgba(0,200,150,0.3); }
+  .index-card.down { border-color: rgba(255,71,87,0.3); }
+
+  .index-card:hover {
+    transform: translateY(-2px);
+    background: var(--bg-card-hover);
+  }
+
+  .index-name {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .index-value {
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+    line-height: 1;
+  }
+
+  .index-change {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .index-change.up { color: var(--up); }
+  .index-change.down { color: var(--down); }
+
+  .arrow { font-size: 14px; }
+
+  /* ========== MACRO CARDS ========== */
+  .macro-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+
+  .macro-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .macro-label {
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+
+  .macro-value {
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .macro-value.up { color: var(--up); }
+  .macro-value.down { color: var(--down); }
+  .macro-value.neutral { color: var(--neutral); }
+
+  /* ========== ANALYSIS SECTION ========== */
+  .analysis-section {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 24px;
+    margin-bottom: 28px;
+  }
+
+  .analysis-headline {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    line-height: 1.4;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .analysis-headline span {
+    background: linear-gradient(135deg, var(--up), #00e5a0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .analysis-sub {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--accent-bright);
+    margin: 20px 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .analysis-sub::before {
+    content: '';
+    width: 4px;
+    height: 18px;
+    background: var(--accent-bright);
+    border-radius: 4px;
+  }
+
+  .analysis-body {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+  }
+
+  .analysis-body strong {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+
+  .analysis-body em {
+    color: var(--neutral);
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  /* ========== SECTOR HEATMAP ========== */
+  .heatmap-section {
+    margin-bottom: 28px;
+  }
+
+  .heatmap-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 8px;
+  }
+
+  .sector-cell {
+    border-radius: 10px;
+    padding: 14px 12px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+    transition: transform 0.15s;
+  }
+
+  .sector-cell:hover { transform: scale(1.03); }
+
+  .sector-cell.strong-up { background: rgba(0,200,150,0.25); border: 1px solid rgba(0,200,150,0.4); }
+  .sector-cell.up { background: rgba(0,200,150,0.12); border: 1px solid rgba(0,200,150,0.2); }
+  .sector-cell.flat { background: rgba(255,211,42,0.08); border: 1px solid rgba(255,211,42,0.2); }
+  .sector-cell.down { background: rgba(255,71,87,0.1); border: 1px solid rgba(255,71,87,0.2); }
+  .sector-cell.strong-down { background: rgba(255,71,87,0.22); border: 1px solid rgba(255,71,87,0.4); }
+
+  .sector-name {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+  }
+
+  .sector-pct {
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .sector-cell.strong-up .sector-pct,
+  .sector-cell.up .sector-pct { color: var(--up); }
+  .sector-cell.flat .sector-pct { color: var(--neutral); }
+  .sector-cell.down .sector-pct,
+  .sector-cell.strong-down .sector-pct { color: var(--down); }
+
+  /* ========== SPOTLIGHT STOCKS ========== */
+  .spotlight-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+
+  .spotlight-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 16px;
+    align-items: start;
+  }
+
+  .spotlight-rank {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+
+  .spotlight-rank.r1 { background: rgba(0,200,150,0.2); color: var(--up); border: 1px solid rgba(0,200,150,0.4); }
+  .spotlight-rank.r2 { background: rgba(255,71,87,0.2); color: var(--down); border: 1px solid rgba(255,71,87,0.4); }
+  .spotlight-rank.r3 { background: rgba(255,211,42,0.15); color: var(--neutral); border: 1px solid rgba(255,211,42,0.35); }
+
+  .spotlight-name {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .spotlight-desc {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  .spotlight-point {
+    font-size: 11px;
+    color: var(--accent-bright);
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 600;
+  }
+
+  .spotlight-badge {
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 16px;
+    font-weight: 700;
+    white-space: nowrap;
+    padding: 4px 10px;
+    border-radius: 8px;
+  }
+
+  .spotlight-badge.up {
+    color: var(--up);
+    background: rgba(0,200,150,0.1);
+  }
+
+  .spotlight-badge.down {
+    color: var(--down);
+    background: rgba(255,71,87,0.1);
+  }
+
+  /* ========== CHECKPOINT ========== */
+  .checkpoint-section {
+    background: linear-gradient(135deg, #0f1a35 0%, #0a1628 100%);
+    border: 1px solid rgba(92,107,192,0.3);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 28px;
+  }
+
+  .checkpoint-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--accent-bright);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .checkpoint-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .checkpoint-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 14px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 10px;
+    border-left: 3px solid var(--accent);
+  }
+
+  .checkpoint-time {
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent-bright);
+    white-space: nowrap;
+    padding-top: 2px;
+    min-width: 70px;
+  }
+
+  .checkpoint-text {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  .checkpoint-text strong { color: var(--text-primary); }
+
+  /* ========== HASHTAGS ========== */
+  .hashtag-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 28px;
+  }
+
+  .hashtag {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent-bright);
+    background: rgba(92,107,192,0.12);
+    border: 1px solid rgba(92,107,192,0.25);
+    padding: 5px 12px;
+    border-radius: 20px;
+    cursor: default;
+  }
+
+  /* ========== DISCLAIMER ========== */
+  .disclaimer {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 18px;
+    font-size: 11px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    text-align: center;
+  }
+
+  /* ========== DIVIDER ========== */
+  .divider {
+    height: 1px;
+    background: var(--border);
+    margin: 28px 0;
+  }
+
+  /* ========== WARNING BANNER ========== */
+  .warning-banner {
+    background: linear-gradient(135deg, rgba(255,71,87,0.12) 0%, rgba(255,71,87,0.05) 100%);
+    border: 1px solid rgba(255,71,87,0.3);
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: #ff8a95;
+    font-weight: 600;
+  }
+
+  /* ========== RESPONSIVE ========== */
+  @media (max-width: 600px) {
+    .index-grid { grid-template-columns: repeat(2, 1fr); }
+    .macro-grid { grid-template-columns: repeat(2, 1fr); }
+    .heatmap-grid { grid-template-columns: repeat(2, 1fr); }
+    .spotlight-card { grid-template-columns: auto 1fr; }
+    .spotlight-badge { grid-column: 2; }
+    .analysis-section { padding: 20px 16px; }
+    .header-title { font-size: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ========== HEADER ========== -->
+  <div class="header">
+    <div class="header-badge">🚨 BREAKING MARKET ALERT</div>
+    <h1 class="header-title">
+      코스피 8,228 폭등 vs 코스닥 -3.4% 대폭락<br>
+      삼전닉스 레버리지 ETF 상장, 증시를 두 쪽 냈다
+    </h1>
+    <div class="header-sub">2026년 5월 27일 수요일 · Wall Street급 심층 분석 브리핑</div>
+    <div class="fear-greed">
+      <div class="fear-greed-dot"></div>
+      <span class="fear-greed-label">시장 심리</span>
+      <span class="fear-greed-value">⚡ 극도의 탐욕 (Extreme Greed)</span>
+    </div>
+  </div>
+
+  <!-- ========== WARNING ========== -->
+  <div class="warning-banner">
+    ⚠️ 오늘 삼전닉스 레버리지 ETF 18종 동시 상장 — 하루 최대 60% 손실 가능, 금융당국 유의 권고
+  </div>
+
+  <!-- ========== KOREA INDEX ========== -->
+  <div class="section-title">🇰🇷 한국 증시</div>
+  <div class="index-grid">
+
+    <div class="index-card up">
+      <div class="index-name">KOSPI</div>
+      <div class="index-value">8,228</div>
+      <div class="index-change up">
+        <span class="arrow">▲</span>
+        <span>+181.19 &nbsp;+2.25%</span>
+      </div>
+    </div>
+
+    <div class="index-card down">
+      <div class="index-name">KOSDAQ</div>
+      <div class="index-value">1,133</div>
+      <div class="index-change down">
+        <span class="arrow">▼</span>
+        <span>-39.39 &nbsp;-3.36%</span>
+      </div>
+    </div>
+
+    <div class="index-card up">
+      <div class="index-name">SK하이닉스</div>
+      <div class="index-value">+9%↑</div>
+      <div class="index-change up">
+        <span class="arrow">▲</span>
+        <span>레버ETF +18%</span>
+      </div>
+    </div>
+
+    <div class="index-card up">
+      <div class="index-name">외국인 수급</div>
+      <div class="index-value">매수</div>
+      <div class="index-change up">
+        <span class="arrow">▲</span>
+        <span>반도체 집중</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ========== US INDEX ========== -->
+  <div class="section-title">🇺🇸 미국 증시</div>
+  <div class="index-grid">
+
+    <div class="index-card down">
+      <div class="index-name">DOW</div>
+      <div class="index-value">50,463</div>
+      <div class="index-change down">
+        <span class="arrow">▼</span>
+        <span>-117 &nbsp;-0.23%</span>
+      </div>
+    </div>
+
+    <div class="index-card up">
+      <div class="index-name">S&amp;P 500</div>
+      <div class="index-value">7,519</div>
+      <div class="index-change up">
+        <span class="arrow">▲</span>
+        <span>+45.65 &nbsp;+0.61%</span>
+      </div>
+    </div>
+
+    <div class="index-card up">
+      <div class="index-name">NASDAQ</div>
+      <div class="index-value">26,656</div>
+      <div class="index-change up">
+        <span class="arrow">▲</span>
+        <span>+312.21 &nbsp;+1.19%</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ========== MACRO ========== -->
+  <div class="section-title">💹 환율 · 원자재</div>
+  <div class="macro-grid">
+
+    <div class="macro-card">
+      <div class="macro-label">🇺🇸 원/달러</div>
+      <div class="macro-value neutral">₩1,543</div>
+    </div>
+
+    <div class="macro-card">
+      <div class="macro-label">🛢 WTI 유가</div>
+      <div class="macro-value down">$90.27</div>
+    </div>
+
+    <div class="macro-card">
+      <div class="macro-label">🥇 금 (Gold)</div>
+      <div class="macro-value up">$4,550</div>
+    </div>
+
+    <div class="macro-card">
+      <div class="macro-label">₿ 비트코인</div>
+      <div class="macro-value down">$76,xxx</div>
+    </div>
+
+  </div>
+
+  <!-- ========== ANALYSIS ========== -->
+  <div class="section-title">🔍 오늘의 핵심 분석</div>
+  <div class="analysis-section">
+    <div class="analysis-headline">
+      반도체만 살고 나머지는 죽었다 — <span>"사상 첫 8200 코스피"의 민낯</span>
+    </div>
+
+    <div class="analysis-sub">📌 오늘 시장을 움직인 진짜 이유</div>
+    <div class="analysis-body">
+      오늘 코스피가 종가 기준 사상 최초로 8,200선을 돌파하며 <strong>8,228.70</strong>에 마감했다. 표면적으로는 대형 호재처럼 보이지만, 그 이면에는 <em>기형적 수급 집중</em>이 자리하고 있다. 핵심 트리거는 하나다 — <strong>삼성전자·SK하이닉스 단일종목 레버리지 ETF 18종 동시 상장</strong>. 개인 투자자들이 상장 첫날 SK하이닉스 레버리지 ETF에만 <strong>1조 4천억 원</strong>을 쏟아부었고, 삼성전자 레버리지 ETF에 6천억 원을 추가 매수했다. 이 수급이 현물 주식 추가 매수 압력으로 이어지는 연쇄 반응을 일으키며 반도체 대형주만 하늘로 치솟았다. 여기에 미국 마이크론 실적 호조라는 외부 촉매제가 더해지면서 SK하이닉스는 하루 9% 이상 폭등했고, SK하이닉스 시가총액은 1조 달러(약 1,400조 원)를 돌파하는 역사적 순간을 맞이했다.
+    </div>
+
+    <div class="analysis-sub">⚡ 코스닥 -3.36% 대폭락의 진실</div>
+    <div class="analysis-body">
+      코스피가 환호하는 동안 코스닥은 처참하게 붕괴했다. <strong>코스닥 1,133.13 (-3.36%)</strong>이라는 숫자는 단순한 하락이 아니라 <em>수급의 블랙홀</em>이 작동한 결과다. 반도체 레버리지 ETF로 자금이 빨려들어가면서 2차전지, 바이오, IT 중소형주에서 대규모 이탈이 발생했다. 건설, 전기장비, 철강·화학 업종은 일제히 약세를 면치 못했다. 이것이 오늘의 역설이다 — 코스피는 신고가를 찍었지만, <strong>상승 종목은 단 75개에 불과</strong>했다. 진짜 상승장인지, 아니면 반도체 두 종목이 만든 환상인지 냉철하게 물어봐야 한다.
+    </div>
+
+    <div class="analysis-sub">🌐 글로벌 연결 고리 & 리스크</div>
+    <div class="analysis-body">
+      미국 나스닥이 +1.19% 상승하며 AI·반도체 업종 강세를 이어가는 흐름이 한국 반도체주에 직접 전파됐다. 특히 마이크론의 깜짝 실적은 HBM(고대역폭메모리) 수요가 AI 인프라 구축과 함께 폭발적으로 성장 중임을 확인시켜줬다. 그러나 <strong>단기 리스크</strong>를 절대 간과해서는 안 된다. 레버리지 ETF는 <em>하루 최대 60%</em>까지 손실이 날 수 있는 극도로 위험한 상품이다. 지금 개인 투자자들이 쏟아붓고 있는 2조 원의 자금은 조그마한 악재에도 공황 매도로 돌변할 수 있다. 원/달러 환율 <strong>1,543원</strong>이라는 고환율도 수입물가 압박을 지속시켜 내수 기업 실적에 부담을 준다. WTI가 <strong>$90</strong>대에 안착해 있는 점도 에너지 비용 상승 우려를 낳는다. 미국-이란 협상이 결렬되면 다시 유가 급등 시나리오가 현실화될 수 있다. 6월 FOMC까지 연준의 금리 방향성이 불명확한 상황에서, <em>"지금 사면 안 되는 이유"</em>는 "지금 사야 하는 이유"만큼이나 많다.
+    </div>
+  </div>
+
+  <!-- ========== SECTOR HEATMAP ========== -->
+  <div class="heatmap-section">
+    <div class="section-title">🗺 섹터 히트맵</div>
+    <div class="heatmap-grid">
+      <div class="sector-cell strong-up">
+        <div class="sector-name">IT 서비스</div>
+        <div class="sector-pct">+13.31%</div>
+      </div>
+      <div class="sector-cell up">
+        <div class="sector-name">반도체</div>
+        <div class="sector-pct">+5.13%</div>
+      </div>
+      <div class="sector-cell up">
+        <div class="sector-name">바이오테크</div>
+        <div class="sector-pct">+4.52%</div>
+      </div>
+      <div class="sector-cell flat">
+        <div class="sector-name">금융</div>
+        <div class="sector-pct">+0.30%</div>
+      </div>
+      <div class="sector-cell flat">
+        <div class="sector-name">에너지</div>
+        <div class="sector-pct">-0.10%</div>
+      </div>
+      <div class="sector-cell down">
+        <div class="sector-name">2차전지</div>
+        <div class="sector-pct">-2.10%</div>
+      </div>
+      <div class="sector-cell down">
+        <div class="sector-name">건설</div>
+        <div class="sector-pct">-2.80%</div>
+      </div>
+      <div class="sector-cell down">
+        <div class="sector-name">전기장비</div>
+        <div class="sector-pct">-3.10%</div>
+      </div>
+      <div class="sector-cell strong-down">
+        <div class="sector-name">철강·화학</div>
+        <div class="sector-pct">-3.90%</div>
+      </div>
+      <div class="sector-cell strong-down">
+        <div class="sector-name">부동산</div>
+        <div class="sector-pct">-4.20%</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== SPOTLIGHT ========== -->
+  <div class="section-title">💡 오늘의 주목 이슈 3선</div>
+  <div class="spotlight-grid">
+
+    <div class="spotlight-card">
+      <div class="spotlight-rank r1">①</div>
+      <div>
+        <div class="spotlight-name">SK하이닉스 — 시총 1조 달러 클럽 진입</div>
+        <div class="spotlight-desc">
+          레버리지 ETF 상장 효과 + 마이크론 호실적 소식이 맞물리며 SK하이닉스가 9% 이상 폭등,
+          시가총액 1조 달러(약 1,400조 원)를 돌파하는 역사적 이정표를 세웠다.
+          HBM3E 독점 공급 지위와 AI 수요 폭발이 핵심 동력.
+        </div>
+        <div class="spotlight-point">▶ 향후 포인트: HBM4 수율 개선 속도 & 엔비디아 차기 주문 규모 확인 필수</div>
+      </div>
+      <div class="spotlight-badge up">+9%↑</div>
+    </div>
+
+    <div class="spotlight-card">
+      <div class="spotlight-rank r2">②</div>
+      <div>
+        <div class="spotlight-name">코스닥 -3.36% — 2차전지·바이오 쌍폭락</div>
+        <div class="spotlight-desc">
+          반도체 레버리지 ETF로 2조 원이 빠져나가면서 코스닥 중소형주가 직격탄을 맞았다.
+          LG에너지솔루션, 에코프로 등 2차전지 주요주와 셀트리온·삼성바이오로직스 등도 동반 하락.
+          이는 기업 펀더멘털 문제가 아닌 <strong>수급 쏠림</strong>에 의한 인위적 하락.
+        </div>
+        <div class="spotlight-point">▶ 향후 포인트: 레버리지 ETF 열기가 식으면 역방향 수급 유입 기대 가능</div>
+      </div>
+      <div class="spotlight-badge down">-3.36%</div>
+    </div>
+
+    <div class="spotlight-card">
+      <div class="spotlight-rank r3">③</div>
+      <div>
+        <div class="spotlight-name">金 $4,550 — 안전자산 동시 강세의 신호</div>
+        <div class="spotlight-desc">
+          미국-이란 협상 진전으로 유가는 안정됐지만 금 가격은 여전히 $4,550 고공 행진 중.
+          주식 랠리와 금 동반 강세는 시장이 낙관론과 불안감을 동시에 품고 있다는 증거.
+          비트코인이 $77,000 아래로 밀린 것도 risk-off 심리 잠복을 암시한다.
+        </div>
+        <div class="spotlight-point">▶ 향후 포인트: 6월 FOMC 금리 결정 이후 금·달러 방향성 재정립 예상</div>
+      </div>
+      <div class="spotlight-badge neutral" style="color:var(--neutral);background:rgba(255,211,42,0.1);">$4,550</div>
+    </div>
+
+  </div>
+
+  <!-- ========== CHECKPOINT ========== -->
+  <div class="section-title">📅 내일 & 이번 주 체크포인트</div>
+  <div class="checkpoint-section">
+    <div class="checkpoint-title">⏰ 주목해야 할 이벤트</div>
+    <ul class="checkpoint-list">
+      <li class="checkpoint-item">
+        <div class="checkpoint-time">5/28 (목)</div>
+        <div class="checkpoint-text">
+          <strong>미국 1분기 GDP 수정치 발표</strong> — 초기 추정치 대비 하향 시 경기침체 우려 재부상. 나스닥·S&P500 단기 변동성 확대 가능
+        </div>
+      </li>
+      <li class="checkpoint-item">
+        <div class="checkpoint-time">5/29 (금)</div>
+        <div class="checkpoint-text">
+          <strong>미국 PCE 물가지수 (연준 선호 인플레 지표)</strong> — 예상치 상회 시 6월 FOMC 금리 동결 가능성 강화, 성장주·기술주 타격. 연준의 실질적 행동 여부를 판가름하는 가장 중요한 이번 주 지표
+        </div>
+      </li>
+      <li class="checkpoint-item">
+        <div class="checkpoint-time">5월 말</div>
+        <div class="checkpoint-text">
+          <strong>월말 포트폴리오 리밸런싱</strong> — 기관·외국인의 월말 수급 이동 발생. 특히 코스피 신고가에 따른 차익실현 매도 물량 출회 경계
+        </div>
+      </li>
+      <li class="checkpoint-item">
+        <div class="checkpoint-time">6/16~17</div>
+        <div class="checkpoint-text">
+          <strong>FOMC 회의</strong> — 다음 연준 금리 결정일. 현재 시장은 동결 컨센서스이나 PCE 결과에 따라 급변 가능. 파월 의장 임기 종료 후 신임 의장 정책 방향 불확실성도 변수
+        </div>
+      </li>
+      <li class="checkpoint-item">
+        <div class="checkpoint-time">지속 모니터링</div>
+        <div class="checkpoint-text">
+          <strong>삼전닉스 레버리지 ETF 수급 동향</strong> — 상장 초기 열기가 꺼지면 역방향 매도 쇼크 가능. 개인 투자자 손절 임계점(레버리지 특성상 -10% = 실질 -20%) 구간 집중 감시 필요
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ========== HASHTAGS ========== -->
+  <div class="hashtag-section">
+    <span class="hashtag">#코스피8228</span>
+    <span class="hashtag">#삼전닉스레버리지</span>
+    <span class="hashtag">#SK하이닉스폭등</span>
+    <span class="hashtag">#코스닥폭락</span>
+    <span class="hashtag">#반도체랠리</span>
+    <span class="hashtag">#시총1조달러</span>
+    <span class="hashtag">#HBM</span>
+    <span class="hashtag">#AI반도체</span>
+    <span class="hashtag">#나스닥</span>
+    <span class="hashtag">#금4550달러</span>
+    <span class="hashtag">#FOMC</span>
+    <span class="hashtag">#한국증시</span>
+    <span class="hashtag">#주식보고서</span>
+    <span class="hashtag">#오늘의시황</span>
+  </div>
+
+  <!-- ========== DISCLAIMER ========== -->
+  <div class="disclaimer">
+    ⚠️ <strong>면책조항:</strong> 본 보고서는 AI가 공개된 시장 정보를 바탕으로 생성한 참고자료입니다.
+    투자 권유나 금융 조언이 아니며, 모든 투자 결정에 대한 책임은 투자자 본인에게 있습니다.
+    레버리지·인버스 ETF는 원금 손실 가능성이 있으며 복리 손실 효과로 인해 단기 보유에만 적합합니다.
+    투자 전 금융 전문가와 반드시 상담하시기 바랍니다.
+    데이터 출처: 뉴스핌, 파이낸셜뉴스, 머니투데이, CNBC, 인베스팅닷컴 (2026.05.27 기준)
+  </div>
+
+</div>
+</body>
+</html>
