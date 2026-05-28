@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>동결 뒤에 숨겨진 공포 — 점도표 19개가 '인상'을 가리켰다, 빚 2000조 서민의 이자 쇼크</title>
+  <meta name="description" content="2026년 5월 28일 한국은행 금통위가 기준금리를 2.5%로 동결했지만, 점도표 21개 중 19개가 인상 방향을 가리켰다. 가계부채 1993조원의 차주들이 맞이할 이자 폭탄 시나리오를 파헤친다.">
+  <meta name="keywords" content="한국은행, 기준금리, 금통위, 점도표, 가계부채, 금리인상, 이자폭탄, 영끌족, 2026">
+  <meta property="og:title" content="동결 뒤에 숨겨진 공포 — 점도표 19개가 '인상'을 외쳤다">
+  <meta property="og:description" content="겉으론 동결, 속은 인상 — 6개월 뒤 기준금리 3.0%? 3억 대출자 월 15만원 추가 이자 시뮬레이션">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: #1a1a1a;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+
+    /* 헤더 */
+    .header-band {
+      background: linear-gradient(135deg, #1a237e 0%, #283593 50%, #1565c0 100%);
+      color: white;
+      padding: 10px 20px;
+      font-size: 13px;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+    .category-tag {
+      display: inline-block;
+      background: #f59e0b;
+      color: #1a1a1a;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 3px;
+      margin: 30px 0 16px;
+      letter-spacing: 1px;
+    }
+    h1 {
+      font-size: clamp(24px, 4vw, 36px);
+      font-weight: 900;
+      line-height: 1.3;
+      color: #0d1b4b;
+      margin-bottom: 14px;
+      word-break: keep-all;
+    }
+    .subtitle {
+      font-size: 18px;
+      color: #c0392b;
+      font-weight: 700;
+      margin-bottom: 20px;
+      word-break: keep-all;
+    }
+    .meta {
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #1a237e;
+      padding-bottom: 16px;
+    }
+    .meta span { margin-right: 16px; }
+
+    /* 훅 & 요약 */
+    .hook-box {
+      background: #fff8e1;
+      border-left: 5px solid #f59e0b;
+      padding: 20px 24px;
+      margin: 30px 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .hook-box p { font-size: 18px; font-weight: 500; line-height: 1.7; word-break: keep-all; }
+
+    .summary-box {
+      background: #e8eaf6;
+      border-radius: 10px;
+      padding: 24px;
+      margin: 24px 0;
+    }
+    .summary-box h3 { font-size: 15px; color: #1a237e; font-weight: 700; margin-bottom: 14px; letter-spacing: 1px; }
+    .summary-box ul { padding-left: 20px; }
+    .summary-box ul li { margin-bottom: 8px; font-weight: 500; }
+
+    /* 본문 섹션 */
+    h2 {
+      font-size: 22px;
+      font-weight: 900;
+      color: #0d1b4b;
+      margin: 40px 0 16px;
+      padding-left: 14px;
+      border-left: 5px solid #1a237e;
+      word-break: keep-all;
+    }
+    p { margin-bottom: 18px; word-break: keep-all; }
+    strong { color: #c0392b; }
+
+    /* 숫자 강조 */
+    .big-number {
+      text-align: center;
+      margin: 32px 0;
+      padding: 28px 20px;
+      background: #0d1b4b;
+      border-radius: 12px;
+      color: white;
+    }
+    .big-number .num { font-size: clamp(42px, 8vw, 64px); font-weight: 900; color: #f59e0b; line-height: 1; }
+    .big-number .label { font-size: 16px; color: #b0bec5; margin-top: 8px; }
+
+    /* 점도표 SVG 인포그래픽 */
+    .infographic {
+      background: #f5f5f5;
+      border-radius: 12px;
+      padding: 28px 20px;
+      margin: 32px 0;
+    }
+    .infographic h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: #0d1b4b;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    /* 이자 시뮬레이션 테이블 */
+    .simulation-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 15px;
+    }
+    .simulation-table thead tr {
+      background: #1a237e;
+      color: white;
+    }
+    .simulation-table th, .simulation-table td {
+      padding: 13px 16px;
+      text-align: center;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    .simulation-table tbody tr:nth-child(even) { background: #f5f5f5; }
+    .simulation-table .highlight-row {
+      background: #fff3e0 !important;
+      font-weight: 700;
+      color: #c0392b;
+    }
+    .simulation-table .danger-row {
+      background: #ffebee !important;
+      font-weight: 900;
+      color: #b71c1c;
+    }
+
+    /* 경고 박스 */
+    .warning-box {
+      background: #ffebee;
+      border: 2px solid #ef5350;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 28px 0;
+    }
+    .warning-box .icon { font-size: 22px; margin-bottom: 8px; }
+    .warning-box h4 { font-size: 17px; font-weight: 700; color: #b71c1c; margin-bottom: 10px; }
+    .warning-box p { margin: 0; font-size: 15px; }
+
+    /* 비교 카드 */
+    .card-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .card {
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+    }
+    .card.blue { background: #e3f2fd; border: 2px solid #1565c0; }
+    .card.red { background: #ffebee; border: 2px solid #c62828; }
+    .card .card-num { font-size: 28px; font-weight: 900; }
+    .card.blue .card-num { color: #1565c0; }
+    .card.red .card-num { color: #c62828; }
+    .card .card-label { font-size: 13px; color: #666; margin-top: 6px; }
+
+    /* 해시태그 */
+    .hashtags {
+      margin: 40px 0 16px;
+      line-height: 2.2;
+    }
+    .hashtags span {
+      display: inline-block;
+      background: #e8eaf6;
+      color: #1a237e;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin: 3px 4px 3px 0;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    /* 출처 */
+    .sources {
+      border-top: 1px solid #e0e0e0;
+      margin-top: 40px;
+      padding-top: 20px;
+      font-size: 13px;
+      color: #888;
+    }
+    .sources a { color: #1a237e; text-decoration: none; }
+
+    /* 면책조항 */
+    .disclaimer {
+      background: #f5f5f5;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-top: 24px;
+      font-size: 12px;
+      color: #999;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 480px) {
+      .card-row { grid-template-columns: 1fr; }
+      h2 { font-size: 19px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header-band">💰 경제·금융 — 2026.05.28 속보 분석</div>
+
+<div class="container">
+
+  <div class="category-tag">💰 경제·금융 이슈</div>
+
+  <h1>겉으론 '동결'... 점도표 21개 중 19개가 금리 '인상'을 외쳤다</h1>
+  <p class="subtitle">빚 1,993조 차주들에게 보내는 충격 경고 — "연말 3%대" 현실화하면 이자 쇼크가 온다</p>
+
+  <div class="meta">
+    <span>📅 2026년 5월 28일</span>
+    <span>✍️ 탐사저널 데스크</span>
+    <span>📊 데이터·금융 분석</span>
+  </div>
+
+  <!-- 훅 문단 -->
+  <div class="hook-box">
+    <p>오늘(5월 28일) 한국은행은 기준금리를 연 2.50%로 <strong>8회 연속 동결</strong>했다. 뉴스 헤드라인은 '동결'이라고 떴다. 하지만 발표가 끝난 뒤 공개된 숫자 하나가 시장을 얼어붙게 만들었다. <strong>점도표(Dot Plot) 21개 중 19개</strong>가 6개월 후 금리 인상을 가리키고 있었다. 10개가 <strong>3.00%</strong>에, 7개가 2.75%에, 2개는 무려 3.25%에 찍혔다. '동결'은 지금 당장의 이야기일 뿐이다. 연말이 오기 전, 당신의 대출 이자는 달라져 있을지 모른다.</p>
+  </div>
+
+  <!-- 핵심 요약 -->
+  <div class="summary-box">
+    <h3>📌 핵심 요약 3줄</h3>
+    <ul>
+      <li>2026.05.28 금통위 기준금리 <strong>2.50% 동결</strong> — 하지만 위원 2명 즉시 인상 소수의견 제출</li>
+      <li>점도표 <strong>21개 중 19개</strong> 인상 방향 → 연말까지 최대 <strong>3차례 인상</strong> 가능성</li>
+      <li>가계부채 <strong>1,993조 1천억</strong>(역대 최대) — 0.5%p 인상 시 연간 이자 부담 <strong>약 10조 원 급증</strong></li>
+    </ul>
+  </div>
+
+  <!-- SECTION 1 -->
+  <h2>🏦 '동결'이라는 가면 뒤에 숨은 매파의 얼굴</h2>
+
+  <p>한국은행 금융통화위원회는 오늘 오전 기준금리를 연 2.50%로 유지하기로 결정했다. 지난해 7월부터 8회 연속 동결. 언뜻 보면 한은이 금리를 올릴 생각이 없는 것처럼 보인다. 하지만 <strong>7명의 위원 중 2명</strong>이 "지금 당장 2.75%로 올려야 한다"는 인상 소수의견을 제출했다.</p>
+
+  <p>인상 소수의견을 낸 것은 <strong>유상대 부총재</strong>와 <strong>장용성 금통위원</strong>이다. 둘 다 한은 내에서도 매파(인플레이션 억제 우선)로 분류되는 인물들. 이들은 물가 상승세가 통제 범위를 벗어나고 있다며 선제적 인상을 주장했다.</p>
+
+  <p>더 결정적인 신호는 <strong>점도표</strong>에서 나왔다. 한국은행이 이날 함께 공개한 '6개월 후 조건부 금리 전망' 점도표를 보면, <strong>21개의 점 중 단 2개만이 현재 수준(2.50%)을 유지할 것으로 전망</strong>했고, 나머지 19개는 모두 인상 쪽에 표시됐다.</p>
+
+  <!-- 점도표 인포그래픽 -->
+  <div class="infographic">
+    <h3>📊 2026년 5월 금통위 점도표 — 6개월 후 기준금리 전망</h3>
+    <svg viewBox="0 0 680 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;display:block;margin:0 auto;">
+      <!-- 배경 -->
+      <rect width="680" height="280" fill="#fafafa" rx="8"/>
+
+      <!-- 제목 -->
+      <text x="340" y="30" text-anchor="middle" font-family="Noto Sans KR, sans-serif" font-size="14" font-weight="700" fill="#0d1b4b">점도표: 6개월 뒤 기준금리 전망 분포</text>
+
+      <!-- Y축 레이블 (금리 수준) -->
+      <text x="70" y="80" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#b71c1c">3.25%</text>
+      <text x="70" y="135" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#e65100">3.00%</text>
+      <text x="70" y="190" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#f59e0b">2.75%</text>
+      <text x="70" y="245" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#1565c0">2.50%</text>
+
+      <!-- 구분선 -->
+      <line x1="100" y1="65" x2="660" y2="65" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+      <line x1="100" y1="120" x2="660" y2="120" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+      <line x1="100" y1="175" x2="660" y2="175" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+      <line x1="100" y1="230" x2="660" y2="230" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+
+      <!-- 3.25% 점 2개 (빨간색) -->
+      <circle cx="130" cy="68" r="11" fill="#c62828" opacity="0.9"/>
+      <circle cx="165" cy="68" r="11" fill="#c62828" opacity="0.9"/>
+      <text x="195" y="73" font-family="sans-serif" font-size="12" fill="#c62828" font-weight="700">← 2표</text>
+
+      <!-- 3.00% 점 10개 (주황색) -->
+      <circle cx="130" cy="123" r="11" fill="#e65100" opacity="0.9"/>
+      <circle cx="165" cy="123" r="11" fill="#e65100" opacity="0.9"/>
+      <circle cx="200" cy="123" r="11" fill="#e65100" opacity="0.9"/>
+      <circle cx="235" cy="123" r="11" fill="#e65100" opacity="0.9"/>
+      <circle cx="270" cy="123" r="11" fill="#e65100" opacity="0.9"/>
+      <circle cx="305" cy="123" r="11" fill="#e65100" opacity="0.9"/>
+      <circle cx="340" cy="123" r="11" fill="#e65100" opacity="0.9"/>
+      <circle cx="375" cy="123" r="11" fill="#e65100" opacity="0.9"/>
+      <circle cx="410" cy="123" r="11" fill="#e65100" opacity="0.9"/>
+      <circle cx="445" cy="123" r="11" fill="#e65100" opacity="0.9"/>
+      <text x="465" y="128" font-family="sans-serif" font-size="12" fill="#e65100" font-weight="700">← 10표 (최다)</text>
+
+      <!-- 2.75% 점 7개 (노란색) -->
+      <circle cx="130" cy="178" r="11" fill="#f59e0b" opacity="0.9"/>
+      <circle cx="165" cy="178" r="11" fill="#f59e0b" opacity="0.9"/>
+      <circle cx="200" cy="178" r="11" fill="#f59e0b" opacity="0.9"/>
+      <circle cx="235" cy="178" r="11" fill="#f59e0b" opacity="0.9"/>
+      <circle cx="270" cy="178" r="11" fill="#f59e0b" opacity="0.9"/>
+      <circle cx="305" cy="178" r="11" fill="#f59e0b" opacity="0.9"/>
+      <circle cx="340" cy="178" r="11" fill="#f59e0b" opacity="0.9"/>
+      <text x="360" y="183" font-family="sans-serif" font-size="12" fill="#c67c00" font-weight="700">← 7표</text>
+
+      <!-- 2.50% 점 2개 (파란색) -->
+      <circle cx="130" cy="233" r="11" fill="#1565c0" opacity="0.7"/>
+      <circle cx="165" cy="233" r="11" fill="#1565c0" opacity="0.7"/>
+      <text x="195" y="238" font-family="sans-serif" font-size="12" fill="#1565c0" font-weight="700">← 2표 (동결)</text>
+
+      <!-- 화살표 및 레이블 -->
+      <text x="340" y="262" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#666">↑ 인상 방향 19표 vs 동결 2표</text>
+      <rect x="100" y="250" width="540" height="2" fill="#ef5350" opacity="0.4" rx="1"/>
+    </svg>
+    <p style="text-align:center;font-size:13px;color:#666;margin-top:10px;">출처: 한국은행 2026.05.28 금통위 발표 자료</p>
+  </div>
+
+  <!-- SECTION 2 -->
+  <h2>📈 숫자로 보는 충격 — 가계부채 1,993조, 2000조의 문턱에서</h2>
+
+  <p>한국은행이 발표한 2026년 1분기 가계신용 잔액은 <strong>1,993조 1천억 원</strong>. 전분기 대비 14조 원이 더 불었다. 이는 2002년 4분기 관련 통계 집계 이래 역대 최대치다. 사실상 2,000조 원 돌파가 시간문제다.</p>
+
+  <div class="big-number">
+    <div class="num">1,993조</div>
+    <div class="label">2026년 1분기 한국 가계신용 잔액 — 역대 최대</div>
+  </div>
+
+  <p>문제는 이 빚의 구조다. 한국의 주택담보대출은 <strong>변동금리 비중이 유독 높다</strong>. 변동금리 지표인 코픽스(COFIX)는 올해 4월 기준 신규 취급액 기준 2.89%로 전월 대비 0.08%p 올랐다. 시중은행 주담대 금리는 여기에 가산금리가 붙어 이미 <strong>연 4.5~5.5% 수준</strong>에서 운용 중이다.</p>
+
+  <p>금리가 0.25%p씩 올라갈 때마다, 변동금리 대출자들의 이자 부담은 조용히 그러나 확실히 늘어난다. 연말까지 점도표대로 세 차례 인상이 현실화되면? 기준금리는 <strong>3.25%</strong>까지 치솟는다.</p>
+
+  <!-- SECTION 3 -->
+  <h2>💸 이자 쇼크 시뮬레이션 — 내 대출이자는 얼마나 오르나</h2>
+
+  <p>현실적인 수치로 따져보자. 주택담보대출 <strong>3억 원을 30년 만기 변동금리</strong>로 빌린 차주를 기준으로 계산했다.</p>
+
+  <table class="simulation-table">
+    <thead>
+      <tr>
+        <th>기준금리</th>
+        <th>대출금리(추정)</th>
+        <th>연간 이자</th>
+        <th>현재 대비 추가</th>
+        <th>월 추가 부담</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2.50% (현재)</td>
+        <td>4.80%</td>
+        <td>약 1,440만 원</td>
+        <td>—</td>
+        <td>—</td>
+      </tr>
+      <tr class="highlight-row">
+        <td>2.75% (+0.25%p)</td>
+        <td>5.05%</td>
+        <td>약 1,515만 원</td>
+        <td>+75만 원</td>
+        <td>+6.3만 원</td>
+      </tr>
+      <tr class="highlight-row">
+        <td>3.00% (+0.50%p)</td>
+        <td>5.30%</td>
+        <td>약 1,590만 원</td>
+        <td>+150만 원</td>
+        <td>+12.5만 원</td>
+      </tr>
+      <tr class="danger-row">
+        <td>3.25% (+0.75%p)</td>
+        <td>5.55%</td>
+        <td>약 1,665만 원</td>
+        <td>+225만 원</td>
+        <td>+18.8만 원</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p style="font-size:13px;color:#888;">※ 3억 원 30년 만기 원리금균등상환 기준 / 대출금리는 기준금리 + 가산금리 2.30%p 가정 / 실제 금리는 은행·신용도에 따라 다름</p>
+
+  <p>3억 원 대출이라면 기준금리가 3.25%로 오를 경우 현재보다 <strong>매달 약 18만~19만 원</strong>을 더 내야 한다. 연간으로는 <strong>225만 원</strong>이 추가된다. 5억 원 대출이라면 연간 375만 원, 월 31만 원이 더 빠져나간다.</p>
+
+  <div class="card-row">
+    <div class="card blue">
+      <div class="card-num">5억 대출</div>
+      <div class="card-label">금리 0.75%p 인상 시</div>
+      <div class="card-num" style="font-size:22px;margin-top:8px;">월 +31만원</div>
+      <div class="card-label">연 +375만원 추가 이자</div>
+    </div>
+    <div class="card red">
+      <div class="card-num">전체 가계</div>
+      <div class="card-label">1,993조 × 0.5%p 인상 시</div>
+      <div class="card-num" style="font-size:22px;margin-top:8px;">약 10조원</div>
+      <div class="card-label">연간 추가 이자 부담 총액</div>
+    </div>
+  </div>
+
+  <!-- SECTION 4 -->
+  <h2>🔍 숨겨진 이면 — 왜 지금 금리를 올리려 하나</h2>
+
+  <p>한국은행이 금리를 올리려는 이면에는 복합적인 압박이 자리잡고 있다. 첫째는 <strong>물가</strong>다. 2026년 4월 소비자물가 상승률은 <strong>전년 동기 대비 2.6%</strong>로 2024년 7월 이후 최고치를 기록했다. 중동 분쟁으로 인한 국제유가 상승, 고환율 지속이 수입물가를 끌어올리고 있다.</p>
+
+  <p>둘째는 <strong>재점화된 영끌</strong>이다. 불과 1~2년 전까지 금리 인하 기대감에 시중의 유동성이 다시 부동산·주식으로 쏠렸고, 새로운 영끌 대출이 쏟아졌다. 금융위원회 자료에 따르면 2025~2026년 가계대출 총량이 다시 증가세로 돌아서며 빚이 눈덩이처럼 불어났다.</p>
+
+  <p>셋째는 <strong>한·미 금리 역전</strong>이다. 미국 연방준비제도(Fed)가 고금리를 유지하는 상황에서 한국이 저금리 기조를 지속하면 원화 약세와 외국인 자금 이탈 압박이 커진다. 원달러 환율은 2025~2026년 고환율 사태를 거치며 여전히 불안정한 흐름을 보이고 있다.</p>
+
+  <div class="warning-box">
+    <div class="icon">⚠️</div>
+    <h4>전문가 10명 중 6명 "연말 기준금리 3.0%"</h4>
+    <p>머니투데이 조사(2026.05.25) 결과 전문가 10명 중 6명이 올 연말 기준금리가 3.0%에 도달할 것으로 전망했다. 나머지 일부는 3.25%까지도 열어둬야 한다고 경고했다. 금리 인상이 현실화되면 특히 변동금리 비중이 높고 대출 규모가 큰 영끌족·다주택자의 이자 부담이 직격탄을 맞는다.</p>
+  </div>
+
+  <!-- SECTION 5 -->
+  <h2>🧑‍💼 나에게 미치는 영향 — 영끌족·직장인·세입자 모두 남 얘기가 아니다</h2>
+
+  <p>금리 인상의 직격탄은 <strong>1순위로 변동금리 주택담보대출 보유자</strong>에게 온다. 2020~2022년 저금리 시기 '영끌'해서 집을 산 3040세대가 특히 취약하다. 당시 연 2%대 금리로 빌린 대출이 이미 4~5%대로 리셋됐고, 여기서 또 0.5%p가 올라가면 상환 한계에 다다르는 차주가 속출할 수 있다.</p>
+
+  <p>세입자도 안전하지 않다. 임대인의 대출 이자가 늘어날수록 이를 <strong>월세나 전세보증금 인상</strong>으로 전가하려는 압력이 커진다. 이미 수도권 월세는 2026년 들어 꾸준한 상승세를 기록 중이다.</p>
+
+  <p>직장인과 자영업자도 마찬가지다. 신용대출·사업자 대출금리가 연동 상승하면 실질 가처분 소득이 줄어들고, 이는 소비 위축 → 내수 둔화 → 경기침체라는 악순환으로 이어질 수 있다.</p>
+
+  <!-- 가계부채 추이 인포그래픽 -->
+  <div class="infographic">
+    <h3>📉 가계신용 잔액 추이 (단위: 조 원)</h3>
+    <svg viewBox="0 0 680 240" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;display:block;margin:0 auto;">
+      <rect width="680" height="240" fill="#fafafa" rx="8"/>
+
+      <!-- 그리드 -->
+      <line x1="80" y1="30" x2="80" y2="200" stroke="#ccc" stroke-width="1"/>
+      <line x1="80" y1="200" x2="640" y2="200" stroke="#ccc" stroke-width="1"/>
+      <line x1="80" y1="65" x2="640" y2="65" stroke="#e0e0e0" stroke-width="0.5" stroke-dasharray="4,4"/>
+      <line x1="80" y1="110" x2="640" y2="110" stroke="#e0e0e0" stroke-width="0.5" stroke-dasharray="4,4"/>
+      <line x1="80" y1="155" x2="640" y2="155" stroke="#e0e0e0" stroke-width="0.5" stroke-dasharray="4,4"/>
+
+      <!-- Y축 레이블 -->
+      <text x="74" y="69" text-anchor="end" font-family="sans-serif" font-size="11" fill="#888">2,000</text>
+      <text x="74" y="114" text-anchor="end" font-family="sans-serif" font-size="11" fill="#888">1,900</text>
+      <text x="74" y="159" text-anchor="end" font-family="sans-serif" font-size="11" fill="#888">1,800</text>
+      <text x="74" y="204" text-anchor="end" font-family="sans-serif" font-size="11" fill="#888">1,700</text>
+
+      <!-- 데이터 포인트 및 선 (가계신용 추이) -->
+      <!-- 2023Q1=1,757 2023Q4=1,810 2024Q1=1,835 2024Q4=1,906 2025Q1=1,931 2025Q4=1,979 2026Q1=1,993 -->
+      <!-- 스케일: 1700~2000 = 140px (200-60), 1px = 300조/140 = 2.14조/px -->
+      <!-- y = 200 - (value - 1700) / (300/140) -->
+      <polyline
+        points="110,186 200,164 290,154 380,120 440,108 550,79 630,73"
+        fill="none" stroke="#1a237e" stroke-width="3" stroke-linejoin="round"/>
+
+      <!-- 점 -->
+      <circle cx="110" cy="186" r="5" fill="#1a237e"/>
+      <circle cx="200" cy="164" r="5" fill="#1a237e"/>
+      <circle cx="290" cy="154" r="5" fill="#1a237e"/>
+      <circle cx="380" cy="120" r="5" fill="#1a237e"/>
+      <circle cx="440" cy="108" r="5" fill="#1a237e"/>
+      <circle cx="550" cy="79" r="5" fill="#1a237e"/>
+      <circle cx="630" cy="73" r="8" fill="#c62828"/>
+
+      <!-- X축 레이블 -->
+      <text x="110" y="218" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#666">23Q1</text>
+      <text x="200" y="218" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#666">23Q4</text>
+      <text x="290" y="218" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#666">24Q1</text>
+      <text x="380" y="218" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#666">24Q4</text>
+      <text x="440" y="218" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#666">25Q1</text>
+      <text x="550" y="218" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#666">25Q4</text>
+      <text x="630" y="218" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#c62828" font-weight="700">26Q1</text>
+
+      <!-- 최고치 레이블 -->
+      <text x="630" y="60" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#c62828" font-weight="700">1,993조</text>
+      <text x="630" y="47" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#c62828">역대 최대</text>
+
+      <!-- 2000조 경고선 -->
+      <line x1="80" y1="65" x2="640" y2="65" stroke="#ef5350" stroke-width="1.5" stroke-dasharray="8,4"/>
+      <text x="90" y="62" font-family="sans-serif" font-size="10" fill="#ef5350" font-weight="700">— 2,000조 경계선</text>
+    </svg>
+    <p style="text-align:center;font-size:13px;color:#666;margin-top:10px;">출처: 한국은행 가계신용 통계 (추이는 참고 목적의 근사치)</p>
+  </div>
+
+  <!-- SECTION 6 -->
+  <h2>🌍 해외는 어떻게 했나 — 고부채 국가의 금리 딜레마</h2>
+
+  <p>한국만의 문제가 아니다. 고가계부채 국가들이 금리 인상 국면에서 어떤 경로를 걸었는지 살펴보면 앞날이 보인다. 호주는 2022~2023년 기준금리를 0.1%에서 4.35%까지 급격히 올리며 가계부채 부실화를 일부 경험했다. 캐나다는 변동금리 모기지 비중이 높아 금리 상승기에 연체율이 치솟았다.</p>
+
+  <p>공통점이 있다. <strong>가계부채 비율이 GDP의 80~100% 이상인 국가들</strong>은 금리 0.5~1%p만 올라도 소비가 급격히 위축되고, 건설·부동산 경기가 동반 침체한다는 것이다. 한국의 GDP 대비 가계부채 비율은 이미 90% 안팎으로, 주요 선진국 중에서도 최상위권에 속한다.</p>
+
+  <!-- SECTION 7 -->
+  <h2>🔮 전망과 지금 당신이 해야 할 것</h2>
+
+  <p>오늘 금통위 발표가 던진 메시지는 명확하다. <strong>"지금은 동결이지만, 하반기에는 올린다."</strong> 시장은 이미 이를 반영 중이다. 은행채·국고채 금리는 오름세고, 시중은행들은 대출 금리를 조금씩 높이고 있다.</p>
+
+  <p>지금 변동금리 대출을 보유하고 있다면, 다음 사항을 점검할 시간이다. 첫째, <strong>고정금리 전환 가능성</strong> 확인. 금리가 올라가기 전에 고정금리로 갈아타는 것이 유리할 수 있다. 둘째, <strong>대출 원금 선(先)상환</strong>. 이자 부담을 줄이는 가장 확실한 방법이다. 셋째, <strong>가처분소득 재점검</strong>. 금리가 0.5%p 오를 경우 매달 예산표가 어떻게 달라지는지 미리 시뮬레이션해보라.</p>
+
+  <p>다음 금통위는 <strong>7월 16일</strong>이다. 그 전에 6월 소비자물가, 5월 수출입 통계, 미국 연준 FOMC 결과가 나온다. 한 달 반 남았다. 그때까지의 지표가 금리 인상 여부를 가를 분수령이 될 것이다.</p>
+
+  <!-- 해시태그 -->
+  <div class="hashtags">
+    <span>#기준금리</span>
+    <span>#금통위</span>
+    <span>#가계부채2000조</span>
+    <span>#이자폭탄</span>
+    <span>#영끌족</span>
+    <span>#점도표</span>
+    <span>#금리인상</span>
+    <span>#한국은행</span>
+    <span>#변동금리</span>
+    <span>#2026경제</span>
+    <span>#서민경제</span>
+    <span>#주담대</span>
+  </div>
+
+  <!-- 출처 -->
+  <div class="sources">
+    <p><strong>📌 주요 출처</strong></p>
+    <ul style="margin-top:8px;padding-left:18px;">
+      <li><a href="https://www.fnnews.com/news/202605281111347085" target="_blank">파이낸셜뉴스 — 금리 동결 속 명확한 인상 신호 (2026.05.28)</a></li>
+      <li><a href="https://www.etoday.co.kr/news/view/2588554" target="_blank">이투데이 — 인상 소수의견 2명, 유상대·장용성 위원 (2026.05.28)</a></li>
+      <li><a href="https://www.sedaily.com/article/20049146" target="_blank">서울경제 — 한은 점도표 상향 이동, 연 2회 인상 전망</a></li>
+      <li><a href="https://www.mt.co.kr/economy/2026/05/25/2026052214585376985" target="_blank">머니투데이 — 전문가 10명 중 6명 "연말 기준금리 3.0%" (2026.05.25)</a></li>
+      <li><a href="https://www.seoul.co.kr/news/economy/finance/2026/05/20/20260520001010" target="_blank">서울신문 — 빚투에 영끌 광풍, 고삐 풀린 가계빚 (2026.05.20)</a></li>
+      <li><a href="https://www.financialpost.co.kr/news/articleView.html?idxno=257936" target="_blank">파이낸셜포스트 — 한은 금리인상 가능성에 은행 이자 또 오르나</a></li>
+      <li><a href="https://www.korea.kr/news/policyNewsView.do?newsId=148961929" target="_blank">대한민국 정책브리핑 — 2026년도 가계부채 관리방안</a></li>
+    </ul>
+  </div>
+
+  <!-- 면책조항 -->
+  <div class="disclaimer">
+    ※ 본 아티클은 공개된 통계 및 언론 보도를 바탕으로 작성된 저널리즘적 분석 콘텐츠입니다. 투자·금융 의사결정의 근거로 사용하지 마시고, 구체적인 재무 계획은 반드시 공인 전문가와 상담하시기 바랍니다. 이자 시뮬레이션 수치는 특정 가정 하의 추정값이며 실제 금리와 다를 수 있습니다.
+  </div>
+
+</div>
+</body>
+</html>
