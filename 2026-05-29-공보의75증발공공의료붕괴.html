@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="6·3 지방선거 D-5, 공중보건의사 5년새 75% 사라지고 전국 보건지소 82% 의사 없어. 공공의료 공약 이행률 20%의 충격적 진실을 파헤친다.">
+  <meta name="keywords" content="공공의료, 공보의, 지방선거, 의료공백, 무의촌, 소아청소년과, 필수의료, 지역의료붕괴">
+  <meta property="og:title" content="선거 5일 전, 당신 동네 의사가 사라지고 있다 — 공보의 75% 증발·공약 이행 20%의 진실">
+  <meta property="og:description" content="5년 새 공중보건의사 75% 감소, 보건지소 82%에 의사 없음. 6·3 지방선거 앞두고 드러난 공공의료의 민낯.">
+  <title>선거 5일 전, 당신 동네 의사가 사라지고 있다 — 공보의 75% 증발·공약 이행 20%의 진실</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --red: #e53935;
+      --red-dark: #b71c1c;
+      --red-light: #ffebee;
+      --orange: #f57c00;
+      --gray-dark: #212121;
+      --gray-mid: #555;
+      --gray-light: #f5f5f5;
+      --border: #e0e0e0;
+    }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: var(--gray-dark);
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #b71c1c 0%, #d32f2f 60%, #e53935 100%);
+      color: #fff;
+      padding: 60px 20px 50px;
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.5);
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      padding: 5px 14px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      font-size: clamp(22px, 4.5vw, 38px);
+      font-weight: 900;
+      line-height: 1.35;
+      max-width: 800px;
+      margin: 0 auto 20px;
+      word-break: keep-all;
+    }
+    .hero-sub {
+      font-size: 15px;
+      opacity: 0.85;
+      max-width: 600px;
+      margin: 0 auto 24px;
+      word-break: keep-all;
+    }
+    .hero-meta {
+      font-size: 13px;
+      opacity: 0.7;
+    }
+
+    /* LAYOUT */
+    .article-wrap {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+
+    /* SUMMARY BOX */
+    .summary-box {
+      background: var(--red-light);
+      border-left: 5px solid var(--red);
+      border-radius: 8px;
+      padding: 24px 28px;
+      margin: 36px 0;
+    }
+    .summary-box h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--red-dark);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .summary-box ul {
+      padding-left: 18px;
+    }
+    .summary-box li {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--gray-dark);
+      margin-bottom: 6px;
+      word-break: keep-all;
+    }
+
+    /* BODY */
+    .article-body h2 {
+      font-size: 21px;
+      font-weight: 800;
+      color: var(--red-dark);
+      margin: 40px 0 14px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--red-light);
+      word-break: keep-all;
+    }
+    .article-body p {
+      margin-bottom: 18px;
+      word-break: keep-all;
+    }
+    .article-body strong {
+      color: var(--red-dark);
+      font-weight: 700;
+    }
+
+    /* CALLOUT */
+    .callout {
+      background: #fff3e0;
+      border-left: 4px solid var(--orange);
+      border-radius: 6px;
+      padding: 16px 20px;
+      margin: 24px 0;
+      font-size: 15px;
+      word-break: keep-all;
+    }
+    .callout strong { color: var(--orange); }
+
+    /* STAT CARDS */
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+      margin: 32px 0;
+    }
+    .stat-card {
+      background: var(--gray-light);
+      border-radius: 10px;
+      padding: 20px 16px;
+      text-align: center;
+      border-top: 4px solid var(--red);
+    }
+    .stat-card .num {
+      font-size: 34px;
+      font-weight: 900;
+      color: var(--red-dark);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-card .label {
+      font-size: 13px;
+      color: var(--gray-mid);
+      line-height: 1.4;
+      word-break: keep-all;
+    }
+
+    /* INFOGRAPHIC — 공보의 붕괴 바 차트 */
+    .infographic {
+      background: var(--gray-light);
+      border-radius: 12px;
+      padding: 28px 24px;
+      margin: 32px 0;
+    }
+    .infographic h3 {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--gray-dark);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .bar-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .bar-year {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gray-mid);
+      width: 40px;
+      flex-shrink: 0;
+      text-align: right;
+    }
+    .bar-track {
+      flex: 1;
+      background: #e0e0e0;
+      border-radius: 4px;
+      height: 28px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      padding-left: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #fff;
+      transition: width 0.5s ease;
+    }
+    .bar-val {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gray-dark);
+      width: 55px;
+      flex-shrink: 0;
+    }
+
+    /* 인포그래픽 2 - 도넛형 SVG */
+    .svg-section {
+      margin: 32px 0;
+      text-align: center;
+    }
+    .svg-section h3 {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--gray-dark);
+      margin-bottom: 18px;
+    }
+    .svg-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .svg-item {
+      text-align: center;
+    }
+    .svg-item p {
+      font-size: 12px;
+      color: var(--gray-mid);
+      margin-top: 6px;
+      margin-bottom: 0;
+    }
+
+    /* ELECTION BOX */
+    .election-box {
+      border: 2px solid var(--red);
+      border-radius: 10px;
+      padding: 22px 24px;
+      margin: 28px 0;
+    }
+    .election-box h3 {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--red-dark);
+      margin-bottom: 14px;
+    }
+    .pledge-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 8px;
+      align-items: flex-start;
+      font-size: 15px;
+    }
+    .pledge-party {
+      font-weight: 700;
+      font-size: 13px;
+      padding: 3px 9px;
+      border-radius: 4px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .dem { background: #1565c0; color: #fff; }
+    .ppe { background: #c62828; color: #fff; }
+
+    /* IMPACT BOX */
+    .impact-box {
+      background: var(--red-light);
+      border-radius: 10px;
+      padding: 24px;
+      margin: 32px 0;
+    }
+    .impact-box h3 {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--red-dark);
+      margin-bottom: 14px;
+    }
+    .impact-item {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+      font-size: 15px;
+      word-break: keep-all;
+    }
+    .impact-icon {
+      font-size: 18px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* TAGS */
+    .tag-section {
+      margin: 40px 0 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .tag {
+      background: var(--red-light);
+      color: var(--red-dark);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 20px;
+    }
+
+    /* DISCLAIMER */
+    .disclaimer {
+      background: var(--gray-light);
+      border-radius: 8px;
+      padding: 16px 20px;
+      font-size: 13px;
+      color: #777;
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+
+    /* SOURCES */
+    .sources {
+      margin-top: 32px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+    .sources h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--gray-mid);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .sources a {
+      display: block;
+      font-size: 13px;
+      color: var(--red);
+      text-decoration: none;
+      margin-bottom: 5px;
+      word-break: break-all;
+    }
+    .sources a:hover { text-decoration: underline; }
+
+    @media (max-width: 500px) {
+      .stat-grid { grid-template-columns: repeat(2, 1fr); }
+      .bar-row { gap: 6px; }
+      .bar-year { width: 32px; font-size: 11px; }
+      .bar-val { width: 44px; font-size: 11px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-badge">🏥 의료·복지 — 선거 D-5 긴급 리포트</div>
+  <h1>선거 5일 전, 당신 동네 의사가 사라지고 있다<br>공보의 75% 증발 · 공약 이행 20%의 진실</h1>
+  <p class="hero-sub">전국 보건지소 82%에 의사가 없다. 400개 읍·면이 무의촌 직전이다. 6·3 지방선거 후보들은 또 '공공병원 짓겠다'고 한다.</p>
+  <p class="hero-meta">2026년 5월 29일 | 탐사저널 | 카테고리: 의료·복지</p>
+</div>
+
+<div class="article-wrap">
+
+  <div class="summary-box">
+    <h3>📌 핵심 요약 3줄</h3>
+    <ul>
+      <li>공중보건의사(공보의) 5년 새 75% 감소 — 2020년 2,463명 → 2026년 593명</li>
+      <li>전국 보건지소 82%에 의사 미배치, 400개 읍·면 '무의촌' 전락 위기</li>
+      <li>오세훈 서울시장 공공의료 공약 이행률 20% — 선거 때만 되면 '병원 짓겠다'</li>
+    </ul>
+  </div>
+
+  <div class="article-body">
+
+    <p>지난 2022년 오세훈 서울시장은 당선 직후 선언했다. "4,000억을 들여 서울 동남권에 서울형 공공병원을 짓겠다." "200병상 규모의 공공재활병원도 만들겠다." 4년이 흘렀다. 두 사업의 예산은 <strong>전액 삭감</strong>됐다. 서울시 공공보건의료재단은 '지원단'으로 격하됐고, 시민의 돌봄을 맡던 사회서비스원은 아예 폐지됐다. 그리고 6월 3일, 선거가 다시 열린다.</p>
+
+    <p>이 기사는 공약이 얼마나 지켜졌는지를 추적한 리포트다. 그리고 그보다 더 심각한 현실, <strong>지금 이 순간 지방에서 의사가 사라지고 있다는 사실</strong>을 데이터로 증명한다.</p>
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="num">75%</div>
+        <div class="label">공보의 5년 새<br>감소율</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">82%</div>
+        <div class="label">전국 보건지소<br>의사 없는 비율</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">400+</div>
+        <div class="label">무의촌 전락 위기<br>읍·면 수</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">20%</div>
+        <div class="label">서울시 공공의료<br>공약 이행률</div>
+      </div>
+    </div>
+
+    <h2>🩺 1. 숫자로 본 공보의 붕괴 — 5년 만에 4분의 1만 남았다</h2>
+
+    <p>공중보건의사(공보의)는 군 복무 대신 지방 보건소에 배치돼 의료 취약 지역을 책임지는 의사들이다. 이 숫자가 무너지고 있다. 의대 증원 논란이 한창이던 2024년 이후, 의대 지원자가 수련을 거부하거나 군의관을 선택하는 흐름이 본격화되면서 공보의 급감이 현실화됐다.</p>
+
+    <div class="infographic">
+      <h3>📊 공중보건의사 연도별 현황 (의과 기준)</h3>
+      <!-- 최대값 2463 기준으로 비율 계산 -->
+      <div class="bar-row">
+        <span class="bar-year">2020</span>
+        <div class="bar-track">
+          <div class="bar-fill" style="width:100%; background:#b71c1c;">2,463명</div>
+        </div>
+        <span class="bar-val">2,463명</span>
+      </div>
+      <div class="bar-row">
+        <span class="bar-year">2022</span>
+        <div class="bar-track">
+          <div class="bar-fill" style="width:78%; background:#c62828;">1,918명</div>
+        </div>
+        <span class="bar-val">1,918명</span>
+      </div>
+      <div class="bar-row">
+        <span class="bar-year">2024</span>
+        <div class="bar-track">
+          <div class="bar-fill" style="width:48%; background:#d32f2f;">1,192명</div>
+        </div>
+        <span class="bar-val">1,192명</span>
+      </div>
+      <div class="bar-row">
+        <span class="bar-year" style="color:#b71c1c; font-weight:900;">2026</span>
+        <div class="bar-track">
+          <div class="bar-fill" style="width:24%; background:#e53935;">593명</div>
+        </div>
+        <span class="bar-val" style="color:#b71c1c; font-weight:900;">593명 ▼</span>
+      </div>
+      <p style="font-size:12px; color:#999; text-align:right; margin-top:8px; margin-bottom:0;">출처: 보건복지부, 서울경제, 뉴시스 (2026.5)</p>
+    </div>
+
+    <p>그 결과, 2026년 현재 <strong>전국 보건지소 532개 중 의사가 배치된 곳은 139개(26.1%)에 불과</strong>하다. 나머지 393개(73.9%)는 의사 없이 운영 중이다. 정부 발표 기준으로도 <strong>내년엔 보건지소 87%가 무의사 상태</strong>가 될 전망이다. 국회입법조사처는 "지금 추세대로면 전국 400개 이상 읍·면이 무의촌으로 전락한다"고 경고했다.</p>
+
+    <div class="callout">
+      <strong>📍 무의촌이란?</strong> 의사 및 의료기관이 없어 주민이 기본적인 진료조차 받을 수 없는 지역. 1950~60년대에나 쓰던 말이 2026년 대한민국에서 다시 현실이 되고 있다.
+    </div>
+
+    <h2>👶 2. 아이가 아파도 갈 곳이 없다 — 소아청소년과의 소멸</h2>
+
+    <p>소아청소년과의 붕괴는 이미 수치로 증명됐다. 전국 기초 지자체 중 <strong>58곳에는 소아청소년과 의원 자체가 없다</strong>. 야간·주말에 아이가 고열을 일으켜도 수십 킬로미터를 달려야 한다는 뜻이다.</p>
+
+    <div class="svg-section">
+      <h3>📊 소아청소년과 인프라 붕괴 현황 (2026)</h3>
+      <div class="svg-wrap">
+        <!-- 전공의 충원률 도넛 -->
+        <div class="svg-item">
+          <svg width="140" height="140" viewBox="0 0 140 140">
+            <circle cx="70" cy="70" r="55" fill="none" stroke="#ffebee" stroke-width="22"/>
+            <!-- 17.4% -->
+            <circle cx="70" cy="70" r="55" fill="none" stroke="#e53935" stroke-width="22"
+              stroke-dasharray="60.1 285.5" stroke-dashoffset="71.2" stroke-linecap="round"/>
+            <text x="70" y="66" text-anchor="middle" font-size="20" font-weight="900" fill="#b71c1c">17.4%</text>
+            <text x="70" y="84" text-anchor="middle" font-size="10" fill="#777">전공의 충원률</text>
+          </svg>
+          <p>소아청소년과<br>전공의 충원률</p>
+        </div>
+        <!-- 24시간 응급 가능 도넛 -->
+        <div class="svg-item">
+          <svg width="140" height="140" viewBox="0 0 140 140">
+            <circle cx="70" cy="70" r="55" fill="none" stroke="#ffebee" stroke-width="22"/>
+            <!-- 46.2% -->
+            <circle cx="70" cy="70" r="55" fill="none" stroke="#f57c00" stroke-width="22"
+              stroke-dasharray="159.4 185.8" stroke-dashoffset="71.2" stroke-linecap="round"/>
+            <text x="70" y="66" text-anchor="middle" font-size="20" font-weight="900" fill="#e65100">46.2%</text>
+            <text x="70" y="84" text-anchor="middle" font-size="10" fill="#777">24시간 진료 가능</text>
+          </svg>
+          <p>24시간 소아 응급<br>가능 수련병원 비율</p>
+        </div>
+        <!-- 공약이행률 -->
+        <div class="svg-item">
+          <svg width="140" height="140" viewBox="0 0 140 140">
+            <circle cx="70" cy="70" r="55" fill="none" stroke="#ffebee" stroke-width="22"/>
+            <!-- 20% -->
+            <circle cx="70" cy="70" r="55" fill="none" stroke="#b71c1c" stroke-width="22"
+              stroke-dasharray="69" stroke-dashoffset="71.2" stroke-linecap="round"/>
+            <text x="70" y="66" text-anchor="middle" font-size="20" font-weight="900" fill="#b71c1c">20%</text>
+            <text x="70" y="84" text-anchor="middle" font-size="10" fill="#777">서울시 공약이행률</text>
+          </svg>
+          <p>오세훈 서울시장<br>공공의료 공약 이행률</p>
+        </div>
+      </div>
+    </div>
+
+    <p>설상가상으로 소아청소년과 전공의 충원률은 <strong>17.4%</strong>에 불과하다. 103명을 선발했는데 지원자가 18명도 안 된다는 얘기다. 10년 뒤 전문의는 더욱 줄어든다. 지방이 먼저 무너지고, 서울도 안전하지 않다.</p>
+
+    <h2>🏙️ 3. 서울시 공공의료 공약의 민낯 — "9개 약속 중 5개는 이행 안 했다"</h2>
+
+    <p>프레시안의 분석에 따르면 오세훈 서울시장이 2022년 임기 시작 때 내건 공공의료 공약 9개 중 5개가 이행되지 않았고 2개는 미흡하게 이행됐다. 이행률은 약 <strong>20%</strong>.</p>
+
+    <p>구체적으로 들여다보면 참담하다:</p>
+
+    <ul style="padding-left: 22px; margin-bottom: 18px;">
+      <li style="margin-bottom: 10px;"><strong>서울형 공공병원(4,000억 원 규모)</strong> — 기획재정부 예비타당성조사 탈락. 지출된 예산은 고작 2억 6,000만 원.</li>
+      <li style="margin-bottom: 10px;"><strong>공공재활병원(200병상)</strong> — 2025년부터 예산 전액 삭감. 착공 미정.</li>
+      <li style="margin-bottom: 10px;"><strong>강북 어린이 공공병원</strong> — 추진 일정 없이 표류 중.</li>
+      <li style="margin-bottom: 10px;"><strong>서울시 공공보건의료재단</strong> — '지원단'으로 격하, 행정 부속기구화.</li>
+      <li style="margin-bottom: 10px;"><strong>사회서비스원·감염병연구센터</strong> — 완전 폐지.</li>
+    </ul>
+
+    <p>대신 남은 것은 손목에 차는 스마트워치 기반 건강관리 서비스 '손목닥터 9988'이다. 스마트워치 선물이 공공병원을 대체한 셈이다.</p>
+
+    <h2>🗳️ 4. 선거 D-5, 후보들의 공약 — 이번엔 다를까</h2>
+
+    <div class="election-box">
+      <h3>🗳️ 6·3 지방선거 주요 보건의료 공약 비교</h3>
+      <div class="pledge-row">
+        <span class="pledge-party dem">민주당</span>
+        <span>필수의료 강화, 공공병원 신설, 지역 통합돌봄센터 확충, 필수의료 인력 지원</span>
+      </div>
+      <div class="pledge-row">
+        <span class="pledge-party ppe">국힘</span>
+        <span>난임 지원 확대, 공공심야약국 확대, 지역 응급체계 개선</span>
+      </div>
+      <p style="font-size:13px; color:#888; margin-top:12px; margin-bottom:0;">※ 무상의료본부: "양당 모두 공약 부실 — 공공의료 강화가 먼저"</p>
+    </div>
+
+    <p>의료시민단체 무상의료본부는 양당 공약 모두 "부실하다"고 평가했다. 공공병원 신설 공약은 4년 전에도 있었다. 그리고 예산은 삭감됐다. <strong>공약이 선거 포스터에서 내려오는 순간, 예산도 함께 사라지는 패턴이 반복</strong>되고 있다.</p>
+
+    <h2>💥 5. 이게 나와 무슨 상관인가 — 당신의 일상에 미치는 영향</h2>
+
+    <div class="impact-box">
+      <h3>🔴 지금 당장 당신에게 벌어지는 일</h3>
+      <div class="impact-item">
+        <span class="impact-icon">🚨</span>
+        <span><strong>농어촌·지방 주민:</strong> 감기·만성질환 진료를 위해 30~50km 이동이 일상화. 고령자는 사실상 의료 접근 불가.</span>
+      </div>
+      <div class="impact-item">
+        <span class="impact-icon">👶</span>
+        <span><strong>영유아 부모:</strong> 야간·주말 소아과 응급 진료 사실상 불가. '응급실 뺑뺑이'는 지방에서 현실.</span>
+      </div>
+      <div class="impact-item">
+        <span class="impact-icon">🤰</span>
+        <span><strong>임산부:</strong> 지역 필수 의사 계약제에서 산부인과 지원자 0명인 지역 다수. 출산 위해 타 지역 이동 불가피.</span>
+      </div>
+      <div class="impact-item">
+        <span class="impact-icon">🏙️</span>
+        <span><strong>서울 시민:</strong> 공공병원 공백은 곧 응급실 쏠림 → 대기 시간 폭증. 수도권도 안전지대 아님.</span>
+      </div>
+    </div>
+
+    <h2>🔭 6. 전망과 당신이 할 수 있는 것</h2>
+
+    <p>정부는 공보의 감소에 대응해 의료취약지 547개 읍·면에 순회진료·비대면진료 확대 계획을 발표했다. 그러나 전문가들은 "비대면진료가 현장 의사를 대체할 수 없다"고 지적한다. 국회는 응급의료법 개정안을 통과시켜 응급체계 강화를 시도하고 있지만, 공보의 복무기간(36개월) 단축 없이는 근본 해결이 어렵다는 지적도 크다.</p>
+
+    <p>의대생 설문에서는 응답자의 <strong>90%가 복무 기간이 단축되면 공보의·군의관을 희망</strong>한다고 답했다. 해법은 있다. 의지가 없을 뿐이다.</p>
+
+    <div class="callout">
+      <strong>✊ 독자가 할 수 있는 것:</strong> 6월 3일 투표 전, 지지 후보의 공공의료 공약 이행 계획을 구체적으로 물어보세요. "병원 짓겠다"는 말 대신 "예산 확보 일정과 기획재정부 협의 여부"를 따져 물으세요. 공약은 포스터에서 끝나선 안 됩니다.
+    </div>
+
+  </div><!-- /.article-body -->
+
+  <div class="tag-section">
+    <span class="tag">#공공의료</span>
+    <span class="tag">#공보의감소</span>
+    <span class="tag">#6·3지방선거</span>
+    <span class="tag">#무의촌</span>
+    <span class="tag">#소아청소년과붕괴</span>
+    <span class="tag">#의료공백</span>
+    <span class="tag">#지방의료붕괴</span>
+    <span class="tag">#필수의료</span>
+    <span class="tag">#오세훈서울시</span>
+    <span class="tag">#공약이행률</span>
+  </div>
+
+  <div class="sources">
+    <h4>📌 주요 출처</h4>
+    <a href="https://www.pressian.com/pages/articles/2026052717245561794" target="_blank">프레시안 — '오세훈 서울시' 의료 정책, 공공 사라지고 손목닥터 남았다 (2026.05.27)</a>
+    <a href="https://www.rapportian.com/news/articleView.html?idxno=236389" target="_blank">라포르시안 — 6·3 지방선거 핵심 키워드 된 '공공의료 확충'...공약의 현실성은?</a>
+    <a href="https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003236349" target="_blank">오마이뉴스 — 무너진 공공의료와 돌봄, 2026 지방선거가 답해야 할 시간</a>
+    <a href="https://www.sedaily.com/NewsView/2K7DJF0NBD" target="_blank">서울경제 — 5년새 공보의 75% 증발…"수급 중단 시 전국 400개 읍·면 무의촌 전락"</a>
+    <a href="https://www.newsis.com/view/NISX20260507_0003620687" target="_blank">뉴시스 — 공중보건의 없는 보건지소, 내년에 87%…진료 공백 우려 (2026.05.07)</a>
+    <a href="https://medicalworldnews.co.kr/news/view.php?idx=1510973528" target="_blank">메디칼월드뉴스 — 공보의 없는 보건지소 82%…정부, 4가지 유형으로 긴급 개편</a>
+    <a href="https://www.kpanews.co.kr/news/articleView.html?idxno=534936" target="_blank">약사공론 — 무상의료본부 "지선 보건의료 공약 부실...공공의료 강화 우선해야"</a>
+    <a href="https://www.mdtoday.co.kr/news/view/1065600185257296" target="_blank">의학신문 — '계약형 지역 필수 의사제' 지원율 60%…산부인과는 0명?</a>
+  </div>
+
+  <div class="disclaimer">
+    ⚠️ <strong>면책조항:</strong> 본 아티클은 공개된 언론 보도 및 정부 발표 자료를 바탕으로 작성된 저널리즘 콘텐츠입니다. 특정 정당이나 후보를 지지하거나 반대하는 의도가 없습니다. 인용된 수치는 보도 시점 기준이며, 실제 통계와 다소 차이가 있을 수 있습니다. 의료 관련 결정은 반드시 전문가와 상담하시기 바랍니다.
+  </div>
+
+</div><!-- /.article-wrap -->
+
+</body>
+</html>
