@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="6·3 지방선거 D-1 완전 분석. 역대 최고 사전투표율, 서울시장 초박빙, 대구 민심 이탈, 2030 보수화… 내일 한국의 정치 지형을 뒤바꿀 5가지 변수를 파헤친다." />
+  <meta name="keywords" content="지방선거, 6.3지방선거, 서울시장, 오세훈, 정원오, 사전투표, 2026선거, 이재명, 이재명정부" />
+  <meta property="og:title" content="내일 한국이 뒤집힌다? 6·3 지방선거 D-1, 판세를 바꿀 '충격 변수' 5가지" />
+  <meta property="og:description" content="역대 최고 사전투표율, 서울 초박빙, 대구 민심 이탈, 2030 보수화… 아무도 확신 못 하는 선거 전날 밤의 완전 해부" />
+  <title>내일 한국이 뒤집힌다? 6·3 지방선거 D-1, 판세를 바꿀 '충격 변수' 5가지</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #C0392B;
+      --primary-dark: #96281b;
+      --primary-light: #f9ecec;
+      --accent: #2C3E50;
+      --accent2: #E74C3C;
+      --text: #1a1a1a;
+      --text-sub: #555;
+      --border: #e0e0e0;
+      --bg: #fff;
+      --chip-bg: #fdecea;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 17px;
+      line-height: 1.85;
+      color: var(--text);
+      background: #f5f5f5;
+    }
+    .wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--bg);
+      padding: 0 0 60px 0;
+      box-shadow: 0 0 24px rgba(0,0,0,0.08);
+    }
+
+    /* ===== 헤더 배너 ===== */
+    .hero {
+      background: linear-gradient(135deg, #1a0000 0%, #8B0000 50%, #C0392B 100%);
+      color: #fff;
+      padding: 48px 36px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 220px; height: 220px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.05);
+    }
+    .category-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 18px;
+    }
+    .hero h1 {
+      font-size: clamp(22px, 4vw, 32px);
+      font-weight: 900;
+      line-height: 1.35;
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .hero .subtitle {
+      font-size: 15px;
+      color: rgba(255,255,255,0.8);
+      font-weight: 400;
+      word-break: keep-all;
+    }
+    .meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      padding: 14px 36px;
+      border-bottom: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--text-sub);
+    }
+    .meta-bar .dot { color: #ccc; }
+
+    /* ===== 본문 ===== */
+    .content { padding: 36px 36px 0; }
+
+    /* 훅 요약 박스 */
+    .summary-box {
+      background: var(--primary-light);
+      border-left: 5px solid var(--primary);
+      border-radius: 0 8px 8px 0;
+      padding: 22px 24px;
+      margin-bottom: 36px;
+    }
+    .summary-box h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+    .summary-box ul { padding-left: 20px; }
+    .summary-box ul li {
+      font-size: 15px;
+      margin-bottom: 6px;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    /* 소제목 */
+    .section { margin-bottom: 44px; }
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--accent);
+      margin-bottom: 18px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--primary);
+      word-break: keep-all;
+    }
+    .section-title .num {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px; height: 30px;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 50%;
+      font-size: 14px;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .section p { margin-bottom: 14px; word-break: keep-all; color: var(--text); }
+    .highlight {
+      background: linear-gradient(to right, #fff3f3, #ffe8e8);
+      border: 1px solid #f5c6c6;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 18px 0;
+      font-weight: 600;
+      font-size: 15px;
+    }
+    .highlight strong { color: var(--primary); }
+
+    /* ===== 데이터 시각화: 여론조사 막대 ===== */
+    .poll-viz {
+      background: #f8f9fa;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px 24px;
+      margin: 24px 0;
+    }
+    .poll-viz h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-sub);
+      margin-bottom: 20px;
+      text-align: center;
+      letter-spacing: 0.3px;
+    }
+    .poll-row {
+      margin-bottom: 18px;
+    }
+    .poll-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+    .poll-label .media { color: var(--text-sub); }
+    .poll-bar-wrap {
+      display: flex;
+      gap: 4px;
+      height: 22px;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .bar-blue {
+      background: #3498DB;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #fff;
+      transition: width 0.6s;
+    }
+    .bar-red {
+      background: #E74C3C;
+      display: flex;
+      align-items: center;
+      padding-left: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #fff;
+      transition: width 0.6s;
+    }
+    .bar-grey {
+      background: #bbb;
+      flex: 1;
+    }
+    .poll-legend {
+      display: flex;
+      gap: 18px;
+      justify-content: center;
+      margin-top: 16px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .legend-dot {
+      display: inline-block;
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      margin-right: 5px;
+    }
+
+    /* SVG 인포그래픽: 투표율 비교 */
+    .svg-wrap {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 24px 0;
+      overflow-x: auto;
+    }
+    .svg-wrap h4 {
+      text-align: center;
+      font-size: 14px;
+      color: var(--text-sub);
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+
+    /* 격전지 카드 */
+    .battleground-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin: 20px 0;
+    }
+    .bg-card {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 16px;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .bg-card .city {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-sub);
+      margin-bottom: 8px;
+    }
+    .bg-card .cand {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .cand-blue { color: #2980B9; }
+    .cand-red { color: #C0392B; }
+    .bg-card .verdict {
+      font-size: 12px;
+      background: var(--chip-bg);
+      color: var(--primary);
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 20px;
+      font-weight: 700;
+      margin-top: 6px;
+    }
+    .bg-card .vs { color: #aaa; font-size: 12px; margin: 2px 0; }
+
+    /* 경고 박스 */
+    .warning-box {
+      border: 2px solid var(--primary);
+      border-radius: 10px;
+      padding: 20px 22px;
+      margin: 20px 0;
+      background: #fffaf9;
+    }
+    .warning-box .wt {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+    .warning-box p { font-size: 15px; }
+
+    /* 해시태그 */
+    .hashtags {
+      padding: 32px 36px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .hashtag {
+      background: #f0f4f8;
+      color: #2C3E50;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 5px 14px;
+      border-radius: 20px;
+    }
+
+    /* 면책조항 */
+    .disclaimer {
+      margin: 0 36px;
+      padding: 18px 20px;
+      background: #f8f8f8;
+      border-radius: 8px;
+      font-size: 12px;
+      color: #888;
+      line-height: 1.7;
+    }
+
+    /* 반응형 */
+    @media (max-width: 600px) {
+      .hero { padding: 32px 20px 28px; }
+      .content, .meta-bar, .hashtags { padding-left: 20px; padding-right: 20px; }
+      .section-title { font-size: 17px; }
+      .battleground-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- 헤더 -->
+  <div class="hero">
+    <div class="category-badge">🏛️ 정치·선거 | 2026-05-30</div>
+    <h1>내일 한국이 뒤집힌다?<br>6·3 지방선거 D-1,<br>판세를 바꿀 '충격 변수' 5가지</h1>
+    <p class="subtitle">역대 최고 사전투표율 · 서울시장 초박빙 · 대구 민심 이탈 · 2030 보수화<br>아무도 확신 못 하는 '운명의 전날 밤' 완전 해부</p>
+  </div>
+
+  <div class="meta-bar">
+    <span>📅 2026년 5월 30일</span>
+    <span class="dot">·</span>
+    <span>⏱ 예상 읽기 시간 8분</span>
+    <span class="dot">·</span>
+    <span>🗳️ 제9회 전국동시지방선거 D-1</span>
+  </div>
+
+  <div class="content">
+
+    <!-- 훅 문단 -->
+    <p style="font-size:18px; font-weight:600; line-height:1.8; margin-bottom:24px; word-break:keep-all;">
+      내일(6월 3일), 한국의 17개 광역단체장과 226개 기초단체장, 872개 광역의원 자리가 한꺼번에 결판난다. 윤석열 전 대통령 탄핵 이후 이재명 정부가 출범한 지 채 1년이 안 된 시점에서 치러지는 이번 선거 — 여론조사마다 숫자가 다르고, 전문가도 누가 이길지 장담하지 못한다. 지금 이 순간에도 전국 사전투표소에서 수백만 명이 줄을 서고 있다. 대체 무슨 일이 벌어지고 있는 걸까.
+    </p>
+
+    <!-- 핵심 요약 -->
+    <div class="summary-box">
+      <h3>📌 이 기사의 핵심 3줄 요약</h3>
+      <ul>
+        <li>사전투표율 역대 최고 → 그런데 높은 투표율이 꼭 민주당에 유리하지 않다</li>
+        <li>서울시장 여론조사 11개 기관, 11개 다른 숫자 → 오차범위 내 동률도 나왔다</li>
+        <li>대구서 민주당 후보가 앞선다? 한국 지역 구도 45년 만에 최대 격변 신호</li>
+      </ul>
+    </div>
+
+    <!-- SECTION 1 -->
+    <div class="section">
+      <div class="section-title">
+        <span class="num">1</span>
+        사전투표율 역대 최고, 근데 민주당 '계산 착오' 위험
+      </div>
+      <p>오늘(30일) 오전 9시 기준, 전국 사전투표율은 <strong>13.35%</strong>로 집계됐다. 유권자 4,464만 9,908명 중 595만 9,952명이 이미 투표를 마쳤다. 지난 2022년 제8회 지방선거 같은 시간대 투표율(11.81%)보다 1.54%포인트 높다. 이틀치를 합하면 최종 사전투표율은 역대 지방선거 최고치를 경신할 것이 거의 확실하다.</p>
+      <p>문제는 '높은 사전투표율 = 민주당 유리'라는 공식이 이번엔 통하지 않을 수 있다는 점이다. 명지대 신율 교수의 말이 업계를 충격에 빠뜨렸다. <em>"지금은 젊은 세대의 투표 참여가 늘어나면 오히려 국민의힘에 유리할 수 있다."</em> 이유는 단 하나 — 2030세대의 '보수화'다.</p>
+
+      <div class="highlight">
+        <strong>⚡ 충격 데이터</strong><br>
+        과거 투표율 상승을 이끌던 2030세대의 정치 성향이 수년 새 뚜렷하게 보수화됐다. 서울경제 분석에 따르면 "1일차 사전투표율이 역대 최고를 찍었지만, 이는 민주당 지지층 결집보다 2030 남성의 국힘 이탈 복귀에 더 가까울 수 있다"는 분석이 나온다.
+      </div>
+
+      <!-- SVG: 사전투표율 비교 -->
+      <div class="svg-wrap">
+        <h4>📊 역대 지방선거 사전투표율 비교 (%)</h4>
+        <svg viewBox="0 0 680 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;display:block;margin:0 auto;">
+          <!-- 배경 그리드 -->
+          <line x1="80" y1="20" x2="80" y2="170" stroke="#ddd" stroke-width="1"/>
+          <line x1="80" y1="170" x2="650" y2="170" stroke="#ddd" stroke-width="1"/>
+          <!-- 가로선 -->
+          <line x1="80" y1="120" x2="650" y2="120" stroke="#eee" stroke-width="1" stroke-dasharray="4"/>
+          <line x1="80" y1="70" x2="650" y2="70" stroke="#eee" stroke-width="1" stroke-dasharray="4"/>
+          <!-- Y축 레이블 -->
+          <text x="74" y="174" text-anchor="end" font-size="11" fill="#999">0%</text>
+          <text x="74" y="124" text-anchor="end" font-size="11" fill="#999">10%</text>
+          <text x="74" y="74" text-anchor="end" font-size="11" fill="#999">20%</text>
+          <text x="74" y="24" text-anchor="end" font-size="11" fill="#999">30%</text>
+
+          <!-- 7회 (2018) -->
+          <rect x="105" y="101" width="80" height="69" rx="4" fill="#AED6F1"/>
+          <text x="145" y="97" text-anchor="middle" font-size="12" font-weight="700" fill="#2980B9">17.3%</text>
+          <text x="145" y="188" text-anchor="middle" font-size="11" fill="#555">7회(2018)</text>
+
+          <!-- 8회 (2022) -->
+          <rect x="265" y="67" width="80" height="103" rx="4" fill="#85C1E9"/>
+          <text x="305" y="63" text-anchor="middle" font-size="12" font-weight="700" fill="#2980B9">20.6%</text>
+          <text x="305" y="188" text-anchor="middle" font-size="11" fill="#555">8회(2022)</text>
+
+          <!-- 9회 (2026, 진행중) -->
+          <rect x="425" y="55" width="80" height="115" rx="4" fill="#C0392B"/>
+          <text x="465" y="51" text-anchor="middle" font-size="12" font-weight="700" fill="#C0392B">≈23%↑</text>
+          <text x="465" y="188" text-anchor="middle" font-size="11" fill="#555">9회(2026)</text>
+          <text x="465" y="200" text-anchor="middle" font-size="10" fill="#C0392B" font-weight="700">역대 최고</text>
+
+          <!-- 화살표/강조 -->
+          <text x="560" y="90" text-anchor="middle" font-size="11" fill="#E74C3C" font-weight="700">🔺역대 최고</text>
+        </svg>
+        <p style="text-align:center;font-size:12px;color:#999;margin-top:8px;">※ 9회 수치는 5/30 오후 4시 기준 역대 최고 경신 확실시</p>
+      </div>
+    </div>
+
+    <!-- SECTION 2 -->
+    <div class="section">
+      <div class="section-title">
+        <span class="num">2</span>
+        서울시장 운명의 숫자게임 — 11개 여론조사, 11개 결과
+      </div>
+      <p>이번 지방선거 최대 격전지는 단연 서울이다. 더불어민주당 정원오 후보와 국민의힘 오세훈 후보가 맞붙은 이번 서울시장 선거, 여론조사 결과가 너무 들쭉날쭉해 관계자들조차 당황한다.</p>
+
+      <!-- 여론조사 막대 차트 -->
+      <div class="poll-viz">
+        <h4>📊 서울시장 기관별 여론조사 결과 (5월 말 기준, 단위: %)</h4>
+
+        <!-- 리서치앤리서치 -->
+        <div class="poll-row">
+          <div class="poll-label">
+            <span class="media">리서치앤리서치 (24~26일)</span>
+            <span>정원오 49.6 / 오세훈 36.4</span>
+          </div>
+          <div class="poll-bar-wrap">
+            <div class="bar-blue" style="width:59%">49.6%</div>
+            <div class="bar-grey" style="width:5%"></div>
+            <div class="bar-red" style="width:36%">36.4%</div>
+          </div>
+        </div>
+
+        <!-- SBS/입소스 -->
+        <div class="poll-row">
+          <div class="poll-label">
+            <span class="media">SBS/입소스 (25~27일)</span>
+            <span>정원오 46 / 오세훈 35</span>
+          </div>
+          <div class="poll-bar-wrap">
+            <div class="bar-blue" style="width:56%">46%</div>
+            <div class="bar-grey" style="width:9%"></div>
+            <div class="bar-red" style="width:35%">35%</div>
+          </div>
+        </div>
+
+        <!-- JTBC -->
+        <div class="poll-row">
+          <div class="poll-label">
+            <span class="media">JTBC/메타보이스 (25~27일)</span>
+            <span>정원오 43 / 오세훈 38</span>
+          </div>
+          <div class="poll-bar-wrap">
+            <div class="bar-blue" style="width:52%">43%</div>
+            <div class="bar-grey" style="width:7%"></div>
+            <div class="bar-red" style="width:41%">38%</div>
+          </div>
+        </div>
+
+        <!-- MBC -->
+        <div class="poll-row">
+          <div class="poll-label">
+            <span class="media">MBC/코리아리서치 (26~27일)</span>
+            <span>정원오 41 / 오세훈 37</span>
+          </div>
+          <div class="poll-bar-wrap">
+            <div class="bar-blue" style="width:50%">41%</div>
+            <div class="bar-grey" style="width:7%"></div>
+            <div class="bar-red" style="width:43%">37%</div>
+          </div>
+        </div>
+
+        <!-- 문화일보 -->
+        <div class="poll-row">
+          <div class="poll-label">
+            <span class="media">문화일보/엠브레인 (26~27일)</span>
+            <span>정원오 39 / 오세훈 39</span>
+          </div>
+          <div class="poll-bar-wrap">
+            <div class="bar-blue" style="width:46%">39%</div>
+            <div class="bar-grey" style="width:8%"></div>
+            <div class="bar-red" style="width:46%">39%</div>
+          </div>
+        </div>
+
+        <div class="poll-legend">
+          <span><span class="legend-dot" style="background:#3498DB;"></span>정원오 (민주당)</span>
+          <span><span class="legend-dot" style="background:#E74C3C;"></span>오세훈 (국민의힘)</span>
+          <span><span class="legend-dot" style="background:#bbb;"></span>기타/미정</span>
+        </div>
+      </div>
+
+      <p>정원오 후보가 모든 기관에서 앞서는 건 맞다. 그러나 격차가 <strong>11%p(SBS)</strong>에서 <strong>0%(문화일보 동률)</strong>까지 벌어진다. 이런 극단적 편차는 여론조사 방법론 차이(ARS vs 면접조사, 응답률)에서 비롯된다. 결론은 하나다 — <strong>투표 당일, 어떤 결과도 가능하다.</strong></p>
+    </div>
+
+    <!-- SECTION 3 -->
+    <div class="section">
+      <div class="section-title">
+        <span class="num">3</span>
+        45년 만의 충격 — 대구에서 민주당이 이긴다?
+      </div>
+      <p>역사상 단 한 번도 민주당계 시장이 당선된 적 없는 대구. 그 '철옹성 보수'에 균열이 생겼다. MBC 여론조사에서 김부겸 민주당 후보가 40%, 추경호 국민의힘 후보가 39%로 오차범위 내 1위를 기록했다. 대구 광역시장에서 민주당 후보가 여론조사 1위를 기록한 건 사실상 처음이다.</p>
+      <p>부산에서도 이변이 감지된다. 전재수 민주당 후보가 박형준 국민의힘 현직 시장을 상당 폭으로 앞서는 여론조사가 잇따랐다. 과거 "부산은 민주당 무덤"이라던 표현이 무색해지는 상황이다.</p>
+
+      <!-- 격전지 카드 -->
+      <div class="battleground-grid">
+        <div class="bg-card">
+          <div class="city">🏙️ 서울</div>
+          <div class="cand cand-blue">정원오 (민주) 43~49.6%</div>
+          <div class="vs">vs</div>
+          <div class="cand cand-red">오세훈 (국힘) 35~39%</div>
+          <div class="verdict">⚡ 초박빙 주목</div>
+        </div>
+        <div class="bg-card">
+          <div class="city">🏙️ 부산</div>
+          <div class="cand cand-blue">전재수 (민주) 우세</div>
+          <div class="vs">vs</div>
+          <div class="cand cand-red">박형준 (국힘) 현직</div>
+          <div class="verdict">🔥 민주당 역전 노려</div>
+        </div>
+        <div class="bg-card">
+          <div class="city">🏙️ 대구</div>
+          <div class="cand cand-blue">김부겸 (민주) 40%</div>
+          <div class="vs">vs</div>
+          <div class="cand cand-red">추경호 (국힘) 39%</div>
+          <div class="verdict">🚨 45년 만의 역사?</div>
+        </div>
+        <div class="bg-card">
+          <div class="city">🏙️ 경기</div>
+          <div class="cand cand-blue">박찬대 (민주)</div>
+          <div class="vs">vs</div>
+          <div class="cand cand-red">유정복 (국힘)</div>
+          <div class="verdict">📊 민주 우세 예측</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 4 -->
+    <div class="section">
+      <div class="section-title">
+        <span class="num">4</span>
+        범여권 분열의 덫 — 조국혁신당이 민주당 발목 잡나
+      </div>
+      <p>이번 선거의 또 다른 변수는 '진보 표 분산'이다. 조국혁신당이 민주당과의 단일화를 거부하고 독자 후보를 대거 출마시켰다. 경기 평택을 재보궐선거에서는 민주당 김용남 후보와 조국혁신당 조국 대표가 아직도 단일화 없이 맞붙어 야권 표가 쪼개지고 있다.</p>
+      <p>조국혁신당은 지난 2월 합당 논의가 양당 내부 반발로 무산된 뒤, 오히려 호남권 기초단체장과 지방의회 의석을 독자적으로 노리는 전략으로 선회했다. 이 전략이 결국 '야권 공멸'로 이어질 것인지, 아니면 범진보 진영의 의석 극대화로 귀결될 것인지 — 개표 전에는 아무도 모른다.</p>
+
+      <div class="warning-box">
+        <div class="wt">⚠️ 이것이 핵심 변수다</div>
+        <p>일부 전문가들은 "조국혁신당 후보가 5~8%를 독식하는 접전 지역에서는 민주당 후보가 낙선할 수 있다"고 경고한다. 대전 서구청장 선거는 막판 단일화로 합의됐지만, 다른 지역은 여전히 분열된 채 투표일을 맞는다.</p>
+      </div>
+    </div>
+
+    <!-- SECTION 5 -->
+    <div class="section">
+      <div class="section-title">
+        <span class="num">5</span>
+        이재명 정부 "중간평가 아니다"는데… 민심은 다르다
+      </div>
+      <p>이재명 대통령 측과 민주당은 "이번 지방선거는 중간평가가 아니라 윤석열 시대에 대한 심판"이라는 프레임을 고수한다. 하지만 유권자의 시각은 다르다. 이재명 정부 출범 후 집값이 다시 상승하자, 대통령이 직접 국무회의에서 "추가 대책 마련"을 주문할 정도로 민심이 흔들리고 있다.</p>
+      <p>공소취소특검법도 선거판을 달군 쟁점이다. 이재명 대통령 관련 사건의 공소를 취소할 수 있도록 특별검사에게 권한을 준다는 이 법안은, 야권에서 "자기 방탄 입법"이라며 강하게 반발해 선거 후반부 핵심 이슈로 부상했다. 지지층 결집을 부르는 동시에 중도층을 이탈시키는 '양날의 검' 역할을 하고 있다는 분석이다.</p>
+
+      <div class="highlight">
+        <strong>📌 핵심:</strong> 출구조사도 믿을 수 없다. 사전투표자는 선거일 현장 출구조사에 잡히지 않아, 전화조사로 별도 추정한다. 사전투표율이 역대 최고인 만큼, 지상파 3사 방송사도 "이번 출구조사 오차가 역대 최대일 수 있다"고 인정한 상태다.
+      </div>
+    </div>
+
+    <!-- SECTION 6 : 나에게 미치는 영향 -->
+    <div class="section">
+      <div class="section-title">
+        <span class="num">6</span>
+        내 삶에 뭐가 달라지나 — 당신이 선택해야 하는 이유
+      </div>
+      <p>지방선거는 '그들만의 정치'가 아니다. 당신이 사는 동네의 도로, 공원, 어린이집, 요양원, 버스 노선 — 모두 광역·기초단체장의 손에서 결정된다. 서울시장이 누가 되느냐에 따라 GTX 연장, 재개발 규제, 청년 임대주택 공급 규모가 달라진다. 경기도지사가 누구냐에 따라 반도체 클러스터 예산 집행 방식이 바뀐다. 대구시장이 달라지면 TK 지역 사회간접자본 투자 방향이 완전히 바뀔 수 있다.</p>
+      <p>오늘(30일)이 사전투표 마지막 날이다. 오전 6시부터 오후 6시까지, 전국 어느 투표소에서든 투표가 가능하다. 신분증 하나만 챙기면 된다. 본투표는 6월 3일 오전 6시 ~ 오후 8시다.</p>
+    </div>
+
+    <!-- 전망 -->
+    <div class="section">
+      <div class="section-title">
+        <span class="num">✦</span>
+        전망 — 이번 선거, 진짜 결론은 6월 4일 새벽에 나온다
+      </div>
+      <p>민주당은 서울·부산·대구에서의 '3관왕' 달성을 노린다. 국민의힘은 서울 수성(守城)에 총력을 기울이고 있다. 여론조사 블랙아웃이 시작된 현재, 각 진영은 마지막 지지층 결집에 사활을 걸고 있다.</p>
+      <p>역사는 반복된다. 2010년 지방선거에서 이명박 정부는 참패했다. 2014년 세월호 직후에도 새누리당이 의외로 선방했다. 예측은 항상 틀렸다. 이번도 예외는 아닐 수 있다. 6월 4일 새벽, 개표 속보가 쏟아질 때 당신은 어느 숫자를 보며 놀라게 될까.</p>
+    </div>
+
+  </div><!-- /content -->
+
+  <!-- 해시태그 -->
+  <div class="hashtags">
+    <span class="hashtag">#6월3일지방선거</span>
+    <span class="hashtag">#사전투표</span>
+    <span class="hashtag">#서울시장</span>
+    <span class="hashtag">#오세훈</span>
+    <span class="hashtag">#정원오</span>
+    <span class="hashtag">#이재명정부</span>
+    <span class="hashtag">#대구민심</span>
+    <span class="hashtag">#지방선거판세</span>
+    <span class="hashtag">#2030보수화</span>
+    <span class="hashtag">#공소취소특검법</span>
+    <span class="hashtag">#조국혁신당</span>
+    <span class="hashtag">#투표독려</span>
+    <span class="hashtag">#제9회지방선거</span>
+  </div>
+
+  <!-- 면책조항 -->
+  <div class="disclaimer">
+    ⚠️ <strong>면책조항:</strong> 이 아티클은 공개된 여론조사 결과와 언론 보도를 바탕으로 작성된 정보성 콘텐츠입니다. 여론조사 수치는 각 기관별 조사 방법·시기·표본 크기에 따라 차이가 있으며, 실제 선거 결과와 다를 수 있습니다. 이 콘텐츠는 특정 후보나 정당을 지지·반대하는 목적으로 제작되지 않았습니다. 선거에 관한 최신 공식 정보는 <strong>중앙선거관리위원회(nec.go.kr)</strong>를 참조하시기 바랍니다.
+  </div>
+
+</div><!-- /wrapper -->
+</body>
+</html>
