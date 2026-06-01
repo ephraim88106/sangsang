@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="용산 아파트 1가구에 1만2299명, 영등포 자이 13만대1 경쟁률. 당첨되면 14억 버는 로또 청약이 정상이 된 나라 — 대한민국 부동산 카스트의 민낯을 파헤친다." />
+  <meta name="keywords" content="로또청약, 무순위청약, 줍줍, 용산아파트, 영등포자이, 부동산, 청약경쟁률, 전세사기, 집값, 부동산카스트" />
+  <meta property="og:title" content="13만 대 1 경쟁률의 진실 — 당첨되면 14억 버는 나라에서 당신만 왜 빈손인가" />
+  <meta property="og:description" content="용산에서 터진 '14억 로또'. 13만 명이 몰린 1가구 청약의 이면에는 무너진 주거 사다리, 전세사기 3만 7천 명의 절규, 그리고 오늘부터 바뀌는 청약 규정이 있다." />
+  <title>13만 대 1 경쟁률의 진실 — 당첨되면 14억 버는 나라에서 당신만 왜 빈손인가</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 17px;
+      line-height: 1.8;
+      color: #1a1a1a;
+      background: #ffffff;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+
+    /* 헤더 배너 */
+    .hero {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      padding: 48px 28px 40px;
+      margin-bottom: 0;
+    }
+    .hero .category-badge {
+      display: inline-block;
+      background: #f7931e;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      font-size: clamp(22px, 4vw, 34px);
+      font-weight: 900;
+      line-height: 1.35;
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .hero .sub-headline {
+      font-size: 15px;
+      color: #b0c4de;
+      line-height: 1.7;
+      word-break: keep-all;
+    }
+    .hero .meta {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #8ab4c9;
+    }
+
+    /* 본문 */
+    article {
+      padding: 36px 0 0;
+    }
+    article p {
+      margin-bottom: 20px;
+      word-break: keep-all;
+      color: #222;
+    }
+    article h2 {
+      font-size: 22px;
+      font-weight: 800;
+      color: #0f2027;
+      margin: 44px 0 16px;
+      padding-left: 14px;
+      border-left: 5px solid #f7931e;
+      word-break: keep-all;
+    }
+    article h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #203a43;
+      margin: 28px 0 10px;
+    }
+
+    /* 핵심 요약 박스 */
+    .summary-box {
+      background: #f0f7ff;
+      border: 1px solid #b8d4f0;
+      border-left: 5px solid #1565c0;
+      border-radius: 8px;
+      padding: 22px 24px;
+      margin: 28px 0;
+    }
+    .summary-box .summary-title {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #1565c0;
+      margin-bottom: 10px;
+    }
+    .summary-box ul {
+      padding-left: 18px;
+    }
+    .summary-box ul li {
+      margin-bottom: 6px;
+      font-size: 16px;
+      color: #1a1a1a;
+      word-break: keep-all;
+    }
+
+    /* 강조 숫자 블록 */
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin: 32px 0;
+    }
+    .stat-card {
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 20px 16px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .stat-card .num {
+      font-size: 32px;
+      font-weight: 900;
+      color: #e53935;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-card .num.blue { color: #1565c0; }
+    .stat-card .num.orange { color: #f7931e; }
+    .stat-card .label {
+      font-size: 13px;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    /* 인포그래픽 — 경쟁률 바 차트 */
+    .infographic {
+      background: #1a1a2e;
+      border-radius: 16px;
+      padding: 30px 24px;
+      margin: 36px 0;
+      color: #fff;
+    }
+    .infographic h3 {
+      color: #fff;
+      font-size: 16px;
+      margin: 0 0 24px;
+      text-align: center;
+      font-weight: 700;
+    }
+    .bar-row {
+      margin-bottom: 18px;
+    }
+    .bar-label {
+      font-size: 13px;
+      color: #ccc;
+      margin-bottom: 5px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .bar-label span { color: #f7931e; font-weight: 700; }
+    .bar-track {
+      background: #2d2d4e;
+      border-radius: 6px;
+      height: 22px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 6px;
+      background: linear-gradient(90deg, #f7931e, #e53935);
+    }
+    .infographic-note {
+      font-size: 12px;
+      color: #888;
+      text-align: right;
+      margin-top: 12px;
+    }
+
+    /* 비교 테이블 */
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 28px 0;
+      font-size: 15px;
+    }
+    .compare-table th {
+      background: #0f2027;
+      color: #fff;
+      padding: 12px 14px;
+      text-align: left;
+      font-weight: 700;
+    }
+    .compare-table td {
+      padding: 11px 14px;
+      border-bottom: 1px solid #e0e0e0;
+      vertical-align: top;
+    }
+    .compare-table tr:nth-child(even) td { background: #f9f9f9; }
+    .compare-table .highlight { color: #e53935; font-weight: 700; }
+
+    /* 경고 박스 */
+    .warning-box {
+      background: #fff3e0;
+      border-left: 5px solid #f7931e;
+      border-radius: 6px;
+      padding: 18px 20px;
+      margin: 28px 0;
+    }
+    .warning-box p { margin: 0; font-size: 15px; color: #6d4c41; }
+    .warning-box strong { color: #bf360c; }
+
+    /* 타임라인 */
+    .timeline {
+      border-left: 3px solid #1565c0;
+      padding-left: 20px;
+      margin: 24px 0;
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 22px;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -27px;
+      top: 6px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #1565c0;
+    }
+    .timeline-item .date {
+      font-size: 12px;
+      font-weight: 700;
+      color: #1565c0;
+      letter-spacing: 0.5px;
+    }
+    .timeline-item p {
+      margin: 2px 0 0;
+      font-size: 15px;
+    }
+
+    /* SVG 인포그래픽 — 전세 vs 매매 상승률 */
+    .svg-wrap {
+      background: #f8f9ff;
+      border-radius: 14px;
+      padding: 24px;
+      margin: 36px 0;
+      overflow-x: auto;
+    }
+    .svg-wrap h3 {
+      font-size: 15px;
+      text-align: center;
+      margin-bottom: 16px;
+      color: #203a43;
+    }
+
+    /* 행동 제안 체크박스 */
+    .action-list {
+      background: #e8f5e9;
+      border-radius: 10px;
+      padding: 22px 24px;
+      margin: 28px 0;
+    }
+    .action-list h3 { color: #1b5e20; margin-bottom: 12px; }
+    .action-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 10px;
+      font-size: 15px;
+    }
+    .action-item .icon { font-size: 18px; flex-shrink: 0; }
+
+    /* 해시태그 */
+    .hashtags {
+      margin: 40px 0 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .hashtag {
+      background: #e3f2fd;
+      color: #1565c0;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    /* 출처 */
+    .sources {
+      border-top: 1px solid #e0e0e0;
+      padding-top: 20px;
+      margin-top: 32px;
+      font-size: 13px;
+      color: #777;
+    }
+    .sources a { color: #1565c0; text-decoration: none; }
+    .sources a:hover { text-decoration: underline; }
+
+    /* 면책조항 */
+    .disclaimer {
+      background: #f5f5f5;
+      border-radius: 8px;
+      padding: 16px 18px;
+      margin-top: 20px;
+      font-size: 13px;
+      color: #888;
+      line-height: 1.7;
+    }
+  </style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="container">
+    <div class="category-badge">🏠 부동산·주거</div>
+    <h1>13만 대 1 경쟁률의 진실<br>"당첨되면 14억 버는 나라"에서<br>당신만 왜 빈손인가</h1>
+    <p class="sub-headline">용산 한 채에 1만2천명, 영등포엔 13만명이 몰렸다. 로또 청약이 '정상'이 된 대한민국 아파트 시장의 민낯 — 그리고 오늘부터 바뀌는 규정이 당신의 기회를 어떻게 바꾸는가.</p>
+    <div class="meta">📅 2026년 6월 1일 · 탐사보도팀</div>
+  </div>
+</div>
+
+<div class="container">
+<article>
+
+  <!-- 핵심 요약 -->
+  <div class="summary-box">
+    <div class="summary-title">⚡ 3줄 핵심 요약</div>
+    <ul>
+      <li>용산 아파트 1채에 1만2299명이 몰렸다. 시세차익 14억 원, 당첨 확률은 0.008%.</li>
+      <li>영등포자이는 13만 대 1 경쟁률 — 서울 무주택 청년 전체가 한 채를 두고 싸우는 수준이다.</li>
+      <li>오늘(6월 1일)부터 무순위 청약이 <strong>무주택자 전용</strong>으로 바뀐다. 기회인가, 또 다른 장벽인가.</li>
+    </ul>
+  </div>
+
+  <!-- 숫자로 보는 현실 -->
+  <div class="stat-grid">
+    <div class="stat-card">
+      <div class="num">13만</div>
+      <div class="label">대 1<br>영등포자이 경쟁률</div>
+    </div>
+    <div class="stat-card">
+      <div class="num orange">14억</div>
+      <div class="label">용산 시세차익<br>(분양가 대비)</div>
+    </div>
+    <div class="stat-card">
+      <div class="num blue">3.7만</div>
+      <div class="label">명 전세사기 피해자<br>보증금 4.7조 원</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">4.7%</div>
+      <div class="label">서울 전세 상승률<br>집값 상승률 상회</div>
+    </div>
+  </div>
+
+  <!-- Section 1: 배경과 맥락 -->
+  <h2>🏚️ 왜 13만 명이 한 채에 몰렸나 — 공급 붕괴의 3년</h2>
+
+  <p>2026년 5월 13일 오전. 서울 영등포구 '영등포자이 디그니티' 전용 59㎡ 무순위 청약이 열렸다. 단 1가구 모집이었다. 접수가 마감되자 청약홈 서버는 한때 먹통이 됐고, 최종 경쟁률은 13만938 대 1을 기록했다. 이 숫자는 단순한 통계가 아니다. 서울에 무주택으로 살고 있는 청년과 서민 13만 명이 단 하나의 '내 집'을 두고 제비를 뽑은 것이다.</p>
+
+  <p>같은 달 용산구에서는 더 드라마틱한 장면이 연출됐다. '용산호반써밋에디션' 전용 105㎡가 무순위 청약에 나왔다. 2023년 분양가는 19억8160만 원 그대로인데, 인근 시세는 34억 원. 공식적인 시세차익만 <strong>약 14억 원</strong>이다. 1가구 모집에 1만2299명이 몰렸다.</p>
+
+  <p>이 기현상의 뿌리는 공급 붕괴다. 2022~2024년 금리 급등기에 건설사들이 분양을 멈추면서 서울 아파트 입주 물량은 급감했다. 주택산업연구원에 따르면 2026년 서울 입주 물량은 역대 최저 수준을 기록할 전망이다. 수요는 줄지 않는데 공급만 증발한 시장에서, 3년 전 분양가에 아파트를 살 수 있는 무순위 청약은 사실상 국가가 허가한 유일한 '부의 사다리'가 됐다.</p>
+
+  <!-- Section 2: 핵심 팩트 -->
+  <h2>📊 충격적인 숫자들 — 로또 청약 연대기</h2>
+
+  <!-- 바 차트 인포그래픽 -->
+  <div class="infographic">
+    <h3>📈 2026년 주요 무순위 청약 경쟁률 (1가구 기준)</h3>
+    <div class="bar-row">
+      <div class="bar-label">
+        영등포자이 디그니티 59㎡ (2026.5)
+        <span>13만938 대 1</span>
+      </div>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:100%"></div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">
+        동대문 래미안 라그란데 55㎡ (2026.3)
+        <span>4만6,362 대 1</span>
+      </div>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:35%"></div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">
+        용산호반써밋에디션 105㎡ (2026.5)
+        <span>1만2,299 대 1</span>
+      </div>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:9%"></div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">
+        영등포자이 래미안 228㎡ (2026.3)
+        <span>228.8 대 1</span>
+      </div>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:0.17%" style="min-width:4px; background: #f7931e;"></div>
+      </div>
+    </div>
+    <div class="infographic-note">※ 출처: 머니투데이, 뉴시스 (2026년)</div>
+  </div>
+
+  <p>영등포 자이의 당첨 확률은 <strong>0.00077%</strong>다. 번개에 맞을 확률(100만분의 1)보다 낮다는 우스갯소리가 나온다. 더 충격적인 것은 이 경쟁률이 '이상 현상'이 아니라는 점이다. 2026년 들어 서울 핵심지 무순위 청약은 평균 수만 대 일의 경쟁률을 기록 중이다.</p>
+
+  <table class="compare-table">
+    <thead>
+      <tr>
+        <th>단지</th>
+        <th>분양가</th>
+        <th>현재 시세</th>
+        <th>시세차익</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>용산호반써밋에디션 105㎡</td>
+        <td>19억8,160만</td>
+        <td>약 34억</td>
+        <td class="highlight">약 14억</td>
+      </tr>
+      <tr>
+        <td>동대문 이문아이파크자이</td>
+        <td>해당 분양가</td>
+        <td>현 시세</td>
+        <td class="highlight">약 6억</td>
+      </tr>
+      <tr>
+        <td>영등포자이 디그니티</td>
+        <td>2022년 분양가</td>
+        <td>현 시세</td>
+        <td class="highlight">수억 원</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Section 3: 숨겨진 이면 -->
+  <h2>🔍 아무도 말하지 않는 이면 — '로또 청약'의 진짜 수혜자</h2>
+
+  <p>무순위 청약의 급증에는 역설이 있다. 이 물건들은 대부분 <strong>불법 전매나 공급질서 교란 행위</strong>로 계약이 취소된 가구다. 즉, 처음부터 시세차익을 노린 투기꾼들이 당첨 후 전매해 적발됐고, 그 자리를 다시 일반에 공급하는 구조다. '정의로운 재공급'처럼 보이지만, 사실은 투기 수요가 먼저 시장을 왜곡하고 그 결과물을 청약으로 돌려받는 것이다.</p>
+
+  <p>더 불편한 진실은 누가 당첨되느냐다. 청약 전문가들은 "무순위 청약은 사실상 운의 영역"이라고 말한다. 청약통장 가입 기간, 부양가족 수, 청약 점수 — 이 모든 것이 무관하다. 젊고 가난하고 무주택인 청년이 20년 청약 점수를 쌓은 50대와 완벽히 동등한 조건이다. 공정해 보이는 이 제도가 사실은 '운만 좋으면 인생이 바뀐다'는 투기 심리를 국가가 조장하는 메커니즘이기도 하다.</p>
+
+  <div class="warning-box">
+    <p>⚠️ <strong>전세사기 피해자 3만6,950명의 현실:</strong> 같은 시간, 서울·수도권의 3만7천 명은 전세 보증금 4조7000억 원을 날렸다. 누군가는 '14억짜리 로또'를 두고 경쟁하고, 누군가는 전 재산을 떼인 채 법원을 전전한다. 같은 도시, 같은 부동산 시장의 이야기다.</p>
+  </div>
+
+  <p>누적 전세사기 피해자 3만6950명 중 공공주택으로 이주한 사람은 6475가구에 불과하다(2026년 2월 기준). 인정률은 62.2%. 나머지 약 1만3000명은 아직도 피해를 인정받지 못했거나 구제 대책을 기다리는 중이다. 정부가 2026년 9월 '안심전세 앱'을 출시한다고 했지만, 이미 당한 사람들에게 앱은 아무 의미가 없다.</p>
+
+  <!-- Section 4: 나에게 미치는 영향 -->
+  <h2>👤 오늘부터 당신이 알아야 할 것 — 청약 제도 대격변</h2>
+
+  <p><strong>오늘 2026년 6월 1일, 무순위 청약 제도가 바뀐다.</strong> 지금까지는 유주택자도 '줍줍'에 참여할 수 있었다. 이미 아파트를 가진 사람이 더 좋은 물건을 싸게 살 수 있는 제도였다. 6월부터는 <strong>무주택자만 신청 가능</strong>하며, 수도권 거주 요건도 강화된다.</p>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="date">~2026년 5월 31일</div>
+      <p>유주택자도 무순위 청약 참여 가능. 전국 어디서나 수도권 줍줍 신청 가능.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="date">2026년 6월 1일부터</div>
+      <p><strong>무주택자만</strong> 무순위 청약 참여 가능. 수도권 거주요건 강화. 인기 지역은 해당 지자체장 판단으로 거주자 우선 적용.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="date">2026년 하반기 예정</div>
+      <p>6·3 지방선거 이후 보유세(재산세·종부세) 세제 개편 논의 본격화. 시장의 잠재 폭탄 변수.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="date">2026년 9월 예정</div>
+      <p>주택도시보증공사(HUG) '안심전세 앱' 서비스 시작 — 전세사기 예방 목적.</p>
+    </div>
+  </div>
+
+  <!-- SVG 인포그래픽: 서울 주택시장 상승률 비교 -->
+  <div class="svg-wrap">
+    <h3>📊 2026년 서울 주택시장 상승률 전망 비교</h3>
+    <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:700px; display:block; margin:0 auto;">
+      <!-- 배경 그리드 -->
+      <line x1="80" y1="20" x2="80" y2="230" stroke="#ddd" stroke-width="1"/>
+      <line x1="80" y1="230" x2="660" y2="230" stroke="#ddd" stroke-width="1"/>
+      <!-- 그리드 라인 (1%, 2%, 3%, 4%, 5%) -->
+      <line x1="80" y1="188" x2="660" y2="188" stroke="#eee" stroke-dasharray="4"/>
+      <text x="68" y="192" text-anchor="end" font-size="11" fill="#999">1%</text>
+      <line x1="80" y1="146" x2="660" y2="146" stroke="#eee" stroke-dasharray="4"/>
+      <text x="68" y="150" text-anchor="end" font-size="11" fill="#999">2%</text>
+      <line x1="80" y1="104" x2="660" y2="104" stroke="#eee" stroke-dasharray="4"/>
+      <text x="68" y="108" text-anchor="end" font-size="11" fill="#999">3%</text>
+      <line x1="80" y1="62" x2="660" y2="62" stroke="#eee" stroke-dasharray="4"/>
+      <text x="68" y="66" text-anchor="end" font-size="11" fill="#999">4%</text>
+      <line x1="80" y1="20" x2="660" y2="20" stroke="#eee" stroke-dasharray="4"/>
+      <text x="68" y="24" text-anchor="end" font-size="11" fill="#999">5%</text>
+
+      <!-- 막대: 서울 매매 4.2% -->
+      <rect x="110" y="52.4" width="70" height="177.6" fill="#1565c0" rx="4"/>
+      <text x="145" y="47" text-anchor="middle" font-size="13" font-weight="700" fill="#1565c0">4.2%</text>
+      <text x="145" y="248" text-anchor="middle" font-size="12" fill="#333">서울 매매</text>
+
+      <!-- 막대: 서울 전세 4.7% (더 높음) -->
+      <rect x="220" y="32.4" width="70" height="197.6" fill="#e53935" rx="4"/>
+      <text x="255" y="27" text-anchor="middle" font-size="13" font-weight="700" fill="#e53935">4.7%</text>
+      <text x="255" y="248" text-anchor="middle" font-size="12" fill="#333">서울 전세</text>
+
+      <!-- 막대: 수도권 매매 2.5% -->
+      <rect x="340" y="125" width="70" height="105" fill="#42a5f5" rx="4"/>
+      <text x="375" y="120" text-anchor="middle" font-size="13" font-weight="700" fill="#42a5f5">2.5%</text>
+      <text x="375" y="248" text-anchor="middle" font-size="12" fill="#333">수도권 매매</text>
+
+      <!-- 막대: 수도권 전세 3.8% -->
+      <rect x="450" y="70" width="70" height="160" fill="#ef5350" rx="4"/>
+      <text x="485" y="65" text-anchor="middle" font-size="13" font-weight="700" fill="#ef5350">3.8%</text>
+      <text x="485" y="248" text-anchor="middle" font-size="12" fill="#333">수도권 전세</text>
+
+      <!-- 막대: 지방 매매 0.3% -->
+      <rect x="560" y="217.4" width="70" height="12.6" fill="#90a4ae" rx="4"/>
+      <text x="595" y="212" text-anchor="middle" font-size="13" font-weight="700" fill="#90a4ae">0.3%</text>
+      <text x="595" y="248" text-anchor="middle" font-size="12" fill="#333">지방 매매</text>
+
+      <text x="370" y="270" text-anchor="middle" font-size="11" fill="#999">※ 출처: 주택산업연구원 2026년 전망</text>
+    </svg>
+  </div>
+
+  <p>이 변화가 무주택 실수요자에게 반가운 이유는 단순하다. 기존엔 유주택자가 투기 목적으로 경쟁률을 폭발시켰기 때문이다. 그들이 빠지면 경쟁률이 낮아질 것이라는 기대가 있다. 하지만 전문가들은 "인기 지역에서는 무주택자만도 충분히 수만 명이 몰린다"며 효과를 의심한다.</p>
+
+  <!-- Section 5: 전망과 행동 제안 -->
+  <h2>🔭 앞으로 6개월 — 이 시장에서 살아남으려면</h2>
+
+  <p>6·3 지방선거가 끝난 지금, 시장은 하반기 세제 개편 논의를 주목하고 있다. 종합부동산세·재산세 체계 개편은 다주택자와 고가 주택 보유자에게 직접 영향을 주는 이슈다. 규제 완화 방향으로 흘러갈 경우 집값을 자극할 수 있고, 강화될 경우 거래 위축이 예상된다. 어느 쪽이든 무주택자의 내 집 마련 난이도는 쉽게 낮아지지 않는다.</p>
+
+  <p>한편 전세 시장은 2026년 내내 서울 기준 4% 중반대 상승을 이어갈 것으로 보인다. 공급 감소와 전세의 월세 전환이 동시에 진행되면서, 전세를 찾는 세입자들의 선택지는 점점 줄고 있다. 전세가율이 높은 빌라·오피스텔은 전세사기 위험이 여전히 높아 피해야 한다.</p>
+
+  <div class="action-list">
+    <h3>✅ 지금 당장 확인해야 할 것들</h3>
+    <div class="action-item">
+      <span class="icon">🔑</span>
+      <span><strong>전세 계약 예정이라면:</strong> 등기부등본 확인 → 전세가율 80% 이하 선택 → HUG 전세보증보험 가입 → 전입신고+확정일자 즉시</span>
+    </div>
+    <div class="action-item">
+      <span class="icon">📋</span>
+      <span><strong>무순위 청약 노린다면:</strong> 6월 1일부터 무주택자만 가능. 청약홈(applyhome.co.kr)에서 공고일 확인. 수도권 거주자 우선 조건 체크.</span>
+    </div>
+    <div class="action-item">
+      <span class="icon">🛡️</span>
+      <span><strong>전세사기 피해 발생 시:</strong> 즉시 임차권 등기명령 신청 → 국토부 전세사기피해지원센터(1588-7004) → 법률구조공단 무료 법률 지원</span>
+    </div>
+    <div class="action-item">
+      <span class="icon">📊</span>
+      <span><strong>하반기 세제 개편 예의주시:</strong> 종부세·재산세 개편 방향에 따라 다주택자 매물 출회 여부가 결정. 급매 기회가 생길 수 있다.</span>
+    </div>
+    <div class="action-item">
+      <span class="icon">🏗️</span>
+      <span><strong>2026년 공공분양 주목:</strong> LH가 수도권 2만9천 가구 공급 예정. 나눔형·선택형 공공분양은 일반 청약과 별도 기회.</span>
+    </div>
+  </div>
+
+  <p>로또 청약이 뉴스가 되는 나라에서, 진짜 주거 안정은 복권 당첨이 아니라 제도적 공급 확대와 전세사기 완전 피해구제에서 나온다. 1가구 모집에 13만 명이 몰리는 현상이 개인의 욕심 탓이라고 볼 수 있을까? 아니면, 수십 년간 쌓인 구조적 주거 불안이 한 장의 청약 신청서에 압축된 것은 아닐까. 그 질문에 답해야 할 주체는 시장이 아니라 정부다.</p>
+
+  <!-- 해시태그 -->
+  <div class="hashtags">
+    <span class="hashtag">#로또청약</span>
+    <span class="hashtag">#무순위청약</span>
+    <span class="hashtag">#줍줍</span>
+    <span class="hashtag">#용산아파트</span>
+    <span class="hashtag">#부동산카스트</span>
+    <span class="hashtag">#13만대1</span>
+    <span class="hashtag">#14억시세차익</span>
+    <span class="hashtag">#전세사기</span>
+    <span class="hashtag">#서울집값</span>
+    <span class="hashtag">#청약제도개편</span>
+    <span class="hashtag">#부동산양극화</span>
+    <span class="hashtag">#주거불평등</span>
+  </div>
+
+  <!-- 출처 -->
+  <div class="sources">
+    <strong>📎 참고 출처</strong><br/>
+    · <a href="https://www.mt.co.kr/estate/2026/05/13/2026051219542016890" target="_blank">머니투데이 — "청약통장 없어도 된대"...14억 시세차익, 초대형 '로또청약' 온다</a><br/>
+    · <a href="https://www.newsis.com/view/NISX20260513_0003628465" target="_blank">뉴시스 — "14억 로또"…용산 무순위 청약 1가구 모집에 1만2299명 몰려</a><br/>
+    · <a href="https://www.mt.co.kr/amp/estate/2026/03/18/2026031810392838459" target="_blank">머니투데이 — 영등포자이디그니티 무순위청약 13만대1 폭발</a><br/>
+    · <a href="https://www.fnnews.com/news/202605150430568958" target="_blank">파이낸셜뉴스 — "당첨만 되면 수억 차익"…용산·동대문 줍줍에 6만명 '우르르'</a><br/>
+    · <a href="https://www.betanews.net/article/view/beta202606010004" target="_blank">베타뉴스 — 6월부터 무순위 청약 '무주택자만'…수도권 거주요건도 강화</a><br/>
+    · <a href="https://www.reportera.co.kr/news/jeonse-fraud-prevention-app-hug-2026/" target="_blank">리포터라 — 전세사기, 정부가 내놓은 대책 방법 (안심전세 앱)</a><br/>
+    · <a href="https://v.daum.net/v/20251227163004870" target="_blank">다음 — 집값 2% 오르고, 전세는 5% 뛴다… 2026년 주택시장 전망</a><br/>
+    · <a href="https://www.khi.re.kr/info/info3.php?boardid=board4&mode=view&idx=44&sk=&sw=&offset=" target="_blank">주택산업연구원 — 2026년 주택시장 전망</a>
+  </div>
+
+  <!-- 면책조항 -->
+  <div class="disclaimer">
+    ⚠️ <strong>면책조항:</strong> 이 아티클은 공개된 뉴스 보도 및 연구자료를 바탕으로 작성된 저널리즘 콘텐츠입니다. 특정 부동산 투자 또는 청약 신청을 권유하거나 금융·법률 조언을 제공하지 않습니다. 개인의 청약·투자 결정은 반드시 공인된 전문가와 상담 후 진행하시기 바랍니다. 시장 상황은 정책 변화에 따라 빠르게 달라질 수 있으며, 본 내용의 정확성에 대해 법적 책임을 지지 않습니다.
+  </div>
+
+</article>
+</div>
+
+</body>
+</html>
