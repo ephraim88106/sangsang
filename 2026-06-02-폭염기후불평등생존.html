@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="한반도 온난화 속도가 세계 평균의 2배다. 5월에 이미 첫 온열질환 사망자가 나왔고, 역대급 폭염이 예고된 2026년 여름. 문제는 기후위기가 '부자와 가난한 자'를 다르게 죽인다는 점이다.">
+  <meta name="keywords" content="폭염, 기후위기, 한반도 온난화, 온열질환, 기후불평등, 쪽방촌, 독거노인, 에너지빈곤, 장마 2026, 이상기후">
+  <meta property="og:title" content="에어컨 없으면 죽는다 — 한반도 온난화 속도 세계 2배, 폭염이 '빈부 격차 살인'으로 변했다">
+  <meta property="og:description" content="5월에 이미 첫 사망. 올 여름 한국은 역대 최악의 폭염을 맞이할 수 있다. 그 열기는 에어컨 있는 사람과 없는 사람에게 다르게 닥친다.">
+  <title>에어컨 없으면 죽는다 — 한반도 온난화 속도 세계 2배, 폭염이 '빈부 격차 살인'으로 변했다</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 17px;
+      line-height: 1.85;
+      background: #f5f7f5;
+      color: #1a1a1a;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 0 0 60px;
+    }
+    .hero-banner {
+      background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 50%, #40916c 100%);
+      color: #fff;
+      padding: 48px 36px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-banner::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 260px; height: 260px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 50%;
+    }
+    .category-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.35);
+      color: #d8f3dc;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 18px;
+    }
+    .hero-title {
+      font-size: clamp(22px, 4vw, 32px);
+      font-weight: 900;
+      line-height: 1.38;
+      letter-spacing: -0.02em;
+      margin-bottom: 18px;
+    }
+    .hero-title em { color: #b7e4c7; font-style: normal; }
+    .hero-subtitle { font-size: 15px; color: rgba(255,255,255,0.82); line-height: 1.7; }
+    .hero-meta {
+      margin-top: 24px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .alert-box {
+      background: #fff3cd;
+      border-left: 5px solid #e88c00;
+      padding: 18px 22px;
+      margin: 30px 36px;
+      border-radius: 0 8px 8px 0;
+      font-size: 15px;
+      font-weight: 500;
+      color: #5a3e00;
+    }
+    .alert-box strong { color: #b45309; }
+    .summary-box {
+      background: #d8f3dc;
+      border: 1.5px solid #52b788;
+      border-radius: 12px;
+      padding: 22px 26px;
+      margin: 0 36px 32px;
+    }
+    .summary-box h3 { font-size: 14px; font-weight: 700; color: #1b4332; letter-spacing: 0.08em; margin-bottom: 14px; }
+    .summary-box ul { padding-left: 0; list-style: none; }
+    .summary-box ul li {
+      padding: 6px 0 6px 22px;
+      position: relative;
+      font-size: 15px;
+      line-height: 1.7;
+      color: #1b4332;
+      font-weight: 500;
+    }
+    .summary-box ul li::before { content: '▶'; position: absolute; left: 0; color: #2d6a4f; font-size: 11px; top: 9px; }
+    .article-body { padding: 0 36px; }
+    .article-body p { margin-bottom: 20px; color: #2c2c2c; }
+    h2.section-title {
+      font-size: 21px;
+      font-weight: 800;
+      color: #1b4332;
+      margin: 40px 0 16px;
+      padding-left: 14px;
+      border-left: 5px solid #40916c;
+      line-height: 1.45;
+    }
+    .quote-block {
+      background: #f0fdf4;
+      border-left: 4px solid #52b788;
+      padding: 16px 22px;
+      margin: 24px 0;
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      color: #2d6a4f;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+    .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 28px 0; }
+    .stat-card {
+      background: #f0fdf4;
+      border: 1.5px solid #b7e4c7;
+      border-radius: 10px;
+      padding: 18px 14px;
+      text-align: center;
+    }
+    .stat-card .num { font-size: 32px; font-weight: 900; color: #1b4332; line-height: 1.1; }
+    .stat-card .unit { font-size: 14px; color: #2d6a4f; font-weight: 700; }
+    .stat-card .desc { font-size: 12.5px; color: #555; margin-top: 6px; line-height: 1.5; }
+    .infographic {
+      background: #f9fafb;
+      border: 1.5px solid #d1fae5;
+      border-radius: 14px;
+      padding: 28px 24px;
+      margin: 32px 0;
+    }
+    .infographic h3 { font-size: 15px; font-weight: 700; color: #1b4332; margin-bottom: 22px; text-align: center; }
+    .bar-row { margin-bottom: 20px; }
+    .bar-label { font-size: 13.5px; color: #333; margin-bottom: 6px; display: flex; justify-content: space-between; }
+    .bar-label span { color: #1b4332; font-weight: 700; }
+    .bar-track { height: 28px; background: #e9ecef; border-radius: 6px; overflow: hidden; }
+    .bar-fill {
+      height: 100%;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      padding-left: 12px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #fff;
+    }
+    .compare-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14.5px; }
+    .compare-table th { padding: 12px 16px; font-size: 13px; font-weight: 700; letter-spacing: 0.03em; }
+    .compare-table th:first-child { background: #6c757d; color: #fff; }
+    .compare-table th:nth-child(2) { background: #40916c; color: #fff; }
+    .compare-table th:nth-child(3) { background: #d62828; color: #fff; }
+    .compare-table td { padding: 11px 16px; border-bottom: 1px solid #e9ecef; vertical-align: top; line-height: 1.6; }
+    .compare-table tr:nth-child(even) td { background: #f8f9fa; }
+    .compare-table td:nth-child(2) { color: #1b4332; font-weight: 600; }
+    .compare-table td:nth-child(3) { color: #c92a2a; font-weight: 600; }
+    .timeline { position: relative; padding-left: 24px; margin: 24px 0; }
+    .timeline::before { content: ''; position: absolute; left: 7px; top: 8px; bottom: 8px; width: 2px; background: linear-gradient(to bottom, #40916c, #b7e4c7); }
+    .tl-item { position: relative; margin-bottom: 18px; padding-left: 20px; }
+    .tl-item::before { content: ''; position: absolute; left: -17px; top: 7px; width: 10px; height: 10px; background: #40916c; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 0 0 2px #40916c; }
+    .tl-date { font-size: 12px; font-weight: 700; color: #2d6a4f; margin-bottom: 2px; }
+    .tl-text { font-size: 14.5px; color: #333; line-height: 1.6; }
+    .action-box { background: linear-gradient(135deg, #1b4332, #2d6a4f); color: #fff; border-radius: 14px; padding: 28px 26px; margin: 32px 0; }
+    .action-box h3 { font-size: 17px; font-weight: 800; margin-bottom: 16px; color: #d8f3dc; }
+    .action-box ul { padding-left: 0; list-style: none; }
+    .action-box ul li { padding: 7px 0 7px 24px; position: relative; font-size: 14.5px; color: rgba(255,255,255,0.9); line-height: 1.65; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .action-box ul li:last-child { border-bottom: none; }
+    .action-box ul li::before { content: '✓'; position: absolute; left: 0; color: #b7e4c7; font-weight: 700; }
+    .hashtags { margin: 32px 0 20px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { display: inline-block; background: #e9f5ee; color: #2d6a4f; font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 20px; border: 1px solid #b7e4c7; }
+    .disclaimer { background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 8px; padding: 16px 20px; font-size: 12.5px; color: #666; line-height: 1.7; margin-top: 28px; }
+    .sources { margin-top: 24px; font-size: 13px; color: #888; line-height: 1.8; }
+    .sources a { color: #2d6a4f; text-decoration: none; }
+    .sources a:hover { text-decoration: underline; }
+    .highlight { background: #d8f3dc; padding: 1px 6px; border-radius: 3px; font-weight: 700; color: #1b4332; }
+    .red { color: #c92a2a; font-weight: 700; }
+    @media (max-width: 600px) {
+      .hero-banner, .article-body { padding-left: 20px; padding-right: 20px; }
+      .alert-box, .summary-box { margin-left: 20px; margin-right: 20px; }
+      .stat-row { grid-template-columns: repeat(2, 1fr); }
+      .compare-table { font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <div class="hero-banner">
+    <div class="category-badge">🌱 환경·기후</div>
+    <h1 class="hero-title">
+      <em>"에어컨 없으면 죽는다"</em><br>
+      한반도 온난화 세계 2배 — 폭염이<br>'빈부 격차 살인'으로 변했다
+    </h1>
+    <p class="hero-subtitle">
+      5월에 이미 역대 최초 첫 사망자. 온열질환자 2배 급증. 기상청은 올 여름을 '역대급'으로 예고했다.<br>
+      문제는 같은 더위라도 누군가는 에어컨 바람을 맞고, 누군가는 쪽방 선풍기 하나로 버텨야 한다는 것이다.
+    </p>
+    <div class="hero-meta">
+      <span>📅 2026년 6월 2일</span>
+      <span>✍️ 탐사보도팀</span>
+      <span>⏱ 읽는 시간 약 8분</span>
+    </div>
+  </div>
+
+  <div class="alert-box">
+    ⚠️ <strong>2026년 5월 15일</strong>, 서울의 80대 남성이 온열질환으로 사망했다. 관측 사상 <strong>가장 이른 첫 사망</strong>이다. 여름은 아직 시작도 하지 않았다.
+  </div>
+
+  <div class="summary-box">
+    <h3>📌 이 기사의 핵심 3줄</h3>
+    <ul>
+      <li>한반도 기온 상승 속도는 세계 평균의 <strong>2배</strong> — 5년 내 역대급 폭염이 온다는 기상청 공식 경고</li>
+      <li>2026년 온열질환자, 작년 같은 기간 대비 <strong>2배 이상</strong> 증가 — 5월에만 사망자 첫 발생</li>
+      <li>온열질환 사망자의 <strong>70%는 노인·장애인</strong> — 기후위기는 '가난하고 늙은 사람'을 먼저 죽인다</li>
+    </ul>
+  </div>
+
+  <div class="article-body">
+
+    <h2 class="section-title">📡 한반도가 지구보다 2배 빠르게 끓고 있다</h2>
+
+    <p>
+      기상청이 2026년 5월 발표한 충격적인 수치가 있다. 향후 5년간 한국의 평균 기온 상승폭은 <span class="highlight">+1.48°C</span>로 예측되는 반면, 같은 기간 세계 평균 기온 상승은 <span class="highlight">+0.74°C</span>에 그친다. 한반도가 지구 전체보다 <span class="red">정확히 2배 빠른 속도</span>로 뜨거워지고 있다는 뜻이다.
+    </p>
+
+    <p>
+      단순한 수치가 아니다. 2023년, 2024년, 2025년 — 3년 연속으로 북극 해빙 면적이 위성 관측 48년 역사상 최저 수준을 기록했다. 2026년 3월 15일 기준 북극 해빙 면적은 1,429만 ㎢로 역대 최소 기록에 근접했다. 북극이 녹으면 제트기류가 약해지고, 한반도에는 폭염과 한파가 번갈아 덮친다. 지금 우리가 겪는 이상기후는 '일회성 사건'이 아니다.
+    </p>
+
+    <div class="stat-row">
+      <div class="stat-card">
+        <div class="num">+1.48°</div>
+        <div class="unit">C</div>
+        <div class="desc">향후 5년<br>한반도 기온 상승 예측</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">2×</div>
+        <div class="unit">배</div>
+        <div class="desc">한반도 온난화 속도<br>세계 평균 대비</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">60%</div>
+        <div class="unit">확률</div>
+        <div class="desc">2026년 6~7월<br>기온 평년 초과 가능성</div>
+      </div>
+    </div>
+
+    <h2 class="section-title">🌡️ 2026년 여름 시나리오 — "역대급이 온다"</h2>
+
+    <p>
+      기상청 폭염 특이기상연구센터장 이명인 UNIST 교수는 "올해 우리나라 폭염과 열대야 발생 가능성이 평년보다 매우 높다"고 공식 경고했다. 기상청 예측 모델에서 6월과 7월 기온이 평년을 웃돌 확률은 각각 60%, 8월도 50%에 달한다. 6월부터 이미 33도 안팎의 이상고온이 나타날 수 있다는 전망이다.
+    </p>
+
+    <p>
+      거기에 더해 세계기상기구(WMO)는 라니냐 종료 이후 엘니뇨, 나아가 <span class="red">슈퍼 엘니뇨</span> 발생 가능성까지 제기하고 있다. 슈퍼 엘니뇨가 현실화되면 2018년 서울 연속 열대야 기록(17일)도 깨질 수 있다는 분석이 나온다. 장마 역시 평년보다 강할 것으로 예측된다. 기상청에 따르면 올해 장마는 제주 6월 19~20일, 남부 6월 23~24일, 중부 6월 25~26일에 시작될 가능성이 높고, 강수량은 평년을 크게 웃돌 것으로 보인다.
+    </p>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">2026년 5월 15일</div>
+        <div class="tl-text">역대 가장 이른 온열질환 첫 사망자 발생 (서울, 80대 남성)</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2026년 5월 15~26일</div>
+        <div class="tl-text">온열질환자 111명 집계 — 전년 같은 기간(51명) 대비 2.2배</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2026년 6월 하순 예고</div>
+        <div class="tl-text">제주 → 남부 → 중부 장마 시작. 강수량 평년 초과 가능성 높음</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2026년 여름 전망</div>
+        <div class="tl-text">폭염 일수 평년 초과 확률 60%, 슈퍼 엘니뇨 현실화 시 최악 시나리오</div>
+      </div>
+    </div>
+
+    <h2 class="section-title">💀 기후불평등 — 같은 더위, 다른 생사</h2>
+
+    <p>
+      가장 심각한 문제는 기후위기가 '평등하게' 오지 않는다는 것이다. 온열질환 사망자를 분석하면 그 불평등이 적나라하게 드러난다. 2025년 온열질환 사망 29명 가운데 <span class="red">70%가 고령자와 장애인</span>이었다. 노인만 따지면 전체 사망의 59%를 차지했다.
+    </p>
+
+    <p>
+      이들의 공통점은 하나다. <span class="highlight">에어컨이 없거나, 있어도 켜지 못한다</span>는 것. 쪽방촌 한 평 남짓 방에 선풍기 하나로 버티는 80대 독거노인. 폭염 특보가 울려도 전기세가 무서워 에어컨 리모컨을 잡지 못하는 에너지빈곤층. 국토교통부 추계에 따르면 전국 쪽방 거주자는 1만 명을 훌쩍 넘는다. 이들 대부분은 냉방기기조차 없다.
+    </p>
+
+    <div class="quote-block">
+      "폭염은 자연재해가 아니라 사회재해입니다. 에어컨이 있는 사람과 없는 사람의 생존 확률이 갈리는 순간, 기후위기는 빈곤 문제가 됩니다." — 기후위기 연구 전문가
+    </div>
+
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>구분</th>
+          <th>🏠 냉방 가구</th>
+          <th>🔥 에너지 빈곤층</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>실내 온도</strong></td>
+          <td>에어컨 가동 24~26°C 유지</td>
+          <td>쪽방·반지하 35°C 이상 도달</td>
+        </tr>
+        <tr>
+          <td><strong>수면 환경</strong></td>
+          <td>열대야에도 냉방 수면 가능</td>
+          <td>열대야 시 수면 불가, 탈진</td>
+        </tr>
+        <tr>
+          <td><strong>응급 대응</strong></td>
+          <td>즉각 냉방·병원 접근 가능</td>
+          <td>발견 지연 → 사망 위험 급증</td>
+        </tr>
+        <tr>
+          <td><strong>정부 지원</strong></td>
+          <td>해당 없음</td>
+          <td>에너지바우처 최대 3~5만원 (냉방비 턱없이 부족)</td>
+        </tr>
+        <tr>
+          <td><strong>사망 위험</strong></td>
+          <td>상대적으로 낮음</td>
+          <td>온열질환 사망자의 70% 집중</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="section-title">📊 데이터로 보는 폭염 위기</h2>
+
+    <div class="infographic">
+      <h3>🌡️ 한반도 vs 세계 — 기온 상승 예측 & 피해 현황</h3>
+
+      <div class="bar-row">
+        <div class="bar-label">한반도 기온 상승 예측 <span>+1.48°C</span></div>
+        <div class="bar-track">
+          <div class="bar-fill" style="width:85%; background: linear-gradient(90deg, #d62828, #e63946);">+1.48°C (세계 2배)</div>
+        </div>
+      </div>
+
+      <div class="bar-row">
+        <div class="bar-label">세계 평균 기온 상승 예측 <span>+0.74°C</span></div>
+        <div class="bar-track">
+          <div class="bar-fill" style="width:42%; background: linear-gradient(90deg, #2d6a4f, #40916c);">+0.74°C</div>
+        </div>
+      </div>
+
+      <div class="bar-row" style="margin-top:28px;">
+        <div class="bar-label">2026년 온열질환자 증가율 (5월 기준) <span>+118%</span></div>
+        <div class="bar-track">
+          <div class="bar-fill" style="width:75%; background: linear-gradient(90deg, #e07000, #f4a261);">111명 (전년 51명 대비 2배↑)</div>
+        </div>
+      </div>
+
+      <div class="bar-row">
+        <div class="bar-label">온열질환 사망자 중 고령자·장애인 비율 <span>70%</span></div>
+        <div class="bar-track">
+          <div class="bar-fill" style="width:70%; background: linear-gradient(90deg, #6a0572, #a23b72);">70% (취약계층 집중 피해)</div>
+        </div>
+      </div>
+
+      <div class="bar-row">
+        <div class="bar-label">6~7월 기온 평년 초과 확률 <span>60%</span></div>
+        <div class="bar-track">
+          <div class="bar-fill" style="width:60%; background: linear-gradient(90deg, #1b4332, #40916c);">기상청 공식 전망 60%</div>
+        </div>
+      </div>
+
+      <p style="font-size:12px; color:#888; margin-top:18px; text-align:center;">
+        ※ 출처: 기상청(2026.05), 질병관리청 온열질환 감시체계
+      </p>
+    </div>
+
+    <h2 class="section-title">🌾 이상기후 농업 붕괴 — 식탁 위 기후 청구서</h2>
+
+    <p>
+      기후위기의 파장은 생명에서 멈추지 않는다. 2026년 이상기후는 이미 농업 현장을 강타하고 있다. 5월 초부터 이어진 이상고온과 건조한 날씨가 채소류 재배 환경을 교란했고, 일부 지역에서는 냉해와 폭염이 같은 계절에 반복되는 '기후 롤러코스터' 현상이 나타나고 있다. 전문가들은 이런 패턴이 고착화되면 국내 식량 자급률에 직접 타격을 줄 것이라 경고한다.
+    </p>
+
+    <p>
+      한국의 식량 자급률은 이미 45% 수준으로 OECD 최하위권이다. 여기에 기후 충격이 더해지면 밥상 물가 폭등은 피할 수 없다. 결국 기후위기의 고통은 장바구니 물가를 통해 가장 가난한 계층에게 가장 먼저 전가된다. 기후위기는 '환경 문제'를 넘어 경제 불평등 문제가 됐다.
+    </p>
+
+    <h2 class="section-title">🏛️ 정부 대책의 민낯 — "에너지바우처 3만 원으로 폭염을 막나"</h2>
+
+    <p>
+      정부는 폭염 취약계층을 위한 대책으로 <span class="highlight">에너지바우처 지원, 무더위쉼터 운영, 쪽방·독거노인 방문 관리</span>를 내세운다. 하지만 현장의 목소리는 다르다.
+    </p>
+
+    <p>
+      에너지바우처 여름 지원액은 가구당 최대 3~5만 원 수준이다. 한여름 에어컨 한 달 전기요금이 10만 원을 훌쩍 넘는다는 점을 고려하면 역부족이다. 무더위쉼터 역시 접근성이 떨어지는 농촌 지역이나 이동이 어려운 노인에게는 무의미하다. 쪽방촌 방문 관리도 인력 부족으로 형식적 수준에 머물고 있다는 현장 지적이 이어진다.
+    </p>
+
+    <div class="quote-block">
+      "무더위쉼터가 있어도 제가 나가기 힘들어요. 에어컨을 틀면 전기세가 얼마나 나올지 무서워서... 차라리 창문 열고 버팁니다." — 쪽방촌 독거노인 증언 (언론 인터뷰 재인용)
+    </div>
+
+    <h2 class="section-title">🔮 전망과 지금 당장 해야 할 것</h2>
+
+    <p>
+      전문가들은 2026년 여름이 기후위기 대응의 '분수령'이 될 것이라고 입을 모은다. 기후위기 적응법 제정, 취약계층 냉방 지원 대폭 확대, 고령자 폭염 조기경보 시스템 강화가 시급하다는 주장이 전문가 사회에서 힘을 얻고 있다. 이번 여름 피해 규모가 정책 변화를 이끌 것인지, 아니면 또다시 '반복되는 비극'으로 기록될 것인지가 결정된다.
+    </p>
+
+    <div class="action-box">
+      <h3>✅ 지금 당장 해야 할 것 — 개인과 사회</h3>
+      <ul>
+        <li><strong>개인</strong>: 주변 취약 노인 안부 확인하기 — 홀로 사는 어르신 점심 전화 한 통이 생명을 구릅니다</li>
+        <li><strong>가족</strong>: 냉방기기 작동 여부 및 전기요금 부담 파악, 에너지바우처 신청 동행 지원</li>
+        <li><strong>지역사회</strong>: 무더위쉼터 위치 공유, 냉방 공간 개방 확대 요구 (주민센터, 도서관)</li>
+        <li><strong>정책 요구</strong>: 에너지바우처 여름 지원액 최소 10만 원 이상으로 현실화, 폭염 대응 예산 확대 촉구</li>
+        <li><strong>기후 행동</strong>: 6월 환경의 날(6.5) 기후위기 행동 참여, 탄소 소비 줄이기 일상 실천</li>
+      </ul>
+    </div>
+
+    <div class="hashtags">
+      <span class="hashtag">#폭염2026</span>
+      <span class="hashtag">#기후위기</span>
+      <span class="hashtag">#기후불평등</span>
+      <span class="hashtag">#한반도온난화</span>
+      <span class="hashtag">#온열질환</span>
+      <span class="hashtag">#에너지빈곤</span>
+      <span class="hashtag">#쪽방촌</span>
+      <span class="hashtag">#독거노인폭염</span>
+      <span class="hashtag">#역대급더위</span>
+      <span class="hashtag">#이상기후</span>
+      <span class="hashtag">#기상청경고</span>
+      <span class="hashtag">#장마2026</span>
+    </div>
+
+    <div class="sources">
+      <strong>📎 참고 출처</strong><br>
+      · <a href="https://m.go.seoul.co.kr/news/society/2026/05/29/20260529008006?cp=go" target="_blank">서울신문 — 2배 빠른 K온난화, 5년내 역대급 폭염 온다 (2026.05.29)</a><br>
+      · <a href="https://govinfo.co.kr/2026-heat-illness-prevention-guide/" target="_blank">정책한입 — 2026년 온열질환 예방, 첫 사망자 발생 (2026)</a><br>
+      · <a href="https://www.fnnews.com/news/202605221533480238" target="_blank">파이낸셜뉴스 — 때 이른 폭염에 첫 사망, 정부 쪽방·독거노인 안전점검 강화 (2026.05.22)</a><br>
+      · <a href="https://www.wikitree.co.kr/articles/1138528" target="_blank">위키트리 — 5월부터 벌써 폭염, 올해 여름 날씨 전망 (2026)</a><br>
+      · <a href="https://medicalworldnews.co.kr/m/view.php?idx=1510970550" target="_blank">의학뉴스 — 온열질환 사망자 70%는 고령자·장애인 (2026)</a><br>
+      · <a href="https://www.devtimes.co.kr/news/473755" target="_blank">청년개발자신문 — 2026 이상기후 농업 위기 (2026)</a><br>
+      · <a href="https://www.wegive.co.kr/wezine/detail/1690" target="_blank">위기브 — 2026 장마철 예측 (2026)</a>
+    </div>
+
+    <div class="disclaimer">
+      ⚠️ <strong>면책조항</strong>: 본 아티클은 공개된 뉴스 및 정부 기관 자료를 바탕으로 작성된 저널리즘 콘텐츠입니다. 의학적·법률적 조언을 대체하지 않습니다. 온열질환 응급상황 발생 시 119에 즉시 신고하십시오. 에너지바우처 신청 관련 문의는 주민센터 또는 복지로(www.bokjiro.go.kr)를 이용하시기 바랍니다.
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
