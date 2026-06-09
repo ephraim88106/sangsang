@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="6월 29일 법정 심의 기한 D-20. 노동계는 시급 1만1500원, 경영계는 동결을 요구하며 격돌 중. 870만 플랫폼·특수고용 노동자의 운명도 걸렸다.">
+  <meta name="keywords" content="최저임금, 2027년 최저임금, 노사갈등, 플랫폼 노동자, 소상공인, 최저임금위원회, 청년실업, 취업">
+  <meta property="og:title" content="D-20 최저임금 결전: 시급 1만1500원 vs 동결…870만 플랫폼 노동자는 왜 배제됐나">
+  <meta property="og:description" content="6월 29일 법정 심의 기한. 노동계와 경영계가 벼랑 끝 줄다리기를 벌이는 동안, 870만 명은 이 싸움 밖에 있다.">
+  <title>D-20 최저임금 결전: "시급 1만1500원 달라" vs "동결도 부담"…6월 29일 대한민국의 운명이 갈린다</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 17px;
+      line-height: 1.8;
+      background: #f5f5f0;
+      color: #1a1a1a;
+    }
+    .wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 0 0 60px 0;
+    }
+    /* 헤더 배너 */
+    .hero {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      color: #fff;
+      padding: 50px 40px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "💼";
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      font-size: 80px;
+      opacity: 0.15;
+    }
+    .category-badge {
+      display: inline-block;
+      background: #e94560;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+      letter-spacing: 0.5px;
+    }
+    .hero h1 {
+      font-size: clamp(22px, 4vw, 30px);
+      font-weight: 900;
+      line-height: 1.4;
+      margin-bottom: 16px;
+      word-keep: keep-all;
+    }
+    .hero h1 em {
+      color: #ffd700;
+      font-style: normal;
+    }
+    .hero .subtitle {
+      font-size: 15px;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.6;
+    }
+    .meta-bar {
+      background: #f0f0ea;
+      padding: 12px 40px;
+      font-size: 13px;
+      color: #666;
+      border-bottom: 2px solid #e0e0d8;
+    }
+    /* 핵심 요약 박스 */
+    .summary-box {
+      margin: 32px 40px;
+      background: #fff8e7;
+      border-left: 5px solid #f4a825;
+      border-radius: 0 8px 8px 0;
+      padding: 20px 24px;
+    }
+    .summary-box h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #b07a00;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .summary-box ul {
+      list-style: none;
+      padding: 0;
+    }
+    .summary-box ul li {
+      padding: 4px 0;
+      font-size: 15px;
+      color: #333;
+    }
+    .summary-box ul li::before {
+      content: "▶ ";
+      color: #f4a825;
+      font-size: 11px;
+    }
+    /* 본문 */
+    .content {
+      padding: 0 40px;
+    }
+    .content p {
+      margin-bottom: 20px;
+      word-break: keep-all;
+    }
+    .content h2 {
+      font-size: 20px;
+      font-weight: 900;
+      color: #0f3460;
+      margin: 40px 0 16px;
+      padding-left: 14px;
+      border-left: 4px solid #e94560;
+    }
+    /* 인포그래픽 */
+    .infographic {
+      margin: 36px 0;
+      background: #f8f9ff;
+      border: 1px solid #dde2f0;
+      border-radius: 12px;
+      padding: 28px 24px;
+    }
+    .infographic h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    /* 최저임금 연도별 바 차트 */
+    .chart-bars {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .bar-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .bar-label {
+      width: 60px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #555;
+      text-align: right;
+      flex-shrink: 0;
+    }
+    .bar-track {
+      flex: 1;
+      background: #e8eaf0;
+      border-radius: 4px;
+      height: 28px;
+      position: relative;
+      overflow: visible;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      padding-right: 8px;
+      justify-content: flex-end;
+      transition: width 0.3s;
+      position: relative;
+    }
+    .bar-value {
+      font-size: 12px;
+      font-weight: 700;
+      color: #fff;
+      white-space: nowrap;
+    }
+    .bar-value.outside {
+      position: absolute;
+      right: -70px;
+      color: #333;
+    }
+    /* 대결 카드 */
+    .battle-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 28px 0;
+    }
+    .battle-card {
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+    }
+    .battle-card.labor {
+      background: #e8f4fd;
+      border: 2px solid #2196f3;
+    }
+    .battle-card.business {
+      background: #fdecea;
+      border: 2px solid #e53935;
+    }
+    .battle-card .side {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    .battle-card.labor .side { color: #1565c0; }
+    .battle-card.business .side { color: #b71c1c; }
+    .battle-card .amount {
+      font-size: 28px;
+      font-weight: 900;
+      margin: 8px 0;
+    }
+    .battle-card.labor .amount { color: #1565c0; }
+    .battle-card.business .amount { color: #b71c1c; }
+    .battle-card .change {
+      font-size: 14px;
+      color: #666;
+    }
+    .vs-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .vs-circle {
+      background: #333;
+      color: #fff;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      font-weight: 900;
+      flex-shrink: 0;
+      margin: 0 -6px;
+      z-index: 1;
+    }
+    /* D-DAY 카운트다운 */
+    .countdown {
+      background: linear-gradient(135deg, #e94560, #c41230);
+      color: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      margin: 28px 0;
+    }
+    .countdown .dday {
+      font-size: 60px;
+      font-weight: 900;
+      line-height: 1;
+    }
+    .countdown .dday-label {
+      font-size: 16px;
+      opacity: 0.85;
+      margin-top: 8px;
+    }
+    /* 통계 숫자 강조 */
+    .stat-highlight {
+      display: inline-block;
+      background: #0f3460;
+      color: #fff;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 700;
+    }
+    /* 인용구 */
+    blockquote {
+      margin: 24px 0;
+      padding: 16px 20px;
+      background: #f0f4f8;
+      border-left: 4px solid #0f3460;
+      font-style: italic;
+      color: #444;
+      border-radius: 0 8px 8px 0;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 8px;
+      font-size: 13px;
+      font-style: normal;
+      color: #888;
+    }
+    /* 870만 카드 */
+    .highlight-card {
+      background: #0f3460;
+      color: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      margin: 28px 0;
+    }
+    .highlight-card h4 {
+      font-size: 18px;
+      margin-bottom: 12px;
+      color: #ffd700;
+    }
+    .highlight-card p {
+      margin-bottom: 0;
+      font-size: 15px;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.9);
+    }
+    /* 청년 통계 */
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 24px 0;
+    }
+    .stat-item {
+      background: #f8f9ff;
+      border: 1px solid #dde2f0;
+      border-radius: 10px;
+      padding: 16px 12px;
+      text-align: center;
+    }
+    .stat-item .num {
+      font-size: 26px;
+      font-weight: 900;
+      color: #0f3460;
+    }
+    .stat-item .unit {
+      font-size: 13px;
+      color: #888;
+      margin-top: 4px;
+    }
+    /* 해시태그 */
+    .hashtags {
+      margin: 40px 40px 0;
+      padding: 20px 0 0;
+      border-top: 1px solid #eee;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .hashtags span {
+      background: #f0f0ea;
+      color: #555;
+      font-size: 13px;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+    /* 면책조항 */
+    .disclaimer {
+      margin: 20px 40px 0;
+      padding: 16px;
+      background: #f5f5f0;
+      border-radius: 8px;
+      font-size: 12px;
+      color: #999;
+      line-height: 1.6;
+    }
+    /* 출처 */
+    .sources {
+      margin: 20px 40px 0;
+      font-size: 13px;
+      color: #888;
+    }
+    .sources h4 { color: #555; margin-bottom: 8px; font-size: 14px; }
+    .sources a { color: #0f3460; text-decoration: none; }
+    .sources a:hover { text-decoration: underline; }
+    .sources li { margin-bottom: 4px; }
+
+    @media (max-width: 600px) {
+      .hero, .content, .hashtags, .disclaimer, .sources { padding-left: 20px; padding-right: 20px; }
+      .summary-box { margin: 20px; }
+      .meta-bar { padding-left: 20px; padding-right: 20px; }
+      .battle-cards { grid-template-columns: 1fr; }
+      .stat-grid { grid-template-columns: repeat(2, 1fr); }
+      .countdown .dday { font-size: 48px; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- 히어로 -->
+  <div class="hero">
+    <div class="category-badge">💼 취업·노동</div>
+    <h1>D-20 최저임금 결전: <em>"시급 1만1500원 달라"</em> vs <em>"동결도 부담"</em>…<br>6월 29일 대한민국의 월급이 갈린다</h1>
+    <p class="subtitle">870만 플랫폼·특수고용 노동자는 이 싸움 밖에 있다 | 소상공인 "폐업 내몰릴 수도"</p>
+  </div>
+
+  <div class="meta-bar">
+    📅 2026년 6월 9일 &nbsp;|&nbsp; ✍️ 탐사저널리스트 데스크 &nbsp;|&nbsp; ⏱ 읽는 시간 약 6분
+  </div>
+
+  <!-- 핵심 요약 -->
+  <div class="summary-box">
+    <h3>📌 핵심 요약 3줄</h3>
+    <ul>
+      <li>2027년 최저임금 심의 D-20, 노동계 1만1500원 vs 경영계 동결 — 격차 1470원</li>
+      <li>도급제·플랫폼 노동자 870만 명 최저임금 적용 여부가 새 화약고</li>
+      <li>청년실업률 7.7%, '쉬었음' 청년 48만 명…최저임금 인상이 해법인가 독인가</li>
+    </ul>
+  </div>
+
+  <div class="content">
+
+    <!-- D-DAY 카운트다운 -->
+    <div class="countdown">
+      <div class="dday">D-20</div>
+      <div class="dday-label">⚡ 법정 심의 기한 | 2026년 6월 29일</div>
+    </div>
+
+    <!-- 훅 문단 -->
+    <p>지금 이 순간, 정부세종청사 최저임금위원회 회의실에서는 대한민국 2,500만 노동자의 내년 생계가 결정되고 있다. 시계는 째깍거리고, 노사는 서로를 향해 손가락을 겨누고 있다. <span class="stat-highlight">6월 29일</span>—법이 정한 최저임금 결정 기한이다. 20일 남았다.</p>
+
+    <p>노동계는 "시급 <strong>1만1500원</strong>이 돼야 밥 먹고 산다"고 외치고, 경영계는 "<strong>동결도 이미 부담</strong>"이라며 맞선다. 현재 최저임금(2026년 기준 시급 1만320원)에서 11.4% 올리라는 요구와, 1원도 못 올리겠다는 입장이 정면으로 충돌 중이다. 직장인 62%는 "내년엔 1만2000원은 넘어야 한다"고 응답했다. 그 사이, <strong>870만 명</strong>의 플랫폼·특수고용 노동자는 이 싸움 테이블 밖에 앉아 있다.</p>
+
+    <!-- 노사 대결 -->
+    <h2>🥊 14.7% 인상 vs 동결 — 역대급 격차</h2>
+
+    <div class="battle-cards">
+      <div class="battle-card labor">
+        <div class="side">🔵 노동계 요구안</div>
+        <div class="amount">₩11,500</div>
+        <div class="change">+1,180원 (+14.7%)</div>
+      </div>
+      <div class="battle-card business">
+        <div class="side">🔴 경영계 요구안</div>
+        <div class="amount">동결</div>
+        <div class="change">±0원 (0%)</div>
+      </div>
+    </div>
+
+    <p>양대 노총(한국노총·민주노총)은 이번 최초 요구안으로 <strong>시급 1만1500원(14.7% 인상)</strong>을 제시했다. 논리는 명확하다. 2026년 인상률이 2.9%에 그치는 동안 물가는 훨씬 빠르게 올라 실질임금이 오히려 깎였다는 것. 반면 한국경영자총협회를 중심으로 한 경영계는 5년 연속 첫 제시안으로 <strong>'동결'</strong>을 들고나왔다. "동결도 부담"이라는 초강경 발언까지 나왔다.</p>
+
+    <p>중간 어딘가에서 타협이 이뤄지겠지만, 격차는 <span class="stat-highlight">1,180원</span>—단순한 숫자가 아니다. 월 209시간 기준으로 환산하면 매달 24만6620원 차이다. 연간으로는 296만 원이 왔다 갔다 한다.</p>
+
+    <!-- 연도별 최저임금 -->
+    <div class="infographic">
+      <h3>📊 대한민국 최저임금 추이 (시급 기준)</h3>
+      <div class="chart-bars">
+        <div class="bar-row">
+          <div class="bar-label">2022</div>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:74%;background:linear-gradient(90deg,#4a90d9,#2563ab)">
+              <span class="bar-value">9,160원</span>
+            </div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">2023</div>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:78%;background:linear-gradient(90deg,#4a90d9,#2563ab)">
+              <span class="bar-value">9,620원</span>
+            </div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">2024</div>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:82%;background:linear-gradient(90deg,#4a90d9,#2563ab)">
+              <span class="bar-value">9,860원</span>
+            </div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">2025</div>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:85%;background:linear-gradient(90deg,#4a90d9,#2563ab)">
+              <span class="bar-value">10,030원</span>
+            </div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">2026</div>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:88%;background:linear-gradient(90deg,#f4a825,#d4891a)">
+              <span class="bar-value">10,320원</span>
+            </div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label" style="color:#e94560;font-weight:900">2027?</div>
+          <div class="bar-track" style="background:repeating-linear-gradient(45deg,#fff0f0,#fff0f0 5px,#ffe4e4 5px,#ffe4e4 10px)">
+            <div class="bar-fill" style="width:0%;background:transparent;">
+              <span class="bar-value outside" style="position:absolute;left:8px;right:auto;color:#e94560;font-weight:900">⚔️ 11,500원 vs 동결 (심의 중)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p style="font-size:12px;color:#888;text-align:right;margin-top:12px">출처: 최저임금위원회 / 고용노동부</p>
+    </div>
+
+    <h2>🔥 첫날부터 파행…위원장 선출에 민주노총 '퇴장'</h2>
+
+    <p>4월 21일 첫 전원회의부터 심상치 않았다. 위원회가 권순원 숙명여대 교수를 위원장으로 선출하자 민주노총 측이 "편향적 위원장"이라며 즉각 퇴장했다. 27명(근로자·사용자·공익위원 각 9명)으로 구성된 위원회는 시작부터 삐걱댔다. 이 광경은 낯설지 않다. 지난 5년 동안 반복된 패턴이다.</p>
+
+    <blockquote>
+      "경기가 너무 어렵다. 최저임금이 오르면 우리 같은 자영업자는 폐업 말고 선택지가 없다."
+      <cite>— 서울 마포구 편의점 운영자 (뉴스핌 2026.06.09)</cite>
+    </blockquote>
+
+    <p>소상공인들의 비명은 오늘도 계속됐다. 뉴스핌이 오늘(6월 9일) 보도한 소상공인 인터뷰에서는 "인건비 감당이 안 돼 알바를 1명 줄였다"는 현장 목소리가 넘쳤다. 경영계가 '동결도 부담'을 꺼내든 배경이기도 하다.</p>
+
+    <!-- 870만 플랫폼 -->
+    <h2>👻 논의 테이블 밖의 사람들: 870만 플랫폼 노동자</h2>
+
+    <div class="highlight-card">
+      <h4>⚠️ 40년 기다린 870만 명의 사각지대</h4>
+      <p>배달 라이더, 대리기사, 택배 기사, 프리랜서 강사, 보험 설계사…이른바 특수고용직·플랫폼 노동자 <strong>870만 명</strong>은 현행 최저임금법의 보호를 받지 못한다. "근로자"가 아닌 "개인사업자"로 분류되기 때문이다. 양대 노총은 "40년 기다림을 끝내라"며 최저임금법 개정을 촉구했지만, 경영계는 플랫폼 산업 자체가 붕괴된다며 맞섰다. 이번 심의에서 처음으로 공식 의제로 올랐다.</p>
+    </div>
+
+    <p>노동부 장관은 이번 심의 요청서에 "도급제 근로자에 대한 별도 최저임금 설정을 검토하라"고 명시했다. 역대 최초다. 하지만 경영계는 "플랫폼 노동자에게 최저임금을 적용하면 배달비가 폭등하고, 그 피해는 소비자와 소상공인 모두에게 전가된다"고 반발한다. 진실은 어느 쪽에 있을까.</p>
+
+    <h2>📉 청년은 왜 '그냥 쉬고' 있나</h2>
+
+    <div class="stat-grid">
+      <div class="stat-item">
+        <div class="num">7.7%</div>
+        <div class="unit">청년 실업률<br>(2026.2 기준)</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">48.5만</div>
+        <div class="unit">'쉬었음' 청년<br>(비경제활동)</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">53조원</div>
+        <div class="unit">니트(NEET) 청년<br>5년간 경제적 손실</div>
+      </div>
+    </div>
+
+    <p>올해 2월 청년(15~29세) 실업률은 <span class="stat-highlight">7.7%</span>. 그런데 실업률 통계 밖의 이야기가 더 충격적이다. 구직도, 취업도 아닌 '그냥 쉬었음'으로 분류된 청년이 무려 48만5000명이다. 이들은 통계상 실업자가 아니다. 구직 활동을 포기했기 때문이다. KDI(한국개발연구원)는 "실업률 하락의 이면에 구직 단념이 숨어 있다"고 경고했다.</p>
+
+    <p>니트(NEET·Not in Education, Employment or Training) 청년으로 인한 경제적 손실은 지난 5년 동안 <span class="stat-highlight">53조 원</span>에 달한다는 추정치도 나왔다. 최저임금을 올려도, 아예 취업 시장에 나오지 않는 청년이 늘고 있다는 게 진짜 문제다.</p>
+
+    <blockquote>
+      "최저임금이 오르면 알바 자리 자체가 줄어요. 사장이 무인 키오스크 놓거든요."
+      <cite>— 서울 소재 대학 3학년 취업준비생 (익명)</cite>
+    </blockquote>
+
+    <h2>💡 나에게 미치는 영향: 시나리오별 시뮬레이션</h2>
+
+    <div class="infographic">
+      <h3>💰 2027년 최저임금 시나리오별 월급 변화 (월 209시간 기준)</h3>
+      <div class="chart-bars" style="gap:14px">
+        <div class="bar-row">
+          <div class="bar-label" style="width:80px;font-size:12px">2026 현재</div>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:73%;background:linear-gradient(90deg,#607d8b,#455a64)">
+              <span class="bar-value">215만 6,880원</span>
+            </div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label" style="width:80px;font-size:12px;color:#b71c1c">경영계 동결</div>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:73%;background:linear-gradient(90deg,#e57373,#c62828)">
+              <span class="bar-value">215만 6,880원</span>
+            </div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label" style="width:80px;font-size:12px;color:#1565c0">노동계 요구</div>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:83%;background:linear-gradient(90deg,#42a5f5,#1565c0)">
+              <span class="bar-value">240만 3,500원</span>
+            </div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label" style="width:80px;font-size:12px;color:#2e7d32">중간 타협<br>(5~6% 가정)</div>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:77%;background:linear-gradient(90deg,#66bb6a,#2e7d32)">
+              <span class="bar-value">약 227만원</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p style="font-size:12px;color:#888;text-align:right;margin-top:12px">※ 중간 타협안은 추정치 (실제 결정 전)</p>
+    </div>
+
+    <h2>🔮 전망: 6월 29일 이후 어떻게 될까</h2>
+
+    <p>역사적으로 최저임금 협상은 마지막 날 밤을 새워 타결되는 경우가 많았다. 2026년 적용 최저임금(10,320원)은 무려 <strong>17년 만에 처음</strong>으로 노사 합의로 결정됐다. 그 희귀한 합의가 올해도 반복될 수 있을까.</p>
+
+    <p>전문가들은 비관적이다. 노동계는 실질임금 회복을, 경영계는 소상공인 생존을 각각 절박하게 주장하는 상황에서 공익위원의 중재안이 결국 결정권을 쥘 것으로 보인다. 지난해 패턴을 보면 <strong>5~7% 인상</strong> 수준에서 결론날 가능성이 높다는 분석이 나온다.</p>
+
+    <p>더 근본적인 질문은 따로 있다. 최저임금 하나로 대한민국 노동 불평등을 해결할 수 있을까. 870만 플랫폼 노동자 문제, 청년 48만 명의 구직 단념, 53조 원의 경제적 손실—이 숫자들은 최저임금 테이블 위에 올라와 있지 않다. <strong>6월 29일</strong>, 숫자 하나가 정해지겠지만, 진짜 싸움은 그 이후에 시작된다.</p>
+
+  </div><!-- /content -->
+
+  <!-- 해시태그 -->
+  <div class="hashtags">
+    <span>#최저임금2027</span>
+    <span>#노사갈등</span>
+    <span>#플랫폼노동자</span>
+    <span>#청년실업</span>
+    <span>#소상공인</span>
+    <span>#최저임금위원회</span>
+    <span>#취업노동</span>
+    <span>#대한민국노동</span>
+    <span>#니트족</span>
+  </div>
+
+  <!-- 출처 -->
+  <div class="sources">
+    <h4>📎 주요 출처</h4>
+    <ul>
+      <li><a href="https://www.fnnews.com/news/202605250601410885" target="_blank">파이낸셜뉴스 — 내년 최저임금, 노사 줄다리기 본격화</a></li>
+      <li><a href="https://www.newspim.com/news/view/20260609000925" target="_blank">뉴스핌 — 최저임금 인상 공방 격화…소상공인 폐업 내몰릴 수도 (2026.06.09)</a></li>
+      <li><a href="https://econmingle.com/economy/2027-minimum-wage-deliberation-first-plenar/" target="_blank">이코노밍글 — 2027년 최저임금 심의, 위원장 선출부터 충돌</a></li>
+      <li><a href="https://www.joongangenews.com/news/articleView.html?idxno=425713" target="_blank">중앙이코노미뉴스 — 한국노총·민주노총, 시급 1만1500원 요구</a></li>
+      <li><a href="https://nodong.org/statement/7933234" target="_blank">민주노총 — 870만 특고·플랫폼 최저임금법 개정 촉구</a></li>
+      <li><a href="https://heraldk.com/2026/04/20/" target="_blank">헤럴드경제 — 내년 최저임금 심의 개시, 노사 강대강 대치</a></li>
+      <li><a href="https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=18144" target="_blank">고용노동부 — 2026년 최저임금 고시</a></li>
+    </ul>
+  </div>
+
+  <!-- 면책조항 -->
+  <div class="disclaimer">
+    ⚠️ <strong>면책조항:</strong> 본 아티클은 공개된 뉴스 보도와 통계 자료를 바탕으로 작성된 정보 제공 목적의 콘텐츠입니다. 최저임금 결정 결과는 6월 29일 이후에야 확정되며, 본 글의 시나리오 및 예측은 참고용입니다. 특정 정치적 입장을 지지하거나 반대하지 않습니다.
+  </div>
+
+</div><!-- /wrapper -->
+</body>
+</html>
