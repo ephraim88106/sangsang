@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>환율 1,519원 '17년 만의 악몽'… 지금 당신의 지갑에서 일어나는 충격적인 일 | 한국이슈</title>
+  <meta name="description" content="원달러 환율이 1,519원을 돌파하며 2009년 글로벌 금융위기 이후 최악 수준을 기록했다. 장바구니·대출·노후까지 흔들리는 고환율의 실체를 파헤친다." />
+  <meta name="keywords" content="환율, 원달러, 1500원, 고환율, 물가, 금리인상, 한국은행, 빅스텝, 수입물가, 외환위기" />
+  <meta property="og:title" content="환율 1,519원 '17년 만의 악몽'… 지금 당신의 지갑에서 일어나는 충격적인 일" />
+  <meta property="og:description" content="원달러 1,519원 돌파. 2009년 이후 최악. 장바구니·대출·노후가 동시에 흔들린다." />
+  <meta property="og:type" content="article" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #c0392b;
+      --primary-dark: #922b21;
+      --accent: #e74c3c;
+      --gold: #f39c12;
+      --dark: #1a1a2e;
+      --text: #2c2c2c;
+      --text-light: #666;
+      --bg: #ffffff;
+      --bg-subtle: #fafafa;
+      --border: #e8e8e8;
+      --highlight: #fff3cd;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      color: #fff;
+      padding: 56px 24px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -40px; left: -40px; right: -40px; bottom: -40px;
+      background: radial-gradient(ellipse at center, rgba(192,57,43,0.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-category {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      font-size: clamp(22px, 5vw, 34px);
+      font-weight: 900;
+      line-height: 1.35;
+      max-width: 720px;
+      margin: 0 auto 18px;
+      word-break: keep-all;
+    }
+    .hero h1 .highlight {
+      color: #ffd700;
+    }
+    .hero-sub {
+      font-size: 15px;
+      color: rgba(255,255,255,0.75);
+      max-width: 600px;
+      margin: 0 auto 24px;
+    }
+    .hero-meta {
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* TICKER */
+    .ticker-bar {
+      background: var(--primary);
+      color: #fff;
+      padding: 10px 24px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+    .ticker-bar span {
+      background: rgba(255,255,255,0.2);
+      border-radius: 4px;
+      padding: 2px 8px;
+      margin: 0 6px;
+    }
+
+    /* MAIN CONTAINER */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
+
+    /* SUMMARY BOX */
+    .summary-box {
+      background: linear-gradient(135deg, #fff3f3, #fff8f8);
+      border-left: 5px solid var(--primary);
+      border-radius: 0 12px 12px 0;
+      padding: 24px 28px;
+      margin-bottom: 40px;
+    }
+    .summary-box h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .summary-box ul {
+      list-style: none;
+      padding: 0;
+    }
+    .summary-box ul li {
+      padding: 6px 0;
+      padding-left: 22px;
+      position: relative;
+      font-size: 15px;
+      color: var(--text);
+      border-bottom: 1px solid rgba(192,57,43,0.1);
+    }
+    .summary-box ul li:last-child { border-bottom: none; }
+    .summary-box ul li::before {
+      content: '▶';
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-size: 10px;
+      top: 9px;
+    }
+
+    /* SECTION HEADERS */
+    h2 {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--dark);
+      margin: 44px 0 16px;
+      padding-bottom: 10px;
+      border-bottom: 3px solid var(--primary);
+      word-break: keep-all;
+    }
+    h2 .icon { margin-right: 8px; }
+
+    p {
+      margin-bottom: 18px;
+      word-break: keep-all;
+    }
+
+    /* STAT CARDS */
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+      margin: 28px 0;
+    }
+    .stat-card {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 16px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .stat-card:hover { transform: translateY(-2px); }
+    .stat-card .stat-label {
+      font-size: 12px;
+      color: var(--text-light);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+    .stat-card .stat-value {
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--primary);
+      line-height: 1.1;
+    }
+    .stat-card .stat-unit {
+      font-size: 13px;
+      color: var(--text-light);
+      margin-top: 4px;
+    }
+    .stat-card.danger { border-color: var(--primary); background: #fff5f5; }
+    .stat-card.warning { border-color: var(--gold); background: #fffbf0; }
+    .stat-card.warning .stat-value { color: var(--gold); }
+
+    /* INFOGRAPHIC - 환율 타임라인 */
+    .chart-section {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 24px;
+      margin: 32px 0;
+    }
+    .chart-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+    .chart-sub {
+      font-size: 12px;
+      color: var(--text-light);
+      margin-bottom: 20px;
+    }
+
+    /* SVG BAR CHART */
+    .bar-wrapper { overflow-x: auto; }
+
+    /* IMPACT TABLE */
+    .impact-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 15px;
+    }
+    .impact-table th {
+      background: var(--primary);
+      color: #fff;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .impact-table th:first-child { border-radius: 8px 0 0 0; }
+    .impact-table th:last-child { border-radius: 0 8px 0 0; }
+    .impact-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+    }
+    .impact-table tr:nth-child(even) td { background: var(--bg-subtle); }
+    .impact-table .up { color: var(--primary); font-weight: 700; }
+    .impact-table .neutral { color: var(--gold); font-weight: 700; }
+
+    /* HIGHLIGHT BOX */
+    .highlight-box {
+      background: #fff3cd;
+      border: 1px solid #ffc107;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 28px 0;
+      font-size: 15px;
+    }
+    .highlight-box strong {
+      color: #856404;
+      display: block;
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .red-box {
+      background: #fff5f5;
+      border: 1px solid #e74c3c;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 28px 0;
+      font-size: 15px;
+    }
+    .red-box strong {
+      color: var(--primary);
+      display: block;
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    /* QUOTE */
+    blockquote {
+      border-left: 4px solid var(--primary);
+      background: var(--bg-subtle);
+      padding: 16px 24px;
+      margin: 24px 0;
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      color: #444;
+      font-size: 16px;
+    }
+    blockquote cite {
+      display: block;
+      font-style: normal;
+      font-size: 13px;
+      color: var(--text-light);
+      margin-top: 8px;
+    }
+
+    /* WHAT CAN I DO */
+    .action-list {
+      counter-reset: action;
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+    .action-list li {
+      counter-increment: action;
+      padding: 14px 16px 14px 56px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+      font-size: 15px;
+    }
+    .action-list li:last-child { border-bottom: none; }
+    .action-list li::before {
+      content: counter(action);
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    /* TAGS */
+    .tags {
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+    .tags .tag {
+      display: inline-block;
+      background: #f0f0f0;
+      color: #555;
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 13px;
+      margin: 4px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .tags .tag:hover { background: var(--primary); color: #fff; }
+
+    /* DISCLAIMER */
+    .disclaimer {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-top: 32px;
+      font-size: 12px;
+      color: #888;
+      line-height: 1.6;
+    }
+    .disclaimer strong { color: #666; }
+
+    /* SOURCES */
+    .sources {
+      margin-top: 32px;
+      padding: 20px 24px;
+      background: var(--bg-subtle);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .sources h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-light);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .sources a {
+      display: block;
+      font-size: 13px;
+      color: #2980b9;
+      text-decoration: none;
+      padding: 3px 0;
+    }
+    .sources a:hover { text-decoration: underline; }
+
+    /* FOOTER */
+    footer {
+      background: var(--dark);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 24px;
+      font-size: 12px;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 600px) {
+      .stat-grid { grid-template-columns: repeat(2, 1fr); }
+      .impact-table { font-size: 13px; }
+      .impact-table th, .impact-table td { padding: 9px 10px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-category">💰 경제·금융 | 속보 분석</div>
+  <h1>
+    환율 <span class="highlight">1,519원</span> '17년 만의 악몽'<br />
+    지금 당신의 지갑에서 일어나는<br />충격적인 일
+  </h1>
+  <p class="hero-sub">
+    2009년 금융위기 이후 최약체 원화. 장바구니·대출·노후적금까지 동시에 흔들린다.
+    당신이 아직 모르는 3가지 시한폭탄.
+  </p>
+  <div class="hero-meta">2026년 6월 15일 | 한국이슈 탐사보도팀</div>
+</div>
+
+<!-- TICKER -->
+<div class="ticker-bar">
+  🔴 실시간 | 원달러 환율 <span>1,519원</span> | 2009년 3월 이후 최고 | 한국은행 7월 빅스텝 유력 | 수입물가 2개월 연속 급등
+</div>
+
+<!-- MAIN -->
+<div class="container">
+
+  <!-- HOOK -->
+  <p style="font-size:19px; font-weight:600; color:var(--dark); line-height:1.7; margin-bottom:28px;">
+    마트에서 장을 봤더니 지난달보다 영수증이 눈에 띄게 두꺼워졌다는 느낌, 받아본 적 있는가?
+    착각이 아니다. 원달러 환율이 <strong style="color:var(--primary)">1,519원</strong>을 넘어서며
+    2009년 글로벌 금융위기 이후 17년 만에 최악 수준으로 치달았다.
+    문제는 이것이 '숫자 게임'에 그치지 않는다는 사실이다.
+    <strong>식탁·기름값·보험료·대출이자까지</strong>—당신 일상 전체가 이 숫자 하나에 연동돼 있다.
+  </p>
+
+  <!-- SUMMARY -->
+  <div class="summary-box">
+    <h3>📌 3줄 핵심 요약</h3>
+    <ul>
+      <li>원달러 환율 1,519원 돌파 — 6월 5일 한때 1,549원 터치, 17년 만 최고치</li>
+      <li>수입 식품 원재료 70% 의존 → 환율 10% 오르면 소비자물가 0.31%p 자동 인상</li>
+      <li>한국은행, 7월 금통위서 '빅스텝(0.5%p)' 단행 유력 — 대출이자 추가 폭탄 예고</li>
+    </ul>
+  </div>
+
+  <!-- STAT CARDS -->
+  <div class="stat-grid">
+    <div class="stat-card danger">
+      <div class="stat-label">현재 원달러 환율</div>
+      <div class="stat-value">1,519</div>
+      <div class="stat-unit">원 (2026.06.12 기준)</div>
+    </div>
+    <div class="stat-card danger">
+      <div class="stat-label">6월 중 최고점</div>
+      <div class="stat-value">1,549</div>
+      <div class="stat-unit">원 (2026.06.05)</div>
+    </div>
+    <div class="stat-card warning">
+      <div class="stat-label">한은 물가 전망</div>
+      <div class="stat-value">2.1%</div>
+      <div class="stat-unit">2026년 소비자물가 (상향)</div>
+    </div>
+    <div class="stat-card warning">
+      <div class="stat-label">빅스텝 예상폭</div>
+      <div class="stat-value">+0.5%p</div>
+      <div class="stat-unit">7월 금통위 (시장 전망)</div>
+    </div>
+  </div>
+
+  <!-- SECTION 1: 배경 -->
+  <h2><span class="icon">🔍</span> '달러 1,500원 시대'는 어떻게 왔나</h2>
+
+  <p>
+    2022년부터 시작된 미국의 고금리 정책, 한국과 미국 간 금리 역전,
+    중국 경기 부진에 따른 수출 타격이 3년째 원화를 짓눌러 왔다.
+    여기에 2025년 말 불거진 국내 정치 불확실성이 외국인 자본 이탈을 가속화하면서
+    원화 가치는 결국 바닥을 뚫었다.
+  </p>
+  <p>
+    2026년 3월 31일, 원달러 환율은 <strong>1,530.1원</strong>을 기록했다.
+    2009년 3월 9일(1,549원) 이후 17년 만의 최고치였다.
+    그리고 6월 5일, 다시 한번 <strong>1,549원까지 치솟았다.</strong>
+    시장은 공포에 빠졌다.
+    외환 전문가들은 "1,600원 선이 뚫리면 진짜 위기"라고 입을 모으고 있다.
+  </p>
+
+  <blockquote>
+    "외환시장을 안정시키기 위한 기존 수단들이 한계에 다다랐다.
+    현재로선 기준금리 인상이 원화를 지킬 수 있는 가장 강력한 카드다."
+    <cite>— 코리아타임스, 2026.06.12. 시장 전문가 분석 종합</cite>
+  </blockquote>
+
+  <p>
+    실제로 한국은행과 금융감독원은 올해 <strong>14년 만에 처음</strong>으로
+    주요 외환은행을 대상으로 공동 점검을 실시했다.
+    수출기업들에게는 달러 수익을 하루빨리 원화로 환전하라는 이례적 촉구도 나왔다.
+    "말로 막던" 환율 방어가 한계에 다다른 것이다.
+  </p>
+
+  <!-- INFOGRAPHIC: 환율 추이 -->
+  <div class="chart-section">
+    <div class="chart-title">📊 원달러 환율 주요 이정표 비교</div>
+    <div class="chart-sub">단위: 원/달러 | 출처: 한국은행, 외환시장 데이터</div>
+    <div class="bar-wrapper">
+      <svg viewBox="0 0 680 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;font-family:Noto Sans KR,sans-serif;">
+        <!-- grid lines -->
+        <line x1="80" y1="20" x2="80" y2="230" stroke="#ddd" stroke-width="1"/>
+        <line x1="80" y1="230" x2="650" y2="230" stroke="#ddd" stroke-width="1"/>
+        <line x1="80" y1="70" x2="650" y2="70" stroke="#eee" stroke-width="1" stroke-dasharray="4"/>
+        <line x1="80" y1="120" x2="650" y2="120" stroke="#eee" stroke-width="1" stroke-dasharray="4"/>
+        <line x1="80" y1="170" x2="650" y2="170" stroke="#eee" stroke-width="1" stroke-dasharray="4"/>
+        <!-- Y labels -->
+        <text x="70" y="74" text-anchor="end" font-size="11" fill="#999">1,600</text>
+        <text x="70" y="124" text-anchor="end" font-size="11" fill="#999">1,500</text>
+        <text x="70" y="174" text-anchor="end" font-size="11" fill="#999">1,400</text>
+        <text x="70" y="224" text-anchor="end" font-size="11" fill="#999">1,300</text>
+
+        <!-- Bars: 각 시점별 환율 -->
+        <!-- IMF (1997): 1,695 => scale: (1695-1300)/(1700-1300)*160 = 158 => h=158, y=230-158=72 -->
+        <rect x="100" y="72" width="55" height="158" fill="#c0392b" rx="4"/>
+        <text x="127" y="67" text-anchor="middle" font-size="11" fill="#c0392b" font-weight="700">1,695</text>
+        <text x="127" y="248" text-anchor="middle" font-size="11" fill="#666">IMF</text>
+        <text x="127" y="260" text-anchor="middle" font-size="10" fill="#999">1997</text>
+
+        <!-- 금융위기 (2009): 1,549 => (1549-1300)/400*160 = 99.6 => h=100, y=130 -->
+        <rect x="185" y="130" width="55" height="100" fill="#e74c3c" rx="4"/>
+        <text x="212" y="125" text-anchor="middle" font-size="11" fill="#e74c3c" font-weight="700">1,549</text>
+        <text x="212" y="248" text-anchor="middle" font-size="11" fill="#666">금융위기</text>
+        <text x="212" y="260" text-anchor="middle" font-size="10" fill="#999">2009.3</text>
+
+        <!-- 코로나 (2020): 1,296 => (1296-1300)/400*160 = -1.6 → min 5 => h=5, y=225 -->
+        <rect x="270" y="225" width="55" height="5" fill="#95a5a6" rx="4"/>
+        <text x="297" y="218" text-anchor="middle" font-size="11" fill="#95a5a6" font-weight="700">1,296</text>
+        <text x="297" y="248" text-anchor="middle" font-size="11" fill="#666">코로나</text>
+        <text x="297" y="260" text-anchor="middle" font-size="10" fill="#999">2020.3</text>
+
+        <!-- 2022 고금리 시작: 1,440 => (1440-1300)/400*160 = 56 => h=56, y=174 -->
+        <rect x="355" y="174" width="55" height="56" fill="#e67e22" rx="4"/>
+        <text x="382" y="169" text-anchor="middle" font-size="11" fill="#e67e22" font-weight="700">1,440</text>
+        <text x="382" y="248" text-anchor="middle" font-size="11" fill="#666">미 금리역전</text>
+        <text x="382" y="260" text-anchor="middle" font-size="10" fill="#999">2022.9</text>
+
+        <!-- 2026.3 최고: 1,530 => (1530-1300)/400*160 = 92 => h=92, y=138 -->
+        <rect x="440" y="138" width="55" height="92" fill="#c0392b" rx="4"/>
+        <text x="467" y="133" text-anchor="middle" font-size="11" fill="#c0392b" font-weight="700">1,530</text>
+        <text x="467" y="248" text-anchor="middle" font-size="11" fill="#666">올 3월</text>
+        <text x="467" y="260" text-anchor="middle" font-size="10" fill="#999">2026.3</text>
+
+        <!-- 2026.6 현재: 1,519 -->
+        <rect x="525" y="143" width="55" height="87" fill="#c0392b" rx="4" opacity="0.85"/>
+        <!-- 경고 아이콘 -->
+        <polygon points="552,128 565,148 539,148" fill="#ffd700"/>
+        <text x="552" y="145" text-anchor="middle" font-size="10" fill="#1a1a2e" font-weight="700">!</text>
+        <text x="552" y="138" text-anchor="middle" font-size="11" fill="#c0392b" font-weight="700">1,519</text>
+        <text x="552" y="248" text-anchor="middle" font-size="11" fill="#c0392b" font-weight="700">현재</text>
+        <text x="552" y="260" text-anchor="middle" font-size="10" fill="#c0392b">2026.6</text>
+
+        <!-- Title -->
+        <text x="365" y="14" text-anchor="middle" font-size="13" fill="#333" font-weight="700">주요 시점별 원달러 환율 (원)</text>
+      </svg>
+    </div>
+  </div>
+
+  <!-- SECTION 2: 핵심 팩트 -->
+  <h2><span class="icon">💥</span> 숫자가 말하는 냉혹한 현실</h2>
+
+  <p>
+    환율은 '남의 이야기'처럼 들리지만, 사실은 <strong>가장 직접적인 생활 지수</strong>다.
+    한국개발연구원(KDI)에 따르면, 원달러 환율이 10% 오르면
+    소비자물가는 단기적으로 <strong>0.31%포인트</strong> 오른다.
+    지금처럼 환율이 1,300원대에서 1,520원대로 오른 건 약 17% 상승이다.
+    수학적으로만 계산해도 소비자물가는 <strong>최소 0.53%포인트 이상</strong> 환율로 올라간 셈이다.
+  </p>
+
+  <div class="highlight-box">
+    <strong>⚠️ 한국 식품제조업 원재료 수입 의존도: 약 70%</strong>
+    밀가루, 식용유, 옥수수 전분, 콩—우리 식탁의 재료 대부분이 달러로 수입된다.
+    환율이 오르면 라면 한 봉지, 두부 한 모, 식빵 한 봉지가 다 오른다.
+    이건 통계가 아니라 당신의 마트 영수증이 증명하는 사실이다.
+  </div>
+
+  <table class="impact-table">
+    <thead>
+      <tr>
+        <th>분야</th>
+        <th>환율 상승 영향</th>
+        <th>체감 강도</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>🛒 식품·생필품</td>
+        <td>수입 원재료 70% → 제조원가 직접 상승</td>
+        <td class="up">★★★★★ 즉각</td>
+      </tr>
+      <tr>
+        <td>⛽ 기름값·에너지</td>
+        <td>국제유가 100% 달러 결제 → 즉시 전가</td>
+        <td class="up">★★★★★ 즉각</td>
+      </tr>
+      <tr>
+        <td>📱 전자기기·수입품</td>
+        <td>직구·수입제품 가격 10~20% 인상</td>
+        <td class="up">★★★★☆</td>
+      </tr>
+      <tr>
+        <td>🏦 대출 이자</td>
+        <td>기준금리 인상 시 변동금리 대출자 직격</td>
+        <td class="up">★★★★☆ 7월 예정</td>
+      </tr>
+      <tr>
+        <td>✈️ 해외여행·유학</td>
+        <td>항공권·현지 체류비 17% 이상 증가</td>
+        <td class="up">★★★☆☆</td>
+      </tr>
+      <tr>
+        <td>📦 해외 주식·달러 자산 보유자</td>
+        <td>원화 환산 평가액 증가 (수혜)</td>
+        <td class="neutral">★★★☆☆ 반사이익</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- SECTION 3: 숨겨진 이면 -->
+  <h2><span class="icon">🕵️</span> 언론이 잘 안 알려주는 진짜 문제</h2>
+
+  <p>
+    고환율 뉴스는 주로 "수출 기업에 유리하다"는 식으로 보도된다.
+    삼성전자, 현대차가 달러로 번 돈을 원화로 바꾸면 더 많아지니까.
+    하지만 이건 <strong>대기업 이야기</strong>다.
+    중소기업, 자영업자, 서민 가계는 정반대 상황에 처해 있다.
+  </p>
+
+  <p>
+    특히 주목할 부분이 있다. 한국은행이 이번 달 5월 기준 국제금융·외환시장 동향을 발표하면서
+    이례적으로 <strong>"수출업체들의 달러 환전을 재촉구"</strong>했다는 대목이다.
+    대기업들이 달러를 쌓아두고 원화로 바꾸지 않고 있다는 뜻이다.
+    왜? 환율이 더 오를 것 같으니까. 이 '달러 사재기'가 시장의 달러 공급을 줄여
+    환율을 더 올리는 <strong>악순환의 고리</strong>를 만들고 있다.
+  </p>
+
+  <div class="red-box">
+    <strong>🚨 더 큰 공포: "환율 1,600원 시나리오"</strong>
+    아시아경제(2026.06.11)에 따르면, 환율이 1,600원을 돌파할 경우
+    한국은행이 기준금리를 한 번에 0.5%포인트 올리는 '빅스텝'을 단행할 가능성이 높다.
+    현재 기준금리 3.5%에서 4.0%로 직행하는 것이다.
+    <br/><br/>
+    3억 원 변동금리 주택담보대출 기준, 금리 0.5%p 인상 시
+    연간 이자 부담 <strong>약 150만 원 추가</strong> 발생.
+  </div>
+
+  <!-- SECTION 4: 나에게 미치는 영향 (인포그래픽) -->
+  <h2><span class="icon">👤</span> '나'는 지금 어떤 영향을 받고 있나</h2>
+
+  <p>
+    월급은 그대로인데 모든 것이 오르는 이 상황을 경제학에서는
+    <strong>'실질임금 하락'</strong>이라 부른다.
+    숫자상 월급은 안 줄었지만, 그 돈으로 살 수 있는 것이 줄어든다.
+    지금 한국 서민들이 정확히 그 상황에 처해 있다.
+  </p>
+
+  <!-- 생활비 충격 인포그래픽 -->
+  <div class="chart-section">
+    <div class="chart-title">💸 환율 1,300원 → 1,520원 이후 내 생활비 변화 (가상 가계 시나리오)</div>
+    <div class="chart-sub">월 생활비 300만 원 가계 기준 | 직접 영향 항목만 산출 | 추정치</div>
+    <svg viewBox="0 0 640 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:640px;font-family:Noto Sans KR,sans-serif;">
+      <!-- Background rows -->
+      <rect x="0" y="0" width="640" height="220" fill="#fafafa" rx="8"/>
+
+      <!-- Header -->
+      <rect x="0" y="0" width="640" height="36" fill="#c0392b" rx="8"/>
+      <rect x="0" y="28" width="640" height="8" fill="#c0392b"/>
+      <text x="140" y="22" text-anchor="middle" font-size="12" fill="white" font-weight="700">항목</text>
+      <text x="340" y="22" text-anchor="middle" font-size="12" fill="white" font-weight="700">1,300원 시절</text>
+      <text x="490" y="22" text-anchor="middle" font-size="12" fill="white" font-weight="700">1,520원 현재</text>
+      <text x="600" y="22" text-anchor="middle" font-size="12" fill="white" font-weight="700">증가</text>
+
+      <!-- Row 1 -->
+      <rect x="0" y="36" width="640" height="36" fill="white"/>
+      <text x="20" y="58" font-size="13" fill="#333">🛒 식료품비</text>
+      <text x="340" y="58" text-anchor="middle" font-size="13" fill="#666">50만 원</text>
+      <text x="490" y="58" text-anchor="middle" font-size="13" fill="#c0392b" font-weight="700">57만 원</text>
+      <text x="600" y="58" text-anchor="middle" font-size="13" fill="#c0392b" font-weight="700">+7만↑</text>
+
+      <!-- Row 2 -->
+      <rect x="0" y="72" width="640" height="36" fill="#fff8f8"/>
+      <text x="20" y="94" font-size="13" fill="#333">⛽ 교통·에너지</text>
+      <text x="340" y="94" text-anchor="middle" font-size="13" fill="#666">20만 원</text>
+      <text x="490" y="94" text-anchor="middle" font-size="13" fill="#c0392b" font-weight="700">24만 원</text>
+      <text x="600" y="94" text-anchor="middle" font-size="13" fill="#c0392b" font-weight="700">+4만↑</text>
+
+      <!-- Row 3 -->
+      <rect x="0" y="108" width="640" height="36" fill="white"/>
+      <text x="20" y="130" font-size="13" fill="#333">🏦 대출이자(빅스텝 후)</text>
+      <text x="340" y="130" text-anchor="middle" font-size="13" fill="#666">75만 원</text>
+      <text x="490" y="130" text-anchor="middle" font-size="13" fill="#c0392b" font-weight="700">87.5만 원</text>
+      <text x="600" y="130" text-anchor="middle" font-size="13" fill="#c0392b" font-weight="700">+12.5만↑</text>
+
+      <!-- Row 4 -->
+      <rect x="0" y="144" width="640" height="36" fill="#fff8f8"/>
+      <text x="20" y="166" font-size="13" fill="#333">📱 통신·수입품</text>
+      <text x="340" y="166" text-anchor="middle" font-size="13" fill="#666">15만 원</text>
+      <text x="490" y="166" text-anchor="middle" font-size="13" fill="#c0392b" font-weight="700">17만 원</text>
+      <text x="600" y="166" text-anchor="middle" font-size="13" fill="#c0392b" font-weight="700">+2만↑</text>
+
+      <!-- TOTAL -->
+      <rect x="0" y="180" width="640" height="40" fill="#1a1a2e" rx="0 0 8px 8px"/>
+      <rect x="0" y="180" width="640" height="40" fill="#1a1a2e"/>
+      <text x="140" y="205" text-anchor="middle" font-size="13" fill="white" font-weight="700">월 순추가 지출 합계</text>
+      <text x="490" y="205" text-anchor="middle" font-size="13" fill="#ffd700" font-weight="700">↑약 25.5만 원/월</text>
+      <text x="600" y="205" text-anchor="middle" font-size="13" fill="#ffd700" font-weight="700">연 306만↑</text>
+    </svg>
+    <p style="font-size:12px;color:#999;margin-top:10px;text-align:center;">※ 3억원 변동금리 주담대 보유, 4인 가족 기준 추정치. 개인 상황에 따라 다를 수 있음.</p>
+  </div>
+
+  <!-- SECTION 5: 전망과 행동 제안 -->
+  <h2><span class="icon">🔭</span> 앞으로 어떻게 될까 — 3가지 시나리오</h2>
+
+  <p>
+    <strong>시나리오 1 (연착륙, 확률 35%):</strong> 한국은행이 7월 0.25%p 인상에 그치고,
+    미국 연준이 하반기 금리 인하를 시작하면서 원달러는 연말 1,450원대로 안정된다.
+    생활물가는 높은 상태를 유지하지만 추가 충격은 제한적이다.
+  </p>
+  <p>
+    <strong>시나리오 2 (현상 유지, 확률 40%):</strong> 빅스텝(0.5%p) 없이 0.25%p 인상에 그치고
+    환율은 1,500~1,550원대에서 장기 고착된다. 수입물가 상승 → 물가 2%대 중반 →
+    실질임금 하락 지속의 구조가 2027년까지 이어진다.
+  </p>
+  <p>
+    <strong>시나리오 3 (최악, 확률 25%):</strong> 환율이 1,600원을 돌파하고
+    한국은행이 0.5%p 빅스텝을 단행한다. 주택담보대출 부실 우려가 커지고,
+    글로벌 투자은행들이 한국 신용등급 전망을 하향 조정할 가능성이 생긴다.
+  </p>
+
+  <h2><span class="icon">🛡️</span> 지금 당신이 할 수 있는 것들</h2>
+
+  <ul class="action-list">
+    <li>
+      <strong>변동금리 대출, 지금 점검하라.</strong>
+      7월 금통위 이전에 고정금리 전환 가능 여부를 은행에 문의.
+      전환 수수료보다 이자 폭탄이 더 클 수 있다.
+    </li>
+    <li>
+      <strong>달러 환전은 지금 당장 필요하지 않다면 보류.</strong>
+      환율이 1,520원대인 지금은 환전의 적기가 아니다.
+      시장은 단기 조정 가능성을 열어두고 있다.
+    </li>
+    <li>
+      <strong>달러·해외 자산 일부 편입을 고려.</strong>
+      장기적 관점에서 포트폴리오의 일부를 달러 자산으로 분산하는 것은
+      환율 리스크 헤지 전략이 된다. 단, 투자는 전문가와 상담 후 결정.
+    </li>
+    <li>
+      <strong>수입산 대신 국산 식품으로 대체 가능 품목 파악.</strong>
+      고환율 시대에 수입 의존도를 낮추는 소비 패턴은 생활비 절감에 실질적 효과가 있다.
+    </li>
+    <li>
+      <strong>한국은행 기준금리 결정일을 캘린더에 저장하라.</strong>
+      2026년 7월 금통위 결정이 이자, 물가, 환율 모두에 영향을 준다.
+      날짜: 2026년 7월 14일 예정.
+    </li>
+  </ul>
+
+  <!-- TAGS -->
+  <div class="tags">
+    <span class="tag">#환율1500원</span>
+    <span class="tag">#원달러환율</span>
+    <span class="tag">#고환율</span>
+    <span class="tag">#물가폭등</span>
+    <span class="tag">#금리인상</span>
+    <span class="tag">#빅스텝</span>
+    <span class="tag">#한국은행</span>
+    <span class="tag">#수입물가</span>
+    <span class="tag">#경제위기</span>
+    <span class="tag">#가계부채</span>
+    <span class="tag">#서민경제</span>
+    <span class="tag">#2026경제전망</span>
+  </div>
+
+  <!-- SOURCES -->
+  <div class="sources">
+    <h4>📎 주요 출처</h4>
+    <a href="https://www.koreatimes.co.kr/amp/economy/20260612/fx-measures-lose-punch-as-rate-hike-deemed-strongest-tool-to-stabilize-won">The Korea Times — FX measures lose punch as rate hike deemed strongest tool (2026.06.12)</a>
+    <a href="https://www.asiae.co.kr/article/2026061114342816575">아시아경제 — 환율 1600원 뚫리면 물가 폭탄…한국은행이 0.5%P 올릴까 (2026.06.11)</a>
+    <a href="https://www.koreaherald.com/article/10643590">The Korea Herald — Global investment banks raise S. Korea's 2026 inflation outlook (2026)</a>
+    <a href="https://namu.wiki/w/2025-2026%EB%85%84%20%EC%9B%90%ED%99%94%20%EA%B3%A0%ED%99%98%EC%9C%A8%20%EC%82%AC%ED%83%9C">나무위키 — 2025-2026년 원화 고환율 사태</a>
+    <a href="https://kbthink.com/investment/issues/2026-krw-usd-outlook.html">KB의 생각 — 2026 원·달러 환율 전망</a>
+    <a href="https://www.kdi.re.kr/eng/research/analysisView?art_no=3670">KDI — The Impact of Recent Exchange Rate Fluctuations on Prices</a>
+    <a href="https://m.news.nate.com/view/20260613n09227">네이트 뉴스 — 이번주 국내 주요 금융일정 (6.15~6.19)</a>
+  </div>
+
+  <!-- DISCLAIMER -->
+  <div class="disclaimer">
+    <strong>⚠️ 면책조항</strong><br />
+    본 아티클은 공개된 뉴스 자료와 통계를 바탕으로 작성된 정보성 콘텐츠입니다.
+    투자·금융 의사결정의 근거로 사용하지 마시기 바라며,
+    구체적인 투자·대출 결정은 반드시 공인 전문가와 상담 후 본인의 판단에 따라 진행하시기 바랍니다.
+    본 매체는 어떠한 금융상품도 추천하지 않습니다.
+    수치는 작성 시점 기준이며 실시간 데이터와 차이가 있을 수 있습니다.
+  </div>
+
+</div>
+
+<footer>
+  © 2026 한국이슈 탐사보도 | 무단 전재 금지 | 문의: 편집팀
+</footer>
+
+</body>
+</html>
