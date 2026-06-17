@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="전세사기 누적 피해자 3만9천명 돌파, 피해자 10명 중 8명은 청년·서민. 살던 집이 경매로 넘어가는 대한민국 전세 공화국의 민낯을 파헤친다.">
+  <meta name="keywords" content="전세사기, 깡통전세, 전세사기특별법, 청년주거, 보증금, 경매, 피해자, 부동산">
+  <title>'살던 집이 경매장에 넘어갔다' — 전세사기 3만9천 명, 피해자 76%가 청년인데 40%는 국가에 거절당했다</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', sans-serif; font-size: 17px; line-height: 1.8; background: #f8f6f2; color: #1a1a1a; }
+    .hero { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: white; padding: 60px 20px 50px; text-align: center; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(ellipse at center, rgba(229,57,53,0.15) 0%, transparent 60%); }
+    .category-badge { display: inline-block; background: #e53935; color: white; font-size: 13px; font-weight: 700; letter-spacing: 1px; padding: 6px 16px; border-radius: 20px; margin-bottom: 22px; }
+    .hero h1 { font-size: clamp(22px, 4vw, 36px); font-weight: 900; line-height: 1.4; max-width: 800px; margin: 0 auto 20px; position: relative; }
+    .hero h1 .highlight { color: #ef9a9a; }
+    .hero-sub { font-size: 15px; color: rgba(255,255,255,0.75); max-width: 600px; margin: 0 auto; }
+    .date-line { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.5); }
+    article { background: white; margin: 0 auto; max-width: 800px; padding: 48px 40px; }
+    @media (max-width: 600px) { article { padding: 28px 20px; } }
+    .hook { font-size: 19px; font-weight: 600; color: #c62828; border-left: 5px solid #e53935; padding: 20px 24px; background: #fff5f5; border-radius: 0 8px 8px 0; margin-bottom: 36px; line-height: 1.7; }
+    .summary-box { background: #1a1a2e; color: white; border-radius: 12px; padding: 28px 32px; margin-bottom: 44px; }
+    .summary-box h3 { font-size: 13px; letter-spacing: 2px; color: #ef9a9a; margin-bottom: 16px; font-weight: 700; }
+    .summary-box ul { list-style: none; padding: 0; }
+    .summary-box ul li { padding: 8px 0 8px 24px; position: relative; border-bottom: 1px solid rgba(255,255,255,0.1); font-size: 15px; line-height: 1.6; }
+    .summary-box ul li:last-child { border-bottom: none; }
+    .summary-box ul li::before { content: '▶'; position: absolute; left: 0; color: #e53935; font-size: 11px; top: 11px; }
+    h2 { font-size: 22px; font-weight: 800; color: #0f3460; margin: 44px 0 18px; padding-bottom: 10px; border-bottom: 3px solid #e53935; }
+    p { margin-bottom: 20px; color: #2d2d2d; }
+    .pull-quote { font-size: 20px; font-weight: 700; color: #c62828; text-align: center; border-top: 3px solid #e53935; border-bottom: 3px solid #e53935; padding: 24px 0; margin: 36px 0; line-height: 1.5; }
+    .infographic-section { background: #f8f6f2; border-radius: 16px; padding: 36px 28px; margin: 44px 0; }
+    .infographic-section h3 { font-size: 17px; font-weight: 800; color: #1a1a2e; margin-bottom: 28px; text-align: center; }
+    .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin-bottom: 36px; }
+    .stat-card { background: white; border-radius: 12px; padding: 22px 16px; text-align: center; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+    .stat-card .num { font-size: 32px; font-weight: 900; color: #e53935; display: block; line-height: 1; margin-bottom: 6px; }
+    .stat-card .label { font-size: 13px; color: #555; font-weight: 500; line-height: 1.4; }
+    .bar-chart { margin-bottom: 36px; }
+    .bar-chart h4 { font-size: 14px; font-weight: 700; color: #333; margin-bottom: 16px; text-align: center; }
+    .bar-row { display: flex; align-items: center; margin-bottom: 12px; gap: 12px; }
+    .bar-row .bar-label { width: 110px; font-size: 13px; color: #444; flex-shrink: 0; text-align: right; }
+    .bar-row .bar-track { flex: 1; background: #e8e8e8; border-radius: 6px; height: 28px; position: relative; overflow: hidden; }
+    .bar-row .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; justify-content: flex-end; padding-right: 8px; color: white; font-size: 12px; font-weight: 700; }
+    .bar-fill.red { background: #e53935; }
+    .bar-fill.orange { background: #fb8c00; }
+    .bar-fill.yellow { background: #f9a825; color: #333; }
+    .region-row { display: flex; align-items: center; margin-bottom: 10px; gap: 12px; }
+    .region-row .r-label { width: 80px; font-size: 13px; color: #444; flex-shrink: 0; }
+    .region-row .r-track { flex: 1; background: #e8e8e8; border-radius: 6px; height: 24px; overflow: hidden; }
+    .region-row .r-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; color: white; font-size: 12px; font-weight: 700; }
+    .highlight-box { background: #fff8e1; border: 2px solid #f9a825; border-radius: 10px; padding: 22px 26px; margin: 28px 0; }
+    .highlight-box strong { color: #e65100; }
+    .warning-box { background: #fff5f5; border-left: 5px solid #e53935; padding: 20px 24px; border-radius: 0 8px 8px 0; margin: 28px 0; }
+    .check-list { background: #e8f5e9; border-radius: 10px; padding: 24px 28px; margin: 28px 0; }
+    .check-list h4 { font-size: 16px; font-weight: 700; color: #2e7d32; margin-bottom: 14px; }
+    .check-list ul { list-style: none; }
+    .check-list ul li { padding: 6px 0 6px 28px; position: relative; font-size: 15px; color: #1b5e20; }
+    .check-list ul li::before { content: '✅'; position: absolute; left: 0; font-size: 14px; }
+    .action-box { background: linear-gradient(135deg, #0f3460, #1a1a2e); color: white; border-radius: 14px; padding: 32px 28px; margin: 36px 0; }
+    .action-box h4 { font-size: 18px; font-weight: 800; margin-bottom: 16px; color: #ef9a9a; }
+    .action-box ul { list-style: none; }
+    .action-box ul li { padding: 8px 0 8px 24px; position: relative; font-size: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .action-box ul li:last-child { border-bottom: none; }
+    .action-box ul li::before { content: '→'; position: absolute; left: 0; color: #e53935; }
+    .hashtags { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #f0f4ff; color: #1565c0; font-size: 13px; font-weight: 600; padding: 5px 13px; border-radius: 20px; }
+    .disclaimer { margin-top: 36px; padding: 16px 20px; background: #f5f5f5; border-radius: 8px; font-size: 12px; color: #777; line-height: 1.6; }
+    .sources { margin-top: 28px; font-size: 12px; color: #888; }
+    .sources h5 { font-size: 12px; font-weight: 700; color: #555; margin-bottom: 8px; }
+    .sources a { color: #1565c0; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <div class="category-badge">🏠 부동산·주거</div>
+    <h1>
+      <span class="highlight">"살던 집이 경매장에 넘어갔다"</span><br>
+      전세사기 피해자 3만9천 명<br>
+      그런데 10명 중 4명은 국가에 거절당했다
+    </h1>
+    <p class="hero-sub">피해자 76%가 40세 미만 청년인데, 신청해도 40%는 피해자 인정조차 받지 못하는 현실</p>
+    <div class="date-line">2026년 6월 17일 | 탐사보도팀</div>
+  </div>
+
+  <article>
+    <div class="hook">
+      "보증금 1억2천만 원이 사라졌습니다. 집은 경매에 넘어갔고, 저는 길거리에 나앉게 됐어요."<br>
+      — 인천에 거주하던 28세 직장인 A씨(가명)의 증언
+    </div>
+
+    <div class="summary-box">
+      <h3>📌 오늘 아티클 핵심 요약</h3>
+      <ul>
+        <li>2023년 6월 특별법 시행 이후 전세사기 피해자 누적 <strong>3만9,121명</strong> 돌파</li>
+        <li>피해자 10명 중 8명은 청년·서민 — 40세 미만이 무려 76%</li>
+        <li>피해 인정 신청을 해도 <strong>10명 중 4명(인정률 60.4%)</strong>은 거절당하는 구조</li>
+        <li>2026년 4월 특별법 개정 통과 — '선지급·후정산'·'최소보장제' 도입</li>
+        <li>하지만 실효성 논란…피해자 지원 신청 기한은 2027년 5월까지 연장</li>
+      </ul>
+    </div>
+
+    <h2>🔥 3년이 지났다, 그런데 여전히 3만9천 명이 거리에 서 있다</h2>
+    <p>전세사기는 이미 끝난 문제처럼 보인다. 뉴스에서 점점 사라졌고, 정부는 특별법을 통과시켰다고 발표했다. 그러나 숫자는 다른 이야기를 한다.</p>
+    <p>국토교통부 전세사기피해지원위원회에 따르면, 2023년 6월 특별법 시행 이후 2026년 5월 현재까지 누적 피해자 인정 건수는 <strong>3만9,121명</strong>에 달한다. 매달 수백 명씩 새로운 피해자가 추가되고 있다. 전세 계약을 맺은 집이 하루아침에 경매 물건으로 바뀌는 악몽이 지금 이 순간에도 반복되고 있다.</p>
+    <p>더 충격적인 것은 이 숫자조차 '빙산의 일각'이라는 점이다. 피해 인정을 받은 사람들만의 수치다. 신청했지만 거절당한 피해자, 아직 신청조차 못 한 피해자까지 합산하면 실제 피해 규모는 훨씬 클 것으로 추산된다.</p>
+
+    <div class="pull-quote">
+      신청해도 10명 중 4명은 "피해자 아님" 판정<br>
+      <span style="font-size:16px;font-weight:500;color:#888;">피해 인정률 60.4% — 나머지 39.6%의 고통은 어디로?</span>
+    </div>
+
+    <h2>📊 데이터가 말하는 전세사기의 실상</h2>
+    <div class="infographic-section">
+      <h3>전세사기 피해 현황 인포그래픽 (2026년 5월 기준)</h3>
+      <div class="stat-grid">
+        <div class="stat-card">
+          <span class="num">3만9천</span>
+          <span class="label">누적 피해자 수<br>(2023.06~2026.05)</span>
+        </div>
+        <div class="stat-card">
+          <span class="num">60.4%</span>
+          <span class="label">피해 인정률<br>(신청 대비)</span>
+        </div>
+        <div class="stat-card">
+          <span class="num">76%</span>
+          <span class="label">40세 미만 청년<br>피해자 비율</span>
+        </div>
+        <div class="stat-card">
+          <span class="num">97.6%</span>
+          <span class="label">보증금 3억 이하<br>서민 집중 피해</span>
+        </div>
+      </div>
+
+      <div class="bar-chart">
+        <h4>📉 피해 보증금 규모별 분포</h4>
+        <div class="bar-row">
+          <span class="bar-label">1억원 이하</span>
+          <div class="bar-track">
+            <div class="bar-fill orange" style="width:41.8%">41.8%</div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">1억~2억원</span>
+          <div class="bar-track">
+            <div class="bar-fill red" style="width:43.4%">43.4%</div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">2억~3억원</span>
+          <div class="bar-track">
+            <div class="bar-fill yellow" style="width:12.4%">12.4%</div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">3억원 초과</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:2.4%;background:#bdbdbd;color:#333">2.4%</div>
+          </div>
+        </div>
+        <p style="font-size:12px;color:#888;text-align:center;margin-top:8px;">* 전체 피해의 97.6%가 보증금 3억원 이하 — 전형적인 서민·청년 피해</p>
+      </div>
+
+      <div>
+        <h4 style="font-size:14px;font-weight:700;color:#333;margin-bottom:16px;text-align:center;">📍 피해 지역 분포</h4>
+        <div class="region-row">
+          <span class="r-label">수도권</span>
+          <div class="r-track">
+            <div class="r-fill" style="width:60.6%;background:#0f3460">60.6%</div>
+          </div>
+        </div>
+        <div class="region-row">
+          <span class="r-label">대전</span>
+          <div class="r-track">
+            <div class="r-fill" style="width:11.2%;background:#1565c0">11.2%</div>
+          </div>
+        </div>
+        <div class="region-row">
+          <span class="r-label">부산</span>
+          <div class="r-track">
+            <div class="r-fill" style="width:10.3%;background:#1976d2">10.3%</div>
+          </div>
+        </div>
+        <div class="region-row">
+          <span class="r-label">기타</span>
+          <div class="r-track">
+            <div class="r-fill" style="width:17.9%;background:#90a4ae">17.9%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2>😱 왜 청년들만 당하는가 — 전세사기의 구조적 함정</h2>
+    <p>전세사기 피해자의 80%가 2030 청년 세대다. 우연이 아니다. 구조적 문제다.</p>
+    <p>청년들은 사회에 첫발을 내딛는 순간 '전세'라는 한국 특유의 주거 제도와 맞닥뜨린다. 부모의 도움으로 모은 1억~2억 원의 보증금을 집주인에게 맡기는 행위가, 사회 초년생에게는 '저렴한 주거'처럼 보인다. 하지만 이 시스템은 처음부터 세입자에게 불리하게 설계되어 있다.</p>
+    <div class="warning-box">
+      <strong>깡통전세의 함정 구조:</strong><br>
+      집값 4억짜리 빌라 → 집주인이 주담대 2.5억 + 세입자 보증금 1.5억으로 매입 → 집값 하락 시 경매에서 2.8억에 낙찰 → 주담대 2.5억 변제 후 세입자에게 돌아오는 몫: <strong>3천만 원</strong><br>
+      세입자는 1억5천만 원을 잃는다.
+    </div>
+    <p>더 교묘한 사례도 있다. 집주인이 국세·지방세를 체납한 상태라면 경매 낙찰대금에서 세금이 먼저 변제된다. 세입자의 보증금은 세금보다도 후순위가 되어버린다. 법을 모르는 청년들은 이 사실조차 계약 전에 확인하지 못한다.</p>
+    <p>또한 빌라·오피스텔 시장에는 전문 사기단이 활동한다. 이들은 수십~수백 채를 동시에 매입해 고액의 전세를 받고 잠적하는 이른바 '빌라왕' 수법을 쓴다. 피해자 A씨는 "공인중개사도, 등기부등본도 확인했다. 그래도 당했다"고 말한다.</p>
+
+    <h2>🏛️ 특별법은 통과됐다 — 근데 실제로 도움이 됐을까?</h2>
+    <p>2023년 6월 전세사기 피해자 지원 특별법이 최초 시행됐다. 그리고 2026년 4월 23일, 3년 만에 대대적 개정안이 국회 본회의를 통과했다. 핵심은 두 가지다.</p>
+    <p><strong>① 선지급·후정산 제도 도입:</strong> 피해자가 경매 절차가 끝날 때까지 기다리지 않아도 되도록, 국가가 먼저 보증금의 일부를 지급하고 이후 경매 수익으로 정산하는 방식이다.</p>
+    <p><strong>② 최소보장제 신설:</strong> 피해자가 경매 이후에도 일정 기준에 미치지 못하는 보증금을 받는 경우, 국가가 부족분을 채워주는 제도다. '한국형 전세 피해 안전망'이 처음으로 법에 명문화됐다.</p>
+    <div class="highlight-box">
+      <strong>✅ 개정 특별법의 주요 혜택</strong><br><br>
+      • LH가 경매 낙찰 후 피해자에게 <strong>최장 10년 공공임대 무료 제공</strong><br>
+      • 선지급·후정산으로 경매 전에도 긴급 보증금 일부 수령 가능<br>
+      • 피해 인정 신청 기한: <strong>2027년 5월까지 2년 연장</strong><br>
+      • 피해지원센터 통해 예비 임차인 계약 전 상담 서비스 제공
+    </div>
+    <p>그러나 현장 피해자들의 목소리는 냉혹하다. "선지급을 받으려면 서류가 너무 복잡하다", "10년 공공임대가 내가 원하는 위치에 없다", "LH 낙찰 과정이 워낙 경쟁이 치열해 내 집을 못 사는 경우도 있다"는 불만이 이어지고 있다. 법은 통과됐지만, 피해자들의 삶이 실제로 나아지려면 제도 집행의 실효성이 담보돼야 한다는 지적이다.</p>
+
+    <h2>💥 나도 모르는 사이 '깡통전세' 피해자가 될 수 있다</h2>
+    <p>전세사기는 남의 일이 아니다. 지금 이 순간 전세 계약을 앞두고 있는 사람이라면 반드시 알아야 할 사실이 있다.</p>
+    <p>가장 위험한 신호는 <strong>'전세가율 80% 이상'</strong>이다. 집값 대비 전세보증금 비율이 80%를 넘는 경우, 집값이 조금만 하락해도 보증금 전액 회수가 불가능해진다. 2023~2025년 수도권 빌라 시장 붕괴 당시 피해자 대부분이 이 구조에 걸려들었다.</p>
+    <p>두 번째 위험 신호는 <strong>집주인의 국세·지방세 체납 여부</strong>다. 등기부등본으로는 확인이 불가능하다. 지방세 완납증명서를 집주인에게 요구해야 하지만, 많은 청년 세입자들이 "집주인에게 그걸 요구하기 어렵다"고 느끼는 심리적 장벽에 막혀 확인을 못 한다.</p>
+    <div class="check-list">
+      <h4>⚡ 전세 계약 전 반드시 확인해야 할 5가지</h4>
+      <ul>
+        <li>등기부등본 확인 — 근저당·압류·가처분 설정 여부</li>
+        <li>전세가율 확인 — 시세 대비 전세금 비율 80% 미만 여부</li>
+        <li>집주인 국세·지방세 완납증명서 요구</li>
+        <li>전세보증금 반환보증 가입 여부 확인 (HUG 또는 SGI)</li>
+        <li>최우선변제금 확인 — 지역별 소액 임차인 보호 금액 파악</li>
+      </ul>
+    </div>
+
+    <h2>🔮 전망 — 3만9천 명 이후, 다음은 누구인가?</h2>
+    <p>전세사기 피해는 앞으로도 계속될 가능성이 높다. 부동산 전문가들은 "2026~2027년 빌라·오피스텔 역전세 물량이 다시 쏟아질 것"이라고 경고한다. 2022~2023년 고점에서 전세 계약을 맺은 세입자들의 계약 만기가 돌아오기 때문이다.</p>
+    <p>특별법이 개정됐다고 해서 이 구조적 문제가 해결된 것은 아니다. 대한민국 특유의 전세 제도 자체가 '개인이 집주인에게 거액의 자금을 예치하는 고위험 구조'라는 본질적 문제를 안고 있다. 전문가들은 전세 제도의 단계적 폐지 또는 의무 보험화를 장기 해법으로 제시하지만, 정치권의 의지는 아직 요원하다.</p>
+    <p>3만9천 명이 당했다. 그리고 지금 이 순간에도 누군가는 보증금이 든 통장을 쥐고 빌라 계약서에 도장을 찍으려 하고 있다. 다음 피해자가 되지 않으려면 결국 스스로 무장해야 한다.</p>
+
+    <div class="action-box">
+      <h4>🚨 전세사기 피해자라면 지금 당장 해야 할 일</h4>
+      <ul>
+        <li>전세사기피해지원위원회 피해자 인정 신청 (신청 기한: 2027년 5월 31일까지)</li>
+        <li>피해 신청 경로: 지방자치단체 또는 전세사기피해지원위원회 온라인 신청</li>
+        <li>LH 긴급 주거 지원 신청 (경매 개시 전 신속 접수 필수)</li>
+        <li>법률 무료 지원: 대한법률구조공단 (국번 없이 132)</li>
+        <li>심리 지원: 한국심리학회 전세사기 피해 전용 상담 (1670-5724)</li>
+      </ul>
+    </div>
+
+    <div class="hashtags">
+      <span class="hashtag">#전세사기</span>
+      <span class="hashtag">#깡통전세</span>
+      <span class="hashtag">#전세사기특별법</span>
+      <span class="hashtag">#청년주거</span>
+      <span class="hashtag">#부동산사기</span>
+      <span class="hashtag">#보증금분실</span>
+      <span class="hashtag">#역전세</span>
+      <span class="hashtag">#한국부동산</span>
+      <span class="hashtag">#피해자지원</span>
+      <span class="hashtag">#빌라왕</span>
+    </div>
+
+    <div class="disclaimer">
+      ⚠️ <strong>면책 조항:</strong> 이 아티클은 공개된 통계 및 보도 자료를 기반으로 작성된 정보 제공용 콘텐츠입니다. 법적 판단이나 투자 결정의 근거로 사용하지 마시기 바랍니다. 전세사기 피해자 인정 여부 및 지원 내용은 개인 상황에 따라 다를 수 있으며, 반드시 관할 기관 또는 법률 전문가에게 확인하시기 바랍니다.
+    </div>
+
+    <div class="sources">
+      <h5>📎 주요 출처</h5>
+      <a href="https://www.reportera.co.kr/news/jeonse-fraud-victims-39000-lh-pu/">누적 피해자 3만9천명 돌파 (리포터아)</a> ·
+      <a href="https://www.ngonews.kr/news/articleView.html?idxno=230862">40세 미만 청년 76% (한국NGO신문)</a> ·
+      <a href="https://www.hankyung.com/article/202604232901i">전세사기특별법 개정 국회 통과 (한국경제)</a> ·
+      <a href="https://www.nocutnews.co.kr/news/6328930">피해자 지원 2년 연장 (노컷뉴스)</a> ·
+      <a href="https://www.m-i.kr/news/articleView.html?idxno=1379694">피해 인정률 60.4% (매일일보)</a>
+    </div>
+  </article>
+</body>
+</html>
