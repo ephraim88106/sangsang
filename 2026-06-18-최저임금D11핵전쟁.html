@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="2027년 최저임금 결정 D-11. 노동계 1만2천원 vs 경영계 동결 요구 — 100만 폐업 시대에 터진 최저임금 핵전쟁의 진실을 파헤칩니다.">
+  <meta name="keywords" content="최저임금, 2027 최저임금, 노사협상, 소상공인 폐업, 알바 해고, 키오스크, 최저임금위원회, 취업노동">
+  <meta property="og:title" content="D-11 최저임금 핵전쟁: 노동계 1만2천원 vs 경영계 동결, 100만 폐업 한국의 선택은?">
+  <meta property="og:description" content="6월 29일 심의 마감을 앞두고 노사 간 최저임금 전쟁이 최고조에 달했다. 연간 폐업자 100만 명 시대, 당신의 일자리는 안전한가?">
+  <title>D-11 최저임금 핵전쟁: 노동계 1만2천원 vs 경영계 동결, 100만 폐업 한국의 선택은?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 17px;
+      line-height: 1.8;
+      background: #fff;
+      color: #1a1a2e;
+    }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+
+    /* 헤더 */
+    .article-header {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      padding: 50px 0 40px;
+      color: #fff;
+    }
+    .category-badge {
+      display: inline-block;
+      background: #e94560;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 18px;
+      letter-spacing: 0.5px;
+    }
+    .article-title {
+      font-size: clamp(22px, 4vw, 32px);
+      font-weight: 900;
+      line-height: 1.4;
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .title-highlight { color: #f5a623; }
+    .article-subtitle {
+      font-size: 15px;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 24px;
+      word-break: keep-all;
+    }
+    .meta-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+      flex-wrap: wrap;
+    }
+    .meta-row span { display: flex; align-items: center; gap: 5px; }
+
+    /* 긴급 배너 */
+    .urgent-banner {
+      background: #e94560;
+      color: #fff;
+      text-align: center;
+      padding: 12px 20px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+    .urgent-banner strong { font-size: 16px; }
+
+    /* 본문 */
+    .article-body { padding: 44px 0; }
+    .lead-paragraph {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.9;
+      color: #1a1a2e;
+      border-left: 4px solid #e94560;
+      padding-left: 20px;
+      margin-bottom: 36px;
+      word-break: keep-all;
+    }
+
+    /* 핵심 요약 박스 */
+    .summary-box {
+      background: #f8f9ff;
+      border: 1px solid #dde3ff;
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 40px;
+    }
+    .summary-box h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #e94560;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+    .summary-list { list-style: none; }
+    .summary-list li {
+      padding: 8px 0;
+      padding-left: 28px;
+      position: relative;
+      font-size: 16px;
+      border-bottom: 1px dashed #dde3ff;
+      word-break: keep-all;
+    }
+    .summary-list li:last-child { border-bottom: none; }
+    .summary-list li::before {
+      content: '▶';
+      position: absolute;
+      left: 0;
+      color: #e94560;
+      font-size: 11px;
+      top: 12px;
+    }
+
+    /* 소제목 */
+    h2.section-title {
+      font-size: 22px;
+      font-weight: 900;
+      color: #0f3460;
+      margin: 48px 0 18px;
+      padding-bottom: 10px;
+      border-bottom: 3px solid #e94560;
+      word-break: keep-all;
+    }
+    p { margin-bottom: 18px; word-break: keep-all; }
+
+    /* 강조 인용구 */
+    .quote-block {
+      background: #0f3460;
+      color: #fff;
+      border-radius: 10px;
+      padding: 24px 28px;
+      margin: 28px 0;
+      position: relative;
+    }
+    .quote-block::before {
+      content: '"';
+      position: absolute;
+      top: -10px;
+      left: 20px;
+      font-size: 60px;
+      color: #f5a623;
+      line-height: 1;
+      font-family: Georgia, serif;
+    }
+    .quote-block p {
+      font-size: 17px;
+      font-weight: 500;
+      margin-bottom: 8px;
+      padding-top: 10px;
+    }
+    .quote-source { font-size: 13px; color: rgba(255,255,255,0.6); margin-bottom: 0; }
+
+    /* 데이터 인포그래픽 — 최저임금 추이 */
+    .infographic {
+      background: #f8f9ff;
+      border-radius: 16px;
+      padding: 32px 28px;
+      margin: 36px 0;
+      border: 1px solid #dde3ff;
+    }
+    .infographic h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #0f3460;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    /* 바 차트 */
+    .bar-chart { width: 100%; }
+    .bar-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .bar-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: #555;
+      width: 60px;
+      text-align: right;
+      flex-shrink: 0;
+    }
+    .bar-wrap {
+      flex: 1;
+      background: #e8ecf5;
+      border-radius: 6px;
+      height: 32px;
+      overflow: hidden;
+      position: relative;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      padding-left: 12px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+      transition: width 0.8s;
+    }
+    .bar-2024 { background: #4a90d9; }
+    .bar-2025 { background: #2e6fad; }
+    .bar-2026 { background: #1a5295; }
+    .bar-2027l { background: #e94560; } /* 노동계 요구 */
+    .bar-2027m { background: #888; }    /* 경영계 요구 */
+
+    /* 노사 대립 비교 */
+    .versus-box {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 0;
+      margin: 36px 0;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .vs-labor {
+      background: #e94560;
+      color: #fff;
+      padding: 24px 20px;
+    }
+    .vs-mgmt {
+      background: #0f3460;
+      color: #fff;
+      padding: 24px 20px;
+    }
+    .vs-center {
+      background: #1a1a2e;
+      color: #f5a623;
+      font-size: 26px;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 14px;
+    }
+    .vs-side-title {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+      opacity: 0.8;
+    }
+    .vs-main-num {
+      font-size: 26px;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+    .vs-detail {
+      font-size: 13px;
+      line-height: 1.6;
+      opacity: 0.85;
+    }
+
+    /* 폐업 통계 인포 */
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: 28px 0;
+    }
+    .stat-card {
+      background: #fff;
+      border: 2px solid #dde3ff;
+      border-radius: 10px;
+      padding: 18px 14px;
+      text-align: center;
+    }
+    .stat-num {
+      font-size: 26px;
+      font-weight: 900;
+      color: #e94560;
+      line-height: 1.1;
+    }
+    .stat-unit { font-size: 14px; font-weight: 500; color: #555; margin-top: 4px; }
+    .stat-desc { font-size: 12px; color: #888; margin-top: 6px; }
+
+    /* 타임라인 */
+    .timeline { margin: 28px 0; }
+    .tl-item {
+      display: flex;
+      gap: 18px;
+      margin-bottom: 18px;
+      align-items: flex-start;
+    }
+    .tl-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #e94560;
+      flex-shrink: 0;
+      margin-top: 5px;
+    }
+    .tl-dot.done { background: #888; }
+    .tl-date {
+      font-size: 13px;
+      font-weight: 700;
+      color: #0f3460;
+      width: 80px;
+      flex-shrink: 0;
+    }
+    .tl-text { font-size: 15px; }
+
+    /* 경고 박스 */
+    .warning-box {
+      background: #fff8e1;
+      border: 2px solid #f5a623;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 28px 0;
+    }
+    .warning-box h4 {
+      color: #b8860b;
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .warning-box ul { padding-left: 18px; }
+    .warning-box li { font-size: 15px; margin-bottom: 6px; }
+
+    /* 해시태그 */
+    .hashtag-section {
+      border-top: 2px solid #eee;
+      padding-top: 24px;
+      margin-top: 40px;
+    }
+    .hashtag-title { font-size: 13px; font-weight: 700; color: #888; margin-bottom: 12px; }
+    .hashtag-wrap { display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag {
+      background: #f0f4ff;
+      color: #0f3460;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 5px 12px;
+      border-radius: 20px;
+      text-decoration: none;
+    }
+    .hashtag:hover { background: #0f3460; color: #fff; }
+
+    /* 면책조항 */
+    .disclaimer {
+      background: #f5f5f5;
+      border-left: 3px solid #ccc;
+      padding: 16px 20px;
+      margin-top: 32px;
+      font-size: 13px;
+      color: #888;
+      line-height: 1.7;
+    }
+
+    /* 출처 */
+    .sources {
+      margin-top: 28px;
+      font-size: 13px;
+      color: #888;
+    }
+    .sources h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; }
+    .sources a { color: #0f3460; text-decoration: underline; word-break: break-all; }
+
+    /* 하단 */
+    footer {
+      background: #1a1a2e;
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 28px;
+      font-size: 13px;
+    }
+
+    @media(max-width: 600px) {
+      .versus-box { grid-template-columns: 1fr; }
+      .vs-center { padding: 12px; font-size: 20px; }
+      .stat-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="urgent-banner">
+  🔴 <strong>D-11 카운트다운</strong> — 2027년 최저임금 법정 심의 기한 6월 29일까지 단 11일 남았다
+</div>
+
+<header class="article-header">
+  <div class="container">
+    <span class="category-badge">💼 취업·노동</span>
+    <h1 class="article-title">
+      <span class="title-highlight">노동계 1만2천원 vs 경영계 동결</span><br>
+      폐업자 100만 시대, 최저임금 핵전쟁 D-11
+    </h1>
+    <p class="article-subtitle">
+      업종별 차등적용 오늘 부결 — 이제 '얼마로 올리나' 본게임 시작. 알바가 먼저 잘릴까, 사장님이 먼저 쓰러질까
+    </p>
+    <div class="meta-row">
+      <span>📅 2026년 6월 18일</span>
+      <span>⏱ 읽는 시간 약 7분</span>
+      <span>🔎 탐사보도팀</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <div class="article-body">
+
+      <!-- 훅 -->
+      <p class="lead-paragraph">
+        오늘 오전, 정부세종청사 최저임금위원회 제7차 전원회의장. 노사는 또 한 번 빈손으로 갈라섰다.
+        업종별 차등적용 안건이 11대 14로 부결되면서, 이제 협상의 칼날은 오로지 하나를 향한다.
+        "<strong>시급을 얼마로 정하느냐</strong>." 노동계는 1만2천원, 경영계는 동결을 외친다.
+        그리고 마감 시한은 단 11일이다.
+      </p>
+
+      <!-- 핵심 요약 -->
+      <div class="summary-box">
+        <h3>📌 이 기사의 핵심 3줄</h3>
+        <ul class="summary-list">
+          <li>노동계 2027 최저임금 요구안 <strong>시급 1만2천원</strong>(현재 대비 +16.3%) — 경영계는 사실상 동결 맞불</li>
+          <li>오늘 업종별 차등적용 표결 <strong>부결(11 vs 14)</strong>, 임금 수준 협상 본게임 돌입</li>
+          <li>2024년 폐업 자영업자 <strong>사상 첫 100만 명 돌파</strong> — 1만2천원 현실화 시 고용 충격 불가피</li>
+        </ul>
+      </div>
+
+      <!-- 섹션 1 -->
+      <h2 class="section-title">🔥 오늘 무슨 일이 있었나 — D-11 협상의 현주소</h2>
+      <p>
+        2026년 6월 18일, 최저임금위원회는 내년도(2027년 적용) 최저임금 심의의 첫 번째 고비를 넘겼다.
+        '사업의 종류별 구분 적용', 즉 업종마다 다른 최저임금을 적용하자는 경영계 안건이 표결에 부쳐졌지만
+        근로자위원 9명·공익위원 5명의 반대 14표 앞에 찬성 11표로 <strong>부결</strong>됐다.
+      </p>
+      <p>
+        이로써 2027년도 최저임금은 올해와 마찬가지로 모든 업종에 동일한 금액이 적용된다.
+        하지만 이게 끝이 아니다. 오히려 진짜 전쟁은 지금부터다.
+        위원회는 이제 임금 <strong>수준 협상</strong> 단계로 돌입했고, 법정 기한인 6월 29일까지 단 11일이 남아있다.
+      </p>
+
+      <!-- 노사 대립 박스 -->
+      <div class="versus-box">
+        <div class="vs-labor">
+          <div class="vs-side-title">⚡ 노동계 (민주노총·한국노총)</div>
+          <div class="vs-main-num">1만 2,000원</div>
+          <div class="vs-detail">
+            현재(10,320원) 대비 +16.3%<br>
+            월 환산 250만 8,000원<br>
+            "실질임금 2년 연속 감소, 더 이상 못 기다린다"
+          </div>
+        </div>
+        <div class="vs-center">VS</div>
+        <div class="vs-mgmt">
+          <div class="vs-side-title">🏢 경영계 (경총·소상공인연합)</div>
+          <div class="vs-main-num">사실상 동결</div>
+          <div class="vs-detail">
+            5년 누적 인상률 23% 이상<br>
+            "지불 능력 임계점 도달"<br>
+            음식·숙박업 별도 적용 요구
+          </div>
+        </div>
+      </div>
+
+      <!-- 섹션 2 -->
+      <h2 class="section-title">📊 숫자로 보는 최저임금의 역사 — 얼마나 올랐나</h2>
+
+      <div class="infographic">
+        <h3>📈 최저임금 시급 추이 (2024–2027년 요구안 비교)</h3>
+        <div class="bar-chart">
+          <div class="bar-item">
+            <span class="bar-label">2024년</span>
+            <div class="bar-wrap">
+              <div class="bar-fill bar-2024" style="width:76%">9,860원</div>
+            </div>
+          </div>
+          <div class="bar-item">
+            <span class="bar-label">2025년</span>
+            <div class="bar-wrap">
+              <div class="bar-fill bar-2025" style="width:79%">10,030원 (+1.7%)</div>
+            </div>
+          </div>
+          <div class="bar-item">
+            <span class="bar-label">2026년</span>
+            <div class="bar-wrap">
+              <div class="bar-fill bar-2026" style="width:81%">10,320원 (+2.9%)</div>
+            </div>
+          </div>
+          <div class="bar-item">
+            <span class="bar-label" style="color:#e94560">노동계 요구</span>
+            <div class="bar-wrap">
+              <div class="bar-fill bar-2027l" style="width:95%">12,000원 (+16.3%)</div>
+            </div>
+          </div>
+          <div class="bar-item">
+            <span class="bar-label" style="color:#888">경영계 요구</span>
+            <div class="bar-wrap">
+              <div class="bar-fill bar-2027m" style="width:82%">동결 (10,320원)</div>
+            </div>
+          </div>
+        </div>
+        <p style="font-size:12px;color:#888;margin-top:12px;margin-bottom:0;text-align:center">
+          * 2027년 수치는 노사 최초 요구안 기준. 최종 결정은 2026년 7월 예정
+        </p>
+      </div>
+
+      <p>
+        주목할 것은 격차다. 2025·2026년 두 해 동안 최저임금 인상률은 각각 1.7%와 2.9%로 저조했다.
+        노동계 입장에서 누적된 불만이 폭발한 것이다.
+        소비자물가 상승률(2024~2025년 누적 7.4%)에도 못 미치는 인상이 이어진 결과,
+        실질임금은 오히려 뒷걸음질쳤다.
+      </p>
+
+      <!-- 섹션 3 -->
+      <h2 class="section-title">💥 100만 폐업의 충격 — 자영업이 무너지고 있다</h2>
+      <p>
+        경영계의 동결 요구가 허언이 아님을 보여주는 냉혹한 숫자가 있다.
+        2024년 폐업 신고를 한 사업자 수는 무려 <strong>100만 8,282명</strong>.
+        1995년 관련 통계 집계 이후 사상 처음으로 100만 명 벽이 무너졌다.
+      </p>
+
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-num">100만</div>
+          <div class="stat-unit">+</div>
+          <div class="stat-desc">2024년 폐업 사업자 수<br>역대 최초 100만 돌파</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">40%</div>
+          <div class="stat-unit"></div>
+          <div class="stat-desc">소상공인 중<br>3년 내 폐업 비율</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">22%</div>
+          <div class="stat-unit"></div>
+          <div class="stat-desc">창업 후<br>1년 내 폐업 비율</div>
+        </div>
+      </div>
+
+      <p>
+        업종별로 보면 소매업(29.7%), 음식점업(15.2%), 부동산업(11.1%) 순이다.
+        음식점업은 경영계가 차등 적용을 가장 강하게 요구했던 바로 그 업종이다.
+        2025년 상반기 폐업은 52만3천 건으로 전년 동기 대비 9.4% 증가했고,
+        연간 110만 건 돌파가 예측되는 상황이다.
+      </p>
+
+      <div class="quote-block">
+        <p>"최저임금 인상이 자영업 폐업과 한계 노동자 일자리 감소로 이어지는 악순환을 막으려면,
+        임금 보전이라는 단편적 접근이 아니라 자영업 구조조정, 사회안전망 강화, 직업 재교육 등
+        종합적 정책 패키지가 동시에 가동돼야 한다."</p>
+        <p class="quote-source">— KDI 박지웅 연구위원</p>
+      </div>
+
+      <!-- 섹션 4 -->
+      <h2 class="section-title">🤖 숨겨진 이면 — 알바가 잘리고 기계가 들어온다</h2>
+      <p>
+        최저임금 인상의 또 다른 공포는 '키오스크 대체'다.
+        소상공인연합회 조사에서 응답자의 <strong>67.3%</strong>가 "최저임금이 5% 이상 오르면 직원을 줄이겠다"고 답했고,
+        <strong>21.8%</strong>는 아예 폐업을 고려하겠다고 밝혔다.
+      </p>
+      <p>
+        이미 패스트푸드점, 카페, 편의점, 음식점에는 키오스크와 테이블 오더가 빠르게 자리를 잡고 있다.
+        정부의 스마트상점 기술보급사업을 통해 키오스크 도입 비용 일부를 보조받을 수 있게 되면서,
+        '사람을 고용하는 것보다 기계를 들이는 게 낫다'는 계산이 사장님들 사이에 확산되고 있다.
+        최저임금 1% 인상 시 5인 미만 사업장의 연간 추가 인건비 부담은 약 280만원.
+        16.3% 인상이 현실화된다면? 연산이 거칠게 나온다.
+      </p>
+
+      <!-- 섹션 5 -->
+      <h2 class="section-title">📅 앞으로 11일 — 결전의 타임라인</h2>
+
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot done"></div>
+          <span class="tl-date">4월 21일</span>
+          <span class="tl-text">최저임금위원회 2027년 최저임금 첫 심의 개시</span>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot done"></div>
+          <span class="tl-date">6월 15일</span>
+          <span class="tl-text">노동계 공식 요구안 제출 — 시급 1만2,000원(+16.3%)</span>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot done"></div>
+          <span class="tl-date">6월 16일</span>
+          <span class="tl-text">업종별 차등적용 첫 표결 — 노사 격돌</span>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot" style="background:#f5a623"></div>
+          <span class="tl-date" style="color:#e94560">6월 18일</span>
+          <span class="tl-text"><strong>오늘 — 제7차 전원회의. 차등적용 최종 부결. 임금 수준 협상 돌입</strong></span>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot" style="background:#ccc"></div>
+          <span class="tl-date">6월 29일</span>
+          <span class="tl-text">법정 심의 기한 마감 (D-11) — 역대 기한 내 합의 극히 드묾</span>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot" style="background:#ccc"></div>
+          <span class="tl-date">7월 초 예정</span>
+          <span class="tl-text">최저임금 최종 결정 (통상 기한 후 수일 내 의결)</span>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot" style="background:#ccc"></div>
+          <span class="tl-date">2027년 1월</span>
+          <span class="tl-text">결정된 최저임금 실제 적용 개시</span>
+        </div>
+      </div>
+
+      <!-- 섹션 6: 나에게 미치는 영향 -->
+      <h2 class="section-title">💡 나에게 미치는 영향 — 알바, 사장님, 취업준비생이라면</h2>
+
+      <div class="warning-box">
+        <h4>⚠️ 시나리오별 체크리스트</h4>
+        <ul>
+          <li><strong>알바·파트타임 근로자:</strong> 시급 인상은 반가운 소식이지만, 업주가 근무시간을 줄이거나 무인화 도입 시 실수령액이 오히려 줄어들 수 있다. 계약서 재검토 권장.</li>
+          <li><strong>소상공인·자영업자:</strong> 5% 이상 인상 시 인건비 부담 급등. 인력 구성 및 무인화 전환 타당성 지금부터 시뮬레이션 필요.</li>
+          <li><strong>취업준비생:</strong> 중소기업·서비스업 채용 규모 축소 가능성. 직무 전문성과 고부가가치 역량 강화가 생존 전략.</li>
+          <li><strong>일반 소비자:</strong> 최저임금 인상 → 서비스업 가격 전가 → 외식·편의점 물가 상승 연쇄 가능성.</li>
+        </ul>
+      </div>
+
+      <p>
+        결국 이 전쟁의 본질은 단순한 숫자 싸움이 아니다.
+        "누가 한국 경제의 리스크를 더 많이 짊어져야 하는가"를 두고 벌어지는 사회적 계약의 재협상이다.
+        코로나 이후 쌓인 적자, 고금리, 내수 침체, 100만 폐업의 압박 속에서
+        사용자도, 노동자도 모두 벼랑 끝에 서 있다.
+        6월 29일, 그 벼랑에서 어떤 숫자가 나올지 — 대한민국 300만 자영업자와 700만 알바가 숨죽여 지켜보고 있다.
+      </p>
+
+      <!-- 해시태그 -->
+      <div class="hashtag-section">
+        <p class="hashtag-title">관련 태그</p>
+        <div class="hashtag-wrap">
+          <a class="hashtag" href="#">#최저임금2027</a>
+          <a class="hashtag" href="#">#시급1만2천원</a>
+          <a class="hashtag" href="#">#최저임금위원회</a>
+          <a class="hashtag" href="#">#노사협상</a>
+          <a class="hashtag" href="#">#소상공인폐업</a>
+          <a class="hashtag" href="#">#알바</a>
+          <a class="hashtag" href="#">#키오스크대체</a>
+          <a class="hashtag" href="#">#자영업</a>
+          <a class="hashtag" href="#">#취업노동</a>
+          <a class="hashtag" href="#">#한국이슈</a>
+        </div>
+      </div>
+
+      <!-- 출처 -->
+      <div class="sources">
+        <h4>📚 주요 출처</h4>
+        <p>
+          · <a href="https://www.fnnews.com/news/202606180531393815" target="_blank">파이낸셜뉴스 — 최저임금 심의기한 D-11 (2026.06.18)</a><br>
+          · <a href="https://www.fnnews.com/news/202606181927367428" target="_blank">파이낸셜뉴스 — 업종별 차등적용 불발, 임금수준 협상 단계로 (2026.06.18)</a><br>
+          · <a href="https://www.kyeonggi.com/article/20260615580679" target="_blank">경기일보 — 노동계 2027 최저임금 1만2천원 요구 (2026.06.15)</a><br>
+          · <a href="https://biz.heraldcorp.com/article/10775957" target="_blank">헤럴드경제 — 업종별 차등적용 공방 격화 (2026.06.16)</a><br>
+          · <a href="https://m.bizfocus.kr/news/newsview.php?ncode=1065591124027150" target="_blank">비즈포커스 — 1만2천원 시대 자영업자 한숨 심층분석</a><br>
+          · <a href="https://bizfocus.kr/news/newsview.php?ncode=1065608760340132&dt=m" target="_blank">비즈포커스 — 폐업자 100만 명 시대 데이터분석</a>
+        </p>
+      </div>
+
+      <!-- 면책조항 -->
+      <div class="disclaimer">
+        <strong>면책조항:</strong> 이 아티클은 공개된 뉴스·통계·보고서를 바탕으로 작성된 정보성 콘텐츠입니다.
+        최저임금 결정 사항은 최저임금위원회의 공식 의결 및 고용노동부 고시를 반드시 확인하시기 바랍니다.
+        임금 계산, 노무 관련 법적 판단은 반드시 전문 노무사 또는 고용노동부(국번 없이 1350)에 문의하십시오.
+        본 콘텐츠의 일부 수치는 보도 시점 기준이며, 협상 진행에 따라 변동될 수 있습니다.
+      </div>
+
+    </div><!-- /article-body -->
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 한국이슈 탐사보도 아티클 | 매일 오전 발행 | 2026-06-18</p>
+</footer>
+
+</body>
+</html>
