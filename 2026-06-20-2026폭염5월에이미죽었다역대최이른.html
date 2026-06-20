@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="2026년 5월 15일, 온열질환 감시 시작 첫날 80대 노인이 숨졌다. 역대 가장 이른 폭염 사망. 5년 안에 역대 최악의 폭염이 온다는 경고가 쏟아지는 지금, 한국은 과연 준비돼 있는가?">
+  <meta name="keywords" content="2026폭염, 온열질환사망, 기후위기, 한국폭염, 폭염취약계층, 에너지빈곤, 기후변화, 열사병">
+  <meta property="og:title" content="5월에 이미 사람이 죽었다 — 2026 폭염 충격 리포트">
+  <meta property="og:description" content="역대 최이른 폭염 사망자 발생. 5년 안에 최악이 온다는 경고, 지금 당신의 집은 안전한가?">
+  <title>5월에 이미 사람이 죽었다 — 2026 폭염 충격 리포트: 5년 안에 최악이 온다 | 탐사저널</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green-dark: #1a6b3a;
+      --green-mid: #2d9b5c;
+      --green-light: #e8f5ee;
+      --orange-hot: #e85d04;
+      --red-alert: #c1121f;
+      --gray-900: #111827;
+      --gray-700: #374151;
+      --gray-400: #9ca3af;
+      --gray-100: #f3f4f6;
+      --white: #ffffff;
+    }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--gray-900);
+      background: var(--white);
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+
+    /* ── 헤더 배너 ── */
+    .hero-banner {
+      background: linear-gradient(135deg, #0d3320 0%, #1a6b3a 50%, #e85d04 100%);
+      color: white;
+      padding: 48px 24px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-banner::before {
+      content: '🔥';
+      position: absolute;
+      font-size: 180px;
+      opacity: 0.08;
+      top: -20px; right: -20px;
+    }
+    .category-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.4);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 20px;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+    .hero-title {
+      font-size: clamp(26px, 5vw, 38px);
+      font-weight: 900;
+      line-height: 1.3;
+      margin-bottom: 16px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .hero-title em {
+      color: #ffd166;
+      font-style: normal;
+    }
+    .hero-subtitle {
+      font-size: 15px;
+      opacity: 0.85;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .hero-meta {
+      margin-top: 20px;
+      font-size: 13px;
+      opacity: 0.7;
+    }
+
+    /* ── 경보 배너 ── */
+    .alert-box {
+      background: #fff3cd;
+      border-left: 5px solid var(--orange-hot);
+      padding: 16px 20px;
+      margin: 28px 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .alert-box strong { color: var(--orange-hot); }
+
+    /* ── 요약 카드 ── */
+    .summary-card {
+      background: var(--green-light);
+      border: 1px solid #b7dfca;
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin: 28px 0;
+    }
+    .summary-card h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+    .summary-card ul {
+      list-style: none;
+      padding: 0;
+    }
+    .summary-card ul li {
+      padding: 6px 0;
+      padding-left: 24px;
+      position: relative;
+      font-size: 15px;
+      border-bottom: 1px dashed #b7dfca;
+    }
+    .summary-card ul li:last-child { border-bottom: none; }
+    .summary-card ul li::before {
+      content: '🌡️';
+      position: absolute; left: 0;
+      font-size: 13px;
+    }
+
+    /* ── 본문 ── */
+    article {
+      margin-top: 12px;
+    }
+    h2 {
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--green-dark);
+      margin: 40px 0 14px;
+      padding-left: 14px;
+      border-left: 5px solid var(--green-mid);
+    }
+    p {
+      margin-bottom: 18px;
+      color: var(--gray-700);
+    }
+    .highlight-text {
+      background: linear-gradient(180deg, transparent 60%, #ffd16680 60%);
+      font-weight: 700;
+    }
+    .fact-box {
+      background: #fff5f5;
+      border: 1px solid #fecaca;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 24px 0;
+    }
+    .fact-box .fact-num {
+      font-size: 38px;
+      font-weight: 900;
+      color: var(--red-alert);
+      line-height: 1;
+    }
+    .fact-box .fact-label {
+      font-size: 14px;
+      color: var(--gray-700);
+      margin-top: 4px;
+    }
+
+    /* ── 인포그래픽 ── */
+    .infographic {
+      background: var(--gray-900);
+      color: white;
+      border-radius: 16px;
+      padding: 28px 24px;
+      margin: 32px 0;
+    }
+    .infographic h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #ffd166;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .bar-chart {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .bar-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .bar-label {
+      font-size: 13px;
+      width: 90px;
+      flex-shrink: 0;
+      text-align: right;
+      color: #d1d5db;
+    }
+    .bar-track {
+      flex: 1;
+      background: rgba(255,255,255,0.1);
+      border-radius: 4px;
+      height: 28px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      color: white;
+      transition: width 1s ease;
+    }
+    .bar-2022 { background: #4ade80; width: 16%; }
+    .bar-2023 { background: #facc15; width: 32%; }
+    .bar-2024 { background: #f97316; width: 100%; }
+    .bar-2025 { background: #ef4444; width: 83%; }
+    .bar-2026 { background: #dc2626; width: 110%; animation: pulse 1.5s infinite; }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin: 28px 0;
+    }
+    .stat-card {
+      background: var(--green-light);
+      border-radius: 12px;
+      padding: 20px 16px;
+      text-align: center;
+      border: 1px solid #b7dfca;
+    }
+    .stat-card .num {
+      font-size: 32px;
+      font-weight: 900;
+      color: var(--orange-hot);
+      line-height: 1.1;
+    }
+    .stat-card .unit { font-size: 14px; color: var(--green-dark); font-weight: 700; }
+    .stat-card .desc { font-size: 13px; color: var(--gray-700); margin-top: 6px; }
+
+    /* 취약계층 SVG 차트 */
+    .vuln-chart {
+      background: #f8fafc;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 24px 0;
+      border: 1px solid #e2e8f0;
+    }
+    .vuln-chart h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    /* 에너지바우처 표 */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 15px;
+    }
+    th {
+      background: var(--green-dark);
+      color: white;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 700;
+    }
+    td {
+      padding: 11px 16px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    tr:nth-child(even) td { background: var(--green-light); }
+    tr:hover td { background: #d1fae5; }
+
+    /* 전망 박스 */
+    .outlook-box {
+      background: linear-gradient(135deg, #1a6b3a 0%, #0d3320 100%);
+      color: white;
+      border-radius: 16px;
+      padding: 28px 24px;
+      margin: 32px 0;
+    }
+    .outlook-box h3 {
+      font-size: 18px;
+      font-weight: 900;
+      color: #ffd166;
+      margin-bottom: 16px;
+    }
+    .outlook-box ul {
+      list-style: none;
+      padding: 0;
+    }
+    .outlook-box ul li {
+      padding: 8px 0 8px 28px;
+      position: relative;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      font-size: 15px;
+      opacity: 0.9;
+    }
+    .outlook-box ul li::before {
+      content: '▶';
+      position: absolute; left: 0;
+      color: #ffd166;
+      font-size: 11px;
+      top: 11px;
+    }
+    .outlook-box ul li:last-child { border-bottom: none; }
+
+    /* 해시태그 */
+    .hashtags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 32px 0 20px;
+    }
+    .tag {
+      background: var(--green-light);
+      color: var(--green-dark);
+      border: 1px solid #b7dfca;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    /* 출처 */
+    .sources {
+      background: var(--gray-100);
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin-top: 32px;
+    }
+    .sources h4 {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gray-400);
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+    .sources ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sources ul li {
+      font-size: 12px;
+      color: var(--gray-400);
+      padding: 3px 0;
+    }
+    .sources ul li a {
+      color: var(--green-mid);
+      text-decoration: none;
+    }
+    .sources ul li a:hover { text-decoration: underline; }
+
+    /* 면책조항 */
+    .disclaimer {
+      font-size: 12px;
+      color: var(--gray-400);
+      border-top: 1px solid #e5e7eb;
+      padding-top: 16px;
+      margin-top: 24px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 480px) {
+      .hero-title { font-size: 24px; }
+      h2 { font-size: 19px; }
+      .stat-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- 히어로 배너 -->
+<div class="hero-banner">
+  <div class="category-badge">🌱 환경·기후</div>
+  <h1 class="hero-title">
+    <em>5월에 이미 사람이 죽었다</em><br>
+    2026 폭염 충격 리포트:<br>
+    "5년 안에 역대 최악이 온다"
+  </h1>
+  <p class="hero-subtitle">온열질환 감시 시작 첫날 80대 노인 사망 — 역대 최이른 기록. 한반도 온난화 속도는 세계 평균의 2배, 당신의 집은 안전한가?</p>
+  <p class="hero-meta">2026년 6월 20일 | 탐사저널 기후팀</p>
+</div>
+
+<div class="container">
+
+  <div class="alert-box">
+    ⚠️ <strong>속보:</strong> 2026년 5월 15일, 질병관리청이 온열질환 응급실 감시체계를 시작한 첫날, 서울의 80대 남성이 열사병으로 숨졌다. 역대 가장 이른 폭염 사망 기록이다. 그날 폭염특보는 없었다.
+  </div>
+
+  <!-- 핵심 요약 -->
+  <div class="summary-card">
+    <h3>📌 이 기사의 핵심 3줄</h3>
+    <ul>
+      <li>2026년 폭염 첫 사망, 역대 최이른 5월 15일 — 폭염특보 없는 날 숨졌다</li>
+      <li>한반도 온난화 속도 세계 평균의 2배, 5년 내 "역대 최악" 폭염 경고 현실화 중</li>
+      <li>에어컨 없는 에너지 빈곤층 120만 가구, 폭염은 재난이 아닌 '계급전쟁'이다</li>
+    </ul>
+  </div>
+
+  <article>
+
+    <!-- 섹션 1 -->
+    <h2>🔥 폭염특보도 없던 날, 노인이 죽었다</h2>
+    <p>
+      2026년 5월 15일 오후. 서울의 낮 최고기온은 31.3도. 폭염특보는 없었다. 하지만 그날, 80대 남성 한 명이 열사병 의심 증상으로 응급실에 이송된 뒤 숨을 거뒀다.
+    </p>
+    <p>
+      질병관리청의 온열질환 응급실 감시체계가 가동을 시작한 바로 <span class="highlight-text">첫날의 일</span>이었다. 기록이 시작되자마자 사망자가 나왔다. 2011년 감시체계 도입 이래 <span class="highlight-text">역대 가장 이른 첫 사망자</span>다. 작년(2025년)의 첫 사망일보다 보름 이상 빠르다.
+    </p>
+    <p>
+      우리가 "여름이 아직 멀었다"고 생각하는 5월, 이미 폭염은 사람을 죽이기 시작했다. 그리고 더 나쁜 소식이 있다. 2026년 여름은 아직 시작도 안 됐다.
+    </p>
+
+    <div class="fact-box">
+      <div style="display:flex; gap:32px; flex-wrap:wrap;">
+        <div>
+          <div class="fact-num">5.15</div>
+          <div class="fact-label">역대 가장 이른 온열질환 첫 사망일 (2026년)</div>
+        </div>
+        <div>
+          <div class="fact-num">31.3°C</div>
+          <div class="fact-label">사망 당일 서울 최고기온 (폭염특보 없음)</div>
+        </div>
+        <div>
+          <div class="fact-num">7명</div>
+          <div class="fact-label">5월 16일 기준 누적 온열질환자 수</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 섹션 2 -->
+    <h2>📈 "5년 안에 역대 최악" — 경고가 현실이 되고 있다</h2>
+    <p>
+      2026년 5월 28일, YTN은 기상 전문가 분석을 인용해 충격적인 경고를 보도했다. <span class="highlight-text">"한반도는 5년 안에 역대 최악의 폭염을 경험할 가능성이 매우 높다."</span> 단순한 경고가 아니다. 이미 데이터가 이를 뒷받침하고 있다.
+    </p>
+    <p>
+      기상청이 발표한 2026년 연 기후전망에 따르면, 올해 평균기온이 평년보다 높을 확률은 <strong>70%</strong>에 달한다. 우리나라 주변 해수면 온도가 평년보다 높을 확률은 <strong>80%</strong>다. 바다가 더워지면 대기도 더워진다. 이게 폭염 지속의 원리다.
+    </p>
+    <p>
+      제주도의 폭염일수 변화가 특히 충격적이다. 2023년 7일에 불과했던 폭염일수가 2024년엔 무려 21.3일로 3배 이상 폭증했다. 2025년엔 17.8일로 소폭 줄었지만, 여전히 평년의 4배다. 제주도에서 이 정도라면, 내륙 도시의 현실은 더욱 가혹하다.
+    </p>
+
+    <!-- 인포그래픽: 제주 폭염일수 -->
+    <div class="infographic">
+      <h3>📊 제주도 연도별 폭염일수 변화</h3>
+      <div class="bar-chart">
+        <div class="bar-row">
+          <div class="bar-label">2022년</div>
+          <div class="bar-track"><div class="bar-fill bar-2022">4.5일</div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">2023년</div>
+          <div class="bar-track"><div class="bar-fill bar-2023">7.0일</div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">2024년</div>
+          <div class="bar-track"><div class="bar-fill bar-2024">21.3일 ▲3배</div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">2025년</div>
+          <div class="bar-track"><div class="bar-fill bar-2025">17.8일</div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">2026년 예상</div>
+          <div class="bar-track"><div class="bar-fill bar-2026">역대 최고 경고 🚨</div></div>
+        </div>
+      </div>
+      <p style="color:#9ca3af; font-size:12px; margin-top:16px; text-align:center;">※ 2026년은 기상청 전망 기준 추정치 | 평년 폭염일수: 약 5일</p>
+    </div>
+
+    <!-- 섹션 3 -->
+    <h2>🌍 한반도만 유독 빠르게 뜨거워지는 이유</h2>
+    <p>
+      기후 전문가들이 공통적으로 지적하는 사실이 있다. <span class="highlight-text">한반도의 온난화 속도는 세계 평균의 약 2배</span>다. 서울 기상대가 관측을 시작한 1907년 이래 한반도 평균기온은 약 1.8도 상승했는데, 같은 기간 전 지구 평균 상승폭(약 1.1도)의 두 배에 가깝다.
+    </p>
+    <p>
+      그 이유는 복합적이다. 한반도를 둘러싼 서해·남해·동해의 해수면 온도가 세계 평균보다 빠르게 상승하고 있다. 기상청에 따르면 2026년 주변 해역 해수면 온도가 평년보다 높을 확률이 무려 80%다. 바다가 열을 흡수하고 방출하면서 한반도의 폭염을 증폭시킨다.
+    </p>
+    <p>
+      또한 급격한 도시화로 인한 열섬효과도 심각하다. 서울 도심은 외곽 지역보다 최대 5~7도 더 뜨겁다. 콘크리트와 아스팔트가 낮에 열을 흡수했다가 밤새 방출하면서 열대야를 만든다. 북인도양과 북태평양 고수온 현상이 한반도 동쪽에 고기압성 순환을 강화하고, 이것이 열대의 뜨거운 공기를 한반도로 끌어당긴다.
+    </p>
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="num">2배</div>
+        <div class="unit">온난화 속도</div>
+        <div class="desc">한반도 온난화 속도, 세계 평균의 2배</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">+1.8°C</div>
+        <div class="unit">기온 상승</div>
+        <div class="desc">1907년 대비 한반도 평균기온 상승폭</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">70%</div>
+        <div class="unit">확률</div>
+        <div class="desc">2026년 기온 평년보다 높을 확률 (기상청)</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">34.2°C</div>
+        <div class="unit">6월 비공식 최고</div>
+        <div class="desc">2026년 6월 13일 경북 경산 기록</div>
+      </div>
+    </div>
+
+    <!-- 섹션 4: 숨겨진 이면 -->
+    <h2>💔 폭염은 평등하지 않다 — 에너지 빈곤층의 죽음</h2>
+    <p>
+      2026년 폭염 첫 사망자는 왜 80대 노인이었을까. 우연이 아니다. 폭염은 계급을 가린다. 정확히는 <span class="highlight-text">가난한 사람, 늙은 사람, 혼자 사는 사람을 먼저 죽인다.</span>
+    </p>
+    <p>
+      온열질환 사망자의 상당수가 농업 현장에서 발생하며, 실내에서 사망하는 경우도 많다. 에어컨이 없거나 전기요금이 무서워 틀지 못하는 가정에서 발생하는 것이다. 보건복지부 추산에 따르면 에너지 빈곤 가구는 전국 약 120만 가구에 달한다. 이 중 상당수는 냉방 기기 자체가 없거나, 있어도 전기요금 부담으로 사용을 자제한다.
+    </p>
+    <p>
+      특히 고령 독거 노인 가구가 취약하다. 이들은 신체적으로 열 조절 능력이 떨어지는 데다, 사회적으로 단절되어 있어 폭염에 쓰러져도 발견이 늦다. 기후변화는 이들에게 '기후 재난'이 아닌 <span class="highlight-text">'조용한 고독사'</span>로 찾아온다.
+    </p>
+
+    <!-- 도넛 차트 SVG: 온열질환 발생 장소 -->
+    <div class="vuln-chart">
+      <h4>온열질환 사망 취약 요인 (2026년 기준)</h4>
+      <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:400px; display:block; margin:0 auto;">
+        <!-- 도넛 차트 -->
+        <circle cx="120" cy="110" r="70" fill="none" stroke="#e5e7eb" stroke-width="30"/>
+        <!-- 65세 이상 45% -->
+        <circle cx="120" cy="110" r="70" fill="none" stroke="#dc2626" stroke-width="30"
+          stroke-dasharray="197.9 439.8" stroke-dashoffset="109.9" transform="rotate(-90 120 110)"/>
+        <!-- 농업현장 24% -->
+        <circle cx="120" cy="110" r="70" fill="none" stroke="#f97316" stroke-width="30"
+          stroke-dasharray="105.6 532.1" stroke-dashoffset="-88" transform="rotate(-90 120 110)"/>
+        <!-- 실내 무에어컨 31% -->
+        <circle cx="120" cy="110" r="70" fill="none" stroke="#facc15" stroke-width="30"
+          stroke-dasharray="136.3 501.5" stroke-dashoffset="-193.6" transform="rotate(-90 120 110)"/>
+        <text x="120" y="104" text-anchor="middle" font-size="12" fill="#374151" font-weight="700">사망</text>
+        <text x="120" y="120" text-anchor="middle" font-size="12" fill="#374151" font-weight="700">취약군</text>
+        <!-- 범례 -->
+        <rect x="210" y="60" width="14" height="14" rx="3" fill="#dc2626"/>
+        <text x="230" y="72" font-size="13" fill="#374151">65세 이상 고령자 (45%)</text>
+        <rect x="210" y="84" width="14" height="14" rx="3" fill="#f97316"/>
+        <text x="230" y="96" font-size="13" fill="#374151">농업·야외작업자 (24%)</text>
+        <rect x="210" y="108" width="14" height="14" rx="3" fill="#facc15"/>
+        <text x="230" y="120" font-size="13" fill="#374151">실내 냉방 부재 (31%)</text>
+        <text x="210" y="155" font-size="11" fill="#9ca3af">※ 온열질환 통계 종합 추정치</text>
+      </svg>
+    </div>
+
+    <!-- 섹션 5: 나에게 미치는 영향 -->
+    <h2>🏠 나에게 직접 미치는 영향 — 지금 당장 확인하세요</h2>
+    <p>
+      2026년 정부는 에너지바우처 제도를 개편해 취약계층 지원을 확대했다. 특히 올해부터 <span class="highlight-text">계절 사용 제한이 폐지</span>됐다. 기존엔 여름 냉방비와 겨울 난방비로 나뉘었지만, 이제 연간 지원금 전액을 냉방에만 써도 된다. 폭염이 길어질수록 이 변화는 생존과 직결된다.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>가구 규모</th>
+          <th>2026년 에너지바우처 지원액</th>
+          <th>주요 변화</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1인 가구</td>
+          <td><strong>295,200원</strong></td>
+          <td rowspan="4">계절 사용 제한 폐지<br>전액 냉방비 사용 가능<br>현금 지원·보일러 교체 신설</td>
+        </tr>
+        <tr>
+          <td>2인 가구</td>
+          <td><strong>400,800원</strong></td>
+        </tr>
+        <tr>
+          <td>3인 가구</td>
+          <td><strong>566,700원</strong></td>
+        </tr>
+        <tr>
+          <td>4인 이상</td>
+          <td><strong>701,300원</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      신청 대상은 국민기초생활수급자(생계·의료·주거·교육 급여) 중 세대원에 65세 이상 노인, 7세 이하 영유아, 장애인, 임산부, 중증·희귀·난치질환자 중 한 명이라도 있는 경우다. <strong>복지로(bokjiro.go.kr)</strong>에서 온라인 신청 가능하다.
+    </p>
+
+    <div class="alert-box">
+      💡 <strong>지금 당장 확인하세요:</strong> 주변에 혼자 사는 어르신이 있다면, 올여름 "에어컨 있어요?" 한 마디가 생사를 가를 수 있습니다. 지자체 돌봄 서비스 연결은 동 주민센터에 요청하세요. 쿨링센터(무더위 쉼터) 위치는 안전디딤돌 앱에서 확인.
+    </div>
+
+    <!-- 섹션 6: 전망 -->
+    <div class="outlook-box">
+      <h3>📡 2026년 여름 전망 & 행동 제안</h3>
+      <ul>
+        <li>기상청 공식 전망: 6~8월 기온 평년 이상 확률 60~70%, 폭염·열대야 일수 증가 예상</li>
+        <li>"5년 내 역대 최악 폭염" 경고 — 기후전문가 공통 견해, 2018년 수준 이상 가능성</li>
+        <li>개인 대응: 폭염특보 없는 날도 30도 이상이면 외출 자제, 수분 30분마다 보충</li>
+        <li>가정 대응: 단열 커튼·차열 필름 설치로 실내온도 3~5도 낮출 수 있음</li>
+        <li>정책 요구: 취약계층 방문 냉방 지원 확대, 쿨링센터 접근성 개선 시급</li>
+        <li>장기 과제: 탄소중립 2050 가속화 없이는 '2030년 6월 사망' 뉴스가 반복됨</li>
+      </ul>
+    </div>
+
+  </article>
+
+  <!-- 해시태그 -->
+  <div class="hashtags">
+    <span class="tag">#2026폭염</span>
+    <span class="tag">#기후위기</span>
+    <span class="tag">#온열질환</span>
+    <span class="tag">#역대최이른사망</span>
+    <span class="tag">#에너지빈곤</span>
+    <span class="tag">#취약계층폭염</span>
+    <span class="tag">#한반도온난화</span>
+    <span class="tag">#에너지바우처</span>
+    <span class="tag">#기후불평등</span>
+    <span class="tag">#폭염대책</span>
+    <span class="tag">#열사병</span>
+    <span class="tag">#독거노인</span>
+  </div>
+
+  <!-- 출처 -->
+  <div class="sources">
+    <h4>📎 주요 출처</h4>
+    <ul>
+      <li><a href="https://namu.wiki/w/2026%EB%85%84%20%ED%8F%AD%EC%97%BC">나무위키 — 2026년 폭염</a></li>
+      <li><a href="https://govinfo.co.kr/2026-heat-illness-prevention-guide/">정책한입 — 2026 온열질환 예방 총정리</a></li>
+      <li><a href="https://www.ytn.co.kr/_ln/0108_202605281720174543">YTN — "5년 내 역대 최악의 더위 덥친다" (2026.05.28)</a></li>
+      <li><a href="https://www.kma.go.kr/kma/news/press.jsp?bid=press&mode=view&num=1194591">기상청 — 2026년 연 기후전망 발표</a></li>
+      <li><a href="https://ourbluedot.or.kr/posts/jdtdyLK">공익연구센터 블루닷 — 온열질환 데이터 읽기</a></li>
+      <li><a href="https://www.skenews.kr/news/articleView.html?idxno=52309">산경e뉴스 — 2026 에너지바우처 폭염·한파 대응</a></li>
+      <li><a href="https://www.news1.kr/economy/trend/6200255">뉴스1 — 온열질환 사망자 24% 농업 현장 발생</a></li>
+      <li><a href="https://m.go.seoul.co.kr/news/society/2026/05/29/20260529008006">서울신문 — 2배 빠른 K온난화 (2026.05.29)</a></li>
+    </ul>
+  </div>
+
+  <p class="disclaimer">
+    ※ 본 아티클은 공개된 뉴스, 기상청 발표, 정부 정책 자료를 바탕으로 작성된 저널리즘 콘텐츠입니다. 개별 의료·법적·재정적 판단은 전문가와 상담하시기 바랍니다. 통계 수치는 작성 시점 기준이며 이후 변동될 수 있습니다. 이 기사가 도움이 됐다면 주변에 공유해 주세요 — 특히 혼자 사는 어르신 가족이 있는 분들께.
+  </p>
+
+</div><!-- /container -->
+</body>
+</html>
