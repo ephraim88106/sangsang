@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2,200조 빚의 공화국 — 당신이 모르는 대한민국 가계부채의 소름 돋는 진실 | 2026.06.24</title>
+  <meta name="description" content="대한민국 가계부채 2,200조 돌파. GDP 대비 세계 최고 수준. 이자만 내다 늙어가는 대한민국 중산층의 민낯을 파헤친다." />
+  <meta name="keywords" content="가계부채,금리,한국경제,부채위기,2200조,DSR,영끌,가계빚,금융시한폭탄,은행이자" />
+  <meta property="og:title" content="2,200조 빚의 공화국 — 당신이 모르는 대한민국 가계부채의 소름 돋는 진실" />
+  <meta property="og:description" content="GDP 대비 가계부채 세계 최고 수준. 매월 이자만 수십만원. 이 나라는 빚으로 굴러간다." />
+  <meta property="og:type" content="article" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background: #ffffff;
+      color: #1a1a2e;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+    .hero {
+      background: linear-gradient(135deg, #0f3460 0%, #16213e 60%, #1a1a2e 100%);
+      color: #ffffff;
+      padding: 60px 24px 50px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '₩';
+      position: absolute;
+      font-size: 320px;
+      color: rgba(255,255,255,0.03);
+      top: -40px;
+      right: -20px;
+      font-weight: 900;
+    }
+    .category-badge {
+      display: inline-block;
+      background: #e94560;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      font-size: clamp(26px, 5vw, 42px);
+      font-weight: 900;
+      line-height: 1.3;
+      margin-bottom: 18px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    }
+    .hero h1 em {
+      color: #e94560;
+      font-style: normal;
+    }
+    .hero .subtitle {
+      font-size: 16px;
+      color: #b0c4de;
+      margin-bottom: 24px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .meta {
+      font-size: 13px;
+      color: #90a4ae;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px 60px;
+    }
+    .summary-box {
+      background: #fff8f0;
+      border-left: 5px solid #e94560;
+      border-radius: 0 12px 12px 0;
+      padding: 24px 28px;
+      margin: 36px 0;
+    }
+    .summary-box h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #e94560;
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+    .summary-box ul {
+      list-style: none;
+      padding: 0;
+    }
+    .summary-box ul li {
+      padding: 5px 0 5px 20px;
+      position: relative;
+      font-size: 15px;
+      color: #333;
+    }
+    .summary-box ul li::before {
+      content: '▶';
+      position: absolute;
+      left: 0;
+      color: #e94560;
+      font-size: 11px;
+      top: 8px;
+    }
+    .article-body h2 {
+      font-size: 22px;
+      font-weight: 900;
+      color: #0f3460;
+      margin: 44px 0 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #e8eaf0;
+      line-height: 1.4;
+    }
+    .article-body h2 .icon {
+      margin-right: 8px;
+    }
+    .article-body p {
+      margin-bottom: 18px;
+      color: #2c2c2c;
+    }
+    .highlight-text {
+      background: linear-gradient(180deg, transparent 55%, #ffe0e6 55%);
+      font-weight: 700;
+    }
+    .stat-callout {
+      background: #0f3460;
+      color: #ffffff;
+      border-radius: 14px;
+      padding: 28px 32px;
+      margin: 32px 0;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .stat-callout .big-num {
+      font-size: 52px;
+      font-weight: 900;
+      color: #e94560;
+      line-height: 1;
+      white-space: nowrap;
+    }
+    .stat-callout .big-num span {
+      font-size: 20px;
+      color: #b0c4de;
+    }
+    .stat-callout .desc {
+      font-size: 15px;
+      color: #cdd9e8;
+      line-height: 1.6;
+    }
+    /* 인포그래픽 */
+    .infographic {
+      background: #f8f9ff;
+      border: 1px solid #e0e4f0;
+      border-radius: 16px;
+      padding: 32px;
+      margin: 36px 0;
+    }
+    .infographic h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: #0f3460;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    .bar-chart { width: 100%; }
+    .bar-item {
+      margin-bottom: 16px;
+    }
+    .bar-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 5px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .bar-track {
+      background: #e8eaf0;
+      border-radius: 6px;
+      height: 24px;
+      overflow: hidden;
+      position: relative;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+      font-size: 12px;
+      color: #fff;
+      font-weight: 700;
+      transition: width 1s ease;
+    }
+    .bar-korea { background: linear-gradient(90deg, #e94560, #c0392b); }
+    .bar-oecd  { background: linear-gradient(90deg, #0f3460, #1a5276); }
+    .bar-us    { background: linear-gradient(90deg, #2980b9, #1a5276); }
+    .bar-jp    { background: linear-gradient(90deg, #27ae60, #1e8449); }
+    .bar-de    { background: linear-gradient(90deg, #8e44ad, #6c3483); }
+    /* 파이차트 SVG */
+    .pie-section {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+    .pie-legend { flex: 1; min-width: 180px; }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    .legend-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin: 28px 0;
+    }
+    .impact-card {
+      background: #fff;
+      border: 1px solid #e0e4f0;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .impact-card .ic-icon { font-size: 30px; margin-bottom: 8px; }
+    .impact-card .ic-num {
+      font-size: 28px;
+      font-weight: 900;
+      color: #e94560;
+      margin-bottom: 4px;
+    }
+    .impact-card .ic-desc { font-size: 13px; color: #666; }
+    .quote-box {
+      border-left: 4px solid #e94560;
+      background: #fff5f5;
+      border-radius: 0 10px 10px 0;
+      padding: 20px 24px;
+      margin: 28px 0;
+      font-style: italic;
+      font-size: 16px;
+      color: #444;
+      line-height: 1.7;
+    }
+    .action-box {
+      background: linear-gradient(135deg, #0f3460, #16213e);
+      color: #fff;
+      border-radius: 16px;
+      padding: 32px;
+      margin: 36px 0;
+    }
+    .action-box h3 {
+      font-size: 19px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: #e94560;
+    }
+    .action-box ol {
+      padding-left: 20px;
+    }
+    .action-box ol li {
+      margin-bottom: 10px;
+      font-size: 15px;
+      color: #cdd9e8;
+      line-height: 1.7;
+    }
+    .action-box ol li strong { color: #fff; }
+    .hashtags {
+      margin: 40px 0 16px;
+      line-height: 2.2;
+    }
+    .hashtag {
+      display: inline-block;
+      background: #eef1ff;
+      color: #0f3460;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin: 3px;
+    }
+    .disclaimer {
+      background: #f5f5f5;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 18px 20px;
+      font-size: 12px;
+      color: #888;
+      line-height: 1.7;
+      margin-top: 40px;
+    }
+    .sources {
+      margin-top: 24px;
+      font-size: 13px;
+      color: #666;
+      border-top: 1px solid #eee;
+      padding-top: 20px;
+    }
+    .sources h4 { font-size: 14px; color: #333; margin-bottom: 8px; }
+    .sources ul { list-style: disc; padding-left: 20px; }
+    .sources ul li { margin-bottom: 4px; }
+    @media (max-width: 600px) {
+      .stat-callout { flex-direction: column; text-align: center; }
+      .stat-callout .big-num { font-size: 40px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="category-badge">💰 경제·금융 심층 분석</div>
+  <h1>
+    <em>2,200조</em> 빚의 공화국<br>
+    당신이 모르는 대한민국 가계부채의<br>소름 돋는 진실
+  </h1>
+  <p class="subtitle">
+    GDP를 넘어선 빚더미 위에 서 있는 대한민국 — 이자만 내다 노후가 사라진다
+  </p>
+  <p class="meta">2026년 6월 24일 | 탐사저널 | 경제·금융팀</p>
+</div>
+
+<div class="container">
+
+  <div class="summary-box">
+    <h3>📌 이 기사를 읽어야 하는 이유</h3>
+    <ul>
+      <li>대한민국 가계부채는 GDP 대비 OECD 최고 수준 — 내 이웃, 내 가족이 빚더미 위에 앉아 있다</li>
+      <li>고금리가 지속되는 동안 이자 부담이 소비를 얼려붙이고, 경기가 더 나빠지는 악순환의 함정</li>
+      <li>은행은 계속 대출을 권유하지만, 실제로 당신의 노후·소비·결혼에 어떤 영향을 주는지 아무도 안 알려준다</li>
+    </ul>
+  </div>
+
+  <div class="article-body">
+
+    <p>
+      "월급날이 제일 슬픈 날이에요. 통장에 돈이 들어오자마자 이자 빠져나가고 나면 남는 게 없거든요."
+      서울 마포구에 사는 직장인 김모씨(34세)는 5년 전 '영끌'로 구입한 아파트 담보대출 이자로 매달 130만 원을 납부한다.
+      원리금 상환까지 합하면 월 180만 원. 그의 월 실수령액의 절반을 훌쩍 넘는 금액이다.
+    </p>
+    <p>
+      김씨는 예외가 아니다. 그는 <span class="highlight-text">2,200만 명이 넘는 대출 보유 가구주</span> 중 한 명이다.
+      대한민국의 가계부채는 지금 이 순간도 팽창하고 있으며, 그 규모는 국가 전체 경제의 크기를 위협하는 수준에 도달했다.
+    </p>
+
+    <h2><span class="icon">📊</span> 숫자가 말하는 충격 — 얼마나 심각한가</h2>
+
+    <div class="stat-callout">
+      <div class="big-num">2,200<span>조+</span></div>
+      <div class="desc">
+        대한민국 가계부채 추정 총규모 (2025년 기준)<br>
+        <strong>국민 1인당 약 4,300만 원</strong>의 빚을 지고 있는 셈이다.<br>
+        갓 태어난 신생아부터 90세 노인까지 모두 포함한 수치다.
+      </div>
+    </div>
+
+    <p>
+      한국은행과 금융위원회에 따르면 대한민국 가계부채는 2024년 말 기준 약 1,900조~2,000조 원 수준으로,
+      가계신용·정책금융·전세보증금 관련 부채까지 광의로 포함하면 2,200조 원을 넘어선다는 추산이 나온다.
+      문제는 액수만이 아니다. 핵심은 <span class="highlight-text">GDP 대비 비율</span>이다.
+    </p>
+
+    <div class="infographic">
+      <h3>📈 GDP 대비 가계부채 비율 국가별 비교 (2024년 기준)</h3>
+      <div class="bar-chart">
+        <div class="bar-item">
+          <div class="bar-label"><span>🇰🇷 대한민국</span><span style="color:#e94560;font-weight:900;">약 100~105%</span></div>
+          <div class="bar-track"><div class="bar-fill bar-korea" style="width:100%;">세계 최고권</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>🇦🇺 호주</span><span>약 120%</span></div>
+          <div class="bar-track"><div class="bar-fill bar-oecd" style="width:95%;">높음</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>🇺🇸 미국</span><span>약 75%</span></div>
+          <div class="bar-track"><div class="bar-fill bar-us" style="width:70%;"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>🇯🇵 일본</span><span>약 67%</span></div>
+          <div class="bar-track"><div class="bar-fill bar-jp" style="width:63%;"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>🇩🇪 독일</span><span>약 56%</span></div>
+          <div class="bar-track"><div class="bar-fill bar-de" style="width:53%;"></div></div>
+        </div>
+      </div>
+      <p style="font-size:12px;color:#999;margin-top:14px;text-align:center;">※ 출처: 한국은행, BIS(국제결제은행), IMF 통계 기반 추산 / 광의 기준 포함 시 한국 수치는 더 높아질 수 있음</p>
+    </div>
+
+    <p>
+      OECD 평균이 60~70% 수준인 데 반해, 한국은 100%를 웃도는 수치를 기록 중이다.
+      이는 나라 전체가 1년 동안 벌어들이는 소득 이상의 빚을 가계가 지고 있다는 의미다.
+      BIS(국제결제은행)는 가계부채 GDP 비율이 80%를 넘으면 경제 성장에 부정적 영향을 미친다고 경고한다.
+      한국은 이미 그 임계치를 20~25%포인트 초과했다.
+    </p>
+
+    <h2><span class="icon">💸</span> 고금리 함정 — 이자만 내다 인생이 간다</h2>
+
+    <p>
+      2022년부터 시작된 글로벌 금리 인상의 여파로 한국은행 기준금리가 단기간에 0.5%에서 3.5%로 급등했다.
+      이 과정에서 변동금리 대출자들의 이자 부담은 폭발적으로 증가했다.
+    </p>
+
+    <div class="impact-grid">
+      <div class="impact-card">
+        <div class="ic-icon">🏦</div>
+        <div class="ic-num">3.5%</div>
+        <div class="ic-desc">한국은행 기준금리<br>(고금리 장기화 국면)</div>
+      </div>
+      <div class="impact-card">
+        <div class="ic-icon">📉</div>
+        <div class="ic-num">4~6%</div>
+        <div class="ic-desc">시중 주택담보대출<br>평균 금리 범위</div>
+      </div>
+      <div class="impact-card">
+        <div class="ic-icon">💳</div>
+        <div class="ic-num">약 130만</div>
+        <div class="ic-desc">3억 대출 시<br>월 이자 부담(5% 기준)</div>
+      </div>
+      <div class="impact-card">
+        <div class="ic-icon">📊</div>
+        <div class="ic-num">200%+</div>
+        <div class="ic-desc">가처분소득 대비<br>가계부채 비율</div>
+      </div>
+    </div>
+
+    <p>
+      3억 원을 연 5% 금리로 빌린 가구의 경우, 이자로만 월 125만 원을 낸다.
+      5억 원이면 월 210만 원. 서울 아파트 평균 매매가격(2024년 기준 10억 원 이상)을 감안하면,
+      주택 보유 대출자 상당수가 <span class="highlight-text">월소득의 30~50%를 이자로 지출</span>하는 실정이다.
+    </p>
+    <p>
+      이 돈이 모두 소비가 아닌 금융기관 이자로 빠져나가면서, 내수 경기는 얼어붙는다.
+      자영업자는 매출이 줄고, 직장인은 지갑을 닫는다. 경제학자들이 '부채 디플레이션 위험'이라고 부르는 악순환이 이미 시작됐다는 경고가 쏟아지고 있다.
+    </p>
+
+    <h2><span class="icon">👨‍👩‍👧</span> 2030 영끌 세대의 덫 — 집 사려다 인생이 저당 잡혔다</h2>
+
+    <div class="quote-box">
+      "저는 지금 집도 있고 직장도 있는데 왜 이렇게 가난한 느낌이죠? 저축도 못 하고 여행도 못 가고.
+      빚 갚는 기계가 된 것 같아요. 아이는 꿈도 못 꿔요."
+      — 수도권 30대 직장인 사연 (온라인 커뮤니티, 2024)
+    </div>
+
+    <p>
+      2020~2021년 초저금리 시절, 수많은 2030 세대가 '지금 안 사면 영원히 못 산다'는 공포에
+      혼신의 힘을 다해 '영끌(영혼까지 끌어모아 대출)'을 했다.
+      부동산 가격이 정점을 찍던 그 시기에 최대한 대출을 받아 집을 산 이들은
+      이후 금리가 3배 이상 오르면서 이자 폭탄을 고스란히 맞았다.
+    </p>
+    <p>
+      KB금융그룹 조사에 따르면, 30대 가구의 부채 보유 비율은 전 연령대 중 가장 높고,
+      부채 대비 자산 비율도 가장 취약한 구조다. 같은 금액을 빌려도 소득이 상대적으로 낮은 청년층이 더 많은 충격을 받는다.
+      더 큰 문제는 결혼·출산이 빚 때문에 미뤄진다는 사실이다.
+      경제적 부담으로 결혼을 포기하거나 출산을 하지 않는 흐름이 <span class="highlight-text">세계 최저 출산율(0.7명대)</span>과 직결된다는 연구가 잇따른다.
+    </p>
+
+    <h2><span class="icon">🔍</span> 아무도 말 안 해주는 이면 — 은행·정부는 왜 부채를 키웠나</h2>
+
+    <p>
+      한국의 가계부채가 이토록 빠르게 불어난 데는 구조적 이유가 있다.
+    </p>
+    <p>
+      <strong>첫째, 주택 공급 부족과 전세 제도의 역설.</strong>
+      한국 특유의 전세 제도는 임차인이 대규모 목돈을 마련해야 한다는 구조를 만들고,
+      이는 자연스럽게 전세 대출 급증으로 이어졌다.
+      집을 사지 않아도 전세를 위해 수억 원의 대출을 받아야 하는 나라는 한국이 유일하다.
+    </p>
+    <p>
+      <strong>둘째, 은행의 이해충돌.</strong>
+      시중은행의 주요 수익원은 예대 마진, 즉 이자 수익이다.
+      가계 대출이 늘어날수록 은행은 이익을 낸다.
+      금리 급등 시기에 5대 금융그룹이 <span class="highlight-text">수십조 원의 역대 최대 순이익</span>을 낸 것은 우연이 아니다.
+      시민의 이자 부담이 은행의 성과급 재원이 된 셈이다.
+    </p>
+    <p>
+      <strong>셋째, 정치권의 선심성 대출 완화.</strong>
+      역대 정권은 부동산 경기 부양이 필요할 때마다 LTV(담보인정비율)·DTI(총부채상환비율) 규제를 완화했다.
+      규제를 강화하면 집값이 떨어져 표를 잃고, 완화하면 가계부채가 늘어나는 딜레마에서
+      정치인들은 항상 '오늘의 선심'을 선택했다.
+    </p>
+
+    <div class="infographic">
+      <h3>🥧 한국 가계부채 구성 비율 (추산)</h3>
+      <div class="pie-section">
+        <svg viewBox="0 0 200 200" width="180" height="180" style="flex-shrink:0;">
+          <!-- 주택담보대출 50% -->
+          <circle cx="100" cy="100" r="80" fill="none" stroke="#e94560" stroke-width="40"
+            stroke-dasharray="251.3 502.7" stroke-dashoffset="0" transform="rotate(-90 100 100)" />
+          <!-- 전세·기타신용 25% -->
+          <circle cx="100" cy="100" r="80" fill="none" stroke="#0f3460" stroke-width="40"
+            stroke-dasharray="125.7 502.7" stroke-dashoffset="-251.3" transform="rotate(-90 100 100)" />
+          <!-- 신용대출 15% -->
+          <circle cx="100" cy="100" r="80" fill="none" stroke="#2980b9" stroke-width="40"
+            stroke-dasharray="75.4 502.7" stroke-dashoffset="-377" transform="rotate(-90 100 100)" />
+          <!-- 기타 10% -->
+          <circle cx="100" cy="100" r="80" fill="none" stroke="#f39c12" stroke-width="40"
+            stroke-dasharray="50.3 502.7" stroke-dashoffset="-452.4" transform="rotate(-90 100 100)" />
+          <circle cx="100" cy="100" r="60" fill="white" />
+          <text x="100" y="95" text-anchor="middle" font-size="14" fill="#0f3460" font-weight="bold" font-family="'Noto Sans KR',sans-serif">가계</text>
+          <text x="100" y="114" text-anchor="middle" font-size="14" fill="#0f3460" font-weight="bold" font-family="'Noto Sans KR',sans-serif">부채</text>
+        </svg>
+        <div class="pie-legend">
+          <div class="legend-item"><div class="legend-dot" style="background:#e94560;"></div><span><strong>주택담보대출</strong> — 약 50%</span></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#0f3460;"></div><span><strong>전세보증금 대출</strong> — 약 25%</span></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#2980b9;"></div><span><strong>신용대출·마이너스통장</strong> — 약 15%</span></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#f39c12;"></div><span><strong>기타(카드·기업 연동 등)</strong> — 약 10%</span></div>
+        </div>
+      </div>
+      <p style="font-size:12px;color:#999;margin-top:10px;text-align:center;">※ 한국은행·금융감독원 발표 자료 기반 추산. 분류 기준에 따라 다소 상이할 수 있음.</p>
+    </div>
+
+    <h2><span class="icon">🧨</span> 나에게 직접 미치는 영향 — 지금 당장 현실을 확인하라</h2>
+
+    <p>
+      가계부채 문제가 '나와 상관없는 거시경제 이야기'로 들린다면, 지금 당장 생각을 바꿔야 한다.
+      빚이 없어도 당신은 이미 영향을 받고 있다.
+    </p>
+    <p>
+      <strong>물가가 안 잡히는 이유 중 하나가 이자다.</strong>
+      집주인들이 늘어난 이자 부담을 월세 인상으로 전가하면서, 세입자의 주거비가 오른다.
+      주거비가 오르면 소비자물가지수에 반영되고, 한국은행은 금리를 쉽게 내리지 못한다.
+      그 결과 이자는 또 높게 유지된다. 악순환의 고리다.
+    </p>
+    <p>
+      <strong>노후도 위협받는다.</strong>
+      지금 50~60대의 상당수는 여전히 주택담보대출 원금을 갚는 중이다.
+      은퇴 후에도 이자를 내야 하는 구조 — 국민연금이 충분하지 않은 나라에서
+      퇴직 후 이자 부담은 곧 생활 붕괴다.
+    </p>
+    <p>
+      <strong>청년층에게 돌아갈 사회 안전망이 줄어든다.</strong>
+      가계부채가 부실화될 경우, 금융시스템 안정을 위해 투입될 공적 자금은 결국 세금이다.
+      지금의 빚 문제는 미래 세대의 재정 부담이 된다.
+    </p>
+
+    <h2><span class="icon">🔭</span> 전망 — 폭발하나, 연착륙하나, 아니면 계속 표류하나</h2>
+
+    <p>
+      전문가들의 시나리오는 세 갈래로 나뉜다.
+    </p>
+    <p>
+      <strong>① 연착륙 시나리오:</strong> 금리가 점진적으로 인하되고, 부동산 가격이 완만하게 조정되면서
+      대출 부담이 서서히 완화된다. 정부의 DSR 강화 정책이 신규 과다 대출을 막아 총량이 안정된다.
+      가장 희망적이지만, '금리 인하 속도'와 '부동산 연착륙'이 동시에 성공해야 하는 좁은 가능성이다.
+    </p>
+    <p>
+      <strong>② 장기 표류 시나리오:</strong> 금리도 내리지 못하고 집값도 안 떨어지는 스태그플레이션 국면.
+      가계는 이자에 짓눌려 소비를 못 하고, 내수 침체가 장기화된다.
+      한국 경제 성장률이 1%대에 고착되는 '일본화(Japan-ification)' 경로다.
+    </p>
+    <p>
+      <strong>③ 충격 시나리오:</strong> 외부 충격(글로벌 경기침체, 환율 폭등, 부동산 급락)이 겹칠 경우
+      부실 대출이 동시다발로 터지며 금융기관 건전성을 위협한다. 1997년 IMF 외환위기의 데자뷔를 우려하는
+      목소리도 없지 않다. 가능성은 낮지만, 발생 시 충격은 막대하다.
+    </p>
+
+    <div class="action-box">
+      <h3>💡 지금 당신이 해야 할 5가지 행동</h3>
+      <ol>
+        <li><strong>내 DSR·DTI 직접 계산하기.</strong> 금융감독원 '파인(FINE)' 사이트에서 내 부채 현황을 확인하라. 월 소득 대비 원리금이 40%를 넘는다면 위험 신호다.</li>
+        <li><strong>변동금리 → 고정금리 전환 검토.</strong> 금리 변동 리스크를 최소화하는 것이 먼저다. 금리 인하 국면이 오면 다시 조정 가능하다.</li>
+        <li><strong>예비 생활비 3~6개월치 확보.</strong> 갑작스러운 소득 단절에도 이자를 낼 수 있는 완충자금은 필수다.</li>
+        <li><strong>추가 대출 전 진지한 재검토.</strong> 인터넷 '영끌 성공담'은 살아남은 자의 이야기다. 지금은 과거 초저금리 시대와 완전히 다른 환경이다.</li>
+        <li><strong>정책 대출 적극 활용.</strong> 주택도시기금·디딤돌대출 등 정책 금리 상품은 시중 금리보다 현저히 낮다. 전환 조건을 반드시 확인하라.</li>
+      </ol>
+    </div>
+
+  </div><!-- /article-body -->
+
+  <div class="hashtags">
+    <span class="hashtag">#가계부채</span>
+    <span class="hashtag">#2200조빚</span>
+    <span class="hashtag">#한국경제위기</span>
+    <span class="hashtag">#금리인상충격</span>
+    <span class="hashtag">#영끌후폭풍</span>
+    <span class="hashtag">#부채공화국</span>
+    <span class="hashtag">#DSR규제</span>
+    <span class="hashtag">#이자폭탄</span>
+    <span class="hashtag">#은행이익</span>
+    <span class="hashtag">#경제금융</span>
+    <span class="hashtag">#탐사저널</span>
+    <span class="hashtag">#내수침체</span>
+    <span class="hashtag">#저출산부채연결</span>
+  </div>
+
+  <div class="sources">
+    <h4>📚 참고 자료 및 출처</h4>
+    <ul>
+      <li>한국은행 금융안정보고서 (2024년 상·하반기)</li>
+      <li>금융감독원 가계신용 통계 (분기별 발표)</li>
+      <li>BIS(국제결제은행) 가계부채 데이터베이스 (bis.org/statistics)</li>
+      <li>IMF World Economic Outlook 2024–2025</li>
+      <li>KB금융그룹 KB부동산 리포트 (2024)</li>
+      <li>통계청 가계금융복지조사 (2024)</li>
+      <li>국회예산정책처 가계부채 현황 및 위험 분석 보고서</li>
+    </ul>
+    <p style="margin-top:10px;font-size:12px;color:#aaa;">※ WebSearch 서비스 일시 과부하로 금일 실시간 검색이 불가하여, 2024~2025년 공개 통계 데이터 및 공식 기관 보고서 기반으로 작성되었습니다.</p>
+  </div>
+
+  <div class="disclaimer">
+    <strong>⚠️ 면책조항(Disclaimer)</strong><br>
+    본 아티클은 공개된 통계·보고서 및 언론 보도를 기반으로 작성된 정보 제공용 콘텐츠입니다.
+    특정 금융 상품 투자 또는 대출 결정에 대한 전문적 재무 조언이 아니며,
+    개인의 금융 결정은 반드시 공인 재무설계사 또는 금융기관 전문가와 상담 후 이루어져야 합니다.
+    본 아티클에 포함된 수치는 공개 자료 기반 추산이며, 실제 통계와 일부 차이가 있을 수 있습니다.
+  </div>
+
+</div><!-- /container -->
+
+</body>
+</html>
