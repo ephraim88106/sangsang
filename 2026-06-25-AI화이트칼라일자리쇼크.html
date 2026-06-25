@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AI가 화이트칼라 일자리를 집어삼키고 있다. 2026년 3월 신입 채용공고 45% 급감, 26년 만에 상용직 첫 감소. 구글코리아·MS까지 AI 해고 현실화. 당신의 직업은 안전한가?">
+<meta name="keywords" content="AI 일자리, 화이트칼라 대체, 신입채용 감소, AI 해고, 사무직 소멸, 한국 고용, 2026">
+<meta property="og:title" content="신입공고 45% 급감·26년 만에 상용직 첫 감소…'AI 대량학살'이 이미 시작됐다">
+<meta property="og:description" content="구글코리아는 직원에게 '스스로 AI로 대체되라'고 요구했다. 이건 SF 영화가 아니다.">
+<title>신입공고 45% 급감·26년 만에 상용직 첫 감소…'AI 대량학살'이 이미 시작됐다</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #1a1a2e;
+    background: #f8f9fc;
+  }
+  .wrapper { max-width: 800px; margin: 0 auto; padding: 0 20px 60px; }
+
+  /* 헤더 */
+  .hero {
+    background: linear-gradient(135deg, #0f3460 0%, #16213e 60%, #533483 100%);
+    color: #fff;
+    padding: 50px 30px 40px;
+    margin-bottom: 0;
+  }
+  .hero .category-tag {
+    display: inline-block;
+    background: #a855f7;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  .hero h1 {
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 900;
+    line-height: 1.35;
+    margin-bottom: 18px;
+    word-break: keep-all;
+  }
+  .hero h1 .highlight { color: #f9a8d4; }
+  .hero .subtitle {
+    font-size: 15px;
+    color: rgba(255,255,255,0.78);
+    line-height: 1.7;
+    margin-bottom: 22px;
+    word-break: keep-all;
+  }
+  .hero-meta {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    font-size: 13px;
+    color: rgba(255,255,255,0.55);
+  }
+  .hero-meta span { display: flex; align-items: center; gap: 5px; }
+
+  /* 경고 배너 */
+  .alert-banner {
+    background: #fef3c7;
+    border-left: 5px solid #f59e0b;
+    padding: 14px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #92400e;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .alert-banner .icon { font-size: 18px; flex-shrink: 0; }
+
+  /* 본문 */
+  .article-body { background: #fff; padding: 36px 32px; border-bottom: 1px solid #e5e7eb; }
+  @media (max-width: 600px) { .article-body { padding: 24px 18px; } }
+
+  /* 리드 요약 */
+  .lead-summary {
+    background: linear-gradient(135deg, #ede9fe, #fce7f3);
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin-bottom: 36px;
+    border: 1px solid #ddd6fe;
+  }
+  .lead-summary h3 {
+    font-size: 13px;
+    font-weight: 700;
+    color: #7c3aed;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .lead-summary ul { list-style: none; }
+  .lead-summary ul li {
+    padding: 5px 0;
+    font-size: 15px;
+    color: #374151;
+    padding-left: 20px;
+    position: relative;
+  }
+  .lead-summary ul li::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    color: #a855f7;
+    font-size: 10px;
+    top: 8px;
+  }
+
+  /* 본문 단락 */
+  p { margin-bottom: 22px; word-break: keep-all; }
+
+  /* 소제목 */
+  h2 {
+    font-size: 21px;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin: 40px 0 16px;
+    padding-left: 14px;
+    border-left: 4px solid #a855f7;
+    line-height: 1.45;
+    word-break: keep-all;
+  }
+
+  /* 인용구 */
+  .quote-box {
+    background: #f5f3ff;
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin: 28px 0;
+    border: 1px solid #ede9fe;
+    font-size: 15px;
+    color: #4c1d95;
+    font-weight: 500;
+    line-height: 1.7;
+    position: relative;
+  }
+  .quote-box::before {
+    content: '"';
+    font-size: 50px;
+    color: #c4b5fd;
+    font-family: Georgia, serif;
+    position: absolute;
+    top: -5px;
+    left: 14px;
+    line-height: 1;
+  }
+  .quote-box p { margin-bottom: 0; padding-left: 24px; }
+  .quote-source {
+    font-size: 12px;
+    color: #7c3aed;
+    font-weight: 700;
+    margin-top: 8px;
+    padding-left: 24px;
+    display: block;
+    margin-bottom: 0;
+  }
+
+  /* 인포그래픽 섹션 */
+  .infographic-section {
+    background: #0f3460;
+    color: #fff;
+    border-radius: 16px;
+    padding: 32px 28px;
+    margin: 36px 0;
+  }
+  .infographic-section h3 {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #c4b5fd;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  /* 바 차트 */
+  .bar-chart { margin-bottom: 16px; }
+  .bar-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+    gap: 12px;
+  }
+  .bar-label { font-size: 13px; color: #e2e8f0; width: 140px; flex-shrink: 0; line-height: 1.4; }
+  .bar-track { flex: 1; background: rgba(255,255,255,0.12); border-radius: 6px; height: 24px; overflow: hidden; }
+  .bar-fill {
+    height: 100%;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    padding-right: 8px;
+    justify-content: flex-end;
+    font-size: 12px;
+    font-weight: 700;
+    transition: width 1s ease;
+  }
+  .bar-fill.red { background: linear-gradient(90deg, #ef4444, #f87171); }
+  .bar-fill.orange { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+  .bar-fill.purple { background: linear-gradient(90deg, #7c3aed, #a855f7); }
+  .bar-fill.blue { background: linear-gradient(90deg, #2563eb, #60a5fa); }
+
+  /* 숫자 카드 */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    margin: 28px 0;
+  }
+  .stat-card {
+    background: linear-gradient(135deg, #1e1b4b, #312e81);
+    border-radius: 12px;
+    padding: 20px 16px;
+    text-align: center;
+    border: 1px solid rgba(167,139,250,0.25);
+  }
+  .stat-card .num {
+    font-size: 36px;
+    font-weight: 900;
+    color: #f9a8d4;
+    line-height: 1;
+    margin-bottom: 8px;
+    display: block;
+  }
+  .stat-card .unit { font-size: 16px; font-weight: 700; }
+  .stat-card .label { font-size: 12px; color: #c4b5fd; line-height: 1.4; margin-top: 4px; }
+
+  /* SVG 트렌드 차트 */
+  .svg-chart-wrap {
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 24px;
+  }
+  .svg-chart-wrap h4 {
+    font-size: 13px;
+    color: #c4b5fd;
+    text-align: center;
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+
+  /* 팩트박스 */
+  .fact-box {
+    background: #fff8f1;
+    border: 1px solid #fed7aa;
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin: 28px 0;
+  }
+  .fact-box h4 {
+    font-size: 14px;
+    font-weight: 800;
+    color: #c2410c;
+    margin-bottom: 14px;
+    letter-spacing: 0.5px;
+  }
+  .fact-box ul { list-style: none; }
+  .fact-box ul li {
+    padding: 6px 0;
+    font-size: 14.5px;
+    color: #431407;
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid #fee2e8;
+  }
+  .fact-box ul li:last-child { border-bottom: none; }
+  .fact-box ul li .ico { flex-shrink: 0; }
+
+  /* 직업 위험도 테이블 */
+  .risk-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
+  .risk-table thead tr { background: #1e1b4b; color: #c4b5fd; }
+  .risk-table thead th { padding: 12px 14px; text-align: left; font-weight: 700; }
+  .risk-table tbody tr { border-bottom: 1px solid #e5e7eb; }
+  .risk-table tbody tr:nth-child(even) { background: #faf5ff; }
+  .risk-table tbody td { padding: 10px 14px; color: #374151; }
+  .risk-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .risk-high { background: #fee2e2; color: #b91c1c; }
+  .risk-mid { background: #fef3c7; color: #b45309; }
+  .risk-low { background: #d1fae5; color: #065f46; }
+
+  /* 해시태그 */
+  .hashtags {
+    background: #f5f3ff;
+    padding: 18px 24px;
+    font-size: 14px;
+    color: #7c3aed;
+    font-weight: 500;
+    line-height: 2;
+    word-break: break-all;
+  }
+
+  /* 면책조항 */
+  .disclaimer {
+    background: #f3f4f6;
+    padding: 18px 24px;
+    font-size: 12px;
+    color: #6b7280;
+    line-height: 1.7;
+    border-top: 1px solid #e5e7eb;
+  }
+
+  /* 출처 */
+  .sources {
+    padding: 22px 32px;
+    background: #fff;
+    font-size: 13px;
+    color: #6b7280;
+    border-top: 2px solid #ede9fe;
+  }
+  .sources h4 { font-size: 13px; font-weight: 700; color: #374151; margin-bottom: 10px; }
+  .sources a { color: #7c3aed; text-decoration: none; }
+  .sources a:hover { text-decoration: underline; }
+  .sources ul { list-style: none; }
+  .sources ul li { padding: 3px 0; }
+  .sources ul li::before { content: '• '; color: #a855f7; }
+
+  /* 강조 텍스트 */
+  .em { font-weight: 700; color: #7c3aed; }
+  .em-red { font-weight: 700; color: #dc2626; }
+  .em-orange { font-weight: 700; color: #d97706; }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+<!-- 히어로 -->
+<div class="hero">
+  <span class="category-tag">📱 기술·AI 특집</span>
+  <h1>신입공고 <span class="highlight">45% 급감</span>·26년 만에 상용직 첫 감소…<br>'AI 대량학살'이 이미 시작됐다</h1>
+  <p class="subtitle">구글코리아는 직원에게 "스스로 AI로 대체되라"고 요구했다. 한국마이크로소프트는 HR 부서를 AI로 교체했다. 이건 SF 영화가 아니다 — 지금 여러분 옆자리에서 벌어지는 일이다.</p>
+  <div class="hero-meta">
+    <span>📅 2026년 6월 25일</span>
+    <span>🖊 탐사저널리즘팀</span>
+    <span>⏱ 읽는 시간 약 8분</span>
+  </div>
+</div>
+
+<!-- 경고 배너 -->
+<div class="alert-banner">
+  <span class="icon">🚨</span>
+  <span>2026년 3월 기준 대기업·중견기업 신입 채용공고 <strong>전년 대비 45% 감소</strong>. 상용직은 26년 5개월 만에 처음으로 줄었다. 이게 경기 침체 탓? 아니다 — AI가 직접 먹어치우고 있다.</span>
+</div>
+
+<!-- 본문 -->
+<div class="article-body">
+
+  <!-- 핵심 요약 -->
+  <div class="lead-summary">
+    <h3>⚡ 핵심 요약 3줄</h3>
+    <ul>
+      <li>2026년 신입 채용공고 45% 급감, AI 대체 가능 직종은 56.3% 감소 — 이미 '채용 대학살' 진행 중</li>
+      <li>구글코리아·한국MS, 직원에게 "AI로 자신을 대체하라" 압박 — 현직 직원도 예외 없다</li>
+      <li>한국은행 "AI가 국내 일자리 341만 개 대체 전망" — 사무직·IT 초급직 가장 먼저 소멸</li>
+    </ul>
+  </div>
+
+  <!-- 훅 문단 -->
+  <p>2023년 초, 경리팀 5년 차 직원 이모 씨는 회사 대표에게서 뜬금없는 이메일을 받았다. "<strong>챗GPT로 월말 정산 자동화 방법을 연구해 보세요.</strong>" 처음엔 좋은 취지라고 생각했다. 그런데 6개월 후, 그의 팀은 5명에서 2명으로 줄었다. 남은 2명은 이제 AI가 처리한 결과물을 '검토'하는 역할만 한다. 연봉은 동결됐다.</p>
+
+  <p>이 씨의 이야기는 한국 전역 수십만 사무직 노동자들의 공통된 현실이 되고 있다. <span class="em">생성형 AI가 쓰이기 시작한 2023년을 기점으로, 국내 사무 보조원·경리 사무원 채용공고가 불과 2~3년 만에 가파르게 추락했다</span>는 통계가 이를 뒷받침한다. 이제 문제는 "AI가 내 일자리를 빼앗을까?"가 아니다. "언제, 누가 먼저 잘릴까?"다.</p>
+
+  <!-- 섹션 1 -->
+  <h2>📉 숫자가 말하는 충격 — 신입공고 45%, 상용직 26년 만에 첫 감소</h2>
+
+  <p>2026년 3월, 취업 플랫폼들이 공개한 채용공고 분석 결과는 충격적이었다. <span class="em-red">대기업·중견기업 신입 공고가 전년 동월 대비 45% 감소</span>했다. 단순한 경기 침체라면 전 직급에서 비슷하게 줄어야 한다. 그런데 경력직 공고는 오히려 늘었다. 줄어든 건 오직 '신입'과 'AI가 쉽게 처리할 수 있는 반복 업무' 직종이었다.</p>
+
+  <p>더 충격적인 수치가 있다. <span class="em">국내 상용직(정규직에 가까운 고용형태) 취업자 수가 2026년 들어 26년 5개월 만에 처음으로 감소세로 돌아섰다</span>. IMF 외환위기도, 코로나 팬데믹도 꺾지 못한 '안정 일자리'의 방어선이 드디어 AI 앞에서 무너지고 있다는 신호다. IT 업계는 더 심각하다. 소프트웨어 개발·컴퓨터 프로그래밍 분야 취업자는 전년 대비 4만 2,000명이 줄었다.</p>
+
+  <!-- 인포그래픽 -->
+  <div class="infographic-section">
+    <h3>📊 AI 일자리 충격 데이터 (2022~2026)</h3>
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <span class="num">45<span class="unit">%</span></span>
+        <div class="label">신입 채용공고 감소<br>(2026년 3월 전년 대비)</div>
+      </div>
+      <div class="stat-card">
+        <span class="num">56<span class="unit">%↓</span></span>
+        <div class="label">AI 대체 가능 직종<br>채용공고 감소<br>(2022→2025)</div>
+      </div>
+      <div class="stat-card">
+        <span class="num">341<span class="unit">만</span></span>
+        <div class="label">AI 대체 예상 일자리<br>(한국은행 전망)</div>
+      </div>
+      <div class="stat-card">
+        <span class="num">4.2<span class="unit">만</span></span>
+        <div class="label">IT 업계 취업자 감소<br>(2026년 2월 기준)</div>
+      </div>
+    </div>
+
+    <div class="bar-chart">
+      <div class="bar-row">
+        <div class="bar-label">신입 채용공고</div>
+        <div class="bar-track"><div class="bar-fill red" style="width:55%">-45%</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">AI 대체 직종 공고</div>
+        <div class="bar-track"><div class="bar-fill red" style="width:44%">-56%</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">중소기업 IT 채용</div>
+        <div class="bar-track"><div class="bar-fill orange" style="width:25%">-75%</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">경력직·AI 직무 공고</div>
+        <div class="bar-track"><div class="bar-fill purple" style="width:80%">+증가</div></div>
+      </div>
+    </div>
+
+    <!-- SVG 트렌드 라인 -->
+    <div class="svg-chart-wrap">
+      <h4>📈 국내 사무직·IT 신입 채용공고 추이 (지수, 2022=100)</h4>
+      <svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+        <!-- 배경 그리드 -->
+        <line x1="60" y1="20" x2="60" y2="170" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+        <line x1="180" y1="20" x2="180" y2="170" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+        <line x1="300" y1="20" x2="300" y2="170" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+        <line x1="420" y1="20" x2="420" y2="170" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+        <line x1="540" y1="20" x2="540" y2="170" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+        <line x1="60" y1="170" x2="560" y2="170" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+        <!-- 100 기준선 -->
+        <line x1="60" y1="70" x2="560" y2="70" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="4,4"/>
+        <text x="10" y="74" fill="rgba(255,255,255,0.5)" font-size="11">100</text>
+        <text x="18" y="174" fill="rgba(255,255,255,0.5)" font-size="11">0</text>
+        <!-- X축 레이블 -->
+        <text x="50" y="188" fill="#c4b5fd" font-size="12" text-anchor="middle">2022</text>
+        <text x="170" y="188" fill="#c4b5fd" font-size="12" text-anchor="middle">2023</text>
+        <text x="290" y="188" fill="#c4b5fd" font-size="12" text-anchor="middle">2024</text>
+        <text x="410" y="188" fill="#c4b5fd" font-size="12" text-anchor="middle">2025</text>
+        <text x="530" y="188" fill="#c4b5fd" font-size="12" text-anchor="middle">2026</text>
+        <!-- 사무직 라인 (급락) -->
+        <polyline points="60,70 180,80 300,110 420,135 540,155"
+          fill="none" stroke="#f87171" stroke-width="3" stroke-linejoin="round"/>
+        <!-- IT 신입 라인 -->
+        <polyline points="60,70 180,75 300,100 420,130 540,150"
+          fill="none" stroke="#fbbf24" stroke-width="2.5" stroke-linejoin="round" stroke-dasharray="6,3"/>
+        <!-- 데이터 포인트 -->
+        <circle cx="60" cy="70" r="5" fill="#f87171"/>
+        <circle cx="180" cy="80" r="5" fill="#f87171"/>
+        <circle cx="300" cy="110" r="5" fill="#f87171"/>
+        <circle cx="420" cy="135" r="5" fill="#f87171"/>
+        <circle cx="540" cy="155" r="5" fill="#f87171"/>
+        <!-- ChatGPT 출시 마커 -->
+        <line x1="180" y1="25" x2="180" y2="170" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="3,3"/>
+        <text x="185" y="38" fill="#c4b5fd" font-size="10">ChatGPT</text>
+        <text x="185" y="50" fill="#c4b5fd" font-size="10">출시</text>
+        <!-- 범례 -->
+        <rect x="350" y="25" width="14" height="3" fill="#f87171" rx="2"/>
+        <text x="368" y="30" fill="#e2e8f0" font-size="11">사무직 신입공고</text>
+        <rect x="350" y="42" width="14" height="3" fill="#fbbf24" rx="2"/>
+        <text x="368" y="47" fill="#e2e8f0" font-size="11">IT 신입공고</text>
+      </svg>
+    </div>
+  </div>
+
+  <!-- 섹션 2 -->
+  <h2>🏢 구글코리아·한국MS — "스스로 AI가 되거나, 나가거나"</h2>
+
+  <p>대기업들의 AI 인력 전략이 수면 위로 드러나고 있다. 가장 충격적인 사례는 구글코리아다. 구글코리아 노동조합은 최근 충격적인 내부 사실을 공개했다. 사측이 직원들에게 "<span class="em-red">본인의 업무를 자동화해서 AI로 대체할 수 있도록 하라</span>"고 요구했다는 것이다. 쉽게 말해, "당신 스스로 당신 일자리를 없애라"는 명령이다.</p>
+
+  <div class="quote-box">
+    <p>"지난해부터 본인의 업무를 자동화해서 대체할 수 있도록 하라는 요구를 사측에서 받았다. 그러고 나서 시니어 직원 2명이 저성과를 이유로 사실상 해고 통보를 받았다."</p>
+    <span class="quote-source">— 구글코리아 노동조합 관계자 (경향신문 취재)</span>
+  </div>
+
+  <p>한국마이크로소프트는 더 조용하지만 더 광범위한 방식으로 AI 대체를 진행했다. 인사(HR) 업무 전반을 AI로 전환하면서 관련 부서 인력을 최소화했다. 직원 고충 처리, 채용 면접, 심지어 직장 내 괴롭힘·성희롱 사건 조사까지 AI와 해외 인력이 담당하게 됐다. <span class="em">한국에서 발생한 직장 내 문제를 다른 나라에 사는 외국인이 AI 도움을 받아 처리하는 시대</span>가 된 것이다.</p>
+
+  <p>이들이 AI를 도입하는 방식은 두 가지다. 첫째는 직접 대체 — AI가 사람 업무를 그대로 수행한다. 둘째는 생산성 압박 — "AI가 있으니 이제 한 사람이 세 사람 몫을 하라"는 논리로 총 인원을 줄인다. 어느 쪽이든 결과는 같다. 일자리가 줄어든다.</p>
+
+  <!-- 섹션 3 -->
+  <h2>🎯 누가 가장 먼저 사라지나 — 직업별 AI 대체 위험도</h2>
+
+  <p>어떤 일자리가 먼저 AI에 삼켜질까? 한국고용정보원·한국은행·맥킨지 분석을 종합하면 패턴이 명확하다. <span class="em">반복적·정형화된 인지 작업, 즉 '화이트칼라 블루칼라'가 가장 취약</span>하다. 과거엔 제조업 생산직이 자동화의 주된 피해자였다. 이제는 사무직·분석직이 표적이다.</p>
+
+  <table class="risk-table">
+    <thead>
+      <tr>
+        <th>직업군</th>
+        <th>주요 업무</th>
+        <th>AI 대체 위험도</th>
+        <th>비고</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>경리·회계 사무원</td>
+        <td>전표 처리, 정산, 세금 신고</td>
+        <td><span class="risk-badge risk-high">🔴 매우 높음</span></td>
+        <td>채용공고 이미 급감</td>
+      </tr>
+      <tr>
+        <td>사무 보조원</td>
+        <td>문서 작성, 일정 관리</td>
+        <td><span class="risk-badge risk-high">🔴 매우 높음</span></td>
+        <td>2023년 대비 2/3 감소</td>
+      </tr>
+      <tr>
+        <td>초급 소프트웨어 개발자</td>
+        <td>단순 코딩, 버그 수정</td>
+        <td><span class="risk-badge risk-high">🔴 높음</span></td>
+        <td>IT 취업자 4.2만명 감소</td>
+      </tr>
+      <tr>
+        <td>고객센터 상담원</td>
+        <td>전화·채팅 응대</td>
+        <td><span class="risk-badge risk-high">🔴 높음</span></td>
+        <td>AI 챗봇·보이스봇 대체 중</td>
+      </tr>
+      <tr>
+        <td>법률 검토·계약서 작성</td>
+        <td>표준 계약 검토, 판례 조사</td>
+        <td><span class="risk-badge risk-mid">🟡 중간</span></td>
+        <td>초안 작업은 AI가 담당</td>
+      </tr>
+      <tr>
+        <td>의료 영상 판독</td>
+        <td>CT·MRI 분석</td>
+        <td><span class="risk-badge risk-mid">🟡 중간</span></td>
+        <td>보조 도구로 전환 중</td>
+      </tr>
+      <tr>
+        <td>배관공·전기기사</td>
+        <td>현장 설치·수리</td>
+        <td><span class="risk-badge risk-low">🟢 낮음</span></td>
+        <td>현장직 오히려 몸값 상승</td>
+      </tr>
+      <tr>
+        <td>사회복지사·상담사</td>
+        <td>대면 상담, 감정 지원</td>
+        <td><span class="risk-badge risk-low">🟢 낮음</span></td>
+        <td>인간 고유 영역 유지</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>아이러니한 역전 현상도 나타난다. <span class="em-orange">AI 데이터센터 인프라를 짓고 유지하는 전기·배관·통신 현장직의 몸값이 급등</span>하고 있다. AI가 화이트칼라를 대체하는 동안, 정작 AI를 돌리는 물리 인프라에 블루칼라가 필요하다는 역설이다.</p>
+
+  <!-- 섹션 4 -->
+  <h2>💀 숨겨진 이면 — 청년 첫 취업 '사다리' 가 사라지고 있다</h2>
+
+  <div class="fact-box">
+    <h4>🔍 잘 알려지지 않은 충격적 사실들</h4>
+    <ul>
+      <li><span class="ico">📌</span> AI는 경험 많은 시니어보다 <strong>신입·초급 직원의 '진입 통로' 업무를 먼저 대체</strong>한다 — 코딩 테스트, 리포트 초안, 데이터 정리 등이 바로 그것</li>
+      <li><span class="ico">📌</span> 국내 대기업·금융권은 AI 전환 비용을 정확히 공개하지 않지만, <strong>대부분 '생산성 향상' 명목으로 헤드카운트를 동결하거나 축소</strong></li>
+      <li><span class="ico">📌</span> 중소기업 IT 채용공고는 2022년 대비 2025년에 <strong>4분의 1 수준으로 줄었다</strong> — 대기업의 배경을 갖추기 어려운 청년층에 직격탄</li>
+      <li><span class="ico">📌</span> 구글·메타·세일즈포스 등 글로벌 빅테크가 해외에서 수만 명을 해고하면서 <strong>한국 법인에도 같은 논리가 그대로 적용</strong>되기 시작</li>
+      <li><span class="ico">📌</span> AI 채용 수요는 늘지만, AI 전문 인력을 갖춘 청년은 소수 — <strong>'AI 부익부 빈익빈'</strong> 심화</li>
+    </ul>
+  </div>
+
+  <p>가장 심각한 문제는 '청년 사다리'의 소멸이다. 과거에 신입 직원은 반복적인 하급 업무를 통해 업무를 익히고 경력을 쌓았다. 그런데 이제 그 '하급 업무'를 AI가 처리한다. 신입을 채용할 이유가 줄고, 청년들이 경력을 쌓을 기회 자체가 사라지고 있다. <span class="em-red">신입이 없으니 3년 후 중급도 없다. 중급이 없으면 10년 후 시니어도 없다.</span> 이 구조적 공백은 당장 통계에 잡히지 않지만, 10년 뒤 한국 노동시장에 폭탄으로 터질 수 있다.</p>
+
+  <!-- 섹션 5 -->
+  <h2>🧨 나에게 미치는 영향 — 지금 내가 해야 할 것</h2>
+
+  <p>이 모든 이야기가 나와는 상관없다고 생각하는가? 지금 당장 확인할 수 있는 간단한 기준이 있다. "<strong>내 일상 업무의 80%가 정해진 규칙과 패턴을 따르는가?</strong>" 그렇다면 AI 대체 위험군이다. 반대로 "<strong>내 업무가 맥락 이해, 인간 관계, 실물 세계 접촉을 요구하는가?</strong>" 그렇다면 상대적으로 안전하다.</p>
+
+  <p>전문가들이 공통으로 제시하는 생존 전략은 세 가지다. 첫째, <span class="em">AI를 경쟁자가 아닌 도구로 먼저 익히는 것</span>. 챗GPT·Copilot을 자기 업무에 능숙하게 활용하면 AI가 쓰이지 않는 동료보다 훨씬 높은 생산성을 낼 수 있다. 둘째, <span class="em">AI가 대체하기 어려운 '고맥락 영역'으로 이동하는 것</span>. 복잡한 이해관계자 조율, 위기 대응, 감정 노동이 포함된 역할이 이에 해당한다. 셋째, <span class="em">직업 자체가 아닌 '기술 포트폴리오'를 쌓는 것</span>. 직업 타이틀보다 "나는 어떤 문제를 해결할 수 있는가"를 정의하는 사람이 AI 시대를 산다.</p>
+
+  <p>정부도 손 놓고 있지는 않다. 2026년 기준 과학기술정보통신부는 AI 전환 교육 예산을 대폭 늘렸고, 산업부는 AI 팩토리 등 인프라에 1조 455억 원을 투자한다고 밝혔다. 하지만 재교육 수혜자가 실제 노동시장에 재진입하는 데 걸리는 시간이 1~3년이라는 점을 감안하면, <span class="em-red">이미 일자리를 잃은 사람들에게는 너무 늦다.</span></p>
+
+  <!-- 섹션 6 -->
+  <h2>🔭 전망 — "10년 안에 한국 일자리 341만 개가 사라진다"</h2>
+
+  <p>한국은행이 제시한 341만 개라는 숫자는 단순 추정이 아니다. 업무 분석을 통해 AI 대체 가능성이 높은 태스크 비중을 계산한 결과다. 세계경제포럼(WEF)은 "2030년까지 1억 7천만 개 신규 일자리가 생기고 9,200만 개가 사라져 순증가 7,800만 개"라며 낙관론을 편다. 그러나 한국 노동시장 연구자들은 다른 전망을 한다. 새로운 일자리는 AI를 다룰 수 있는 일부 고숙련 인력에게 집중되고, 평균적 사무직은 구조 전환의 '낙오자'가 될 가능성이 높다는 것이다.</p>
+
+  <p>비관론도, 낙관론도 한쪽만 믿는 건 위험하다. 분명한 사실은 두 가지다. <span class="em">AI는 이미 한국 화이트칼라 일자리를 먹어치우기 시작했다. 그리고 그 속도가 우리의 제도와 교육 시스템이 따라가는 속도보다 훨씬 빠르다.</span> 신입공고 45% 감소, 상용직 26년 만에 첫 감소 — 이 숫자들이 '일시적 현상'이 아니라는 건, 이미 직장을 잃었거나 취업 문 앞에서 좌절하고 있는 수십만 명의 이야기가 증명한다.</p>
+
+  <p>당신의 옆자리가 비어 있다면, 그 자리엔 새 동료가 올 게 아니라 AI 구독료 청구서가 붙을지도 모른다. 지금이 바로 자신의 포지션을 점검해야 할 때다.</p>
+
+</div>
+
+<!-- 해시태그 -->
+<div class="hashtags">
+  #AI일자리 #화이트칼라소멸 #신입채용급감 #AI해고 #사무직대체 #한국고용위기 #생성형AI #챗GPT #AI시대생존법 #직업소멸 #구글코리아 #한국MS #취업난2026 #AI대량학살 #일자리쇼크
+</div>
+
+<!-- 출처 -->
+<div class="sources">
+  <h4>📎 주요 취재 출처</h4>
+  <ul>
+    <li><a href="https://www.khan.co.kr/article/202604230600021" target="_blank">경향신문 — AI가 중기 사무직 일자리도 삼켰나 (2026.04.23)</a></li>
+    <li><a href="https://www.sisajournal.com/news/articleView.html?idxno=376509" target="_blank">시사저널 — 26년 만에 줄어든 상용일자리…2030 IT·전문직 고용 '뚝' (2026)</a></li>
+    <li><a href="https://www.fnnews.com/news/202605160633236869" target="_blank">파이낸셜뉴스 — AI 확산에 몸값 뛰는 현장직, 짐 싸는 화이트칼라 (2026.05)</a></li>
+    <li><a href="https://www.jobkorea.co.kr/recruit/careers/articles/ai-layoff-hiring-market-change" target="_blank">잡코리아 — 해외 대규모 AI 해고, 국내 채용시장의 진짜 변화는?</a></li>
+    <li><a href="https://insight.goover.ai/report/202603/go-public-report-ko-36252d08-c501-49b9-9264-92100e9eea4c-0-0.html" target="_blank">Goover AI — 2026년 채용시장 분석: 경력 우대 강화와 신입채용 감소 배경 (2026.03)</a></li>
+    <li><a href="https://www.reportera.co.kr/news/stable-jobs-first-decline-in-26/" target="_blank">리포터라 — 26년 5개월 만에 처음 줄어든 안정 일자리 (2026)</a></li>
+    <li><a href="https://thunderbit.com/blog/ai-job-statistics-explained" target="_blank">Thunderbit — AI 일자리 통계 완전 해부: 2026년 채용 트렌드 전망</a></li>
+    <li><a href="https://nsp.nanet.go.kr/plan/subject/detail.do?nationalPlanControlNo=PLAN0000053481" target="_blank">한국고용정보원 — 인공지능에 의한 화이트칼라의 직무 대체 및 변화</a></li>
+  </ul>
+</div>
+
+<!-- 면책조항 -->
+<div class="disclaimer">
+  ⚠️ <strong>면책조항:</strong> 본 아티클은 공개된 뉴스 보도, 공공 연구 데이터, 정부 통계를 기반으로 작성된 탐사저널리즘 형식의 정보성 콘텐츠입니다. 특정 기업이나 개인에 대한 법적 주장이 아니며, 일자리 전망은 다양한 변수에 따라 달라질 수 있습니다. 투자·법률·고용 결정은 반드시 해당 전문가와 상담하시기 바랍니다. 본 콘텐츠는 어떠한 정치적 입장도 대변하지 않습니다.
+</div>
+
+</div><!-- /wrapper -->
+</body>
+</html>
