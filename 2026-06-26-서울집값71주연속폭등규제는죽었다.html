@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="이재명 정부 출범 1년, 서울 아파트값 15% 폭등·71주 연속 상승. 6·27 부동산 대책은 왜 실패했는가? 전세난에 쫓겨나는 서민의 현실을 파헤친다.">
+  <meta name="keywords" content="서울 아파트, 집값 상승, 부동산 대책, 71주 연속 상승, 전세난, 이재명 정부, 공급 부족, DSR, 주담대">
+  <meta property="og:title" content="규제 3번에도 집값 15% 상승…이재명 정부 1년, '6·27 대책'은 이미 죽었다">
+  <meta property="og:description" content="서울 아파트 71주 연속 상승, 전셋값 12년 8개월 최고치. 대책이 나올수록 집값이 올랐다.">
+  <title>규제 3번에도 집값 15% 상승…이재명 정부 1년, '6·27 대책'은 이미 죽었다</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 17px;
+      line-height: 1.8;
+      color: #1a1a1a;
+      background: #f8f9fa;
+    }
+    .wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      padding-bottom: 60px;
+    }
+    /* 헤더 */
+    .hero {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      color: #fff;
+      padding: 52px 40px 44px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; top: -60px; right: -60px;
+      width: 320px; height: 320px;
+      background: radial-gradient(circle, rgba(229,57,53,0.25) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .category-badge {
+      display: inline-block;
+      background: #e53935;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      padding: 5px 14px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      font-size: 30px;
+      font-weight: 900;
+      line-height: 1.45;
+      margin-bottom: 18px;
+      letter-spacing: -0.5px;
+    }
+    .hero h1 em {
+      color: #ef9a9a;
+      font-style: normal;
+    }
+    .hero .subtitle {
+      font-size: 16px;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.7;
+    }
+    .meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 24px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.55);
+    }
+    .meta span::before { content: ''; }
+
+    /* 본문 */
+    .content { padding: 44px 40px 0; }
+
+    /* 핵심 요약 박스 */
+    .summary-box {
+      background: #fff3e0;
+      border-left: 5px solid #e53935;
+      border-radius: 0 8px 8px 0;
+      padding: 24px 28px;
+      margin-bottom: 40px;
+    }
+    .summary-box h2 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #e53935;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+    .summary-box ul {
+      list-style: none;
+      padding: 0;
+    }
+    .summary-box ul li {
+      font-size: 15.5px;
+      color: #333;
+      line-height: 1.7;
+      padding-left: 20px;
+      position: relative;
+      margin-bottom: 8px;
+    }
+    .summary-box ul li::before {
+      content: '▶';
+      position: absolute; left: 0;
+      color: #e53935;
+      font-size: 11px;
+      top: 4px;
+    }
+
+    /* 소제목 */
+    h2.section-title {
+      font-size: 22px;
+      font-weight: 900;
+      color: #0f3460;
+      margin: 44px 0 18px;
+      padding-bottom: 10px;
+      border-bottom: 3px solid #e53935;
+      letter-spacing: -0.3px;
+    }
+    p { margin-bottom: 18px; color: #2c2c2c; }
+    strong { color: #c62828; }
+
+    /* 인포그래픽 */
+    .infographic {
+      background: #f4f6f8;
+      border-radius: 12px;
+      padding: 32px 28px;
+      margin: 36px 0;
+    }
+    .infographic h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #555;
+      margin-bottom: 24px;
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+    /* 막대 차트 */
+    .bar-chart { display: flex; flex-direction: column; gap: 14px; }
+    .bar-item { display: flex; align-items: center; gap: 12px; }
+    .bar-label { font-size: 13.5px; font-weight: 500; color: #444; min-width: 130px; }
+    .bar-track {
+      flex: 1;
+      background: #e0e0e0;
+      border-radius: 6px;
+      height: 28px;
+      overflow: hidden;
+      position: relative;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 10px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #fff;
+      transition: width 0.6s ease;
+    }
+    .bar-fill.red   { background: linear-gradient(90deg, #ef5350, #c62828); }
+    .bar-fill.orange{ background: linear-gradient(90deg, #ffa726, #e65100); }
+    .bar-fill.blue  { background: linear-gradient(90deg, #42a5f5, #1565c0); }
+    .bar-fill.green { background: linear-gradient(90deg, #66bb6a, #2e7d32); }
+
+    /* 수치 강조 카드 */
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 36px 0;
+    }
+    .stat-card {
+      background: #0f3460;
+      color: #fff;
+      border-radius: 12px;
+      padding: 22px 16px;
+      text-align: center;
+    }
+    .stat-card .num {
+      font-size: 32px;
+      font-weight: 900;
+      color: #ef9a9a;
+      display: block;
+      line-height: 1.2;
+    }
+    .stat-card .unit {
+      font-size: 16px;
+      font-weight: 700;
+      color: #ef9a9a;
+    }
+    .stat-card .desc {
+      font-size: 12.5px;
+      color: rgba(255,255,255,0.7);
+      margin-top: 8px;
+      line-height: 1.5;
+    }
+
+    /* 공급 추이 SVG 차트 */
+    .supply-chart {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      margin: 36px 0;
+      border: 1px solid #e8e8e8;
+    }
+    .supply-chart h3 {
+      font-size: 15px; font-weight: 700; color: #333;
+      margin-bottom: 16px; text-align: center;
+    }
+
+    /* 인용 */
+    blockquote {
+      background: #f5f5f5;
+      border-left: 4px solid #0f3460;
+      padding: 20px 24px;
+      margin: 28px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 15.5px;
+      color: #444;
+      font-style: italic;
+      line-height: 1.75;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-size: 13px;
+      color: #888;
+      font-style: normal;
+    }
+
+    /* 체크리스트 */
+    .checklist {
+      background: #e8f5e9;
+      border-radius: 10px;
+      padding: 24px 28px;
+      margin: 30px 0;
+    }
+    .checklist h3 {
+      font-size: 15px; font-weight: 700; color: #2e7d32;
+      margin-bottom: 14px;
+    }
+    .checklist ul { list-style: none; padding: 0; }
+    .checklist ul li {
+      font-size: 15px;
+      padding: 6px 0 6px 26px;
+      position: relative;
+      color: #333;
+      border-bottom: 1px solid #c8e6c9;
+    }
+    .checklist ul li:last-child { border-bottom: none; }
+    .checklist ul li::before {
+      content: '✔';
+      position: absolute; left: 0;
+      color: #2e7d32;
+      font-weight: 700;
+    }
+
+    /* 해시태그 */
+    .hashtags {
+      padding: 28px 40px;
+      display: flex; flex-wrap: wrap; gap: 10px;
+      border-top: 1px solid #f0f0f0;
+    }
+    .hashtags a {
+      font-size: 13px;
+      color: #0f3460;
+      background: #e8edf5;
+      padding: 5px 13px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+    .hashtags a:hover { background: #c5d2e8; }
+
+    /* 출처 */
+    .sources {
+      padding: 24px 40px;
+      background: #fafafa;
+      border-top: 1px solid #efefef;
+    }
+    .sources h4 { font-size: 13px; color: #999; margin-bottom: 10px; font-weight: 600; }
+    .sources ul { list-style: none; padding: 0; }
+    .sources ul li { font-size: 12.5px; color: #aaa; margin-bottom: 5px; }
+    .sources ul li a { color: #aaa; text-decoration: none; }
+    .sources ul li a:hover { color: #0f3460; text-decoration: underline; }
+
+    /* 면책 */
+    .disclaimer {
+      padding: 20px 40px;
+      background: #f5f5f5;
+      border-top: 1px solid #ebebeb;
+      font-size: 12px;
+      color: #aaa;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 600px) {
+      .hero { padding: 36px 24px 32px; }
+      .hero h1 { font-size: 23px; }
+      .content { padding: 32px 24px 0; }
+      .stat-grid { grid-template-columns: repeat(2, 1fr); }
+      .hashtags, .sources, .disclaimer { padding-left: 24px; padding-right: 24px; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- 헤더 -->
+  <header class="hero">
+    <span class="category-badge">🏠 부동산·주거</span>
+    <h1>규제 3번에도 <em>집값 15% 폭등</em>…<br>이재명 정부 1년, '6·27 대책'은 이미 죽었다</h1>
+    <p class="subtitle">서울 아파트 71주 연속 상승 · 전셋값 12년 8개월 최고치 · 서민은 노도강으로 쫓겨난다</p>
+    <div class="meta">
+      <span>📅 2026년 6월 26일</span>
+      <span>✍️ 데이터 저널리즘팀</span>
+      <span>⏱️ 약 7분 읽기</span>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main class="content">
+
+    <!-- 훅 문단 -->
+    <p style="font-size:18px; font-weight:500; line-height:1.85; color:#111; margin-bottom:28px;">
+      "집값을 반드시 잡겠습니다." 이재명 대통령이 취임 직후 내뱉은 이 한마디는 딱 1년 만에 역사상 가장 처참한 공약 실패의 기록이 됐다. 대책은 세 번 나왔고, 규제는 더 세졌는데, 서울 아파트는 <strong>71주 연속 오르고 있다</strong>. 집값 상승률은 15%. 전셋값은 12년 8개월 만에 최고치를 찍었다.
+    </p>
+
+    <!-- 핵심 요약 -->
+    <div class="summary-box">
+      <h2>📌 핵심 요약 3줄</h2>
+      <ul>
+        <li>이재명 정부 출범 1년 서울 아파트 누적 상승률 <strong>+15.4%</strong> — 대출 규제에도 71주 연속 상승</li>
+        <li>전셋값 12년 8개월 만에 최고치, 서울 입주 물량 <strong>내년 31.6% 급감</strong> 예고</li>
+        <li>서민은 노도강·금관구로 쫓겨나고, 강남 84㎡는 <strong>32억 원</strong>에 팔렸다</li>
+      </ul>
+    </div>
+
+    <!-- 수치 카드 -->
+    <div class="stat-grid">
+      <div class="stat-card">
+        <span class="num">71<span class="unit">주</span></span>
+        <p class="desc">서울 아파트 매매가<br>연속 상승 기록</p>
+      </div>
+      <div class="stat-card">
+        <span class="num">+15<span class="unit">%</span></span>
+        <p class="desc">이재명 정부 1년<br>서울 아파트 상승률</p>
+      </div>
+      <div class="stat-card">
+        <span class="num">32<span class="unit">억</span></span>
+        <p class="desc">강남 84㎡ 실거래가<br>(2026년 6월)</p>
+      </div>
+    </div>
+
+    <!-- 섹션 1 -->
+    <h2 class="section-title">① 대책이 나올수록 집값이 올랐다</h2>
+    <p>지난해 6월 27일, 정부는 사상 최강의 주택담보대출 규제를 발표했다. 15억 원 이하 주택에 6억 원, 25억 원 초과에는 단 2억 원만 빌려주겠다는 초강수였다. 당시 전문가들은 "이 정도면 수요가 꺾인다"고 했다.</p>
+    <p>결과는 정반대였다. 6·27 대책 직전 서울 아파트 매매가격지수는 92.56이었는데, 올해 5월 기준 <strong>102.71</strong>로 10.9%포인트 뛰었다. 대출 규제 이후 잠시 숨고르기를 하던 시장은 불과 석 달 만에 다시 달아올랐다. 정부는 이후 10·15 대책, 2026년 상반기 추가 억제책까지 세 차례 브레이크를 밟았지만, 상승열차는 멈추지 않았다.</p>
+
+    <blockquote>
+      "규제 정책으로 시장을 안정시키기 쉽지 않은데, 6.27 부동산 대책은 전형적인 규제형 정책이다. 전월세 가격 상승과 풍선효과 등 규제의 역설로 인한 부작용이 많이 발생했다. 규제보다는 공급에 초점을 맞출 필요가 있다."
+      <cite>— 광운대 부동산법무학과 교수 (이투데이 2026.06.24)</cite>
+    </blockquote>
+
+    <!-- 섹션 2 -->
+    <h2 class="section-title">② 왜 규제가 통하지 않는가 — 공급의 절벽</h2>
+    <p>집값의 근본 방정식은 단순하다. 공급이 수요를 따라가지 못하면 가격은 오른다. 그런데 지금 한국은 공급 절벽 한복판에 있다. 전국 아파트 입주 물량은 2024년 36만 가구에서 2026년 21만 가구로 <strong>41.7% 급감</strong>했다. 서울은 더 심각하다. 올해 4만 2,000가구에서 내년 2만 9,000가구로 <strong>31.6% 추락</strong>할 전망이다.</p>
+    <p>착공에서 입주까지 최소 3~5년이 걸린다는 점을 고려하면, 이미 만들어진 공급 가뭄은 어떤 규제로도 단기에 해소할 수 없다. 이 틈을 파고드는 것은 여전히 강한 서울 수요다. 인구 1위 도시, 직주근접, 학군·의료 인프라 집중이라는 구조적 요인이 시장을 떠받치고 있다.</p>
+
+    <!-- 공급 차트 (SVG) -->
+    <div class="supply-chart">
+      <h3>📊 서울 아파트 입주 물량 추이 (단위: 천 가구)</h3>
+      <svg viewBox="0 0 700 240" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;display:block;margin:0 auto;">
+        <!-- 배경 격자선 -->
+        <line x1="80" y1="20" x2="80" y2="200" stroke="#e0e0e0" stroke-width="1"/>
+        <line x1="80" y1="200" x2="660" y2="200" stroke="#e0e0e0" stroke-width="1"/>
+        <line x1="80" y1="20" x2="660" y2="20" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+        <line x1="80" y1="80" x2="660" y2="80" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+        <line x1="80" y1="140" x2="660" y2="140" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+
+        <!-- Y축 레이블 -->
+        <text x="72" y="24" text-anchor="end" font-size="11" fill="#888">6만</text>
+        <text x="72" y="84" text-anchor="end" font-size="11" fill="#888">4만</text>
+        <text x="72" y="144" text-anchor="end" font-size="11" fill="#888">2만</text>
+        <text x="72" y="204" text-anchor="end" font-size="11" fill="#888">0</text>
+
+        <!-- 막대 (2022~2027) -->
+        <!-- 2022: 4.5만 -->
+        <rect x="110" y="65" width="60" height="135" fill="#42a5f5" rx="4"/>
+        <text x="140" y="58" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1565c0">4.5만</text>
+        <text x="140" y="218" text-anchor="middle" font-size="12" fill="#555">2022</text>
+
+        <!-- 2023: 3.8만 -->
+        <rect x="200" y="87" width="60" height="113" fill="#42a5f5" rx="4"/>
+        <text x="230" y="80" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1565c0">3.8만</text>
+        <text x="230" y="218" text-anchor="middle" font-size="12" fill="#555">2023</text>
+
+        <!-- 2024: 4.2만 -->
+        <rect x="290" y="74" width="60" height="126" fill="#42a5f5" rx="4"/>
+        <text x="320" y="67" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1565c0">4.2만</text>
+        <text x="320" y="218" text-anchor="middle" font-size="12" fill="#555">2024</text>
+
+        <!-- 2025: 3.5만 -->
+        <rect x="380" y="95" width="60" height="105" fill="#ffa726" rx="4"/>
+        <text x="410" y="88" text-anchor="middle" font-size="11.5" font-weight="700" fill="#e65100">3.5만</text>
+        <text x="410" y="218" text-anchor="middle" font-size="12" fill="#555">2025</text>
+
+        <!-- 2026: 4.2만 (올해) -->
+        <rect x="470" y="74" width="60" height="126" fill="#ffa726" rx="4"/>
+        <text x="500" y="67" text-anchor="middle" font-size="11.5" font-weight="700" fill="#e65100">4.2만</text>
+        <text x="500" y="218" text-anchor="middle" font-size="12" fill="#555">2026</text>
+
+        <!-- 2027: 2.9만 (전망) -->
+        <rect x="560" y="130" width="60" height="70" fill="#ef5350" rx="4"/>
+        <text x="590" y="123" text-anchor="middle" font-size="11.5" font-weight="700" fill="#c62828">2.9만</text>
+        <text x="590" y="218" text-anchor="middle" font-size="12" fill="#555">2027</text>
+        <text x="590" y="230" text-anchor="middle" font-size="10" fill="#e53935">(전망)</text>
+
+        <!-- 화살표 추세선 -->
+        <line x1="500" y1="100" x2="560" y2="156" stroke="#e53935" stroke-width="2" stroke-dasharray="5,3"/>
+        <polygon points="560,156 552,145 568,148" fill="#e53935"/>
+      </svg>
+      <p style="font-size:12px;color:#999;text-align:center;margin-top:8px;">* 서울시 아파트 입주 물량 기준, 2027년은 추정치</p>
+    </div>
+
+    <!-- 섹션 3 -->
+    <h2 class="section-title">③ 면적별 양극화 — 소형은 6.7% 뛰고 대형은 2% 오른 이유</h2>
+    <p>이번 집값 상승에는 독특한 패턴이 있다. 대출 한도가 줄어들자 매수자들이 <strong>상대적으로 싸고 진입 장벽이 낮은 소형 아파트</strong>로 대거 이동한 것이다. 올해 상반기 기준 서울 전용 40~60㎡ 소형 아파트 매매가는 <strong>6.72%</strong> 상승했다. 반면 전용 135㎡ 초과 대형은 <strong>2.09%</strong> 상승에 그쳤다. 소형이 대형의 3배 넘는 상승률이다.</p>
+
+    <!-- 막대 차트 -->
+    <div class="infographic">
+      <h3>📈 2026년 상반기 서울 아파트 면적별 매매가 상승률</h3>
+      <div class="bar-chart">
+        <div class="bar-item">
+          <span class="bar-label">40~60㎡ (소형)</span>
+          <div class="bar-track">
+            <div class="bar-fill red" style="width:100%">+6.72%</div>
+          </div>
+        </div>
+        <div class="bar-item">
+          <span class="bar-label">60~85㎡ (중형)</span>
+          <div class="bar-track">
+            <div class="bar-fill orange" style="width:73%">+4.91%</div>
+          </div>
+        </div>
+        <div class="bar-item">
+          <span class="bar-label">85~135㎡ (중대형)</span>
+          <div class="bar-track">
+            <div class="bar-fill blue" style="width:50%">+3.38%</div>
+          </div>
+        </div>
+        <div class="bar-item">
+          <span class="bar-label">135㎡ 초과 (대형)</span>
+          <div class="bar-track">
+            <div class="bar-fill green" style="width:31%">+2.09%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p>이는 정부 규제가 의도치 않은 결과를 낳은 전형적 사례다. 대출 한도를 줄이자 '살 수 있는 집'의 범위가 좁아졌고, 그 범위 안에서 경쟁이 심화되며 소형 아파트 가격이 폭등했다. 역설적으로 <strong>무주택 서민이 가장 많이 찾는 소형 아파트가 가장 크게 올랐다</strong>.</p>
+
+    <!-- 섹션 4 -->
+    <h2 class="section-title">④ 전세난의 습격 — 전셋값 12년 8개월 만에 최고치</h2>
+    <p>매매 시장만 뜨거운 게 아니다. 전세 시장도 폭발했다. 서울 아파트 전셋값은 <strong>12년 8개월 만에 최고 상승폭</strong>을 기록했다. 2026년 서울 전세 상승률은 4.7% 예상으로, 이미 매매가 상승률을 웃도는 지역도 속출하고 있다.</p>
+    <p>전세난의 원인은 복합적이다. 신규 입주 물량 급감, 2020년 임대차 2법(계약갱신청구권) 시행 이후 기존 세입자들의 장기 거주 선택으로 신규 전세 매물이 씨가 말랐다. 여기에 정비사업 이주 수요까지 겹쳤다. 대출 규제로 집을 살 수 없는 사람들이 전세로 몰리면서 수요는 오히려 늘었는데, 공급은 줄어든 구조다.</p>
+
+    <blockquote>
+      "'전세난에 밀려 외곽으로'…노도강·금관구 신고가 릴레이"
+      <cite>— 파이낸셜뉴스 2026.06.23 헤드라인</cite>
+    </blockquote>
+
+    <p>이제 서민들은 강북 인기 지역에서도 밀려나고 있다. 노원·도봉·강북(노도강), 금천·관악·구로(금관구) 같은 서울 외곽 지역에서 신고가가 쏟아지고 있다는 것은, 더 저렴한 대안을 찾던 수요조차 공급을 초과했다는 뜻이다.</p>
+
+    <!-- 섹션 5 -->
+    <h2 class="section-title">⑤ 이것이 나에게 미치는 영향 — 세 가지 유형별 체크</h2>
+
+    <div class="checklist">
+      <h3>🏘️ 내 상황에 따라 달라지는 현실 체크리스트</h3>
+      <ul>
+        <li><strong>무주택 사회초년생</strong> — 소형 아파트도 6.7% 올랐다. 전세 구하기는 더 어렵다. 청약 경쟁률 상승 예고. 지금 당장 청약통장 납입 기간·금액 점검 필수.</li>
+        <li><strong>전세 거주자</strong> — 만기 시 전셋값 급등 가능성 높다. 갱신권 사용 여부, 전세보증보험 가입 여부 지금 확인해야 한다.</li>
+        <li><strong>실수요 매수 고려자</strong> — 대출 한도 크게 줄었다. DSR 스트레스 금리 +1.5%p로 실질 대출 가능액 감소. 내 소득으로 얼마 빌릴 수 있는지 은행 방문 전 시뮬레이션 먼저.</li>
+        <li><strong>1주택 보유자</strong> — 상급지 신고가 소식에 들뜨지 말 것. 비과세 조건(2년 이상 보유/거주), 양도세 계산 미리 해두는 것이 현명하다.</li>
+        <li><strong>노인·취약계층</strong> — 전세 가격 상승에 가장 취약한 그룹. 주거급여·LH 공공임대 신청 자격 확인 필수. 지자체 주거안전망 상담 전화 활용할 것.</li>
+      </ul>
+    </div>
+
+    <!-- 섹션 6 — 전망 -->
+    <h2 class="section-title">⑥ 앞으로의 전망 — 하반기에도 멈추지 않는다</h2>
+    <p>하나금융연구소는 2026년 전국 아파트 가격이 0.8%, 수도권은 2% 오를 것으로 전망했다. KB부동산 데이터는 더 비관적이다. 서울 입주 물량이 내년 31.6% 급감하면 2027년에는 지금보다 더 심각한 공급 부족이 온다. 가격은 더 오를 가능성이 높다.</p>
+    <p>정부가 꺼낼 수 있는 카드는 제한적이다. 대출 규제는 이미 역대 최강 수준이다. 공급을 늘리려면 시간이 필요하다. 재건축·재개발 규제 완화 논의가 수면 위로 떠오르고 있지만, 실제 입주까지는 최소 5년이다. 단기 처방이 없다는 게 시장 전문가들의 공통된 진단이다.</p>
+    <p>23년간 반복된 패턴이 있다. 규제하면 오르고, 풀면 더 오르는 악순환. 이번에도 예외가 없었다. 결국 집값 안정의 열쇠는 규제가 아닌 <strong>충분한 공급</strong>뿐이라는 교훈만 남겼다. 그 교훈을 새겨듣는 정부가 언제 나올지, 그것이 진짜 문제다.</p>
+
+  </main>
+
+  <!-- 해시태그 -->
+  <div class="hashtags">
+    <a href="#">#서울집값</a>
+    <a href="#">#71주연속상승</a>
+    <a href="#">#이재명정부부동산</a>
+    <a href="#">#627부동산대책</a>
+    <a href="#">#전세난</a>
+    <a href="#">#아파트폭등</a>
+    <a href="#">#부동산규제</a>
+    <a href="#">#DSR</a>
+    <a href="#">#공급부족</a>
+    <a href="#">#노도강</a>
+    <a href="#">#청약</a>
+    <a href="#">#주담대</a>
+    <a href="#">#서민주거</a>
+  </div>
+
+  <!-- 출처 -->
+  <div class="sources">
+    <h4>출처 및 참고 자료</h4>
+    <ul>
+      <li><a href="https://www.ytn.co.kr/_ln/0102_202606241049512654" target="_blank">YTN — [6.27부동산대책 1년] "李정부 내내 집값 올랐다" 서울 집값 71주 연속 상승</a></li>
+      <li><a href="https://www.mt.co.kr/estate/2026/06/25/2026062510085725549" target="_blank">머니투데이 — 서울 아파트값 71주 연속 상승…강남구 1년래 최대폭↑</a></li>
+      <li><a href="https://www.newspim.com/news/view/20260626000915" target="_blank">뉴스핌 — [AI 부동산 투데이] 서울 아파트값 1년 만에 15%↑…규제에도 상승세</a></li>
+      <li><a href="https://www.etoday.co.kr/news/view/2597263" target="_blank">이투데이 — 빚내서 집 사는 시대 끝냈지만⋯다시 뛰는 서울 집값 [6·27 대책 1년①]</a></li>
+      <li><a href="https://www.newsis.com/view/NISX20260625_0003683156" target="_blank">뉴시스 — 서울 집값 상승폭 확대…전셋값 12년8개월來 최고</a></li>
+      <li><a href="https://www.fnnews.com/news/202606230601473858" target="_blank">파이낸셜뉴스 — "전세난에 밀려 외곽으로"…노도강·금관구 신고가 '릴레이'</a></li>
+      <li><a href="https://kbthink.com/realestate/issue/hosing-260611.html" target="_blank">KB의 생각 — 2026년 상반기 부동산 시장 총정리</a></li>
+    </ul>
+  </div>
+
+  <!-- 면책 조항 -->
+  <div class="disclaimer">
+    ⚠️ <strong>면책조항:</strong> 본 아티클은 언론 보도·공개 통계를 바탕으로 작성된 저널리즘 콘텐츠입니다. 특정 부동산 투자 또는 매매를 권유하지 않습니다. 부동산 의사결정 전 반드시 전문가 상담을 받으시기 바랍니다. 일부 수치는 취재 시점 기준이며 이후 변경될 수 있습니다.
+  </div>
+
+</div>
+</body>
+</html>
