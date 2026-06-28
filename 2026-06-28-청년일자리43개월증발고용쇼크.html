@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="2026년 5월 청년 취업자 25만명 감소, 43개월 연속 고용 한파. 한국 청년 일자리가 사라지고 있다. 그 숨겨진 진실을 파헤친다.">
+<meta name="keywords" content="청년실업, 고용쇼크, 취업한파, 비정규직, 니트족, 청년고용, 한국경제, 일자리위기">
+<meta property="og:title" content="청년 25만명이 증발했다 — 43개월째 멈추지 않는 고용 학살">
+<meta property="og:description" content="숫자가 거짓말을 하고 있다. 실업률은 낮은데 왜 청년들은 취직을 못 하는가?">
+<title>청년 25만명이 증발했다 — 43개월째 멈추지 않는 고용 학살 | 한국이슈리포트</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #1a1a2e;
+    background: #fff;
+  }
+  .container { max-width: 800px; margin: 0 auto; padding: 0 20px 60px; }
+
+  /* 헤더 */
+  .hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: #fff;
+    padding: 60px 20px 50px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(circle at 70% 30%, rgba(229,57,53,0.15) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .hero-inner { max-width: 800px; margin: 0 auto; position: relative; z-index: 1; }
+  .category-badge {
+    display: inline-block;
+    background: #e53935;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 4px 12px;
+    border-radius: 2px;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+  }
+  .hero h1 {
+    font-size: clamp(26px, 5vw, 42px);
+    font-weight: 900;
+    line-height: 1.3;
+    margin-bottom: 16px;
+    word-break: keep-all;
+  }
+  .hero h1 .accent { color: #ef5350; }
+  .hero-sub {
+    font-size: 16px;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 24px;
+    word-break: keep-all;
+  }
+  .meta {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  /* 본문 */
+  .body-wrap { padding-top: 40px; }
+
+  /* 핵심 요약 박스 */
+  .summary-box {
+    border-left: 5px solid #e53935;
+    background: #fff5f5;
+    padding: 20px 24px;
+    margin: 32px 0;
+    border-radius: 0 8px 8px 0;
+  }
+  .summary-box h3 {
+    font-size: 13px;
+    font-weight: 700;
+    color: #e53935;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+  .summary-box ul { padding-left: 20px; }
+  .summary-box li { margin-bottom: 6px; font-weight: 500; }
+
+  /* 소제목 */
+  h2.section-title {
+    font-size: 22px;
+    font-weight: 900;
+    color: #0f3460;
+    margin: 48px 0 16px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #e53935;
+    word-break: keep-all;
+  }
+  p { margin-bottom: 18px; word-break: keep-all; }
+
+  /* 강조 인용 */
+  .pull-quote {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0f3460;
+    border-top: 3px solid #e53935;
+    border-bottom: 3px solid #e53935;
+    padding: 20px 0;
+    margin: 36px 0;
+    text-align: center;
+    line-height: 1.5;
+    word-break: keep-all;
+  }
+
+  /* 인포그래픽 */
+  .infographic {
+    background: #f8f9fc;
+    border-radius: 12px;
+    padding: 32px 24px;
+    margin: 40px 0;
+  }
+  .infographic h3 {
+    font-size: 16px;
+    font-weight: 900;
+    color: #1a1a2e;
+    margin-bottom: 28px;
+    text-align: center;
+  }
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .stat-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px 16px;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    border-top: 4px solid #e53935;
+  }
+  .stat-card .num {
+    font-size: 32px;
+    font-weight: 900;
+    color: #e53935;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .stat-card .unit { font-size: 14px; color: #666; }
+  .stat-card .desc { font-size: 13px; color: #444; margin-top: 8px; line-height: 1.4; }
+
+  /* 바 차트 */
+  .bar-chart { margin-top: 24px; }
+  .bar-chart .chart-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #666;
+    margin-bottom: 14px;
+    text-align: center;
+  }
+  .bar-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+  }
+  .bar-label { font-size: 13px; color: #444; width: 80px; flex-shrink: 0; text-align: right; }
+  .bar-track { flex: 1; background: #e8e8e8; border-radius: 4px; height: 22px; overflow: hidden; }
+  .bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    transition: width 1s ease;
+  }
+  .bar-fill.red { background: #e53935; }
+  .bar-fill.orange { background: #fb8c00; }
+  .bar-fill.blue { background: #1565c0; }
+  .bar-fill.gray { background: #78909c; }
+
+  /* 타임라인 */
+  .timeline { margin: 24px 0; }
+  .tl-item {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+  }
+  .tl-dot {
+    width: 14px; height: 14px;
+    background: #e53935;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 6px;
+  }
+  .tl-dot.blue { background: #1565c0; }
+  .tl-content { flex: 1; }
+  .tl-date { font-size: 12px; font-weight: 700; color: #e53935; margin-bottom: 4px; }
+  .tl-dot.blue ~ .tl-content .tl-date { color: #1565c0; }
+  .tl-text { font-size: 15px; color: #333; }
+
+  /* 영향 박스 */
+  .impact-box {
+    background: linear-gradient(135deg, #0f3460, #1565c0);
+    color: #fff;
+    border-radius: 12px;
+    padding: 28px 24px;
+    margin: 36px 0;
+  }
+  .impact-box h3 { font-size: 16px; font-weight: 700; margin-bottom: 18px; opacity: 0.85; }
+  .impact-item {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 14px;
+    align-items: flex-start;
+  }
+  .impact-icon {
+    font-size: 20px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .impact-text { font-size: 15px; line-height: 1.6; }
+
+  /* 전망 */
+  .outlook {
+    background: #fffde7;
+    border-radius: 10px;
+    padding: 24px;
+    margin: 32px 0;
+    border-left: 4px solid #f9a825;
+  }
+  .outlook h3 { font-size: 15px; font-weight: 700; color: #f57f17; margin-bottom: 14px; }
+  .outlook p { font-size: 15px; margin-bottom: 10px; color: #333; }
+
+  /* 해시태그 */
+  .hashtags {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid #eee;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .hashtag {
+    background: #f0f4ff;
+    color: #1565c0;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+
+  /* 면책 */
+  .disclaimer {
+    margin-top: 32px;
+    padding: 16px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    font-size: 12px;
+    color: #888;
+    line-height: 1.6;
+  }
+
+  /* 출처 */
+  .sources {
+    margin-top: 28px;
+    font-size: 13px;
+    color: #888;
+  }
+  .sources a { color: #1565c0; text-decoration: none; }
+  .sources a:hover { text-decoration: underline; }
+
+  @media (max-width: 600px) {
+    .stat-grid { grid-template-columns: 1fr 1fr; }
+    .hero { padding: 40px 16px 36px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- 히어로 헤더 -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="category-badge">💼 취업·노동 | 긴급 분석</div>
+    <h1>청년 <span class="accent">25만 명</span>이 증발했다<br>43개월째 멈추지 않는 고용 학살</h1>
+    <p class="hero-sub">실업률은 낮다고? 숫자가 거짓말을 하고 있다 — 한국 청년 일자리의 민낯</p>
+    <div class="meta">
+      <span>📅 2026년 6월 28일</span>
+      <span>✍️ 탐사리포트팀</span>
+      <span>⏱️ 읽는 시간 약 7분</span>
+    </div>
+  </div>
+</div>
+
+<!-- 본문 -->
+<div class="container">
+<div class="body-wrap">
+
+<!-- 훅 문단 -->
+<p style="margin-top:36px; font-size:19px; font-weight:500; line-height:1.9; color:#1a1a2e;">
+2026년 5월, 한국에서 <strong>청년 취업자 25만 5,000명이 한 달 만에 사라졌다</strong>. 이 숫자는 단순한 통계가 아니다. 25만 명이 넘는 20대 청년들이 일자리를 잃거나 처음부터 취직 자체를 포기했다는 뜻이다. 전체 취업자도 17개월 만에 처음으로 감소했다. 그런데도 정부는 말한다. "실업률은 OECD 평균 이하"라고. 이 나라에서 도대체 무슨 일이 벌어지고 있는가.
+</p>
+
+<!-- 핵심 요약 -->
+<div class="summary-box">
+  <h3>⚡ 이 기사 핵심 3줄</h3>
+  <ul>
+    <li>2026년 5월 청년 취업자 <strong>25만 5,000명 감소</strong> — 코로나 이후 최대 충격</li>
+    <li>청년 고용 감소 <strong>43개월 연속</strong> — 2022년 11월부터 한 번도 반등 없음</li>
+    <li>실업률 통계는 '불완전 취업'을 숨기는 함정 — 비정규직·아르바이트도 '취업자'</li>
+  </ul>
+</div>
+
+<!-- 섹션 1 -->
+<h2 class="section-title">17개월 만의 마이너스 — 고용 쇼크의 시작인가</h2>
+<p>
+통계청이 발표한 2026년 5월 고용동향은 충격적이었다. 15세 이상 전체 취업자가 <strong>2,912만 명으로 전년 동월 대비 4만 명 감소</strong>했다. 취업자가 줄어든 것은 2024년 12월 이후 처음, 무려 17개월 만이다. 더 무서운 것은 세부 지표다. 청년층(15~29세) 취업자는 <strong>25만 5,000명이 줄었고</strong>, 청년 고용률은 43.8%로 1년 전보다 2.4%포인트 폭락했다.
+</p>
+<p>
+제조업도 무너졌다. 제조업 취업자는 전년 동월 대비 <strong>14만 명 감소(–3.2%)</strong>해 2019년 2월 이후 7년 4개월 만에 가장 큰 낙폭을 기록했다. 중동전쟁 장기화로 원자재 가격이 치솟고 공급망이 흔들리면서, 자동차·기계 업종이 직격탄을 맞았다. 한국 제조업의 뼈대가 흔들리는 신호다.
+</p>
+
+<!-- 인포그래픽: 핵심 통계 -->
+<div class="infographic">
+  <h3>📊 2026년 5월 고용 지표 한눈에</h3>
+  <div class="stat-grid">
+    <div class="stat-card">
+      <div class="num">–25.5<span style="font-size:18px">만</span></div>
+      <div class="unit">명</div>
+      <div class="desc">청년(15~29세)<br>취업자 감소</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">43</div>
+      <div class="unit">개월</div>
+      <div class="desc">청년 취업자<br>연속 감소 기록</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">43.8<span style="font-size:18px">%</span></div>
+      <div class="unit">전년比 –2.4%p</div>
+      <div class="desc">청년 고용률<br>(역대 최저권)</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">–14<span style="font-size:18px">만</span></div>
+      <div class="unit">명</div>
+      <div class="desc">제조업 취업자<br>감소 (7년來 최대)</div>
+    </div>
+  </div>
+
+  <!-- 연령대별 고용률 변화 바 차트 -->
+  <div class="bar-chart">
+    <div class="chart-title">연령대별 고용률 전년比 변화 (2026년 5월)</div>
+    <div class="bar-row">
+      <div class="bar-label">15~29세</div>
+      <div class="bar-track">
+        <div class="bar-fill red" style="width:88%">–2.4%p</div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">30~39세</div>
+      <div class="bar-track">
+        <div class="bar-fill orange" style="width:40%">–0.9%p</div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">40~49세</div>
+      <div class="bar-track">
+        <div class="bar-fill gray" style="width:22%">–0.4%p</div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">60세 이상</div>
+      <div class="bar-track">
+        <div class="bar-fill blue" style="width:15%">+0.2%p</div>
+      </div>
+    </div>
+  </div>
+  <p style="font-size:12px; color:#999; text-align:center; margin-top:14px;">출처: 통계청 고용동향 (2026.6), 각 연령대 수치는 추정치 포함</p>
+</div>
+
+<!-- 섹션 2 -->
+<h2 class="section-title">43개월 연속 감소 — 이건 경기침체가 아니라 구조 붕괴다</h2>
+<p>
+가장 소름 돋는 숫자는 '<strong>43개월 연속</strong>'이다. 청년 취업자는 2022년 11월부터 2026년 5월까지 단 한 달도 빠짐없이 줄었다. 코로나19 팬데믹 충격도 이렇게 길지 않았다. 일시적 쇼크가 아니라는 뜻이다. 이건 구조적 붕괴다.
+</p>
+<p>
+원인은 복합적이다. 첫째, <strong>기업이 공채를 없앴다</strong>. 대기업들은 2018년 전후로 정기 공개채용을 수시채용·경력직 채용으로 전환했다. '신입'을 뽑지 않는다. 경력이 없으면 지원조차 못 한다. 둘째, <strong>반도체는 수출이 늘어도 일자리는 안 늘어</strong>. 자동화 덕에 매출이 올라도 인력이 그만큼 필요 없다. 셋째, <strong>AI가 화이트칼라 신입 포지션을 흡수</strong>하기 시작했다. 자료 정리, 번역, 단순 분석 — 이 모든 것이 AI로 대체됐다. 신입이 할 수 있는 업무가 사라졌다.
+</p>
+
+<div class="pull-quote">
+"청년이 취직을 못 하는 게 아니라<br>청년이 들어갈 문이 닫히고 있는 것이다."
+</div>
+
+<!-- 섹션 3 -->
+<h2 class="section-title">숫자의 함정 — 실업률 낮다고 안심했다가는 큰코다친다</h2>
+<p>
+정부와 언론은 종종 이렇게 말한다. "한국 실업률은 OECD 평균 11.4%보다 낮다." 맞는 말이다. 그런데 이 통계에는 치명적인 함정이 있다. <strong>한국의 실업률 통계는 주 1시간이라도 일하면 '취업자'로 분류</strong>한다. 편의점 알바를 3시간 하면? 취업자다. 쿠팡 물류센터에서 이틀 일하면? 취업자다.
+</p>
+<p>
+2025년 기준 한국 비정규직 비율은 기관별 집계로 <strong>38~41%</strong>에 달한다. 이 비정규직의 시간당 임금은 정규직의 <strong>겨우 65.2%</strong>다. 즉 취업자 중 4명 중 1~2명은 정규직 임금의 3분의 2도 못 받는 불안정 일자리에 있다. 실업률이 낮아도 '괜찮은 일자리'는 절대적으로 부족하다.
+</p>
+
+<!-- 섹션 4: 타임라인 -->
+<h2 class="section-title">청년 고용 한파 연표 — 언제부터 이렇게 됐나</h2>
+<div class="infographic">
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot blue"></div>
+      <div class="tl-content">
+        <div class="tl-date">2018~2020년</div>
+        <div class="tl-text">대기업 공채 폐지 물결 — 삼성, 현대, LG 잇따라 수시채용 전환. 신입 채용 문이 좁아지기 시작.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-content">
+        <div class="tl-date">2022년 11월</div>
+        <div class="tl-text">청년 취업자 감소 시작 — 이후 43개월 연속 감소 행진의 첫 달.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-content">
+        <div class="tl-date">2024년 말</div>
+        <div class="tl-text">AI 도입 가속화 — ChatGPT·Claude 등 기업 업무 침투, 신입 대체 포지션 감소 본격화.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-content">
+        <div class="tl-date">2026년 4월</div>
+        <div class="tl-text">청년 고용 한파 심화 — 취업자 증가폭 16개월 만에 최소 기록, 위기 신호 빨간불.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-content">
+        <div class="tl-date">2026년 5월</div>
+        <div class="tl-text">전체 취업자 17개월 만에 감소 — 청년 –25만 5,000명, 제조업 –14만 명. 고용 쇼크 공식화.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 섹션 5: 나에게 미치는 영향 -->
+<h2 class="section-title">'나'에게 어떤 영향이 오는가</h2>
+
+<div class="impact-box">
+  <h3>🎯 내 생활에 직접 닿는 파장</h3>
+  <div class="impact-item">
+    <div class="impact-icon">🎓</div>
+    <div class="impact-text"><strong>취준생·졸업예정자:</strong> 기업의 수시채용 확산으로 '졸업 후 즉시 취업' 루트가 사실상 막혔다. 졸업 후 1~2년의 공백 기간이 표준화되는 추세. 이 기간에 스펙·경험을 쌓지 않으면 경력직 전환도 어려워진다.</div>
+  </div>
+  <div class="impact-item">
+    <div class="impact-icon">💸</div>
+    <div class="impact-text"><strong>20~30대 소득 하락:</strong> 파이낸셜뉴스 분석에 따르면 소득 하위 20%에서 20~30대 비중이 5년 새 2배로 급증했다. 청년 빈곤층이 빠르게 늘고 있다.</div>
+  </div>
+  <div class="impact-item">
+    <div class="impact-icon">🏠</div>
+    <div class="impact-text"><strong>결혼·출산 포기 가속:</strong> 안정적 일자리 없이 결혼과 내 집 마련은 불가능하다. 청년 고용 한파는 출생률 0.7명대 저출생 위기를 심화시키는 가장 직접적 원인 중 하나다.</div>
+  </div>
+  <div class="impact-item">
+    <div class="impact-icon">🧠</div>
+    <div class="impact-text"><strong>니트족(NEET) 173만 명:</strong> 한국 청년 니트 비율(18.3%)은 OECD 11개국 중 3위, 유일하게 증가하는 나라다. 취업 포기 청년이 늘면서 사회적 비용도 폭발적으로 증가한다.</div>
+  </div>
+</div>
+
+<!-- 섹션 6: 비정규직 현실 -->
+<h2 class="section-title">취업해도 지옥 — 비정규직 38%의 현실</h2>
+<p>
+겨우 취직에 성공해도 문제는 끝나지 않는다. 한국 노동시장은 정규직과 비정규직 사이의 <strong>'이중 구조'</strong>가 갈수록 굳어지고 있다. 2025년 기준 비정규직 비율은 38~41%. 이들의 시간당 임금은 정규직의 <strong>65.2%</strong>에 불과하다. 복지, 퇴직금, 건강보험 혜택도 차이가 크다.
+</p>
+
+<div class="infographic">
+  <h3>📊 정규직 vs 비정규직 격차</h3>
+  <div class="bar-chart">
+    <div class="chart-title">시간당 임금 비교 (정규직 = 100 기준)</div>
+    <div class="bar-row">
+      <div class="bar-label">정규직</div>
+      <div class="bar-track">
+        <div class="bar-fill blue" style="width:100%">100%</div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">비정규직</div>
+      <div class="bar-track">
+        <div class="bar-fill red" style="width:65.2%">65.2%</div>
+      </div>
+    </div>
+  </div>
+  <div class="bar-chart" style="margin-top:20px;">
+    <div class="chart-title">전체 임금근로자 중 비정규직 비율</div>
+    <div class="bar-row">
+      <div class="bar-label">통계청</div>
+      <div class="bar-track">
+        <div class="bar-fill red" style="width:38.2%">38.2%</div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">노동계</div>
+      <div class="bar-track">
+        <div class="bar-fill orange" style="width:41.5%">41.5%</div>
+      </div>
+    </div>
+  </div>
+  <p style="font-size:12px; color:#999; text-align:center; margin-top:14px;">출처: 통계청 경제활동인구조사 부가조사(2025), 한국노동사회연구소</p>
+</div>
+
+<p>
+더 심각한 것은 이 격차가 <strong>2026년에도 확대될 것으로 전망</strong>된다는 점이다. 최저임금 인상률(2.9%)은 물가 상승률(2%)을 소폭 웃돌지만, 정규직 임금 인상 속도를 따라잡기엔 역부족이다. '같은 회사, 같은 업무, 다른 세상'이 한국 노동현장의 현실이다.
+</p>
+
+<!-- 전망 및 행동 제안 -->
+<h2 class="section-title">이 위기, 어디로 가는가 — 전망과 생존 전략</h2>
+
+<div class="outlook">
+  <h3>📌 단기 전망 (2026년 하반기)</h3>
+  <p>하반기에도 기업들의 경력직 선호, AI 도구 도입 가속화, 제조업 부진이 이어질 가능성이 높다. 청년 고용 반등을 기대할 요인이 현재로선 뚜렷하지 않다. 정부의 '청년미래적금'(월 50만원 3년 저축 시 2천만원 적립) 같은 지원책은 소득이 있는 청년에게만 혜택이 돌아간다는 구조적 한계가 있다.</p>
+</div>
+
+<p>
+전문가들은 구조적 해법으로 세 가지를 꼽는다. 첫째, <strong>고용보험 기준을 '시간'이 아닌 '소득'으로 전환</strong>해 플랫폼 노동자·초단기 근로자도 보호망 안에 넣어야 한다(정부가 이미 개정안 논의 중). 둘째, <strong>중소기업 일자리 질 향상</strong> — 청년들이 중소기업을 기피하는 이유는 임금 격차와 불안정성이다. 셋째, <strong>AI 전환 훈련 의무화</strong> — 이미 일자리를 잃은 청년을 재교육하는 속도가 너무 느리다.
+</p>
+<p>
+개인 차원에서는 <strong>'경력 점프'</strong> 전략이 현실적이다. 첫 직장의 규모나 처우보다 '경력이 쌓이는 곳'을 우선시하는 청년들이 늘고 있다. 플랫폼 부업, 프리랜서 포트폴리오, AI 도구 숙련 — 이것이 불완전한 노동시장에서 살아남는 현실적 전략이다.
+</p>
+
+<div class="pull-quote">
+"이 숫자가 멈추지 않는 한,<br>저출생도, 집값도, 내수 침체도 해결되지 않는다."
+</div>
+
+<!-- 해시태그 -->
+<div class="hashtags">
+  <span class="hashtag">#청년실업</span>
+  <span class="hashtag">#고용쇼크</span>
+  <span class="hashtag">#43개월연속감소</span>
+  <span class="hashtag">#비정규직</span>
+  <span class="hashtag">#니트족</span>
+  <span class="hashtag">#취업한파</span>
+  <span class="hashtag">#한국노동</span>
+  <span class="hashtag">#청년빈곤</span>
+  <span class="hashtag">#2026고용위기</span>
+  <span class="hashtag">#일자리사라진나라</span>
+</div>
+
+<!-- 출처 -->
+<div class="sources">
+  <p><strong>📎 주요 출처</strong></p>
+  <p>
+    · <a href="https://www.fnnews.com/news/202606110800001" target="_blank">파이낸셜뉴스 — 5월 취업자 17개월 만에 감소</a><br>
+    · <a href="https://www.khan.co.kr/article/202606110800001" target="_blank">경향신문 — 청년 취업자 25만명 줄었다</a><br>
+    · <a href="https://www.koreaiin.com/news/911217" target="_blank">한국IT산업뉴스 — OECD 청년 실업 비교</a><br>
+    · <a href="https://www.labortoday.co.kr/news/articleView.html?idxno=231850" target="_blank">매일노동뉴스 — 비정규직 통계 비교</a><br>
+    · <a href="https://www.keis.or.kr/keis/ko/proj/118/pblc/detail.do?categoryIdx=126&pubIdx=11273" target="_blank">한국고용정보원 — 2026년 고용동향브리프</a><br>
+    · <a href="https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=18725" target="_blank">고용노동부 — 2026년 업무보고</a>
+  </p>
+</div>
+
+<!-- 면책 조항 -->
+<div class="disclaimer">
+  <strong>⚠️ 면책 조항:</strong> 본 아티클은 공개된 통계 및 언론 보도를 바탕으로 작성된 저널리즘 콘텐츠입니다. 일부 수치는 추정치 또는 기관별 기준 차이가 있을 수 있습니다. 투자·법률·재정 결정의 근거로 사용하지 마십시오. 정확한 수치는 통계청 및 고용노동부 공식 자료를 확인하시기 바랍니다.
+</div>
+
+</div>
+</div>
+</body>
+</html>
