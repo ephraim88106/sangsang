@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🚨 하반기 첫날 충격 — 반도체 수출 400억 달러 폭발, 코스피 폭등 vs 미국은 흔들린다 | 2026.07.01 시장 브리핑</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-primary: #0a0e1a;
+    --bg-secondary: #0f1525;
+    --bg-card: #141929;
+    --bg-card-hover: #1a2035;
+    --border: #1e2d4a;
+    --up: #00c896;
+    --up-dim: rgba(0,200,150,0.15);
+    --down: #ff4757;
+    --down-dim: rgba(255,71,87,0.15);
+    --neutral: #ffd32a;
+    --neutral-dim: rgba(255,211,42,0.15);
+    --text-primary: #e8eaf6;
+    --text-secondary: #8892b0;
+    --text-muted: #4a5568;
+    --accent: #7c83fd;
+    --accent-glow: rgba(124,131,253,0.2);
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+  /* 배경 그라데이션 효과 */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(ellipse at 20% 20%, rgba(0,200,150,0.04) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 80%, rgba(124,131,253,0.04) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 16px 60px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ─── HEADER ─── */
+  .header {
+    text-align: center;
+    padding: 48px 20px 40px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -60px; left: 50%; transform: translateX(-50%);
+    width: 400px; height: 200px;
+    background: radial-gradient(ellipse, rgba(0,200,150,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .date-badge {
+    display: inline-block;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 6px 18px;
+    font-size: 12px;
+    color: var(--text-secondary);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: var(--font-mono);
+    margin-bottom: 20px;
+  }
+  .header h1 {
+    font-size: clamp(22px, 4vw, 32px);
+    font-weight: 900;
+    line-height: 1.3;
+    color: #fff;
+    margin-bottom: 12px;
+    text-shadow: 0 0 40px rgba(0,200,150,0.3);
+  }
+  .header h1 .highlight {
+    color: var(--up);
+  }
+  .header h1 .danger {
+    color: var(--down);
+  }
+  .subtitle {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+  }
+  .fear-greed {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, rgba(0,200,150,0.1), rgba(0,200,150,0.05));
+    border: 1px solid rgba(0,200,150,0.3);
+    border-radius: 12px;
+    padding: 10px 20px;
+  }
+  .fear-greed .icon { font-size: 24px; }
+  .fear-greed .label {
+    font-size: 12px;
+    color: var(--text-secondary);
+    display: block;
+  }
+  .fear-greed .value {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--up);
+  }
+
+  /* ─── SECTION TITLE ─── */
+  .section-title {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-muted);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    font-family: var(--font-mono);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* ─── INDEX CARDS ─── */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px 16px;
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .card:hover {
+    background: var(--bg-card-hover);
+    border-color: rgba(124,131,253,0.3);
+    transform: translateY(-2px);
+  }
+  .card.up { border-top: 2px solid var(--up); }
+  .card.down { border-top: 2px solid var(--down); }
+  .card.neutral-card { border-top: 2px solid var(--neutral); }
+  .card-label {
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: var(--font-mono);
+    margin-bottom: 8px;
+  }
+  .card-value {
+    font-size: 22px;
+    font-weight: 700;
+    font-family: var(--font-mono);
+    color: #fff;
+    margin-bottom: 4px;
+    line-height: 1;
+  }
+  .card-change {
+    font-size: 13px;
+    font-family: var(--font-mono);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .card-change.up { color: var(--up); }
+  .card-change.down { color: var(--down); }
+  .card-change.neutral { color: var(--neutral); }
+  .card-sub {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 4px;
+    font-family: var(--font-mono);
+  }
+  .arrow-up::before { content: '▲ '; }
+  .arrow-down::before { content: '▼ '; }
+
+  /* ─── COMMODITY CARDS ─── */
+  .commodity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+
+  /* ─── ANALYSIS ─── */
+  .analysis-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 24px;
+    margin-bottom: 32px;
+  }
+  .analysis-box h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .analysis-sub {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--up);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-left: 12px;
+    border-left: 3px solid var(--up);
+  }
+  .analysis-sub.danger {
+    color: var(--down);
+    border-left-color: var(--down);
+  }
+  .analysis-sub.warn {
+    color: var(--neutral);
+    border-left-color: var(--neutral);
+  }
+  .analysis-box p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 8px;
+  }
+  .analysis-box strong {
+    color: var(--text-primary);
+  }
+
+  /* ─── SECTOR HEATMAP ─── */
+  .heatmap-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 32px;
+  }
+  @media (max-width: 480px) {
+    .heatmap-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  .heatmap-cell {
+    border-radius: 10px;
+    padding: 14px 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
+  .heatmap-cell.strong-up { background: rgba(0,200,150,0.35); border: 1px solid rgba(0,200,150,0.5); }
+  .heatmap-cell.up { background: rgba(0,200,150,0.2); border: 1px solid rgba(0,200,150,0.3); }
+  .heatmap-cell.mild-up { background: rgba(0,200,150,0.1); border: 1px solid rgba(0,200,150,0.2); }
+  .heatmap-cell.neutral-h { background: rgba(255,211,42,0.1); border: 1px solid rgba(255,211,42,0.25); }
+  .heatmap-cell.down { background: rgba(255,71,87,0.2); border: 1px solid rgba(255,71,87,0.3); }
+  .heatmap-cell.strong-down { background: rgba(255,71,87,0.35); border: 1px solid rgba(255,71,87,0.5); }
+  .heatmap-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+  .heatmap-pct {
+    font-size: 16px;
+    font-weight: 700;
+    font-family: var(--font-mono);
+  }
+  .strong-up .heatmap-pct, .up .heatmap-pct, .mild-up .heatmap-pct { color: var(--up); }
+  .neutral-h .heatmap-pct { color: var(--neutral); }
+  .down .heatmap-pct, .strong-down .heatmap-pct { color: var(--down); }
+
+  /* ─── SPOTLIGHT ─── */
+  .spotlight-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+  .spotlight-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px 20px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    align-items: start;
+  }
+  .spotlight-num {
+    background: var(--accent-glow);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 14px;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .spotlight-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 6px;
+  }
+  .spotlight-body {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+  .tag {
+    display: inline-block;
+    background: var(--up-dim);
+    color: var(--up);
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    font-family: var(--font-mono);
+  }
+  .tag.red { background: var(--down-dim); color: var(--down); }
+  .tag.yellow { background: var(--neutral-dim); color: var(--neutral); }
+
+  /* ─── CHECKPOINT ─── */
+  .checkpoint-box {
+    background: linear-gradient(135deg, rgba(124,131,253,0.08), rgba(0,200,150,0.05));
+    border: 1px solid rgba(124,131,253,0.25);
+    border-radius: 14px;
+    padding: 22px 20px;
+    margin-bottom: 32px;
+  }
+  .checkpoint-box h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .checkpoint-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .checkpoint-item:last-child { border-bottom: none; }
+  .checkpoint-date {
+    font-size: 12px;
+    font-family: var(--font-mono);
+    color: var(--accent);
+    min-width: 80px;
+    font-weight: 600;
+    padding-top: 2px;
+  }
+  .checkpoint-desc {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+  .checkpoint-desc strong { color: var(--text-primary); }
+
+  /* ─── HASHTAGS ─── */
+  .hashtags {
+    text-align: center;
+    margin-bottom: 28px;
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 2;
+  }
+  .hashtag {
+    color: var(--accent);
+    margin: 0 4px;
+  }
+
+  /* ─── DISCLAIMER ─── */
+  .disclaimer {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    font-size: 11px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    text-align: center;
+  }
+
+  /* ─── MOBILE ─── */
+  @media (max-width: 600px) {
+    .cards-grid { grid-template-columns: repeat(2, 1fr); }
+    .commodity-grid { grid-template-columns: repeat(2, 1fr); }
+    .analysis-box { padding: 20px 16px; }
+    .container { padding: 16px 12px 40px; }
+  }
+
+  /* ─── GLOW EFFECTS ─── */
+  .glow-green { text-shadow: 0 0 20px rgba(0,200,150,0.5); }
+  .glow-red { text-shadow: 0 0 20px rgba(255,71,87,0.5); }
+
+  /* breaking news ticker style */
+  .breaking-banner {
+    background: linear-gradient(90deg, var(--down) 0%, #ff6b7a 100%);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    letter-spacing: 0.5px;
+  }
+  .breaking-banner span { opacity: 0.85; font-weight: 400; margin-left: 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- BREAKING BANNER -->
+  <div class="breaking-banner">
+    🚨 BREAKING: 한국 6월 수출 역대 최초 1,000억 달러 돌파 &nbsp;|&nbsp; 반도체 수출 +199.5% 충격 폭등 &nbsp;|&nbsp; 하반기 개막 첫날
+  </div>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="date-badge">📅 2026.07.01 WED — MARKET BRIEF</div>
+    <h1>
+      <span class="highlight">반도체 수출 400억 달러 폭발</span><br>
+      코스피 하반기 첫날 <span class="highlight">폭등 출발</span>…<br>
+      <span class="danger">근데 미국은 왜 흔들려?</span>
+    </h1>
+    <p class="subtitle">Wall Street급 심층 분석 · 매일 밤 업데이트 · 투자 판단의 나침반</p>
+    <div class="fear-greed">
+      <span class="icon">🔥</span>
+      <div>
+        <span class="label">시장 심리</span>
+        <span class="value">탐욕(Greed) — 반도체 황제국의 귀환</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- 한국 지수 -->
+  <div class="section-title">🇰🇷 국내 주요 지수</div>
+  <div class="cards-grid">
+    <div class="card up">
+      <div class="card-label">KOSPI</div>
+      <div class="card-value">8,591.50</div>
+      <div class="card-change up"><span class="arrow-up"></span>+115.02 (+1.36%)</div>
+      <div class="card-sub">전거래일 8,476.48</div>
+    </div>
+    <div class="card up">
+      <div class="card-label">KOSDAQ</div>
+      <div class="card-value">924.09</div>
+      <div class="card-change up"><span class="arrow-up"></span>+7.91 (+0.86%)</div>
+      <div class="card-sub">전거래일 916.18</div>
+    </div>
+    <div class="card up" style="grid-column: span 1;">
+      <div class="card-label">삼성전자</div>
+      <div class="card-value" style="font-size:18px;">강세</div>
+      <div class="card-change up">반도체 수출 400억↑</div>
+      <div class="card-sub">HBM4 수요 폭발</div>
+    </div>
+    <div class="card up">
+      <div class="card-label">SK하이닉스</div>
+      <div class="card-value" style="font-size:18px;">급등</div>
+      <div class="card-change up">AI 메모리 독주</div>
+      <div class="card-sub">엔비디아 수혜 직접</div>
+    </div>
+  </div>
+
+  <!-- 미국 지수 -->
+  <div class="section-title">🇺🇸 미국 주요 지수 (6/30 종가)</div>
+  <div class="cards-grid">
+    <div class="card up">
+      <div class="card-label">S&amp;P 500</div>
+      <div class="card-value">7,499.36</div>
+      <div class="card-change up"><span class="arrow-up"></span>+0.79%</div>
+      <div class="card-sub">YTD +9.55%</div>
+    </div>
+    <div class="card up">
+      <div class="card-label">나스닥</div>
+      <div class="card-value">26,213</div>
+      <div class="card-change up"><span class="arrow-up"></span>+1.52%</div>
+      <div class="card-sub">YTD +12.79%</div>
+    </div>
+    <div class="card up">
+      <div class="card-label">다우존스</div>
+      <div class="card-value">52,319</div>
+      <div class="card-change up"><span class="arrow-up"></span>+0.26%</div>
+      <div class="card-sub">Q2 +12%</div>
+    </div>
+  </div>
+
+  <!-- 환율·원자재 -->
+  <div class="section-title">💱 환율 &amp; 원자재</div>
+  <div class="commodity-grid">
+    <div class="card down">
+      <div class="card-label">원달러 환율</div>
+      <div class="card-value" style="font-size:20px;">1,558.26</div>
+      <div class="card-change down"><span class="arrow-up"></span>+0.70% (원화 약세)</div>
+      <div class="card-sub">KRW/USD</div>
+    </div>
+    <div class="card neutral-card">
+      <div class="card-label">WTI 유가</div>
+      <div class="card-value">$70.24</div>
+      <div class="card-change neutral">횡보 구간</div>
+      <div class="card-sub">$/배럴</div>
+    </div>
+    <div class="card up">
+      <div class="card-label">금 (Gold)</div>
+      <div class="card-value">$4,025</div>
+      <div class="card-change up"><span class="arrow-up"></span>+0.44%</div>
+      <div class="card-sub">$/troy oz · 안전자산 랠리</div>
+    </div>
+    <div class="card down">
+      <div class="card-label">비트코인</div>
+      <div class="card-value">$58,504</div>
+      <div class="card-change down"><span class="arrow-down"></span>조정 국면</div>
+      <div class="card-sub">BTC/USD</div>
+    </div>
+  </div>
+
+  <!-- 심층 분석 -->
+  <div class="section-title">📊 오늘의 핵심 심층 분석</div>
+  <div class="analysis-box">
+    <h2>🧠 월가 애널리스트의 시선 — 오늘 시장을 움직인 진짜 이유</h2>
+
+    <div class="analysis-sub">① 역사는 오늘 바뀌었다: 수출 1,000억 달러 시대의 개막</div>
+    <p>
+      2026년 6월, 대한민국 수출이 <strong>사상 최초로 월간 1,022억 달러</strong>를 돌파했다. 이는 단순한 기록 경신이 아니다. 전 세계에서 월간 수출 1,000억 달러를 넘긴 국가는 <strong>중국·미국·독일에 이어 한국이 4번째</strong>다. 그 핵심 엔진은 반도체였다. 6월 반도체 수출만 <strong>448억 달러(+199.5% YoY)</strong>로, AI 붐이 실물 수출 지표로 완벽하게 전환되는 순간을 목격했다.
+    </p>
+    <p>
+      HBM(고대역폭메모리)·AI 서버·엔비디아 GP향 메모리 수요가 수직 상승하면서, 삼성전자와 SK하이닉스는 사실상 공급이 수요를 따라가지 못하는 '럭셔리 부족 경제'에 진입했다. 상반기 반도체 수출(1,924억 달러)은 이미 지난해 연간 기록(1,734억 달러)을 <strong>넘어섰다</strong>. 코스피가 하반기 첫날 1.36% 뛰어오른 것은 당연한 귀결이다.
+    </p>
+
+    <div class="analysis-sub">② 미국 시장의 이중성: 역대 최강 분기 직후의 딜레마</div>
+    <p>
+      S&amp;P 500은 2분기에 <strong>+14%</strong>를 기록하며 2020년 이후 최강 분기 성과를 냈다. 나스닥은 +20%, 다우는 +12%를 올렸다. 엔비디아(+2.6%), AMD(+7.7%), 샌디스크(+10.9%), 마블테크(+7.3%) 등 반도체·AI 주도 강세가 한국 수출 데이터와 완벽하게 맞물린다.
+    </p>
+    <p>
+      그러나 7월 1일 선물 시장은 <strong>소폭 하락</strong>으로 출발했다. '역대 최강 분기 다음 날' 특유의 차익실현 압력이 작동하는 것이다. 이란 핵협상 불확실성, 연준 9월 금리인하 기대의 엇갈린 시그널, 그리고 기업 실적 시즌(어닝 시즌)을 앞둔 포지션 조정이 복합적으로 작용하고 있다. <strong>미국 시장의 단기 흔들림이 곧 한국 시장의 리스크 변수</strong>가 될 수 있다.
+    </p>
+
+    <div class="analysis-sub warn">③ 환율 1,558원의 경고: 강달러가 발목을 잡는다</div>
+    <p>
+      원달러 환율이 <strong>1,558원대</strong>에 머물고 있다. 수출 기업에게는 달러 표시 매출의 원화 환산 이익이 늘어나는 호재지만, 외국인 투자자 입장에서는 환차손 리스크가 커진다. 원화 약세가 지속되면 외국인의 '셀 코리아'를 촉발할 수 있고, 이는 그간 반도체 랠리를 주도해온 외국인 수급의 이탈로 이어질 수 있다. <strong>환율 1,560원선이 당분간 핵심 저항 구간</strong>이 될 전망이다.
+    </p>
+  </div>
+
+  <!-- 섹터 히트맵 -->
+  <div class="section-title">🗺️ 코스피 섹터 히트맵</div>
+  <div class="heatmap-grid" style="margin-bottom: 32px;">
+    <div class="heatmap-cell strong-up">
+      <div class="heatmap-label">반도체·IT</div>
+      <div class="heatmap-pct">+2.8%</div>
+    </div>
+    <div class="heatmap-cell up">
+      <div class="heatmap-label">자동차·부품</div>
+      <div class="heatmap-pct">+1.4%</div>
+    </div>
+    <div class="heatmap-cell up">
+      <div class="heatmap-label">AI 인프라</div>
+      <div class="heatmap-pct">+1.9%</div>
+    </div>
+    <div class="heatmap-cell mild-up">
+      <div class="heatmap-label">금융·보험</div>
+      <div class="heatmap-pct">+0.6%</div>
+    </div>
+    <div class="heatmap-cell neutral-h">
+      <div class="heatmap-label">바이오·헬스</div>
+      <div class="heatmap-pct">+0.2%</div>
+    </div>
+    <div class="heatmap-cell down">
+      <div class="heatmap-label">2차전지</div>
+      <div class="heatmap-pct">-0.8%</div>
+    </div>
+    <div class="heatmap-cell mild-up">
+      <div class="heatmap-label">조선·기계</div>
+      <div class="heatmap-pct">+0.7%</div>
+    </div>
+    <div class="heatmap-cell down">
+      <div class="heatmap-label">에너지·화학</div>
+      <div class="heatmap-pct">-0.5%</div>
+    </div>
+    <div class="heatmap-cell neutral-h">
+      <div class="heatmap-label">유통·소비재</div>
+      <div class="heatmap-pct">0.0%</div>
+    </div>
+  </div>
+
+  <!-- 주목 종목 / 이슈 -->
+  <div class="section-title">🔍 오늘의 주목 종목·이슈 PICK 3</div>
+  <div class="spotlight-list">
+    <div class="spotlight-item">
+      <div class="spotlight-num">01</div>
+      <div>
+        <div class="spotlight-title">🏆 SK하이닉스 — HBM4 독점 공급의 황금 수혜주</div>
+        <div>
+          <span class="tag">AI메모리</span>
+          <span class="tag">HBM4</span>
+          <span class="tag">외국인 매수</span>
+        </div>
+        <div class="spotlight-body">
+          엔비디아 H200·B200 칩에 탑재되는 HBM4 공급에서 SK하이닉스가 사실상 독주 중. 6월 반도체 수출 400억 달러 돌파의 숨은 주역. 향후 포인트: 2분기 실적 발표 시 영업이익 10조원 돌파 여부. 목표주가 상향 릴레이 예상. 단기 차익실현 매물은 반드시 매집 기회로 활용.
+        </div>
+      </div>
+    </div>
+    <div class="spotlight-item">
+      <div class="spotlight-num">02</div>
+      <div>
+        <div class="spotlight-title">⚡ 엔비디아 연쇄 효과 — 한국 AI 장비·소재주 동반 상승</div>
+        <div>
+          <span class="tag">AI서버</span>
+          <span class="tag yellow">테마주</span>
+          <span class="tag">공급망</span>
+        </div>
+        <div class="spotlight-body">
+          엔비디아 GPU 수요 증가 → HBM 수요 → 반도체 장비(한미반도체·피에스케이 등) → 소재·부품 국산화 수혜 체인이 명확히 형성 중. 미국 빅테크의 설비투자(CAPEX) 확대 발표가 이어질 때마다 관련 종목은 급등세를 이어갈 전망. 단, 밸류에이션 부담 구간 진입 경계 필요.
+        </div>
+      </div>
+    </div>
+    <div class="spotlight-item">
+      <div class="spotlight-num">03</div>
+      <div>
+        <div class="spotlight-title">⚠️ 2차전지 섹터 — 역풍 속 저가 매수 타이밍 탐색</div>
+        <div>
+          <span class="tag red">약세</span>
+          <span class="tag yellow">분할매수</span>
+          <span class="tag red">리스크 존재</span>
+        </div>
+        <div class="spotlight-body">
+          반도체에 가려진 2차전지 섹터는 전기차 수요 부진 우려와 중국 경쟁 심화로 조정 지속. LG에너지솔루션·에코프로 계열은 단기 방어 전략이 유효. 향후 포인트: 유럽 전기차 판매 지표(7월 중순)와 미국 IRA 보조금 확대 여부. 중장기 낙관론자는 현재 구간을 분할 매수 적기로 볼 수 있음.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 내일의 체크포인트 -->
+  <div class="section-title">📌 이번 주 체크포인트</div>
+  <div class="checkpoint-box">
+    <h3>🗓️ 놓치면 손해보는 핵심 일정</h3>
+    <div class="checkpoint-item">
+      <div class="checkpoint-date">07/01 (수)</div>
+      <div class="checkpoint-desc"><strong>한국 6월 수출 확정치 발표</strong> — 1,022억 달러 공식 집계. 시장 반응 확인. ISM 미국 제조업 PMI 발표 예정</div>
+    </div>
+    <div class="checkpoint-item">
+      <div class="checkpoint-date">07/03 (금)</div>
+      <div class="checkpoint-desc"><strong>미국 6월 비농업 고용지표(NFP)</strong> — 연준 9월 금리인하 기대의 결정적 변수. 예상치 상회 시 달러 강세→원화 추가 약세 경계</div>
+    </div>
+    <div class="checkpoint-item">
+      <div class="checkpoint-date">07/10 (금)</div>
+      <div class="checkpoint-desc"><strong>미국 6월 CPI 발표</strong> — 인플레이션 재가속 여부. 3%대 상회 시 증시 전반 하락 압력. <strong>이번 달 가장 중요한 이벤트</strong></div>
+    </div>
+    <div class="checkpoint-item">
+      <div class="checkpoint-date">07/중순</div>
+      <div class="checkpoint-desc"><strong>미국 빅테크 2분기 실적 발표 시즌</strong> — 엔비디아·마이크로소프트·애플 실적이 반도체 랠리 지속 여부를 판가름</div>
+    </div>
+    <div class="checkpoint-item">
+      <div class="checkpoint-date">상시 모니터</div>
+      <div class="checkpoint-desc"><strong>이란·중동 지정학 리스크</strong> + <strong>연준 위원 발언 스케줄</strong> — 금리 방향 변화 시 채권·달러 동반 급변 가능</div>
+    </div>
+  </div>
+
+  <!-- HASHTAGS -->
+  <div class="hashtags">
+    <span class="hashtag">#코스피</span>
+    <span class="hashtag">#반도체수출400억</span>
+    <span class="hashtag">#SK하이닉스</span>
+    <span class="hashtag">#삼성전자</span>
+    <span class="hashtag">#HBM4</span>
+    <span class="hashtag">#나스닥</span>
+    <span class="hashtag">#S&amp;P500</span>
+    <span class="hashtag">#원달러환율</span>
+    <span class="hashtag">#주식시장</span>
+    <span class="hashtag">#AI반도체</span>
+    <span class="hashtag">#하반기전망</span>
+    <span class="hashtag">#금시세</span>
+    <span class="hashtag">#비트코인</span>
+    <span class="hashtag">#투자</span>
+    <span class="hashtag">#오늘시장</span>
+  </div>
+
+  <!-- DISCLAIMER -->
+  <div class="disclaimer">
+    ⚠️ 본 보고서는 AI 기반 데이터 수집 및 분석을 통해 자동 생성된 참고용 정보입니다.<br>
+    투자 판단의 최종 책임은 투자자 본인에게 있으며, 본 자료는 특정 종목의 매수·매도 권유가 아닙니다.<br>
+    금융투자에는 원금 손실 위험이 있습니다. 항상 본인의 투자 성향과 리스크 허용 범위를 확인하십시오.<br>
+    <br>
+    📊 Generated by Claude AI Market Analyst · 2026.07.01 · All data sourced from public market feeds
+  </div>
+
+</div>
+</body>
+</html>
