@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="서울 아파트값 72주 연속 상승, 이재명 정부 1년 규제의 역설. 전세 이중가격 8000만원 격차, 3년간 140만명 탈서울의 진실을 파헤친다.">
+  <meta name="keywords" content="서울집값, 부동산, 탈서울, 전세이중가격, 이재명정부, 규제역설, 부동산대책, 72주상승">
+  <meta property="og:title" content="서울 집값 72주째 오른다 — 규제할수록 오르는 '저주의 구조'를 파헤친다">
+  <meta property="og:description" content="이재명 정부 1년, 집값은 왜 잡히지 않나? 전세 격차 8000만원, 3년간 140만명 탈서울의 진실">
+  <meta property="og:type" content="article">
+  <title>서울 집값 72주째 오른다 — 규제할수록 오르는 '저주의 구조'를 파헤친다 | 한국이슈</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 17px;
+      line-height: 1.8;
+      background: #ffffff;
+      color: #1a1a1a;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* 헤더 */
+    .article-header {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      color: #fff;
+      padding: 48px 0 40px;
+    }
+
+    .article-header .container { }
+
+    .category-badge {
+      display: inline-block;
+      background: #e63946;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      padding: 4px 12px;
+      border-radius: 3px;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }
+
+    .article-title {
+      font-size: 2rem;
+      font-weight: 900;
+      line-height: 1.35;
+      margin-bottom: 18px;
+      word-break: keep-all;
+    }
+
+    .article-subtitle {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.78);
+      line-height: 1.7;
+      margin-bottom: 24px;
+      word-break: keep-all;
+    }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.55);
+      flex-wrap: wrap;
+    }
+
+    .article-meta span { display: flex; align-items: center; gap: 4px; }
+
+    /* 본문 */
+    .article-body {
+      padding: 44px 0 60px;
+    }
+
+    .article-body p {
+      margin-bottom: 1.4em;
+      word-break: keep-all;
+    }
+
+    /* 훅 */
+    .hook-box {
+      border-left: 5px solid #e63946;
+      background: #fff5f5;
+      padding: 20px 24px;
+      margin-bottom: 32px;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .hook-box p {
+      font-size: 1.08rem;
+      font-weight: 500;
+      color: #2d2d2d;
+      margin-bottom: 0;
+    }
+
+    /* 핵심 요약 */
+    .summary-box {
+      background: #f0f4ff;
+      border: 1.5px solid #c5d3ff;
+      border-radius: 10px;
+      padding: 24px 28px;
+      margin-bottom: 36px;
+    }
+
+    .summary-box h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #3457d5;
+      letter-spacing: 0.06em;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+
+    .summary-box ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .summary-box ul li {
+      padding: 6px 0;
+      padding-left: 22px;
+      position: relative;
+      font-size: 15.5px;
+      color: #1a1a1a;
+      margin-bottom: 0;
+    }
+
+    .summary-box ul li::before {
+      content: "▶";
+      position: absolute;
+      left: 0;
+      color: #e63946;
+      font-size: 11px;
+      top: 9px;
+    }
+
+    /* 소제목 */
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #0f3460;
+      margin: 40px 0 16px;
+      padding-bottom: 10px;
+      border-bottom: 2.5px solid #0f3460;
+      word-break: keep-all;
+    }
+
+    /* 강조 텍스트 */
+    .highlight {
+      background: linear-gradient(180deg, transparent 60%, #ffe066 60%);
+      font-weight: 700;
+    }
+
+    .data-callout {
+      background: #fff8e1;
+      border: 1.5px solid #ffd54f;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-size: 15px;
+      color: #4a3500;
+      word-break: keep-all;
+    }
+
+    .data-callout strong {
+      display: block;
+      font-size: 1.4rem;
+      color: #e63946;
+      font-weight: 900;
+      margin-bottom: 4px;
+    }
+
+    /* 인포그래픽 */
+    .infographic-section {
+      margin: 44px 0;
+    }
+
+    .infographic-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #444;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    /* 전세 격차 차트 */
+    .gap-chart {
+      background: #fff;
+      border: 1.5px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 28px 24px;
+      margin-bottom: 24px;
+    }
+
+    .gap-chart-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .gap-bar-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .gap-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .gap-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #555;
+      width: 60px;
+      flex-shrink: 0;
+    }
+
+    .gap-bars {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .bar-new {
+      height: 22px;
+      background: linear-gradient(90deg, #e63946, #ff6b6b);
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      padding-left: 8px;
+      font-size: 12px;
+      color: #fff;
+      font-weight: 700;
+      min-width: 60px;
+    }
+
+    .bar-renew {
+      height: 22px;
+      background: linear-gradient(90deg, #457b9d, #74b9e0);
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      padding-left: 8px;
+      font-size: 12px;
+      color: #fff;
+      font-weight: 700;
+      min-width: 60px;
+    }
+
+    .gap-diff {
+      font-size: 13px;
+      font-weight: 800;
+      color: #e63946;
+      width: 90px;
+      flex-shrink: 0;
+      text-align: right;
+    }
+
+    .bar-legend {
+      display: flex;
+      gap: 20px;
+      margin-top: 14px;
+      font-size: 12px;
+      color: #666;
+    }
+
+    .legend-dot {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 2px;
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+
+    /* 탈서울 차트 */
+    .migration-chart {
+      background: #fff;
+      border: 1.5px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 28px 24px;
+      margin-bottom: 24px;
+    }
+
+    .region-bars {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .region-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .region-name {
+      font-size: 13px;
+      font-weight: 600;
+      width: 70px;
+      flex-shrink: 0;
+      color: #333;
+    }
+
+    .region-bar-wrap {
+      flex: 1;
+      background: #f0f0f0;
+      border-radius: 4px;
+      height: 28px;
+      overflow: hidden;
+    }
+
+    .region-bar-fill {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #fff;
+      border-radius: 4px;
+    }
+
+    .region-pct {
+      font-size: 13px;
+      font-weight: 800;
+      color: #0f3460;
+      width: 50px;
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    /* 집값 상승 주수 타이머 */
+    .week-counter {
+      background: linear-gradient(135deg, #0f3460, #e63946);
+      border-radius: 12px;
+      padding: 28px 24px;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .week-number {
+      font-size: 5rem;
+      font-weight: 900;
+      line-height: 1;
+      display: block;
+    }
+
+    .week-unit {
+      font-size: 1.2rem;
+      opacity: 0.85;
+      margin-top: 6px;
+    }
+
+    .week-context {
+      font-size: 13px;
+      opacity: 0.7;
+      margin-top: 10px;
+    }
+
+    /* 정부 대책 타임라인 */
+    .timeline {
+      border-left: 3px solid #c5d3ff;
+      padding-left: 20px;
+      margin: 16px 0 24px;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -27px;
+      top: 6px;
+      width: 12px;
+      height: 12px;
+      background: #3457d5;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      box-shadow: 0 0 0 2px #3457d5;
+    }
+
+    .timeline-date {
+      font-size: 12px;
+      font-weight: 700;
+      color: #3457d5;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+    }
+
+    .timeline-text {
+      font-size: 14.5px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* 나에게 미치는 영향 */
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin: 20px 0;
+    }
+
+    .impact-card {
+      background: #f8f9ff;
+      border: 1.5px solid #dde3ff;
+      border-radius: 10px;
+      padding: 18px;
+    }
+
+    .impact-icon {
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+    }
+
+    .impact-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: #0f3460;
+      margin-bottom: 6px;
+    }
+
+    .impact-desc {
+      font-size: 13.5px;
+      color: #444;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    /* 전망 박스 */
+    .outlook-box {
+      background: #fff5f5;
+      border: 1.5px solid #ffd0d0;
+      border-radius: 10px;
+      padding: 22px 24px;
+      margin: 20px 0;
+    }
+
+    .outlook-box h4 {
+      font-size: 15px;
+      font-weight: 800;
+      color: #c0392b;
+      margin-bottom: 12px;
+    }
+
+    .outlook-box p { margin-bottom: 0.7em; font-size: 15px; }
+    .outlook-box p:last-child { margin-bottom: 0; }
+
+    /* 해시태그 */
+    .hashtag-area {
+      padding: 28px 0 10px;
+      border-top: 1.5px solid #eee;
+      margin-top: 40px;
+    }
+
+    .hashtag-area a {
+      display: inline-block;
+      background: #f0f4ff;
+      color: #3457d5;
+      font-size: 13.5px;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 20px;
+      margin: 4px 4px 4px 0;
+      text-decoration: none;
+    }
+
+    /* 면책조항 */
+    .disclaimer {
+      background: #f8f8f8;
+      border-top: 1px solid #e0e0e0;
+      padding: 28px 0;
+    }
+
+    .disclaimer p {
+      font-size: 12.5px;
+      color: #888;
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+
+    /* 출처 */
+    .sources {
+      padding: 20px 0;
+    }
+
+    .sources h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .sources ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sources ul li {
+      font-size: 12.5px;
+      color: #888;
+      padding: 3px 0;
+    }
+
+    .sources ul li a {
+      color: #3457d5;
+      text-decoration: none;
+    }
+
+    blockquote {
+      border-left: 4px solid #e63946;
+      padding: 12px 20px;
+      background: #fffbfb;
+      margin: 20px 0;
+      font-style: italic;
+      color: #444;
+      font-size: 15.5px;
+    }
+
+    @media (max-width: 600px) {
+      .article-title { font-size: 1.45rem; }
+      .week-number { font-size: 3.5rem; }
+      .impact-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- 헤더 -->
+<header class="article-header">
+  <div class="container">
+    <span class="category-badge">🏠 부동산·주거</span>
+    <h1 class="article-title">서울 집값 72주째 오른다 — 규제할수록 오르는 '저주의 구조'를 파헤친다</h1>
+    <p class="article-subtitle">이재명 정부 출범 1년, 수십 개 대책에도 집값은 왜 잡히지 않나? 전세 격차 8,000만원·3년간 140만 명 탈서울·7월 말 종합대책 예고까지</p>
+    <div class="article-meta">
+      <span>📅 2026년 7월 6일</span>
+      <span>✍️ 데이터탐사팀</span>
+      <span>⏱ 읽는 시간 약 7분</span>
+    </div>
+  </div>
+</header>
+
+<!-- 본문 -->
+<article class="article-body">
+  <div class="container">
+
+    <!-- 훅 -->
+    <div class="hook-box">
+      <p>"집 살 돈이 없어서 떠난 게 아닙니다. 집을 사고 싶어도, 살 수 없게 되어버렸습니다." — 2024년 서울을 떠나 고양시로 이사한 30대 직장인 A씨의 말이다. 그는 오늘도 왕복 2시간 30분을 통근한다.</p>
+    </div>
+
+    <!-- 핵심 요약 -->
+    <div class="summary-box">
+      <h3>📌 이 기사의 핵심 3줄</h3>
+      <ul>
+        <li>서울 아파트 매매가격지수 <strong>72주 연속 상승</strong> — 이재명 정부 1년 내내 단 한 주도 꺾이지 않았다</li>
+        <li>서울 전세 이중가격 심화: 같은 아파트 84㎡에서 신규 vs 갱신 격차 <strong>6개월 만에 4,375만원→8,000만원</strong> 폭증</li>
+        <li>3년간 서울 전출자 139만 명 중 60%가 경기도行 — 이주 사유 1위는 <strong>"주택"(32.6%)</strong></li>
+      </ul>
+    </div>
+
+    <!-- 소제목 1 -->
+    <h2 class="section-title">① 72주 연속 상승 — 숫자가 보여주는 냉혹한 현실</h2>
+
+    <p>2026년 7월 첫 주, 서울 아파트 매매가격지수는 전주 대비 <span class="highlight">0.27% 상승</span>하며 72주 연속 오름세를 이어갔다. 약 1년 6개월 동안 단 한 주도 하락한 적이 없다. 이재명 정부가 출범한 이후로만 따져도 집값은 꾸준히 올랐다.</p>
+
+    <div class="infographic-section">
+      <div class="week-counter">
+        <span class="week-number">72</span>
+        <div class="week-unit">주 연속 서울 아파트값 상승</div>
+        <div class="week-context">2025년 초부터 2026년 7월 첫째 주까지 — 단 한 주의 예외도 없었다</div>
+      </div>
+    </div>
+
+    <p>경기도까지 범위를 넓혀도 그림은 바뀌지 않는다. 동탄구(화성시)는 정부가 규제지역 지정을 발표하기 직전 주에 <span class="highlight">1.46% 급등</span>했다. 규제 공포를 역으로 이용해 "지금 아니면 늦는다"는 심리가 작동한 것이다. 7월 1일부터 동탄·용인 기흥·구리가 규제지역에 추가됐지만, 시장은 이미 선반영이 끝난 상태였다.</p>
+
+    <div class="data-callout">
+      <strong>+1.46%</strong>
+      규제지역 지정 발표 직전 주 동탄 아파트 주간 상승폭 — 규제가 오히려 매수 신호가 됐다
+    </div>
+
+    <!-- 소제목 2 -->
+    <h2 class="section-title">② 규제의 역설 — 왜 잡으려 할수록 더 오르나</h2>
+
+    <p>부동산 전문가들이 "규제의 역설"이라 부르는 현상이 현실이 됐다. 정부가 대출 규제로 수요를 억제하자, 현금 보유자와 다주택 법인들만 살아남는 "현금 부자들의 리그"가 형성됐다. 일반 실수요자는 대출 없이는 매수가 불가능한 구조에서 시장 밖으로 밀려났고, 남은 시장 참여자들은 "희소한 매물을 가진 사람들"이어서 가격이 내려갈 이유가 없었다.</p>
+
+    <p>동시에 갭투자(전세 끼고 매수) 차단 정책은 부작용을 낳았다. 임대 목적의 갭투자가 막히자, <span class="highlight">전세 매물이 시장에서 급격히 사라졌다</span>. 전세 품귀가 심해지자 전셋값이 폭등했고, 전세를 구하지 못한 수요자 일부가 다시 매매 시장으로 유입됐다. 집값 상승 → 전세난 심화 → 매수 유입 → 집값 재상승의 악순환이다.</p>
+
+    <blockquote>
+      "금리가 높아도 집을 사려는 수요가 공급 부족 우려를 압도하고 있다. 얼어 죽어도 신축(얼죽신) 선호 현상과 맞물려 신축 아파트 프리미엄은 분양가 대비 50% 이상에서 거래된다." — 부동산 업계 관계자
+    </blockquote>
+
+    <p>정부는 7월 말 공급 확대와 세제 개편을 포함한 <span class="highlight">'부동산 종합대책'</span>을 예고했다. 내부에서는 장기보유특별공제 개편과 종부세·양도세 완화를 두고 논란 중이다. 그러나 시장은 이미 "종합대책이 나오기 전에 사야 한다"는 학습 효과를 보이고 있다.</p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">2025년 6.27 부동산 대책</div>
+        <div class="timeline-text">대출 규제 강화, 토지거래허가구역 확대 — 이후에도 서울 집값 오름세 지속</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2026년 7월 1일</div>
+        <div class="timeline-text">동탄·용인 기흥·구리 규제지역 추가 지정 효력 발생</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2026년 7월 말 (예정)</div>
+        <div class="timeline-text">이재명 정부 '부동산 종합대책' 발표 예정 — 공급 확대 + 세제 개편 포함</div>
+      </div>
+    </div>
+
+    <!-- 소제목 3 -->
+    <h2 class="section-title">③ 전세 이중가격 — 같은 아파트, 8000만원의 불평등</h2>
+
+    <p>집을 사지 못한 사람들은 전세 시장에서 더 잔혹한 현실을 만난다. 2026년 서울 전세 시장에는 <span class="highlight">"이중가격"</span>이 고착화됐다. 같은 아파트, 같은 층수, 같은 평형이라도 신규 계약자와 갱신 계약자가 내는 보증금이 크게 다르다.</p>
+
+    <div class="infographic-section">
+      <div class="gap-chart">
+        <div class="gap-chart-title">📊 서울 아파트 전세 신규 vs 갱신 보증금 격차 변화 (2026년)</div>
+        <div class="gap-bar-wrap">
+          <div style="font-size:12px;color:#888;margin-bottom:12px;">전용 84㎡ 기준 (단위: 억원)</div>
+          <!-- 1월 -->
+          <div class="gap-row">
+            <div class="gap-label">1월</div>
+            <div class="gap-bars">
+              <div class="bar-new" style="width:82%;">신규 6.56억</div>
+              <div class="bar-renew" style="width:76.5%;">갱신 6.13억</div>
+            </div>
+            <div class="gap-diff">차이 4,375만원</div>
+          </div>
+          <!-- 6월 -->
+          <div class="gap-row">
+            <div class="gap-label">6월</div>
+            <div class="gap-bars">
+              <div class="bar-new" style="width:87.5%;">신규 7.00억</div>
+              <div class="bar-renew" style="width:77.5%;">갱신 6.20억</div>
+            </div>
+            <div class="gap-diff" style="color:#e63946;font-size:15px;">차이 8,000만원 ⬆</div>
+          </div>
+        </div>
+        <div class="bar-legend">
+          <span><span class="legend-dot" style="background:#e63946;"></span>신규 계약 (시세 즉시 반영)</span>
+          <span><span class="legend-dot" style="background:#457b9d;"></span>갱신 계약 (인상 폭 5% 제한)</span>
+        </div>
+      </div>
+    </div>
+
+    <p>6개월 사이에 신규 계약과 갱신 계약 간 격차가 <span class="highlight">두 배 가까이 뛰었다</span>. 전용 59㎡도 마찬가지다. 1월엔 3,500만원 차이였지만 6월엔 7,750만원으로 벌어졌다. 일부 강남 대단지에서는 신규·갱신 격차가 최대 11억 원에 달하는 사례도 나왔다.</p>
+
+    <p>이 구조는 <span class="highlight">계약갱신청구권</span>이 만들어낸 의도치 않은 부작용이다. 갱신 계약은 인상폭을 5%로 제한하지만, 신규 계약은 시세를 즉시 반영한다. 전세 만기가 된 세입자가 이사를 결심하는 순간, 8,000만 원짜리 장벽이 기다린다. 갱신권을 써버렸다면 선택지는 없다. 더 비싼 전세를 내거나, 서울을 떠나거나.</p>
+
+    <!-- 소제목 4 -->
+    <h2 class="section-title">④ 탈서울 140만 명 — '주택' 때문에 쫓겨난 사람들</h2>
+
+    <p>지난 3년(2023~2025년) 동안 서울을 떠난 인구는 <span class="highlight">139만 9,645명</span>이다. 이 중 경기도로 간 사람은 84만 6,321명으로 전체의 60.46%였다. 10명 중 6명은 경기도행 버스를 탔다.</p>
+
+    <div class="infographic-section">
+      <div class="migration-chart">
+        <div class="gap-chart-title">📊 서울 전출자(3년간 140만명) 목적지 분포</div>
+        <div class="region-bars">
+          <div class="region-row">
+            <div class="region-name">경기도</div>
+            <div class="region-bar-wrap">
+              <div class="region-bar-fill" style="width:60.5%;background:linear-gradient(90deg,#e63946,#ff6b6b);">84.6만명</div>
+            </div>
+            <div class="region-pct">60.5%</div>
+          </div>
+          <div class="region-row">
+            <div class="region-name">인천</div>
+            <div class="region-bar-wrap">
+              <div class="region-bar-fill" style="width:9.8%;background:linear-gradient(90deg,#457b9d,#74b9e0);">13.7만명</div>
+            </div>
+            <div class="region-pct">9.8%</div>
+          </div>
+          <div class="region-row">
+            <div class="region-name">기타 지방</div>
+            <div class="region-bar-wrap">
+              <div class="region-bar-fill" style="width:29.7%;background:linear-gradient(90deg,#6c757d,#adb5bd);">41.6만명</div>
+            </div>
+            <div class="region-pct">29.7%</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:#888;margin-top:14px;">주요 전출지: 고양시(8.9만명) → 성남시(6.8만명) → 용인시(6만명) → 남양주(5.8만명)</div>
+      </div>
+    </div>
+
+    <p>이들이 서울을 떠난 이유를 물었다. <span class="highlight">1위가 '주택'(32.64%)</span>이었다. 직업(20.1%)이나 가족(30.5%)보다 주거비 부담이 이주 결정에 더 크게 작용했다. 이들의 새 일터는 대부분 서울에 그대로다. '탈서울' 인구는 4년 만에 최고 수준이고, 이들이 감당하는 장거리 통근 시간은 하루 평균 2~3시간이다. 퇴근하면 기절한다는 말이 농담이 아니다.</p>
+
+    <!-- 소제목 5 -->
+    <h2 class="section-title">⑤ 나에게 미치는 영향 — 세입자·실수요자·통근자 모두가 피해자</h2>
+
+    <div class="impact-grid">
+      <div class="impact-card">
+        <div class="impact-icon">🏘️</div>
+        <div class="impact-title">전세 세입자</div>
+        <p class="impact-desc">갱신권을 이미 사용한 경우, 이사 시 수천만~수억 원의 추가 보증금을 마련해야 한다. 이사비 포함 실제 부담은 1억 원을 훌쩍 넘기는 사례도 속출.</p>
+      </div>
+      <div class="impact-card">
+        <div class="impact-icon">💸</div>
+        <div class="impact-title">내 집 마련 희망자</div>
+        <p class="impact-desc">대출 규제로 현금 없이는 서울 아파트 매수가 사실상 불가. 청약 당첨 확률도 제자리. 매달 오르는 집값이 목돈 모으는 속도를 추월한다.</p>
+      </div>
+      <div class="impact-card">
+        <div class="impact-icon">🚇</div>
+        <div class="impact-title">경기도 이주자</div>
+        <p class="impact-desc">집값을 낮추려 경기도로 이사했지만, 왕복 2~3시간 통근이 기다린다. 시간·교통비 손실을 계산하면 절약 효과가 반감된다. '가성비 이사'의 허상.</p>
+      </div>
+      <div class="impact-card">
+        <div class="impact-icon">👴</div>
+        <div class="impact-title">자산 보유자 (집 있는 사람)</div>
+        <p class="impact-desc">72주 연속 상승으로 자산 가치는 올랐지만, 종합대책 발표 시 종부세·양도세 변화에 따라 보유 전략 재검토가 필요. 7월 말까지 주시해야 한다.</p>
+      </div>
+    </div>
+
+    <!-- 소제목 6 -->
+    <h2 class="section-title">⑥ 전망 — 7월 말 대책이 게임체인저가 될 수 있을까</h2>
+
+    <div class="outlook-box">
+      <h4>🔮 향후 3개월 시나리오</h4>
+      <p><strong>단기 (7월 말까지):</strong> 부동산 종합대책 발표 전까지 관망세와 막차 수요가 혼재. 강남·신축 중심 상승세 지속 가능성이 높다. "대책 나오기 전에 사자"는 학습된 공포가 매수 수요를 부추긴다.</p>
+      <p><strong>중기 (3개월):</strong> 공급 확대책이 단기 효과를 내기 어렵다. 실제 착공까지 2~3년이 걸리는 만큼 즉각적인 가격 안정은 기대하기 힘들다. 전세 이중가격 구조는 당분간 유지된다.</p>
+      <p><strong>구조적 문제:</strong> 서울 핵심 지역의 공급은 물리적으로 제한적이고, 재건축·재개발 속도는 규제에 묶여 있다. 수요-공급 불균형이 해소되지 않으면 어떤 규제도 임시방편에 그친다.</p>
+    </div>
+
+    <p>한 부동산 전문가는 이렇게 진단한다. <em>"정부가 해결할 수 있는 유일한 방법은 공급 외에 없다. 그런데 그 공급이 효과를 내려면 최소 5~7년이 걸린다. 그 사이에 오르는 집값을 막는 것은 현실적으로 불가능에 가깝다."</em></p>
+
+    <p>결국 지금의 집값 상승은 단기 정책 실패가 아니라, <span class="highlight">수십 년간 쌓인 구조적 공급 부족의 폭발</span>이다. 72주는 숫자일 뿐이다. 그 뒤에는 서울을 떠난 140만 명의 이야기가, 이중가격 속에 갇힌 세입자의 현실이, 매달 목돈이 증발하는 청년들의 절망이 있다.</p>
+
+    <!-- 해시태그 -->
+    <div class="hashtag-area">
+      <a href="#">#서울집값</a>
+      <a href="#">#72주연속상승</a>
+      <a href="#">#탈서울</a>
+      <a href="#">#전세이중가격</a>
+      <a href="#">#부동산규제역설</a>
+      <a href="#">#이재명정부부동산</a>
+      <a href="#">#부동산종합대책</a>
+      <a href="#">#전세난</a>
+      <a href="#">#경기도이주</a>
+      <a href="#">#집값못잡는이유</a>
+      <a href="#">#부동산2026</a>
+      <a href="#">#내집마련</a>
+    </div>
+
+    <!-- 출처 -->
+    <div class="sources">
+      <h4>📎 주요 출처</h4>
+      <ul>
+        <li><a href="https://www.newspim.com/news/view/20260706001119" target="_blank">뉴스핌 — 서울살이 버거워진 수요자들…경기로 간다 (2026.07.06)</a></li>
+        <li><a href="https://www.ajunews.com/view/20260706090248126" target="_blank">아주경제 — 같은 아파트인데 8000만원 더? 서울 전세 신규 계약 부담 커졌다 (2026.07.06)</a></li>
+        <li><a href="https://www.etoday.co.kr/news/view/2600477" target="_blank">이투데이 — 서울 아파트 전세 84㎡ 8000만원 차이 (2026.07.06)</a></li>
+        <li><a href="https://www.mt.co.kr/estate/2026/07/05/2026070313293141358" target="_blank">머니투데이 — 규제도 안 통했다…서울 집값 밀어 올리는 진짜 이유 (2026.07.05)</a></li>
+        <li><a href="https://www.mt.co.kr/estate/2026/07/02/2026070210154239039" target="_blank">머니투데이 — 서울 아파트값 72주 연속 상승…동탄 규제 직전 1.46% 급등 (2026.07.02)</a></li>
+        <li><a href="https://www.fnnews.com/news/202607061004516980" target="_blank">파이낸셜뉴스 — 서울 집값 부담에 '탈서울' 행렬…전출자 60% 경기로 향했다 (2026.07.06)</a></li>
+        <li><a href="https://www.nvp.co.kr/news/articleView.html?idxno=318597" target="_blank">뉴스비전e — 이재명 정부 1년, 부동산 '규제의 역설' 갇혔나 (2026.07.06)</a></li>
+        <li><a href="https://www.ytn.co.kr/_ln/0102_202606241049512654" target="_blank">YTN — 서울 집값 71주 연속 상승 (2026.06.24)</a></li>
+      </ul>
+    </div>
+
+  </div>
+</article>
+
+<!-- 면책조항 -->
+<footer class="disclaimer">
+  <div class="container">
+    <p>⚠️ <strong>면책조항:</strong> 본 아티클은 공개된 언론 보도 및 공공 데이터를 바탕으로 작성된 정보성 콘텐츠입니다. 투자 조언이나 법적 의견이 아니며, 부동산 매수·매도 결정 시 전문가 상담을 권장합니다. 인용된 수치는 각 출처 보도 시점 기준이며, 이후 변동될 수 있습니다.</p>
+  </div>
+</footer>
+
+</body>
+</html>
