@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>'AI 승전국' 한국의 역설 — 청년 일자리 21만 개가 AI에게 사라졌다 | 한국이슈 아티클</title>
+  <meta name="description" content="한국이 AI 경쟁에서 승전국으로 평가받는 동안, 청년 일자리 21만 개가 증발했다. 파이낸셜타임스도 경고한 한국만의 '연공서열 AI 역설'을 파헤친다." />
+  <meta name="keywords" content="AI 일자리, 청년 실업, AI 대체, 화이트칼라, 한국 고용, 기술적 실업, 생성형AI" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #6C3DE8;
+      --primary-light: #EDE9FF;
+      --accent: #FF4757;
+      --accent2: #FFA502;
+      --dark: #1a1a2e;
+      --text: #2d3436;
+      --text-muted: #636e72;
+      --bg: #ffffff;
+      --border: #dfe6e9;
+      --tag-bg: #f0ebff;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 17px;
+      line-height: 1.85;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 20px 60px; }
+
+    .hero {
+      background: linear-gradient(135deg, #1a0533 0%, #3b1078 60%, #6C3DE8 100%);
+      color: white;
+      padding: 56px 24px 48px;
+    }
+    .hero-inner { max-width: 800px; margin: 0 auto; }
+    .category-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.35);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: clamp(24px, 4vw, 36px);
+      font-weight: 900;
+      line-height: 1.35;
+      margin-bottom: 18px;
+      word-break: keep-all;
+    }
+    .hero h1 em { color: #FFD700; font-style: normal; }
+    .hero-sub {
+      font-size: 16px;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.7;
+      word-break: keep-all;
+      max-width: 680px;
+    }
+    .hero-meta {
+      margin-top: 24px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .stat-bar {
+      background: var(--dark);
+      padding: 18px 24px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .stat-item {
+      text-align: center;
+      padding: 12px 28px;
+      border-right: 1px solid rgba(255,255,255,0.12);
+      flex: 1;
+      min-width: 140px;
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-num { font-size: 28px; font-weight: 900; color: #FFD700; display: block; }
+    .stat-label { font-size: 12px; color: rgba(255,255,255,0.65); word-break: keep-all; }
+
+    .article-body { padding-top: 42px; }
+    .summary-box {
+      background: var(--primary-light);
+      border-left: 5px solid var(--primary);
+      padding: 20px 22px;
+      border-radius: 0 10px 10px 0;
+      margin-bottom: 36px;
+    }
+    .summary-box p { font-size: 15.5px; color: #3a2060; margin: 0; line-height: 1.75; word-break: keep-all; }
+    .summary-box strong { color: var(--primary); }
+
+    h2 {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--dark);
+      margin: 44px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 3px solid var(--primary);
+      word-break: keep-all;
+    }
+    p { margin-bottom: 18px; word-break: keep-all; }
+    .emphasis {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--accent);
+      background: #fff5f5;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 24px 0;
+      word-break: keep-all;
+    }
+    .pull-quote {
+      border-left: 4px solid var(--accent2);
+      padding: 14px 20px;
+      background: #fffbf0;
+      border-radius: 0 8px 8px 0;
+      margin: 26px 0;
+      font-style: italic;
+      color: #5d4037;
+      font-size: 16px;
+      word-break: keep-all;
+    }
+
+    .infographic {
+      background: #f8f5ff;
+      border: 1.5px solid #d9cfff;
+      border-radius: 14px;
+      padding: 28px 24px;
+      margin: 36px 0;
+    }
+    .infographic h3 { font-size: 17px; font-weight: 800; color: var(--primary); margin-bottom: 22px; text-align: center; }
+
+    .bar-row { display: flex; align-items: center; margin-bottom: 13px; gap: 10px; }
+    .bar-label { width: 150px; font-size: 13px; color: var(--text); flex-shrink: 0; text-align: right; word-break: keep-all; }
+    .bar-track { flex: 1; height: 28px; background: #ede9ff; border-radius: 6px; overflow: hidden; }
+    .bar-fill {
+      height: 100%; border-radius: 6px;
+      display: flex; align-items: center;
+      padding-left: 8px;
+      font-size: 12px; font-weight: 700; color: white;
+    }
+    .bar-fill.red    { background: linear-gradient(90deg, #ff4757, #ff6b81); }
+    .bar-fill.orange { background: linear-gradient(90deg, #ff6348, #ffa502); }
+    .bar-fill.violet { background: linear-gradient(90deg, #6C3DE8, #a29bfe); }
+
+    .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 10px; }
+    .compare-card { border-radius: 10px; padding: 18px 16px; text-align: center; }
+    .compare-card.red-card   { background: #fff0f0; border: 1.5px solid #ffb3b3; }
+    .compare-card.green-card { background: #f0fff4; border: 1.5px solid #b3ffd1; }
+    .compare-card .big-num { font-size: 28px; font-weight: 900; display: block; margin-bottom: 4px; }
+    .compare-card .desc { font-size: 13px; color: var(--text-muted); word-break: keep-all; }
+    .compare-card.red-card   .big-num { color: #e53935; }
+    .compare-card.green-card .big-num { color: #2e7d32; }
+
+    .timeline { position: relative; padding-left: 24px; margin-top: 12px; }
+    .timeline::before {
+      content: ''; position: absolute; left: 6px; top: 0; bottom: 0;
+      width: 3px; background: linear-gradient(to bottom, var(--primary), var(--accent));
+      border-radius: 2px;
+    }
+    .tl-item { position: relative; margin-bottom: 18px; }
+    .tl-item::before {
+      content: ''; position: absolute; left: -21px; top: 6px;
+      width: 12px; height: 12px; background: var(--primary);
+      border-radius: 50%; border: 2px solid white;
+      box-shadow: 0 0 0 2px var(--primary);
+    }
+    .tl-year { font-size: 12px; font-weight: 700; color: var(--primary); margin-bottom: 2px; }
+    .tl-text { font-size: 14px; color: var(--text); word-break: keep-all; }
+
+    .highlight-box {
+      background: linear-gradient(135deg, #1a0533 0%, #3b1078 100%);
+      color: white; border-radius: 14px; padding: 26px 24px; margin: 32px 0; word-break: keep-all;
+    }
+    .highlight-box h3 { font-size: 17px; font-weight: 800; margin-bottom: 14px; color: #FFD700; }
+    .highlight-box ul { padding-left: 18px; }
+    .highlight-box li { font-size: 15px; color: rgba(255,255,255,0.88); margin-bottom: 8px; }
+
+    .tags { margin-top: 44px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { display: inline-block; background: var(--tag-bg); color: var(--primary); font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 20px; border: 1px solid #d9cfff; }
+
+    .disclaimer { margin-top: 40px; padding: 16px 18px; background: #f5f5f5; border-radius: 8px; font-size: 12.5px; color: #888; line-height: 1.6; word-break: keep-all; }
+
+    .sources { margin-top: 28px; border-top: 1px solid var(--border); padding-top: 20px; }
+    .sources h4 { font-size: 14px; color: var(--text-muted); margin-bottom: 10px; }
+    .sources a { display: block; font-size: 13px; color: var(--primary); text-decoration: none; margin-bottom: 5px; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="category-badge">📱 기술·AI</span>
+    <h1>'AI 승전국' 한국의 역설 —<br><em>청년 일자리 21만 개</em>가 AI에게 잠식됐다</h1>
+    <p class="hero-sub">
+      반도체 수출 1위, AI 도입 세계 최상위권… 그런데 왜 내 자식은 취업을 못 할까?
+      FT가 경고한 '한국형 AI 역설'의 민낯을 데이터로 해부한다.
+    </p>
+    <div class="hero-meta">
+      <span>📅 2026년 7월 8일</span>
+      <span>✍️ 탐사 저널리즘팀</span>
+      <span>⏱ 읽기 약 8분</span>
+    </div>
+  </div>
+</div>
+
+<div class="stat-bar">
+  <div class="stat-item">
+    <span class="stat-num">-21만</span>
+    <span class="stat-label">청년(15~29세) 일자리<br>최근 3년 순감소</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">+21만</span>
+    <span class="stat-label">50대 이상 일자리<br>같은 기간 순증가</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">341만</span>
+    <span class="stat-label">AI 대체 예상 일자리<br>(한국은행 추정)</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">61%</span>
+    <span class="stat-label">기업 생성형 AI 도입률<br>실 내재화는 6.7%</span>
+  </div>
+</div>
+
+<div class="container">
+  <div class="article-body">
+
+    <div class="summary-box">
+      <p>
+        ① <strong>3년간 청년 일자리 21만 1천 개 소멸</strong>, 같은 기간 50대 이상은 20만 9천 개 증가.<br>
+        ② 감소한 일자리 대부분은 AI 노출 최고 직종 — 정보서비스(-23.8%), 출판(-20.4%), 프로그래밍(-11.2%).<br>
+        ③ FT·한국은행·KDI 모두 동일한 결론: "한국의 연공서열 구조가 AI 충격을 청년에게 집중시킨다."
+      </p>
+    </div>
+
+    <h2>🔥 반도체 호황인데 왜 청년은 일자리가 없나</h2>
+    <p>
+      2026년 상반기 한국 수출은 반도체·AI 반등에 힘입어 사상 최대 실적을 기록했다.
+      파이낸셜타임스(FT)는 한국을 "AI 무한경쟁에서 승리한 국가"로 꼽았다.
+      그런데 같은 시기, 20대 청년들의 취업 포털 화면에는 신입 공고가 없다.
+    </p>
+    <p>
+      고용보험 데이터를 뜯어보면 2026년 5월 기준 <strong>30세 미만 가입자는 223만 3천 명으로,
+      1년 만에 6만 5천 명(2.8%)이 또 사라졌다.</strong> 이 숫자는 단순한 경기 침체로 설명되지 않는다.
+      경쟁국들이 AI 전환으로 전체 고용을 유지하는 동안, 한국의 청년만 유독 집중 타격을 받고 있다.
+    </p>
+    <div class="emphasis">
+      "AI 덕분에 기업 생산성은 올랐지만, 그 이익은 경력자에게만 돌아갔다. 신입이 배울 자리 자체가 소멸되고 있다." — 한국은행 보고서
+    </div>
+
+    <h2>📊 어떤 직종이 사라졌나: 충격적인 숫자들</h2>
+    <p>
+      한국은행이 분석한 AI 노출 지수(AI Exposure Index)를 적용하면, 청년 일자리 감소의 90% 이상이
+      AI 노출도 상위 직종에서 발생했다. 특히 세 분야의 충격이 극적이다.
+    </p>
+
+    <div class="infographic">
+      <h3>📉 AI 노출 상위 직종 청년 일자리 감소율 (최근 3년)</h3>
+      <div class="bar-chart">
+        <div class="bar-row">
+          <div class="bar-label">정보서비스</div>
+          <div class="bar-track"><div class="bar-fill red" style="width:85%">-23.8%</div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">출판·미디어</div>
+          <div class="bar-track"><div class="bar-fill red" style="width:72%">-20.4%</div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">프로그래밍·IT</div>
+          <div class="bar-track"><div class="bar-fill orange" style="width:42%">-11.2%</div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">법률 사무원</div>
+          <div class="bar-track"><div class="bar-fill orange" style="width:22%">-6.1%</div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">금융·회계 보조</div>
+          <div class="bar-track"><div class="bar-fill violet" style="width:18%">-4.9%</div></div>
+        </div>
+      </div>
+      <p style="font-size:12px; color:#888; text-align:right; margin-top:8px;">출처: 한국은행, 더페어, 한국일보 종합</p>
+    </div>
+
+    <p>
+      가장 극적인 사례는 <strong>법률 사무원</strong>이다. 2025년 7,643명이던 법률 사무원은 1년 만에 7,175명으로 줄었다.
+      468명, 6.1% 감소다. AI 법률 검토 서비스가 확산되면서 초급 리서치 업무 대부분이 자동화됐기 때문이다.
+      개발자 취업 시장도 마찬가지다. "코딩을 AI가 몇 초 만에 해내니 신입 개발자를 뽑을 이유가 없다"는 게
+      채용 담당자들의 공통된 말이다.
+    </p>
+
+    <h2>🧩 '연공서열 AI 역설' — 한국만의 특수한 구조</h2>
+    <p>
+      같은 AI 혁명 앞에서도 미국·유럽은 청년 실업률이 상대적으로 안정적이다.
+      왜 한국만 이렇게 심각할까? 한국은행은 이를 <strong>'연공편향 기술변화(Seniority-Biased Technological Change)'</strong>라 이름 붙였다.
+    </p>
+    <div class="pull-quote">
+      "AI는 숙련된 고령 경력자의 생산성을 올려주는 도구인 반면, 신입이 처음 3년간 반복 수행하던
+      단순 인지 업무들을 통째로 대체해버린다. 한국의 연공서열 채용 구조는 이 충격을 고스란히 청년에게 전가한다."
+      — 한국은행 2026년 노동시장 보고서
+    </div>
+    <p>
+      쉽게 말해, <strong>AI는 '경력 사다리'의 가장 아랫단을 제거하고 있다.</strong>
+      대기업은 신입사원 대신 AI 에이전트를 쓰고, 살아남은 인력 채용은 검증된 경력자로만 한정된다.
+      신입은 경력을 쌓을 자리 자체가 없어진 것이다.
+    </p>
+
+    <div class="infographic">
+      <h3>👥 3년간 세대별 일자리 증감 (한국 전체)</h3>
+      <div class="compare-grid">
+        <div class="compare-card red-card">
+          <span class="big-num">-21만 1천</span>
+          <div class="desc">15~29세 청년<br>일자리 감소</div>
+        </div>
+        <div class="compare-card green-card">
+          <span class="big-num">+20만 9천</span>
+          <div class="desc">50대 이상<br>일자리 증가</div>
+        </div>
+      </div>
+      <p style="font-size:13px; color:#5d4037; text-align:center; margin-top:18px; font-weight:600;">
+        AI는 세대 간 일자리를 이전시키고 있다 — 청년에서 중장년으로
+      </p>
+    </div>
+
+    <h2>🌐 세계는 지금 어떤가: 비교해보니 더 충격적</h2>
+    <p>
+      글로벌 관점에서 AI의 일자리 충격은 한국만의 문제가 아니다.
+      2026년 상반기 전 세계 벤처 AI 투자는 5,100억 달러로 사상 최고치를 경신했다.
+      아마존은 화이트칼라 1만 4천 명을 감원했고, 물류 대기업 UPS는 22개월간 관리직 1만 4천 명을 줄였다.
+      컨설팅 기관 가트너는 <strong>"2026년까지 기업 5곳 중 1곳이 AI로 관리 계층을 절반 이상 제거할 것"</strong>이라고 내다봤다.
+    </p>
+    <p>
+      그러나 한국의 상황이 더 심각한 이유가 있다. IMF·WEF 데이터에 따르면 선진국 평균 청년 취업 충격이
+      AI 도입률 대비 1이라면 한국은 1.7이다. 연공서열 제도, 대기업 집중 채용 구조, IT 직종 편중이 삼중으로
+      충격을 증폭시키고 있다.
+    </p>
+
+    <div class="infographic">
+      <h3>📅 AI가 한국 노동시장을 뒤흔든 타임라인</h3>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-year">2023년</div>
+          <div class="tl-text">ChatGPT 열풍, 국내 기업 생성형 AI 파일럿 도입 시작. 채용 시장은 아직 안정.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2024년 상반기</div>
+          <div class="tl-text">법률·회계·IT 보조직 AI 자동화 현실화. 대기업 신입 TO 첫 대규모 감소. KDI "2030년 노동력 90% 대체 가능" 경고 보고서 발표.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2024년 하반기</div>
+          <div class="tl-text">법률 사무원 6.1% 감소, 정보서비스 분야 청년 일자리 20% 이상 증발. 한국은행 '연공편향 AI 역설' 개념 제시.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2025년</div>
+          <div class="tl-text">AI 에이전트 기업 도입 본격화. 국내 근로자 생성형 AI 활용률 51% 돌파. 청년 고용보험 가입자 전년 대비 급감.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2026년 7월 (현재)</div>
+          <div class="tl-text">FT "한국이 AI 승전국이지만 청년 일자리 감소 가장 뚜렷" 보도. 3년간 누적 청년 일자리 -21만 1천 개 공식 확인.</div>
+        </div>
+      </div>
+    </div>
+
+    <h2>💥 나에게 미치는 영향: 지금 당장 바뀌는 것들</h2>
+    <p>
+      이 문제는 추상적인 경제 통계가 아니다. 당신의 자녀, 형제, 조카, 친구에게 직접 닥친 현실이다.
+    </p>
+    <div class="highlight-box">
+      <h3>⚠️ 지금 AI가 집중 대체하는 직종 7가지</h3>
+      <ul>
+        <li>📝 <strong>콘텐츠·카피라이터</strong> — 생성형 AI가 초안을 수 초 만에 작성</li>
+        <li>💻 <strong>초급 개발자·QA</strong> — 코드 생성·테스트 자동화로 신입 채용 급감</li>
+        <li>⚖️ <strong>법률 사무원·리서처</strong> — AI 법률 검색·분석 도구로 인력 6.1% 소멸</li>
+        <li>📊 <strong>데이터 입력·분석 보조</strong> — RPA·AI 에이전트로 대부분 자동화</li>
+        <li>📞 <strong>고객 서비스·콜센터</strong> — LLM 기반 챗봇이 1차 응대 90% 처리</li>
+        <li>📰 <strong>기사 번역·편집 보조</strong> — 출판 분야 청년 일자리 -20.4%</li>
+        <li>🏦 <strong>금융·회계 보조직</strong> — AI 분석 소프트웨어로 신입 자리 잠식</li>
+      </ul>
+    </div>
+
+    <h2>🔭 전망과 행동 제안: 이 싸움에서 살아남으려면</h2>
+    <p>
+      세계경제포럼(WEF)은 2030년까지 AI로 9,200만 개 일자리가 사라지지만, 반대로 1억 7천만 개의 신규 일자리가
+      생겨날 것으로 전망한다. 순증가는 7,800만 개다. 하지만 문제는 <strong>없어지는 직종과 생기는 직종이 다르고,
+      적응에 시간이 필요하다는 것</strong>이다. 그 전환 기간에 청년들이 가장 큰 피해를 입는다.
+    </p>
+    <p>
+      정부와 기업이 할 일은 명확하다. 첫째, AI 노출 직종 종사자를 위한 직무 전환 훈련을 대규모 확대해야 한다.
+      둘째, 신입 채용을 AI 도입과 연계해 의무화하는 인센티브 구조가 필요하다. 셋째, 기업의 AI 도입 이익 일부를
+      청년 고용 기금으로 전환하는 사회적 합의가 시급하다.
+    </p>
+    <p>
+      개인 차원에서는 AI가 대체하기 어려운 역량 — <strong>대인 설득력, 복합 문제 해결, 창의적 기획,
+      현장 감각</strong> — 을 집중적으로 키워야 한다. '코딩을 배워라'의 시대가 저물고
+      'AI와 협업하는 판단력을 키워라'의 시대가 왔다.
+    </p>
+
+    <div class="tags">
+      <span class="tag">#AI일자리</span>
+      <span class="tag">#청년실업</span>
+      <span class="tag">#AI대체</span>
+      <span class="tag">#한국AI</span>
+      <span class="tag">#취업대란</span>
+      <span class="tag">#화이트칼라위기</span>
+      <span class="tag">#기술적실업</span>
+      <span class="tag">#신입채용</span>
+      <span class="tag">#생성형AI</span>
+      <span class="tag">#고용충격</span>
+    </div>
+
+    <div class="disclaimer">
+      ※ 본 아티클은 공개된 통계 및 언론 보도를 바탕으로 작성된 저널리즘 콘텐츠입니다.
+      인용된 수치는 각 기관의 공식 발표 시점 기준이며, 이후 수정·변경될 수 있습니다.
+      특정 기업이나 개인에 대한 투자 권유나 법률적 조언을 포함하지 않습니다.
+    </div>
+
+    <div class="sources">
+      <h4>📎 주요 출처</h4>
+      <a href="https://v.daum.net/v/20260707171209551" target="_blank">'AI 승전국' 한국의 역설…청년 일자리는 사라졌다 (다음 뉴스)</a>
+      <a href="https://www.hankyung.com/article/202607070757Y" target="_blank">韓, 겉으로는 AI서 승리했지만…청년층 일자리 감소 가장 뚜렷 (한국경제)</a>
+      <a href="https://www.hankookilbo.com/news/article/A2026070510020000573" target="_blank">반도체 호황에도 청년은 일자리 잃었다…AI가 덮친 취업시장 (한국일보)</a>
+      <a href="https://www.thefairnews.co.kr/news/articleView.html?idxno=76496" target="_blank">청년 일자리 21만 개 감소…AI가 바꾼 채용의 룰 (더페어)</a>
+      <a href="https://www.wablelife.com/2026/07/ai-jobs-korea-youth.html" target="_blank">AI가 먼저 없애는 직업 7가지 - 청년 일자리 21만 개가 사라진 이유 (와블라이프)</a>
+      <a href="https://www.kdi.re.kr/research/reportView?pub_no=18370" target="_blank">인공지능으로 인한 노동시장의 변화와 정책방향 (KDI)</a>
+      <a href="https://www.newsis.com/view/NISX20250926_0003346350" target="_blank">AI에 무너지는 화이트칼라…어떤 직업 살아남을까 (뉴시스)</a>
+      <a href="https://www.carrotglobalblog.com/2026-korean-enterprise-ai-utilization-status-debriefing-260121/" target="_blank">2026 한국기업 AI 활용 현황 디브리핑 (캐럿글로벌)</a>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
