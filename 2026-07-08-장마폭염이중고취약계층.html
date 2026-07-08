@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>비는 고이고 더위는 죽인다 — 2026년 여름, 기후재난이 반지하를 습격하다</title>
+  <meta name="description" content="2026년 한국 여름, 게릴라 호우와 역대급 폭염이 동시에 덮쳤다. 반지하·노인·야외노동자, 세 취약계층을 직격하는 기후재난의 실태를 파헤친다." />
+  <meta name="keywords" content="장마,폭염,기후재난,반지하침수,온열질환,2026여름,기후위기,게릴라호우,취약계층" />
+  <meta property="og:title" content="비는 고이고 더위는 죽인다 — 2026년 여름, 기후재난이 반지하를 습격하다" />
+  <meta property="og:description" content="폭염 첫날부터 사망자, 온열질환자 1.5배 폭증, 게릴라 호우가 반지하를 노린다" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green: #2e7d32;
+      --green-light: #e8f5e9;
+      --green-mid: #43a047;
+      --red: #c62828;
+      --orange: #e65100;
+      --blue: #1565c0;
+      --gray-dark: #1a1a1a;
+      --gray-mid: #555;
+      --gray-light: #f5f5f5;
+      --border: #e0e0e0;
+      --font: 'Noto Sans KR', sans-serif;
+    }
+
+    body {
+      font-family: var(--font);
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--gray-dark);
+      background: #fff;
+      padding: 0 16px 60px;
+    }
+
+    .wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* ── Header ── */
+    .article-header {
+      border-top: 6px solid var(--green);
+      padding: 36px 0 24px;
+    }
+
+    .category-badge {
+      display: inline-block;
+      background: var(--green);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+      letter-spacing: 0.5px;
+    }
+
+    h1 {
+      font-size: clamp(24px, 4vw, 34px);
+      font-weight: 900;
+      line-height: 1.35;
+      color: var(--gray-dark);
+      margin-bottom: 14px;
+    }
+
+    h1 em {
+      color: var(--green);
+      font-style: normal;
+    }
+
+    .subtitle {
+      font-size: 15px;
+      color: var(--gray-mid);
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .meta {
+      font-size: 13px;
+      color: #888;
+      border-top: 1px solid var(--border);
+      padding-top: 12px;
+    }
+
+    /* ── Hook banner ── */
+    .hook-banner {
+      background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 60%, #e65100 100%);
+      border-radius: 12px;
+      padding: 28px 28px 24px;
+      color: #fff;
+      margin: 32px 0;
+    }
+
+    .hook-banner p {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+
+    .hook-banner strong { color: #ffe082; }
+
+    /* ── Summary box ── */
+    .summary-box {
+      background: var(--green-light);
+      border-left: 4px solid var(--green);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin: 28px 0;
+    }
+
+    .summary-box h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--green);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+
+    .summary-box ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .summary-box ul li {
+      font-size: 15px;
+      padding: 5px 0 5px 20px;
+      position: relative;
+      color: var(--gray-dark);
+    }
+
+    .summary-box ul li::before {
+      content: "▶";
+      position: absolute;
+      left: 0;
+      color: var(--green-mid);
+      font-size: 12px;
+      top: 7px;
+    }
+
+    /* ── Section headings ── */
+    h2 {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--gray-dark);
+      margin: 40px 0 14px;
+      padding-left: 14px;
+      border-left: 4px solid var(--green);
+      line-height: 1.4;
+    }
+
+    p { margin-bottom: 18px; }
+
+    /* ── Stat cards ── */
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 14px;
+      margin: 28px 0;
+    }
+
+    .stat-card {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 16px;
+      text-align: center;
+      background: #fafafa;
+    }
+
+    .stat-card .num {
+      font-size: 32px;
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .stat-card .label {
+      font-size: 13px;
+      color: var(--gray-mid);
+      line-height: 1.4;
+    }
+
+    .stat-card.red .num { color: var(--red); }
+    .stat-card.orange .num { color: var(--orange); }
+    .stat-card.green .num { color: var(--green); }
+    .stat-card.blue .num { color: var(--blue); }
+
+    /* ── Pull quote ── */
+    .pull-quote {
+      border: 2px solid var(--green-mid);
+      border-radius: 10px;
+      padding: 22px 26px;
+      margin: 32px 0;
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--green);
+      line-height: 1.5;
+      position: relative;
+    }
+
+    .pull-quote::before {
+      content: """;
+      font-size: 60px;
+      color: var(--green-light);
+      position: absolute;
+      top: -10px;
+      left: 16px;
+      font-family: serif;
+      line-height: 1;
+    }
+
+    /* ── Warning box ── */
+    .warn-box {
+      background: #fff3e0;
+      border-left: 4px solid var(--orange);
+      border-radius: 8px;
+      padding: 18px 22px;
+      margin: 24px 0;
+      font-size: 15px;
+    }
+
+    .warn-box strong { color: var(--orange); }
+
+    /* ── Infographic ── */
+    .infographic {
+      background: #f9fbe7;
+      border-radius: 12px;
+      padding: 28px 20px;
+      margin: 36px 0;
+    }
+
+    .infographic h3 {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--gray-dark);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    /* bar chart */
+    .bar-chart { margin-bottom: 30px; }
+
+    .bar-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      gap: 10px;
+    }
+
+    .bar-label {
+      font-size: 13px;
+      width: 90px;
+      flex-shrink: 0;
+      font-weight: 600;
+      color: var(--gray-dark);
+    }
+
+    .bar-outer {
+      flex: 1;
+      background: #e0e0e0;
+      border-radius: 4px;
+      height: 22px;
+      overflow: hidden;
+    }
+
+    .bar-inner {
+      height: 100%;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      padding-left: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #fff;
+      transition: width 0.8s;
+    }
+
+    .bar-inner.green { background: var(--green); }
+    .bar-inner.orange { background: var(--orange); }
+    .bar-inner.red { background: var(--red); }
+
+    /* SVG donut */
+    .donut-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .donut-legend { font-size: 13px; }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .legend-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+
+    /* ── Timeline ── */
+    .timeline { margin: 28px 0; }
+
+    .tl-item {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .tl-date {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--green);
+      width: 80px;
+      flex-shrink: 0;
+      padding-top: 2px;
+    }
+
+    .tl-content {
+      flex: 1;
+      font-size: 14px;
+      border-left: 2px solid var(--green-light);
+      padding-left: 14px;
+      padding-bottom: 14px;
+      color: var(--gray-dark);
+    }
+
+    .tl-content strong { color: var(--red); }
+
+    /* ── Action tips ── */
+    .action-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+      margin: 24px 0;
+    }
+
+    .action-card {
+      background: var(--green-light);
+      border-radius: 10px;
+      padding: 16px 18px;
+    }
+
+    .action-card .icon { font-size: 26px; margin-bottom: 8px; }
+    .action-card .action-title { font-size: 14px; font-weight: 700; margin-bottom: 6px; color: var(--green); }
+    .action-card p { font-size: 13px; color: var(--gray-mid); margin-bottom: 0; line-height: 1.5; }
+
+    /* ── Hashtags ── */
+    .hashtags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 32px 0 24px;
+    }
+
+    .hashtag {
+      background: var(--green-light);
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1px solid var(--green-mid);
+    }
+
+    /* ── Sources ── */
+    .sources {
+      background: var(--gray-light);
+      border-radius: 8px;
+      padding: 18px 20px;
+      margin: 28px 0;
+      font-size: 13px;
+    }
+
+    .sources h4 { font-size: 13px; font-weight: 700; margin-bottom: 10px; color: var(--gray-mid); }
+    .sources ul { list-style: disc; padding-left: 18px; }
+    .sources li { margin-bottom: 5px; }
+    .sources a { color: var(--blue); text-decoration: none; }
+    .sources a:hover { text-decoration: underline; }
+
+    /* ── Disclaimer ── */
+    .disclaimer {
+      font-size: 12px;
+      color: #999;
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 22px; }
+      h2 { font-size: 18px; }
+      .hook-banner p { font-size: 16px; }
+      .bar-label { width: 70px; font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="article-header">
+    <span class="category-badge">🌱 환경·기후</span>
+    <h1>비는 고이고 더위는 죽인다<br/>— <em>2026년 여름, 기후재난이 반지하를 습격하다</em></h1>
+    <p class="subtitle">게릴라 호우가 쏟아지는 낮에 침수 걱정, 잠시 개면 체감 40도 불볕더위. 기상청조차 예측 못 하는 '새로운 여름'이 시작됐다.</p>
+    <div class="meta">📅 2026년 7월 8일 &nbsp;|&nbsp; 🌱 환경·기후 &nbsp;|&nbsp; ✍️ 데이터 저널리즘팀</div>
+  </header>
+
+  <!-- HOOK BANNER -->
+  <div class="hook-banner">
+    <p>
+      올 여름 한국인은 선택해야 한다. <strong>비를 피할 곳</strong>과 <strong>더위를 피할 곳</strong>이 더 이상 같지 않다.<br/>
+      창문을 닫으면 찐다. 열면 빗물이 밀려든다. 이것이 2026년 대한민국 여름이다.
+    </p>
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="summary-box">
+    <h3>📌 핵심 요약 3줄</h3>
+    <ul>
+      <li>2026년 장마는 7월 1일 전국 시작, '게릴라 호우' 폭증으로 반지하·저지대 침수 위험 최고조</li>
+      <li>폭염 감시 체계 운영 첫날(5월 15일)부터 사망자 발생 — 역대 가장 이른 온열 사망 기록</li>
+      <li>6월 말 기준 온열질환자 71명·사망 2명, 작년 동기 대비 <strong>1.5배 폭증</strong></li>
+    </ul>
+  </div>
+
+  <!-- STAT CARDS -->
+  <div class="stat-row">
+    <div class="stat-card red">
+      <div class="num">1.5배</div>
+      <div class="label">올해 온열질환자<br/>작년 동기 대비 증가</div>
+    </div>
+    <div class="stat-card orange">
+      <div class="num">71명</div>
+      <div class="label">6월 말 기준<br/>온열질환 응급실 내원</div>
+    </div>
+    <div class="stat-card green">
+      <div class="num">5.15</div>
+      <div class="label">역대 최초<br/>온열질환 첫날 사망일</div>
+    </div>
+    <div class="stat-card blue">
+      <div class="num">3단계</div>
+      <div class="label">신설된 폭염중대경보<br/>체감 38도 발령</div>
+    </div>
+  </div>
+
+  <!-- SECTION 1 -->
+  <h2>① "장마가 달라졌다" — 게릴라 호우의 시대</h2>
+
+  <p>
+    한국기상청은 2026년 7월 1일 서울과 중부지방에 장마 시작을 공식 선언했다. 제주도와 남부지방은 하루 앞선 6월 30일 이미 장마에 진입했다. 그런데 이번 장마는 '예전 장마'가 아니다.
+  </p>
+
+  <p>
+    과거 장마는 '매일 비가 추적추적 내리는 시기'였다. 하지만 기후 전문가들은 이제 이 공식이 깨졌다고 경고한다. 비가 전국에 고르게 내리는 대신, <strong>특정 동네에만 시간당 100mm를 넘는 게릴라성 폭우</strong>가 쏟아진다. 기상청도 3시간 전에야 겨우 예보를 수정하는 상황이다.
+  </p>
+
+  <p>
+    원인은 지구 온난화로 가열된 북태평양 고기압이다. 뜨거운 고기압과 찬 대기가 충돌하는 경계면이 불안정해질수록 국지성 호우의 강도와 빈도가 높아진다. 기상청 자료에 따르면, 최근 10년간 장마 시작일의 편차가 이전 10년보다 두 배 이상 커졌다.
+  </p>
+
+  <div class="pull-quote">
+    "시간당 100mm 이상의 극한 강수 빈도가 10년 전보다 2.4배 증가했다. 이제 장마는 예측 가능한 계절이 아니라 기습이다."
+  </div>
+
+  <!-- SECTION 2 -->
+  <h2>② 반지하는 또 운다 — 2022년 이후 바뀐 게 있나</h2>
+
+  <p>
+    2022년 8월, 서울 관악구 신림동 반지하에서 일가족 세 명이 목숨을 잃었다. 폭우에 잠긴 반지하 현관문을 열지 못해 익사한 사건은 대한민국을 충격에 빠뜨렸다. 4년이 지난 2026년, 반지하 주거 현황은 얼마나 달라졌을까.
+  </p>
+
+  <p>
+    서울시는 2022년 이후 '반지하 단계적 퇴출' 계획을 발표했지만 진행 속도는 더디다. 주거 이전 지원금 부족, 대체 공공임대 물량 부족, 거주자들의 이주 거부 등이 맞물려 현재도 수만 가구가 반지하에 거주 중이다. 행정안전부 통계에 따르면 전국 반지하·지하 주택의 약 70%는 경보 시스템도 없고 방수문도 설치되지 않은 상태다.
+  </p>
+
+  <p>
+    올여름 기상청이 경고하는 '국지성 게릴라 호우'는 이들에게 직접적인 생존 위협이다. 30분 만에 50mm가 쏟아지면 하수도가 역류한다. 역류한 물은 지면보다 낮은 반지하로 직행한다. 문을 열 수 없어지는 데 걸리는 시간은 10분도 채 되지 않는다.
+  </p>
+
+  <div class="warn-box">
+    <strong>⚠️ 침수 위험 지역 거주자 즉시 확인 사항</strong><br/>
+    ① 호우경보 발령 시 지하층 대피 — 창문·현관문 먼저 열기 연습<br/>
+    ② 간이 물막이판(수방판) 설치 여부 확인 (지자체 무상 지급 가능)<br/>
+    ③ 안전디딤돌 앱 → 호우특보 알림 설정
+  </div>
+
+  <!-- SECTION 3 -->
+  <h2>③ 더위가 죽인다 — 역대 가장 이른 폭염 사망 기록</h2>
+
+  <p>
+    올해 한국이 기록한 불편한 진실이 하나 있다. 질병관리청이 온열질환 감시 체계를 가동한 2026년 5월 15일, <strong>바로 그날 80대 서울 남성이 온열질환으로 사망</strong>했다. 기록상 가장 이른 첫날 사망이다.
+  </p>
+
+  <p>
+    폭염은 더 이상 7~8월의 전유물이 아니다. 5월에도 체감온도가 35도를 넘는 날이 생겼다. 기상청은 2026년 6월 1일, 18년 만에 폭염 특보 체계를 개편하면서 <strong>'폭염중대경보'라는 3단계 경보를 신설</strong>했다. 체감온도 38도 이상 지속 시 발령되는 이 경보는 야외 작업 즉시 중단과 취약계층 강제 대피를 권고한다.
+  </p>
+
+  <p>
+    6월 30일 기준 온열질환 응급실 내원자는 71명, 이 중 2명이 사망했다. 같은 기간 작년(2025년)에는 내원자 192명, 사망 1명이었다. 내원자 수는 줄었지만 사망자 수는 늘었다는 점이 섬뜩하다. 전문가들은 "심한 더위에 아예 병원 가는 것을 포기하는 취약계층이 늘었기 때문"이라고 설명한다.
+  </p>
+
+  <!-- SECTION 4 - 인포그래픽 -->
+  <div class="infographic">
+    <h3>📊 기후재난 피해 지표 — 2024~2026년 비교</h3>
+
+    <!-- 온열질환 증가 -->
+    <div class="bar-chart">
+      <p style="font-size:13px;color:#555;margin-bottom:12px;font-weight:600;">▶ 5월15일~6월18일 응급실 온열질환 내원자 수 (연도별)</p>
+
+      <div class="bar-row">
+        <div class="bar-label">2024년</div>
+        <div class="bar-outer">
+          <div class="bar-inner green" style="width:40%;">148명</div>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">2025년</div>
+        <div class="bar-outer">
+          <div class="bar-inner orange" style="width:52%;">192명</div>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">2026년</div>
+        <div class="bar-outer">
+          <div class="bar-inner red" style="width:82%;">300여명</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SVG 도넛 차트: 취약계층 분포 -->
+    <p style="font-size:13px;color:#555;margin-bottom:14px;font-weight:600;">▶ 2026년 온열질환 사망·중증 환자 연령·직업군 분포 (추정)</p>
+
+    <div class="donut-wrap">
+      <svg viewBox="0 0 160 160" width="160" height="160" aria-label="취약계층 온열질환 분포">
+        <!-- 65세 이상 노인 52% -->
+        <circle cx="80" cy="80" r="60" fill="none" stroke="#2e7d32" stroke-width="30"
+          stroke-dasharray="196 377" stroke-dashoffset="0" />
+        <!-- 야외노동자 28% -->
+        <circle cx="80" cy="80" r="60" fill="none" stroke="#e65100" stroke-width="30"
+          stroke-dasharray="105.6 377" stroke-dashoffset="-196" />
+        <!-- 만성질환자 12% -->
+        <circle cx="80" cy="80" r="60" fill="none" stroke="#1565c0" stroke-width="30"
+          stroke-dasharray="45.2 377" stroke-dashoffset="-301.6" />
+        <!-- 기타 8% -->
+        <circle cx="80" cy="80" r="60" fill="none" stroke="#9e9e9e" stroke-width="30"
+          stroke-dasharray="30.2 377" stroke-dashoffset="-346.8" />
+        <text x="80" y="84" text-anchor="middle" font-size="14" font-weight="800" fill="#2e7d32" font-family="Noto Sans KR, sans-serif">취약</text>
+        <text x="80" y="100" text-anchor="middle" font-size="11" fill="#555" font-family="Noto Sans KR, sans-serif">계층별</text>
+      </svg>
+
+      <div class="donut-legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#2e7d32"></div><span>65세 이상 노인 — 52%</span></div>
+        <div class="legend-item"><div class="legend-dot" style="background:#e65100"></div><span>야외·건설 노동자 — 28%</span></div>
+        <div class="legend-item"><div class="legend-dot" style="background:#1565c0"></div><span>만성질환자 — 12%</span></div>
+        <div class="legend-item"><div class="legend-dot" style="background:#9e9e9e"></div><span>기타 — 8%</span></div>
+        <p style="font-size:11px;color:#999;margin-top:8px;">※ 질병관리청 자료 기반 추정치</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 5 -->
+  <h2>④ 숨겨진 이면 — 기후 적응 예산은 '그림의 떡'</h2>
+
+  <p>
+    정부는 2026년 기후에너지환경부 업무계획에서 재생에너지 100GW 달성, 초미세먼지 기준 WHO 수준 강화를 내세웠다. 하지만 현장에서는 체감이 다르다. 온열질환 예방 쿨링센터는 폭염 주의보 이상이어야 개방되고, 야간에는 문을 닫는 곳이 대부분이다. 열대야로 잠을 못 자는 노인은 갈 곳이 없다.
+  </p>
+
+  <p>
+    침수 예방 인프라도 마찬가지다. 서울시가 반지하 침수 방지를 위해 설치하겠다고 약속한 자동차단밸브와 역류방지밸브 보급률은 여전히 70% 이하에 머물고 있다. 당진시의회처럼 상습 침수지를 직접 달려가 대비하는 지자체가 있는 반면, 상당수 지자체는 예산 부족을 이유로 손을 놓고 있다.
+  </p>
+
+  <p>
+    기후 전문가들이 주목하는 또 다른 문제는 '열섬 효과'다. 서울·인천·부산 등 대도시는 아스팔트와 콘크리트가 낮 동안 열을 흡수한 뒤 밤에 뱉어낸다. 2025년 서울은 7월 한 달에만 열대야(최저기온 25도 이상)를 22일 기록해 117년 관측 역사상 최다를 세웠다. 2026년은 이 기록을 다시 깰 가능성이 높다고 기상청은 경고한다.
+  </p>
+
+  <!-- 타임라인 -->
+  <h2>⑤ 2026 여름 기후재난 타임라인</h2>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-date">5월 15일</div>
+      <div class="tl-content">온열질환 감시체계 첫날 — <strong>80대 서울 남성 첫 사망</strong> (역대 최이른 기록)</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">6월 1일</div>
+      <div class="tl-content">기상청, 18년 만에 폭염 특보 개편 — <strong>'폭염중대경보'(체감 38도) 신설</strong></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">6월 18일</div>
+      <div class="tl-content">온열질환 응급실 내원자 300명 돌파 — <strong>작년 동기 대비 1.5배</strong></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">6월 30일</div>
+      <div class="tl-content">누적 사망 2명, 71명 응급실 내원 확인 (질병관리청)</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">7월 1일</div>
+      <div class="tl-content">중부지방 장마 공식 시작 — <strong>게릴라 호우·반지하 침수 경보 최고조</strong></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">7월~8월</div>
+      <div class="tl-content">장마 종료 후에도 게릴라 호우·폭염·태풍 복합 위험 — 기상청 지속 경보 예고</div>
+    </div>
+  </div>
+
+  <!-- SECTION 6 -->
+  <h2>⑥ 나에게 미치는 영향 — 당신도 위험할 수 있다</h2>
+
+  <p>
+    기후재난은 '뉴스 속 이야기'가 아니다. 당신이 사는 곳의 주소, 당신의 나이, 당신이 하는 일이 당신을 피해자로 만들 수 있다.
+  </p>
+
+  <p>
+    <strong>반지하·저지대 거주자:</strong> 기상청 호우예보를 수시로 확인하고, 비가 시작되면 창문과 문이 열리는지 먼저 확인하라. 역류하는 물이 감지되면 즉시 대피하고 전기 차단기를 내려야 한다.
+  </p>
+
+  <p>
+    <strong>65세 이상 노인·만성질환자:</strong> 낮 12시~오후 5시 야외 활동을 피하고, 냉방이 되는 쿨링센터(주민센터·도서관)를 적극 활용하라. 물은 갈증이 느껴지기 전에 마셔야 한다.
+  </p>
+
+  <p>
+    <strong>야외·건설 노동자:</strong> 폭염중대경보 발령 시 법적으로 옥외 작업을 중단할 수 있다. '폭염 산업재해 인정' 기준이 확대됐으므로, 온열질환 발생 시 즉시 신고하고 산재 처리를 요청하라.
+  </p>
+
+  <div class="action-grid">
+    <div class="action-card">
+      <div class="icon">🌧️</div>
+      <div class="action-title">장마 대비</div>
+      <p>안전디딤돌 앱에서 호우특보 알림 설정. 지하·반지하 거주자는 대피 동선 사전 확인</p>
+    </div>
+    <div class="action-card">
+      <div class="icon">🌡️</div>
+      <div class="action-title">폭염 대비</div>
+      <p>폭염중대경보 발령 시 야외 활동 금지. 물 2리터/일 섭취, 쿨링센터 위치 저장</p>
+    </div>
+    <div class="action-card">
+      <div class="icon">👴</div>
+      <div class="action-title">주변 확인</div>
+      <p>혼자 사는 어르신 이웃을 하루 한 번 확인. 이상 징후 발견 시 119 즉시 신고</p>
+    </div>
+    <div class="action-card">
+      <div class="icon">📱</div>
+      <div class="action-title">정보 수집</div>
+      <p>기상청 날씨앱 + 안전디딤돌 앱 설치. 질병관리청 온열질환 일일 현황 확인</p>
+    </div>
+  </div>
+
+  <!-- 전망 -->
+  <h2>⑦ 전망 — 이제 한국 여름은 두 개의 재난이다</h2>
+
+  <p>
+    기후 과학자들은 2030년이면 한국의 장마가 현재보다 더욱 불규칙해지고, 폭염 일수가 연평균 30일을 넘길 것으로 예측한다. 동시에 해수면 온도 상승으로 태풍의 강도도 세진다. 여름 석 달 동안 침수, 더위, 태풍이라는 세 가지 재난을 차례로 맞닥뜨리는 구조다.
+  </p>
+
+  <p>
+    반지하 퇴출과 쿨링인프라 확충은 더 이상 복지 문제가 아니라 생존 인프라의 문제다. 기상청은 2026년 장마 종료 후에도 8월 초까지 게릴라 호우가 이어질 가능성을 경고한다. 태풍 시즌은 7월 말부터 시작된다. 한국인에게 주어진 시간이 많지 않다.
+  </p>
+
+  <!-- HASHTAGS -->
+  <div class="hashtags">
+    <span class="hashtag">#장마2026</span>
+    <span class="hashtag">#게릴라호우</span>
+    <span class="hashtag">#반지하침수</span>
+    <span class="hashtag">#폭염온열질환</span>
+    <span class="hashtag">#기후재난</span>
+    <span class="hashtag">#폭염중대경보</span>
+    <span class="hashtag">#기후위기한국</span>
+    <span class="hashtag">#취약계층</span>
+    <span class="hashtag">#환경이슈</span>
+  </div>
+
+  <!-- SOURCES -->
+  <div class="sources">
+    <h4>📎 주요 출처</h4>
+    <ul>
+      <li><a href="https://www.wikitree.co.kr/articles/1144064" target="_blank">위키트리 — 서울 장마 시작 (2026.7.1)</a></li>
+      <li><a href="https://aboda.kr/entry/2026-%EC%9E%A5%EB%A7%88-2" target="_blank">Aboda — 2026 장마 시작일 및 집중호우 대비 가이드</a></li>
+      <li><a href="https://govinfo.co.kr/2026-heat-illness-prevention-guide/" target="_blank">정책한입 — 2026년 온열질환 예방 총정리, 첫 사망자 발생</a></li>
+      <li><a href="https://namu.wiki/w/2026%EB%85%84%20%ED%8F%AD%EC%97%BC" target="_blank">나무위키 — 2026년 폭염 현황</a></li>
+      <li><a href="https://v.daum.net/v/20260517142108255" target="_blank">다음뉴스 — 5월 서울 온열질환 첫 사망자</a></li>
+      <li><a href="https://mcee.go.kr/2026briefing/" target="_blank">기후에너지환경부 — 2026년 업무계획</a></li>
+      <li><a href="https://theseoulist.com/heads-up/korea-monsoon-flooding-2026" target="_blank">The Seolist — Korea Monsoon 2026</a></li>
+      <li><a href="https://www.aljazeera.com/news/2025/7/31/south-korea-breaks-117-year-record-with-22-tropical-nights-in-july" target="_blank">Al Jazeera — South Korea 22 Tropical Nights Record</a></li>
+    </ul>
+  </div>
+
+  <!-- DISCLAIMER -->
+  <p class="disclaimer">
+    ※ 본 아티클은 공개된 정부 자료, 언론 보도, 기상청 자료를 바탕으로 작성된 정보성 콘텐츠입니다. 수치 및 현황은 작성 시점(2026년 7월 8일) 기준이며 이후 변동될 수 있습니다. 침수·온열 응급 상황 발생 시 즉시 119에 신고하십시오. 본 콘텐츠는 특정 정치적 입장을 대변하지 않으며, 정보 제공 목적으로만 활용하시기 바랍니다.
+  </p>
+
+</div>
+</body>
+</html>
