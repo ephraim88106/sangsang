@@ -21,7 +21,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>문의하기 — 생생 정보통</title>
-  <meta name="description" content="" />
+  <meta name="description" content="생생 정보통 운영자에게 오탈자·사실관계 오류 제보, 제휴 문의, 기타 의견을 전달할 수 있습니다." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
@@ -67,6 +67,15 @@
     .submit-btn:hover {
       background-color: #2980b9;
     }
+    .direct-email {
+      margin-top: 14px;
+      padding: 14px 16px;
+      background: rgba(46, 125, 50, 0.08);
+      border: 1px solid rgba(46, 125, 50, 0.25);
+      border-radius: 10px;
+      font-size: 14.5px;
+    }
+    .direct-email a { font-weight: 700; }
   </style>
 </head>
 <body>
@@ -87,40 +96,29 @@
       <nav class="site-nav">
         <a href="index.html" class="nav-link">홈</a>
         <a href="posts.html" class="nav-link">전체 글</a>
+        <a href="about.html" class="nav-link">소개</a>
         <a href="contact.html" class="nav-link">문의</a>
         <span class="season-badge">🌸 봄</span>
       </nav>
     </header>
+
     <main class="post-container">
-      <a href="posts.html" class="back-link">← 전체 글 목록</a>
-      <div class="post-header-inner">
-        <span class="card-tag post-tag"></span>
-        <h1 class="post-title">문의하기</h1>
-        <p class="post-meta">언제든 소중한 의견을 남겨주세요.</p>
-      </div>
-      <div class="post-body">
-
-  <div class="content-wrapper">
-
-    <!-- ── 헤더 ── -->
-
-    <!-- ── 글 본문 ── -->
-    <main class="post-container">
-
-      <!-- 뒤로가기 -->
       <a href="index.html" class="back-link">← 홈으로 돌아가기</a>
-
-      <!-- 글 헤더 -->
       <div class="post-header-inner">
         <span class="card-tag post-tag">소통</span>
         <h1 class="post-title">문의하기</h1>
-        <p class="post-meta">언제든 소중한 의견을 남겨주세요.</p>
+        <p class="post-meta">사실관계 오류 제보, 제휴 문의, 의견 모두 환영합니다.</p>
       </div>
 
       <div class="post-body">
         <p>
-          서비스 이용 중 불편한 점이나 제안하고 싶은 내용, 혹은 비즈니스 협력 문의가 있으시면 아래 양식을 통해 연락해주세요. 확인 후 빠른 시일 내에 답변드리도록 하겠습니다.
+          서비스 이용 중 불편한 점이나 제안하고 싶은 내용, 기사 내용에 대한 정정 요청, 혹은 비즈니스 협력 문의가 있으시면
+          아래 양식을 통해 연락해주세요. 확인 후 빠른 시일 내에 답변드리도록 하겠습니다.
         </p>
+
+        <div class="direct-email">
+          📧 이메일로 바로 연락하시려면 <a href="mailto:namho1123@gmail.com">namho1123@gmail.com</a> 로 보내주세요.
+        </div>
 
         <form class="contact-form" onsubmit="event.preventDefault(); alert('문의가 접수되었습니다. (데모)');">
           <div class="form-group">
@@ -138,35 +136,18 @@
           <button type="submit" class="submit-btn">문의 보내기</button>
         </form>
       </div>
-
     </main>
 
-    <!-- ── 푸터 ── -->
-
-  </div>
-
-<!-- 쿠팡 파트너스 배너 -->
-<div style="max-width:800px;margin:40px auto 0;padding:0 20px;">
-  <div style="background:linear-gradient(135deg,#514FE4,#FF6B35);border-radius:16px;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
-    <div>
-      <h4 style="color:#fff;font-size:18px;font-weight:800;margin:0 0 8px;">🛒 오늘의 쇼핑 추천!</h4>
-      <p style="color:rgba(255,255,255,0.9);font-size:14px;margin:0;">쿠팡 로켓배송으로 빠르고 편리하게 쇼핑하세요!</p>
-    </div>
-    <a href="https://link.coupang.com/a/eiMhxP" target="_blank" rel="noopener noreferrer" style="background:#ffc107;color:#000;padding:12px 24px;border-radius:8px;font-weight:700;text-decoration:none;font-size:14px;white-space:nowrap;">쿠팡에서 확인하기 →</a>
-  </div>
-  <p style="font-size:11px;color:#aaa;margin-top:12px;text-align:center;">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
-</div>
-
-      </div>
-    </main>
     <footer class="site-footer">
       <div class="footer-links">
+        <a href="about.html">소개</a>
         <a href="privacy.html">개인정보 처리방침</a>
         <a href="contact.html">문의하기</a>
       </div>
       <p>© 2026 에브라임 시드(Ephraim Seed) · 모든 권리 보유</p>
     </footer>
   </div>
+
   <script src="script.js"></script>
 
   <!-- 우측 고정 사이드바 광고 -->
@@ -176,14 +157,6 @@
       data-ad-width = "160"
       data-ad-height = "600"></ins>
     <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
-
-    <!-- 쿠팡 파트너스 배너 (사이드바용 160px) -->
-    <div style="width:160px;margin-top:20px;background:linear-gradient(135deg,#514FE4,#FF6B35);border-radius:12px;padding:15px;box-shadow: 0 4px 15px rgba(0,0,0,0.1);box-sizing:border-box;">
-      <h4 style="color:#fff;font-size:14px;font-weight:800;margin:0 0 10px;">🛒 쇼핑 추천</h4>
-      <p style="color:rgba(255,255,255,0.9);font-size:11px;margin:0 0 15px;line-height:1.4;">로켓배송 쇼핑!</p>
-      <a href="https://link.coupang.com/a/eiMhxP" target="_blank" rel="noopener noreferrer" style="display:block;text-align:center;background:#ffc107;color:#000;padding:8px;border-radius:6px;font-weight:700;text-decoration:none;font-size:11px;">확인하기 →</a>
-      <p style="font-size:9px;color:rgba(255,255,255,0.6);margin-top:10px;text-align:center;">수수료 제공됨</p>
-    </div>
   </div>
 
 </body>
