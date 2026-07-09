@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>⚡ 코스피 서킷브레이커 발동 후 7290 반등 — 이게 진짜 바닥인가? 미-이란 전쟁·반도체 쇼크 완전 해부 | 2026.07.09</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-primary: #0a0e1a;
+      --bg-card: #111827;
+      --bg-card-hover: #1a2235;
+      --border: #1e2a3a;
+      --up: #00c896;
+      --down: #ff4757;
+      --neutral: #ffd32a;
+      --blue: #3b82f6;
+      --text-primary: #f0f4ff;
+      --text-secondary: #8899b0;
+      --text-muted: #4a5568;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: 'Noto Sans KR', sans-serif;
+      line-height: 1.7;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background:
+        radial-gradient(ellipse at 10% 20%, rgba(0,200,150,0.06) 0%, transparent 50%),
+        radial-gradient(ellipse at 90% 80%, rgba(255,71,87,0.06) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 16px 60px; position: relative; z-index: 1; }
+    .header { padding: 40px 0 28px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+    .header-meta { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; flex-wrap: wrap; }
+    .date-badge { background: linear-gradient(135deg, #1e3a5f, #0f2040); border: 1px solid #2a4a7f; color: #60a0ff; font-size: 11px; font-weight: 700; letter-spacing: 1px; padding: 4px 12px; border-radius: 20px; }
+    .fear-badge { background: linear-gradient(135deg, rgba(255,71,87,0.2), rgba(255,71,87,0.1)); border: 1px solid rgba(255,71,87,0.4); color: var(--down); font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 20px; display: flex; align-items: center; gap: 6px; }
+    .fear-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--down); animation: pulse 1.5s infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+    .breaking-badge { background: rgba(255,71,87,0.3); border: 1px solid rgba(255,71,87,0.6); color: #ff6b7a; font-size: 10px; font-weight: 900; padding: 3px 10px; border-radius: 4px; letter-spacing: 2px; }
+    .header h1 { font-size: clamp(17px, 3.5vw, 24px); font-weight: 900; line-height: 1.4; }
+    .highlight-up { color: var(--up); }
+    .highlight-down { color: var(--down); }
+    .highlight-yellow { color: var(--neutral); }
+    .header-subtitle { margin-top: 10px; font-size: 13px; color: var(--text-secondary); }
+    .hashtags { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { font-size: 11px; color: #4a90d9; background: rgba(74,144,217,0.1); border: 1px solid rgba(74,144,217,0.2); padding: 3px 10px; border-radius: 20px; }
+    .section-title { font-size: 11px; font-weight: 700; letter-spacing: 2px; color: var(--text-muted); text-transform: uppercase; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+    .section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+    .index-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-bottom: 32px; }
+    .index-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 16px; position: relative; overflow: hidden; }
+    .index-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; }
+    .index-card.up::before { background: linear-gradient(90deg, var(--up), transparent); }
+    .index-card.down::before { background: linear-gradient(90deg, var(--down), transparent); }
+    .index-card.neutral::before { background: linear-gradient(90deg, var(--neutral), transparent); }
+    .index-name { font-size: 10px; font-weight: 700; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 8px; text-transform: uppercase; }
+    .index-value { font-family: 'Courier New', monospace; font-size: 20px; font-weight: 700; color: var(--text-primary); margin-bottom: 6px; }
+    .index-change { display: flex; align-items: center; gap: 6px; font-family: monospace; font-size: 12px; font-weight: 700; }
+    .change-up { color: var(--up); }
+    .change-down { color: var(--down); }
+    .change-neutral { color: var(--neutral); }
+    .commodity-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-bottom: 32px; }
+    .commodity-card { background: linear-gradient(135deg, var(--bg-card), #0d1626); border: 1px solid var(--border); border-radius: 12px; padding: 16px; text-align: center; }
+    .commodity-icon { font-size: 22px; margin-bottom: 8px; }
+    .commodity-name { font-size: 10px; font-weight: 700; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 6px; text-transform: uppercase; }
+    .commodity-value { font-family: monospace; font-size: 16px; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; }
+    .commodity-sub { font-size: 11px; font-weight: 700; }
+    .analysis-section { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 28px; margin-bottom: 32px; }
+    .analysis-section h2 { font-size: 17px; font-weight: 900; margin-bottom: 24px; }
+    .analysis-sub { font-size: 14px; font-weight: 700; color: var(--neutral); margin: 20px 0 10px; padding-left: 12px; border-left: 3px solid var(--neutral); }
+    .analysis-text { font-size: 13.5px; color: #b0bcd0; line-height: 1.85; margin-bottom: 12px; }
+    .analysis-text strong { color: var(--text-primary); font-weight: 700; }
+    .highlight-box { background: rgba(0,200,150,0.07); border: 1px solid rgba(0,200,150,0.2); border-radius: 8px; padding: 14px 18px; margin: 16px 0; }
+    .highlight-box.red { background: rgba(255,71,87,0.07); border-color: rgba(255,71,87,0.2); }
+    .highlight-box.yellow { background: rgba(255,211,42,0.07); border-color: rgba(255,211,42,0.2); }
+    .highlight-box p { font-size: 13px; color: #b0bcd0; margin: 0; }
+    .highlight-box p strong { color: var(--text-primary); }
+    .heatmap-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 32px; }
+    .heatmap-cell { border-radius: 10px; padding: 16px 12px; text-align: center; }
+    .heatmap-cell.strong-up { background: rgba(0,200,150,0.25); border: 1px solid rgba(0,200,150,0.4); }
+    .heatmap-cell.up { background: rgba(0,200,150,0.12); border: 1px solid rgba(0,200,150,0.2); }
+    .heatmap-cell.flat { background: rgba(255,211,42,0.1); border: 1px solid rgba(255,211,42,0.2); }
+    .heatmap-cell.down { background: rgba(255,71,87,0.12); border: 1px solid rgba(255,71,87,0.2); }
+    .heatmap-name { font-size: 11px; font-weight: 700; color: var(--text-secondary); margin-bottom: 6px; }
+    .heatmap-pct { font-family: monospace; font-size: 18px; font-weight: 900; }
+    .heatmap-cell.strong-up .heatmap-pct, .heatmap-cell.up .heatmap-pct { color: var(--up); }
+    .heatmap-cell.flat .heatmap-pct { color: var(--neutral); }
+    .heatmap-cell.down .heatmap-pct { color: var(--down); }
+    .heatmap-label { font-size: 10px; color: var(--text-muted); margin-top: 4px; }
+    .spotlight-grid { display: grid; gap: 12px; margin-bottom: 32px; }
+    .spotlight-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; display: flex; gap: 16px; align-items: flex-start; }
+    .spotlight-num { min-width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 900; flex-shrink: 0; }
+    .spotlight-num.red { background: rgba(255,71,87,0.2); color: var(--down); border: 1px solid rgba(255,71,87,0.3); }
+    .spotlight-num.green { background: rgba(0,200,150,0.2); color: var(--up); border: 1px solid rgba(0,200,150,0.3); }
+    .spotlight-num.yellow { background: rgba(255,211,42,0.2); color: var(--neutral); border: 1px solid rgba(255,211,42,0.3); }
+    .spotlight-content h3 { font-size: 14px; font-weight: 700; margin-bottom: 6px; }
+    .spotlight-content p { font-size: 12.5px; color: #8899b0; line-height: 1.7; }
+    .spotlight-content p strong { color: var(--text-primary); }
+    .spotlight-tag { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 4px; margin-bottom: 8px; }
+    .tag-red { background: rgba(255,71,87,0.15); color: var(--down); border: 1px solid rgba(255,71,87,0.25); }
+    .tag-green { background: rgba(0,200,150,0.15); color: var(--up); border: 1px solid rgba(0,200,150,0.25); }
+    .tag-yellow { background: rgba(255,211,42,0.15); color: var(--neutral); border: 1px solid rgba(255,211,42,0.25); }
+    .checkpoint-section { background: linear-gradient(135deg, #0d1930, #0a1520); border: 1px solid #1a3050; border-radius: 16px; padding: 24px; margin-bottom: 28px; }
+    .checkpoint-section h2 { font-size: 16px; font-weight: 900; margin-bottom: 18px; color: #60a0ff; }
+    .checkpoint-list { list-style: none; display: grid; gap: 10px; }
+    .checkpoint-item { display: flex; gap: 12px; align-items: flex-start; font-size: 13px; color: #8899b0; line-height: 1.6; }
+    .checkpoint-icon { font-size: 16px; flex-shrink: 0; }
+    .checkpoint-item strong { color: var(--text-primary); }
+    .disclaimer { background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 10px; padding: 16px 20px; font-size: 11px; color: var(--text-muted); line-height: 1.7; }
+    .emergency-banner { background: linear-gradient(135deg, rgba(255,71,87,0.15), rgba(255,100,30,0.1)); border: 1px solid rgba(255,71,87,0.4); border-radius: 10px; padding: 14px 18px; margin-bottom: 28px; display: flex; align-items: center; gap: 12px; }
+    .emergency-icon { font-size: 20px; flex-shrink: 0; }
+    .emergency-text { font-size: 13px; color: #ffb0b8; font-weight: 500; }
+    .emergency-text strong { color: var(--down); font-weight: 900; }
+    @media (max-width: 600px) {
+      .index-grid { grid-template-columns: repeat(2, 1fr); }
+      .heatmap-grid { grid-template-columns: repeat(2, 1fr); }
+      .analysis-section { padding: 20px 16px; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <header class="header">
+    <div class="header-meta">
+      <span class="date-badge">📅 2026.07.09 (목) 시장 브리핑</span>
+      <span class="fear-badge"><span class="fear-dot"></span>공포 지수 극한</span>
+      <span class="breaking-badge">BREAKING</span>
+    </div>
+    <h1>
+      ⚡ 코스피 <span class="highlight-down">서킷브레이커 발동</span> 후 <span class="highlight-up">7,290 반등</span> —<br/>
+      이게 진짜 바닥인가, 아니면 <span class="highlight-yellow">데드캣 바운스</span>인가?<br/>
+      미-이란 전쟁·삼성 쇼크·DeepSeek 역습 완전 해부
+    </h1>
+    <p class="header-subtitle">📊 월가 수준 심층 분석 | 오늘 시장을 움직인 진짜 이유 3가지 | 내일 당신이 반드시 체크해야 할 것</p>
+    <div class="hashtags">
+      <span class="hashtag">#코스피반등</span>
+      <span class="hashtag">#서킷브레이커</span>
+      <span class="hashtag">#미이란전쟁</span>
+      <span class="hashtag">#삼성쇼크</span>
+      <span class="hashtag">#SK하이닉스급등</span>
+      <span class="hashtag">#DeepSeek반도체</span>
+      <span class="hashtag">#유가급등</span>
+      <span class="hashtag">#오늘시황</span>
+      <span class="hashtag">#주식투자</span>
+      <span class="hashtag">#호르무즈</span>
+    </div>
+  </header>
+
+  <div class="emergency-banner">
+    <span class="emergency-icon">🚨</span>
+    <p class="emergency-text">
+      <strong>[긴급]</strong> 어제(7/8) 코스피 8%대 폭락 + 서킷브레이커 발동(올해 6번째!), 오늘 장중 4% 급반등했으나 상승폭 대거 반납.
+      미국은 이란에 2차 공습 단행, 호르무즈 봉쇄 리스크 현재진행형. 원달러 1,506원 돌파.
+    </p>
+  </div>
+
+  <p class="section-title">🇰🇷 한국 증시 (KST 기준 · 7월 9일)</p>
+  <div class="index-grid">
+    <div class="index-card up">
+      <p class="index-name">KOSPI</p>
+      <p class="index-value">7,290</p>
+      <div class="index-change"><span>▲</span><span class="change-up">+0.6% 반등</span></div>
+      <p style="font-size:10px;color:var(--text-muted);margin-top:6px;">장중 +4% 급등 후 반납</p>
+    </div>
+    <div class="index-card up">
+      <p class="index-name">KOSDAQ</p>
+      <p class="index-value">794.00</p>
+      <div class="index-change"><span>▲</span><span class="change-up">+1.15% (+9pt)</span></div>
+      <p style="font-size:10px;color:var(--text-muted);margin-top:6px;">바이오·반도체 강세</p>
+    </div>
+    <div class="index-card up">
+      <p class="index-name">SK하이닉스</p>
+      <p class="index-value">+5.92%</p>
+      <div class="index-change"><span>▲</span><span class="change-up">강력 반등</span></div>
+      <p style="font-size:10px;color:var(--text-muted);margin-top:6px;">HBM 수요 기대 지속</p>
+    </div>
+    <div class="index-card up">
+      <p class="index-name">삼성전자</p>
+      <p class="index-value">+1.26%</p>
+      <div class="index-change"><span>▲</span><span class="change-up">기술적 반등</span></div>
+      <p style="font-size:10px;color:var(--text-muted);margin-top:6px;">전일 쇼크 딛고 회복</p>
+    </div>
+  </div>
+
+  <p class="section-title">🇺🇸 미국 증시 (7월 8일 마감)</p>
+  <div class="index-grid">
+    <div class="index-card down">
+      <p class="index-name">DOW JONES</p>
+      <p class="index-value">52,339</p>
+      <div class="index-change"><span>▼</span><span class="change-down">-1.11% (-586pt)</span></div>
+      <p style="font-size:10px;color:var(--text-muted);margin-top:6px;">53,000선 붕괴</p>
+    </div>
+    <div class="index-card down">
+      <p class="index-name">S&amp;P 500</p>
+      <p class="index-value">하락</p>
+      <div class="index-change"><span>▼</span><span class="change-down">-0.5% 내외</span></div>
+      <p style="font-size:10px;color:var(--text-muted);margin-top:6px;">유가·반도체 이중 압박</p>
+    </div>
+    <div class="index-card down">
+      <p class="index-name">NASDAQ</p>
+      <p class="index-value">급락</p>
+      <div class="index-change"><span>▼</span><span class="change-down">-1.2% (장중 -4.8%)</span></div>
+      <p style="font-size:10px;color:var(--text-muted);margin-top:6px;">SMH 반도체ETF -3%</p>
+    </div>
+    <div class="index-card down">
+      <p class="index-name">필라델피아 반도체</p>
+      <p class="index-value">폭락</p>
+      <div class="index-change"><span>▼</span><span class="change-down">-10.3% (장중)</span></div>
+      <p style="font-size:10px;color:var(--text-muted);margin-top:6px;">Micron -4.7%, AMD 약세</p>
+    </div>
+  </div>
+
+  <p class="section-title">💱 환율 &amp; 원자재</p>
+  <div class="commodity-grid">
+    <div class="commodity-card">
+      <div class="commodity-icon">💵</div>
+      <p class="commodity-name">USD/KRW</p>
+      <p class="commodity-value">1,506.10</p>
+      <p class="commodity-sub change-down">▲ +7.60원 상승</p>
+    </div>
+    <div class="commodity-card">
+      <div class="commodity-icon">🛢️</div>
+      <p class="commodity-name">WTI 유가</p>
+      <p class="commodity-value">$72.64</p>
+      <p class="commodity-sub change-neutral">⚡ 미-이란 극변동</p>
+    </div>
+    <div class="commodity-card">
+      <div class="commodity-icon">🥇</div>
+      <p class="commodity-name">GOLD</p>
+      <p class="commodity-value">$4,087</p>
+      <p class="commodity-sub change-down">▼ 소폭 하락 (안전자산 차익)</p>
+    </div>
+    <div class="commodity-card">
+      <div class="commodity-icon">₿</div>
+      <p class="commodity-name">비트코인</p>
+      <p class="commodity-value">$62,000</p>
+      <p class="commodity-sub change-up">▲ 6.2만달러 사수</p>
+    </div>
+  </div>
+
+  <div class="analysis-section">
+    <h2>🔬 오늘 시장을 움직인 진짜 이유 — 표면 너머를 본다</h2>
+
+    <div class="analysis-sub">① 삼성 쇼크 + DeepSeek 역습: 반도체 생태계 패닉</div>
+    <p class="analysis-text">
+      어제(7/8) 전 세계 투자자들이 패닉에 빠진 결정적 방아쇠는 <strong>삼성전자의 분기 실적 실망</strong>과 <strong>중국 AI 스타트업 DeepSeek의 자체 AI 반도체 개발 보도</strong>가 동시에 터진 것이다.
+      삼성의 영업이익이 시장 기대치를 크게 밑돌자, 투자자들은 "HBM 공급 과잉 신호인가?"라는 공포에 휩싸였다.
+      더 나아가 DeepSeek이 엔비디아 GPU 없이도 독자 AI 칩으로 LLM을 구동할 수 있다는 가능성을 시사하자,
+      <strong>필라델피아 반도체 지수가 장중 무려 -10.3% 폭락</strong>하는 초유의 사태가 발생했다.
+      한국도 이 충격파를 그대로 흡수해 코스피가 8%대 급락, 올해 6번째 서킷브레이커가 발동됐다.
+    </p>
+    <div class="highlight-box red">
+      <p>⚠️ <strong>핵심:</strong> Micron -4.7%, KLA·Marvell·Broadcom·AMD 일제히 급락. VanEck 반도체 ETF(SMH) -3% 마감. 한국 코스피는 이를 그대로 이어받아 <strong>8%대 폭락 + 서킷브레이커(올해 6번째)</strong> 발동.</p>
+    </div>
+
+    <div class="analysis-sub">② 미-이란 2차 공습: 호르무즈 봉쇄가 현실화되면?</div>
+    <p class="analysis-text">
+      트럼프 대통령이 "미-이란 MOU는 끝났다"고 선언한 직후 미군이 이란에 2차 공습을 단행했다.
+      이란은 미사일로 반격, 최소 14명의 사망자가 발생했다.
+      이 지정학적 충격파가 <strong>WTI 유가를 하루 $3 이상 급등</strong>시켰고, 다우존스는 586포인트 급락했다.
+      문제는 <strong>호르무즈 해협</strong>이다 — 전 세계 LNG의 20%, 원유의 17%가 이 해협을 통과한다.
+      만약 이란이 호르무즈를 실제로 봉쇄한다면, WTI는 단숨에 $100을 돌파할 수 있다.
+    </p>
+    <div class="highlight-box yellow">
+      <p>⚡ <strong>시나리오 분기점:</strong> 오늘(7/9) 유가는 오히려 $1 하락($72.64)했다 — 시장은 "전면전으로 비화하지 않을 것"에 베팅 중이다. 그러나 이란의 다음 반응 한 번으로 이 베팅은 순식간에 뒤집힌다.</p>
+    </div>
+
+    <div class="analysis-sub">③ 반등인가 데드캣 바운스인가? — 수급이 답을 알고 있다</div>
+    <p class="analysis-text">
+      오늘 코스피는 장중 4% 넘게 급등했으나 <strong>상승폭을 대부분 반납하며 0.6% 마감</strong>에 그쳤다.
+      SK하이닉스 +5.92%는 기관·외국인의 저가 매수가 집중됐기 때문이지만, 에코프로비엠(-1.95%) 등 2차전지는 여전히 약세였다.
+      코스닥도 794로 소폭에 그쳤다. <strong>이는 전형적인 낙폭 과대 기술적 반등 패턴</strong>이다.
+      역사적으로 서킷브레이커 발동 후 1주일 내 추가 하락이 발생한 사례가 더 많다는 점을 반드시 기억하라.
+    </p>
+    <div class="highlight-box">
+      <p>✅ <strong>결론:</strong> 반도체(SK하이닉스 HBM 밸류체인) 중심으로 기술적 반등 가능하나, 미-이란 긴장이 해소되지 않는 한 <strong>공격적 매수는 고위험.</strong> 관망 또는 분할 매수 전략 유효.</p>
+    </div>
+  </div>
+
+  <p class="section-title">🗺️ 섹터 히트맵 (코스피200 기준)</p>
+  <div class="heatmap-grid">
+    <div class="heatmap-cell strong-up">
+      <p class="heatmap-name">반도체</p>
+      <p class="heatmap-pct">+4~6%</p>
+      <p class="heatmap-label">SK하이닉스 선도</p>
+    </div>
+    <div class="heatmap-cell up">
+      <p class="heatmap-name">바이오</p>
+      <p class="heatmap-pct">+1~2%</p>
+      <p class="heatmap-label">HLB·삼천당 강세</p>
+    </div>
+    <div class="heatmap-cell up">
+      <p class="heatmap-name">에너지</p>
+      <p class="heatmap-pct">+1~3%</p>
+      <p class="heatmap-label">유가 급등 수혜</p>
+    </div>
+    <div class="heatmap-cell flat">
+      <p class="heatmap-name">금융</p>
+      <p class="heatmap-pct">±0.5%</p>
+      <p class="heatmap-label">환율 상승 관망</p>
+    </div>
+    <div class="heatmap-cell down">
+      <p class="heatmap-name">2차전지</p>
+      <p class="heatmap-pct">-1~2%</p>
+      <p class="heatmap-label">에코프로비엠 약세</p>
+    </div>
+    <div class="heatmap-cell up">
+      <p class="heatmap-name">반도체 소부장</p>
+      <p class="heatmap-pct">+1~2%</p>
+      <p class="heatmap-label">심텍·파두 급등</p>
+    </div>
+  </div>
+
+  <p class="section-title">🎯 오늘의 주목 이슈 TOP 3</p>
+  <div class="spotlight-grid">
+    <div class="spotlight-card">
+      <div class="spotlight-num red">1</div>
+      <div class="spotlight-content">
+        <span class="spotlight-tag tag-red">🚨 지정학 리스크</span>
+        <h3>미-이란 2차 공습 — 호르무즈 봉쇄 시나리오를 지금 가격에 담아라</h3>
+        <p>
+          미군이 이란 군사 거점에 2차 공습을 감행, 이란은 동맹국에 미사일 반격을 시작했다.
+          <strong>핵심 위험 시나리오: 호르무즈 해협 봉쇄.</strong> 봉쇄 현실화 시 WTI +30% 이상 급등 가능.
+          한국은 원유의 60% 이상을 중동에서 수입하므로 정유주 수혜·항공주 급락의 이분법적 포지션이 유효하다.
+          향후 포인트: 이란-미국 협상 재개 여부, 트럼프의 추가 성명.
+        </p>
+      </div>
+    </div>
+    <div class="spotlight-card">
+      <div class="spotlight-num green">2</div>
+      <div class="spotlight-content">
+        <span class="spotlight-tag tag-green">⚡ 반도체 반등</span>
+        <h3>SK하이닉스 +5.92% — 반도체 셀오프는 과매도였나?</h3>
+        <p>
+          전일 폭락을 딛고 SK하이닉스가 강하게 반등. <strong>HBM 수요는 엔비디아·마이크로소프트 AI 투자 계획 상 유지</strong>되고 있으며,
+          DeepSeek의 자체 칩 개발은 단기 위협이지, 이미 체결된 2026~2027년 HBM3E 공급 계약을 즉시 변경하지는 않는다.
+          향후 포인트: 엔비디아의 SK하이닉스 HBM3E 추가 발주 공시, 삼성전자 다음 실적 가이던스.
+        </p>
+      </div>
+    </div>
+    <div class="spotlight-card">
+      <div class="spotlight-num yellow">3</div>
+      <div class="spotlight-content">
+        <span class="spotlight-tag tag-yellow">📊 매크로 경고</span>
+        <h3>원달러 1,506원 돌파 — 외국인 이탈과 물가 역풍의 이중 충격</h3>
+        <p>
+          원달러 환율이 1,506원을 넘어섰다. <strong>환율 상승 = 외국인 주식 매도 압력</strong>이 작동 중.
+          동시에 유가 급등까지 겹치면 한국 내 물가가 재상승, 한은의 금리 인하 기대가 후퇴할 수 있다.
+          수출 기업(삼성·SK하이닉스)은 환차익 긍정적이나, 내수 기업과 수입 의존 업종에는 복합 악재.
+          향후 포인트: 한국은행 긴급 성명 여부, 외국인 순매수/매도 동향.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="checkpoint-section">
+    <h2>📌 내일·이번 주 반드시 체크해야 할 것</h2>
+    <ul class="checkpoint-list">
+      <li class="checkpoint-item">
+        <span class="checkpoint-icon">🔥</span>
+        <span><strong>미-이란 휴전 협상 재개 여부</strong> — 협상 재개 시 유가 급락 + 증시 급반등. 결렬 시 추가 공습으로 WTI $80 돌파 가능.</span>
+      </li>
+      <li class="checkpoint-item">
+        <span class="checkpoint-icon">📉</span>
+        <span><strong>미국 CPI 발표 (7월 중)</strong> — 유가 급등에 따른 물가 재상승 신호 시 연준 금리 인하 기대 소멸, 증시에 2차 충격 경고.</span>
+      </li>
+      <li class="checkpoint-item">
+        <span class="checkpoint-icon">🤖</span>
+        <span><strong>DeepSeek AI 칩 스펙 공개 여부</strong> — 실제 칩 성능이 엔비디아 H100을 위협할 수준임이 검증되면 반도체 섹터 재폭락 가능.</span>
+      </li>
+      <li class="checkpoint-item">
+        <span class="checkpoint-icon">💰</span>
+        <span><strong>외국인 순매수/매도 동향</strong> — 오늘 반등이 기관 주도인지 외국인 귀환인지 확인 필수. 외국인 계속 매도 시 반등 지속 불가.</span>
+      </li>
+      <li class="checkpoint-item">
+        <span class="checkpoint-icon">🏦</span>
+        <span><strong>삼성전자 실적 컨퍼런스콜</strong> — CEO의 HBM 로드맵 발언 한마디가 반도체 섹터 전체 방향 결정.</span>
+      </li>
+      <li class="checkpoint-item">
+        <span class="checkpoint-icon">📌</span>
+        <span><strong>코스피 7,200 지지선</strong> — 이 레벨 붕괴 시 다음 지지선 7,000. 서킷브레이커 재발동 가능성 상시 체크.</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="disclaimer">
+    ⚠️ <strong>면책조항:</strong> 본 보고서는 공개된 시장 데이터와 뉴스를 바탕으로 작성된 정보 제공 목적의 분석 자료입니다.
+    특정 종목의 매수·매도를 권유하지 않으며, 투자 결과에 대한 책임은 전적으로 투자자 본인에게 있습니다.
+    금융 투자에는 원금 손실의 위험이 있습니다. 본 내용은 금융투자업법상 투자 자문·일임이 아닙니다.
+    데이터 기준: 2026년 7월 9일 장 마감 전후 수집 기준이며, 일부 수치는 장중 추정치를 포함합니다.
+  </div>
+
+</div>
+</body>
+</html>
