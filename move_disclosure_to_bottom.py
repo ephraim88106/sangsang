@@ -1,5 +1,4 @@
 import glob
-import re
 
 MARKER = "사이트 신뢰도 안내 (자동 삽입)"
 
@@ -20,7 +19,17 @@ ISSUE_NOTICE = """<div style="background:#eef6ff;border:1px solid #90caf9;border
   </div>"""
 
 
-def top_block():
+def old_block(is_stock):
+    notice = STOCK_NOTICE if is_stock else ISSUE_NOTICE
+    return f"""<!-- ⓘ {MARKER} -->
+<div style="max-width:800px;margin:0 auto;padding:10px 16px 0;box-sizing:border-box;">
+  {TOPBAR}
+  {notice}
+</div>
+"""
+
+
+def new_top_block():
     return f"""<!-- ⓘ {MARKER} - 상단 네비 -->
 <div style="max-width:800px;margin:0 auto;padding:10px 16px 0;box-sizing:border-box;">
   {TOPBAR}
@@ -28,7 +37,7 @@ def top_block():
 """
 
 
-def bottom_block(is_stock):
+def new_bottom_block(is_stock):
     notice = STOCK_NOTICE if is_stock else ISSUE_NOTICE
     return f"""<!-- ⓘ {MARKER} - 하단 배너 -->
 <div style="max-width:800px;margin:24px auto 0;padding:0 16px;box-sizing:border-box;">
@@ -41,21 +50,21 @@ def update_file(path):
     with open(path, "r", encoding="utf-8") as f:
         content = f.read()
 
-    if MARKER in content:
-        return "skip"
+    if "상단 네비" in content or "하단 배너" in content:
+        return "already-migrated"
 
     is_stock = "주식보고서" in path
+    old = old_block(is_stock)
 
-    match = re.search(r"(<body[^>]*>)", content, re.IGNORECASE)
-    if not match:
-        return "no-body"
+    if old not in content:
+        return "old-block-not-found"
 
-    idx = match.end()
-    content = content[:idx] + "\n" + top_block() + content[idx:]
+    content = content.replace(old, new_top_block(), 1)
 
     if "</body>" not in content:
         return "no-body-close"
-    content = content.replace("</body>", bottom_block(is_stock) + "</body>", 1)
+
+    content = content.replace("</body>", new_bottom_block(is_stock) + "</body>", 1)
 
     with open(path, "w", encoding="utf-8") as f:
         f.write(content)
@@ -64,17 +73,17 @@ def update_file(path):
 
 def main():
     files = sorted(glob.glob("2026-*.html") + glob.glob("post-*.html"))
-    results = {"ok": 0, "skip": 0, "no-body": 0}
-    failures = []
+    results = {}
+    problems = []
     for f in files:
         r = update_file(f)
-        results[r] += 1
-        if r == "no-body":
-            failures.append(f)
+        results[r] = results.get(r, 0) + 1
+        if r not in ("ok", "already-migrated"):
+            problems.append((f, r))
     print(f"Total files: {len(files)}")
     print(results)
-    if failures:
-        print("Files with no <body> tag:", failures)
+    if problems:
+        print("Problems:", problems)
 
 
 if __name__ == "__main__":
