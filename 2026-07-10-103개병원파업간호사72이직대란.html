@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="D-13. 7월 23일, 전국 103개 병원이 동시에 멈춘다. 간호사 10명 중 7명이 이직을 고려하는 대한민국 의료 붕괴의 민낯.">
+  <meta name="keywords" content="보건의료노조 파업, 간호사 이직, 103개 병원 파업, 의료대란, 7월 23일 파업, 간호사 부족, 의료 위기">
+  <meta property="og:title" content="D-13, 전국 103개 병원이 멈춘다 — 간호사 72%가 짐을 싸는 의료 붕괴의 현장">
+  <meta property="og:description" content="7월 23일 총파업 카운트다운. 당신이 입원한 그 병원도 문 닫을 수 있다.">
+  <title>D-13, 전국 103개 병원이 멈춘다 — 간호사 72%가 짐을 싸는 의료 붕괴의 현장</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 17px;
+      line-height: 1.8;
+      background: #ffffff;
+      color: #1a1a1a;
+    }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 20px 60px; }
+
+    /* 상단 카테고리 배너 */
+    .category-banner {
+      background: linear-gradient(135deg, #1a7a4a 0%, #0f5c34 100%);
+      color: white;
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* 헤더 */
+    .article-header {
+      padding: 40px 0 30px;
+      border-bottom: 3px solid #1a7a4a;
+    }
+    .label-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .label-tag {
+      background: #1a7a4a;
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 3px;
+      letter-spacing: 1px;
+    }
+    .label-alert {
+      background: #c0392b;
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 3px;
+      letter-spacing: 1px;
+      animation: blink 1.5s ease-in-out infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    .pub-date {
+      font-size: 13px;
+      color: #888;
+    }
+    h1 {
+      font-size: 32px;
+      font-weight: 900;
+      line-height: 1.35;
+      color: #0f1a10;
+      margin-bottom: 16px;
+    }
+    .subtitle {
+      font-size: 18px;
+      color: #444;
+      font-weight: 400;
+      line-height: 1.6;
+      border-left: 4px solid #1a7a4a;
+      padding-left: 16px;
+      margin-bottom: 20px;
+    }
+
+    /* 긴급 카운트다운 박스 */
+    .countdown-box {
+      background: linear-gradient(135deg, #c0392b, #96281b);
+      color: white;
+      border-radius: 10px;
+      padding: 24px 28px;
+      margin: 28px 0;
+      text-align: center;
+    }
+    .countdown-box .cd-label {
+      font-size: 14px;
+      font-weight: 500;
+      opacity: 0.85;
+      margin-bottom: 6px;
+    }
+    .countdown-box .cd-number {
+      font-size: 72px;
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .countdown-box .cd-unit {
+      font-size: 20px;
+      font-weight: 700;
+      opacity: 0.9;
+    }
+    .countdown-box .cd-date {
+      font-size: 14px;
+      opacity: 0.75;
+      margin-top: 8px;
+    }
+
+    /* 요약 박스 */
+    .summary-box {
+      background: #f0f9f4;
+      border: 1.5px solid #1a7a4a;
+      border-radius: 8px;
+      padding: 22px 26px;
+      margin: 24px 0;
+    }
+    .summary-box h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #1a7a4a;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+    .summary-box ul { list-style: none; padding: 0; }
+    .summary-box ul li {
+      padding: 5px 0;
+      font-size: 15px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .summary-box ul li::before {
+      content: "▶";
+      color: #1a7a4a;
+      font-size: 11px;
+      margin-top: 4px;
+      flex-shrink: 0;
+    }
+
+    /* 본문 */
+    .article-body { margin-top: 36px; }
+    .article-body p {
+      margin-bottom: 20px;
+      color: #1a1a1a;
+    }
+    h2 {
+      font-size: 22px;
+      font-weight: 800;
+      color: #0f5c34;
+      margin: 40px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #e8f5ee;
+    }
+    h2::before {
+      content: "◆ ";
+      color: #1a7a4a;
+    }
+
+    /* 강조 인용 */
+    .pull-quote {
+      background: #fff9e6;
+      border-left: 5px solid #f39c12;
+      padding: 18px 22px;
+      margin: 28px 0;
+      font-size: 17px;
+      font-style: italic;
+      color: #333;
+      border-radius: 0 6px 6px 0;
+    }
+    .pull-quote strong { color: #c0392b; font-style: normal; }
+
+    /* 통계 카드 */
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin: 28px 0;
+    }
+    .stat-card {
+      background: #f8f9fa;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      border: 1.5px solid #dee2e6;
+    }
+    .stat-card.red { border-color: #e74c3c; background: #fff5f5; }
+    .stat-card.green { border-color: #1a7a4a; background: #f0f9f4; }
+    .stat-card.orange { border-color: #f39c12; background: #fffbf0; }
+    .stat-card .stat-number {
+      font-size: 42px;
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-card.red .stat-number { color: #c0392b; }
+    .stat-card.green .stat-number { color: #1a7a4a; }
+    .stat-card.orange .stat-number { color: #d68910; }
+    .stat-card .stat-label {
+      font-size: 13px;
+      color: #555;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    /* 인포그래픽: 요구사항 리스트 */
+    .demand-list {
+      margin: 24px 0;
+    }
+    .demand-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 18px;
+      margin-bottom: 8px;
+      background: #f8f9fa;
+      border-radius: 8px;
+      border-left: 4px solid #1a7a4a;
+    }
+    .demand-num {
+      background: #1a7a4a;
+      color: white;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .demand-text { font-size: 15px; font-weight: 500; }
+    .demand-text span { color: #c0392b; font-weight: 700; }
+
+    /* SVG 인포그래픽: 이직 고려율 비교 */
+    .infographic-section {
+      background: #f8f9fa;
+      border-radius: 12px;
+      padding: 28px;
+      margin: 36px 0;
+    }
+    .infographic-section h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .bar-chart-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .bar-label {
+      font-size: 13px;
+      color: #444;
+      width: 100px;
+      flex-shrink: 0;
+      text-align: right;
+    }
+    .bar-container {
+      flex: 1;
+      background: #e9ecef;
+      border-radius: 4px;
+      height: 32px;
+      position: relative;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      padding-left: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      color: white;
+      transition: width 0.8s ease;
+    }
+    .bar-fill.red { background: linear-gradient(90deg, #c0392b, #e74c3c); }
+    .bar-fill.orange { background: linear-gradient(90deg, #d68910, #f39c12); }
+    .bar-fill.green-dark { background: linear-gradient(90deg, #1a7a4a, #27ae60); }
+
+    /* 지역 불균형 인포그래픽 */
+    .region-compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin: 24px 0;
+    }
+    .region-card {
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+    }
+    .region-card.seoul {
+      background: linear-gradient(135deg, #1a7a4a, #0f5c34);
+      color: white;
+    }
+    .region-card.jeonnam {
+      background: linear-gradient(135deg, #c0392b, #96281b);
+      color: white;
+    }
+    .region-card .region-name { font-size: 14px; font-weight: 700; opacity: 0.85; margin-bottom: 8px; }
+    .region-card .region-number { font-size: 52px; font-weight: 900; line-height: 1; margin-bottom: 4px; }
+    .region-card .region-unit { font-size: 13px; opacity: 0.8; }
+
+    /* 경고 박스 */
+    .warning-box {
+      background: #fff5f5;
+      border: 2px solid #c0392b;
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin: 28px 0;
+    }
+    .warning-box .warning-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: #c0392b;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .warning-box ul { list-style: none; padding: 0; }
+    .warning-box ul li {
+      padding: 5px 0;
+      font-size: 15px;
+      padding-left: 18px;
+      position: relative;
+    }
+    .warning-box ul li::before {
+      content: "!";
+      color: #c0392b;
+      font-weight: 700;
+      position: absolute;
+      left: 0;
+    }
+
+    /* 타임라인 */
+    .timeline {
+      margin: 24px 0;
+      position: relative;
+      padding-left: 30px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #1a7a4a;
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 20px;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -24px;
+      top: 6px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #1a7a4a;
+      border: 2px solid white;
+      box-shadow: 0 0 0 2px #1a7a4a;
+    }
+    .timeline-date {
+      font-size: 12px;
+      font-weight: 700;
+      color: #1a7a4a;
+      margin-bottom: 3px;
+    }
+    .timeline-content {
+      font-size: 15px;
+      color: #333;
+    }
+
+    /* 해시태그 */
+    .hashtag-section {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid #e0e0e0;
+    }
+    .hashtag-section p {
+      font-size: 14px;
+      color: #2980b9;
+      word-break: break-word;
+      line-height: 2;
+      margin-bottom: 0;
+    }
+
+    /* 면책조항 */
+    .disclaimer {
+      margin-top: 36px;
+      padding: 16px 20px;
+      background: #f5f5f5;
+      border-radius: 6px;
+      font-size: 12px;
+      color: #888;
+      line-height: 1.7;
+      border-left: 3px solid #ccc;
+    }
+
+    /* 출처 */
+    .sources-section {
+      margin-top: 28px;
+      padding: 18px 22px;
+      background: #f8f9fa;
+      border-radius: 8px;
+      border: 1px solid #dee2e6;
+    }
+    .sources-section h4 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #666;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+    .sources-section a {
+      display: block;
+      font-size: 12px;
+      color: #2980b9;
+      text-decoration: none;
+      margin-bottom: 5px;
+    }
+    .sources-section a:hover { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 24px; }
+      .stat-grid { grid-template-columns: 1fr; }
+      .region-compare { grid-template-columns: 1fr; }
+      .countdown-box .cd-number { font-size: 54px; }
+      .bar-label { width: 70px; font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="category-banner">🏥 의료·복지 긴급 리포트</div>
+
+<div class="container">
+  <div class="article-header">
+    <div class="label-row">
+      <span class="label-alert">🚨 D-13 카운트다운</span>
+      <span class="label-tag">의료 대란</span>
+      <span class="pub-date">2026년 7월 10일</span>
+    </div>
+    <h1>전국 103개 병원이 멈추는 날이 온다 — 간호사 10명 중 7명이 짐을 싸고 있다</h1>
+    <p class="subtitle">7월 23일, 보건의료노조 총파업 예고. 고대의료원·이화의료원·부산대병원… 당신이 아는 그 병원도 포함된다.</p>
+  </div>
+
+  <!-- 카운트다운 -->
+  <div class="countdown-box">
+    <p class="cd-label">🚨 파업까지 남은 시간</p>
+    <p class="cd-number">D-13</p>
+    <p class="cd-unit">전국 103개 병원 동시 파업</p>
+    <p class="cd-date">2026년 7월 23일 (목) — 보건의료노조 산별 총파업 예정일</p>
+  </div>
+
+  <!-- 핵심 요약 -->
+  <div class="summary-box">
+    <h3>📌 이 기사의 핵심 3줄</h3>
+    <ul>
+      <li>보건의료노조가 103개 의료기관 쟁의조정 신청 → 합의 불발 시 7월 23일 총파업 돌입</li>
+      <li>2026년 실태조사: 간호사 72.1%가 3개월 내 이직 고려, 3교대는 75.2%</li>
+      <li>2030년 의사 7,600명·간호사 15만 8,000명 부족 전망 — 지금 막지 않으면 구조적 붕괴</li>
+    </ul>
+  </div>
+
+  <div class="article-body">
+
+    <!-- 훅 문단 -->
+    <p>
+      당신이 수술 예약을 잡아둔 그 병원이 7월 23일 문을 닫을 수도 있다. 응급차를 불렀는데 응급실이 "포화 상태"라는 안내를 받을 수도 있다. 이건 먼 미래의 가정이 아니다. 13일 후면 현실이 될 수 있는 이야기다.
+    </p>
+    <p>
+      2026년 7월 8일, 보건의료노동조합은 전국 103개 의료기관과 업체를 대상으로 노동쟁의조정 신청을 접수했다. 조정이 불발되면 7월 23일 산별 동시 총파업. 고대의료원, 이화의료원, 부산대병원, 전남대병원…이름만 들어도 아는 대형 병원들이 파업 대상 목록에 줄줄이 올라 있다.
+    </p>
+    <p>
+      그런데 파업보다 더 무서운 건 따로 있다. 파업을 하지 않아도 이미 병원 안에서 인력이 무너지고 있다는 사실이다. 대한민국 간호사 10명 중 7명 이상이 지금 이 순간 "그냥 그만두고 싶다"고 생각한다.
+    </p>
+
+    <h2>파업 예고 — 무엇을 요구하는가</h2>
+    <p>
+      보건의료노조의 이번 쟁의조정 신청은 단순한 임금 인상 요구가 아니다. 오히려 임금은 요구 목록의 맨 앞이 아니다. 노동자들이 정말 원하는 건 "우리가 혼자 3명 몫을 하지 않아도 되는 시스템"이다.
+    </p>
+
+    <div class="demand-list">
+      <div class="demand-item">
+        <div class="demand-num">1</div>
+        <div class="demand-text">임금 총액 대비 <span>6.36% 인상</span></div>
+      </div>
+      <div class="demand-item">
+        <div class="demand-num">2</div>
+        <div class="demand-text">보건의료 <span>인력 기준 법제화</span> 및 즉각적 인력 충원</div>
+      </div>
+      <div class="demand-item">
+        <div class="demand-num">3</div>
+        <div class="demand-text">간호사 1인당 <span>담당 환자 수 상한선</span> 마련</div>
+      </div>
+      <div class="demand-item">
+        <div class="demand-num">4</div>
+        <div class="demand-text">PA 간호사(진료지원 간호사) <span>제도화·합법화</span></div>
+      </div>
+      <div class="demand-item">
+        <div class="demand-num">5</div>
+        <div class="demand-text"><span>주5일제 전면 시행</span> 및 주4일제 시범사업 도입</div>
+      </div>
+    </div>
+
+    <p>
+      특히 "1인당 환자 수 기준" 요구는 가장 본질적인 문제를 건드린다. 현재 한국에는 간호사가 동시에 몇 명의 환자를 담당해야 하는지에 대한 법적 기준이 없다. 사실상 병원이 마음대로 정할 수 있다는 뜻이다.
+    </p>
+
+    <div class="pull-quote">
+      "밥도 못 먹고, 화장실도 못 가고, 그래도 환자가 죽으면 내 책임이에요. 그러면서 언제까지 버텨야 하나요?"<br>
+      <strong>— 2026 보건의료노조 실태조사 인터뷰, 서울 대형병원 간호사 (3교대 7년차)</strong>
+    </div>
+
+    <h2>간호사 72%가 이직을 생각하는 이유</h2>
+    <p>
+      보건의료노조가 2026년에 실시한 정기 실태조사 결과는 충격적이다. 간호사 10명 중 7명 이상(72.1%)이 최근 3개월 내 이직을 진지하게 고려했다. 이는 전체 보건의료 노동자 이직 고려율(64.6%)보다 무려 7.5%포인트 높은 수치다.
+    </p>
+
+    <!-- 통계 카드 -->
+    <div class="stat-grid">
+      <div class="stat-card red">
+        <div class="stat-number">72.1%</div>
+        <div class="stat-label">간호사 3개월 내<br>이직 고려율</div>
+      </div>
+      <div class="stat-card red">
+        <div class="stat-number">75.2%</div>
+        <div class="stat-label">3교대 근무 간호사<br>이직 고려율</div>
+      </div>
+      <div class="stat-card orange">
+        <div class="stat-number">72.2%</div>
+        <div class="stat-label">인력수준 불만족률<br>(임금 불만보다 13.8%p↑)</div>
+      </div>
+      <div class="stat-card red">
+        <div class="stat-number">65.5%</div>
+        <div class="stat-label">주 1회 이상<br>식사 거르는 간호사</div>
+      </div>
+    </div>
+
+    <p>
+      이직을 고려하는 이유 1위는 '임금'이 아니었다. 근무조건(48.9%)이 압도적 1위, 그 다음이 임금(25.2%)이었다. 즉 돈을 더 준다고 해결될 문제가 아니라는 것이다. 사람이 부족해서, 너무 많은 환자를 혼자 감당해야 해서 떠나는 것이다.
+    </p>
+
+    <!-- 이직 원인 바 차트 -->
+    <div class="infographic-section">
+      <h3>📊 간호사 이직 고려 주요 원인 (2026 실태조사)</h3>
+
+      <div class="bar-chart-item">
+        <div class="bar-label">근무조건</div>
+        <div class="bar-container">
+          <div class="bar-fill red" style="width: 82%">48.9%</div>
+        </div>
+      </div>
+      <div class="bar-chart-item">
+        <div class="bar-label">임금</div>
+        <div class="bar-container">
+          <div class="bar-fill orange" style="width: 42%">25.2%</div>
+        </div>
+      </div>
+      <div class="bar-chart-item">
+        <div class="bar-label">직장 문화</div>
+        <div class="bar-container">
+          <div class="bar-fill green-dark" style="width: 11%">6.5%</div>
+        </div>
+      </div>
+
+      <p style="font-size: 12px; color: #888; margin-top: 14px; text-align: right;">출처: 2026 보건의료노조 정기 실태조사</p>
+    </div>
+
+    <h2>숨겨진 이면 — 지역이 다르면 의료도 다르다</h2>
+    <p>
+      문제는 단지 '간호사가 힘들다'는 데 그치지 않는다. 지역별로 의료 자원이 극단적으로 쏠려 있어, 지방에 사는 사람은 아예 다른 차원의 의료 공백을 경험하고 있다.
+    </p>
+
+    <div class="region-compare">
+      <div class="region-card seoul">
+        <div class="region-name">🏙️ 서울 병원 기관당 평균</div>
+        <div class="region-number">191.7명</div>
+        <div class="region-unit">간호사 수</div>
+      </div>
+      <div class="region-card jeonnam">
+        <div class="region-name">🌾 전남 병원 기관당 평균</div>
+        <div class="region-number">73.4명</div>
+        <div class="region-unit">간호사 수</div>
+      </div>
+    </div>
+
+    <p>
+      서울 소재 500병상 이상 대형병원에는 기관당 평균 1,651.5명의 간호사가 있다. 반면 전국 100병상 미만 중소병원은 평균 20명 안팎이다. 같은 대한민국인데, 어디 사느냐에 따라 받을 수 있는 의료 서비스의 질이 하늘과 땅 차이다.
+    </p>
+    <p>
+      아이러니한 건, 간호사 절대 수는 계속 늘어왔다는 것이다. 간호사 면허 취득자는 해마다 증가했지만, 정작 현장에는 턱없이 부족하다. 이유는 하나다. 면허는 있어도 병원에 남지 않기 때문이다. 이직하고, 떠나고, 다른 길을 찾는 간호사들이 그만큼 많다.
+    </p>
+
+    <h2>나에게 미치는 영향 — 파업이 현실이 되면</h2>
+    <p>
+      7월 23일 파업이 실제로 이뤄진다면 어떤 일이 생길까? 과거 의료계 파업 사례와 연구 데이터가 하나의 냉혹한 답을 내놓는다.
+    </p>
+
+    <div class="warning-box">
+      <div class="warning-title">⚠️ 파업 현실화 시 예상 영향</div>
+      <ul>
+        <li>예정된 수술·검사 취소 또는 무기한 연기</li>
+        <li>응급실 포화로 이송 지연, '응급실 뺑뺑이' 가능성 급증</li>
+        <li>중증 환자 집중 과부하 → 일반 환자 진료 공백</li>
+        <li>지방 중소병원의 경우 파업 비조합원만으로 정상 운영 불가</li>
+        <li>의약품·치료재료 공급망 연동 차질 가능성</li>
+      </ul>
+    </div>
+
+    <p>
+      2026년 7월 한국일보 보도에 따르면, 전공의 파업 당시 연구 분석 결과 중증 환자 사망은 막았지만 '덜 아프다고 여겨진' 일반 환자들의 사망률이 오히려 높아졌다. 의료 공백이 가장 먼저, 가장 크게 덮치는 건 정작 '조금 아픈' 사람들이라는 의미다.
+    </p>
+
+    <h2>지금 어디까지 왔나 — 타임라인</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">2026년 7월 8일</div>
+        <div class="timeline-content">보건의료노조, 103개 의료기관 대상 노동쟁의조정 신청 공식 접수</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2026년 7월 8~16일</div>
+        <div class="timeline-content">조합원 쟁의행위 찬반투표 진행 예정</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2026년 7월 8~23일 (15일간)</div>
+        <div class="timeline-content">조정 절차 진행 — 중앙노동위원회 조정 기간</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2026년 7월 23일</div>
+        <div class="timeline-content"><strong style="color: #c0392b;">조정 불발 시 산별 총파업 돌입 예정</strong> — 전국 103개 병원 동시 파업</div>
+      </div>
+    </div>
+
+    <h2>2030년까지 의사 7,600명·간호사 15만 8,000명 부족</h2>
+    <p>
+      이번 파업이 해결된다고 해도 구조적 문제는 사라지지 않는다. KDI(한국개발연구원) 분석에 따르면, 2030년에는 의사 7,600명, 간호사 15만 8,000명, 약사 1만 명이 부족할 것으로 전망된다.
+    </p>
+    <p>
+      2026년도 간호대학 입학정원은 전년과 동일한 24,883명으로 동결됐다. 단기적으로 채용 여건이 악화된 점을 감안한 조치라고 하지만, 중장기 인력난 전망과는 역행한다는 비판도 있다. 절대 수를 늘려도 현장을 떠나는 속도를 못 따라간다는 지적도 여전히 유효하다.
+    </p>
+
+    <div class="pull-quote">
+      "간호사 수를 늘리는 게 능사가 아니에요. 버틸 수 있는 환경을 만들어야 남아요. 지금은 아무리 뽑아도 뒷문으로 나가고 있는 거예요."<br>
+      <strong>— 현직 간호사 익명 인터뷰, 2026</strong>
+    </div>
+
+    <h2>전망과 행동 제안 — 우리가 할 수 있는 것</h2>
+    <p>
+      정부와 병원 측이 7월 23일 전까지 노조의 핵심 요구를 수용할 가능성은 아직 열려 있다. 과거 보건의료노조 파업 사례에서도 막판 타결이 이뤄진 적이 있다. 하지만 이번에는 요구 사항의 핵심이 '인력 법제화'라는 제도적 변화를 담고 있어, 단기간 타결이 쉽지 않을 수 있다.
+    </p>
+    <p>
+      개인이 지금 당장 할 수 있는 현실적 행동은 다음과 같다. 7월 23일 이전으로 예정된 수술이나 중요한 외래 진료가 있다면 해당 병원의 파업 참여 여부를 미리 확인하는 것이 좋다. 파업 참여 여부는 병원 공식 홈페이지나 고객센터를 통해 확인할 수 있다. 만성 질환 약이 있다면 7월 셋째 주 이전에 처방을 받아두는 것도 방법이다.
+    </p>
+    <p>
+      더 근본적으로는, 이번 사태가 단순한 노사 갈등이 아니라 대한민국 의료 시스템 전체의 구조적 위기를 드러내고 있음을 인식해야 한다. 간호사가 사람답게 일할 수 없는 병원에서, 환자도 사람답게 치료받을 수 없다.
+    </p>
+
+  </div><!-- /article-body -->
+
+  <!-- 해시태그 -->
+  <div class="hashtag-section">
+    <p>
+      #보건의료노조파업 #7월23일파업 #103개병원파업 #간호사이직 #의료대란 #의료인력부족 #간호사처우개선 #대한민국의료위기 #병원파업 #의료붕괴 #PA간호사 #인력법제화 #공공의료 #한국의료
+    </p>
+  </div>
+
+  <!-- 출처 -->
+  <div class="sources-section">
+    <h4>📎 주요 출처</h4>
+    <a href="https://www.medicaldaily.co.kr/post/20910" target="_blank">• 의약일보 — 7월 23일 의료대란 오나…보건의료노조 103곳 파업 임박</a>
+    <a href="https://www.rapportian.com/news/articleView.html?idxno=237995" target="_blank">• 라포르시안 — 보건의료노조, 103개 의료기관 노동쟁의조정 신청</a>
+    <a href="https://bogun.nodong.org/xe/khmwu_5_4/832601" target="_blank">• 보건의료노조 — 2026 정기 실태조사: 위기의 간호인력</a>
+    <a href="https://www.newsis.com/view/NISX20260512_0003625865" target="_blank">• 뉴시스 — 서울 191명 vs 전남 73명, 대형병원 간호사 쏠림</a>
+    <a href="https://www.hankookilbo.com/news/article/A2026070611250003409" target="_blank">• 한국일보 — 전공의 파업 때 중증 사망 막았지만 일반 환자 죽음 늘었다</a>
+    <a href="https://eiec.kdi.re.kr/policy/materialView.do?num=165117" target="_blank">• KDI — 2030년 간호사 15만 8천명, 의사 7천 600명 부족 전망</a>
+    <a href="http://www.docdocdoc.co.kr/news/articleView.html?idxno=3039109" target="_blank">• 청년의사 — 3교대 간호사 75% 이직 고려</a>
+  </div>
+
+  <!-- 면책조항 -->
+  <div class="disclaimer">
+    ※ 본 아티클은 공개된 보도자료 및 언론 보도를 바탕으로 작성된 저널리즘 콘텐츠입니다. 특정 의료기관이나 단체의 입장을 대변하지 않으며, 파업 일정·결과는 협상 진행 상황에 따라 변경될 수 있습니다. 의료 관련 개인 결정은 반드시 담당 의료진과 상의하시기 바랍니다.
+  </div>
+
+</div><!-- /container -->
+</body>
+</html>
