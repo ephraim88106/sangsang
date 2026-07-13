@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="반도체 초호황에도 대졸 백수 50만명 돌파. AI가 고학력·고스펙 청년의 일자리부터 집어삼키고 있다. 4년간 67만7000개가 사라진 청년 일자리의 충격 진실.">
+  <meta name="keywords" content="청년실업, 대졸백수, AI일자리, 반도체호황, 취업난, 청년고용, 구직촉진수당, 쉬는청년">
+  <meta property="og:title" content="반도체는 날아오르는데 청년은 추락한다 — 대졸 백수 50만, AI가 꿀꺽한 4년의 충격">
+  <meta property="og:description" content="반도체 초호황 속 청년 취업자 67만7000명이 증발했다. AI가 고스펙 청년의 일자리부터 삼키고 있는 섬뜩한 현실.">
+  <title>반도체는 날아오르는데 청년은 추락한다 — 대졸 백수 50만, AI가 꿀꺽한 4년의 충격</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1a1a2e;
+      --accent: #e94560;
+      --accent2: #f5a623;
+      --bg: #ffffff;
+      --text: #1c1c1c;
+      --subtext: #555;
+      --card: #f8f8f8;
+      --border: #e0e0e0;
+      --danger: #d32f2f;
+      --success: #388e3c;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 17px;
+      line-height: 1.8;
+    }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 20px 60px; }
+
+    /* 헤더 배너 */
+    .top-banner {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      color: white;
+      padding: 16px 0;
+      text-align: center;
+      font-size: 13px;
+      letter-spacing: 2px;
+      font-weight: 600;
+    }
+    .category-badge {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 20px;
+      letter-spacing: 1px;
+      margin-bottom: 18px;
+    }
+    .article-header {
+      padding: 40px 0 30px;
+      border-bottom: 3px solid var(--accent);
+      margin-bottom: 36px;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 900;
+      line-height: 1.35;
+      color: var(--primary);
+      margin-bottom: 18px;
+      word-break: keep-all;
+    }
+    h1 .highlight { color: var(--accent); }
+    .subtitle {
+      font-size: 1.08rem;
+      color: var(--subtext);
+      margin-bottom: 20px;
+      line-height: 1.7;
+      font-weight: 400;
+    }
+    .meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 13px;
+      color: #888;
+      flex-wrap: wrap;
+    }
+    .meta .date { font-weight: 600; color: var(--accent); }
+
+    /* 훅 박스 */
+    .hook-box {
+      background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+      color: white;
+      border-radius: 12px;
+      padding: 28px 30px;
+      margin-bottom: 36px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hook-box::before {
+      content: '"';
+      position: absolute;
+      top: -10px;
+      left: 20px;
+      font-size: 120px;
+      color: rgba(255,255,255,0.07);
+      font-family: Georgia, serif;
+      line-height: 1;
+    }
+    .hook-box p {
+      font-size: 1.12rem;
+      line-height: 1.85;
+      position: relative;
+      z-index: 1;
+    }
+    .hook-box .hook-stat {
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--accent2);
+      display: block;
+      margin-top: 12px;
+    }
+
+    /* 핵심 요약 */
+    .summary-box {
+      background: #fff5f5;
+      border-left: 5px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      padding: 22px 26px;
+      margin-bottom: 36px;
+    }
+    .summary-box h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+    }
+    .summary-box ul { list-style: none; }
+    .summary-box ul li {
+      padding: 6px 0;
+      padding-left: 22px;
+      position: relative;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+    .summary-box ul li::before {
+      content: '▶';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 10px;
+      top: 9px;
+    }
+
+    /* 본문 */
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin: 40px 0 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      word-break: keep-all;
+    }
+    h2 .emoji { margin-right: 8px; }
+    p { margin-bottom: 18px; word-break: keep-all; }
+    strong { color: var(--primary); font-weight: 700; }
+    .emphasis { color: var(--accent); font-weight: 700; }
+    .number { font-weight: 900; font-size: 1.05em; }
+
+    /* 통계 카드 */
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+      margin: 28px 0;
+    }
+    .stat-card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 20px 16px;
+      text-align: center;
+      border: 1px solid var(--border);
+      transition: transform 0.2s;
+    }
+    .stat-card:hover { transform: translateY(-3px); }
+    .stat-card .stat-num {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 6px;
+    }
+    .stat-card .stat-label {
+      font-size: 0.8rem;
+      color: var(--subtext);
+      line-height: 1.4;
+    }
+    .stat-card.danger .stat-num { color: var(--danger); }
+    .stat-card.warning .stat-num { color: var(--accent2); }
+
+    /* 인포그래픽 — 직종별 감소율 */
+    .infographic {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 30px 28px;
+      margin: 32px 0;
+      border: 1px solid var(--border);
+    }
+    .infographic h3 {
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 22px;
+      text-align: center;
+    }
+    .bar-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 14px;
+      gap: 12px;
+    }
+    .bar-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text);
+      min-width: 120px;
+      text-align: right;
+    }
+    .bar-wrap {
+      flex: 1;
+      background: #e8e8e8;
+      border-radius: 6px;
+      height: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 8px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: white;
+      transition: width 1s ease;
+    }
+    .bar-fill.red { background: linear-gradient(90deg, #e94560, #c0392b); }
+    .bar-fill.orange { background: linear-gradient(90deg, #f5a623, #e67e22); }
+    .bar-fill.blue { background: linear-gradient(90deg, #3498db, #2980b9); }
+
+    /* 비교 박스 */
+    .compare-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 28px 0;
+    }
+    .compare-item {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 20px;
+      border: 1px solid var(--border);
+    }
+    .compare-item.up { border-top: 4px solid var(--success); }
+    .compare-item.down { border-top: 4px solid var(--danger); }
+    .compare-item .ci-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+    .compare-item.up .ci-label { color: var(--success); }
+    .compare-item.down .ci-label { color: var(--danger); }
+    .compare-item .ci-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+    .compare-item .ci-num {
+      font-size: 1.6rem;
+      font-weight: 900;
+    }
+    .compare-item.up .ci-num { color: var(--success); }
+    .compare-item.down .ci-num { color: var(--danger); }
+
+    /* 인용 박스 */
+    .quote-box {
+      background: #f0f4ff;
+      border-left: 5px solid #3b82f6;
+      border-radius: 0 10px 10px 0;
+      padding: 20px 24px;
+      margin: 24px 0;
+      font-style: italic;
+      color: #1e3a5f;
+      font-size: 0.98rem;
+      line-height: 1.8;
+    }
+
+    /* 타임라인 SVG */
+    .timeline-box {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 28px;
+      margin: 32px 0;
+      border: 1px solid var(--border);
+    }
+    .timeline-box h3 {
+      font-size: 1rem;
+      font-weight: 800;
+      margin-bottom: 24px;
+      text-align: center;
+      color: var(--primary);
+    }
+
+    /* 영향 섹션 */
+    .impact-box {
+      background: #fff8e1;
+      border: 1px solid #f5a623;
+      border-radius: 12px;
+      padding: 24px 26px;
+      margin: 24px 0;
+    }
+    .impact-box h3 {
+      font-size: 1rem;
+      font-weight: 800;
+      color: #b45309;
+      margin-bottom: 14px;
+    }
+    .impact-item {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 12px;
+      align-items: flex-start;
+    }
+    .impact-icon {
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .impact-text { font-size: 0.95rem; }
+
+    /* 해시태그 */
+    .hashtags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 36px 0 20px;
+    }
+    .hashtag {
+      background: #f0f0f0;
+      color: #3b82f6;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    /* 면책조항 */
+    .disclaimer {
+      background: #f9f9f9;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 20px;
+      font-size: 0.78rem;
+      color: #888;
+      margin-top: 32px;
+      line-height: 1.7;
+    }
+    .disclaimer strong { color: #666; }
+
+    /* 출처 */
+    .sources {
+      margin-top: 28px;
+      font-size: 0.8rem;
+      color: #aaa;
+    }
+    .sources a { color: #aaa; text-decoration: none; }
+    .sources a:hover { color: var(--accent); }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 1.5rem; }
+      .compare-box { grid-template-columns: 1fr; }
+      .bar-label { min-width: 90px; font-size: 0.78rem; }
+      .stat-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<div class="top-banner">🔴 탐사 저널 · 2026.07.13 · 청년 고용 위기 특보</div>
+
+<div class="container">
+  <div class="article-header">
+    <span class="category-badge">💼 취업·노동</span>
+    <h1>반도체는 날아오르는데 청년은 추락한다<br><span class="highlight">— 대졸 백수 50만, AI가 꿀꺽한 4년의 충격</span></h1>
+    <p class="subtitle">반도체 수출 사상 최대를 찍은 나라에서, 대학을 갓 졸업한 청년 50만명이 일자리를 찾지 못하고 있다. 이상한 건 범인이 불황이 아니라는 점이다. AI가 고스펙 청년의 밥그릇부터 빼앗고 있다.</p>
+    <div class="meta">
+      <span class="date">2026년 7월 13일</span>
+      <span>탐사팀 기획 · 데이터 저널</span>
+      <span>예상 독서시간 8분</span>
+    </div>
+  </div>
+
+  <!-- 훅 -->
+  <div class="hook-box">
+    <p>2022년 봄, 그 취업 시장을 기억하는가. 기업들이 "사람이 없다"고 아우성치던 시절. 청년 취업자 수는 410만명을 웃돌았다. 그로부터 불과 4년 뒤인 2026년 5월, 그 숫자는 342만 7천명으로 줄어들었다. 반도체 호황이 절정이었음에도 불구하고.</p>
+    <span class="hook-stat">📉 4년간 청년 일자리 67만 7,000개 증발</span>
+  </div>
+
+  <!-- 핵심 요약 -->
+  <div class="summary-box">
+    <h3>⚡ 핵심 3줄 요약</h3>
+    <ul>
+      <li>2022년 대비 15~29세 청년 취업자 <strong>67만7천명 급감</strong>, 고용률 47.8% → 43.8% (4%p 추락)</li>
+      <li>대졸 이상 실업자 <strong>50만3천명 돌파</strong> — 고스펙일수록 AI에 더 빨리 대체된다</li>
+      <li>반도체 기업·AI 기업은 이익 최대 경신 중이지만 신규 채용은 오히려 <strong>동결·축소</strong></li>
+    </ul>
+  </div>
+
+  <!-- 1. 배경 -->
+  <h2><span class="emoji">📌</span>배경: "호황인데 왜 일자리가 없죠?"</h2>
+
+  <p>올해 한국 반도체 수출은 사상 최대 기록을 연이어 갈아치우고 있다. SK하이닉스는 분기 영업이익 10조원을 돌파했고, 삼성전자 반도체 부문도 흑자 전환에 성공했다. 코스피는 3,500선을 넘나들었다. 경제 성장률 수치만 보면 분명 '호황'이다.</p>
+
+  <p>그런데 왜 청년들은 일자리를 못 찾고 있을까? 경제학 교과서가 설명하지 못하는 이 기묘한 역설을 두고 FT(파이낸셜타임스)는 지난달 이렇게 보도했다. <strong>"한국은 AI 경쟁에서 이긴 것처럼 보여도, 청년층 일자리 감소가 세계에서 가장 뚜렷한 나라 중 하나"</strong>라고.</p>
+
+  <div class="compare-box">
+    <div class="compare-item up">
+      <div class="ci-label">📈 상승 중</div>
+      <div class="ci-title">반도체 수출</div>
+      <div class="ci-num">+32%↑</div>
+    </div>
+    <div class="compare-item down">
+      <div class="ci-label">📉 추락 중</div>
+      <div class="ci-title">청년 고용률</div>
+      <div class="ci-num">-4%p↓</div>
+    </div>
+    <div class="compare-item up">
+      <div class="ci-label">📈 증가 중</div>
+      <div class="ci-title">60대 이상 취업자</div>
+      <div class="ci-num">+7.5%↑</div>
+    </div>
+    <div class="compare-item down">
+      <div class="ci-label">📉 감소 중</div>
+      <div class="ci-title">30세 미만 취업자</div>
+      <div class="ci-num">-2.8%↓</div>
+    </div>
+  </div>
+
+  <!-- 2. 핵심 팩트 -->
+  <h2><span class="emoji">💥</span>팩트 충격: 숫자로 보는 청년 고용 붕괴</h2>
+
+  <p>고용노동부와 통계청 데이터를 종합하면 충격적인 그림이 나온다. <span class="emphasis">15~29세 청년 취업자</span>는 2022년 약 410만명에서 2026년 5월 342만7천명으로 <strong class="number">4년 만에 67만7천명이 사라졌다</strong>. 같은 기간 청년 고용률은 47.8%에서 43.8%로 곤두박질쳤다.</p>
+
+  <div class="stat-grid">
+    <div class="stat-card danger">
+      <span class="stat-num">67.7만</span>
+      <span class="stat-label">4년간 사라진<br>청년 일자리 수</span>
+    </div>
+    <div class="stat-card danger">
+      <span class="stat-num">50.3만</span>
+      <span class="stat-label">대졸 이상<br>실업자 수</span>
+    </div>
+    <div class="stat-card danger">
+      <span class="stat-num">70만+</span>
+      <span class="stat-label">그냥 '쉬는'<br>청년 인구</span>
+    </div>
+    <div class="stat-card warning">
+      <span class="stat-num">43.8%</span>
+      <span class="stat-label">청년 고용률<br>(5년내 최저)</span>
+    </div>
+  </div>
+
+  <p>특히 눈길을 끄는 건 <strong>'대졸 백수' 50만 시대</strong>의 도래다. 지난달 기준 대졸 이상 실업자가 50만3천명을 기록했다. 2021년 이후 처음으로 50만명 선을 돌파한 것으로, 전년 동월 대비 무려 <span class="emphasis">13.6% 증가</span>했다. 심지어 <strong>30세 미만 박사 인력의 절반이 무직</strong>이다. 역대 최초의 통계다.</p>
+
+  <!-- 3. AI와 직종별 감소 인포그래픽 -->
+  <h2><span class="emoji">🤖</span>AI가 먹은 직업들: 고스펙일수록 더 위험하다</h2>
+
+  <p>통상 자동화·AI로 인한 일자리 위협은 단순 반복 노동이 먼저라고 알려져 있었다. 그런데 현실은 정반대였다. <span class="emphasis">고학력·고기술직이 먼저 AI로 대체되고 있다</span>. 한국고용정보원 통계를 분석하면 섬뜩한 결과가 나온다.</p>
+
+  <div class="infographic">
+    <h3>📊 2025 → 2026 직종별 청년 고용보험 가입자 감소율 (30세 미만 기준)</h3>
+    <div class="bar-item">
+      <div class="bar-label">작가·통번역가</div>
+      <div class="bar-wrap">
+        <div class="bar-fill red" style="width:82%">-20.6%</div>
+      </div>
+    </div>
+    <div class="bar-item">
+      <div class="bar-label">회계·경리 사무원</div>
+      <div class="bar-wrap">
+        <div class="bar-fill red" style="width:46%">-11.5%</div>
+      </div>
+    </div>
+    <div class="bar-item">
+      <div class="bar-label">소프트웨어 개발자</div>
+      <div class="bar-wrap">
+        <div class="bar-fill orange" style="width:40%">-10.1%</div>
+      </div>
+    </div>
+    <div class="bar-item">
+      <div class="bar-label">디자이너</div>
+      <div class="bar-wrap">
+        <div class="bar-fill orange" style="width:30%">-7.6%</div>
+      </div>
+    </div>
+    <div class="bar-item">
+      <div class="bar-label">IT 정보통신업 전반</div>
+      <div class="bar-wrap">
+        <div class="bar-fill red" style="width:37%">-9.3%</div>
+      </div>
+    </div>
+    <div class="bar-item">
+      <div class="bar-label">전문·과학·기술서비스</div>
+      <div class="bar-wrap">
+        <div class="bar-fill blue" style="width:16%">-4.1%</div>
+      </div>
+    </div>
+    <p style="font-size:0.78rem;color:#888;text-align:center;margin-top:16px;margin-bottom:0">※ 고용보험 가입자 기준 / 출처: 한국고용정보원, 파이낸셜뉴스, 서울경제</p>
+  </div>
+
+  <p>생성형 AI는 <strong>문서 작성, 번역, 법률 검토, 코드 생성, 회계 처리, 디자인 초안 제작</strong>까지 불과 2~3년 만에 상용화됐다. 기업 입장에선 연봉 3,500만원짜리 신입을 뽑는 것보다 월 수십만원짜리 AI 구독료를 내는 게 훨씬 이득이다. 이 계산이 채용 시장을 바꿨다.</p>
+
+  <div class="quote-box">
+    "대형 회계법인들이 AI 도입과 함께 신입 채용을 줄이면서, 자격증을 취득하고도 일자리를 찾지 못하는 '미지정 회계사'가 급증하고 있습니다. 이제 스펙이 취업을 보장하지 않아요." — 대한경제 보도 中
+  </div>
+
+  <!-- 4. 숨겨진 이면 -->
+  <h2><span class="emoji">🔍</span>숨겨진 이면: "고용 없는 성장"의 구조적 비밀</h2>
+
+  <p>반도체 산업의 고용 효과가 왜 청년들에게 안 닿는지, 구조를 뜯어보면 이유가 있다.</p>
+
+  <p><strong>첫째, 반도체는 자본 집약적 산업이다.</strong> 삼성·SK하이닉스의 클린룸 공장에서 일하는 인원은 생각보다 적다. 수십조원을 투자해도 직접 고용은 수천~수만명 수준이다. 즉, 돈은 많이 벌어도 일자리는 별로 안 만든다.</p>
+
+  <p><strong>둘째, AI 기업이 'AI로 AI를 만든다'.</strong> 네이버, 카카오, 라인 등 국내 빅테크들이 AI를 개발하면서 역설적으로 신입 SW 개발자 채용을 줄이고 있다. AI 코딩 도구 하나가 신입 개발자 3~5명 분량의 초급 코드를 생성한다.</p>
+
+  <p><strong>셋째, 60대 이상만 느는 기형적 구조.</strong> 2026년 5월 기준 60대 이상 고용보험 가입자는 1년 새 <span class="emphasis">7.5%(20만7천명) 급증</span>했다. 반면 30세 미만은 6만5천명(2.8%) 줄었다. 노인 일자리 사업 예산이 늘고, 청년 일자리는 AI에 증발하는 구조다.</p>
+
+  <!-- 비교 타임라인 SVG -->
+  <div class="timeline-box">
+    <h3>📈 청년 고용률 vs 60대 이상 고용률 추이 (2022~2026)</h3>
+    <svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block">
+      <!-- 배경 그리드 -->
+      <defs>
+        <pattern id="grid" width="140" height="52" patternUnits="userSpaceOnUse">
+          <path d="M 140 0 L 0 0 0 52" fill="none" stroke="#e0e0e0" stroke-width="0.5"/>
+        </pattern>
+      </defs>
+      <rect width="700" height="260" fill="#fafafa" rx="8"/>
+      <rect x="60" y="20" width="580" height="200" fill="url(#grid)"/>
+
+      <!-- Y축 레이블 -->
+      <text x="50" y="24" text-anchor="end" font-size="11" fill="#888">60%</text>
+      <text x="50" y="76" text-anchor="end" font-size="11" fill="#888">55%</text>
+      <text x="50" y="128" text-anchor="end" font-size="11" fill="#888">50%</text>
+      <text x="50" y="180" text-anchor="end" font-size="11" fill="#888">45%</text>
+      <text x="50" y="220" text-anchor="end" font-size="11" fill="#888">40%</text>
+
+      <!-- X축 연도 -->
+      <text x="60"  y="240" text-anchor="middle" font-size="11" fill="#888">2022</text>
+      <text x="205" y="240" text-anchor="middle" font-size="11" fill="#888">2023</text>
+      <text x="350" y="240" text-anchor="middle" font-size="11" fill="#888">2024</text>
+      <text x="495" y="240" text-anchor="middle" font-size="11" fill="#888">2025</text>
+      <text x="640" y="240" text-anchor="middle" font-size="11" fill="#888">2026.5</text>
+
+      <!-- 청년 고용률 선 (47.8 → 46.5 → 45.8 → 44.6 → 43.8) — Y: 60%=20, 40%=220 → 1%=10px -->
+      <!-- 47.8% = 220-(47.8-40)*10 = 220-78 = 142 -->
+      <!-- 46.5 = 220-65=155 -->
+      <!-- 45.8 = 220-58=162 -->
+      <!-- 44.6 = 220-46=174 -->
+      <!-- 43.8 = 220-38=182 -->
+      <polyline
+        points="60,142 205,155 350,162 495,174 640,182"
+        fill="none" stroke="#e94560" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="60"  cy="142" r="5" fill="#e94560"/>
+      <circle cx="205" cy="155" r="5" fill="#e94560"/>
+      <circle cx="350" cy="162" r="5" fill="#e94560"/>
+      <circle cx="495" cy="174" r="5" fill="#e94560"/>
+      <circle cx="640" cy="182" r="5" fill="#e94560"/>
+      <text x="648" y="177" font-size="11" fill="#e94560" font-weight="bold">43.8%</text>
+
+      <!-- 60대 고용률 (51.5 → 52.2 → 53.1 → 54.0 → 54.8) -->
+      <!-- 51.5 = 220-115=105 -->
+      <!-- 52.2 = 220-122=98 -->
+      <!-- 53.1 = 220-131=89 -->
+      <!-- 54.0 = 220-140=80 -->
+      <!-- 54.8 = 220-148=72 -->
+      <polyline
+        points="60,105 205,98 350,89 495,80 640,72"
+        fill="none" stroke="#388e3c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6,3"/>
+      <circle cx="60"  cy="105" r="5" fill="#388e3c"/>
+      <circle cx="205" cy="98"  r="5" fill="#388e3c"/>
+      <circle cx="350" cy="89"  r="5" fill="#388e3c"/>
+      <circle cx="495" cy="80"  r="5" fill="#388e3c"/>
+      <circle cx="640" cy="72"  r="5" fill="#388e3c"/>
+      <text x="648" y="68" font-size="11" fill="#388e3c" font-weight="bold">54.8%</text>
+
+      <!-- 범례 -->
+      <line x1="80" y1="255" x2="110" y2="255" stroke="#e94560" stroke-width="3"/>
+      <text x="115" y="258" font-size="11" fill="#e94560">청년(15~29세) 고용률</text>
+      <line x1="280" y1="255" x2="310" y2="255" stroke="#388e3c" stroke-width="3" stroke-dasharray="5,2"/>
+      <text x="315" y="258" font-size="11" fill="#388e3c">60대 이상 고용률</text>
+    </svg>
+    <p style="font-size:0.75rem;color:#aaa;text-align:center;margin-top:10px;margin-bottom:0">※ 추정치 포함 / 출처: 통계청, 한국고용정보원</p>
+  </div>
+
+  <!-- 5. 나에게 미치는 영향 -->
+  <h2><span class="emoji">🎯</span>나에게 미치는 영향: 지금 20~30대라면 반드시 읽어라</h2>
+
+  <div class="impact-box">
+    <h3>⚠️ 직접 영향 5가지</h3>
+    <div class="impact-item">
+      <span class="impact-icon">📝</span>
+      <div class="impact-text"><strong>글 쓰는 직업 전멸 위기:</strong> 카피라이터, 블로그 작가, 번역가, 콘텐츠 에디터 등 '글로 먹고 사는' 직업군의 청년 채용이 20% 이상 급감. 이미 기업 10곳 중 7곳이 AI로 초안 생성 후 최소 인원으로 검수하는 방식으로 전환 중.</div>
+    </div>
+    <div class="impact-item">
+      <span class="impact-icon">💻</span>
+      <div class="impact-text"><strong>SW 개발자도 신입이 제일 위험:</strong> '코파일럿' 류의 AI 코딩 도구가 초급 개발 업무의 60~70%를 처리. 경험 없는 신입보다 AI가 빠르고 오류도 적다는 인식이 확산되면서 신규 채용 대신 AI 구독으로 대체하는 스타트업 급증.</div>
+    </div>
+    <div class="impact-item">
+      <span class="impact-icon">📊</span>
+      <div class="impact-text"><strong>회계·재무 자격증의 배신:</strong> CPA(공인회계사) 취득자 중 채용되지 못한 '미지정 회계사' 급증. AI가 분개, 결산, 세무 신고 초안을 자동 생성하면서 회계법인들이 신입 채용을 50% 이상 줄인 곳도 나오는 것으로 알려짐.</div>
+    </div>
+    <div class="impact-item">
+      <span class="impact-icon">🎨</span>
+      <div class="impact-text"><strong>디자인 포트폴리오, 이제 충분하지 않다:</strong> Midjourney·Adobe Firefly 등 AI 이미지 생성 도구로 디자인 초안이 자동화되면서 디자이너 청년 취업자 7.6% 감소. '결과물만 만드는' 디자이너는 살아남기 어렵고, AI와 협업하는 '디렉터형' 능력이 요구됨.</div>
+    </div>
+    <div class="impact-item">
+      <span class="impact-icon">🏢</span>
+      <div class="impact-text"><strong>MS·글로벌 빅테크 감원, 20대가 먼저:</strong> MS가 5,000명 이상 해고를 발표했을 때 대상의 중심이 50대가 아닌 20~30대였다는 CBS 보도가 충격을 줬다. '경험도 없고 AI로 대체 가능하다'는 논리가 국내 기업에도 확산 중.</div>
+    </div>
+  </div>
+
+  <!-- 6. 정부 대응 -->
+  <h2><span class="emoji">🏛️</span>정부 대응: 구직촉진수당 영구화, 해법인가 미봉책인가</h2>
+
+  <p>정부는 지난달 '쉬는 청년' 70만명 돌파에 대응해 <strong>구직촉진수당 영구화</strong>를 발표했다. 기존엔 취업 이력 요건이 있어야 받을 수 있었지만, 이를 삭제하고 지원 대상을 대폭 확대한다는 방침이다. 월 60만원, 6개월 지급이다.</p>
+
+  <p>하지만 업계 반응은 냉소적이다. <strong>"월 60만원으로 서울에서 어떻게 구직활동을 하느냐"</strong>는 비판이 나오고, 이 돈을 받는 동안 실질적인 직무 훈련이 이뤄지지 않으면 결국 취업 회피를 부추기는 '생계 보조금'으로 전락할 수 있다는 우려도 제기된다.</p>
+
+  <div class="quote-box">
+    "AI가 빼앗은 일자리를 정부가 수당으로 땜질하는 건 근본 해결책이 아닙니다. 필요한 건 청년들이 AI와 함께 일할 수 있도록 하는 재교육 생태계입니다. 지금 당장." — IT 업계 전문가 인터뷰 中
+  </div>
+
+  <p>전문가들은 더 근본적인 해법으로 <strong>① AI 활용 직무 재교육 대규모 투자 ② 신산업 창출을 통한 신규 직종 발굴 ③ 플랫폼 노동·긱 이코노미 법적 보호 강화</strong>를 제시하고 있다.</p>
+
+  <!-- 7. 전망 -->
+  <h2><span class="emoji">🔮</span>전망: 2027년, 더 나빠진다</h2>
+
+  <p>한국노동연구원(KLI) 예측에 따르면 2026년 청년 고용 회복의 가시적 신호는 보이지 않는다. AI 도입 속도가 빨라질수록 기업의 신규 채용은 줄고, 기존 직원 재배치가 늘어나는 구조다. 신입에게 돌아올 자리가 구조적으로 감소하는 것이다.</p>
+
+  <p>더 심각한 시나리오도 있다. 현재 AI에 취약한 직종들이 2027~2028년에 <span class="emphasis">2차 구조조정</span>을 겪을 경우, 청년 고용률이 40% 아래로 떨어질 수 있다는 전문가 경고도 나온다. 그야말로 '선진국 함정' 없이 '청년 고용 빙하기'를 맞이하는 상황이다.</p>
+
+  <p>지금 당신이 20대 초중반이라면, 현재의 직무가 AI로 대체 가능한지 냉정하게 점검해야 할 시점이다. "내 직업은 괜찮겠지"라는 안일함이 가장 위험하다.</p>
+
+  <!-- 해시태그 -->
+  <div class="hashtags">
+    <span class="hashtag">#청년실업</span>
+    <span class="hashtag">#대졸백수50만</span>
+    <span class="hashtag">#AI일자리위기</span>
+    <span class="hashtag">#반도체호황의역설</span>
+    <span class="hashtag">#쉬는청년70만</span>
+    <span class="hashtag">#고용없는성장</span>
+    <span class="hashtag">#취업난2026</span>
+    <span class="hashtag">#AI자동화</span>
+    <span class="hashtag">#구직촉진수당</span>
+    <span class="hashtag">#청년고용위기</span>
+  </div>
+
+  <!-- 출처 -->
+  <div class="sources">
+    <p><strong>출처 및 참고:</strong> 통계청 고용동향 (2026.05), 한국고용정보원, 파이낸셜뉴스, 서울경제, 한국일보, 헤럴드경제, 한국노동연구원(KLI), 고용노동부, FT(파이낸셜타임스), CBS News, 대한경제</p>
+  </div>
+
+  <!-- 면책조항 -->
+  <div class="disclaimer">
+    <strong>⚠️ 면책조항:</strong> 본 아티클은 공개된 통계 자료 및 언론 보도를 바탕으로 작성된 정보성 콘텐츠입니다. 일부 수치는 잠정치이거나 추정치를 포함할 수 있으며, 직업 전망 및 경제 분석은 집필 시점 기준으로 향후 변동될 수 있습니다. 투자·진로·취업 결정 시 반드시 전문가 상담을 병행하시기 바랍니다.
+  </div>
+</div>
+
+</body>
+</html>
