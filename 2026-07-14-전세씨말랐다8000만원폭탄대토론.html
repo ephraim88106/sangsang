@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>전세 씨가 말랐다 — 8000만원 폭탄·월급 30% 날아가는 청년들, 정부 오늘 결단 나선다</title>
+  <meta name="description" content="서울 아파트 전세 매물 30% 급감, 신규·갱신 보증금 격차 8000만원 폭탄. 청년 월소득의 30%가 주거비로 사라지는 지금, 정부가 오늘 첫 공개토론회를 연다.">
+  <meta name="keywords" content="전세, 부동산, 서울 아파트, 전세 매물 부족, 이재명 부동산 대토론, 탈서울, 청년 주거 위기, 부동산 정책 토론회, 전세 가뭄">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #1a56c4;
+      --accent-light: #e8f0fe;
+      --danger: #c0392b;
+      --warning: #e67e22;
+      --ok: #27ae60;
+      --gray-dark: #1c1c1e;
+      --gray-mid: #444;
+      --gray-soft: #6b7280;
+      --gray-bg: #f4f6fb;
+      --border: #dde3ef;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background: #f0f4fa;
+      color: var(--gray-dark);
+      line-height: 1.8;
+      font-size: 17px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      min-height: 100vh;
+    }
+    /* HEADER BANNER */
+    .header-banner {
+      background: linear-gradient(135deg, #0f2c6f 0%, #1a56c4 60%, #2d6fd4 100%);
+      padding: 48px 36px 40px;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    .header-banner::before {
+      content: '🏠';
+      position: absolute;
+      right: -10px;
+      top: 10px;
+      font-size: 140px;
+      opacity: 0.07;
+    }
+    .category-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.35);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }
+    .main-title {
+      font-size: 30px;
+      font-weight: 900;
+      line-height: 1.4;
+      letter-spacing: -0.5px;
+      margin-bottom: 18px;
+      word-break: keep-all;
+    }
+    .sub-title {
+      font-size: 16px;
+      font-weight: 400;
+      opacity: 0.85;
+      line-height: 1.7;
+      word-break: keep-all;
+    }
+    .meta-bar {
+      background: var(--accent-light);
+      border-bottom: 2px solid var(--accent);
+      padding: 12px 36px;
+      display: flex;
+      gap: 20px;
+      font-size: 13px;
+      color: var(--accent);
+      font-weight: 600;
+      flex-wrap: wrap;
+    }
+    /* BREAKING BOX */
+    .breaking-box {
+      margin: 32px 36px 0;
+      background: #fff3cd;
+      border-left: 5px solid #f59e0b;
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+    }
+    .breaking-box .breaking-label {
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      color: #b45309;
+      margin-bottom: 6px;
+    }
+    .breaking-box p {
+      font-size: 15px;
+      color: #92400e;
+      font-weight: 600;
+      line-height: 1.6;
+    }
+    /* CONTENT */
+    .content { padding: 32px 36px 48px; }
+    /* HOOK */
+    .hook-para {
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--gray-dark);
+      line-height: 1.75;
+      border-left: 4px solid var(--accent);
+      padding-left: 18px;
+      margin-bottom: 28px;
+      word-break: keep-all;
+    }
+    /* SUMMARY BOX */
+    .summary-box {
+      background: #f8faff;
+      border: 1.5px solid var(--border);
+      border-radius: 12px;
+      padding: 22px 26px;
+      margin-bottom: 36px;
+    }
+    .summary-box h3 {
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      color: var(--accent);
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+    .summary-box ul { list-style: none; }
+    .summary-box ul li {
+      padding: 7px 0 7px 24px;
+      position: relative;
+      font-size: 15.5px;
+      border-bottom: 1px dashed #dde3ef;
+      word-break: keep-all;
+    }
+    .summary-box ul li:last-child { border-bottom: none; }
+    .summary-box ul li::before {
+      content: '▶';
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-size: 10px;
+      top: 11px;
+    }
+    /* SECTION */
+    h2.section-title {
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--gray-dark);
+      margin: 40px 0 16px;
+      padding-bottom: 10px;
+      border-bottom: 2.5px solid var(--accent);
+      word-break: keep-all;
+    }
+    p { margin-bottom: 18px; word-break: keep-all; color: var(--gray-mid); }
+    strong { color: var(--gray-dark); }
+    /* STAT CARDS */
+    .stat-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 24px 0 32px;
+    }
+    .stat-card {
+      background: var(--gray-bg);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      border-top: 4px solid var(--accent);
+    }
+    .stat-card.danger { border-top-color: var(--danger); }
+    .stat-card.warning { border-top-color: var(--warning); }
+    .stat-card.ok { border-top-color: var(--ok); }
+    .stat-num {
+      font-size: 32px;
+      font-weight: 900;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .stat-card.danger .stat-num { color: var(--danger); }
+    .stat-card.warning .stat-num { color: var(--warning); }
+    .stat-label {
+      font-size: 13px;
+      color: var(--gray-soft);
+      margin-top: 6px;
+      line-height: 1.5;
+    }
+    /* INFOGRAPHIC — 전세 격차 */
+    .infographic {
+      background: #f8faff;
+      border: 1.5px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+      margin: 28px 0;
+    }
+    .infographic h3 {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--gray-dark);
+      margin-bottom: 22px;
+      text-align: center;
+    }
+    .bar-group { margin-bottom: 22px; }
+    .bar-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gray-soft);
+      margin-bottom: 6px;
+    }
+    .bar-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 5px;
+    }
+    .bar-name {
+      width: 60px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--gray-mid);
+      flex-shrink: 0;
+    }
+    .bar-track {
+      flex: 1;
+      height: 28px;
+      background: #e8edf5;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #fff;
+      transition: width 0.3s ease;
+    }
+    .bar-fill.new { background: linear-gradient(90deg, #1a56c4, #2d6fd4); }
+    .bar-fill.renew { background: linear-gradient(90deg, #27ae60, #2ecc71); }
+    .bar-gap-badge {
+      display: inline-block;
+      background: #fef2f2;
+      color: var(--danger);
+      font-size: 13px;
+      font-weight: 800;
+      border: 1px solid #fecaca;
+      border-radius: 8px;
+      padding: 4px 12px;
+    }
+
+    /* SVG 탈서울 차트 */
+    .chart-wrap {
+      background: #f8faff;
+      border: 1.5px solid var(--border);
+      border-radius: 14px;
+      padding: 22px 26px;
+      margin: 28px 0;
+    }
+    .chart-wrap h3 {
+      font-size: 15px;
+      font-weight: 800;
+      margin-bottom: 16px;
+      color: var(--gray-dark);
+      text-align: center;
+    }
+
+    /* QUOTE */
+    .quote-box {
+      background: var(--accent-light);
+      border-left: 5px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      padding: 18px 22px;
+      margin: 24px 0;
+      font-size: 16px;
+      font-style: italic;
+      color: #1e3a7a;
+      word-break: keep-all;
+    }
+    /* TIMELINE */
+    .timeline { margin: 20px 0 30px; }
+    .tl-item {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 16px;
+      align-items: flex-start;
+    }
+    .tl-date {
+      background: var(--accent);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 800;
+      padding: 5px 10px;
+      border-radius: 6px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .tl-text {
+      font-size: 15px;
+      color: var(--gray-mid);
+      padding-top: 4px;
+      word-break: keep-all;
+    }
+    /* IMPACT */
+    .impact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 20px 0;
+    }
+    .impact-card {
+      background: #fff;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+    }
+    .impact-card .emoji { font-size: 22px; margin-bottom: 8px; }
+    .impact-card h4 { font-size: 14px; font-weight: 800; margin-bottom: 6px; }
+    .impact-card p { font-size: 13.5px; margin: 0; color: var(--gray-soft); }
+    /* HASHTAGS */
+    .hashtags {
+      background: var(--gray-bg);
+      padding: 18px 36px;
+      font-size: 14px;
+      color: var(--accent);
+      font-weight: 600;
+      border-top: 1px solid var(--border);
+    }
+    /* DISCLAIMER */
+    .disclaimer {
+      background: #f9fafb;
+      border-top: 1px solid var(--border);
+      padding: 16px 36px;
+      font-size: 12px;
+      color: #9ca3af;
+      line-height: 1.7;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header-banner">
+    <div class="category-badge">🏠 부동산·주거 | 2026.07.14</div>
+    <h1 class="main-title">
+      전세 씨가 말랐다<br>
+      8000만원 폭탄·月급여 30%가 집값으로<br>
+      …정부, 오늘 결단 나선다
+    </h1>
+    <p class="sub-title">
+      서울 아파트 전세 매물 7개월 만에 30% 증발, 신규·갱신 보증금 격차 반년 새 두 배 폭등.<br>
+      이재명 대통령이 직접 나서는 '부동산 대토론회' 오늘 개막 — 진짜 답이 나올 수 있을까?
+    </p>
+  </div>
+
+  <!-- META BAR -->
+  <div class="meta-bar">
+    <span>📅 2026년 7월 14일</span>
+    <span>🖊️ 탐사데이터팀</span>
+    <span>📊 한국부동산원·통계청·MBC 취재자료</span>
+  </div>
+
+  <!-- BREAKING -->
+  <div class="breaking-box">
+    <div class="breaking-label">🚨 오늘의 속보</div>
+    <p>국토교통부, 오늘(14일) 오전 10시 첫 '부동산 정책 공개 토론회' 개최. 공급·금융·세제 3개 분야를 14~16일 3일간 분야별로 논의한 뒤, 7월 23일 이재명 대통령 직접 주재 '국민 대토론회'로 연결. 8월 초 최종 세제·공급 개편안 발표 예정.</p>
+  </div>
+
+  <div class="content">
+
+    <!-- HOOK -->
+    <p class="hook-para">
+      "같은 아파트, 같은 평수인데 — 새로 구하면 8000만원 더 내야 합니다."<br>
+      서울 30대 직장인들이 지금 직면한 현실이다. 전세 매물은 7개월 만에 30% 이상 사라졌고, 남은 매물 가격은 10년 만에 최고치를 찍었다. 청년들은 월 소득의 30%를 주거비로 쏟아붓고도 서울에서 밀려난다.
+    </p>
+
+    <!-- SUMMARY -->
+    <div class="summary-box">
+      <h3>핵심 요약 3줄</h3>
+      <ul>
+        <li>서울 아파트 전세 매물, 2025년 10월 대비 30.1% 급감 — 7개월 만에 7211건 증발</li>
+        <li>신규 전세 vs 갱신 전세 보증금 격차: 84㎡ 기준 1월 4375만원 → 6월 8000만원, 반년 새 2배 폭등</li>
+        <li>최근 3년 서울 탈출 인구 139만 명 — 60%가 경기도행, 1순위 이유는 '주거비'</li>
+      </ul>
+    </div>
+
+    <!-- SECTION 1 -->
+    <h2 class="section-title">📉 7개월 만에 매물 3만 개가 1만 7천 개로… '전세 가뭄'의 충격 실체</h2>
+
+    <p>
+      한국부동산원·파이낸셜뉴스 등이 집계한 자료에 따르면, 서울 아파트 전세 매물은 <strong>2025년 10월 20일 기준 2만4369건에서 2026년 6월 기준 1만7158건으로 7개월 만에 30.1% 감소</strong>했다. 같은 기간 서울의 전월세 매물도 1년 전보다 25% 줄었다.
+    </p>
+    <p>
+      더 충격적인 건 가격 지표다. 서울의 주택종합 <strong>전월세 통합지수는 102.40</strong>으로, 부동산원이 통계를 집계하기 시작한 <strong>2015년 6월 이후 역대 최고치</strong>를 기록했다. 전세수급지수도 6월 둘째 주 기준 <strong>5년 반 만에 가장 나쁜 수준</strong>으로 떨어졌다. 공급은 줄고, 수요는 버티고 있기 때문이다.
+    </p>
+
+    <!-- STAT CARDS -->
+    <div class="stat-grid">
+      <div class="stat-card danger">
+        <div class="stat-num">-30.1%</div>
+        <div class="stat-label">서울 아파트 전세 매물<br>7개월 만에 감소율</div>
+      </div>
+      <div class="stat-card danger">
+        <div class="stat-num">102.40</div>
+        <div class="stat-label">전월세 통합지수<br>2015년 집계 이래 역대 최고</div>
+      </div>
+      <div class="stat-card warning">
+        <div class="stat-num">0.31%</div>
+        <div class="stat-label">7월 1주 서울 전세 주간 상승률<br>(매매가 0.30%보다 높음)</div>
+      </div>
+      <div class="stat-card warning">
+        <div class="stat-num">+8%</div>
+        <div class="stat-label">서울 30평대 전세 보증금<br>1년 전 대비 상승 (6억9천만원)</div>
+      </div>
+    </div>
+
+    <p>
+      특히 주목해야 할 것은 <strong>전세가 상승률이 매매가 상승률을 추월</strong>했다는 점이다. 7월 1주차 서울 아파트 전세 상승률(0.31%)이 매매 상승률(0.30%)을 넘어섰다. 이는 단순히 집값이 오른 게 아니라, <strong>실수요자들이 매물 부족으로 인해 더 높은 가격에 전세를 구할 수밖에 없는 공황 상태</strong>를 뜻한다.
+    </p>
+
+    <!-- SECTION 2 -->
+    <h2 class="section-title">💣 "같은 아파트인데 8000만원 더?" — 신규·갱신 보증금 격차 충격</h2>
+
+    <p>
+      매물 부족이 만든 가장 잔혹한 결과가 <strong>신규 계약과 갱신 계약 보증금 격차 폭발</strong>이다. 올해 1월만 해도 서울 전용 84㎡ 아파트의 신규·갱신 계약 간 격차는 4375만원 수준이었다. 그런데 불과 6개월 만인 6월, 이 격차가 <strong>8000만원</strong>으로 두 배 가까이 뛰었다.
+    </p>
+
+    <!-- INFOGRAPHIC: 전세 격차 -->
+    <div class="infographic">
+      <h3>📊 서울 아파트 전세 보증금 신규 vs 갱신 격차 변화 (단위: 억원, 84㎡ 기준)</h3>
+
+      <div class="bar-group">
+        <div class="bar-label">2026년 1월</div>
+        <div class="bar-wrap">
+          <div class="bar-name">신규계약</div>
+          <div class="bar-track">
+            <div class="bar-fill new" style="width:93%">6억 5,625만원</div>
+          </div>
+        </div>
+        <div class="bar-wrap">
+          <div class="bar-name">갱신계약</div>
+          <div class="bar-track">
+            <div class="bar-fill renew" style="width:86%">6억 1,250만원</div>
+          </div>
+        </div>
+        <div style="text-align:right; margin-top:4px">
+          격차: <span class="bar-gap-badge">4,375만원</span>
+        </div>
+      </div>
+
+      <div class="bar-group">
+        <div class="bar-label">2026년 6월 <span style="color:var(--danger);font-weight:800">▲ 2배 폭등</span></div>
+        <div class="bar-wrap">
+          <div class="bar-name">신규계약</div>
+          <div class="bar-track">
+            <div class="bar-fill new" style="width:99%">7억 원</div>
+          </div>
+        </div>
+        <div class="bar-wrap">
+          <div class="bar-name">갱신계약</div>
+          <div class="bar-track">
+            <div class="bar-fill renew" style="width:88%">6억 2,000만원</div>
+          </div>
+        </div>
+        <div style="text-align:right; margin-top:4px">
+          격차: <span class="bar-gap-badge" style="background:#fee2e2;font-size:15px;padding:5px 16px">🔴 8,000만원</span>
+        </div>
+      </div>
+
+      <p style="font-size:13px;color:#6b7280;margin:12px 0 0;text-align:center">
+        59㎡도 격차: 3,500만원(1월) → 7,750만원(6월) | 출처: 아시아투데이·이투데이
+      </p>
+    </div>
+
+    <p>
+      이 격차는 임차인의 공포 심리를 그대로 반영한다. <strong>이사를 나가면 신규 계약을 해야 하는데, 그 비용이 8000만원이나 더 든다.</strong> 그러니 사람들은 불편해도 그냥 재계약한다. 실제로 서울의 신규 계약 비중은 1월 52.6%에서 6월 45.0%로 줄었고, 갱신 비중은 47.4%에서 55.0%로 역전됐다. 시장은 이미 <strong>'이사 포기 시대'</strong>로 접어들었다.
+    </p>
+
+    <div class="quote-box">
+      "이사를 가고 싶어도 못 가는 겁니다. 같은 동네 비슷한 아파트로 옮기려면 8000만원을 더 마련해야 하는데, 갑자기 어디서 그 돈이 나오나요?" — 서울 마포구 30대 직장인 A씨 (MBC 인터뷰)
+    </div>
+
+    <!-- SECTION 3 -->
+    <h2 class="section-title">🚶 탈서울 3년 139만 명 — 가장 큰 이유는 '집'이었다</h2>
+
+    <p>
+      집 문제가 얼마나 심각한지를 보여주는 가장 강력한 증거가 있다. <strong>최근 3년간 서울을 떠난 인구가 139만9645명</strong>에 달한다. 이 중 <strong>60.46%(약 84만 명)가 경기도로 이동</strong>했다. 이동 이유를 물었더니 1위가 '주택(32.64%)'이었다. 가족(30.48%), 직업(20.11%)보다 높다.
+    </p>
+
+    <!-- SVG 탈서울 이유 chart -->
+    <div class="chart-wrap">
+      <h3>📊 서울→경기 이동 이유 순위 (최근 3년 집계)</h3>
+      <svg viewBox="0 0 580 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">
+        <!-- 배경 -->
+        <rect width="580" height="200" fill="#f8faff" rx="10"/>
+        <!-- 막대 -->
+        <!-- 주택 32.64% -->
+        <rect x="60" y="30" width="272" height="36" rx="6" fill="url(#g1)"/>
+        <defs>
+          <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#c0392b"/>
+            <stop offset="100%" style="stop-color:#e74c3c"/>
+          </linearGradient>
+          <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#1a56c4"/>
+            <stop offset="100%" style="stop-color:#2d6fd4"/>
+          </linearGradient>
+          <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#27ae60"/>
+            <stop offset="100%" style="stop-color:#2ecc71"/>
+          </linearGradient>
+        </defs>
+        <text x="340" y="54" font-family="Noto Sans KR,sans-serif" font-size="14" font-weight="800" fill="#c0392b">32.64%</text>
+        <text x="50" y="54" font-family="Noto Sans KR,sans-serif" font-size="13" font-weight="700" fill="#444" text-anchor="end">🏠 주택</text>
+        <!-- 가족 30.48% -->
+        <rect x="60" y="82" width="254" height="36" rx="6" fill="url(#g2)"/>
+        <text x="322" y="106" font-family="Noto Sans KR,sans-serif" font-size="14" font-weight="800" fill="#1a56c4">30.48%</text>
+        <text x="50" y="106" font-family="Noto Sans KR,sans-serif" font-size="13" font-weight="700" fill="#444" text-anchor="end">👨‍👩‍👧 가족</text>
+        <!-- 직업 20.11% -->
+        <rect x="60" y="134" width="168" height="36" rx="6" fill="url(#g3)"/>
+        <text x="236" y="158" font-family="Noto Sans KR,sans-serif" font-size="14" font-weight="800" fill="#27ae60">20.11%</text>
+        <text x="50" y="158" font-family="Noto Sans KR,sans-serif" font-size="13" font-weight="700" fill="#444" text-anchor="end">💼 직업</text>
+        <!-- 소계 텍스트 -->
+        <text x="290" y="192" font-family="Noto Sans KR,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">총 서울→경기 이동: 84만 6,321명 | 출처: 스페셜경제</text>
+      </svg>
+    </div>
+
+    <p>
+      경기도로 간다고 해서 끝이 아니다. 경기도 84㎡ 아파트도 신규·갱신 보증금 격차가 1050만원(1월)에서 5100만원(6월)으로 다섯 배 가까이 폭등했다. <strong>서울에서 쫓겨난 사람들이 경기도마저 감당 못하는 시대</strong>가 오고 있다.
+    </p>
+
+    <!-- SECTION 4 -->
+    <h2 class="section-title">🔍 숨겨진 이면 — '전세 가뭄'이 생긴 진짜 이유</h2>
+
+    <p>
+      전문가들이 꼽는 전세 매물 급감의 주요 원인은 세 가지다. 첫째, <strong>집주인들이 전세를 월세로 전환</strong>하는 추세가 가속화됐다. 금리가 내려가면서 전세 보증금 운용 수익보다 월세 수입이 유리해졌기 때문이다. 둘째, <strong>전세사기 트라우마</strong>로 세입자가 전세를 기피하면서 집주인도 전세를 내놓기를 주저한다. 셋째, <strong>3기 신도시 등 신규 공급이 계속 지연</strong>되면서 도심 기존 주택 수요가 집중되고 있다.
+    </p>
+    <p>
+      설상가상으로 임대차 3법의 '4년 계약갱신청구권'이 만료되는 시점이 겹치면서 <strong>신규 계약 전환 수요와 이사 수요가 한꺼번에 쏟아지는 '전세 만기 집중 현상'</strong>이 발생하고 있다는 분석도 있다. 이미 4년 전 오른 가격으로 묶여 있던 계약들이 이제 줄줄이 종료되면서 갭이 더 크게 벌어지는 구조다.
+    </p>
+
+    <!-- SECTION 5 -->
+    <h2 class="section-title">🧑‍💼 나에게 미치는 영향 — 당신이 지금 당장 알아야 할 것</h2>
+
+    <div class="impact-grid">
+      <div class="impact-card">
+        <div class="emoji">😰</div>
+        <h4>현재 전세 세입자</h4>
+        <p>재계약 시 갱신청구권 사용하면 보증금 상한 5%. 신규 계약 전환 시 최대 8000만원 추가 부담. 가능하면 재계약을 고려하라.</p>
+      </div>
+      <div class="impact-card">
+        <div class="emoji">😤</div>
+        <h4>새 전세 구하는 사람</h4>
+        <p>서울 전세 매물 30% 감소. 원하는 지역·면적에서 매물 찾기 어려움. 검색 시작을 3개월 이상 일찍 해야 한다.</p>
+      </div>
+      <div class="impact-card">
+        <div class="emoji">🏃</div>
+        <h4>탈서울 고려 중인 분</h4>
+        <p>경기도도 이미 격차 급등. 특히 광명·동탄구 등 인기 지역은 전세가 상승률 8~9% 기록. 소도시 분산도 고려 필요.</p>
+      </div>
+      <div class="impact-card">
+        <div class="emoji">📅</div>
+        <h4>7월 이후 정책 주시</h4>
+        <p>7월 23일 이재명 대통령 주재 대토론회, 8월 초 공급·세제 개편안 발표 예정. 보유세·거래세 개편 방향에 따라 매물이 급변할 수 있다.</p>
+      </div>
+    </div>
+
+    <!-- SECTION 6 -->
+    <h2 class="section-title">🏛️ 오늘 토론회부터 7월 23일 대토론까지 — 정부의 선택지</h2>
+
+    <p>
+      이재명 대통령이 직접 주재하는 '부동산 국민 대토론회'는 7월 23일 열린다. 이에 앞서 국토교통부(공급, 14일), 금융위원회(금융, 15일), 재정경제부(세제, 16일)가 각각 3일간 분야별 공개 토론회를 연다. 최종 개편안은 8월 초 발표 예정이다.
+    </p>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">7월 14일 ← 오늘</div>
+        <div class="tl-text"><strong>국토교통부</strong> 1차 토론회 — 주택 공급 확대, 3기 신도시 속도, 재건축·재개발 규제 개선 논의</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">7월 15일</div>
+        <div class="tl-text"><strong>금융위원회</strong> 2차 토론회 — 전·월세 금융 지원, DSR 규제, 주택담보대출 개편 논의</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">7월 16일</div>
+        <div class="tl-text"><strong>재정경제부</strong> 3차 토론회 — 보유세·거래세 세제 개편, 다주택자 과세 방향 논의</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">7월 23일</div>
+        <div class="tl-text"><strong>이재명 대통령</strong> 직접 주재 국민 대토론회 — 전체 부동산 정책 방향 확정 예정</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">8월 초</div>
+        <div class="tl-text"><strong>최종 부동산 정책 패키지 발표</strong> — 세제 개편안 포함. 시장 반응에 따라 매물 급변 가능</div>
+      </div>
+    </div>
+
+    <p>
+      이번 대토론의 핵심 쟁점은 <strong>'사는 집(실거주 1주택)'과 '쌓아둔 집(다주택·비실거주)'의 보유세를 다르게 매길 것이냐</strong>다. 이 대통령은 이미 7개의 쟁점을 직접 제시하며 "더 좋은 대안이 있으면 적극 수용하겠다"고 밝혔다. 야당(국민의힘)은 "차근차근 증세 빌드업"이라며 강하게 반발하고 있다.
+    </p>
+    <p>
+      시장의 관심사는 단순하다. 다주택자 보유세가 오르면 매물이 늘어날 수 있다. 반면 섣부른 규제 완화는 투기 수요를 자극할 수 있다. <strong>정부가 어떤 균형점을 찾느냐에 따라 내년 전세 시장이 완전히 달라진다.</strong>
+    </p>
+
+    <!-- SECTION 7 — 전망 -->
+    <h2 class="section-title">🔭 전망과 행동 제안 — 지금 당장 무엇을 해야 하나</h2>
+
+    <p>
+      단기적으로는 전세 시장 안정이 쉽지 않다. 매물이 빠르게 늘 이유가 없고, 신규 공급은 최소 2~3년 후에나 시장에 반영된다. <strong>올해 하반기부터 내년 상반기까지가 전세 계약 만기 집중 구간</strong>으로, 가격 충격이 더 커질 가능성이 있다.
+    </p>
+    <p>
+      전문가들은 ▲임박한 전세 계약 만기자는 최소 4~6개월 전부터 시장 탐색을 시작할 것 ▲보증금 3억 원 이상은 반드시 전세보증보험(HUG·SGI)에 가입할 것 ▲경기도 외곽·비수도권 신도시 전세 수급을 꼼꼼히 점검할 것을 권고한다.
+    </p>
+    <p>
+      정부가 7월 23일 이후 내놓을 대책이 실효성 있는 공급 확대를 담는지, 혹은 세제 개편만으로 그치는지 — 그 결과물이 <strong>내년 전세 시장의 성패를 가를 핵심 변수</strong>다.
+    </p>
+
+    <div class="quote-box">
+      💬 "전세 문제의 해법은 결국 공급이다. 그런데 공급은 3기 신도시 기준으로도 2~3년 후다. 그 사이를 어떻게 버티게 할 것인지가 이번 토론회의 진짜 숙제다." — 부동산 전문가 종합 논평
+    </div>
+
+  </div>
+
+  <!-- HASHTAGS -->
+  <div class="hashtags">
+    #전세가뭄 #서울아파트 #전세매물부족 #부동산대토론회 #이재명부동산 #탈서울 #전세폭탄 #주거위기 #부동산정책2026 #전세보증금격차 #청년주거 #한국부동산
+  </div>
+
+  <!-- DISCLAIMER -->
+  <div class="disclaimer">
+    ⚠️ 면책조항: 본 아티클은 공개된 언론 보도 및 통계 자료를 바탕으로 작성된 정보성 콘텐츠입니다. 특정 부동산 투자나 계약에 대한 조언이 아니며, 개별 부동산 결정은 반드시 전문가와 상담하시기 바랍니다. 인용된 수치는 각 출처 보도 시점 기준이며 이후 변동될 수 있습니다.
+    <br><br>
+    📌 주요 출처: 한국부동산원 주간 아파트가격동향 | 아시아투데이·이투데이·헤럴드경제·파이낸셜뉴스·MBC·YTN 보도 | 통계청 인구이동 통계
+  </div>
+
+</div>
+</body>
+</html>
