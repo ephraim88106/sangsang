@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="부모님이 쓰러지면 당신 월급도 함께 무너진다. 간병비 월 370만원, 응급실 14번 거절, 노인이 노인을 돌보는 한국 의료의 민낯.">
+  <meta property="og:title" content="부모님이 쓰러지는 날, 당신도 쓰러진다 — 간병비 月 370만원·응급실 14번 거절의 진실">
+  <title>부모님이 쓰러지는 날, 당신도 쓰러진다 — 간병비 月 370만원·응급실 14번 거절의 진실</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Noto Sans KR',sans-serif;background:#fff;color:#1a1a1a;font-size:17px;line-height:1.8}
+    .container{max-width:800px;margin:0 auto;padding:0 20px 60px}
+    .category-badge{display:inline-block;background:#e63946;color:#fff;font-size:13px;font-weight:700;padding:4px 14px;border-radius:20px;margin-bottom:18px}
+    .article-header{padding:40px 0 30px;border-bottom:3px solid #e63946;margin-bottom:36px}
+    .article-header h1{font-size:32px;font-weight:900;line-height:1.35;color:#0d0d0d;margin-bottom:16px;word-break:keep-all}
+    .subtitle{font-size:18px;color:#444;line-height:1.6;margin-bottom:20px}
+    .article-meta{display:flex;gap:16px;align-items:center;flex-wrap:wrap;font-size:13px;color:#888}
+    .hook{background:#fff5f5;border-left:5px solid #e63946;padding:22px 24px;border-radius:0 8px 8px 0;margin-bottom:36px;font-size:17.5px;font-weight:500;line-height:1.9}
+    .summary-box{background:#1a1a1a;color:#fff;border-radius:12px;padding:28px 30px;margin-bottom:40px}
+    .summary-box h3{font-size:13px;letter-spacing:2px;color:#e63946;margin-bottom:14px}
+    .summary-box ul{list-style:none;padding:0}
+    .summary-box ul li{padding:8px 0 8px 20px;border-bottom:1px solid #333;font-size:16px;line-height:1.7;position:relative}
+    .summary-box ul li:last-child{border-bottom:none}
+    .summary-box ul li::before{content:'▶';position:absolute;left:0;color:#e63946;font-size:11px;top:11px}
+    h2{font-size:23px;font-weight:800;margin:44px 0 18px;padding-bottom:10px;border-bottom:2px solid #f0f0f0;word-break:keep-all}
+    h2 .em{color:#e63946}
+    p{margin-bottom:20px;word-break:keep-all}
+    strong{font-weight:700;color:#0d0d0d}
+    .highlight{background:linear-gradient(180deg,transparent 60%,#ffd6d6 60%);font-weight:700}
+    .data-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:32px 0}
+    .data-card{background:#f8f8f8;border-radius:10px;padding:20px 16px;text-align:center;border-top:4px solid #e63946}
+    .data-card .number{font-size:28px;font-weight:900;color:#e63946;line-height:1.1;margin-bottom:8px}
+    .data-card .label{font-size:13px;color:#666;line-height:1.5}
+    .infographic{background:#f8f9fa;border-radius:12px;padding:28px 24px;margin:36px 0}
+    .infographic h3{font-size:16px;font-weight:700;margin-bottom:20px}
+    .bar-row{display:flex;align-items:center;margin-bottom:14px;gap:10px}
+    .bar-label{width:120px;font-size:13px;color:#444;flex-shrink:0;text-align:right}
+    .bar-track{flex:1;background:#e9ecef;border-radius:4px;height:30px;overflow:hidden}
+    .bar-fill{height:100%;border-radius:4px;display:flex;align-items:center;padding-left:10px}
+    .bar-fill span{font-size:12px;font-weight:700;color:#fff;white-space:nowrap}
+    .bar-red{background:#e63946}
+    .bar-orange{background:#f4a261}
+    .bar-gray{background:#adb5bd}
+    .quote{border-left:4px solid #e63946;padding:16px 20px;background:#fafafa;font-style:italic;font-size:16px;color:#444;margin:28px 0;border-radius:0 8px 8px 0}
+    .quote .source{font-style:normal;font-size:13px;color:#888;margin-top:8px}
+    .timeline{position:relative;padding-left:28px;margin:28px 0}
+    .timeline::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:3px;background:linear-gradient(to bottom,#e63946,#f4a261,#adb5bd);border-radius:2px}
+    .timeline-item{position:relative;margin-bottom:22px}
+    .timeline-item::before{content:'';position:absolute;left:-24px;top:6px;width:10px;height:10px;border-radius:50%;background:#e63946;border:2px solid #fff;box-shadow:0 0 0 2px #e63946}
+    .timeline-item .year{font-size:13px;font-weight:700;color:#e63946;margin-bottom:4px}
+    .timeline-item p{font-size:15px;color:#444;margin-bottom:0}
+    .warning-box{background:#fff3cd;border:1px solid #ffc107;border-radius:10px;padding:20px 22px;margin:28px 0;font-size:16px;color:#664d03}
+    .policy-compare{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0}
+    .policy-card{border-radius:10px;padding:20px}
+    .policy-card.before{background:#fff5f5;border:1px solid #f5c6cb}
+    .policy-card.after{background:#f0fff4;border:1px solid #c3e6cb}
+    .policy-card h4{font-size:14px;font-weight:700;margin-bottom:12px}
+    .policy-card.before h4{color:#e63946}
+    .policy-card.after h4{color:#28a745}
+    .policy-card ul{list-style:none;padding:0}
+    .policy-card ul li{font-size:14px;padding:6px 0;border-bottom:1px dashed #ddd;color:#444}
+    .policy-card ul li:last-child{border-bottom:none}
+    .hashtags{margin-top:48px;padding-top:24px;border-top:1px solid #eee;display:flex;flex-wrap:wrap;gap:8px}
+    .hashtags a{display:inline-block;background:#f0f0f0;color:#555;font-size:13px;padding:5px 12px;border-radius:20px;text-decoration:none}
+    .disclaimer{margin-top:36px;padding:18px 20px;background:#f8f8f8;border-radius:8px;font-size:12.5px;color:#888;line-height:1.7}
+    .sources{margin-top:32px;font-size:13px;color:#888}
+    .sources h4{font-size:14px;font-weight:700;color:#444;margin-bottom:10px}
+    .sources ul{list-style:disc;padding-left:20px}
+    .sources ul li{margin-bottom:6px;line-height:1.5}
+    .sources a{color:#e63946;text-decoration:none}
+    @media(max-width:600px){.data-grid{grid-template-columns:1fr}.policy-compare{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <div class="article-header">
+    <div class="category-badge">🏥 의료·복지</div>
+    <h1>부모님이 쓰러지는 날, 당신도 쓰러진다<br>— 간병비 月 370만원·응급실 14번 거절의 진실</h1>
+    <p class="subtitle">월급 전부를 간병비로 쏟아부어도 모자라는 나라. 정부가 3.6조를 투입한다는데, 왜 지금 이 순간에도 응급환자는 병원을 찾아 헤매고 있는가?</p>
+    <div class="article-meta">
+      <span>📅 2026년 7월 16일</span>
+      <span>✍️ 데이터 저널리즘팀</span>
+      <span>⏱️ 읽기 약 8분</span>
+    </div>
+  </div>
+
+  <div class="hook">
+    "어머니 입원 3개월째, 간병인 비용만 1,100만원이 나갔습니다. 퇴직금을 다 털었어요. 이제 어떻게 해야 하나요?"<br><br>
+    이 질문은 온라인 간병 커뮤니티에 매주 수십 건씩 올라오는 실제 사연이다. 초고령사회에 진입한 2026년 한국, <strong>'간병 파산'은 더 이상 남의 이야기가 아니다.</strong>
+  </div>
+
+  <div class="summary-box">
+    <h3>이 기사의 핵심 3줄</h3>
+    <ul>
+      <li>간병비 월평균 370만원 — 임금 근로자 평균 월급(363만원)을 넘어섰다. 13년 만에 230% 폭등.</li>
+      <li>응급실 뺑뺑이 2024년 5,657건 — 평균 14.7번 거절당한 뒤 이송, 13명 사망(그 중 3명은 10대 미만).</li>
+      <li>정부는 3.6조 투입·간병비 30% 인하를 약속했다 — 하지만 시행은 빨라야 2027년, 오늘 당장은 '지옥'이다.</li>
+    </ul>
+  </div>
+
+  <div class="data-grid">
+    <div class="data-card">
+      <div class="number">370만원</div>
+      <div class="label">간병인 고용 시<br>월평균 비용 (2026)</div>
+    </div>
+    <div class="data-card">
+      <div class="number">5,657건</div>
+      <div class="label">2024년 응급실<br>뺑뺑이 발생 건수</div>
+    </div>
+    <div class="data-card">
+      <div class="number">12조원+</div>
+      <div class="label">2026년 예상<br>연간 사적 간병비 총액</div>
+    </div>
+  </div>
+
+  <h2>🔴 "월급이 곧 간병비" — <span class="em">230% 폭등한 돌봄 비용의 현실</span></h2>
+
+  <p>2026년, 한국에서 부모님을 병원에 모시는 데 드는 간병인 비용은 <strong>월평균 370만원</strong>에 달한다. 같은 해 임금 근로자 월평균 소득은 363만원이다. 즉, 직장인 한 명의 월급을 고스란히 간병비로 갖다 바쳐도 모자라는 구조가 됐다는 뜻이다.</p>
+
+  <p>이 숫자는 불과 13년 전인 2010년(월평균 112만원)과 비교하면 <span class="highlight">230% 폭등</span>한 수치다. 같은 기간 소비자물가 상승률이 약 30%였던 점을 감안하면, 간병비는 물가보다 7배 이상 빠르게 치솟은 셈이다.</p>
+
+  <div class="infographic">
+    <h3>📊 간병비 vs 평균 소득 vs 물가 — 13년의 격차 (2010→2026)</h3>
+    <div class="bar-row">
+      <div class="bar-label">간병비 상승</div>
+      <div class="bar-track"><div class="bar-fill bar-red" style="width:95%"><span>+230% (112만→370만원)</span></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">평균 임금 상승</div>
+      <div class="bar-track"><div class="bar-fill bar-orange" style="width:55%"><span>+약 80%</span></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">소비자물가</div>
+      <div class="bar-track"><div class="bar-fill bar-gray" style="width:20%"><span>+30%</span></div></div>
+    </div>
+    <p style="font-size:12px;color:#888;margin-top:12px;margin-bottom:0">※ 간병비는 개인 간병인 기준 월평균.</p>
+  </div>
+
+  <p>전체 간병비 지출 규모는 2022년 이미 10조원을 돌파했고, 2026년에는 <strong>12조원을 상회</strong>할 것으로 전문가들은 추산한다. 국방예산(약 55조원)의 20%가 넘는 금액이 국가 지원 없이 '가계의 사적 지출'로 간병비에 투입되고 있는 셈이다.</p>
+
+  <h2>👴👵 <span class="em">노인이 노인을 돌본다</span> — 간병 현장의 충격적 민낯</h2>
+
+  <p>간병비 폭등보다 더 무서운 문제가 있다. <strong>간병할 사람 자체가 없다</strong>는 것이다.</p>
+
+  <p>2022년 기준 전국 요양병원 연간 입원 환자 수는 37만명이지만, 실제 근무하는 간병인은 3만 4,929명에 불과하다. 더 심각한 것은 간병 인력의 고령화다. 요양병원 간병인의 <strong>79.5%가 60대 이상</strong>이며, 70대 이상 고령 간병인도 25.4%에 달한다.</p>
+
+  <div class="infographic">
+    <h3>👥 요양병원 간병인 연령 분포 (2026 기준)</h3>
+    <div class="bar-row">
+      <div class="bar-label">60대</div>
+      <div class="bar-track"><div class="bar-fill bar-orange" style="width:54%"><span>54.1%</span></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">70대 이상</div>
+      <div class="bar-track"><div class="bar-fill bar-red" style="width:25%"><span>25.4%</span></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">50대 이하</div>
+      <div class="bar-track"><div class="bar-fill bar-gray" style="width:20%"><span>20.5%</span></div></div>
+    </div>
+    <p style="font-size:12px;color:#888;margin-top:12px;margin-bottom:0">※ 60대 이상이 전체의 79.5%를 차지.</p>
+  </div>
+
+  <div class="quote">
+    "79세 간병인이 84세 환자를 돌보다 쓰러지는 일이 실제로 발생합니다. 이제 이 현장에서 '젊은 간병인'이라는 표현 자체가 60대를 가리키는 말이 됐어요."
+    <div class="source">— 요양병원 관계자 인터뷰, 미디어써치 2026</div>
+  </div>
+
+  <p>그나마 현장을 떠받치는 건 조선족(중국 동포) 등 외국인 간병인들이다. 전국 요양병원 간병인의 절반 이상이 외국인으로 추정되며, 조선족 의존도가 90%에 달한다는 분석도 있다. 하지만 언어 장벽으로 인한 의사소통 오류와 의료 사고 위험이 상존한다. <span class="highlight">'노노(老老)간병' 체계는 이미 붕괴 직전이다.</span></p>
+
+  <h2>🚑 <span class="em">응급실 14번 거절</span> — 13명이 죽어서야 통계가 됐다</h2>
+
+  <p>간병비 폭탄과 함께 한국 의료의 또 다른 민낯이 드러난다. 바로 '응급실 뺑뺑이'다.</p>
+
+  <p>2024년 한 해 동안 구급차가 환자를 태운 채 병원을 찾지 못해 재이송을 반복한 사례는 <strong>5,657건</strong>이었다. 2023년 4,227건에서 2년 새 <strong>47% 급증</strong>한 수치다. 분석된 34건의 뺑뺑이 사례에서 응급환자들은 평균 <strong>14.7회</strong> 이송 거절을 당했고, 이송 완료까지 평균 1시간 32분이 걸렸다. 그 사이 <strong>13명이 사망</strong>했다. 희생자 중 3명은 10세 미만 어린이였다.</p>
+
+  <div class="infographic">
+    <h3>📈 응급실 뺑뺑이 발생 건수 추이</h3>
+    <div class="bar-row">
+      <div class="bar-label">2022년</div>
+      <div class="bar-track"><div class="bar-fill bar-gray" style="width:45%"><span>약 3,100건</span></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">2023년</div>
+      <div class="bar-track"><div class="bar-fill bar-orange" style="width:63%"><span>4,227건</span></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">2024년</div>
+      <div class="bar-track"><div class="bar-fill bar-red" style="width:85%"><span>5,657건 (+47%↑)</span></div></div>
+    </div>
+    <p style="font-size:12px;color:#888;margin-top:12px;margin-bottom:0">※ 구급차 재이송 반복 건수 기준.</p>
+  </div>
+
+  <p>더 충격적인 것은 정부가 응급실 뺑뺑이로 인한 사망자를 <strong>별도로 집계조차 하지 않는다</strong>는 사실이다. 13명의 사망은 민간 언론의 탐사 취재로 밝혀진 숫자다. 공식 통계 사각지대에서 국민이 죽어가고 있는 셈이다.</p>
+
+  <p>단, 희망적인 신호도 있다. 2026년 3~5월 광주·전북·전남에서 시행한 응급환자 이송체계 혁신 시범사업 결과, 시범사업 기간 응급실 뺑뺑이는 한 건도 없었고, 일평균 중증환자 사망자도 8.3명에서 7.1명으로 줄었다. 이 모델이 전국으로 확대된다면 달라질 수 있다.</p>
+
+  <h2>🏥 <span class="em">숨겨진 이면</span> — 건강보험은 2026년부터 '적자 전환'</h2>
+
+  <p>오늘(7월 16일) 보건복지부는 이재명 대통령에게 업무보고를 진행하며 대규모 의료 개혁 청사진을 발표했다. 핵심은 <strong>지역·필수의료에 연 3조 6천억원 투입</strong>, 요양병원 간병비 본인부담률을 현행 100%에서 <strong>30%로 대폭 인하</strong>하겠다는 것이다. 월 200만~267만원 간병비가 <strong>60만~80만원 수준</strong>으로 낮아진다는 계획이다.</p>
+
+  <div class="policy-compare">
+    <div class="policy-card before">
+      <h4>❌ 현재 (2026년)</h4>
+      <ul>
+        <li>간병비 본인부담: 100%</li>
+        <li>월 간병비: 200만~267만원</li>
+        <li>응급실 뺑뺑이: 연 5,600건+</li>
+        <li>건강보험 재정: 적자 전환</li>
+        <li>간병 인력: 절대 부족·고령화</li>
+      </ul>
+    </div>
+    <div class="policy-card after">
+      <h4>✅ 정부 목표 (2027~2030년)</h4>
+      <ul>
+        <li>간병비 본인부담: 30%로 인하</li>
+        <li>월 간병비: 60만~80만원 목표</li>
+        <li>광역상황실 인력: 120→150명</li>
+        <li>권역응급의료센터: 44→60개</li>
+        <li>지역의사제 도입 (2027년~)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="warning-box">
+    ⚠️ <strong>핵심 변수: 건강보험 재정 위기</strong><br>
+    국회예산정책처에 따르면 건강보험 재정은 <strong>2026년부터 적자로 전환</strong>되고, 2030년에는 누적 준비금이 소진될 전망이다. 정부가 3.6조를 쏟아붓겠다고 했지만, 그 재원 자체가 흔들리고 있다.
+  </div>
+
+  <h2>💸 <span class="em">나에게 미치는 영향</span> — 지금 당장 알아야 할 것들</h2>
+
+  <p>정부 대책이 본격화하는 2027년까지, 지금 당장 가족 중 누군가가 쓰러진다면 어떻게 해야 할까?</p>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="year">지금 즉시</div>
+      <p>장기요양보험 등급 신청부터 확인하라. 1~5등급 판정 시 월 60만~180만원 수준의 재가급여 또는 시설급여 지원 가능. 국민건강보험공단(1577-1000) 신청.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="year">2026년 하반기</div>
+      <p>의료 중심 요양병원 200곳에 건강보험 간병비 급여화 시범 적용. 요양병원 입원 예정이라면 건강보험 적용 여부 반드시 확인.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="year">2027년~</div>
+      <p>요양병원 간병비 본인부담률 30% 본격 확대. 지역의사제 도입으로 지방 의료 공백 일부 해소 예정.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="year">2030년~</div>
+      <p>권역응급의료센터 60개, 간병 급여화 적용 500곳(10만 병상) 목표. 건강보험 재정 위기가 최대 변수.</p>
+    </div>
+  </div>
+
+  <h2>🔮 <span class="em">전망과 행동 제안</span> — 우리는 무엇을 요구해야 하는가</h2>
+
+  <p>오늘 보건복지부 업무보고에서 나온 대책들은 방향성 자체는 맞다. 간병비 급여화, 응급 체계 강화, 필수의료 투자 확대 — 이 세 가지는 오랫동안 요구해온 과제들이다. 그러나 세 가지 핵심 문제가 남는다.</p>
+
+  <p><strong>첫째, 속도다.</strong> 2027년까지 기다려야 하는 사람들에게 '내년부터'는 너무 먼 미래다. 2024년 응급실 뺑뺑이로 숨진 13명의 가족에게 '광역상황실 30명 확충'은 공허하게 들린다.</p>
+
+  <p><strong>둘째, 재원이다.</strong> 건강보험 재정은 이미 2026년부터 적자 전환 궤도에 있다. 3.6조를 어디서 충당할 것인지 구체적 계획이 여전히 불투명하다.</p>
+
+  <p><strong>셋째, 간병 인력이다.</strong> 정책을 아무리 촘촘히 짜도, 돌봄을 실제로 수행할 사람이 없으면 공염불에 그친다. 고령화한 간병 인력을 대체할 젊은 인력 유입 방안, 외국인 간병인 정식 제도화, 간병 로봇 도입 확대 등 미래 인력 전략이 이번 업무보고에는 빠져 있다.</p>
+
+  <p>초고령사회 대한민국에서 누구나 언젠가는 '간병 당사자' 또는 '간병 가족'이 된다. 이것은 복지 이슈가 아니라 <span class="highlight">생존의 문제</span>다. 오늘의 정책 발표가 대선용 청사진으로 끝나는지, 아니면 실제 삶을 바꾸는 개혁이 되는지는 — 국민이 계속 묻고 따져야 결정된다.</p>
+
+  <div class="hashtags">
+    <a href="#">#간병비폭탄</a>
+    <a href="#">#간병파산</a>
+    <a href="#">#응급실뺑뺑이</a>
+    <a href="#">#초고령사회</a>
+    <a href="#">#노노간병</a>
+    <a href="#">#요양병원</a>
+    <a href="#">#보건복지부</a>
+    <a href="#">#필수의료</a>
+    <a href="#">#건강보험재정</a>
+    <a href="#">#의료개혁2026</a>
+    <a href="#">#한국의료위기</a>
+    <a href="#">#돌봄지옥</a>
+  </div>
+
+  <div class="sources">
+    <h4>📎 주요 출처</h4>
+    <ul>
+      <li><a href="https://www.newspim.com/news/view/20260716000367" target="_blank">복지부, 의료체계·자살·간병비 전방위 수술…지역·필수의료에 연 3조6000억 투입 — 뉴스핌 (2026.07.16)</a></li>
+      <li><a href="https://www.newspim.com/news/view/20260715001327" target="_blank">복지부·질병청·식약처 업무보고…응급실 뺑뺑이·연금·낙태약 화두 — 뉴스핌 (2026.07.15)</a></li>
+      <li><a href="https://www.careyounews.org/news/articleView.html?idxno=9034" target="_blank">붕괴 직전의 한국 간병 체계, 구조적 해법은 있는가? — 캐어유뉴스</a></li>
+      <li><a href="https://www.medicaldaily.co.kr/post/21170" target="_blank">지역·필수의료에 年 3.6兆 투입…'의료 대전환' 시동 — 의약일보</a></li>
+      <li><a href="https://www.womaneconomy.co.kr/news/articleView.html?idxno=241652" target="_blank">응급실 뺑뺑이 작년만 5657건 — 여성경제신문</a></li>
+      <li><a href="https://www.khan.co.kr/article/202409251903001" target="_blank">'응급실 뺑뺑이' 그 이후…13명은 결국 숨졌다 — 경향신문</a></li>
+      <li><a href="https://www.mediasearch.co.kr/news/articleView.html?idxno=30364" target="_blank">79세가 80세를 돌보는 '돌봄 역전' — 미디어써치</a></li>
+      <li><a href="https://v.daum.net/v/5M7jHKHEXM" target="_blank">요양병원 간병비, 내년부터 급여화…지역의사제·공공의대 도입 — 다음뉴스</a></li>
+      <li><a href="https://www.hankookilbo.com/news/article/A2026062110390004556" target="_blank">'응급실 뺑뺑이' 실험, 한 달 환자 37명 살렸다 — 한국일보</a></li>
+    </ul>
+  </div>
+
+  <div class="disclaimer">
+    ※ 본 아티클은 공개된 보도자료, 정부 발표, 통계 자료를 바탕으로 작성된 정보성 콘텐츠입니다. 개인 의료·법률·재정 상황은 반드시 전문가와 상담하시기 바랍니다. 기사에 포함된 수치는 기사 작성 시점 기준이며, 정책 변경에 따라 달라질 수 있습니다.
+  </div>
+
+</div>
+</body>
+</html>
