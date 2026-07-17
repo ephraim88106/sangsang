@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>"하루 99명 쓰러졌다"—2026 폭염 재앙, 대한민국이 끓고 있다 | 한국이슈</title>
+  <meta name="description" content="2026년 7월, 한국 역대 최악의 폭염이 현재진행형이다. 누적 온열질환자 741명·사망 2명, 전력수요 98.8GW 사상 최고 전망. 우리 삶에 어떤 영향을 미치는지 낱낱이 분석한다." />
+  <meta property="og:title" content="하루 99명 쓰러졌다—2026 폭염 재앙, 대한민국이 끓고 있다" />
+  <meta property="og:description" content="741명 온열질환자, 전력 예비율 10% 위협, 취약계층 사각지대… 지금 한국의 여름은 재난이다." />
+  <meta property="og:type" content="article" />
+  <meta name="keywords" content="폭염,온열질환,기후위기,2026폭염,전력대란,취약계층,열사병,쿨링센터,기후변화,한국여름" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --green-dark: #1a6b3c;
+      --green-mid: #27a85a;
+      --green-light: #d4f1e0;
+      --orange-hot: #e85d04;
+      --red-alert: #d62828;
+      --yellow-warn: #f4a261;
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --muted: #555;
+      --border: #e0e0e0;
+    }
+    body { font-family: 'Noto Sans KR', sans-serif; background: var(--bg); color: var(--text); font-size: 17px; line-height: 1.85; }
+    .site-header { background: linear-gradient(135deg, #0a3d1f 0%, #1a6b3c 60%, #27a85a 100%); color: #fff; padding: 14px 24px; display: flex; align-items: center; gap: 12px; }
+    .site-header .logo { font-size: 20px; font-weight: 900; letter-spacing: -0.5px; }
+    .site-header .cat-badge { background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.4); border-radius: 20px; padding: 4px 14px; font-size: 13px; font-weight: 700; }
+    .hero { background: linear-gradient(160deg, #fff8f0 0%, #ffecd9 50%, #ffe0c0 100%); border-bottom: 4px solid var(--orange-hot); padding: 52px 24px 44px; text-align: center; }
+    .hero .category-tag { display: inline-block; background: var(--green-dark); color: #fff; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; padding: 5px 16px; border-radius: 20px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(26px, 5vw, 42px); font-weight: 900; color: var(--orange-hot); line-height: 1.25; letter-spacing: -1px; max-width: 720px; margin: 0 auto 20px; }
+    .hero h1 .quote-mark { color: var(--red-alert); }
+    .hero .subtitle { font-size: 18px; color: #444; font-weight: 500; max-width: 600px; margin: 0 auto 24px; line-height: 1.6; }
+    .hero .meta { font-size: 13px; color: #888; display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+    .article-wrap { max-width: 800px; margin: 0 auto; padding: 48px 24px 80px; }
+    .key-summary { background: var(--green-light); border-left: 5px solid var(--green-dark); border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 44px; }
+    .key-summary h2 { font-size: 15px; font-weight: 900; color: var(--green-dark); letter-spacing: 1px; margin-bottom: 14px; }
+    .key-summary ul { list-style: none; }
+    .key-summary ul li { padding: 6px 0 6px 26px; position: relative; font-size: 15.5px; font-weight: 500; }
+    .key-summary ul li::before { content: '🔥'; position: absolute; left: 0; top: 6px; font-size: 13px; }
+    .article-wrap h2 { font-size: 24px; font-weight: 900; color: var(--green-dark); margin: 52px 0 18px; letter-spacing: -0.5px; border-bottom: 2px solid var(--green-light); padding-bottom: 10px; }
+    .article-wrap h3 { font-size: 18px; font-weight: 700; color: var(--orange-hot); margin: 30px 0 12px; }
+    .article-wrap p { margin-bottom: 22px; color: #222; }
+    .pull-quote { background: #fff3e0; border-left: 6px solid var(--orange-hot); padding: 22px 26px; margin: 34px 0; border-radius: 0 10px 10px 0; font-size: 19px; font-weight: 700; color: var(--orange-hot); font-style: italic; line-height: 1.5; }
+    .alert-box { background: #fff0f0; border: 2px solid var(--red-alert); border-radius: 12px; padding: 22px 26px; margin: 32px 0; }
+    .alert-box .alert-title { font-size: 14px; font-weight: 900; color: var(--red-alert); letter-spacing: 1px; margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+    .alert-box p { font-size: 15.5px; color: #333; margin-bottom: 0; }
+    .infographic { background: #f8fffe; border: 1px solid #c5e8d5; border-radius: 16px; padding: 32px 28px; margin: 40px 0; }
+    .infographic-title { font-size: 16px; font-weight: 900; color: var(--green-dark); margin-bottom: 24px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 14px; }
+    .bar-row { display: flex; align-items: center; gap: 12px; }
+    .bar-label { width: 100px; font-size: 13px; font-weight: 700; color: #444; text-align: right; flex-shrink: 0; }
+    .bar-track { flex: 1; background: #e8f5ee; border-radius: 6px; height: 34px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 13px; font-weight: 700; color: #fff; }
+    .bar-fill.hot { background: linear-gradient(90deg, #e85d04, #f4a261); }
+    .bar-fill.warn { background: linear-gradient(90deg, #d62828, #e85d04); }
+    .bar-fill.normal { background: linear-gradient(90deg, #27a85a, #52c97a); }
+    .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin: 40px 0; }
+    .stat-card { background: linear-gradient(135deg, #fff8f0 0%, #ffe0c0 100%); border: 2px solid var(--yellow-warn); border-radius: 14px; padding: 22px 16px; text-align: center; }
+    .stat-card.green { background: linear-gradient(135deg, #f0fff6 0%, #d4f1e0 100%); border-color: var(--green-mid); }
+    .stat-card.red { background: linear-gradient(135deg, #fff0f0 0%, #ffd0d0 100%); border-color: var(--red-alert); }
+    .stat-num { font-size: 36px; font-weight: 900; color: var(--orange-hot); line-height: 1; margin-bottom: 6px; }
+    .stat-card.green .stat-num { color: var(--green-dark); }
+    .stat-card.red .stat-num { color: var(--red-alert); }
+    .stat-desc { font-size: 13px; font-weight: 500; color: #555; line-height: 1.4; }
+    .timeline { margin: 36px 0; }
+    .timeline-item { display: flex; gap: 16px; margin-bottom: 20px; align-items: flex-start; }
+    .timeline-dot { width: 40px; height: 40px; border-radius: 50%; background: var(--green-dark); color: #fff; font-size: 11px; font-weight: 900; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; text-align: center; }
+    .timeline-dot.hot { background: var(--orange-hot); }
+    .timeline-dot.red { background: var(--red-alert); }
+    .timeline-content h4 { font-size: 15px; font-weight: 700; color: #1a1a1a; margin-bottom: 4px; }
+    .timeline-content p { font-size: 14px; color: #555; margin: 0; }
+    .power-visual { background: #1a1a2e; border-radius: 16px; padding: 28px; margin: 40px 0; overflow-x: auto; }
+    .power-visual-title { color: #fff; font-size: 15px; font-weight: 700; text-align: center; margin-bottom: 20px; }
+    .action-list { background: var(--green-light); border-radius: 14px; padding: 28px 32px; margin: 36px 0; }
+    .action-list h3 { color: var(--green-dark); margin: 0 0 16px; font-size: 18px; }
+    .action-list ul { list-style: none; }
+    .action-list ul li { padding: 8px 0 8px 28px; position: relative; font-size: 15.5px; border-bottom: 1px solid #b0dcbf; }
+    .action-list ul li:last-child { border-bottom: none; }
+    .hashtags { display: flex; flex-wrap: wrap; gap: 8px; margin: 48px 0 24px; }
+    .hashtags span { background: var(--green-light); color: var(--green-dark); border: 1px solid #9dd5b5; border-radius: 20px; padding: 5px 14px; font-size: 13px; font-weight: 700; }
+    .disclaimer { background: #f5f5f5; border-radius: 10px; padding: 18px 22px; font-size: 12.5px; color: #777; line-height: 1.7; margin-top: 40px; }
+    .disclaimer strong { color: #555; }
+    .sources { margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--border); }
+    .sources h4 { font-size: 14px; font-weight: 700; color: #666; margin-bottom: 10px; }
+    .sources ul { list-style: none; }
+    .sources ul li { font-size: 13px; padding: 4px 0; }
+    .sources ul li a { color: var(--green-dark); text-decoration: underline; word-break: break-all; }
+    footer { background: #0a3d1f; color: #a0d4b5; text-align: center; padding: 24px; font-size: 13px; }
+    @media (max-width: 540px) { .hero { padding: 36px 18px 32px; } .article-wrap { padding: 32px 18px 60px; } .bar-label { width: 72px; font-size: 11.5px; } }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">🌿 한국이슈</div>
+  <div class="cat-badge">🌱 환경·기후</div>
+</header>
+
+<section class="hero">
+  <div class="category-tag">🚨 기후 긴급 리포트 · 2026.07.17</div>
+  <h1><span class="quote-mark">"하루 99명 쓰러졌다"</span><br/>2026 폭염 재앙,<br/>대한민국이 끓고 있다</h1>
+  <p class="subtitle">누적 온열질환자 741명·사망 2명·전력예비율 10% 위협…<br/>이건 그냥 더운 여름이 아니다. <strong>재난이다.</strong></p>
+  <div class="meta">
+    <span>📅 2026년 7월 17일</span>
+    <span>✍️ 탐사기자팀</span>
+    <span>⏱ 약 8분 소요</span>
+    <span>📂 환경·기후</span>
+  </div>
+</section>
+
+<div class="article-wrap">
+
+  <div class="key-summary">
+    <h2>🔑 핵심 요약 3줄</h2>
+    <ul>
+      <li>7월 12일 기준 온열질환자 누적 <strong>741명</strong>·추정 사망자 <strong>2명</strong>, 하루 최다 <strong>99명</strong> 응급실 이송</li>
+      <li>올여름 최대 전력수요 <strong>98.8GW 사상 최고</strong> 전망, 예비율 10% 붕괴 위협—에너지 위기 경고음</li>
+      <li>65세 이상 노인이 온열질환자의 <strong>36%</strong>—폭염은 불평등하게 죽인다</li>
+    </ul>
+  </div>
+
+  <p>지난 7월 11일 오후, 전국 응급실에서는 단 하루 만에 <strong>99명</strong>이 폭염으로 쓰러져 실려 왔다. 열사병, 일사병, 탈수 쇼크. 경보음이 울리는 응급실 복도를 가득 채운 환자들의 공통점은 하나였다. 밖에 있었다는 것. 도로공사 현장의 인부, 논두렁에서 일하던 70대 농부, 에어컨이 없는 반지하 원룸의 혼자 사는 노인. 2026년 한국의 여름은 더 이상 불편함의 계절이 아니다. <strong>생존의 문제가 됐다.</strong></p>
+
+  <div class="pull-quote">
+    "7월이 가장 위험하다. 아직 피크가 오지 않았다."<br/>
+    <span style="font-size:14px;font-weight:400;color:#666;">— 질병관리청 온열질환 모니터링 보고서</span>
+  </div>
+
+  <h2>① 숫자로 보는 2026년 폭염 참사</h2>
+
+  <p>올해 5월 15일 온열질환 응급실 감시체계가 가동된 이후, 7월 12일까지 약 두 달 만에 전국에서 <strong>741명</strong>의 온열질환자가 발생했다. 추정 사망자는 <strong>2명</strong>. 지난해 같은 기간(192명)과 비교하면 무려 <strong>3.86배</strong>에 달하는 속도다.</p>
+
+  <div class="stat-grid">
+    <div class="stat-card red">
+      <div class="stat-num">741명</div>
+      <div class="stat-desc">2026년 5/15~7/12<br/>누적 온열질환자</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">99명</div>
+      <div class="stat-desc">하루 최다 응급실<br/>이송 (7월 11일)</div>
+    </div>
+    <div class="stat-card red">
+      <div class="stat-num">2명</div>
+      <div class="stat-desc">폭염 추정<br/>사망자</div>
+    </div>
+    <div class="stat-card green">
+      <div class="stat-num">36%</div>
+      <div class="stat-desc">온열질환자 중<br/>65세 이상 비율</div>
+    </div>
+  </div>
+
+  <div class="infographic">
+    <div class="infographic-title">📊 하루 온열질환자 발생 추이 (2026년 7월)</div>
+    <div class="bar-chart">
+      <div class="bar-row">
+        <div class="bar-label">7월 8일</div>
+        <div class="bar-track"><div class="bar-fill normal" style="width:38%">43명</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">7월 9일</div>
+        <div class="bar-track"><div class="bar-fill normal" style="width:50%">57명</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">7월 10일</div>
+        <div class="bar-track"><div class="bar-fill hot" style="width:63%">72명</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">7월 11일 🔴</div>
+        <div class="bar-track"><div class="bar-fill warn" style="width:87%">99명 최다</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">7월 12일</div>
+        <div class="bar-track"><div class="bar-fill warn" style="width:77%">88명</div></div>
+      </div>
+    </div>
+    <p style="font-size:12px;color:#888;text-align:center;margin-top:14px;">※ 출처: 전국 응급의료기관 온열질환 응급실 감시체계 (질병관리청)</p>
+  </div>
+
+  <div class="alert-box">
+    <div class="alert-title">⚠️ 진짜 위기는 아직 오지 않았다</div>
+    <p>역대 데이터에 따르면 2025년 전체 온열질환 사망 29명 중 <strong>35%(10명)가 7월 20~31일</strong>에 집중됐다. 현재 7월 17일. 가장 치명적인 2주가 지금 시작되고 있다.</p>
+  </div>
+
+  <h2>② 왜 이렇게 됐나—기후위기가 바꾼 한국의 여름</h2>
+
+  <p>기상청은 2026년 6월 전국 평균기온이 22.2℃로 1973년 전국 기상관측망 확충 이후 역대 7번째로 높다고 밝혔다. 이른바 'K온난화'—한반도의 기온 상승 속도가 전 지구 평균의 <strong>2배</strong>에 달한다는 연구 결과가 현실로 나타나고 있다.</p>
+
+  <p>수도권 최고기온은 35℃를 웃돌았고, 경기 양주시 은현면에서는 <strong>36.8℃</strong>로 2026년 최고기온 극값을 경신했다. 경남 양산에서는 <strong>36.9℃</strong>를 기록했다. 7월 17일 오늘 밤 제주와 남부 일부 지역에 <strong>열대야</strong>가 나타나고 있다.</p>
+
+  <h3>서울은 더 덥다—도시 열섬의 덫</h3>
+  <p>아스팔트·콘크리트 밀집 지역인 서울은 근교보다 체감온도가 2~3℃ 더 높다. 건물과 도로가 낮 동안 열을 흡수하고 밤새 방출하면서 열대야가 연속 이어진다. 에어컨 없이 잠들 수 없는 밤—하지만 에어컨을 틀면 전기요금이 무섭다. 이것이 2026년 도시 서민들의 현실이다.</p>
+
+  <h2>③ 전력 위기—에어컨 켜면 대한민국이 꺼진다?</h2>
+
+  <p>에어컨을 켜는 사람이 늘수록 전력망은 한계에 다가선다. 정부는 올여름 최대 전력수요가 <strong>사상 처음으로 98GW를 돌파해 최대 98.8GW</strong>에 이를 것이라고 전망했다. 역대 최고치다.</p>
+
+  <div class="power-visual">
+    <div class="power-visual-title">⚡ 2026년 여름 전력 수급 현황 (GW)</div>
+    <svg viewBox="0 0 680 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;display:block;margin:0 auto;">
+      <line x1="80" y1="30" x2="80" y2="185" stroke="#334" stroke-width="1"/>
+      <line x1="80" y1="185" x2="650" y2="185" stroke="#334" stroke-width="1"/>
+      <text x="70" y="35" fill="#8af" font-size="11" text-anchor="end">110 GW</text>
+      <text x="70" y="80" fill="#8af" font-size="11" text-anchor="end">100 GW</text>
+      <text x="70" y="120" fill="#8af" font-size="11" text-anchor="end">90 GW</text>
+      <text x="70" y="155" fill="#8af" font-size="11" text-anchor="end">80 GW</text>
+      <line x1="80" y1="80" x2="650" y2="80" stroke="#223" stroke-width="1" stroke-dasharray="4,4"/>
+      <line x1="80" y1="120" x2="650" y2="120" stroke="#223" stroke-width="1" stroke-dasharray="4,4"/>
+      <line x1="80" y1="155" x2="650" y2="155" stroke="#223" stroke-width="1" stroke-dasharray="4,4"/>
+      <rect x="100" y="44" width="130" height="141" fill="#2d6a4f" rx="4"/>
+      <text x="165" y="38" fill="#6fcf97" font-size="12" font-weight="bold" text-anchor="middle">공급가능 107 GW</text>
+      <text x="165" y="105" fill="#fff" font-size="19" font-weight="bold" text-anchor="middle">107 GW</text>
+      <rect x="270" y="67" width="130" height="118" fill="#e85d04" rx="4"/>
+      <text x="335" y="60" fill="#ff9a5c" font-size="12" font-weight="bold" text-anchor="middle">최대수요 98.8 GW</text>
+      <text x="335" y="125" fill="#fff" font-size="19" font-weight="bold" text-anchor="middle">98.8 GW</text>
+      <rect x="440" y="100" width="130" height="85" fill="#d62828" rx="4"/>
+      <text x="505" y="93" fill="#ff8080" font-size="12" font-weight="bold" text-anchor="middle">예비율 위험 구간</text>
+      <text x="505" y="145" fill="#fff" font-size="19" font-weight="bold" text-anchor="middle">약 10%</text>
+      <text x="505" y="192" fill="#ff4040" font-size="10" font-weight="bold" text-anchor="middle">🔴 정전 위험 경보</text>
+    </svg>
+    <p style="color:#9af;font-size:12px;text-align:center;margin-top:12px;">※ 전력예비율 10% 이하 시 정부 '경계' 단계 발령 기준</p>
+  </div>
+
+  <p>정부가 발전설비를 총동원해 공급가능 용량 <strong>107GW</strong>를 확보했음에도 예비율이 10% 이하로 떨어질 수 있다는 경고가 나왔다. 예비율 10% 미만은 '경계' 단계로, 그 아래로 내려가면 <strong>지역별 순환 단전(강제 정전)</strong>이 시작될 수 있다.</p>
+
+  <h2>④ 폭염은 불평등하게 죽인다—사각지대 실태</h2>
+
+  <p>온열질환자 741명을 분석하면 불편한 진실이 드러난다. 65세 이상 노인이 전체의 <strong>36%</strong>를 차지한다. 폭염은 모두를 똑같이 위협하지 않는다. 에어컨이 없는 반지하, 쪽방촌, 혼자 사는 노인 가정이 집중 타격받는다.</p>
+
+  <h3>야외 노동자—법이 생겼지만 현장은 달랐다</h3>
+  <p>올해 정부는 산업안전보건법 개정으로 '체감온도 33℃ 이상 시 2시간마다 20분 이상 휴식'을 법제화했다. 하지만 건설 현장, 택배 기사, 이주노동자 농장에서는 실태가 다르다는 증언이 이어진다. "공기 압박이 심해서 쉬다가 눈치 보여 다시 일하게 된다"—법은 있지만 현장엔 없다.</p>
+
+  <h3>폭염중대경보—신설됐지만 아는 사람이 없다</h3>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dot">7.1</div>
+      <div class="timeline-content">
+        <h4>폭염중대경보 신설 시행</h4>
+        <p>체감온도 38℃ 또는 최고기온 39℃ 이상 하루만 예상돼도 발령. 기존 폭염경보보다 강화된 새 단계.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot hot">7.12</div>
+      <div class="timeline-content">
+        <h4>포항 도로 파손·통행 전면 통제</h4>
+        <p>콘크리트 포장이 폭염으로 파열되어 해안로 도로가 붕기는 이례적 피해 발생.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot red">진행</div>
+      <div class="timeline-content">
+        <h4>7월 20~31일—역대 가장 위험한 2주 진입 중</h4>
+        <p>통계적으로 연간 온열질환 사망의 35%가 이 기간에 집중. 현재 7월 17일—카운트다운 시작.</p>
+      </div>
+    </div>
+  </div>
+
+  <h2>⑤ 숨겨진 이면—폭염이 경제도 죽인다</h2>
+
+  <p>폭염의 피해는 신체에만 그치지 않는다. 야외 작업 중단에 따른 건설업·농업 생산 차질, 전력요금 급등에 따른 소상공인 부담, 폭염 관련 의료비 증가까지 경제 전반에 충격이 전이된다. 정부는 기초생활수급자 등 에너지 취약계층을 위한 <strong>에너지 바우처 지원 대상을 130만7천 가구에서 144만 가구로 확대</strong>하고, 경로당에 월 16만 5천원의 냉방비를 지원한다. 그러나 에어컨 자체가 없는 가구, 요금이 무서워 에어컨을 켜지 못하는 가구는 여전히 광범위하게 존재한다.</p>
+
+  <h2>⑥ 나에게 어떤 영향이?—지금 당장 알아야 할 것들</h2>
+
+  <div class="action-list">
+    <h3>🛡️ 폭염 생존 행동 가이드</h3>
+    <ul>
+      <li>🌡️ <strong>오전 11시~오후 5시</strong> 야외 활동 최소화—이 시간대 온열질환 발생의 70% 집중</li>
+      <li>💧 <strong>갈증 느끼기 전에</strong> 15~20분마다 물 한 컵—갈증은 이미 탈수 시작 신호</li>
+      <li>👴 65세 이상 가족·이웃 <strong>하루 2번 이상 안부 확인</strong>—혼자 사는 어르신이 가장 위험</li>
+      <li>🏢 가까운 <strong>무더위쉼터 위치 미리 확인</strong>—전국 4,078개소 운영 중 (행안부 안전디딤돌 앱)</li>
+      <li>⚡ <strong>전력 피크타임(오후 2~6시)</strong> 냉방 온도 1℃ 올리기—사회적 정전 예방</li>
+      <li>🚑 두통·구역질·무기력 증상 → <strong>즉시 서늘한 곳 이동 + 119 신고</strong></li>
+    </ul>
+  </div>
+
+  <h2>⑦ 전망—앞으로 더 심해진다</h2>
+
+  <p>기후 전문가들은 한반도 기온 상승이 전 지구 평균의 2배 속도로 진행되고 있으며, <strong>5년 내 현재보다 더 극단적인 폭염이 올 가능성</strong>이 높다고 경고한다. 2026년이 역대 최악이 아닐 수 있다는 뜻이다.</p>
+
+  <p>서울시는 '쿨링시티' 전략으로 그늘막·쿨링포그·이동형 해피소 설치를 확대하고 있다. 하지만 근본 원인인 탄소 배출 감소 없이는 땜질에 불과하다는 비판도 나온다. 기후에너지환경부 2026년 업무계획에 '기후 적응 인프라 강화'가 포함되어 있지만, 예산과 실행 속도 모두 폭염의 속도를 따라가지 못하고 있다.</p>
+
+  <div class="pull-quote">
+    폭염은 이제 천재지변이 아니다.<br/>우리가 수십 년간 탄소를 태운 결과다.<br/>그리고 그 대가는 가장 가난하고 늙은 사람들이 먼저 치른다.
+  </div>
+
+  <div class="hashtags">
+    <span>#폭염2026</span>
+    <span>#온열질환</span>
+    <span>#기후위기</span>
+    <span>#전력대란</span>
+    <span>#취약계층</span>
+    <span>#열사병주의</span>
+    <span>#폭염중대경보</span>
+    <span>#K기후위기</span>
+    <span>#열대야</span>
+    <span>#에너지위기</span>
+    <span>#대한민국여름</span>
+    <span>#쿨링센터</span>
+  </div>
+
+  <div class="sources">
+    <h4>📎 주요 출처</h4>
+    <ul>
+      <li><a href="https://www.insight.co.kr/news/562916" target="_blank">인사이트 — 하루새 88명 쓰러졌다…온열질환자 누적 741명</a></li>
+      <li><a href="https://www.mt.co.kr/thebio/2026/07/12/2026071210542261904" target="_blank">머니투데이 — 7월이 가장 위험…벌써 2명 숨졌다</a></li>
+      <li><a href="https://www.fnnews.com/news/202607121756262467" target="_blank">파이낸셜뉴스 — 폭염 기승에 온열질환 급증…하루 응급실 환자 99명</a></li>
+      <li><a href="https://www.newspim.com/news/view/20260713000015" target="_blank">뉴스핌 — 전력수요 90GW 첫 돌파…예비율 10% 불안</a></li>
+      <li><a href="https://www.ajunews.com/view/20260625151144936" target="_blank">아주경제 — 여름 최대 전력수요 98.8GW…전력수급 비상</a></li>
+      <li><a href="https://www.khan.co.kr/article/202606031706001/" target="_blank">경향신문 — 폭염중대경보 땐 하루 두 번 고위험 어르신 안부</a></li>
+      <li><a href="https://www.dt.co.kr/article/12065624" target="_blank">디지털타임스 — 폭염중대경보 때 노인일자리 멈춘다</a></li>
+      <li><a href="https://www.dailyt.co.kr/newsView/dlt202607090001" target="_blank">데일리환경 — 기후변화가 바꾼 대한민국의 여름</a></li>
+      <li><a href="https://m.go.seoul.co.kr/news/society/2026/05/29/20260529008006?cp=go" target="_blank">서울신문 — 2배 빠른 K온난화…5년 내 역대급 폭염 온다</a></li>
+      <li><a href="https://www.fnnews.com/news/202606141828046944" target="_blank">파이낸셜뉴스 — 쿨링시티 서울로 거듭날 것</a></li>
+    </ul>
+  </div>
+
+  <div class="disclaimer">
+    <strong>⚠️ 면책조항</strong><br/>
+    본 아티클은 공개된 언론 보도와 정부 발표 자료를 바탕으로 작성된 저널리즘 콘텐츠입니다. 의학적·법적 조언을 대체하지 않으며, 온열질환 증상 발생 시 즉시 의료기관에 연락하시기 바랍니다. 통계 수치는 출처 기준일에 따라 변동될 수 있습니다. © 2026 한국이슈 탐사기자팀
+  </div>
+
+</div>
+
+<footer>
+  <p>🌿 한국이슈 탐사저널 · 환경·기후 섹션 · 2026.07.17</p>
+  <p style="margin-top:6px;font-size:11px;color:#6aad8a;">매일 깊이 있는 이슈를 분석합니다 · #폭염2026 #기후위기</p>
+</footer>
+
+</body>
+</html>
