@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🔥 코스피 하루 만에 7000 붕괴… 반도체 쇼크가 시장을 삼켰다 | 2026.07.17 시장 브리핑</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg-primary: #0a0e1a;
+    --bg-card: #111827;
+    --bg-card2: #1a2236;
+    --up: #00c896;
+    --down: #ff4757;
+    --neutral: #ffd32a;
+    --accent: #6c63ff;
+    --text-primary: #f0f4ff;
+    --text-secondary: #8899bb;
+    --border: #1e2d4a;
+  }
+
+  body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px 16px 60px;
+  }
+
+  /* HEADER */
+  .header {
+    background: linear-gradient(135deg, #0f1a35 0%, #1a0a2e 50%, #0a1a2e 100%);
+    border: 1px solid #2a3a5e;
+    border-radius: 18px;
+    padding: 36px 32px 28px;
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(108,99,255,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+  .header-date {
+    font-size: 13px;
+    color: var(--text-secondary);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .fear-badge {
+    background: linear-gradient(135deg, #ff4757, #c0392b);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: 30px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 0 16px rgba(255,71,87,0.4);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 16px rgba(255,71,87,0.4); }
+    50% { box-shadow: 0 0 28px rgba(255,71,87,0.7); }
+  }
+  .header-title {
+    font-size: clamp(20px, 4vw, 30px);
+    font-weight: 900;
+    line-height: 1.3;
+    background: linear-gradient(90deg, #ff6b81, #ffd32a, #6c63ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+  }
+  .header-sub {
+    font-size: 14px;
+    color: var(--text-secondary);
+  }
+  .holiday-banner {
+    background: linear-gradient(90deg, rgba(255,211,42,0.15), rgba(255,211,42,0.05));
+    border: 1px solid rgba(255,211,42,0.3);
+    border-radius: 10px;
+    padding: 10px 16px;
+    font-size: 13px;
+    color: var(--neutral);
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* SECTION TITLE */
+  .section-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 28px 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* INDEX CARDS */
+  .index-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .index-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px 16px;
+    transition: transform 0.2s;
+  }
+  .index-card:hover { transform: translateY(-2px); }
+  .index-card.down { border-color: rgba(255,71,87,0.3); }
+  .index-card.up { border-color: rgba(0,200,150,0.3); }
+  .index-label {
+    font-size: 11px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+  }
+  .index-value {
+    font-family: 'Courier New', monospace;
+    font-size: clamp(18px, 3vw, 24px);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+  }
+  .index-change {
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .index-change.down { color: var(--down); }
+  .index-change.up { color: var(--up); }
+  .index-change.flat { color: var(--neutral); }
+  .arrow { font-size: 12px; }
+
+  /* COMMODITY CARDS */
+  .commodity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+  }
+  .commodity-card {
+    background: var(--bg-card2);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .commodity-icon {
+    font-size: 28px;
+    width: 44px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  .commodity-label {
+    font-size: 11px;
+    color: var(--text-secondary);
+    margin-bottom: 2px;
+  }
+  .commodity-value {
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .commodity-change {
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  /* ANALYSIS */
+  .analysis-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+  }
+  .analysis-sub {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--neutral);
+    margin: 20px 0 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .analysis-sub:first-child { margin-top: 0; }
+  .analysis-text {
+    font-size: 14px;
+    color: #c8d4ee;
+    line-height: 1.9;
+  }
+  .highlight {
+    color: var(--down);
+    font-weight: 700;
+  }
+  .highlight-up {
+    color: var(--up);
+    font-weight: 700;
+  }
+  .highlight-neu {
+    color: var(--neutral);
+    font-weight: 700;
+  }
+
+  /* SECTOR HEATMAP */
+  .heatmap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 8px;
+  }
+  .sector-cell {
+    border-radius: 10px;
+    padding: 14px 10px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    transition: transform 0.2s;
+    cursor: default;
+  }
+  .sector-cell:hover { transform: scale(1.04); }
+  .sector-name { font-size: 11px; color: rgba(255,255,255,0.8); margin-bottom: 4px; }
+  .sector-pct { font-family: 'Courier New', monospace; font-size: 15px; font-weight: 700; }
+
+  /* STOCK CARDS */
+  .stock-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .stock-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .stock-rank {
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--accent);
+    min-width: 32px;
+    line-height: 1;
+  }
+  .stock-info { flex: 1; }
+  .stock-name {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: var(--text-primary);
+  }
+  .stock-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+  }
+  .badge-down { background: rgba(255,71,87,0.2); color: var(--down); border: 1px solid rgba(255,71,87,0.3); }
+  .badge-watch { background: rgba(255,211,42,0.15); color: var(--neutral); border: 1px solid rgba(255,211,42,0.3); }
+  .badge-up { background: rgba(0,200,150,0.15); color: var(--up); border: 1px solid rgba(0,200,150,0.3); }
+  .stock-desc { font-size: 13px; color: #a0aec0; line-height: 1.7; }
+  .stock-point {
+    font-size: 12px;
+    color: var(--neutral);
+    margin-top: 8px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  /* CHECKPOINT */
+  .checkpoint-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 12px;
+  }
+  .checkpoint-card {
+    background: var(--bg-card2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px;
+  }
+  .checkpoint-date {
+    font-size: 11px;
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+  .checkpoint-items {
+    list-style: none;
+  }
+  .checkpoint-items li {
+    font-size: 13px;
+    color: #b0bdd8;
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .checkpoint-items li:last-child { border-bottom: none; }
+  .checkpoint-items li::before {
+    content: '▸';
+    color: var(--accent);
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* DISCLAIMER */
+  .disclaimer {
+    margin-top: 32px;
+    padding: 16px 20px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 10px;
+    font-size: 11px;
+    color: #5a6a8a;
+    line-height: 1.7;
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+
+  /* HASHTAGS */
+  .hashtags {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .hashtag {
+    font-size: 12px;
+    color: var(--accent);
+    background: rgba(108,99,255,0.1);
+    border: 1px solid rgba(108,99,255,0.25);
+    border-radius: 20px;
+    padding: 4px 12px;
+  }
+
+  @media (max-width: 600px) {
+    .header { padding: 24px 20px; }
+    .analysis-box { padding: 20px; }
+    .index-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-top">
+      <div class="header-date">📅 2026년 7월 17일 (금) · 장 기준일: 7월 16일</div>
+      <div class="fear-badge">⚠️ 극단적 공포</div>
+    </div>
+    <div class="header-title">🔥 코스피 하루 만에 7000 붕괴<br>반도체 쇼크가 시장을 삼켰다</div>
+    <div class="header-sub">월가 수준 심층 분석 | 오늘의 시장 브리핑 | AI 거품론·中 CXMT 이중 악재</div>
+    <div class="holiday-banner">
+      🏛️ <strong>오늘(7/17 금) 한국 증시 제헌절 휴장</strong> — 18년 만에 법정 공휴일 재지정 · 다음 거래일: 7월 20일(월)
+    </div>
+  </div>
+
+  <!-- 한국 지수 -->
+  <div class="section-title">🇰🇷 한국 주요 지수 (7월 16일 종가)</div>
+  <div class="index-grid">
+    <div class="index-card down">
+      <div class="index-label">KOSPI</div>
+      <div class="index-value">6,820.60</div>
+      <div class="index-change down">
+        <span class="arrow">▼</span> -463.81 (-6.37%)
+      </div>
+    </div>
+    <div class="index-card down">
+      <div class="index-label">KOSDAQ</div>
+      <div class="index-value">791.84</div>
+      <div class="index-change down">
+        <span class="arrow">▼</span> -37.59 (-4.53%)
+      </div>
+    </div>
+    <div class="index-card down">
+      <div class="index-label">삼성전자</div>
+      <div class="index-value">추정</div>
+      <div class="index-change down">
+        <span class="arrow">▼</span> -8.77%
+      </div>
+    </div>
+    <div class="index-card down">
+      <div class="index-label">SK하이닉스</div>
+      <div class="index-value">추정</div>
+      <div class="index-change down">
+        <span class="arrow">▼</span> -11.53%
+      </div>
+    </div>
+  </div>
+
+  <!-- 미국 지수 -->
+  <div class="section-title">🇺🇸 미국 주요 지수 (7월 16일 종가)</div>
+  <div class="index-grid">
+    <div class="index-card down">
+      <div class="index-label">다우존스</div>
+      <div class="index-value">52,552.97</div>
+      <div class="index-change down">
+        <span class="arrow">▼</span> -105.67 (-0.20%)
+      </div>
+    </div>
+    <div class="index-card down">
+      <div class="index-label">S&P 500</div>
+      <div class="index-value">7,533.77</div>
+      <div class="index-change down">
+        <span class="arrow">▼</span> -38.75 (-0.51%)
+      </div>
+    </div>
+    <div class="index-card down">
+      <div class="index-label">나스닥</div>
+      <div class="index-value">25,881.95</div>
+      <div class="index-change down">
+        <span class="arrow">▼</span> -386.31 (-1.47%)
+      </div>
+    </div>
+  </div>
+
+  <!-- 환율·원자재 -->
+  <div class="section-title">💱 환율 · 원자재 · 암호화폐</div>
+  <div class="commodity-grid">
+    <div class="commodity-card">
+      <div class="commodity-icon">💵</div>
+      <div>
+        <div class="commodity-label">원달러 환율</div>
+        <div class="commodity-value" style="color:#ffd32a">1,478.82</div>
+        <div class="commodity-change" style="color:#00c896">▼ -0.47%</div>
+      </div>
+    </div>
+    <div class="commodity-card">
+      <div class="commodity-icon">🛢️</div>
+      <div>
+        <div class="commodity-label">WTI 원유</div>
+        <div class="commodity-value" style="color:#00c896">$79.63</div>
+        <div class="commodity-change" style="color:#00c896">▲ +0.04%</div>
+      </div>
+    </div>
+    <div class="commodity-card">
+      <div class="commodity-icon">🥇</div>
+      <div>
+        <div class="commodity-label">금 (Gold)</div>
+        <div class="commodity-value" style="color:#ffd32a">$3,992</div>
+        <div class="commodity-change" style="color:#ff4757">▼ -$81/oz</div>
+      </div>
+    </div>
+    <div class="commodity-card">
+      <div class="commodity-icon">₿</div>
+      <div>
+        <div class="commodity-label">비트코인</div>
+        <div class="commodity-value" style="color:#f7931a">$64,065</div>
+        <div class="commodity-change" style="color:#ff4757">▼ -0.40%</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 심층 분석 -->
+  <div class="section-title">🧠 오늘의 핵심 분석</div>
+  <div class="analysis-box">
+
+    <div class="analysis-sub">⚡ 폭락의 진짜 원인: 중국이 쏜 총알 두 발</div>
+    <div class="analysis-text">
+      7월 16일 코스피는 장 초반 서킷브레이커가 발동될 만큼 급격히 무너졌다. 표면적으로는 "반도체 악재"지만, 속살을 들여다보면 두 개의 핵심 뇌관이 동시에 터졌다.
+      <br><br>
+      첫째, <span class="highlight">중국 창신메모리(CXMT)가 약 14조 7,000억 원 규모의 IPO를 완료</span>하며 글로벌 메모리 시장에 경쟁자로 공식 등장했다. 삼성전자·SK하이닉스·마이크론이 과점하던 DRAM 시장에 중국의 '자금 폭탄'이 투하된 것이다. 공급 증가 → 가격 하락 → 수익성 훼손으로 이어지는 연쇄 공포가 시장을 덮쳤다.
+      <br><br>
+      둘째, <span class="highlight">AI 클라우드 기업 CoreWeave가 메모리 가격 변동 위험에 대한 헤징 전략을 검토</span> 중이라는 소식이 알려졌다. 이는 곧 "AI 인프라 투자 속도가 예상보다 느려질 수 있다"는 수요 둔화 시그널로 해석됐다.
+    </div>
+
+    <div class="analysis-sub">🌐 월가의 판단: 과도한 공포인가, 구조적 전환인가</div>
+    <div class="analysis-text">
+      국내 증시의 낙폭(-6.37%)이 미국 나스닥(-1.47%)보다 약 4배 이상 크다는 점은 시사하는 바가 크다. <span class="highlight-neu">월가는 이번 급락을 구조적 약세보다 심리적 과잉반응</span>으로 보는 분위기다. 3가지 근거가 있다: ① CXMT의 기술 격차는 여전히 2~3년, ② AI 데이터센터 CapEx는 2026년에도 전년 대비 증가 예정, ③ TSMC의 설비투자 상향은 수요 확신의 방증이기도 하다. 그러나 단기적으로 <span class="highlight">외국인(-1.39조)과 기관(-2.37조)의 동반 순매도</span>는 수급 측면에서 부담이다.
+      <br><br>
+      미국에서도 반도체 주식이 하락했지만, 그 폭은 제한적이었다. TSMC의 2분기 실적이 예상을 상회했음에도 설비투자 증액 발표가 '공급 과잉 우려'로 해석되며 차익 실현의 빌미가 된 것이 다우를 0.20% 떨어뜨리는 데 그쳤다.
+    </div>
+
+    <div class="analysis-sub">📊 글로벌 연결고리: 반도체 사이클의 운명</div>
+    <div class="analysis-text">
+      이번 사건은 한국 증시가 얼마나 <span class="highlight">반도체 단일 섹터에 의존</span>하고 있는지를 다시 한번 드러냈다. 코스피 시가총액 상위 10위 중 절반 이상이 반도체·전자 관련주다. 전기전자 섹터가 하루에 <span class="highlight">-9.4% 급락</span>하자 지수 전체가 흔들렸다.
+      <br><br>
+      원달러 환율 1,478원은 비교적 안정적이어서 외환시장은 공황 수준은 아니다. WTI 유가 $79.63은 중동 긴장 속에서도 완만하게 유지되고 있어 인플레이션 재점화 위험은 제한적이다. 금은 $3,992로 역사적 고점권에서 소폭 조정 중이며, 비트코인은 $64,000대에서 약세다.
+      <br><br>
+      <span class="highlight-neu">핵심은 7월 20일 재개장</span>이다. 3일 연휴 동안 미국 반도체 주의 방향성, 연준 위원 발언, CXMT 관련 추가 뉴스가 투자 심리를 결정할 변수다.
+    </div>
+  </div>
+
+  <!-- 섹터 히트맵 -->
+  <div class="section-title">🗺️ 섹터 히트맵 (코스피, 7월 16일)</div>
+  <div class="heatmap">
+    <div class="sector-cell" style="background: rgba(255,71,87,0.85);">
+      <div class="sector-name">전기전자</div>
+      <div class="sector-pct">-9.4%</div>
+    </div>
+    <div class="sector-cell" style="background: rgba(255,71,87,0.65);">
+      <div class="sector-name">반도체</div>
+      <div class="sector-pct">-9.0%</div>
+    </div>
+    <div class="sector-cell" style="background: rgba(255,71,87,0.50);">
+      <div class="sector-name">IT 소프트웨어</div>
+      <div class="sector-pct">-5.8%</div>
+    </div>
+    <div class="sector-cell" style="background: rgba(255,71,87,0.40);">
+      <div class="sector-name">2차전지</div>
+      <div class="sector-pct">-4.2%</div>
+    </div>
+    <div class="sector-cell" style="background: rgba(255,71,87,0.30);">
+      <div class="sector-name">바이오</div>
+      <div class="sector-pct">-3.5%</div>
+    </div>
+    <div class="sector-cell" style="background: rgba(255,71,87,0.22);">
+      <div class="sector-name">자동차</div>
+      <div class="sector-pct">-2.9%</div>
+    </div>
+    <div class="sector-cell" style="background: rgba(255,71,87,0.18);">
+      <div class="sector-name">금융</div>
+      <div class="sector-pct">-2.3%</div>
+    </div>
+    <div class="sector-cell" style="background: rgba(255,71,87,0.12);">
+      <div class="sector-name">에너지</div>
+      <div class="sector-pct">-1.8%</div>
+    </div>
+    <div class="sector-cell" style="background: rgba(255,211,42,0.20);">
+      <div class="sector-name">유통</div>
+      <div class="sector-pct">-0.5%</div>
+    </div>
+    <div class="sector-cell" style="background: rgba(0,200,150,0.20);">
+      <div class="sector-name">방산</div>
+      <div class="sector-pct">+1.2%</div>
+    </div>
+  </div>
+
+  <!-- 주목 종목/이슈 -->
+  <div class="section-title">🎯 주목 종목 · 이슈 TOP 3</div>
+  <div class="stock-cards">
+
+    <div class="stock-card">
+      <div class="stock-rank">01</div>
+      <div class="stock-info">
+        <div class="stock-name">SK하이닉스 / 삼성전자 — 반도체 쌍두마차 동반 급락</div>
+        <span class="stock-badge badge-down">급락 -11.53%</span>
+        <span class="stock-badge badge-down">-8.77%</span>
+        <div class="stock-desc">
+          SK하이닉스는 하루 만에 11.53% 폭락하며 시장 충격의 진앙이 됐다. 전날 7,000피 돌파로 환호했던 투자자들이 하루 만에 낭떠러지를 맞닥뜨렸다. CXMT IPO와 CoreWeave 헤징 뉴스가 HBM(고대역폭메모리) 수요 전망을 직격했다. 기관이 SK하이닉스 단일 종목만 수천억 원 순매도했다.
+        </div>
+        <div class="stock-point">⚡ 포인트: 7월 20일 재개장 시 외국인 반응과 HBM 수급 뉴스가 방향성을 결정</div>
+      </div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-rank">02</div>
+      <div class="stock-info">
+        <div class="stock-name">중국 CXMT — 14조 원의 지각변동</div>
+        <span class="stock-badge badge-watch">핵심 변수</span>
+        <span class="stock-badge badge-watch">공급 과잉 우려</span>
+        <div class="stock-desc">
+          창신메모리(CXMT)는 중국 최대 DRAM 제조사로, IPO를 통해 약 14조 7,000억 원의 자금을 확보했다. 이 자금으로 고성능 DRAM 생산능력 확대에 나설 경우, 글로벌 메모리 가격이 구조적으로 하락할 수 있다는 공포가 시장에 퍼졌다. 실제 기술 격차는 2~3년이지만, 주가는 '현실'이 아닌 '공포'에 반응했다.
+        </div>
+        <div class="stock-point">⚡ 포인트: CXMT 생산 로드맵 공개 시 다시 한번 변동성 촉발 가능</div>
+      </div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-rank">03</div>
+      <div class="stock-info">
+        <div class="stock-name">방산주 — 폭락장 속 유일한 피난처</div>
+        <span class="stock-badge badge-up">역행 상승</span>
+        <span class="stock-badge badge-up">안전자산</span>
+        <div class="stock-desc">
+          전체 시장이 패닉에 빠진 날, 방산 섹터는 홀로 반등했다. 중동 긴장 고조, 한반도 안보 이슈 등 지정학적 불안이 방산주 매수를 자극했다. 한화에어로스페이스, 현대로템, LIG넥스원 등이 상대적 강세를 보이며 '폭락장 피난처' 역할을 재확인했다.
+        </div>
+        <div class="stock-point">⚡ 포인트: 글로벌 불확실성이 지속되는 한 방산주 프리미엄은 유효</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 다음 주 체크포인트 -->
+  <div class="section-title">📆 다음 주 체크포인트 (7.20~7.25)</div>
+  <div class="checkpoint-grid">
+    <div class="checkpoint-card">
+      <div class="checkpoint-date">🗓️ 7월 20일 (월) — 재개장 첫날</div>
+      <ul class="checkpoint-items">
+        <li>코스피 재개장 — 연휴 간 외국인 포지션 변화 주시</li>
+        <li>미국 반도체주 주말 흐름 반영 여부</li>
+        <li>삼성전자·SK하이닉스 갭 방향 결정적</li>
+      </ul>
+    </div>
+    <div class="checkpoint-card">
+      <div class="checkpoint-date">🗓️ 7월 22~24일</div>
+      <ul class="checkpoint-items">
+        <li>美 2분기 GDP 성장률 발표 (예비치)</li>
+        <li>美 PCE 물가지수 — 연준 9월 금리인하 판단 기준</li>
+        <li>엔비디아, 알파벳, 테슬라 실적 발표 예정</li>
+        <li>한국 반도체 수출 통계 (7월 1~20일 잠정)</li>
+      </ul>
+    </div>
+    <div class="checkpoint-card">
+      <div class="checkpoint-date">⚠️ 리스크 레이더</div>
+      <ul class="checkpoint-items">
+        <li>CXMT 추가 생산 계획 발표 가능성</li>
+        <li>CoreWeave LTA 협상 결과 공개 여부</li>
+        <li>연준 위원 매파 발언 — 금리인하 기대 후퇴</li>
+        <li>중동 지정학 긴장 확대 → 유가 급등 리스크</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 해시태그 -->
+  <div class="hashtags">
+    <span class="hashtag">#코스피폭락</span>
+    <span class="hashtag">#반도체쇼크</span>
+    <span class="hashtag">#CXMT</span>
+    <span class="hashtag">#AI거품론</span>
+    <span class="hashtag">#SK하이닉스</span>
+    <span class="hashtag">#삼성전자</span>
+    <span class="hashtag">#7000피붕괴</span>
+    <span class="hashtag">#CoreWeave</span>
+    <span class="hashtag">#제헌절휴장</span>
+    <span class="hashtag">#미국증시</span>
+    <span class="hashtag">#나스닥</span>
+    <span class="hashtag">#금투자</span>
+    <span class="hashtag">#원달러환율</span>
+    <span class="hashtag">#시장브리핑</span>
+  </div>
+
+  <!-- 면책조항 -->
+  <div class="disclaimer">
+    ⚠️ <strong>투자 면책조항:</strong> 본 보고서는 공개된 시장 데이터와 뉴스를 기반으로 작성된 참고용 분석 자료이며, 특정 종목이나 자산에 대한 투자를 권유하지 않습니다. 모든 투자 결정은 본인의 판단과 책임 하에 이루어져야 하며, 과거의 수익률이 미래의 결과를 보장하지 않습니다. 본 자료에 포함된 수치는 수집 시점 기준이며, 실제 수치와 다를 수 있습니다.
+    <br>
+    Generated by AI Financial Analyst · 2026.07.17 · 데이터 기준: 2026년 7월 16일 종가
+  </div>
+
+</div>
+</body>
+</html>
