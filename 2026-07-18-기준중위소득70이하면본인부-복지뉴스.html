@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"우울증·불안장애인데 상담비 없다고요?" 나라가 64만원 심리상담비 줍니다 — 기준 중위소득 70% 이하면 본인부담 0원, 지금 당장 동 행정복지센터 가세요! | 오늘의 복지 뉴스</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans KR', sans-serif; background: #f4f7fb; color: #1a1a1a; font-size: 16px; line-height: 1.7; }
+  .container { max-width: 780px; margin: 0 auto; padding: 0 16px 60px; }
+
+  /* 헤더 */
+  .top-header { background: #1565c0; color: #fff; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; border-radius: 0 0 10px 10px; }
+  .top-header .date-tag { font-size: 13px; opacity: .85; }
+  .top-header .edition { font-size: 12px; font-weight: 700; background: rgba(255,255,255,.2); padding: 3px 10px; border-radius: 20px; }
+
+  /* 배지 */
+  .badge-row { margin-top: 26px; }
+  .badge { display: inline-block; background: #1565c0; color: #fff; font-size: 12px; font-weight: 700; padding: 4px 14px; border-radius: 20px; letter-spacing: .5px; }
+  .sub-category { display: inline-block; margin-left: 10px; font-size: 13px; color: #1565c0; font-weight: 600; }
+
+  h1 { font-size: 26px; font-weight: 900; line-height: 1.45; margin-top: 14px; color: #0d3c7e; word-break: keep-all; }
+  h1 .point { color: #1565c0; }
+
+  /* 훅 */
+  .hook { border-left: 5px solid #1565c0; padding: 16px 20px; background: #e3f0ff; border-radius: 0 10px 10px 0; margin: 22px 0; font-size: 15.5px; }
+  .hook .highlight { background: #fff3cd; padding: 1px 5px; border-radius: 3px; font-weight: 700; }
+
+  /* 핵심 요약 박스 */
+  .summary-box { background: #2e7d32; color: #fff; border-radius: 12px; padding: 22px 24px; margin: 24px 0; }
+  .summary-box h2 { font-size: 16px; font-weight: 900; margin-bottom: 14px; }
+  .summary-box ul { list-style: none; }
+  .summary-box ul li { padding: 5px 0; font-size: 15px; padding-left: 22px; position: relative; }
+  .summary-box ul li::before { content: "✅"; position: absolute; left: 0; }
+
+  /* 섹션 제목 */
+  h2 { font-size: 19px; font-weight: 900; color: #0d3c7e; margin: 34px 0 14px; padding-bottom: 6px; border-bottom: 2px solid #1565c0; }
+
+  p { margin-bottom: 14px; color: #333; }
+
+  /* 표 */
+  .info-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14.5px; }
+  .info-table th { background: #1565c0; color: #fff; padding: 10px 14px; text-align: left; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid #e0e0e0; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #f0f5ff; }
+
+  /* SVG 영역 */
+  .svg-wrap { margin: 24px 0; background: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+  .svg-wrap h3 { font-size: 14px; color: #555; margin-bottom: 14px; text-align: center; }
+
+  /* 신청 단계 */
+  .step-list { list-style: none; margin: 14px 0; }
+  .step-list li { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 14px; }
+  .step-num { background: #1565c0; color: #fff; font-weight: 900; font-size: 15px; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .step-text { font-size: 15px; padding-top: 4px; color: #222; }
+
+  /* 기한 박스 */
+  .deadline-box { border: 2.5px dashed #f57c00; border-radius: 12px; padding: 18px 22px; margin: 24px 0; background: #fff8e1; }
+  .deadline-box .title { font-size: 15px; font-weight: 900; color: #e65100; margin-bottom: 10px; }
+  .deadline-box ul { list-style: none; }
+  .deadline-box ul li { font-size: 14.5px; color: #333; padding: 3px 0; padding-left: 18px; position: relative; }
+  .deadline-box ul li::before { content: "⚠️"; position: absolute; left: 0; font-size: 12px; }
+
+  /* 체크리스트 */
+  .checklist { background: #fff; border-radius: 12px; padding: 20px 24px; border: 1.5px solid #1565c0; margin: 20px 0; }
+  .checklist h3 { font-size: 15px; font-weight: 900; color: #1565c0; margin-bottom: 12px; }
+  .checklist ul { list-style: none; }
+  .checklist ul li { font-size: 14.5px; padding: 5px 0; padding-left: 28px; position: relative; color: #333; }
+  .checklist ul li::before { content: "✓"; position: absolute; left: 0; color: #1565c0; font-weight: 900; font-size: 16px; }
+
+  /* 주의사항 */
+  .caution-box { background: #fff; border-radius: 12px; padding: 20px 24px; margin: 20px 0; border-left: 5px solid #d32f2f; }
+  .caution-box h3 { font-size: 15px; font-weight: 900; color: #d32f2f; margin-bottom: 12px; }
+  .caution-box ol { padding-left: 18px; }
+  .caution-box ol li { font-size: 14.5px; color: #333; margin-bottom: 8px; }
+
+  /* 문의처 */
+  .contact-box { background: #e3f0ff; border-radius: 12px; padding: 20px 24px; margin: 24px 0; border-left: 5px solid #1565c0; }
+  .contact-box h3 { font-size: 15px; font-weight: 900; color: #0d3c7e; margin-bottom: 10px; }
+  .contact-box p { font-size: 14.5px; margin-bottom: 6px; color: #1a1a1a; }
+
+  /* 찬반 론평 */
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  /* 해시태그 */
+  .hashtag-wrap { margin: 28px 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .hashtag-wrap span { background: #dce9ff; color: #1565c0; font-size: 13px; font-weight: 700; padding: 5px 12px; border-radius: 20px; }
+
+  /* 면책조항 */
+  .disclaimer { background: #f5f5f5; border-radius: 10px; padding: 16px 20px; font-size: 13px; color: #777; margin-top: 28px; }
+
+  /* 작성일 */
+  .meta { text-align: right; font-size: 12px; color: #999; margin-top: 14px; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 20px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .info-table { font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 헤더 -->
+  <div class="top-header">
+    <span class="date-tag">📅 2026년 7월 18일 (토)</span>
+    <span class="edition">오늘의 복지 뉴스 · 제1보</span>
+  </div>
+
+  <!-- 배지 -->
+  <div class="badge-row">
+    <span class="badge">정신건강복지</span>
+    <span class="sub-category">심리상담 바우처 · 우울·불안 지원</span>
+  </div>
+
+  <!-- 메인 제목 -->
+  <h1>"우울증·불안장애인데 상담비 없다고요?"<br>
+    <span class="point">나라가 64만원 심리상담비 대신 냅니다</span><br>
+    — 기준 중위소득 70% 이하면 본인부담 <span class="point">0원</span>, 지금 당장 동 주민센터 가세요!</h1>
+
+  <!-- 훅 -->
+  <div class="hook">
+    마음이 무너지는데 상담 한 번에 10만원이 넘어서 포기했던 적 있으신가요? <span class="highlight">2026년 정신건강 심리상담 바우처</span>는 우울·불안으로 힘든 국민 누구에게나 전문 상담 8회(최대 64만원 상당)를 지원합니다. 소득이 낮을수록 본인부담은 줄어들고 — 중위소득 70% 이하 가구는 <span class="highlight">본인 부담 단돈 0원</span>입니다. 예산이 소진되면 조기 마감되니, 지금 바로 신청하세요.
+  </div>
+
+  <!-- 핵심 요약 박스 -->
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li>전문 심리상담 8회(1:1 대면), 최대 <strong>64만원</strong> 바우처 지원</li>
+      <li>기준 중위소득 70% 이하(4인 가구 月 약 383만원 이하) → <strong>본인부담 0원</strong></li>
+      <li>거주지 동 행정복지센터 방문 또는 복지로(bokjiro.go.kr) 온라인 신청</li>
+    </ul>
+  </div>
+
+  <!-- 배경 -->
+  <h2>📢 왜 이 지원이 생겼나</h2>
+  <p>대한민국 성인 4명 중 1명은 평생 한 번 이상 우울증·불안장애를 경험하지만, 민간 심리상담 비용(회당 8만~15만원)은 저소득층에게 넘기 어려운 벽입니다. 건강보험이 적용되는 정신과 진료는 받아도, 장기적 회복에 필수적인 <strong>심리상담</strong>은 여전히 '사치'로 여겨졌습니다.</p>
+  <p>보건복지부는 이 격차를 줄이기 위해 '정신건강 심리상담 바우처 사업'(구 전국민 마음투자 지원사업)을 2025년부터 확대 시행하고 있으며, 2026년에도 연중 신청을 받고 있습니다. 단, 인구 밀집 지역(부산·인천·경기 등)은 <strong>상반기에 예산이 조기 소진</strong>되는 사례가 속출하고 있어 서두를 필요가 있습니다.</p>
+
+  <!-- 상세 정보 표 -->
+  <h2>📋 지원 내용 한눈에 보기</h2>
+  <table class="info-table">
+    <tr><th>항목</th><th>내용</th></tr>
+    <tr><td><strong>지원 내용</strong></td><td>전문 심리상담 1:1 대면 8회 (바우처 형태)</td></tr>
+    <tr><td><strong>최대 지원액</strong></td><td>64만원 상당 (1급 상담사 8만원×8회 기준)</td></tr>
+    <tr><td><strong>지원 대상</strong></td><td>우울·불안 등 정서적 어려움이 있는 주민 (연령 제한 없음)</td></tr>
+    <tr><td><strong>소득 기준</strong></td><td>없음(전 소득 계층 신청 가능), 단 소득에 따라 본인부담금 차등</td></tr>
+    <tr><td><strong>본인부담금</strong></td><td>중위소득 70% 이하 → 0원 / 70~100% → 회당 1만원 / 100% 초과 → 회당 3만원</td></tr>
+    <tr><td><strong>사용 기한</strong></td><td>바우처 결정 통지일로부터 120일 이내 8회 소진</td></tr>
+    <tr><td><strong>사업 기간</strong></td><td>2026년 1월 1일 ~ 12월 31일 (예산 소진 시 조기 마감)</td></tr>
+    <tr><td><strong>신청 방법</strong></td><td>거주지 동 행정복지센터 방문 / 복지로(bokjiro.go.kr) 온라인</td></tr>
+    <tr><td><strong>담당 기관</strong></td><td>보건복지부 / 지역 정신건강복지센터</td></tr>
+  </table>
+
+  <!-- SVG 인포그래픽 -->
+  <div class="svg-wrap">
+    <h3>💰 소득 구간별 본인부담금 비교 (회당)</h3>
+    <svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+      <!-- 배경 -->
+      <rect width="700" height="220" fill="#f8fbff" rx="10"/>
+      <!-- 제목 -->
+      <text x="350" y="30" text-anchor="middle" font-size="14" font-weight="bold" fill="#0d3c7e">1회 상담 바우처 단가 8만원 기준 / 소득별 내 부담</text>
+
+      <!-- 막대 1: 중위소득 70% 이하 -->
+      <rect x="60" y="70" width="120" height="10" fill="#1565c0" rx="5"/>
+      <text x="120" y="105" text-anchor="middle" font-size="13" fill="#1565c0" font-weight="bold">0원</text>
+      <text x="120" y="125" text-anchor="middle" font-size="12" fill="#555">중위소득 70%↓</text>
+      <text x="120" y="143" text-anchor="middle" font-size="11" fill="#888">(4인가구 월 383만↓)</text>
+      <text x="120" y="165" text-anchor="middle" font-size="11" fill="#2e7d32" font-weight="bold">✅ 무료!</text>
+
+      <!-- 화살표 구분선 -->
+      <line x1="280" y1="55" x2="280" y2="180" stroke="#ccc" stroke-dasharray="6,4"/>
+
+      <!-- 막대 2: 중위소득 70~100% -->
+      <rect x="290" y="50" width="120" height="30" fill="#42a5f5" rx="5"/>
+      <text x="350" y="105" text-anchor="middle" font-size="13" fill="#1565c0" font-weight="bold">1만원</text>
+      <text x="350" y="125" text-anchor="middle" font-size="12" fill="#555">중위소득 70~100%</text>
+      <text x="350" y="143" text-anchor="middle" font-size="11" fill="#888">(4인 383만~547만)</text>
+      <text x="350" y="165" text-anchor="middle" font-size="11" fill="#1565c0" font-weight="bold">나라 부담: 7만원</text>
+
+      <!-- 막대 3: 중위소득 100% 초과 -->
+      <rect x="520" y="30" width="120" height="50" fill="#90caf9" rx="5"/>
+      <text x="580" y="105" text-anchor="middle" font-size="13" fill="#1565c0" font-weight="bold">3만원</text>
+      <text x="580" y="125" text-anchor="middle" font-size="12" fill="#555">중위소득 100% 초과</text>
+      <text x="580" y="143" text-anchor="middle" font-size="11" fill="#888">(4인 547만원 초과)</text>
+      <text x="580" y="165" text-anchor="middle" font-size="11" fill="#1565c0" font-weight="bold">나라 부담: 5만원</text>
+
+      <!-- 하단 안내 -->
+      <text x="350" y="205" text-anchor="middle" font-size="12" fill="#888">* 8회 총액 기준: 0원 / 8만원 / 24만원 본인부담 | 나머지 국가 지원</text>
+    </svg>
+  </div>
+
+  <!-- 신청 방법 -->
+  <h2>📝 신청 방법 (단계별)</h2>
+  <ul class="step-list">
+    <li>
+      <span class="step-num">1</span>
+      <span class="step-text"><strong>자격 확인</strong> — 우울·불안 증상으로 일상생활에 어려움이 있거나, 정신건강 검진에서 중간 이상 우울 판정(PHQ-9 10점 이상)을 받은 경우</span>
+    </li>
+    <li>
+      <span class="step-num">2</span>
+      <span class="step-text"><strong>신청</strong> — 거주지 읍·면·동 행정복지센터 방문(신분증 지참) 또는 복지로(bokjiro.go.kr) 온라인 신청(만 19세 이상 본인만)</span>
+    </li>
+    <li>
+      <span class="step-num">3</span>
+      <span class="step-text"><strong>소견서 제출 (필요 시)</strong> — 정신건강전문요원·정신건강의학과 의사·한의사 소견서 또는 건강검진 결과지 제출</span>
+    </li>
+    <li>
+      <span class="step-num">4</span>
+      <span class="step-text"><strong>결정 통보</strong> — 신청 후 담당자 검토, 바우처 지급 결정 통보 (약 1~2주 소요)</span>
+    </li>
+    <li>
+      <span class="step-num">5</span>
+      <span class="step-text"><strong>상담 기관 선택 및 예약</strong> — 사회서비스 전자바우처 포털(socialservice.or.kr)에서 제공 기관 검색 후 예약, 120일 내 8회 이용</span>
+    </li>
+  </ul>
+
+  <!-- 기한 강조 박스 -->
+  <div class="deadline-box">
+    <div class="title">⏰ 지금 신청해야 하는 이유 — 예산 소진 조기 마감!</div>
+    <ul>
+      <li>2026년 사업 기간: 1월 1일 ~ 12월 31일 (연중 신청)</li>
+      <li>부산·인천·경기 등 대도시는 상반기 내 예산 소진 사례 다수 발생</li>
+      <li>바우처 결정 후 <strong>120일 이내</strong> 8회 모두 사용해야 소멸 방지</li>
+      <li>예산 소진 시 지역별로 접수 일시 중단 → <strong>조회 후 즉시 신청 필수</strong></li>
+    </ul>
+  </div>
+
+  <!-- 체크리스트 -->
+  <div class="checklist">
+    <h3>🔍 나는 해당될까? 자가진단 체크리스트</h3>
+    <ul>
+      <li>최근 2주 이상 우울하거나 의욕이 없는 날이 절반 이상이다</li>
+      <li>불안·공황·강박 증상으로 일상생활(직장·학교)에 지장이 있다</li>
+      <li>국가 건강검진에서 정신건강검사 결과 '중간 이상 우울(10점 이상)' 판정을 받았다</li>
+      <li>정신건강복지센터·Wee센터 등에서 상담 권고를 받은 적이 있다</li>
+      <li>심리상담을 받고 싶지만 비용 때문에 포기한 경험이 있다</li>
+    </ul>
+  </div>
+
+  <!-- 주의사항 -->
+  <div class="caution-box">
+    <h3>⚠️ 꼭 알아야 할 주의사항</h3>
+    <ol>
+      <li>바우처 발급 후 <strong>120일이 지나면 남은 횟수가 소멸</strong>됩니다. 기관 예약 후 빠르게 시작하세요.</li>
+      <li>현재 정신건강의학과에서 <strong>치료를 받는 중</strong>이어도 심리상담 바우처는 별도 신청 가능합니다.</li>
+      <li>가족이 신청 대행 시 위임장 및 가족관계증명서가 필요합니다(만 19세 미만은 보호자 동반).</li>
+      <li>지역에 따라 예산 소진으로 신청이 일시 중단될 수 있으므로 <strong>거주지 주민센터에 먼저 전화 확인</strong>을 권장합니다.</li>
+    </ol>
+  </div>
+
+  <!-- 담당 기관 -->
+  <div class="contact-box">
+    <h3>📞 담당 기관 및 문의처</h3>
+    <p>🏛 <strong>보건복지부 정신건강정책과</strong> — ☎ 129 (복지부 콜센터)</p>
+    <p>🖥 <strong>복지로(복지서비스 통합 포털)</strong> — <a href="https://www.bokjiro.go.kr" style="color:#1565c0">www.bokjiro.go.kr</a></p>
+    <p>🏥 <strong>지역 정신건강복지센터</strong> — 거주지 시·군·구 보건소에 위치, 전화 상담 후 방문 신청 권장</p>
+    <p>🖥 <strong>사회서비스 전자바우처 포털</strong> — <a href="https://www.socialservice.or.kr" style="color:#1565c0">www.socialservice.or.kr</a> (제공 기관 검색)</p>
+    <p>☎ <strong>정신건강 위기상담전화</strong> — 1577-0199 (24시간)</p>
+  </div>
+
+  <!-- 전문가 찬반 론평 -->
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"민간 심리상담 접근성 격차는 소득 불평등이 건강 불평등으로 전이되는 대표 경로다. 바우처 제도는 그 격차를 국가가 직접 메운다는 점에서 구조적 의미가 크다."</p>
+          <p class="author">— 정신건강정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"상담비 부담 때문에 치료를 포기하는 경우가 현장에서 빈번하다. 바우처가 초기 개입 장벽을 낮추면 만성화를 막는 예방 비용으로 훨씬 효과적이다."</p>
+          <p class="author">— 지역사회 정신보건 활동가</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"8회 제한은 만성 우울·트라우마 내담자에게 근본 치료로 부족하다. 단기 지원이 오히려 '이 정도면 됐다'는 착각을 낳아 지속 치료를 끊게 만들 위험이 있다."</p>
+          <p class="author">— 임상심리 현장 상담사</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"예산 소진으로 인한 조기 마감은 결국 먼저 알고 빨리 신청하는 사람이 혜택을 독점하는 구조다. 진정한 취약계층에게 먼저 닿도록 전달체계 개선이 선행돼야 한다."</p>
+          <p class="author">— 복지 전달체계 연구자</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 해시태그 -->
+  <div class="hashtag-wrap">
+    <span>#정신건강심리상담바우처</span>
+    <span>#우울증지원</span>
+    <span>#불안장애지원</span>
+    <span>#심리상담무료</span>
+    <span>#64만원상담비</span>
+    <span>#복지로신청</span>
+    <span>#마음투자지원</span>
+    <span>#정신건강복지</span>
+    <span>#저소득층지원</span>
+    <span>#2026복지혜택</span>
+  </div>
+
+  <!-- 면책조항 -->
+  <div class="disclaimer">
+    이 기사는 공개된 정보를 바탕으로 작성되었습니다. 지원 자격·금액·절차는 지자체별로 다를 수 있으며, 정확한 지원 여부는 거주지 행정복지센터 또는 보건복지부 콜센터(☎ 129)에 확인하시기 바랍니다.
+  </div>
+
+  <!-- 작성일 -->
+  <p class="meta">작성일: 2026년 7월 18일 | 출처: 보건복지부, 복지로, 국립정신건강센터</p>
+
+</div>
+</body>
+</html>
