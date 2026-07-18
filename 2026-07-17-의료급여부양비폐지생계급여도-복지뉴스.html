@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>"자식이 잘 산다고 부모가 복지 못 받는 시대 드디어 끝났습니다" — 26년 만에 의료급여 부양비 전면 폐지·생계급여도 완화, 지금 바로 주민센터 가세요! | 오늘의 복지 뉴스</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; background: #f5f7fa; color: #222; line-height: 1.7; }
+    .container { max-width: 720px; margin: 0 auto; padding: 16px; }
+
+    /* 상단 헤더 */
+    .header-bar { background: #2e7d32; color: #fff; padding: 12px 20px; border-radius: 10px 10px 0 0; font-size: 13px; display: flex; justify-content: space-between; align-items: center; }
+    .header-bar .date-tag { background: rgba(255,255,255,0.2); border-radius: 20px; padding: 3px 12px; font-size: 12px; }
+
+    /* 카드 */
+    .card { background: #fff; border-radius: 0 0 12px 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 28px 24px 36px; }
+
+    /* 배지 */
+    .badge { display: inline-block; background: #2e7d32; color: #fff; font-size: 11px; font-weight: 700; border-radius: 20px; padding: 3px 12px; margin-bottom: 10px; }
+
+    /* 메인 제목 */
+    h1 { font-size: 26px; font-weight: 900; color: #1b5e20; line-height: 1.35; margin-bottom: 18px; word-break: keep-all; }
+    h1 span.point { color: #c62828; }
+
+    /* 훅 */
+    .hook { border-left: 5px solid #2e7d32; padding: 14px 16px; background: #e8f5e9; border-radius: 0 8px 8px 0; margin-bottom: 22px; font-size: 15px; word-break: keep-all; }
+    .hook .highlight { background: #ffeb3b; font-weight: 700; padding: 0 3px; }
+
+    /* 핵심 요약 박스 */
+    .summary-box { background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 10px; padding: 18px 20px; margin-bottom: 24px; }
+    .summary-box h2 { color: #1b5e20; font-size: 15px; font-weight: 900; margin-bottom: 10px; }
+    .summary-box ul { list-style: none; padding: 0; }
+    .summary-box ul li { font-size: 14px; padding: 4px 0; color: #2e2e2e; }
+    .summary-box ul li::before { content: "📌 "; }
+
+    /* 섹션 제목 */
+    h2 { font-size: 18px; font-weight: 800; color: #2e7d32; margin: 28px 0 12px; padding-bottom: 6px; border-bottom: 2px solid #a5d6a7; }
+
+    /* 본문 */
+    p { font-size: 14px; margin-bottom: 14px; word-break: keep-all; color: #333; }
+
+    /* 표 */
+    table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 13px; }
+    th { background: #2e7d32; color: #fff; padding: 10px 12px; text-align: left; }
+    td { padding: 9px 12px; border-bottom: 1px solid #e0e0e0; vertical-align: top; }
+    tr:nth-child(even) td { background: #f1f8f1; }
+    td strong { color: #c62828; }
+
+    /* SVG */
+    .svg-wrap { background: #f1f8f1; border-radius: 12px; padding: 20px; margin: 20px 0; text-align: center; }
+    .svg-wrap h3 { font-size: 14px; color: #2e7d32; font-weight: 800; margin-bottom: 14px; }
+
+    /* 신청 단계 */
+    .steps { margin: 16px 0; }
+    .step { display: flex; gap: 14px; margin-bottom: 12px; align-items: flex-start; }
+    .step-num { background: #2e7d32; color: #fff; border-radius: 50%; width: 28px; height: 28px; min-width: 28px; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 13px; }
+    .step-text { font-size: 14px; padding-top: 4px; color: #333; }
+
+    /* 시행 일정 박스 */
+    .deadline-box { border: 2px dashed #f57c00; border-radius: 10px; padding: 16px 20px; margin: 22px 0; background: #fff8e1; }
+    .deadline-box h3 { color: #e65100; font-size: 15px; font-weight: 900; margin-bottom: 10px; }
+    .deadline-box p { font-size: 13px; margin: 0 0 4px; }
+
+    /* 체크리스트 */
+    .checklist { background: #f1f8f1; border-radius: 10px; padding: 18px 20px; margin: 20px 0; }
+    .checklist h3 { font-size: 15px; font-weight: 800; color: #2e7d32; margin-bottom: 12px; }
+    .checklist ul { list-style: none; }
+    .checklist ul li { font-size: 14px; padding: 5px 0; color: #333; }
+    .checklist ul li::before { content: "✓ "; color: #2e7d32; font-weight: 700; }
+
+    /* 주의사항 */
+    .caution { background: #fff3e0; border-left: 4px solid #f57c00; border-radius: 0 8px 8px 0; padding: 16px 18px; margin: 20px 0; font-size: 13px; color: #444; }
+    .caution p { margin-bottom: 6px; }
+
+    /* 문의처 */
+    .contact-box { background: #e8f5e9; border-radius: 10px; padding: 18px 20px; margin: 22px 0; }
+    .contact-box h3 { color: #1b5e20; font-size: 15px; font-weight: 900; margin-bottom: 10px; }
+    .contact-box p { font-size: 13px; margin-bottom: 6px; }
+
+    /* 찬반 론평 */
+    .opinion-section { margin: 30px 0; }
+    .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+    .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+    .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+    .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+    .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+    .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+    .opinion-card:last-child { margin-bottom: 0; }
+    .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+    .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+    /* 해시태그 */
+    .hashtags { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0; }
+    .hashtag { background: #e8f5e9; color: #2e7d32; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 20px; }
+
+    /* 면책조항 */
+    .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12px; color: #888; margin-top: 24px; }
+    .meta { text-align: right; font-size: 12px; color: #aaa; margin-top: 12px; }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 20px; }
+      .card { padding: 18px 14px 28px; }
+      .opinion-grid { grid-template-columns: 1fr; }
+      table { font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="header-bar">
+    <span>오늘의 복지 뉴스 · 제2보</span>
+    <span class="date-tag">2026년 7월 17일 (금)</span>
+  </div>
+  <div class="card">
+
+    <span class="badge">💊 기초생활·의료급여·부양의무자</span>
+
+    <h1>"자식이 잘 산다고 부모가 복지 못 받는 시대 드디어 끝났습니다" — <span class="point">26년 만에</span> 의료급여 부양비 전면 폐지·생계급여도 완화, 지금 바로 주민센터 가세요!</h1>
+
+    <div class="hook">
+      연락이 끊긴 자녀 때문에, 혹은 자녀가 잘 산다는 이유로 <span class="highlight">26년간 의료급여조차 받지 못한 분들</span>이 전국에 수만 명 있습니다. 2026년, 이 불합리한 '가족 책임' 제도가 마침내 무너집니다. 의료급여 부양비 제도가 전면 폐지되고, 생계급여 수급 기준도 완화되어 새로운 수혜자가 대거 발생합니다.
+    </div>
+
+    <div class="summary-box">
+      <h2>📌 이것만 알면 됩니다</h2>
+      <ul>
+        <li>의료급여 '부양비' 제도 26년 만에 전면 폐지 → 자녀 소득 무관하게 본인 기준만 충족되면 OK</li>
+        <li>생계급여 부양의무자 기준 완화 → 약 4만 명 새로 수급 가능, 기준 중위소득 역대 최고 6.51% 인상</li>
+        <li>청년 주거급여 분리지급 확대 → 부모와 따로 사는 19~29세 청년, 별도 임차료 수령 가능</li>
+      </ul>
+    </div>
+
+    <h2>📰 배경 — 왜 26년이 걸렸나</h2>
+    <p>'부양의무자 기준'은 1961년 생활보호법에서 시작된 제도입니다. 국가가 개인을 지원하기 전에 가족이 먼저 부양해야 한다는 개념으로, 부모·자녀·형제·배우자 등 1촌 이내 직계가족의 소득과 재산이 일정 기준 이상이면 본인이 아무리 가난해도 수급에서 제외되어 왔습니다.</p>
+    <p>가족 간 연락이 끊기거나 실질적 부양이 없어도 서류상 가족이 있다는 이유로 수급이 거절된 사례가 수없이 발생했고, 복지 사각지대의 가장 큰 원인으로 지목되어 왔습니다. 보건복지부는 주거·교육급여(2021년), 생계급여 일부(2022년~)에 이어 2026년부터 의료급여 부양비까지 전면 폐지를 단행했습니다.</p>
+
+    <h2>📊 상세 변경 내용</h2>
+    <table>
+      <tr><th>항목</th><th>변경 전</th><th>변경 후(2026년)</th></tr>
+      <tr><td>의료급여 부양비</td><td>부양의무자 소득 일부를 수급자 소득에 합산해 기준 초과 시 탈락</td><td><strong>부양비 제도 전면 폐지</strong> — 부양의무자 소득 합산 없음</td></tr>
+      <tr><td>생계급여 부양의무자</td><td>연 소득 1.3억 or 재산 12억 초과 시 탈락</td><td>기준 완화 → 연 소득 <strong>1억 or 재산 9억</strong> 초과 시만 제한 잔존</td></tr>
+      <tr><td>기준 중위소득</td><td>2025년 4인 가구 609만원</td><td>2026년 4인 가구 <strong>649만원 (+6.51%)</strong> — 역대 최고 인상률</td></tr>
+      <tr><td>생계급여 선정기준</td><td>기준 중위소득 30%</td><td><strong>기준 중위소득 32%</strong>로 확대</td></tr>
+      <tr><td>청년 추가 공제</td><td>29세 이하 + 공제 40만원</td><td><strong>34세 이하 + 공제 60만원</strong>으로 확대</td></tr>
+      <tr><td>예상 신규 수혜자</td><td>—</td><td>생계급여 신규 약 <strong>4만 명</strong>, 의료급여 신규 수만 명 추가 예상</td></tr>
+    </table>
+
+    <!-- SVG 인포그래픽 -->
+    <div class="svg-wrap">
+      <h3>💡 부양의무자 기준 변화 흐름도</h3>
+      <svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:480px;">
+        <rect width="480" height="200" fill="#f1f8f1" rx="10"/>
+
+        <!-- 타임라인 라인 -->
+        <line x1="50" y1="100" x2="430" y2="100" stroke="#2e7d32" stroke-width="3"/>
+
+        <!-- 2021 -->
+        <circle cx="110" cy="100" r="14" fill="#2e7d32"/>
+        <text x="110" y="105" text-anchor="middle" font-size="11" fill="#fff" font-weight="700">2021</text>
+        <text x="110" y="75" text-anchor="middle" font-size="11" fill="#2e7d32" font-weight="700">주거·교육</text>
+        <text x="110" y="88" text-anchor="middle" font-size="11" fill="#555">급여 폐지</text>
+
+        <!-- 2022 -->
+        <circle cx="220" cy="100" r="14" fill="#388e3c"/>
+        <text x="220" y="105" text-anchor="middle" font-size="11" fill="#fff" font-weight="700">2022</text>
+        <text x="220" y="75" text-anchor="middle" font-size="11" fill="#388e3c" font-weight="700">생계급여</text>
+        <text x="220" y="88" text-anchor="middle" font-size="11" fill="#555">기준 완화</text>
+
+        <!-- 2026 -->
+        <circle cx="360" cy="100" r="18" fill="#c62828"/>
+        <text x="360" y="105" text-anchor="middle" font-size="11" fill="#fff" font-weight="700">2026</text>
+        <text x="360" y="75" text-anchor="middle" font-size="11" fill="#c62828" font-weight="900">의료급여</text>
+        <text x="360" y="88" text-anchor="middle" font-size="11" fill="#c62828" font-weight="900">부양비 폐지!</text>
+
+        <!-- 화살표 끝 -->
+        <polygon points="430,95 445,100 430,105" fill="#2e7d32"/>
+
+        <!-- 하단 설명 -->
+        <text x="240" y="155" text-anchor="middle" font-size="12" fill="#333">26년간의 '가족 책임' 제도가 단계적으로 해체됩니다</text>
+        <text x="240" y="175" text-anchor="middle" font-size="12" fill="#c62828" font-weight="700">→ 이제 본인 기준만 충족되면 가족과 무관하게 수급 가능!</text>
+      </svg>
+    </div>
+
+    <h2>📋 신청 방법 (단계별)</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text"><strong>복지로(bokjiro.go.kr) 또는 주민센터 방문</strong> — 본인 또는 가족이 읍·면·동 행정복지센터 방문하거나 온라인 사전 확인 가능</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text"><strong>기초생활수급자 신청서 작성</strong> — 수급 희망 급여 종류(생계·의료·주거·교육) 선택하여 신청, 복지로에서 온라인 신청도 가능</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text"><strong>소득·재산 조사</strong> — 금융정보 조회 동의서 제출, 담당 공무원이 가구 소득인정액 산정 (약 30일 소요)</div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-text"><strong>수급자 선정 통보</strong> — 선정 시 수급 개시월부터 급여 지급 시작, 탈락 시 이의신청 가능</div>
+      </div>
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-text"><strong>청년 주거급여 분리지급은 별도 신청</strong> — 부모 가구 주거급여 수급 중인 경우, 19~29세 미혼 자녀가 독립 거주 시 별도 임차료 신청 가능 (주민센터)</div>
+      </div>
+    </div>
+
+    <div class="deadline-box">
+      <h3>🗓️ 시행 일정 및 적용 시기</h3>
+      <p>✔ <strong>의료급여 부양비 폐지</strong> — 2026년 1월 1일부터 전면 시행 중</p>
+      <p>✔ <strong>기준 중위소득 6.51% 인상</strong> — 2026년 1월 1일부터 적용 중</p>
+      <p>✔ <strong>생계급여 기준 32% 확대</strong> — 2026년 1월 1일부터 적용 중</p>
+      <p>✔ <strong>청년 추가 공제 34세·60만원</strong> — 2026년부터 적용 중</p>
+      <p style="margin-top:8px;color:#c55000;font-size:13px;">⚠️ 지금 당장 신청하지 않으면 소급 적용이 어렵습니다 — 하루라도 빨리 주민센터에 가세요!</p>
+    </div>
+
+    <div class="checklist">
+      <h3>🔍 자가 진단 체크리스트 — 새로 해당될 수 있습니다</h3>
+      <ul>
+        <li>과거 부양의무자(자녀·부모 등) 기준 때문에 수급 신청이 거절됐거나 탈락한 적 있나요?</li>
+        <li>본인 소득·재산은 기준 이하지만 자녀가 잘 산다는 이유로 의료급여를 못 받고 있나요?</li>
+        <li>2026년 기준 4인 가구 월 소득인정액이 약 208만원(중위소득 32%) 이하인가요?</li>
+        <li>부모와 떨어져 사는 19~29세 청년이면서 부모 가구가 주거급여 수급 중인가요?</li>
+        <li>의료비 부담으로 병원을 포기한 적이 있는 저소득 가구인가요?</li>
+      </ul>
+    </div>
+
+    <h2>⚠️ 주의사항</h2>
+    <div class="caution">
+      <p>① 생계급여는 여전히 부양의무자가 연 소득 1억 원 또는 재산 9억 원 초과 시 일부 제한이 남아 있습니다 — 완전 폐지가 아닙니다.</p>
+      <p>② 의료급여는 부양비 폐지이지만, 부양의무자 연 소득 1억 원 또는 재산 9억 원 초과 시 여전히 탈락 기준이 적용됩니다.</p>
+      <p>③ 청년 주거급여 분리지급은 부모 가구 전체가 주거급여 수급자여야 하며, 청년 본인도 별도 임차계약 체결 필요.</p>
+      <p>④ 신청일 기준으로 급여가 개시되므로 자격이 된다면 미루지 말고 즉시 신청하는 것이 유리합니다.</p>
+    </div>
+
+    <div class="contact-box">
+      <h3>📞 담당 기관 및 문의처</h3>
+      <p>🏛️ <strong>읍·면·동 행정복지센터(주민센터)</strong> — 직접 방문 신청, 담당 복지 공무원 상담</p>
+      <p>☎ <strong>보건복지 상담 콜센터 129</strong> — 24시간 운영, 수급 자격 사전 안내</p>
+      <p>💻 <strong>복지로</strong> — www.bokjiro.go.kr (온라인 신청·자격 모의 계산)</p>
+      <p>📱 <strong>복지로 앱</strong> — 스마트폰에서도 수급 자격 확인·신청 가능</p>
+    </div>
+
+    <h2>💬 전문가 찬반 론평</h2>
+    <div class="opinion-section">
+      <div class="opinion-grid">
+        <div class="opinion-pro">
+          <h3>🟢 찬성</h3>
+          <div class="opinion-card">
+            <p class="quote">"부양비 폐지는 단순한 수혜자 확대가 아니라 복지가 가족 관계에 종속되어서는 안 된다는 사회적 선언입니다. 연락이 끊긴 자녀 때문에 치료를 포기한 노인이 더 이상 생기지 않아야 합니다."</p>
+            <p class="author">— 복지정책 연구자</p>
+          </div>
+          <div class="opinion-card">
+            <p class="quote">"기준 중위소득 6.51% 역대 최고 인상과 부양의무자 기준 완화가 맞물리면서, 실질적으로 복지 사각지대를 줄이는 이중 효과가 기대됩니다."</p>
+            <p class="author">— 사회보장 정책 전문가</p>
+          </div>
+        </div>
+        <div class="opinion-con">
+          <h3>🔴 반대 / 우려</h3>
+          <div class="opinion-card">
+            <p class="quote">"부양비 폐지는 방향성은 옳지만, 신규 수급자 급증에 대비한 재정 확보 계획이 충분히 공개되지 않았습니다. 의료급여 재정이 적자 구조인 상황에서 지속가능성을 먼저 점검해야 합니다."</p>
+            <p class="author">— 재정·사회복지 연구자</p>
+          </div>
+          <div class="opinion-card">
+            <p class="quote">"생계급여 부양의무자 기준은 여전히 완전 폐지가 아닙니다. 1억 원·9억 원 기준도 고소득·고자산 가구에만 해당되는 것처럼 보이나 현장에서는 이 기준으로 인한 탈락 사례가 상당수 존재합니다."</p>
+            <p class="author">— 사회복지 현장 활동가</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hashtags">
+      <span class="hashtag">#부양의무자폐지</span>
+      <span class="hashtag">#의료급여부양비폐지</span>
+      <span class="hashtag">#생계급여확대</span>
+      <span class="hashtag">#기초생활수급자</span>
+      <span class="hashtag">#복지사각지대</span>
+      <span class="hashtag">#2026복지변경</span>
+      <span class="hashtag">#기준중위소득인상</span>
+      <span class="hashtag">#청년주거급여</span>
+      <span class="hashtag">#주민센터신청</span>
+      <span class="hashtag">#복지로</span>
+    </div>
+
+    <div class="disclaimer">
+      이 기사는 공개된 정보를 바탕으로 작성되었습니다. 정확한 지원 여부는 담당 기관에 확인하세요. 수급 자격은 개인별 소득·재산 산정 방식에 따라 다를 수 있으며, 주민센터 담당 공무원 또는 복지 상담 콜센터(☎129)를 통해 사전 확인을 권장합니다.
+    </div>
+
+    <p class="meta">작성일: 2026년 7월 17일 | 출처: 보건복지부, 비마이너, 경향신문, 노컷뉴스, 복지로</p>
+  </div>
+</div>
+</body>
+</html>
