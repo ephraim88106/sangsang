@@ -121,50 +121,61 @@
 
 
     <style>
-      .dual-section-wrapper{
-        display:grid;
-        grid-template-columns:1fr 1fr;
-        gap:24px;
-        align-items:start;
-        max-width:1100px;
-        margin:0 auto 36px;
+      /* ── 2컬럼 나란히 wrapper ── */
+      .dual-section-wrapper {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 24px;
+        align-items: start;
+        max-width: 1100px;
+        margin: 0 auto 36px;
+        padding: 0 16px;
+        box-sizing: border-box;
       }
-      .dual-section-wrapper .newsletter-section{margin:0;}
-      /* 헤드라인 카드 — 사이드 모드에서 compact */
-      .dual-section-wrapper .headline-grid{
-        display:flex;
-        flex-direction:column;
-        gap:14px;
+      /* newsletter-section 의 개별 max-width 무력화 */
+      .dual-section-wrapper .newsletter-section {
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 1.6rem 1.4rem !important;
+        box-sizing: border-box;
       }
-      .dual-section-wrapper .headline-card{
-        padding:14px 16px;
+      /* 헤드라인 그리드 → 1컬럼 */
+      .dual-section-wrapper .headline-grid {
+        display: flex !important;
+        flex-direction: column;
+        gap: 12px;
       }
-      .dual-section-wrapper .headline-title{
-        font-size:14px;
-        -webkit-line-clamp:2;
-        display:-webkit-box;
-        -webkit-box-orient:vertical;
-        overflow:hidden;
+      /* 헤드라인 카드 compact */
+      .dual-section-wrapper .headline-card {
+        padding: 12px 14px !important;
       }
-      .dual-section-wrapper .headline-summary{
-        display:none;
+      .dual-section-wrapper .headline-title {
+        font-size: 14px !important;
+        line-height: 1.45;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
       }
-      /* 더보기 버튼 */
-      .more-link-row{
-        text-align:right;
-        padding:10px 4px 0;
+      .dual-section-wrapper .headline-summary { display: none !important; }
+      /* 더보기 */
+      .more-link-row {
+        text-align: right;
+        padding: 10px 4px 0;
       }
-      .more-link-row a{
-        font-size:13px;
-        color:#1a6b3c;
-        font-weight:700;
-        text-decoration:none;
-        border-bottom:1px solid #1a6b3c;
-        padding-bottom:1px;
+      .more-link-row a {
+        font-size: 13px;
+        color: #1a6b3c;
+        font-weight: 700;
+        text-decoration: none;
+        border-bottom: 1px solid #1a6b3c;
+        padding-bottom: 1px;
       }
-      @media(max-width:760px){
-        .dual-section-wrapper{
-          grid-template-columns:1fr;
+      /* 모바일 → 1컬럼 */
+      @media (max-width: 760px) {
+        .dual-section-wrapper {
+          grid-template-columns: 1fr !important;
         }
       }
     </style>
