@@ -76,6 +76,151 @@
       <p class="subscribe-note">이메일 입력 → 1분이면 구독 완료. 매일 아침 7시 배달.</p>
     </section>
 
+    <!-- ── 📊 시황 티커 (실시간 지수) ── -->
+    <div class="market-ticker-bar">
+      <div class="ticker-inner">
+        <span class="ticker-label">📊 오늘의 시장</span>
+        <a href="2026-07-23-주식보고서.html" class="ticker-item up">
+          <span class="ti-name">코스피</span>
+          <span class="ti-val">7,096.89</span>
+          <span class="ti-chg">▲ +4.40%</span>
+        </a>
+        <a href="2026-07-23-주식보고서.html" class="ticker-item up">
+          <span class="ti-name">코스닥</span>
+          <span class="ti-val">790.28</span>
+          <span class="ti-chg">▲ +5.22%</span>
+        </a>
+        <a href="2026-07-23-주식보고서.html" class="ticker-item up">
+          <span class="ti-name">삼성전자</span>
+          <span class="ti-val">268,000</span>
+          <span class="ti-chg">▲ +2.88%</span>
+        </a>
+        <a href="2026-07-23-주식보고서.html" class="ticker-item up">
+          <span class="ti-name">SK하이닉스</span>
+          <span class="ti-val">—</span>
+          <span class="ti-chg">▲ 급등</span>
+        </a>
+        <span class="ticker-note">2026.07.23 종가 기준</span>
+      </div>
+    </div>
+    <style>
+      .market-ticker-bar{background:#0f2027;background:linear-gradient(90deg,#0f2027,#203a43,#2c5364);padding:14px 20px;border-radius:12px;margin:0 auto 28px;max-width:900px;}
+      .ticker-inner{display:flex;align-items:center;gap:0;flex-wrap:wrap;gap:6px 18px;}
+      .ticker-label{font-size:13px;font-weight:800;color:#ffd700;letter-spacing:1px;margin-right:6px;white-space:nowrap;}
+      .ticker-item{display:flex;align-items:center;gap:6px;text-decoration:none;padding:6px 14px;border-radius:20px;transition:background 0.2s;}
+      .ticker-item:hover{background:rgba(255,255,255,0.1);}
+      .ticker-item.up .ti-chg{color:#2ecc71;}
+      .ticker-item.down .ti-chg{color:#e74c3c;}
+      .ti-name{font-size:12px;color:#b2bec3;font-weight:600;white-space:nowrap;}
+      .ti-val{font-size:15px;font-weight:800;color:#fff;margin:0 2px;white-space:nowrap;}
+      .ti-chg{font-size:13px;font-weight:700;white-space:nowrap;}
+      .ticker-note{font-size:11px;color:#636e72;margin-left:auto;white-space:nowrap;}
+      @media(max-width:600px){.ticker-note{display:none;}.ticker-item{padding:5px 8px;}.ti-val{font-size:13px;}}
+    </style>
+
+
+    <!-- ── 📈 오늘의 증시 ── -->
+    <section class="newsletter-section">
+      <div class="ns-header">
+        <span class="ns-emoji">📈</span>
+        <h2 class="ns-title">오늘의 증시</h2>
+      </div>
+
+      <div class="market-list">
+        <a href="2026-07-23-주식보고서.html" class="market-item">
+          <span class="market-date">07.23</span>
+          <div>
+            <p class="market-title">🔥 코스피 4.4% 폭등! 알파벳 300조 AI 베팅이 K-반도체 깨웠다 | 2026-07-23 시장 브리핑</p>
+            <p class="market-sub">닷새 만에 7000 탈환 · 외국인 2조원 쓸어담아 · 삼성·하이닉스 동반 급등</p>
+          </div>
+          <span class="market-arrow">→</span>
+        </a>
+
+        <a href="2026-07-22-주식보고서.html" class="market-item">
+          <span class="market-date">07.22</span>
+          <div>
+            <p class="market-title">📉 급등 후 급반락! 테슬라·알파벳 폭탄 앞에 시장이 떨었다 | 2026년 7월 22일 시장 브리핑</p>
+            <p class="market-sub">코스피 5% 급등 출발 → 0.74% 마감의 충격적 반전 | 나스닥은 강보합 | 원달러 1,480원 돌파 | 테슬라·알파벳 실적발표 초읽기</p>
+          </div>
+          <span class="market-arrow">→</span>
+        </a>
+
+        <a href="2026-07-21-주식보고서.html" class="market-item">
+          <span class="market-date">07.21</span>
+          <div>
+            <p class="market-title">🔥 코스피 사이드카 발동! 반도체 수출 폭발에 6700 탈환 — 7월 21일 시장 브리핑</p>
+            <p class="market-sub">삼성전자 +6.15% · SK하이닉스 +4.08% · 외국인·기관 동반 매수 2조↑</p>
+          </div>
+          <span class="market-arrow">→</span>
+        </a>
+
+        <a href="2026-07-20-주식보고서.html" class="market-item">
+          <span class="market-date">07.20</span>
+          <div>
+            <p class="market-title">📉 AI 버블 붕괴 신호탄? 코스피 4.46% 폭락·사이드카 발동 — 2026년 7월 20일 시장 브리핑</p>
+            <p class="market-sub">AI 버블 우려+미이란 충돌로 코스피 4.46% 폭락·사이드카 동시 발동. 기관 1.1조 투매.</p>
+          </div>
+          <span class="market-arrow">→</span>
+        </a>
+
+        <a href="2026-07-19-주식보고서.html" class="market-item">
+          <span class="market-date">07.19</span>
+          <div>
+            <p class="market-title">🔥 반도체 쇼크 + 이란 공습 = 코스피 -6.38% 대폭락 — 7월 19일 시장 브리핑</p>
+            <p class="market-sub">SK하이닉스 <strong>-11.53%</strong>·삼성전자 <strong>-8.77%</strong> — 코어위브 메모리 헤지 검토 + 중국 CXMT 14조원 증설이 HBM 프리미엄 밸류를 무너뜨렸다. 이란 공습으로 WTI <strong>$82.49(+4.48%)</strong> 급등, 금 <strong>$4,018</strong> 사상 최고권 유지. 코스피 <strong>6,820(기준일 7/16)</strong>, 제헌절·주말 휴장 후 7월 20일 재개장이 최대 변수.</p>
+          </div>
+          <span class="market-arrow">→</span>
+        </a>
+
+        <a href="2026-07-18-주식보고서.html" class="market-item">
+          <span class="market-date">07.18</span>
+          <div>
+            <p class="market-title">🚨 서킷브레이커 발동 + AI 거품 붕괴 + 中 Moonshot 충격 — 7월 18일 시장 브리핑</p>
+            <p class="market-sub">Moonshot AI의 급성장으로 AI 거품론이 재점화되며 나스닥 <strong>-1.40%</strong> 급락. 코스피는 <strong>6,820(7/16 종가)</strong>에서 매도 사이드카까지 발동. S&amp;P500 <strong>7,457.69(-1.01%)</strong>, 다우 <strong>52,146(-0.77%)</strong> 동반 하락. 원/달러 <strong>1,487원</strong>, WTI 이란 리스크로 급등세 지속.</p>
+          </div>
+          <span class="market-arrow">→</span>
+        </a>
+
+        <a href="2026-07-17-주식보고서.html" class="market-item">
+          <span class="market-date">07.17</span>
+          <div>
+            <p class="market-title">🔥 코스피 하루 만에 7000 붕괴… 반도체 쇼크가 시장을 삼켰다 — 7월 17일 시장 브리핑</p>
+            <p class="market-sub">중국 창신메모리(CXMT)가 <strong>14조 7,000억 원</strong> 규모 IPO를 완료하며 메모리 시장 경쟁자로 등장, AI 클라우드 기업 코어위브의 메모리 헤징 검토 소식까지 겹치며 코스피가 <strong>-6.37%(6,820)</strong> 폭락했다. 외국인 <strong>1조 3,900억 원</strong>·기관 <strong>2조 3,700억 원</strong>이 동반 순매도했고 전기전자 섹터는 <strong>-9.4%</strong> 급락했다. 원/달러 환율 <strong>1,478원</strong>, 제헌절 임시공휴일로 증시는 17일 휴장 — 다음 거래일 7월 20일 재개장이 최대 변수다.</p>
+          </div>
+          <span class="market-arrow">→</span>
+        </a>
+
+        <a href="2026-07-16-주식보고서.html" class="market-item">
+          <span class="market-date">07.16</span>
+          <div>
+            <p class="market-title">🔥 코스피 7000선 붕괴! 반도체 대학살 — 7월 16일 시장 브리핑</p>
+            <p class="market-sub">메타가 AI 인프라 잉여 컴퓨팅을 외부 임대하겠다고 밝히며 AI 캐펙스 과잉투자 공포가 확산, 코스피가 <strong>-6.37%(6,820)</strong> 폭락했다. 삼성전자 <strong>-8.8%</strong>, SK하이닉스 <strong>-11.5%</strong>로 반도체 대학살이 벌어졌고 매도 사이드카까지 발동됐다. 외국인 <strong>1조 7,835억 원</strong>·기관 <strong>2조 1,487억 원</strong>이 동반 순매도했지만 개인이 <strong>3조 7,593억 원</strong>을 순매수하며 방어에 나섰다. 원/달러 환율은 <strong>1,499원</strong>까지 오르며 이중 압박이 이어졌다.</p>
+          </div>
+          <span class="market-arrow">→</span>
+        </a>
+
+        <a href="2026-07-15-주식보고서.html" class="market-item">
+          <span class="market-date">07.15</span>
+          <div>
+            <p class="market-title">🔥 코스피 7284 폭등! 외국인 2.3조 쓸어담다 — 7월 15일 시장 브리핑</p>
+            <p class="market-sub">미국 6월 CPI가 <strong>3.5%</strong>로 예상치를 하회하며 인플레이션 우려가 완화되자 코스피가 <strong>+6.24%(7,284.41)</strong> 폭등했다. SK하이닉스 ADR 뉴욕 급등(<strong>+27%</strong>)과 ASML의 가이던스 상향으로 반도체 랠리가 재점화됐고, 외국인은 <strong>2조 3,000억 원</strong>을 순매수했다. 다만 트럼프의 이란 선박 봉쇄 재도입 선언으로 WTI가 급등, 지정학 리스크는 여전한 변수로 남았다.</p>
+          </div>
+          <span class="market-arrow">→</span>
+        </a>
+
+        <a href="2026-07-14-주식보고서.html" class="market-item">
+          <span class="market-date">07.14</span>
+          <div>
+            <p class="market-title">🚨 호르무즈 봉쇄 3일째·CPI 서프라이즈 — 코스피, 전일 대폭락 딛고 반등 — 7월 14일 시장 브리핑</p>
+            <p class="market-sub">트럼프 대통령이 호르무즈 해협 통행 선박에 화물가치 <strong>20% 통행료</strong>를 부과하겠다고 선언, 미군의 이란 시설 <strong>3일 연속 폭격</strong>에 WTI가 <strong>$80.55(+3.0%)</strong>까지 급등했다. 코스피는 전일 -8.95% 폭락의 기술적 되돌림으로 <strong>+0.73%(6,856.83)</strong> 반등했지만 코스닥은 <strong>-1.92%</strong> 추가 하락했다. 美 6월 CPI는 <strong>3.5%</strong>로 시장 예상에 부합했으나, 유가 재급등이 7월 CPI에 반영될 경우 연준의 금리 인하 기대가 흔들릴 수 있다는 경고가 나온다.</p>
+          </div>
+          <span class="market-arrow">→</span>
+        </a>
+
+      </div>
+    </section>
+
+
     <!-- ── 📰 오늘의 헤드라인 ── -->
     <section class="newsletter-section">
       <div class="ns-header">
@@ -195,106 +340,6 @@
 </div>
     </section>
 
-    <!-- ── 📈 오늘의 증시 ── -->
-    <section class="newsletter-section">
-      <div class="ns-header">
-        <span class="ns-emoji">📈</span>
-        <h2 class="ns-title">오늘의 증시</h2>
-      </div>
-
-      <div class="market-list">
-        <a href="2026-07-23-주식보고서.html" class="market-item">
-          <span class="market-date">07.23</span>
-          <div>
-            <p class="market-title">🔥 코스피 4.4% 폭등! 알파벳 300조 AI 베팅이 K-반도체 깨웠다 | 2026-07-23 시장 브리핑</p>
-            <p class="market-sub">닷새 만에 7000 탈환 · 외국인 2조원 쓸어담아 · 삼성·하이닉스 동반 급등</p>
-          </div>
-          <span class="market-arrow">→</span>
-        </a>
-
-        <a href="2026-07-22-주식보고서.html" class="market-item">
-          <span class="market-date">07.22</span>
-          <div>
-            <p class="market-title">📉 급등 후 급반락! 테슬라·알파벳 폭탄 앞에 시장이 떨었다 | 2026년 7월 22일 시장 브리핑</p>
-            <p class="market-sub">코스피 5% 급등 출발 → 0.74% 마감의 충격적 반전 | 나스닥은 강보합 | 원달러 1,480원 돌파 | 테슬라·알파벳 실적발표 초읽기</p>
-          </div>
-          <span class="market-arrow">→</span>
-        </a>
-
-        <a href="2026-07-21-주식보고서.html" class="market-item">
-          <span class="market-date">07.21</span>
-          <div>
-            <p class="market-title">🔥 코스피 사이드카 발동! 반도체 수출 폭발에 6700 탈환 — 7월 21일 시장 브리핑</p>
-            <p class="market-sub">삼성전자 +6.15% · SK하이닉스 +4.08% · 외국인·기관 동반 매수 2조↑</p>
-          </div>
-          <span class="market-arrow">→</span>
-        </a>
-
-        <a href="2026-07-20-주식보고서.html" class="market-item">
-          <span class="market-date">07.20</span>
-          <div>
-            <p class="market-title">📉 AI 버블 붕괴 신호탄? 코스피 4.46% 폭락·사이드카 발동 — 2026년 7월 20일 시장 브리핑</p>
-            <p class="market-sub">AI 버블 우려+미이란 충돌로 코스피 4.46% 폭락·사이드카 동시 발동. 기관 1.1조 투매.</p>
-          </div>
-          <span class="market-arrow">→</span>
-        </a>
-
-        <a href="2026-07-19-주식보고서.html" class="market-item">
-          <span class="market-date">07.19</span>
-          <div>
-            <p class="market-title">🔥 반도체 쇼크 + 이란 공습 = 코스피 -6.38% 대폭락 — 7월 19일 시장 브리핑</p>
-            <p class="market-sub">SK하이닉스 <strong>-11.53%</strong>·삼성전자 <strong>-8.77%</strong> — 코어위브 메모리 헤지 검토 + 중국 CXMT 14조원 증설이 HBM 프리미엄 밸류를 무너뜨렸다. 이란 공습으로 WTI <strong>$82.49(+4.48%)</strong> 급등, 금 <strong>$4,018</strong> 사상 최고권 유지. 코스피 <strong>6,820(기준일 7/16)</strong>, 제헌절·주말 휴장 후 7월 20일 재개장이 최대 변수.</p>
-          </div>
-          <span class="market-arrow">→</span>
-        </a>
-
-        <a href="2026-07-18-주식보고서.html" class="market-item">
-          <span class="market-date">07.18</span>
-          <div>
-            <p class="market-title">🚨 서킷브레이커 발동 + AI 거품 붕괴 + 中 Moonshot 충격 — 7월 18일 시장 브리핑</p>
-            <p class="market-sub">Moonshot AI의 급성장으로 AI 거품론이 재점화되며 나스닥 <strong>-1.40%</strong> 급락. 코스피는 <strong>6,820(7/16 종가)</strong>에서 매도 사이드카까지 발동. S&amp;P500 <strong>7,457.69(-1.01%)</strong>, 다우 <strong>52,146(-0.77%)</strong> 동반 하락. 원/달러 <strong>1,487원</strong>, WTI 이란 리스크로 급등세 지속.</p>
-          </div>
-          <span class="market-arrow">→</span>
-        </a>
-
-        <a href="2026-07-17-주식보고서.html" class="market-item">
-          <span class="market-date">07.17</span>
-          <div>
-            <p class="market-title">🔥 코스피 하루 만에 7000 붕괴… 반도체 쇼크가 시장을 삼켰다 — 7월 17일 시장 브리핑</p>
-            <p class="market-sub">중국 창신메모리(CXMT)가 <strong>14조 7,000억 원</strong> 규모 IPO를 완료하며 메모리 시장 경쟁자로 등장, AI 클라우드 기업 코어위브의 메모리 헤징 검토 소식까지 겹치며 코스피가 <strong>-6.37%(6,820)</strong> 폭락했다. 외국인 <strong>1조 3,900억 원</strong>·기관 <strong>2조 3,700억 원</strong>이 동반 순매도했고 전기전자 섹터는 <strong>-9.4%</strong> 급락했다. 원/달러 환율 <strong>1,478원</strong>, 제헌절 임시공휴일로 증시는 17일 휴장 — 다음 거래일 7월 20일 재개장이 최대 변수다.</p>
-          </div>
-          <span class="market-arrow">→</span>
-        </a>
-
-        <a href="2026-07-16-주식보고서.html" class="market-item">
-          <span class="market-date">07.16</span>
-          <div>
-            <p class="market-title">🔥 코스피 7000선 붕괴! 반도체 대학살 — 7월 16일 시장 브리핑</p>
-            <p class="market-sub">메타가 AI 인프라 잉여 컴퓨팅을 외부 임대하겠다고 밝히며 AI 캐펙스 과잉투자 공포가 확산, 코스피가 <strong>-6.37%(6,820)</strong> 폭락했다. 삼성전자 <strong>-8.8%</strong>, SK하이닉스 <strong>-11.5%</strong>로 반도체 대학살이 벌어졌고 매도 사이드카까지 발동됐다. 외국인 <strong>1조 7,835억 원</strong>·기관 <strong>2조 1,487억 원</strong>이 동반 순매도했지만 개인이 <strong>3조 7,593억 원</strong>을 순매수하며 방어에 나섰다. 원/달러 환율은 <strong>1,499원</strong>까지 오르며 이중 압박이 이어졌다.</p>
-          </div>
-          <span class="market-arrow">→</span>
-        </a>
-
-        <a href="2026-07-15-주식보고서.html" class="market-item">
-          <span class="market-date">07.15</span>
-          <div>
-            <p class="market-title">🔥 코스피 7284 폭등! 외국인 2.3조 쓸어담다 — 7월 15일 시장 브리핑</p>
-            <p class="market-sub">미국 6월 CPI가 <strong>3.5%</strong>로 예상치를 하회하며 인플레이션 우려가 완화되자 코스피가 <strong>+6.24%(7,284.41)</strong> 폭등했다. SK하이닉스 ADR 뉴욕 급등(<strong>+27%</strong>)과 ASML의 가이던스 상향으로 반도체 랠리가 재점화됐고, 외국인은 <strong>2조 3,000억 원</strong>을 순매수했다. 다만 트럼프의 이란 선박 봉쇄 재도입 선언으로 WTI가 급등, 지정학 리스크는 여전한 변수로 남았다.</p>
-          </div>
-          <span class="market-arrow">→</span>
-        </a>
-
-        <a href="2026-07-14-주식보고서.html" class="market-item">
-          <span class="market-date">07.14</span>
-          <div>
-            <p class="market-title">🚨 호르무즈 봉쇄 3일째·CPI 서프라이즈 — 코스피, 전일 대폭락 딛고 반등 — 7월 14일 시장 브리핑</p>
-            <p class="market-sub">트럼프 대통령이 호르무즈 해협 통행 선박에 화물가치 <strong>20% 통행료</strong>를 부과하겠다고 선언, 미군의 이란 시설 <strong>3일 연속 폭격</strong>에 WTI가 <strong>$80.55(+3.0%)</strong>까지 급등했다. 코스피는 전일 -8.95% 폭락의 기술적 되돌림으로 <strong>+0.73%(6,856.83)</strong> 반등했지만 코스닥은 <strong>-1.92%</strong> 추가 하락했다. 美 6월 CPI는 <strong>3.5%</strong>로 시장 예상에 부합했으나, 유가 재급등이 7월 CPI에 반영될 경우 연준의 금리 인하 기대가 흔들릴 수 있다는 경고가 나온다.</p>
-          </div>
-          <span class="market-arrow">→</span>
-        </a>
-
-      </div>
-    </section>
 
     <!-- ── 🔍 깊이 보기 ── -->
     <section class="newsletter-section">
