@@ -119,6 +119,57 @@
     </style>
 
 
+
+    <style>
+      .dual-section-wrapper{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:24px;
+        align-items:start;
+        max-width:1100px;
+        margin:0 auto 36px;
+      }
+      .dual-section-wrapper .newsletter-section{margin:0;}
+      /* 헤드라인 카드 — 사이드 모드에서 compact */
+      .dual-section-wrapper .headline-grid{
+        display:flex;
+        flex-direction:column;
+        gap:14px;
+      }
+      .dual-section-wrapper .headline-card{
+        padding:14px 16px;
+      }
+      .dual-section-wrapper .headline-title{
+        font-size:14px;
+        -webkit-line-clamp:2;
+        display:-webkit-box;
+        -webkit-box-orient:vertical;
+        overflow:hidden;
+      }
+      .dual-section-wrapper .headline-summary{
+        display:none;
+      }
+      /* 더보기 버튼 */
+      .more-link-row{
+        text-align:right;
+        padding:10px 4px 0;
+      }
+      .more-link-row a{
+        font-size:13px;
+        color:#1a6b3c;
+        font-weight:700;
+        text-decoration:none;
+        border-bottom:1px solid #1a6b3c;
+        padding-bottom:1px;
+      }
+      @media(max-width:760px){
+        .dual-section-wrapper{
+          grid-template-columns:1fr;
+        }
+      }
+    </style>
+
+    <div class="dual-section-wrapper">
     <!-- ── 📈 오늘의 증시 ── -->
     <section class="newsletter-section">
       <div class="ns-header">
@@ -172,55 +223,10 @@
           <span class="market-arrow">→</span>
         </a>
 
-        <a href="2026-07-18-주식보고서.html" class="market-item">
-          <span class="market-date">07.18</span>
-          <div>
-            <p class="market-title">🚨 서킷브레이커 발동 + AI 거품 붕괴 + 中 Moonshot 충격 — 7월 18일 시장 브리핑</p>
-            <p class="market-sub">Moonshot AI의 급성장으로 AI 거품론이 재점화되며 나스닥 <strong>-1.40%</strong> 급락. 코스피는 <strong>6,820(7/16 종가)</strong>에서 매도 사이드카까지 발동. S&amp;P500 <strong>7,457.69(-1.01%)</strong>, 다우 <strong>52,146(-0.77%)</strong> 동반 하락. 원/달러 <strong>1,487원</strong>, WTI 이란 리스크로 급등세 지속.</p>
-          </div>
-          <span class="market-arrow">→</span>
-        </a>
-
-        <a href="2026-07-17-주식보고서.html" class="market-item">
-          <span class="market-date">07.17</span>
-          <div>
-            <p class="market-title">🔥 코스피 하루 만에 7000 붕괴… 반도체 쇼크가 시장을 삼켰다 — 7월 17일 시장 브리핑</p>
-            <p class="market-sub">중국 창신메모리(CXMT)가 <strong>14조 7,000억 원</strong> 규모 IPO를 완료하며 메모리 시장 경쟁자로 등장, AI 클라우드 기업 코어위브의 메모리 헤징 검토 소식까지 겹치며 코스피가 <strong>-6.37%(6,820)</strong> 폭락했다. 외국인 <strong>1조 3,900억 원</strong>·기관 <strong>2조 3,700억 원</strong>이 동반 순매도했고 전기전자 섹터는 <strong>-9.4%</strong> 급락했다. 원/달러 환율 <strong>1,478원</strong>, 제헌절 임시공휴일로 증시는 17일 휴장 — 다음 거래일 7월 20일 재개장이 최대 변수다.</p>
-          </div>
-          <span class="market-arrow">→</span>
-        </a>
-
-        <a href="2026-07-16-주식보고서.html" class="market-item">
-          <span class="market-date">07.16</span>
-          <div>
-            <p class="market-title">🔥 코스피 7000선 붕괴! 반도체 대학살 — 7월 16일 시장 브리핑</p>
-            <p class="market-sub">메타가 AI 인프라 잉여 컴퓨팅을 외부 임대하겠다고 밝히며 AI 캐펙스 과잉투자 공포가 확산, 코스피가 <strong>-6.37%(6,820)</strong> 폭락했다. 삼성전자 <strong>-8.8%</strong>, SK하이닉스 <strong>-11.5%</strong>로 반도체 대학살이 벌어졌고 매도 사이드카까지 발동됐다. 외국인 <strong>1조 7,835억 원</strong>·기관 <strong>2조 1,487억 원</strong>이 동반 순매도했지만 개인이 <strong>3조 7,593억 원</strong>을 순매수하며 방어에 나섰다. 원/달러 환율은 <strong>1,499원</strong>까지 오르며 이중 압박이 이어졌다.</p>
-          </div>
-          <span class="market-arrow">→</span>
-        </a>
-
-        <a href="2026-07-15-주식보고서.html" class="market-item">
-          <span class="market-date">07.15</span>
-          <div>
-            <p class="market-title">🔥 코스피 7284 폭등! 외국인 2.3조 쓸어담다 — 7월 15일 시장 브리핑</p>
-            <p class="market-sub">미국 6월 CPI가 <strong>3.5%</strong>로 예상치를 하회하며 인플레이션 우려가 완화되자 코스피가 <strong>+6.24%(7,284.41)</strong> 폭등했다. SK하이닉스 ADR 뉴욕 급등(<strong>+27%</strong>)과 ASML의 가이던스 상향으로 반도체 랠리가 재점화됐고, 외국인은 <strong>2조 3,000억 원</strong>을 순매수했다. 다만 트럼프의 이란 선박 봉쇄 재도입 선언으로 WTI가 급등, 지정학 리스크는 여전한 변수로 남았다.</p>
-          </div>
-          <span class="market-arrow">→</span>
-        </a>
-
-        <a href="2026-07-14-주식보고서.html" class="market-item">
-          <span class="market-date">07.14</span>
-          <div>
-            <p class="market-title">🚨 호르무즈 봉쇄 3일째·CPI 서프라이즈 — 코스피, 전일 대폭락 딛고 반등 — 7월 14일 시장 브리핑</p>
-            <p class="market-sub">트럼프 대통령이 호르무즈 해협 통행 선박에 화물가치 <strong>20% 통행료</strong>를 부과하겠다고 선언, 미군의 이란 시설 <strong>3일 연속 폭격</strong>에 WTI가 <strong>$80.55(+3.0%)</strong>까지 급등했다. 코스피는 전일 -8.95% 폭락의 기술적 되돌림으로 <strong>+0.73%(6,856.83)</strong> 반등했지만 코스닥은 <strong>-1.92%</strong> 추가 하락했다. 美 6월 CPI는 <strong>3.5%</strong>로 시장 예상에 부합했으나, 유가 재급등이 7월 CPI에 반영될 경우 연준의 금리 인하 기대가 흔들릴 수 있다는 경고가 나온다.</p>
-          </div>
-          <span class="market-arrow">→</span>
-        </a>
-
-      </div>
+              </div>
     </section>
 
-
+      <div class="more-link-row"><a href="#market-all">증시 전체 보기 →</a></div>
     <!-- ── 📰 오늘의 헤드라인 ── -->
     <section class="newsletter-section">
       <div class="ns-header">
@@ -265,82 +271,17 @@
             <span class="headline-link">→ 전문 읽기</span>
           </div>
         </a>
-<a href="2026-07-21-오세훈선고D1서울시장직위기.html" class="headline-card">
-          <span class="card-tag" data-cat="정치">정치·사법</span>
-          <h3 class="headline-title">내일 오후 2시 법정에 선다 — 오세훈 서울시장 운명의 선고, 1000만 서울시민이 지켜본다</h3>
-          <p class="headline-summary">3,300만원 여론조사비 대납 의혹으로 기소된 오세훈 서울시장, 내일 1심 선고. 유죄 확정 시 시장직 상실·재선거, 무죄 시 대권주자 급부상 — 명태균 게이트의 마지막 퍼즐.</p>
-          <div class="headline-meta">
-            <span>2026년 07월 21일</span>
-            <span class="headline-link">→ 전문 읽기</span>
-          </div>
-        </a>
-        <a href="2026-07-20-학폭대입75불합격충격.html" class="headline-card">
-          <span class="card-tag" data-cat="교육">교육·입시</span>
-          <h3 class="headline-title">"수능 1등급도 소용없다" — 학폭 기록 한 줄이 대학 문 닫았다: 75% 불합격의 충격 진실</h3>
-          <p class="headline-summary">학폭 대입 의무반영 첫 해, 실제 불합격률 75% 충격 공개. 반성문 한 장으로 기록 삭제, 피해자는 평생 낙인 — 입시 공정성인가, 연좌제인가.</p>
-          <div class="headline-meta">
-            <span>2026년 07월 20일</span>
-            <span class="headline-link">→ 전문 읽기</span>
-          </div>
-        </a>
-        <a href="2026-07-19-전국민공짜AI세금대납논란.html" class="headline-card">
-          <span class="card-tag" data-cat="기술">기술·AI</span>
-          <h3 class="headline-title">이재명 "전국민 공짜 AI 나눠줘" 명령했는데…대기업들이 벌벌 떠는 이유 [팩트체크]</h3>
-          <p class="headline-summary">세금 9.9조원으로 챗GPT 대항마를 4개월 만에? 네카오·통신사 총출동했지만 세금 대납 논란·성능 격차·2027년 이후 지원 공백 — 공짜 AI의 불편한 진실.</p>
-          <div class="headline-meta">
-            <span>2026년 07월 19일</span>
-            <span class="headline-link">→ 전문 읽기</span>
-          </div>
-        </a>
-
-        <a href="2026-07-19-청각장애등록만하면5년에한번-복지뉴스.html" class="headline-card">
-          <span class="card-tag" data-cat="복지">장애인복지</span>
-          <h3 class="headline-title">"보청기 100만원 넘는다고 포기했다고요?" 나라가 최대 131만원 줍니다 — 청각장애 등록만 하면 5년에 한 번 공짜, 지금 신청 안 하면 평생 손해!</h3>
-          <p class="headline-summary">어머니 귀가 안 들린다고 값비싼 보청기 앞에서 포기하셨나요? 이미 보청기를 사고 나서야 지원금이 있다는 걸 알게 되셨나요? 청각장애 등록만 되어 있으면 국가가 최대 131만원을 줍니다. 기초생활수급자·차상위계층은 100% 전액 지원, 일반 건강보험 가입자도 90%(약 118만원)를 돌려받을 수 있습니다. 이 사실을 몰라서 수백만원을 그냥 낸 분들이 지금 이 순간에도 있습니다.</p>
-          <div class="headline-meta">
-            <span>2026년 07월 19일</span>
-            <span class="headline-link">→ 전문 읽기</span>
-          </div>
-        </a>
-
-        <a href="2026-07-19-학대피해청소년쉼터입소시가해-복지뉴스.html" class="headline-card">
-          <span class="card-tag" data-cat="복지">청년복지</span>
-          <h3 class="headline-title">"엄마가 때렸는데 엄마한테 전화해요?" 이제 절대 안 합니다 — 학대피해 청소년 쉼터 입소 시 가해 부모 통보 금지, 7월 1일부터 법으로!</h3>
-          <p class="headline-summary">집에서 맞고 도망쳐온 아이한테, 쉼터가 "보호자한테 알려야 해요"라고 했습니다. 그 보호자가 바로 가해자였는데도요. 이 끔찍한 일이 반복돼 왔습니다. 2026년 7월 1일부터 드디어 법이 바뀌었습니다. 가정폭력·성폭력·아동학대 피해 청소년이 쉼터에 입소하면, 가해자인 보호자에게 더 이상 통보하지 않아도 됩니다. 법조항 하나가 수만 명의 위기청소년을 지킵니다.</p>
-          <div class="headline-meta">
-            <span>2026년 07월 19일</span>
-            <span class="headline-link">→ 전문 읽기</span>
-          </div>
-        </a>
-
-        <a href="2026-07-18-참전유공자배우자15만원생계-복지뉴스.html" class="headline-card">
-          <span class="card-tag" data-cat="복지">보훈복지</span>
-          <h3 class="headline-title">"아버지가 나라 위해 싸웠는데어머니가 굶나요?"
-    역대 정부 최초 — 참전유공자 배우자 月 15만원 생계지원금 신설
-    + 보훈급여 5% 인상, 지금 신청 안 하면 놓칩니다!</h3>
-          <p class="headline-summary">남편이 6.25 전쟁·베트남 참전 중 세상을 떠난 뒤, 보훈 혜택도 함께 끊겼습니다. 생계를 꾸리던 배우자들은 수십 년간 보훈의 사각지대에 방치됐습니다. 2026년, 역대 정부 최초로 참전유공자 배우자 생계지원금 月 15만원이 신설됐습니다. 여기에 참전명예수당 4만원 인상, 보훈급여금 5% 인상까지 — 지금 신청하지 않으면 소급 적용이 안 됩니다.</p>
-          <div class="headline-meta">
-            <span>2026년 07월 18일</span>
-            <span class="headline-link">→ 전문 읽기</span>
-          </div>
-        </a>
-
-        <a href="2026-07-18-기준중위소득70이하면본인부-복지뉴스.html" class="headline-card">
-          <span class="card-tag" data-cat="복지">정신건강복지</span>
-          <h3 class="headline-title">"우울증·불안장애인데 상담비 없다고요?"
-    나라가 64만원 심리상담비 대신 냅니다
-    — 기준 중위소득 70% 이하면 본인부담 0원, 지금 당장 동 주민센터 가세요!</h3>
-          <p class="headline-summary">마음이 무너지는데 상담 한 번에 10만원이 넘어서 포기했던 적 있으신가요? 2026년 정신건강 심리상담 바우처는 우울·불안으로 힘든 국민 누구에게나 전문 상담 8회(최대 64만원 상당)를 지원합니다. 소득이 낮을수록 본인부담은 줄어들고 — 중위소득 70% 이하 가구는 본인 부담 단돈 0원입니다. 예산이 소진되면 조기 마감되니, 지금 바로 신청하세요.</p>
-          <div class="headline-meta">
-            <span>2026년 07월 18일</span>
-            <span class="headline-link">→ 전문 읽기</span>
-          </div>
-        </a>
-
-</div>
+      </div>
     </section>
 
+      <div class="more-link-row"><a href="#headline-all">헤드라인 전체 보기 →</a></div>
+    </div>
+    <!-- id for anchor -->
+    <div id="market-all"></div>
 
+
+
+    <div id="headline-all"></div>
     <!-- ── 🔍 깊이 보기 ── -->
     <section class="newsletter-section">
       <div class="ns-header">
