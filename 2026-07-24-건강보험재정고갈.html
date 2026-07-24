@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="건강보험 재정이 2026년 4.1조원 적자로 전락했다. 정부가 공언했던 3,000억원의 13배. 2033년 준비금 고갈 시나리오가 현실로 다가오고 있다." />
+  <meta name="keywords" content="건강보험, 건보재정, 건강보험적자, 의료대란, 보험료인상, 건보고갈, 의료비, 건강보험료" />
+  <meta property="og:title" content="정부가 숨겼던 폭탄 터졌다 — 건강보험 적자 3000억→4.1조원, 2033년 '재정 제로' 카운트다운" />
+  <meta property="og:description" content="당신이 매달 내는 건강보험료, 2033년 이후엔 쓸 돈이 없다. 정부 예측의 13배로 폭발한 건보 적자의 진실." />
+  <title>정부가 숨겼던 폭탄 터졌다 — 건강보험 적자 3000억→4.1조원, 2033년 '재정 제로' 카운트다운</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #00897B;
+      --primary-light: #E0F2F1;
+      --primary-dark: #00695C;
+      --accent: #FF6F00;
+      --accent-light: #FFF8E1;
+      --danger: #D32F2F;
+      --danger-light: #FFEBEE;
+      --text: #1A1A2E;
+      --text-light: #5A5A72;
+      --bg: #FFFFFF;
+      --card-bg: #F8FFFE;
+      --border: #E0E0E0;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background: #F4F7F6;
+      color: var(--text);
+      font-size: 17px;
+      line-height: 1.8;
+    }
+    .container { max-width: 800px; margin: 0 auto; background: var(--bg); padding-bottom: 60px; }
+    .hero {
+      background: linear-gradient(135deg, #004D40 0%, #00695C 50%, #00897B 100%);
+      color: #fff;
+      padding: 48px 32px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 220px; height: 220px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.05);
+    }
+    .category-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: #fff; padding: 5px 14px; border-radius: 20px;
+      font-size: 13px; font-weight: 700; letter-spacing: 0.5px;
+      margin-bottom: 20px;
+    }
+    .hero h1 { font-size: 28px; font-weight: 900; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero .subtitle { font-size: 16px; color: rgba(255,255,255,0.85); line-height: 1.7; margin-bottom: 24px; }
+    .meta { display: flex; align-items: center; gap: 16px; font-size: 13px; color: rgba(255,255,255,0.7); }
+    .content { padding: 36px 32px; }
+    .hook-box {
+      background: var(--danger-light);
+      border-left: 5px solid var(--danger);
+      border-radius: 0 12px 12px 0;
+      padding: 22px 24px; margin-bottom: 32px;
+      font-size: 17px; font-weight: 500; line-height: 1.85; color: #5A0000;
+    }
+    .summary-box {
+      background: var(--primary-light);
+      border: 2px solid var(--primary);
+      border-radius: 14px; padding: 24px 28px; margin-bottom: 36px;
+    }
+    .summary-box h3 { font-size: 15px; font-weight: 700; color: var(--primary-dark); margin-bottom: 14px; letter-spacing: 0.5px; }
+    .summary-item {
+      display: flex; align-items: flex-start; gap: 12px;
+      padding: 10px 0; border-bottom: 1px solid rgba(0,137,123,0.15);
+      font-size: 15.5px; line-height: 1.7;
+    }
+    .summary-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .summary-num {
+      min-width: 24px; height: 24px;
+      background: var(--primary); color: #fff;
+      border-radius: 50%; font-size: 13px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center; margin-top: 2px;
+    }
+    .section { margin-bottom: 40px; }
+    .section h2 {
+      font-size: 21px; font-weight: 800; color: var(--primary-dark);
+      padding-bottom: 12px; border-bottom: 3px solid var(--primary); margin-bottom: 20px;
+    }
+    .section p { margin-bottom: 16px; color: var(--text); word-break: keep-all; }
+    .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 28px 0; }
+    .stat-card {
+      background: var(--card-bg); border: 1.5px solid var(--border);
+      border-radius: 14px; padding: 20px; text-align: center;
+    }
+    .stat-card.danger { border-color: var(--danger); background: var(--danger-light); }
+    .stat-card.accent { border-color: var(--accent); background: var(--accent-light); }
+    .stat-label { font-size: 12.5px; color: var(--text-light); font-weight: 600; margin-bottom: 6px; }
+    .stat-value { font-size: 26px; font-weight: 900; color: var(--text); line-height: 1.2; }
+    .stat-value.red { color: var(--danger); }
+    .stat-sub { font-size: 12px; color: var(--text-light); margin-top: 4px; }
+    .timeline { margin: 24px 0; }
+    .tl-item { display: flex; gap: 16px; padding-bottom: 24px; position: relative; }
+    .tl-item:not(:last-child)::before {
+      content: ''; position: absolute;
+      left: 18px; top: 38px; width: 2px; height: calc(100% - 20px);
+      background: var(--border);
+    }
+    .tl-dot {
+      min-width: 36px; height: 36px; border-radius: 50%;
+      background: var(--primary); color: #fff;
+      font-size: 12px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center; z-index: 1;
+    }
+    .tl-dot.red { background: var(--danger); }
+    .tl-dot.orange { background: var(--accent); }
+    .tl-content strong { font-size: 15px; display: block; margin-bottom: 4px; }
+    .tl-content span { font-size: 14px; color: var(--text-light); }
+    .svg-wrap {
+      background: #FAFAFA; border: 1.5px solid var(--border);
+      border-radius: 14px; padding: 24px; margin: 24px 0;
+    }
+    .svg-wrap h3 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 16px; text-align: center; }
+    .impact-box {
+      background: linear-gradient(135deg, #FFF8E1 0%, #FFF3E0 100%);
+      border: 2px solid #FFB300; border-radius: 14px; padding: 24px 28px; margin: 28px 0;
+    }
+    .impact-box h3 { font-size: 17px; font-weight: 800; color: #E65100; margin-bottom: 16px; }
+    .impact-item {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 10px 0; border-bottom: 1px solid rgba(255,179,0,0.2);
+      font-size: 15px; line-height: 1.75;
+    }
+    .impact-item:last-child { border-bottom: none; }
+    .impact-icon { font-size: 20px; margin-top: 1px; }
+    .quote-box {
+      background: var(--primary-light); border-left: 4px solid var(--primary);
+      padding: 18px 22px; border-radius: 0 12px 12px 0; margin: 24px 0;
+      font-size: 15px; font-style: italic; color: var(--primary-dark); line-height: 1.8;
+    }
+    .compare-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 15px; }
+    .compare-table th { background: var(--primary); color: #fff; padding: 12px 16px; text-align: left; font-weight: 700; }
+    .compare-table td { padding: 12px 16px; border-bottom: 1px solid var(--border); }
+    .compare-table tr:nth-child(even) { background: var(--card-bg); }
+    .compare-table .red { color: var(--danger); font-weight: 700; }
+    .action-box {
+      background: #E8F5E9; border: 2px solid #43A047;
+      border-radius: 14px; padding: 24px 28px; margin: 28px 0;
+    }
+    .action-box h3 { font-size: 17px; font-weight: 800; color: #1B5E20; margin-bottom: 16px; }
+    .action-item {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 8px 0; font-size: 15px; line-height: 1.75;
+      border-bottom: 1px solid rgba(67,160,71,0.15);
+    }
+    .action-item:last-child { border-bottom: none; }
+    .hashtags {
+      padding: 24px 32px; background: var(--card-bg);
+      border-top: 1px solid var(--border); display: flex; flex-wrap: wrap; gap: 8px;
+    }
+    .tag {
+      background: var(--primary-light); color: var(--primary-dark);
+      padding: 5px 12px; border-radius: 20px; font-size: 13px; font-weight: 600;
+    }
+    .disclaimer {
+      background: #F5F5F5; border-top: 1px solid var(--border);
+      padding: 20px 32px; font-size: 12px; color: #9E9E9E; line-height: 1.7;
+    }
+    .sources { padding: 24px 32px; border-top: 1px solid var(--border); font-size: 13px; color: var(--text-light); }
+    .sources h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 10px; }
+    .sources a { color: var(--primary); text-decoration: none; }
+    .sources a:hover { text-decoration: underline; }
+    @media (max-width: 600px) {
+      .hero { padding: 32px 20px 28px; }
+      .hero h1 { font-size: 22px; }
+      .content { padding: 28px 20px; }
+      .stats-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .stat-value { font-size: 21px; }
+      .hashtags, .disclaimer, .sources { padding: 18px 20px; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <div class="hero">
+    <div class="category-badge">🏥 의료·복지</div>
+    <h1>정부가 숨겼던 폭탄 터졌다<br>건강보험 적자 3,000억→4.1조원<br>2033년 '재정 제로' 카운트다운</h1>
+    <p class="subtitle">1년 반 만에 13배 폭발… 매달 꼬박꼬박 내던 그 보험료, 정말 나를 지켜줄 수 있을까?</p>
+    <div class="meta">
+      <span>📅 2026년 7월 24일</span>
+      <span>⏱ 읽는 시간 약 7분</span>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <div class="hook-box">
+      당신이 지금 이 순간에도 매달 꼬박꼬박 내고 있는 건강보험료. 정부는 단 1년 반 전에 "2026년 적자는 고작 3,000억원"이라 했다. 그런데 실제 뚜껑을 열어보니 <strong>4조 1,238억원 — 무려 13배 이상 뻥튀기됐다.</strong> 더 충격적인 건 이게 끝이 아니라는 것. 전문가들은 이미 '2033년 건강보험 준비금 제로(0)'를 공개적으로 경고하고 있다.
+    </div>
+
+    <div class="summary-box">
+      <h3>⚡ 이 기사를 읽기 전 알아야 할 핵심 3가지</h3>
+      <div class="summary-item">
+        <div class="summary-num">1</div>
+        <div>2026년 건강보험 적자가 정부 예측(3,000억원)의 <strong>13배인 4.1조원</strong>으로 폭발했다. 의료대란 여파가 직격탄이 됐다.</div>
+      </div>
+      <div class="summary-item">
+        <div class="summary-num">2</div>
+        <div>이 속도라면 <strong>2033년 준비금이 바닥</strong>난다. 그때부터는 나라가 빚을 내거나, 보험료를 대폭 올리거나, 혜택을 줄여야 한다.</div>
+      </div>
+      <div class="summary-item">
+        <div class="summary-num">3</div>
+        <div>이미 올해 보험료 1.48% 올랐고, 2027년엔 <strong>기존 계획보다 65% 높은 인상률(2.46%)</strong>이 필요하다는 권고까지 나왔다.</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>🔍 배경 — 어떻게 이 지경이 됐나</h2>
+      <p>2024년 초 윤석열 전 정부가 의대 정원을 2,000명 늘리겠다고 발표하면서 촉발된 '의료대란'. 전공의 이탈, 의대생 동맹휴학, 병원 비상진료체계… 2년이 지난 지금도 그 여진은 건강보험 재정에 깊은 상흔을 남기고 있다.</p>
+      <p>2024년 2월, 정부가 제시한 2026년 건강보험 재정 전망은 '당기수지 약 3,000억원 적자, 준비금 28조원 이상 유지'였다. 그런데 불과 1년 6개월 후인 지금, 숫자는 완전히 다른 세상이 됐다. 당기수지 적자 폭은 <strong>3조 8,000억원 늘었고</strong>, 준비금은 <strong>12조 6,000억원 줄었다.</strong></p>
+      <p>의료 공백기 동안 중증·희귀질환 환자들이 상급종합병원을 이용하지 못하면서 단기적으로 급여 지출이 줄었고, 정부는 일시적 '흑자'를 자랑했다. 하지만 이는 치료 지연의 결과였다. 제때 치료받지 못한 환자들이 중증으로 악화돼 더 비싼 의료비를 쓰게 됐고, 거기에 더해 의료 정상화 명목으로 수가까지 올리면서 재정 적자 폭이 눈덩이처럼 불어났다.</p>
+    </div>
+
+    <div class="section">
+      <h2>📊 핵심 팩트 — 숫자로 보는 건보 위기</h2>
+      <div class="stats-grid">
+        <div class="stat-card danger">
+          <div class="stat-label">2026년 당기수지 적자</div>
+          <div class="stat-value red">4.1조원</div>
+          <div class="stat-sub">정부 예측의 13배 초과</div>
+        </div>
+        <div class="stat-card danger">
+          <div class="stat-label">준비금 감소 (1.5년 만에)</div>
+          <div class="stat-value red">-12.6조</div>
+          <div class="stat-sub">2028년 기준 15.8조원 예상</div>
+        </div>
+        <div class="stat-card accent">
+          <div class="stat-label">지급가능 기간 (2028년)</div>
+          <div class="stat-value" style="color:#E65100">1.4개월</div>
+          <div class="stat-sub">기존 전망 2.7개월의 절반</div>
+        </div>
+        <div class="stat-card danger">
+          <div class="stat-label">준비금 고갈 예상 시점</div>
+          <div class="stat-value red">2033년</div>
+          <div class="stat-sub">일부 시나리오는 2029년</div>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot">24</div>
+          <div class="tl-content">
+            <strong>2024년 2월 — 정부 발표</strong>
+            <span>2026년 건보 적자 '3,000억원' 예상. "재정 안정적" 공언.</span>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot">24</div>
+          <div class="tl-content">
+            <strong>2024~2025년 — 의료대란 장기화</strong>
+            <span>전공의 이탈, 의대생 휴학. 의료 공백 누적. 치료 지연 환자 중증화.</span>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot" style="background:#FFA000">25</div>
+          <div class="tl-content">
+            <strong>2025년 10월 — 충격 재추계 발표</strong>
+            <span>2026년 건보 적자: 3,000억 → 4.1조원. 준비금 12.6조 감소 확인.</span>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot">26</div>
+          <div class="tl-content">
+            <strong>2026년 1월 — 보험료 인상 강행</strong>
+            <span>보험료율 7.09% → 7.19%로 1.48% 인상. 직장인 월평균 2,235원 증가.</span>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot orange">26</div>
+          <div class="tl-content">
+            <strong>2026년 6월 — 수가 폭탄 추가</strong>
+            <span>필수·지역의료 수가 연 3.6조원 인상 발표. 건보 재정 1조원 추가 부담.</span>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot red">33</div>
+          <div class="tl-content">
+            <strong>2033년 (전망) — 준비금 제로</strong>
+            <span>현 추세라면 누적 적자 60조원. 건강보험 사실상 재정 고갈.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="svg-wrap">
+      <h3>📉 건강보험 당기수지 추이 전망 (단위: 조원 적자 기준)</h3>
+      <svg viewBox="0 0 680 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;display:block;margin:0 auto;">
+        <defs>
+          <linearGradient id="barG1" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#00897B"/>
+            <stop offset="100%" stop-color="#004D40"/>
+          </linearGradient>
+          <linearGradient id="barG2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#D32F2F"/>
+            <stop offset="100%" stop-color="#B71C1C"/>
+          </linearGradient>
+        </defs>
+        <line x1="70" y1="220" x2="640" y2="220" stroke="#CCC" stroke-width="1.5"/>
+        <text x="56" y="225" text-anchor="end" font-size="11" fill="#999">0</text>
+        <line x1="70" y1="175" x2="640" y2="175" stroke="#EEE" stroke-width="1" stroke-dasharray="4,3"/>
+        <text x="56" y="179" text-anchor="end" font-size="11" fill="#999">1조</text>
+        <line x1="70" y1="130" x2="640" y2="130" stroke="#EEE" stroke-width="1" stroke-dasharray="4,3"/>
+        <text x="56" y="134" text-anchor="end" font-size="11" fill="#999">2조</text>
+        <line x1="70" y1="85" x2="640" y2="85" stroke="#EEE" stroke-width="1" stroke-dasharray="4,3"/>
+        <text x="56" y="89" text-anchor="end" font-size="11" fill="#999">3조</text>
+        <line x1="70" y1="40" x2="640" y2="40" stroke="#EEE" stroke-width="1" stroke-dasharray="4,3"/>
+        <text x="56" y="44" text-anchor="end" font-size="11" fill="#999">4조+</text>
+        <!-- 정부 예측 -->
+        <rect x="100" y="196" width="60" height="24" fill="url(#barG1)" rx="4"/>
+        <text x="130" y="211" text-anchor="middle" font-size="11" fill="#fff" font-weight="700">3천억</text>
+        <text x="130" y="240" text-anchor="middle" font-size="12" fill="#555">정부예측</text>
+        <text x="130" y="255" text-anchor="middle" font-size="11" fill="#888">(2024.2)</text>
+        <!-- 실제 2026 -->
+        <rect x="220" y="36" width="60" height="184" fill="url(#barG2)" rx="4"/>
+        <text x="250" y="65" text-anchor="middle" font-size="13" fill="#fff" font-weight="900">4.1조원</text>
+        <text x="250" y="240" text-anchor="middle" font-size="12" fill="#D32F2F" font-weight="700">2026실제</text>
+        <!-- x13 배지 -->
+        <text x="185" y="110" text-anchor="middle" font-size="24" fill="#FF5252">→</text>
+        <rect x="154" y="91" width="30" height="22" fill="#FF5252" rx="10"/>
+        <text x="169" y="106" text-anchor="middle" font-size="11" fill="#fff" font-weight="900">×13</text>
+        <!-- 구분선 -->
+        <line x1="310" y1="30" x2="310" y2="225" stroke="#DDD" stroke-width="1" stroke-dasharray="6,3"/>
+        <text x="318" y="22" font-size="11" fill="#999">이후 전망 →</text>
+        <!-- 2027 -->
+        <rect x="340" y="45" width="55" height="175" fill="#EF5350" rx="4" opacity="0.80"/>
+        <text x="367" y="78" text-anchor="middle" font-size="12" fill="#fff" font-weight="700">5조+</text>
+        <text x="367" y="240" text-anchor="middle" font-size="12" fill="#555">2027</text>
+        <!-- 2029 -->
+        <rect x="420" y="28" width="55" height="192" fill="#E53935" rx="4" opacity="0.70"/>
+        <text x="447" y="62" text-anchor="middle" font-size="12" fill="#fff" font-weight="700">6~7조</text>
+        <text x="447" y="240" text-anchor="middle" font-size="12" fill="#555">2029</text>
+        <!-- 2033 -->
+        <rect x="500" y="12" width="60" height="208" fill="#B71C1C" rx="4" opacity="0.60"/>
+        <text x="530" y="46" text-anchor="middle" font-size="12" fill="#fff" font-weight="700">준비금</text>
+        <text x="530" y="63" text-anchor="middle" font-size="12" fill="#fff" font-weight="700">고갈</text>
+        <text x="530" y="240" text-anchor="middle" font-size="12" fill="#B71C1C" font-weight="700">2033</text>
+        <!-- 범례 -->
+        <rect x="590" y="80" width="12" height="12" fill="url(#barG1)" rx="2"/>
+        <text x="606" y="91" font-size="11" fill="#555">정부예측</text>
+        <rect x="590" y="100" width="12" height="12" fill="url(#barG2)" rx="2"/>
+        <text x="606" y="111" font-size="11" fill="#555">실제/전망</text>
+      </svg>
+      <p style="text-align:center;font-size:12px;color:#999;margin-top:8px;">※ 전망치는 국민건강보험공단·보건복지부·KDI 자료 기준 추정</p>
+    </div>
+
+    <div class="section">
+      <h2>🔎 숨겨진 이면 — 수가 인상과 고령화의 이중 함정</h2>
+      <p>정부는 의료 정상화를 명분으로 2026년 6월 '건강보험 수가 혁신방안'을 발표했다. 지역·필수의료 분야 수가를 연간 3조 6,000억원 인상하는 대신 CT·MRI 등 검사비는 2조 6,000억원 인하하는 내용이다. 겉으로는 균형처럼 보이지만, 건보 재정에서 <strong>순 1조원 추가 부담</strong>이 발생한다.</p>
+      <p>여기에 한국이 직면한 초고령화 문제가 기름을 붓는다. 건강보험료를 내는 생산가능인구(15~64세)는 빠르게 줄고, 혜택을 받는 65세 이상 인구는 폭증하고 있다. 2020년 약 16%였던 노인 인구 비율은 2026년 현재 20%를 넘어섰다. 의료비 지출이 많은 고령층이 늘수록 건보 재정 압박은 기하급수적으로 커진다.</p>
+      <div class="quote-box">
+        "현재 추세가 이어지면 건강보험 준비금이 2033년경 소진될 것으로 예측된다. 지금 당장 강력한 재정 혁신 없이는 국민의 의료 안전망 자체가 무너질 수 있다."<br>
+        <span style="font-size:13px;color:#00897B;font-style:normal;display:block;margin-top:6px;">— 건강보험 재정전망 전문가 보고서 인용</span>
+      </div>
+      <p>국가재정연구원은 8년 후 건강보험 누적 적자가 무려 <strong>60조원</strong>에 달할 것이라는 암울한 전망도 내놓았다. 연간 국방 예산(약 60조원)을 통째로 건보에 쏟아붓는 수준의 적자다.</p>
+    </div>
+
+    <div class="section">
+      <h2>💸 나에게 미치는 영향 — 내 지갑과 몸이 받을 충격</h2>
+      <div class="impact-box">
+        <h3>📋 2026년 현재, 이미 달라진 것들</h3>
+        <div class="impact-item">
+          <span class="impact-icon">💰</span>
+          <div><strong>보험료 인상:</strong> 직장가입자 월평균 2,235원 인상(16만 699원), 지역가입자 1,280원 인상(9만 242원). 작아 보이지만, 2027년부터 기존보다 65% 높은 인상률(2.46%)이 예고된다.</div>
+        </div>
+        <div class="impact-item">
+          <span class="impact-icon">🏥</span>
+          <div><strong>병원비 인상:</strong> 수가 인상으로 외래 진료가 잦거나 입원 중인 환자 중심으로 본인부담금이 늘어날 전망. 만성질환자·고령 환자에게 직격탄.</div>
+        </div>
+        <div class="impact-item">
+          <span class="impact-icon">🔍</span>
+          <div><strong>CT·MRI 검사비 인하:</strong> 그나마 긍정적 소식. 검사비는 낮아져 의원급 진단비용 부담이 소폭 감소 예상.</div>
+        </div>
+        <div class="impact-item">
+          <span class="impact-icon">⚠️</span>
+          <div><strong>보장성 축소 위험:</strong> 재정 고갈 가속화 시 정부는 비급여 확대·급여 제한·본인부담률 상향 등의 카드를 꺼낼 수밖에 없다. 사실상 혜택의 후퇴다.</div>
+        </div>
+      </div>
+
+      <table class="compare-table">
+        <thead>
+          <tr><th>구분</th><th>2025년</th><th>2026년</th><th>2027년 이후 예상</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>보험료율</td><td>7.09%</td><td class="red">7.19%</td><td class="red">7.37% 이상 (2.46% 인상 권고)</td></tr>
+          <tr><td>직장인 월 보험료</td><td>15만 8,464원</td><td class="red">16만 699원</td><td class="red">17만원↑ 예상</td></tr>
+          <tr><td>건보 당기수지</td><td>1,667억 흑자</td><td class="red">4.1조원 적자</td><td class="red">5~7조원 적자 예상</td></tr>
+          <tr><td>지급 가능 기간</td><td>약 4개월</td><td class="red">2.7개월(하락)</td><td class="red">2028년 1.4개월</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="svg-wrap">
+      <h3>📈 건강보험료 인상 시나리오 (직장가입자 본인 부담 기준)</h3>
+      <svg viewBox="0 0 640 210" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:640px;display:block;margin:0 auto;">
+        <rect x="0" y="0" width="640" height="210" fill="#FAFAFA" rx="8"/>
+        <line x1="80" y1="25" x2="80" y2="165" stroke="#CCC" stroke-width="1"/>
+        <line x1="80" y1="165" x2="600" y2="165" stroke="#CCC" stroke-width="1"/>
+        <!-- 포인트: 2023 -->
+        <circle cx="130" cy="140" r="7" fill="#00897B"/>
+        <text x="130" y="160" text-anchor="middle" font-size="11" fill="#666">2023</text>
+        <text x="130" y="130" text-anchor="middle" font-size="11" fill="#00695C" font-weight="700">15.8만</text>
+        <!-- 2024 동결 -->
+        <circle cx="225" cy="140" r="7" fill="#00897B"/>
+        <text x="225" y="160" text-anchor="middle" font-size="11" fill="#666">2024</text>
+        <text x="225" y="130" text-anchor="middle" font-size="11" fill="#00695C" font-weight="700">15.8만</text>
+        <!-- 2025 동결 -->
+        <circle cx="320" cy="140" r="7" fill="#00897B"/>
+        <text x="320" y="160" text-anchor="middle" font-size="11" fill="#666">2025</text>
+        <text x="320" y="130" text-anchor="middle" font-size="11" fill="#00695C" font-weight="700">15.8만</text>
+        <!-- 2026 인상 -->
+        <circle cx="415" cy="118" r="8" fill="#FF6F00"/>
+        <text x="415" y="160" text-anchor="middle" font-size="11" fill="#FF6F00" font-weight="700">2026 ↑</text>
+        <text x="415" y="108" text-anchor="middle" font-size="11" fill="#E65100" font-weight="700">16만699</text>
+        <!-- 2027 예고 -->
+        <circle cx="510" cy="88" r="9" fill="#D32F2F"/>
+        <text x="510" y="160" text-anchor="middle" font-size="11" fill="#D32F2F" font-weight="700">2027 ↑↑</text>
+        <text x="510" y="76" text-anchor="middle" font-size="11" fill="#B71C1C" font-weight="700">17만↑?</text>
+        <!-- 연결선 -->
+        <polyline points="130,140 225,140 320,140 415,118 510,88" fill="none" stroke="#00897B" stroke-width="2.5"/>
+        <!-- 경고 박스 -->
+        <rect x="460" y="38" width="140" height="26" fill="#FFEBEE" rx="5" stroke="#D32F2F" stroke-width="1"/>
+        <text x="530" y="55" text-anchor="middle" font-size="11" fill="#D32F2F" font-weight="700">⚠ 2.46% 인상 권고</text>
+        <!-- "3년 동결" 레이블 -->
+        <rect x="140" y="35" width="105" height="22" fill="#E0F2F1" rx="5"/>
+        <text x="192" y="50" text-anchor="middle" font-size="11" fill="#00695C" font-weight="700">3년 연속 동결</text>
+      </svg>
+      <p style="text-align:center;font-size:12px;color:#999;margin-top:8px;">※ 직장가입자 본인 부담 기준 / 2027년 이후는 정부 권고 기준 추정치</p>
+    </div>
+
+    <div class="section">
+      <h2>🔭 전망 — 세 가지 시나리오</h2>
+      <p>전문가들은 건강보험 재정 위기를 해결하기 위해 세 가지 경로 중 하나(혹은 복합)가 불가피하다고 입을 모은다. 그 어느 것도 국민에게 고통 없이는 해결할 수 없다는 게 문제다.</p>
+      <div class="timeline" style="margin-top:16px;">
+        <div class="tl-item">
+          <div class="tl-dot" style="background:#F57C00">①</div>
+          <div class="tl-content">
+            <strong>보험료 대폭 인상 시나리오</strong>
+            <span>2027년부터 매년 2~3%대 인상, 2030년대엔 보험료율 8% 돌파 가능. 국민 부담 직격탄. 저소득층·자영업자 직격.</span>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot" style="background:#D32F2F">②</div>
+          <div class="tl-content">
+            <strong>보장성 축소 시나리오</strong>
+            <span>비급여 항목 확대, 본인부담금 상향, 특정 질환 급여 제한. 병원비 체감 급등. '건보가 있어도 아프면 망한다'는 시대 도래.</span>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot" style="background:#00897B">③</div>
+          <div class="tl-content">
+            <strong>구조 개혁 시나리오 (가장 어려운 길)</strong>
+            <span>의료전달체계 정상화, 예방 중심 전환, 지불제도 혁신, 재정 효율화. 정치적 결단 없이는 불가능.</span>
+          </div>
+        </div>
+      </div>
+      <p>대부분의 전문가들은 세 가지가 병행돼야 하지만, 정치적 부담 탓에 정부가 미룰수록 2033년 충격은 더 커질 것이라고 경고한다. 준비금이 바닥난 이후에야 대폭 인상을 단행하면, 그 충격은 몇 배로 돌아온다.</p>
+    </div>
+
+    <div class="action-box">
+      <h3>✅ 지금 당장 내가 할 수 있는 것들</h3>
+      <div class="action-item">
+        <span>1️⃣</span>
+        <div><strong>본인부담상한액 환급 신청</strong> — 매년 8월 국민건강보험공단이 안내. 연간 본인부담금이 소득에 따른 상한액을 초과했다면 환급받을 수 있다. 놓치는 사람이 많다.</div>
+      </div>
+      <div class="action-item">
+        <span>2️⃣</span>
+        <div><strong>국가 건강검진 꼭 챙기기</strong> — 조기 발견이 최고의 절약. 2년마다 무료 일반검진 외에 암검진(위암·대장암·간암 등)도 활용하자.</div>
+      </div>
+      <div class="action-item">
+        <span>3️⃣</span>
+        <div><strong>실손보험 점검</strong> — 건보 보장 축소 시 실손보험의 역할이 커진다. 가입 현황과 특약을 지금 점검해 두는 게 현명하다.</div>
+      </div>
+      <div class="action-item">
+        <span>4️⃣</span>
+        <div><strong>공론화에 참여</strong> — 건강보험은 사회적 합의의 영역. 보험료 인상·보장 축소·의료 개혁에 대한 논의에 관심을 갖고 목소리를 내는 것이 중요하다.</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <p>건강보험은 모든 국민이 균등하게 의료혜택을 받을 수 있도록 설계된 사회안전망이다. 하지만 정치적 판단 착오, 의료 정책 실패, 인구 구조 변화가 맞물리면서 그 토대가 흔들리고 있다. 지금 이 순간에도 매달 빠져나가는 보험료가, 7년 뒤에는 아무 의미가 없어질 수도 있다는 경고를 진지하게 받아들여야 한다.</p>
+      <p>2033년은 멀게 느껴지지만, 재정 개혁은 지금 당장 시작하지 않으면 그때 가선 너무 늦다. 정부의 '괜찮다'는 말에 속지 말자 — 1년 반 전에도 똑같이 말했고, 그 결과가 지금의 4.1조원 적자다.</p>
+    </div>
+
+  </div>
+
+  <div class="hashtags">
+    <span class="tag">#건강보험</span>
+    <span class="tag">#건보재정</span>
+    <span class="tag">#건강보험적자</span>
+    <span class="tag">#의료대란여파</span>
+    <span class="tag">#보험료인상</span>
+    <span class="tag">#건보고갈</span>
+    <span class="tag">#2033고갈</span>
+    <span class="tag">#의료비폭탄</span>
+    <span class="tag">#건강보험위기</span>
+    <span class="tag">#의료복지</span>
+    <span class="tag">#한국의료</span>
+    <span class="tag">#시한폭탄</span>
+  </div>
+
+  <div class="sources">
+    <h4>📎 주요 출처</h4>
+    <ul style="list-style:none;display:flex;flex-direction:column;gap:5px;">
+      <li>→ <a href="https://www.medifonews.com/news/article.html?no=207774">2026 건보 적자 3000억→4.1조원…"의료대란 여파" (메디포뉴스)</a></li>
+      <li>→ <a href="https://v.daum.net/v/20251017130103014">26년 건보재정 적자 3천억 원에서 4.1조원으로 악화 (다음뉴스)</a></li>
+      <li>→ <a href="https://www.hijournal.co.kr/board_view.php?data=idx%3D2677&pagecnt=&letter_no=&offset=&search=&searchstring=&present_num=&boardIndex=139&bbs_cate=34">2026년 적자, 2033년 고갈…건강보험 재정 시한폭탄 (건강보험저널)</a></li>
+      <li>→ <a href="https://www.hankookilbo.com/news/article/A2026062517200000737">건강보험료 또 오를 듯…연 3조6000억 규모 수가 대폭 인상 (한국일보)</a></li>
+      <li>→ <a href="https://www.mohw.go.kr/board.es?mid=a10503010100&bid=0027&tag=&act=view&list_no=1487279&cg_code=">2026년 건강보험료율 7.19%로 결정 (보건복지부)</a></li>
+      <li>→ <a href="https://eiec.kdi.re.kr/policy/domesticView.do?ac=0000191042">의료개혁과 비상진료대책을 반영한 건강보험 재정전망 (KDI)</a></li>
+    </ul>
+  </div>
+
+  <div class="disclaimer">
+    ⚠️ <strong>면책조항</strong>: 본 아티클은 공개된 정부 자료·언론 보도·연구기관 전망치를 바탕으로 작성된 정보성 콘텐츠입니다. 개인의 재무·의료 결정에 대한 전문적 조언이 아니며, 수치는 출처별로 차이가 있을 수 있습니다. 정확한 보험료·급여 정보는 국민건강보험공단(☎ 1577-1000) 또는 공식 홈페이지(nhis.or.kr)를 통해 확인하시기 바랍니다. 본 콘텐츠는 정보 제공을 목적으로 하며 상업적 이해관계가 없습니다.
+  </div>
+
+</div>
+</body>
+</html>
