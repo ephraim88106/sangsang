@@ -1,71 +1,94 @@
 #!/usr/bin/env python3
 """
 sangsang index.html 완전 재구성 스크립트
+- 경로: 스크립트 위치 기준으로 자동 감지 (하드코딩 없음)
 - market-list: 주식보고서만, 날짜 내림차순 최신 10개
-- archive-list: 전체 아티클, 날짜 내림차순, 일관된 들여쓰기
-- headline-grid: 한국이슈(주식보고서 제외), 최신 10개 (기존 유지)
+- archive-list: 전체 아티클, 날짜 내림차순
+- headline-grid: 한국이슈(주식보고서 제외), 최신 10개
 - ticker-bar: 기존 유지
 """
 import re
+import sys
 from pathlib import Path
 from html.parser import HTMLParser
 
-REPO = Path('/tmp/sangsang_repo')
+# 경로: 스크립트 위치 기준 (하드코딩 금지)
+REPO = Path(__file__).parent.resolve()
 IDX  = REPO / 'index.html'
 
 STOCK_SUFFIX = '-주식보고서.html'
 DATE_PAT     = re.compile(r'^(\d{4}-\d{2}-\d{2})-(.+)\.html$')
-SKIP_FILES   = {'index.html','404.html','about.html','contact.html','privacy.html'}
+SKIP_FILES   = {'index.html','404.html','about.html','contact.html','privacy.html',
+                'posts.html','privacy.html','post.html'}
+
+# ─── 제목 클린업 ─────────────────────────────────────────────
+def clean_title(t):
+    """제목에서 " | 날짜", " | 사이트명" 등 suffix 제거"""
+    if not t:
+        return ''
+    # " | 2026.07.29" 패턴 제거
+    t = re.sub(r'\s*[|｜]\s*\d{4}\.\d{2}\.\d{2}.*$', '', t)
+    # " | YYYY-MM-DD" 패턴 제거
+    t = re.sub(r'\s*[|｜]\s*\d{4}-\d{2}-\d{2}.*$', '', t)
+    # " | 사이트명" 등 마지막 pipe 이후 제거
+    t = re.sub(r'\s*[|｜]\s*[가-힣\w\s]{2,20}$', '', t)
+    return t.strip()
 
 # ─── 메타 추출 ────────────────────────────────────────────────
 class MetaEx(HTMLParser):
     def __init__(self):
         super().__init__(); self.title=''; self.desc=''; self._t=False
-    def handle_starttag(self,tag,attrs):
-        d=dict(attrs)
-        if tag=='title': self._t=True
-        if tag=='meta' and d.get('name')=='description': self.desc=d.get('content','')
-    def handle_data(self,data):
-        if self._t: self.title+=data
-    def handle_endtag(self,tag):
-        if tag=='title': self._t=False
+    def handle_starttag(self, tag, attrs):
+        d = dict(attrs)
+        if tag == 'title': self._t = True
+        if tag == 'meta' and d.get('name') == 'description':
+            self.desc = d.get('content', '')
+    def handle_data(self, data):
+        if self._t: self.title += data
+    def handle_endtag(self, tag):
+        if tag == 'title': self._t = False
 
 def get_meta(fp):
     try:
         txt = fp.read_text('utf-8')
         p = MetaEx(); p.feed(txt)
-        title = re.sub(r'\s+',' ', p.title).strip()
-        desc  = re.sub(r'\s+',' ', p.desc).strip() or title[:120]+'…'
-        # market-sub or header-subtitle from report
-        sub_m = re.search(r'class="(?:market-sub|header-subtitle)"[^>]*>(.*?)</p>', txt, re.DOTALL)
-        sub   = re.sub(r'<[^>]+>','', sub_m.group(1)).strip() if sub_m else desc[:120]
-        # card-tag / category
-        cm = re.search(r'(?:card-tag|category-badge|ns-emoji)["\'][^>]*>([^<]{2,40})<', txt)
-        raw = re.sub(r'[^\w·\s가-힣]','', cm.group(1)).strip() if cm else ''
+        title = clean_title(re.sub(r'\s+', ' ', p.title).strip())
+        desc  = re.sub(r'\s+', ' ', p.desc).strip()
+        if not desc: desc = title[:120] + '…'
+        # sub-title: header-sub, header-subtitle 등
+        sub_m = re.search(
+            r'class="(?:header-sub|header-subtitle|market-sub)"[^>]*>(.*?)</(?:p|div)',
+            txt, re.DOTALL)
+        sub = re.sub(r'<[^>]+>', '', sub_m.group(1)).strip() if sub_m else desc[:120]
+        # 카테고리 키워드
+        cm = re.search(
+            r'(?:card-tag|category-badge|ns-emoji)["\'][^>]*>([^<]{2,40})<', txt)
+        raw = re.sub(r'[^\w·\s가-힣]', '', cm.group(1)).strip() if cm else ''
         return title, desc, sub, raw
-    except:
+    except Exception as e:
         return None, None, None, '일반'
 
+# ─── 카테고리 매핑 ──────────────────────────────────────────
 CAT_MAP = {
-    '정치':('정치·사법','정치'),'사법':('정치·사법','정치'),
-    '경제':('경제·금융','경제'),'금융':('경제·금융','경제'),
+    '정치':('정치·사법','정치'), '사법':('정치·사법','정치'),
+    '경제':('경제·금융','경제'), '금융':('경제·금융','경제'),
     '부동산':('부동산·주거','부동산'),
-    '의료':('의료·복지','의료'),'복지':('의료·복지','복지'),
+    '의료':('의료·복지','의료'), '복지':('의료·복지','복지'),
     '교육':('교육·입시','교육'),
-    '기술':('기술·AI','기술'),
-    '환경':('환경·기후','환경'),'기후':('환경·기후','환경'),
-    '취업':('취업·노동','노동'),'노동':('취업·노동','노동'),
+    '기술':('기술·AI','기술'), 'AI':('기술·AI','기술'),
+    '환경':('환경·기후','환경'), '기후':('환경·기후','환경'),
+    '취업':('취업·노동','노동'), '노동':('취업·노동','노동'),
     '증시':('증시','증시'),
 }
 def cat(raw, title=''):
-    for k,(l,v) in CAT_MAP.items():
-        if k in raw or k in title: return l,v
-    return '일반','blue'
+    for k, (l, v) in CAT_MAP.items():
+        if k in raw or k in title:
+            return l, v
+    return '일반', 'blue'
 
-# ─── 모든 아티클 스캔 ────────────────────────────────────────
+# ─── 파일 스캔 ───────────────────────────────────────────────
 def scan_all():
-    stocks = []   # (date_str, fname)
-    koreas = []   # (date_str, fname)
+    stocks, koreas = [], []
     for f in REPO.glob('*.html'):
         if f.name in SKIP_FILES: continue
         m = DATE_PAT.match(f.name)
@@ -79,20 +102,19 @@ def scan_all():
     koreas.sort(key=lambda x: x[0], reverse=True)
     return stocks, koreas
 
-# ─── 날짜 포맷 헬퍼 ─────────────────────────────────────────
 def short_date(d): return f"{d[5:7]}.{d[8:10]}"
 def long_date(d):
-    y,mo,day = d[:4],d[5:7].lstrip('0'),d[8:10].lstrip('0')
+    y, mo, day = d[:4], d[5:7].lstrip('0'), d[8:10].lstrip('0')
     return f"{y}년 {mo}월 {day}일"
 
-# ─── market-list 재빌드 ──────────────────────────────────────
+# ─── market-list ─────────────────────────────────────────────
 def build_market_list(stocks):
     items = []
     for date_str, fname, fp in stocks[:10]:
-        title,_,sub,_ = get_meta(fp)
+        title, _, sub, _ = get_meta(fp)
         if not title: title = fname
-        sub = sub or ''
-        if len(sub)>160: sub=sub[:157]+'...'
+        if not sub: sub = ''
+        if len(sub) > 160: sub = sub[:157] + '...'
         items.append(
             f'        <a href="{fname}" class="market-item">\n'
             f'          <span class="market-date">{short_date(date_str)}</span>\n'
@@ -105,20 +127,19 @@ def build_market_list(stocks):
         )
     return ''.join(items)
 
-# ─── archive-list 재빌드 (전체 합쳐서 날짜순) ────────────────
+# ─── archive-list ────────────────────────────────────────────
 def build_archive_list(stocks, koreas):
     all_arts = []
     for date_str, fname, fp in stocks:
-        title,_,_,_ = get_meta(fp)
+        title, _, _, _ = get_meta(fp)
         if not title: title = fname
         all_arts.append((date_str, fname, title, '증시', '증시'))
     for date_str, fname, fp in koreas:
-        title,_,_,raw = get_meta(fp)
+        title, _, _, raw = get_meta(fp)
         if not title: title = fname
         cl, cv = cat(raw, title)
         all_arts.append((date_str, fname, title, cl, cv))
-    # 날짜 내림차순 정렬 (같은 날은 주식보고서 먼저)
-    all_arts.sort(key=lambda x: (x[0], x[3]=='증시'), reverse=True)
+    all_arts.sort(key=lambda x: (x[0], x[3] == '증시'), reverse=True)
     items = []
     for date_str, fname, title, cl, cv in all_arts:
         items.append(
@@ -130,11 +151,11 @@ def build_archive_list(stocks, koreas):
         )
     return ''.join(items)
 
-# ─── headline-grid 재빌드 ────────────────────────────────────
+# ─── headline-grid ───────────────────────────────────────────
 def build_headline_grid(koreas):
     items = []
     for date_str, fname, fp in koreas[:10]:
-        title,desc,_,raw = get_meta(fp)
+        title, desc, _, raw = get_meta(fp)
         if not title: continue
         cl, cv = cat(raw, title)
         items.append(
@@ -152,6 +173,10 @@ def build_headline_grid(koreas):
 
 # ─── 메인 ───────────────────────────────────────────────────
 def main():
+    if not IDX.exists():
+        print(f"[ERR] index.html 없음: {IDX}")
+        sys.exit(1)
+
     html = IDX.read_text('utf-8')
     stocks, koreas = scan_all()
     print(f"주식보고서 {len(stocks)}개, 한국이슈 {len(koreas)}개")
@@ -169,30 +194,42 @@ def main():
         f'color:#1a6b3c;text-decoration:none;letter-spacing:0.02em;">증시 전체 보기 →</a>\n'
         f'      </div>\n'
     )
-    html = re.sub(
+    html_new = re.sub(
         r'<div class="market-list">.*?</div>\s*<div class="more-link-row"[^>]*>.*?</div>',
         new_market.strip(),
         html, count=1, flags=re.DOTALL
     )
-    print(f"[OK] market-list 재구성 ({min(10,len(stocks))}개)")
+    if html_new != html:
+        html = html_new
+        print(f"[OK] market-list 재구성 ({min(10,len(stocks))}개)")
+    else:
+        print("[WARN] market-list 패턴 불일치 — 미교체")
 
     # 2) archive-list 교체
     archive_inner = build_archive_list(stocks, koreas)
-    html = re.sub(
+    html_new = re.sub(
         r'<ul class="archive-list">.*?</ul>',
         f'<ul class="archive-list">\n{archive_inner}      </ul>',
         html, count=1, flags=re.DOTALL
     )
-    print(f"[OK] archive-list 재구성 ({len(stocks)+len(koreas)}개)")
+    if html_new != html:
+        html = html_new
+        print(f"[OK] archive-list 재구성 ({len(stocks)+len(koreas)}개)")
+    else:
+        print("[WARN] archive-list 패턴 불일치 — 미교체")
 
     # 3) headline-grid 교체
     headline_inner = build_headline_grid(koreas)
-    html = re.sub(
+    html_new = re.sub(
         r'<div class="headline-grid">.*?</div>\s*<div class="more-link-row"',
         f'<div class="headline-grid">\n{headline_inner}      </div>\n      <div class="more-link-row"',
         html, count=1, flags=re.DOTALL
     )
-    print(f"[OK] headline-grid 재구성 ({min(10,len(koreas))}개)")
+    if html_new != html:
+        html = html_new
+        print(f"[OK] headline-grid 재구성 ({min(10,len(koreas))}개)")
+    else:
+        print("[WARN] headline-grid 패턴 불일치 — 미교체")
 
     IDX.write_text(html, 'utf-8')
     print("✅ index.html 저장 완료")
