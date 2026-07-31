@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="중국 CXMT 상장 한 방에 코스피 2,780조 증발, 개인투자자 56조 날렸다. 이틀 폭락 뒤 하루 만에 14% 폭등한 '롤러코스피'의 실체를 파헤친다.">
+  <meta name="keywords" content="코스피 폭락, CXMT, 삼성전자, SK하이닉스, 반도체 피크아웃, 레버리지 ETF, 서킷브레이커, 개미 손실, 롤러코스피, 한국 증시 2026">
+  <meta property="og:title" content="코스피 지옥의 3일: 2,780조 증발·56조 날린 개미들...中 CXMT 한 방에 한국 증시 뚫렸다">
+  <meta property="og:description" content="이틀 폭락 하루 14% 폭등...롤러코스터 증시의 승자와 패자">
+  <meta property="og:type" content="article">
+  <title>코스피 지옥의 3일: 2,780조 증발·56조 날린 개미들...中 CXMT 한 방에 한국 증시 뚫렸다</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 17px;
+      line-height: 1.8;
+      background: #ffffff;
+      color: #1a1a1a;
+    }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+    .article-header {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      color: #fff;
+      padding: 48px 0 40px;
+    }
+    .category-badge {
+      display: inline-block;
+      background: #e94560;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 18px;
+    }
+    .article-header h1 {
+      font-size: clamp(22px, 4vw, 30px);
+      font-weight: 900;
+      line-height: 1.35;
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-header h1 .accent { color: #e94560; }
+    .subtitle {
+      font-size: 16px;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 24px;
+      word-break: keep-all;
+    }
+    .meta-row {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+    }
+    .key-summary {
+      background: #fff7f7;
+      border-left: 5px solid #e94560;
+      padding: 24px 28px;
+      margin: 36px 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .key-summary h2 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #e94560;
+      margin-bottom: 12px;
+    }
+    .key-summary ul { list-style: none; }
+    .key-summary ul li {
+      font-size: 15px;
+      padding: 6px 0 6px 20px;
+      position: relative;
+      color: #333;
+      word-break: keep-all;
+    }
+    .key-summary ul li::before {
+      content: 'â–¶';
+      position: absolute; left: 0;
+      color: #e94560;
+      font-size: 10px;
+      top: 10px;
+    }
+    .article-body { padding: 8px 0 40px; }
+    .article-body p { margin-bottom: 22px; word-break: keep-all; color: #222; }
+    .article-body h2 {
+      font-size: 21px;
+      font-weight: 900;
+      color: #0f3460;
+      margin: 48px 0 18px;
+      padding-bottom: 10px;
+      border-bottom: 3px solid #0f3460;
+      word-break: keep-all;
+    }
+    strong { color: #0f3460; }
+    .highlight-box {
+      background: #f0f4ff;
+      border: 1px solid #c0d0ef;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 28px 0;
+    }
+    .highlight-box p { margin-bottom: 0; color: #1a1a4e; font-weight: 500; }
+    .quote-block {
+      border-left: 4px solid #e94560;
+      padding: 14px 20px;
+      margin: 24px 0;
+      background: #fff9f9;
+      font-style: italic;
+      color: #444;
+      border-radius: 0 8px 8px 0;
+    }
+    .infographic {
+      background: #0f0f1a;
+      border-radius: 14px;
+      padding: 32px 28px;
+      margin: 40px 0;
+      color: #fff;
+    }
+    .infographic h3 {
+      color: #e94560;
+      font-size: 17px;
+      margin-bottom: 28px;
+      font-weight: 900;
+      text-align: center;
+    }
+    .timeline { display: flex; flex-direction: column; gap: 0; }
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 16px;
+      position: relative;
+    }
+    .timeline-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 44px; top: 46px; bottom: -16px;
+      width: 2px;
+      background: rgba(255,255,255,0.1);
+    }
+    .timeline-date { text-align: center; padding: 10px 0; }
+    .timeline-day { font-size: 12px; color: rgba(255,255,255,0.5); display: block; }
+    .timeline-dot {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+      margin: 6px auto;
+    }
+    .dot-crash { background: #e94560; }
+    .dot-worse { background: #c0392b; }
+    .dot-boom  { background: #27ae60; }
+    .timeline-content { padding: 10px 0 24px; }
+    .timeline-label { font-size: 12px; font-weight: 700; letter-spacing: 1px; margin-bottom: 4px; }
+    .label-crash { color: #e94560; }
+    .label-worse { color: #ff6b6b; }
+    .label-boom  { color: #2ecc71; }
+    .timeline-value { font-size: 26px; font-weight: 900; margin-bottom: 4px; }
+    .val-crash { color: #e94560; }
+    .val-worse { color: #ff6b6b; }
+    .val-boom  { color: #2ecc71; }
+    .timeline-desc { font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.5; }
+    .bar-chart {
+      background: #1a1a2e;
+      border-radius: 14px;
+      padding: 28px 24px;
+      margin: 36px 0;
+      color: #fff;
+    }
+    .bar-chart h3 { color: #fff; font-size: 15px; margin-bottom: 22px; font-weight: 700; text-align: center; }
+    .bar-row { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .bar-label { width: 100px; font-size: 13px; color: rgba(255,255,255,0.75); flex-shrink: 0; }
+    .bar-track {
+      flex: 1;
+      background: rgba(255,255,255,0.08);
+      border-radius: 6px;
+      height: 28px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 6px;
+      display: flex; align-items: center;
+      padding-left: 10px;
+      font-size: 12px; font-weight: 700; color: #fff;
+    }
+    .fill-red   { background: linear-gradient(90deg,#e94560,#c0392b); }
+    .fill-green { background: linear-gradient(90deg,#27ae60,#2ecc71); }
+    .debt-gauge {
+      background: #fff4f4;
+      border: 1px solid #ffd0d0;
+      border-radius: 14px;
+      padding: 28px 24px;
+      margin: 36px 0;
+    }
+    .debt-gauge h3 { color: #c0392b; font-size: 15px; margin-bottom: 20px; font-weight: 700; text-align: center; }
+    .gauge-row { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+    .gauge-stat { text-align: center; flex: 1; min-width: 120px; }
+    .gauge-num { font-size: 28px; font-weight: 900; color: #c0392b; display: block; }
+    .gauge-desc { font-size: 12px; color: #666; margin-top: 4px; }
+    .gauge-divider { width: 1px; height: 60px; background: #ffd0d0; }
+    .impact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 28px 0; }
+    @media (max-width: 560px) { .impact-grid { grid-template-columns: 1fr; } }
+    .impact-card { border-radius: 10px; padding: 18px 16px; }
+    .impact-card.negative { background: #fff0f0; border: 1px solid #fdc0c0; }
+    .impact-card.caution  { background: #fffbf0; border: 1px solid #fde8a0; }
+    .impact-card.neutral  { background: #f0f6ff; border: 1px solid #b0d0f0; }
+    .impact-card.positive { background: #f0fff4; border: 1px solid #a0dbc0; }
+    .impact-icon { font-size: 22px; margin-bottom: 8px; }
+    .impact-title { font-size: 14px; font-weight: 700; margin-bottom: 6px; }
+    .impact-text  { font-size: 13px; color: #444; line-height: 1.6; word-break: keep-all; }
+    .hashtags { padding: 28px 0; border-top: 1px solid #eee; margin-top: 40px; }
+    .hashtag {
+      display: inline-block;
+      background: #f0f4ff; color: #0f3460;
+      font-size: 13px; padding: 5px 12px;
+      border-radius: 20px; margin: 4px; font-weight: 500;
+    }
+    .disclaimer {
+      background: #f8f8f8; border: 1px solid #e0e0e0;
+      border-radius: 8px; padding: 18px 20px;
+      font-size: 12.5px; color: #777; line-height: 1.7; margin-top: 24px;
+    }
+    .disclaimer strong { color: #555; }
+    .sources {
+      margin-top: 32px; padding: 20px 24px;
+      background: #fafafa; border-radius: 8px; border: 1px solid #eee;
+    }
+    .sources h4 { font-size: 14px; font-weight: 700; color: #555; margin-bottom: 10px; }
+    .sources ul { list-style: none; }
+    .sources ul li { font-size: 12.5px; margin-bottom: 6px; }
+    .sources ul li a { color: #0f3460; text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="article-header">
+  <div class="container">
+    <span class="category-badge">&#128176; 경제&#183;금융</span>
+    <h1>
+      코스피 <span class="accent">지옥의 3일</span>: <span class="accent">2,780조</span> 증발&#183;<span class="accent">56조</span> 날린 개미들...<br>
+      中 CXMT 한 방에 한국 증시 뚫렸다
+    </h1>
+    <p class="subtitle">이틀 폭락, 하루 14% 폭등 &#8216;롤러코스피&#8217;&#8230;승자는 없고 패자만 남았다</p>
+    <div class="meta-row">
+      <span>&#128197; 2026년 7월 31일</span>
+      <span>&#127991;&#65039; 경제&#183;금융</span>
+      <span>&#128240; 탐사 저널리즘</span>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <article class="article-body">
+
+    <div class="key-summary">
+      <h2>&#9889; 핵심 요약 3줄</h2>
+      <ul>
+        <li>7월 28~29일 코스피 이틀 연속 서킷브레이커, 2,780조원 시총 증발&#183;개인 56조 손실</li>
+        <li>원인은 중국 반도체 기업 CXMT 상장 + 레버리지 ETF 폭탄&#8230;삼성전자&#183;하이닉스 동시 13~14% 폭락</li>
+        <li>7월 31일 MS 실적 발표로 기술주 반등, 코스피 14% 폭등&#8230;하지만 금리 2.75%&#183;가계부채 1,189조 &#8216;경제 지뢰&#8217;는 그대로</li>
+      </ul>
+    </div>
+
+    <p>
+      &#8220;6억 수익이 7억 손실로 뒤집혔습니다.&#8221; 외신이 한국 증시를 보도하며 인용한 한 개인투자자의 말이다.
+      7월 28일 오전, 서울의 한 주식 커뮤니티에는 수천 개의 공황 글이 쏟아졌다. 코스피가 개장 30분 만에
+      8%대로 곤두박질쳤고, 오전 11시를 넘기기 전 역사상 8번째 서킷브레이커가 발동됐다.
+      장 마감 기준 하락률은 <strong>-10.84%</strong>. 금융위기도, 팬데믹도 아닌 &#8216;중국 메모리 반도체 기업 하나의 주식 상장&#8217;이 방아쇠를 당겼다.
+    </p>
+    <p>
+      이틀 뒤인 7월 31일, 코스피는 <strong>+14.63%</strong>로 폭등하며 &#8216;기적의 반등&#8217;을 연출했다.
+      불과 72시간 사이, 한국 주식시장은 역사상 유례없는 롤러코스터를 탔다. 언론은 이를 &#8216;롤러코스피&#8217;라 불렀다.
+      그러나 이 극적인 반등의 이면에서, 이미 56조원을 날린 개인투자자들은 웃을 수 없었다.
+    </p>
+
+    <h2>&#128293; &#8216;검은 화요일&#8217; &#8212; 단 하루 만에 무슨 일이 벌어졌나</h2>
+    <p>
+      7월 28일, 코스피는 전 거래일보다 <strong>732.09포인트(10.84%) 하락</strong>한 6,023.66에 마감했다.
+      장중에는 6,000선마저 붕괴, 1994년 기록 이후 최대 일간 하락폭이었다. 코스닥도 동반 폭락하며
+      두 시장 모두에서 동시 서킷브레이커가 발동된 것은 국내 증시 역사상 최초였다.
+    </p>
+    <p>
+      이날 삼성전자 주가는 <strong>-13.39%</strong>(종가 22만원), SK하이닉스는 <strong>-14.65%</strong>(종가 155만원)로 급락했다.
+      국내 증시 시가총액의 25% 이상을 차지하는 두 반도체 공룡이 동시에 무너지자 지수는 걷잡을 수 없었다.
+      이미 올해만 7번(연간 역대 최다)을 기록한 서킷브레이커는 이날 8번째를 찍었다.
+    </p>
+
+    <div class="infographic">
+      <h3>&#128202; 코스피 &#8216;지옥의 3일&#8217; 타임라인</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">
+            <span class="timeline-day">7월 28일</span>
+            <div class="timeline-dot dot-crash">&#128201;</div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-label label-crash">&#128680; 검은 화요일</div>
+            <div class="timeline-value val-crash">&#8211;10.84%</div>
+            <div class="timeline-desc">종가 6,023 &#183; 서킷브레이커 발동 &#183; 삼전 &#8211;13% 하이닉스 &#8211;14%<br>CXMT 상장 소식에 중국 증권사 대규모 매도 폭탄</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">
+            <span class="timeline-day">7월 29일</span>
+            <div class="timeline-dot dot-worse">&#128128;</div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-label label-worse">&#128308; 이틀째 서킷브레이커</div>
+            <div class="timeline-value val-worse">5,593</div>
+            <div class="timeline-desc">이틀 연속 서킷브레이커 &#8212; 국내 증시 사상 최초<br>한 달 최고점 대비 2,780조원 시총 증발<br>개인투자자 56조원 손실 &#8216;국장 탈출 선언&#8217;</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">
+            <span class="timeline-day">7월 31일</span>
+            <div class="timeline-dot dot-boom">&#128640;</div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-label label-boom">&#128994; 기적의 반등</div>
+            <div class="timeline-value val-boom">+14.63%</div>
+            <div class="timeline-desc">종가 6,400선 회복 &#183; 삼전 +20.5% 하이닉스 +25.4%<br>MS 실적 발표로 반도체 피크아웃 우려 해소<br>외국인 6.7조원 순매수</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2>&#127464;&#127475; CXMT &#8212; 한국 증시를 날린 중국 반도체의 정체</h2>
+    <p>
+      폭락의 방아쇠는 예상 밖의 곳에서 당겨졌다. 중국 반도체 기업 <strong>창신메모리테크놀로지(CXMT)</strong>가
+      7월 28일 상하이 증권거래소 커촹반(과창판)에 상장하면서 한국 시장에 쇼크파를 날렸다.
+    </p>
+    <p>
+      CXMT는 이번 IPO로 <strong>579억 위안(약 12조 5,000억원)</strong>을 조달했다. 아시아 증시 올해 최대이자 중국 반도체 기업 사상 최대 IPO였다.
+      상장 첫날 주가는 <strong>400% 넘게 폭등</strong>하며 중국 본토 상장사 시가총액 1위에 단숨에 올랐다.
+    </p>
+    <p>
+      문제는 자금의 출처였다. 중국 증권사들은 당국의 암묵적 압력 속에 삼성전자&#183;SK하이닉스&#183;키옥시아(일본) 등
+      해외 반도체 주식을 대거 매도했다. 이 매도 대금이 고스란히 CXMT 청약 자금으로 흘러들어 간 것으로 추정된다.
+    </p>
+
+    <div class="bar-chart">
+      <h3>&#128201; 7월 28일 폭락 vs 7월 31일 반등 비교</h3>
+      <div style="color:rgba(255,255,255,0.5); font-size:12px; margin-bottom:14px;">&#9660; 7월 28일 (검은 화요일) 폭락률</div>
+      <div class="bar-row">
+        <div class="bar-label">삼성전자</div>
+        <div class="bar-track"><div class="bar-fill fill-red" style="width:67%;">&#8211;13.39%</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">SK하이닉스</div>
+        <div class="bar-track"><div class="bar-fill fill-red" style="width:73%;">&#8211;14.65%</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">코스피 지수</div>
+        <div class="bar-track"><div class="bar-fill fill-red" style="width:54%;">&#8211;10.84%</div></div>
+      </div>
+      <div style="color:rgba(255,255,255,0.5); font-size:12px; margin: 20px 0 14px;">&#9650; 7월 31일 반등률</div>
+      <div class="bar-row">
+        <div class="bar-label">삼성전자</div>
+        <div class="bar-track"><div class="bar-fill fill-green" style="width:82%;">+20.53%</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">SK하이닉스</div>
+        <div class="bar-track"><div class="bar-fill fill-green" style="width:100%;">+25.42%</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">코스피 지수</div>
+        <div class="bar-track"><div class="bar-fill fill-green" style="width:73%;">+14.63%</div></div>
+      </div>
+    </div>
+
+    <h2>&#128163; 레버리지 ETF &#8212; 폭락을 증폭시킨 &#8216;또 다른 범인&#8217;</h2>
+    <p>
+      이번 폭락에서 도마 위에 오른 또 다른 주인공은 <strong>레버리지 ETF</strong>다.
+      10% 넘게 빠지는 폭락장에서도 개인투자자들은 이날 하루에만 레버리지 상품을 <strong>1조원 이상</strong> 쓸어담았다.
+      씨티(Citi) 분석에 따르면 레버리지 ETF에서 개인투자자가 입은 총 추정 손실은 <strong>387억 달러(약 53조원)</strong>에 달한다.
+    </p>
+    <p>
+      구조적 문제도 드러났다. SK하이닉스 비중이 높은 코스피 시장에서 레버리지 ETF 상품들은 매일 장 마감 후
+      &#8216;자동 리밸런싱&#8217; 거래를 통해 포지션을 재조정한다. 하락장에서 이 리밸런싱은 추가 매도 압력을 만들어
+      변동성을 더욱 증폭시킨다. 악순환의 고리가 형성된 것이다.
+    </p>
+    <div class="quote-block">
+      &#8220;레버리지만 막고 시장은 방치하느냐&#8221;는 분노가 커지자, 금융당국은 레버리지 투자한도 검토와 증안펀드 투입을 검토하기 시작했다. 공매도 금지 요구도 다시 불거졌다.
+    </div>
+    <p>
+      한국 증시에서 서킷브레이커는 1998년 도입 이후 2025년까지 27년간 13차례에 그쳤다.
+      그런데 2026년 한 해에만 이미 <strong>8번</strong>이 발동됐다. 비정상적인 시장 구조에 대한 경고등이 켜진 셈이다.
+    </p>
+
+    <h2>&#128202; 숨겨진 이면 &#8212; 금리 2.75%&#183;가계부채 1,189조의 &#8216;조용한 시한폭탄&#8217;</h2>
+    <p>
+      증시 급등락 소동 뒤에는 더 큰 구조적 위험이 도사리고 있다. 주식 쇼크가 터지기 불과 2주 전인
+      7월 16일, 한국은행은 기준금리를 <strong>2.50%에서 2.75%로</strong> 0.25%p 올렸다.
+      2023년 1월 이후 <strong>3년 6개월 만의 금리 인상</strong>이다.
+    </p>
+    <p>
+      소비자물가 상승률은 5~6월 3%대(6월 <strong>3.2%</strong>)로 한은 목표치(2%)를 1%p 이상 웃돌고 있다.
+      서울&#183;수도권 집값 상승세 재점화, 가계대출 폭증까지 맞물렸다.
+    </p>
+
+    <div class="debt-gauge">
+      <h3>&#127974; 한국 가계부채 현황 (2026년 6월 기준)</h3>
+      <div class="gauge-row">
+        <div class="gauge-stat">
+          <span class="gauge-num">1,189조</span>
+          <div class="gauge-desc">은행권 가계대출 잔액</div>
+        </div>
+        <div class="gauge-divider"></div>
+        <div class="gauge-stat">
+          <span class="gauge-num">+7.6조</span>
+          <div class="gauge-desc">6월 한 달 증가액<br>(22개월 만의 최대)</div>
+        </div>
+        <div class="gauge-divider"></div>
+        <div class="gauge-stat">
+          <span class="gauge-num">+30만원</span>
+          <div class="gauge-desc">금리 0.25%p 인상 시<br>차주 1인당 연간 이자 증가</div>
+        </div>
+        <div class="gauge-divider"></div>
+        <div class="gauge-stat">
+          <span class="gauge-num">3.2%</span>
+          <div class="gauge-desc">6월 소비자물가 상승률<br>(한은 목표 2% 초과)</div>
+        </div>
+      </div>
+    </div>
+
+    <p>
+      금리 인상은 주식 시장에도 직격탄이 됐다. 고금리 환경에서 레버리지 투자(빚투)의 이자 부담이 커지고,
+      대출 상환 압박이 증가하면서 투자자들이 주식 포지션을 줄이는 압력이 가중된다.
+      증시 폭락과 금리 인상, 가계부채가 한꺼번에 맞물리는 &#8216;퍼펙트 스톰&#8217; 우려가 나오는 이유다.
+    </p>
+
+    <h2>&#127906; 반등의 진실 &#8212; &#8216;기적&#8217;인가 &#8216;함정&#8217;인가</h2>
+    <p>
+      7월 31일 코스피 14% 폭등의 직접적 원인은 <strong>마이크로소프트(MS)의 호실적 발표</strong>였다.
+      MS의 클라우드&#183;AI 부문 실적이 기대를 뛰어넘으면서 &#8216;반도체 피크아웃&#8217; 우려가 성급한 판단이었다는 인식이 확산됐다.
+      삼성전자 +20.53%, SK하이닉스 +25.42% 폭등했고 외국인은 하루 만에 <strong>6조 7천억원</strong>어치를 순매수했다.
+    </p>
+    <p>
+      그러나 전문가들은 이 반등을 마냥 축하할 수 없다고 경고한다.
+      코스피는 이번 사태에서 최고점 대비 <strong>32% 급락</strong>한 뒤 반등했다. 단 3일 만에 10% 폭락하고 14% 폭등하는 &#8216;초변동성&#8217;이
+      정상 시장의 신호가 아니라는 점은 분명하다.
+    </p>
+    <div class="highlight-box">
+      <p>
+        코스피는 연초 9,000선대에서 출발해 최저 5,593선까지 내려앉았다가 다시 6,400선을 회복했다.
+        한 해에 이 정도 진폭을 경험한 주요국 증시는 현재로선 한국이 유일하다.
+        &#8216;세계에서 가장 위험한 증시&#8217;라는 오명이 붙을 수도 있다는 분석이 나온다.
+      </p>
+    </div>
+
+    <h2>&#128204; 나에게 미치는 영향 &#8212; 주식&#183;대출&#183;물가 모두 흔들린다</h2>
+    <div class="impact-grid">
+      <div class="impact-card negative">
+        <div class="impact-icon">&#128201;</div>
+        <div class="impact-title">주식 투자자</div>
+        <div class="impact-text">레버리지&#183;반도체 집중 포트폴리오는 이번 사태에서 최대 50% 손실. 분산 투자 재점검 필수.</div>
+      </div>
+      <div class="impact-card caution">
+        <div class="impact-icon">&#127968;</div>
+        <div class="impact-title">주택담보대출 보유자</div>
+        <div class="impact-text">금리 2.75%로 인상. 변동금리 대출은 연간 이자 약 30만원 증가. 고정&#8594;변동 전환 주의.</div>
+      </div>
+      <div class="impact-card neutral">
+        <div class="impact-icon">&#128722;</div>
+        <div class="impact-title">일반 소비자</div>
+        <div class="impact-text">물가 3.2% 상승 지속. 고금리&#183;고물가 압박이 겹쳐 실질 구매력 하락. 지출 계획 재조정 필요.</div>
+      </div>
+      <div class="impact-card positive">
+        <div class="impact-icon">&#128176;</div>
+        <div class="impact-title">예&#183;적금 보유자</div>
+        <div class="impact-text">기준금리 인상으로 은행 예금 금리 상승 기대. 안전 자산 선호 심리 수혜.</div>
+      </div>
+    </div>
+
+    <h2>&#128301; 전망과 행동 제안 &#8212; 다음 주 증시, 어디로 가나</h2>
+    <p>
+      단기적으로는 이번 주 예정된 아마존&#183;메타&#183;알파벳 등 빅테크 실적 발표가 반등 지속 여부를 결정할 것이다.
+      긍정적 실적이 이어지면 6,500~6,800선 회복 시도, 실망스러운 결과라면 재차 6,000선 테스트 가능성이 있다.
+    </p>
+    <p>
+      중기적으로는 CXMT가 쏘아올린 &#8216;중국 반도체 독립 시대&#8217;가 근본 변수다.
+      CXMT의 양산 능력이 확대될수록 삼성전자&#183;SK하이닉스의 프리미엄 지위는 흔들릴 수밖에 없다.
+      한국 수출의 20%를 차지하는 반도체 산업 구조 자체가 재편될 수 있는 거대한 분기점이다.
+    </p>
+    <p>
+      <strong>지금 당신이 해야 할 일:</strong> 레버리지 ETF 비중을 즉시 점검하라. 한 종목&#183;한 업종 집중도가 포트폴리오의
+      30%를 넘는다면 위험 신호다. 주담대 변동금리 차주라면 고정금리 전환을 검토할 타이밍이다.
+      물가 3%대 시대가 &#8216;일시적&#8217;이 아닐 수 있다는 전제 아래 가계 지출 계획을 다시 짜야 한다.
+    </p>
+
+    <div class="hashtags">
+      <span class="hashtag">#코스피폭락</span>
+      <span class="hashtag">#CXMT</span>
+      <span class="hashtag">#삼성전자주가</span>
+      <span class="hashtag">#SK하이닉스</span>
+      <span class="hashtag">#반도체피크아웃</span>
+      <span class="hashtag">#서킷브레이커</span>
+      <span class="hashtag">#레버리지ETF</span>
+      <span class="hashtag">#롤러코스피</span>
+      <span class="hashtag">#기준금리인상</span>
+      <span class="hashtag">#가계부채</span>
+      <span class="hashtag">#한국증시2026</span>
+      <span class="hashtag">#개미손실</span>
+      <span class="hashtag">#물가상승</span>
+    </div>
+
+    <div class="sources">
+      <h4>&#128203; 참고 출처</h4>
+      <ul>
+        <li><a href="https://www.fnnews.com/news/202607281629568435">파이낸셜뉴스 &#8212; &#8216;검은 화요일&#8217; 코스피 10% 급락</a></li>
+        <li><a href="https://www.mt.co.kr/stock/2026/07/28/2026072816223678548">머니투데이 &#8212; 코스피 -10% 대폭락</a></li>
+        <li><a href="https://www.etoday.co.kr/news/view/2608400">이투데이 &#8212; CXMT 재채기에 삼전&#183;하이닉스 추락</a></li>
+        <li><a href="https://biz.heraldcorp.com/article/10824151">헤럴드경제 &#8212; 개미 하루에만 레버리지 1조 쓸어담았다</a></li>
+        <li><a href="https://www.hankookilbo.com/news/article/A2026072913410002581">한국일보 &#8212; 56조 날린 개미들 &#8216;국장 탈출 선언&#8217;</a></li>
+        <li><a href="https://www.g-enews.com/article/Securities/2026/07/202607310921338679923c501012_1">글로벌이코노믹 &#8212; 코스피 12% 폭등, 6300선 회복</a></li>
+        <li><a href="https://www.thedailyeconomy.kr/news/articleView.html?idxno=5879">The Daily Economy &#8212; 한은 기준금리 2.75% 인상</a></li>
+        <li><a href="https://namu.wiki/w/2026%EB%85%84%207%EC%9B%94%20%EA%B5%AD%EB%82%B4%EC%A6%9D%EC%8B%9C%20%EB%8C%80%ED%8F%AD%EB%9D%BD">나무위키 &#8212; 2026년 7월 국내증시 대폭락</a></li>
+      </ul>
+    </div>
+
+    <div class="disclaimer">
+      <strong>&#9888;&#65039; 면책조항</strong><br>
+      이 아티클은 공개된 언론 보도와 통계를 바탕으로 작성된 정보 제공 목적의 콘텐츠입니다.
+      특정 투자 상품에 대한 매수&#183;매도 권유가 아니며, 투자 결정에 따른 손익은 전적으로 투자자 본인에게 귀속됩니다.
+      주식&#183;ETF&#183;부동산 등 모든 투자에는 원금 손실 위험이 있으며, 중요한 재무 결정 전에 전문 금융 자문을 받을 것을 권장합니다.
+    </div>
+
+  </article>
+</div>
+</body>
+</html>
