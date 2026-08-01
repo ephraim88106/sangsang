@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>서울 전세 7억 돌파 — 집 없는 절반의 서울시민, 이제 어디로 가나?</title>
+  <meta name="description" content="서울 아파트 평균 전셋값이 통계 작성 15년 만에 처음으로 7억원을 넘겼다. 서울 세입자 53.4%가 당장 이 충격을 정면으로 받는다. 청년·무주택 가구의 주거 생존기를 심층 취재했다." />
+  <meta property="og:title" content="서울 전세 7억 돌파 — 집 없는 절반의 서울시민, 이제 어디로 가나?" />
+  <meta property="og:description" content="KB부동산 통계 15년 역사상 최초. 1년 새 8.5% 급등, 2년 새 1억 상승. 53.4%가 세입자인 서울에서 무슨 일이 벌어지고 있나." />
+  <meta property="og:type" content="article" />
+  <meta name="keywords" content="서울전세,전세7억,전셋값,무주택,청년주거,전세난,부동산,임차인,전세사기,주거위기" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 17px;
+      line-height: 1.85;
+      background: #ffffff;
+      color: #1a1a1a;
+    }
+    /* ── 헤더 배너 ── */
+    .hero {
+      background: linear-gradient(135deg, #1a237e 0%, #283593 50%, #3949ab 100%);
+      color: #fff;
+      padding: 52px 24px 44px;
+      text-align: center;
+    }
+    .hero .category-badge {
+      display: inline-block;
+      background: #ff6f00;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 900;
+      line-height: 1.35;
+      max-width: 780px;
+      margin: 0 auto 18px;
+    }
+    .hero .subtitle {
+      font-size: 1rem;
+      opacity: 0.88;
+      max-width: 680px;
+      margin: 0 auto 24px;
+    }
+    .hero .meta {
+      font-size: 13px;
+      opacity: 0.7;
+    }
+    /* ── 본문 래퍼 ── */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px 60px;
+    }
+    /* ── 핵심 요약 카드 ── */
+    .summary-box {
+      background: #e8eaf6;
+      border-left: 5px solid #3949ab;
+      border-radius: 8px;
+      padding: 22px 26px;
+      margin: 0 0 36px;
+    }
+    .summary-box h2 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #1a237e;
+      margin-bottom: 12px;
+      letter-spacing: 0.05em;
+    }
+    .summary-box ul {
+      padding-left: 18px;
+    }
+    .summary-box ul li {
+      font-size: 15px;
+      margin-bottom: 6px;
+      color: #1a1a1a;
+    }
+    /* ── 소제목 ── */
+    h2.section-title {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #1a237e;
+      margin: 44px 0 14px;
+      padding-left: 14px;
+      border-left: 4px solid #ff6f00;
+    }
+    /* ── 본문 단락 ── */
+    p {
+      margin-bottom: 20px;
+      color: #222;
+    }
+    /* ── 데이터 강조 인라인 ── */
+    .highlight {
+      background: #fff3e0;
+      color: #e65100;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    /* ── 인포그래픽 영역 ── */
+    .infographic {
+      background: #f5f5f5;
+      border-radius: 12px;
+      padding: 28px 24px;
+      margin: 36px 0;
+    }
+    .infographic h3 {
+      font-size: 16px;
+      font-weight: 800;
+      color: #1a237e;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    /* 수평 막대 차트 */
+    .bar-chart { width: 100%; }
+    .bar-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 14px;
+      gap: 10px;
+    }
+    .bar-label {
+      font-size: 13.5px;
+      font-weight: 600;
+      min-width: 72px;
+      color: #333;
+      text-align: right;
+    }
+    .bar-track {
+      flex: 1;
+      background: #e0e0e0;
+      border-radius: 6px;
+      height: 28px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+      transition: width 0.5s ease;
+    }
+    .bar-fill.b1 { background: #3949ab; }
+    .bar-fill.b2 { background: #5c6bc0; }
+    .bar-fill.b3 { background: #7986cb; }
+    .bar-fill.b4 { background: #9fa8da; }
+    /* 숫자 카드 그리드 */
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .stat-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 18px 14px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .stat-card .num {
+      font-size: 1.9rem;
+      font-weight: 900;
+      color: #1a237e;
+      line-height: 1.1;
+    }
+    .stat-card .unit { font-size: 1rem; color: #3949ab; }
+    .stat-card .label { font-size: 12.5px; color: #666; margin-top: 6px; }
+    /* 타임라인 */
+    .timeline { margin: 16px 0; }
+    .tl-item {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 16px;
+      align-items: flex-start;
+    }
+    .tl-dot {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #3949ab;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .tl-content { flex: 1; }
+    .tl-content strong { color: #1a237e; display: block; font-size: 14.5px; }
+    .tl-content span { font-size: 13.5px; color: #444; }
+    /* ── 인용 박스 ── */
+    blockquote {
+      border-left: 4px solid #ff6f00;
+      padding: 16px 20px;
+      margin: 24px 0;
+      background: #fff8f0;
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      color: #444;
+    }
+    /* ── 행동 제안 ── */
+    .action-box {
+      background: #1a237e;
+      color: #fff;
+      border-radius: 12px;
+      padding: 28px 24px;
+      margin: 36px 0;
+    }
+    .action-box h3 {
+      font-size: 16px;
+      font-weight: 800;
+      margin-bottom: 14px;
+      color: #ffd740;
+    }
+    .action-box ul { padding-left: 20px; }
+    .action-box ul li { margin-bottom: 8px; font-size: 15px; }
+    /* ── 해시태그 ── */
+    .hashtags {
+      margin: 40px 0 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .hashtags span {
+      background: #e8eaf6;
+      color: #3949ab;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 20px;
+    }
+    /* ── 면책조항 ── */
+    .disclaimer {
+      font-size: 12px;
+      color: #999;
+      border-top: 1px solid #eee;
+      padding-top: 20px;
+      margin-top: 8px;
+      line-height: 1.7;
+    }
+    /* ── 출처 ── */
+    .sources {
+      font-size: 13px;
+      color: #666;
+      margin-top: 28px;
+    }
+    .sources a { color: #3949ab; text-decoration: none; }
+    .sources a:hover { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 1.45rem; }
+      .stat-card .num { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- 히어로 배너 -->
+<div class="hero">
+  <div class="category-badge">🏠 부동산 · 주거</div>
+  <h1>서울 전세 7억 돌파 — 집 없는 절반의 서울시민, 이제 어디로 가나?</h1>
+  <p class="subtitle">통계 작성 15년 만에 최초 기록, 1년 새 8.5% 급등…53.4%가 세입자인 서울에서 터진 '주거 폭탄'</p>
+  <p class="meta">2026년 8월 1일 | 탐사 저널리즘팀</p>
+</div>
+
+<div class="container">
+
+  <!-- 핵심 요약 -->
+  <div class="summary-box">
+    <h2>📌 핵심 요약 3줄</h2>
+    <ul>
+      <li>KB부동산 집계 이래 <strong>역사상 처음</strong>으로 서울 아파트 평균 전셋값이 7억원을 돌파(7억 458만원)</li>
+      <li>1년 새 <strong>5,514만원(+8.5%)</strong> 폭등…2024년 5월 대비 2년 만에 <strong>1억원</strong> 상승</li>
+      <li>서울 임차 가구 비율 <strong>53.4%</strong>, 청년(20·30대) 주택 보유율은 역대 최저 <strong>27.7%</strong></li>
+    </ul>
+  </div>
+
+  <!-- 훅 문단 -->
+  <p>지난달 서울 마포구에 사는 30대 직장인 A씨는 전세 재계약 통보를 받고 눈앞이 깜깜해졌다. 집주인이 제시한 새 보증금은 6억 8천만원. 2년 전보다 <span class="highlight">1억원이 오른 가격</span>이었다. "월급은 그대로인데 전세금만 억 단위로 오르면 어쩌라는 건가요." A씨만의 문제가 아니다. 2026년 7월 기준, 서울 아파트 평균 전셋값은 통계 작성 15년 역사상 처음으로 <span class="highlight">7억원 장벽</span>을 넘어섰다.</p>
+
+  <!-- 섹션 1: 숫자로 보는 충격 -->
+  <h2 class="section-title">📊 숫자로 보는 충격 — 15년 만에 깨진 기록</h2>
+
+  <p>KB부동산이 관련 통계를 발표하기 시작한 2011년 6월 이후, 서울 아파트 평균 전셋값이 7억원을 넘은 것은 이번이 처음이다. 2026년 7월 13일 기준 집계된 서울 아파트 평균 전세가격은 <span class="highlight">7억 458만원</span>. 불과 1년 전인 2025년 7월(6억 4,944만원)과 비교하면 <span class="highlight">5,514만원(+8.5%)</span>이 올랐다.</p>
+
+  <p>더 충격적인 건 가속도다. 2024년 5월부터 2026년 7월까지 단 2년 사이에 <span class="highlight">1억원</span>이 뛰었다. 아이 한 명 대학 등록금 4년치가 전세 오름폭에 통째로 사라진 셈이다.</p>
+
+  <!-- 인포그래픽 1: 전세가 추이 -->
+  <div class="infographic">
+    <h3>서울 아파트 평균 전셋값 추이 (전용 84㎡ 기준)</h3>
+    <div class="bar-chart">
+      <div class="bar-row">
+        <div class="bar-label">2022년</div>
+        <div class="bar-track">
+          <div class="bar-fill b4" style="width:68%">5억 9,000만원</div>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">2023년</div>
+        <div class="bar-track">
+          <div class="bar-fill b3" style="width:72%">6억 1,000만원</div>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">2024년</div>
+        <div class="bar-track">
+          <div class="bar-fill b2" style="width:74%">6억 3,000만원</div>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">2025년 7월</div>
+        <div class="bar-track">
+          <div class="bar-fill b1" style="width:85%">6억 4,944만원</div>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label" style="color:#e65100; font-weight:900;">2026년 7월</div>
+        <div class="bar-track">
+          <div class="bar-fill" style="width:100%; background: linear-gradient(90deg, #e65100, #ff6f00);">🔴 7억 458만원 (역대 최고)</div>
+        </div>
+      </div>
+    </div>
+    <p style="font-size:12px; color:#888; text-align:center; margin-top:12px;">출처: KB부동산 주간 아파트 동향 (2026.07)</p>
+  </div>
+
+  <!-- 섹션 2: 왜 이렇게 됐나 -->
+  <h2 class="section-title">🔍 왜 이렇게 됐나 — 공급 절벽 + 실거주 의무 덫</h2>
+
+  <p>전문가들은 이번 전셋값 폭등의 원인으로 두 가지를 꼽는다. 첫째는 <span class="highlight">공급 절벽</span>이다. 서울 전역이 토지거래허가구역으로 묶이면서 실거주 의무가 강화됐고, 이는 곧 시장에 나오는 전세 물건 자체가 씨가 마른다는 의미다. 집을 사도 직접 살아야 하니, 전세를 놓을 여유가 없다.</p>
+
+  <p>둘째는 <span class="highlight">입주 물량 감소</span>다. 2026년 수도권 입주 예정 물량이 전년 대비 눈에 띄게 줄었다. 8월에 전국 1만 9,272가구가 입주를 시작하지만, 이는 일시적 숨통에 불과하다는 게 전문가들의 진단이다. 9월 이후 또다시 '입주 절벽'이 예고돼 있다.</p>
+
+  <blockquote>"전세가 없으니 월세로 밀려나고, 월세도 오르니 외곽으로 밀려납니다. 서울에서 살 권리가 사라지고 있어요." — 서울 전세 피해자 지원센터 상담사</blockquote>
+
+  <!-- 지역별 공시가 인포그래픽 -->
+  <div class="infographic">
+    <h3>서울 구별 아파트 공시가격 상승률 상위권 (2026년)</h3>
+    <div class="bar-chart">
+      <div class="bar-row">
+        <div class="bar-label">용산구</div>
+        <div class="bar-track">
+          <div class="bar-fill b1" style="width:88%">+8.80%</div>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">강남구</div>
+        <div class="bar-track">
+          <div class="bar-fill b2" style="width:72%">+6.26%</div>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">성동구</div>
+        <div class="bar-track">
+          <div class="bar-fill b2" style="width:71%">+6.20%</div>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">서초구</div>
+        <div class="bar-track">
+          <div class="bar-fill b3" style="width:64%">+5.59%</div>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">마포구</div>
+        <div class="bar-track">
+          <div class="bar-fill b3" style="width:63%">+5.46%</div>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">송파구</div>
+        <div class="bar-track">
+          <div class="bar-fill b4" style="width:58%">+5.04%</div>
+        </div>
+      </div>
+    </div>
+    <p style="font-size:12px; color:#888; text-align:center; margin-top:12px;">출처: 국토교통부 공시가격, 2026년 기준</p>
+  </div>
+
+  <!-- 섹션 3: 숨겨진 이면 -->
+  <h2 class="section-title">🕵️ 숨겨진 이면 — 청년과 무주택자가 더 가파른 절벽에 서 있다</h2>
+
+  <p>평균 7억이 문제인 이유는 단순히 '비싸서'가 아니다. <span class="highlight">서울 임차 가구 비율이 53.4%</span>라는 사실을 직시해야 한다. 서울시민 둘 중 한 명 이상이 집을 빌려 산다. 전세 7억은 이 절반이 매 계약마다 직격탄을 맞는다는 의미다.</p>
+
+  <p>가장 취약한 집단은 청년이다. 2025년 기준 20·30대 주택 보유율은 <span class="highlight">27.7%</span>로 역대 최저를 기록했다. 서울 내 청년 가구 약 115만 가구 중 무려 <span class="highlight">90%가 임차</span>로 거주하며, 이 중 54%는 월세를 낸다. 원룸 평균 월세는 10년 사이 49만원에서 <span class="highlight">80만원</span>으로 63% 치솟았다.</p>
+
+  <!-- 핵심 수치 그리드 -->
+  <div class="infographic">
+    <h3>📌 주거 위기를 보여주는 핵심 데이터</h3>
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="num">53.4<span class="unit">%</span></div>
+        <div class="label">서울 임차 가구 비율</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">27.7<span class="unit">%</span></div>
+        <div class="label">청년(20·30대) 주택 보유율 (역대 최저)</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">90<span class="unit">%</span></div>
+        <div class="label">서울 청년 가구 중 임차 비율</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">8.5<span class="unit">%</span></div>
+        <div class="label">서울 전셋값 1년 상승률</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">+1억</div>
+        <div class="label">2년간 전세 오름폭</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">80<span class="unit">만원</span></div>
+        <div class="label">서울 원룸 평균 월세 (10년 전 49만원)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 섹션 4: 나에게 미치는 영향 -->
+  <h2 class="section-title">💥 나에게 어떤 영향이 오나 — 전세에서 밀리면 월세, 월세에서 밀리면 외곽</h2>
+
+  <p>전세 7억이 현실화되면 연쇄 도미노가 시작된다. 전세를 감당 못 한 세입자는 월세로 전환하고, 월세 시장의 수요가 폭증하면서 월세도 함께 오른다. 강남·서초·용산 같은 인기 지역은 이미 반포동 기준 월 2,000만원짜리 고급 임대가 즐비하지만, 외곽 반지하는 여전히 월 100만원대로 극단적 양극화가 고착되고 있다.</p>
+
+  <p>전세대출 한도 규제는 이 상황을 더 악화시킨다. 정부가 가계부채 관리를 강화해 다주택자 담보대출 만기연장을 막은 영향으로 일부 집주인들이 전세보증금을 서둘러 돌려받거나 올리면서 시장 불안을 가중시키고 있다.</p>
+
+  <!-- 전세→월세 전환 타임라인 -->
+  <div class="infographic">
+    <h3>서울 전세 붕괴 도미노 시나리오</h3>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot">1</div>
+        <div class="tl-content">
+          <strong>전세 7억 돌파 → 갱신 거절</strong>
+          <span>집주인이 시세에 맞춰 보증금 1억↑ 요구. 세입자 자금 부족으로 재계약 포기.</span>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">2</div>
+        <div class="tl-content">
+          <strong>전세 이탈 → 월세 시장 과열</strong>
+          <span>월세 수요 폭증. 평균 월세 80만원 → 추가 상승 압력 가중.</span>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">3</div>
+        <div class="tl-content">
+          <strong>서울 외곽·경기 이동 가속</strong>
+          <span>노원·도봉·강북 외곽도 가격 급등. 결국 경기권으로 밀려남.</span>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">4</div>
+        <div class="tl-content">
+          <strong>GTX·교통비 부담 이중고</strong>
+          <span>광역 통근으로 출퇴근 시간 2~3시간 증가. 삶의 질 급락.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 섹션 5: 정부 대응 -->
+  <h2 class="section-title">🏛️ 정부 대응은? — 대책 발표 '임박'이지만 글쎄</h2>
+
+  <p>청와대 경제성장수석은 지난 7월 27일 "전월세 대책을 조만간 발표할 예정"이라고 밝혔다. 이르면 8월 말 세제개편안과 함께 부동산 종합대책이 나올 것으로 관측된다. 정부가 준비하는 주요 카드는 세 가지다.</p>
+
+  <p>첫째, <span class="highlight">안심신탁사업</span> 도입이다. 전세보증금을 공적 기구가 수탁해 관리하는 방식으로, 전세사기를 원천 차단한다는 구상이다. 둘째, <span class="highlight">공인중개사 근거자료 강화</span>다. 신탁원부와 건축물대장 등본 확인을 의무화해 임차인이 계약 전 위험을 미리 알 수 있도록 한다. 셋째, <span class="highlight">청년 월세 지원 확대</span>다. 전세사기 피해자, 청년 한부모 가족, 무자녀 신혼부부까지 지원 대상을 넓힌다.</p>
+
+  <p>그러나 전문가들은 회의적이다. 임차인 보호와 보증금 반환 대책은 수요 관리에 불과하다. 핵심인 <strong>공급 확대</strong> 없이는 전셋값을 잡을 수 없다는 것이 시장의 공통된 목소리다. 서울시는 2030년까지 청년주택 7만 4,000가구를 공급하겠다고 발표했지만, 지금 당장 계약 갱신에 직면한 세입자에겐 먼 미래 이야기일 뿐이다.</p>
+
+  <!-- 섹션 6: 전망과 행동 제안 -->
+  <h2 class="section-title">🔭 전망 — 하반기 또 오를까?</h2>
+
+  <p>전문가들은 8월 입주 물량 증가(전국 1만 9,272가구)로 단기 숨통이 트일 수 있다고 본다. 하지만 9월 이후 다시 '입주 절벽'이 예고돼 있어, 전셋값 상승 기조는 하반기 내내 이어질 가능성이 크다. 한국건설산업연구원은 2026년 수도권 아파트 가격이 연간 <span class="highlight">2% 추가 상승</span>할 것으로 전망했다. 7억 전세가 7억 5천만원이 되는 건 시간문제일 수 있다.</p>
+
+  <!-- 행동 제안 -->
+  <div class="action-box">
+    <h3>✅ 세입자라면 지금 당장 해야 할 것들</h3>
+    <ul>
+      <li><strong>전세보증보험 필수 가입</strong> — HUG(주택도시보증공사) 또는 SGI서울보증보험 통해 보증금 반환 보장</li>
+      <li><strong>전입신고 + 확정일자</strong> — 계약 당일 주민센터 처리. 대항력과 우선변제권 확보의 기본</li>
+      <li><strong>등기부등본 직접 확인</strong> — 계약 직전 근저당·가압류 여부 필수 조회 (인터넷등기소 무료)</li>
+      <li><strong>안심전세 앱 활용</strong> — 국토부 제공 AI 기반 전세사기 위험도 진단 서비스</li>
+      <li><strong>전월세 신고제 확인</strong> — 보증금 6천만원 또는 월세 30만원 초과 시 의무 신고 (미신고 시 과태료)</li>
+      <li><strong>청년 월세 지원 신청</strong> — 서울시 청년 월세 지원 대상 확대, 주거포털(housing.seoul.go.kr)에서 확인</li>
+    </ul>
+  </div>
+
+  <!-- 해시태그 -->
+  <div class="hashtags">
+    <span>#서울전세7억</span>
+    <span>#전셋값폭등</span>
+    <span>#주거위기</span>
+    <span>#무주택청년</span>
+    <span>#전세난</span>
+    <span>#부동산대책</span>
+    <span>#임차인보호</span>
+    <span>#전세사기</span>
+    <span>#서울부동산</span>
+    <span>#청년주거</span>
+    <span>#월세폭등</span>
+  </div>
+
+  <!-- 출처 -->
+  <div class="sources">
+    <p><strong>📎 주요 출처</strong></p>
+    <ul style="padding-left:18px; margin-top:8px;">
+      <li><a href="https://biz.heraldcorp.com/article/10823134" target="_blank">헤럴드경제 — 서울 평균 전셋값 첫 7억 돌파</a></li>
+      <li><a href="https://www.hankyung.com/article/2026072787271" target="_blank">한국경제 — 입주 물량 부족에 서울 평균 전셋값 7억원 돌파</a></li>
+      <li><a href="https://www.kmib.co.kr/article/view.asp?arcid=9000000099&code=61141511&sid1=eco" target="_blank">국민일보 — "3개월 뒤 더 오른다" 서울 전셋값 첫 7억 돌파</a></li>
+      <li><a href="https://segye.com/newsView/20260730517091" target="_blank">세계일보 — 서울 국평 전세 7.2% 뛴 7억 3,000만원</a></li>
+      <li><a href="https://www.fdaily.co.kr/news/article.html?no=109648" target="_blank">파이낸셜데일리 — 서울 전셋값 7억원 첫 돌파, 정부 전월세 대책 발표 임박</a></li>
+      <li><a href="https://www.fnnews.com/news/202607270941001748" target="_blank">파이낸셜뉴스 — 청와대 "전월세 대책 조만간 발표"</a></li>
+      <li><a href="https://www.sedaily.com/article/20072626" target="_blank">서울경제 — 8월 전국 아파트 1.9만 가구 입주</a></li>
+      <li><a href="https://busanhaps.com/society/2030-youth-homeownership-rate-record-low-2026/" target="_blank">부산햅스 — 20·30대 주택 보유율 27.7% 역대 최저</a></li>
+    </ul>
+  </div>
+
+  <!-- 면책조항 -->
+  <div class="disclaimer">
+    ※ 본 아티클은 공개된 언론보도 및 통계자료를 바탕으로 작성된 저널리즘 콘텐츠입니다. 부동산 투자·임대차 계약 등 개인의 재정적 의사결정에 본 기사를 직접적 근거로 활용하지 마시고, 전문가와 별도 상담하시기 바랍니다. 본 콘텐츠는 특정 부동산 상품이나 서비스를 추천하지 않습니다.
+  </div>
+
+</div>
+</body>
+</html>
