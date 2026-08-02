@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>42.5도… 122년 기록 박살났다 — 사람도 가축도 쓰러진 '지옥 폭염'의 진실 | 이슈브리핑</title>
+  <meta name="description" content="2026년 8월 2일, 경남 양산이 42.5도를 찍으며 국내 122년 기상관측 사상 최고 기온 기록을 경신했다. 온열질환자 1,889명·사망 14명·가축 42만 마리 폐사. 우리는 지금 어디에 서 있는가." />
+  <meta name="keywords" content="폭염,42.5도,양산,기록경신,온열질환,기후위기,2026폭염,가뭄,열사병,취약계층" />
+  <meta property="og:title" content="42.5도… 122년 기록 박살났다 — 사람도 가축도 쓰러진 '지옥 폭염'의 진실" />
+  <meta property="og:description" content="닷새 연속 기록 경신, 누적 사망 14명, 가축 42만 마리 폐사. 2026년 한반도 폭염의 민낯을 파헤칩니다." />
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2026-08-02" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #ffffff;
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 17px;
+      line-height: 1.8;
+      color: #1a1a1a;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+
+    /* 헤더 배너 */
+    .hero {
+      background: linear-gradient(135deg, #b91c1c 0%, #dc2626 40%, #f97316 100%);
+      color: #fff;
+      padding: 48px 24px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -60px; left: -60px;
+      width: 200px; height: 200px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 50%;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; right: -40px;
+      width: 280px; height: 280px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 50%;
+    }
+    .category-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.4);
+      border-radius: 20px;
+      padding: 4px 16px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      margin-bottom: 20px;
+    }
+    .hero-date {
+      font-size: 13px;
+      opacity: 0.8;
+      margin-bottom: 14px;
+    }
+    .hero h1 {
+      font-size: clamp(22px, 4vw, 32px);
+      font-weight: 900;
+      line-height: 1.4;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-sub {
+      font-size: 15px;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* 요약 박스 */
+    .summary-box {
+      background: #fff7ed;
+      border-left: 5px solid #ea580c;
+      border-radius: 0 8px 8px 0;
+      padding: 20px 24px;
+      margin: 32px 0;
+    }
+    .summary-box h2 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #9a3412;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .summary-box ul {
+      list-style: none;
+      padding: 0;
+    }
+    .summary-box ul li {
+      padding: 4px 0;
+      font-size: 15px;
+      color: #431407;
+    }
+    .summary-box ul li::before {
+      content: '🔴 ';
+    }
+
+    /* 본문 스타일 */
+    article { margin-top: 8px; }
+    h2.section-title {
+      font-size: 20px;
+      font-weight: 900;
+      color: #b91c1c;
+      margin: 40px 0 14px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #fecaca;
+      position: relative;
+    }
+    h2.section-title::before {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 60px;
+      height: 2px;
+      background: #dc2626;
+    }
+    p { margin-bottom: 18px; }
+    strong { color: #b91c1c; font-weight: 700; }
+    .highlight-box {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: 8px;
+      padding: 18px 20px;
+      margin: 20px 0;
+      font-size: 16px;
+    }
+    .highlight-box .big-number {
+      font-size: 36px;
+      font-weight: 900;
+      color: #dc2626;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    /* 인포그래픽 */
+    .infographic {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 28px 20px;
+      margin: 32px 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .infographic h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #374151;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .stat-card {
+      background: #fff7f7;
+      border-radius: 10px;
+      padding: 16px;
+      text-align: center;
+      border-top: 3px solid #dc2626;
+    }
+    .stat-card .num {
+      font-size: 28px;
+      font-weight: 900;
+      color: #b91c1c;
+      display: block;
+    }
+    .stat-card .label {
+      font-size: 13px;
+      color: #6b7280;
+      margin-top: 4px;
+    }
+    /* 온도 비교 바 차트 */
+    .bar-chart { margin-top: 20px; }
+    .bar-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    .bar-label {
+      font-size: 13px;
+      color: #374151;
+      min-width: 130px;
+      text-align: right;
+    }
+    .bar-wrap {
+      flex: 1;
+      background: #f3f4f6;
+      border-radius: 6px;
+      height: 28px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+      transition: width 0.5s;
+    }
+    .bar-fill.record { background: linear-gradient(90deg, #b91c1c, #f97316); }
+    .bar-fill.second { background: #ef4444; }
+    .bar-fill.prev { background: #fca5a5; color: #7f1d1d; }
+    .bar-fill.normal { background: #fcd34d; color: #78350f; }
+
+    /* 타임라인 */
+    .timeline {
+      border-left: 3px solid #dc2626;
+      padding-left: 24px;
+      margin: 20px 0;
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 20px;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -31px;
+      top: 6px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #dc2626;
+      border: 2px solid #fff;
+      box-shadow: 0 0 0 2px #dc2626;
+    }
+    .timeline-item .date {
+      font-size: 12px;
+      color: #9ca3af;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+    }
+    .timeline-item .content {
+      font-size: 15px;
+      color: #1a1a1a;
+    }
+
+    /* 행동 제안 */
+    .action-box {
+      background: #f0fdf4;
+      border: 1px solid #86efac;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 32px 0;
+    }
+    .action-box h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #166534;
+      margin-bottom: 12px;
+    }
+    .action-box ul {
+      list-style: none;
+    }
+    .action-box ul li {
+      padding: 5px 0;
+      font-size: 15px;
+      color: #14532d;
+    }
+    .action-box ul li::before {
+      content: '✅ ';
+    }
+
+    /* 해시태그 */
+    .hashtags {
+      margin: 40px 0 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .hashtag {
+      background: #fef2f2;
+      color: #9a3412;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1px solid #fecaca;
+    }
+
+    /* 면책조항 */
+    .disclaimer {
+      font-size: 12px;
+      color: #9ca3af;
+      border-top: 1px solid #e5e7eb;
+      padding-top: 20px;
+      line-height: 1.6;
+    }
+
+    /* 출처 */
+    .sources {
+      font-size: 13px;
+      color: #6b7280;
+      margin-top: 24px;
+    }
+    .sources h4 { font-weight: 700; margin-bottom: 8px; color: #374151; }
+    .sources a { color: #dc2626; text-decoration: none; }
+    .sources a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="category-badge">🌡️ 환경·기후 긴급 리포트</div>
+  <div class="hero-date">2026년 8월 2일 | 이슈브리핑</div>
+  <h1>42.5도… 122년 기록 박살났다<br>사람도 가축도 쓰러진 '지옥 폭염'의 진실</h1>
+  <p class="hero-sub">닷새 연속 기록 경신 · 사망 14명 · 가축 42만 마리 폐사 · 가뭄까지 덮친 복합 재난<br>우리는 지금 어디에 서 있는가</p>
+</div>
+
+<div class="container">
+
+  <div class="summary-box">
+    <h2>⚡ 3줄 핵심 요약</h2>
+    <ul>
+      <li>경남 양산이 오늘 오후 42.5도를 기록, 국내 기상관측 122년 사상 최고 기온 경신</li>
+      <li>누적 온열질환자 1,889명·사망 14명, 가축 폐사 42만 마리 이상으로 농업도 붕괴</li>
+      <li>가뭄까지 겹친 '복합 기후재난', 중대본 2단계 가동…2023년 이후 3년 만</li>
+    </ul>
+  </div>
+
+  <article>
+
+    <h2 class="section-title">🔥 "이 더위는 전례가 없다" — 숫자가 말하는 충격</h2>
+    <p>
+      2026년 8월 2일 오후 1시 26분, 경남 양산의 자동기상관측장비(AWS)가 42.5도를 찍었다. 불과 7분 전인 1시 19분에 기록한 42.2도조차 이미 사상 최고였는데, 그것마저 단숨에 경신됐다. 기상청이 기온 순위를 관리하는 97개 기후통계 관측지점은 물론, 1973년 이후 전국 AWS 데이터를 모두 합쳐도 <strong>42도를 넘긴 적이 단 한 번도 없었다</strong>.
+    </p>
+    <p>
+      닷새 연속 기록 경신이었다. '양프라카'라는 신조어까지 등장했다. 한국판 아프리카, 양산이 진원지가 됐다. 기상 전문가들은 "단순한 더위가 아니라, 기후 시스템 자체가 뒤틀리고 있다는 신호"라고 경고한다.
+    </p>
+
+    <div class="infographic">
+      <h3>📊 2026년 8월 2일 폭염 피해 현황</h3>
+      <div class="stat-grid">
+        <div class="stat-card">
+          <span class="num">42.5°C</span>
+          <div class="label">오늘 최고 기온 (경남 양산)<br>122년 역대 최고</div>
+        </div>
+        <div class="stat-card">
+          <span class="num">1,889명</span>
+          <div class="label">누적 온열질환자<br>(5.15~7.31 기준)</div>
+        </div>
+        <div class="stat-card">
+          <span class="num">14명</span>
+          <div class="label">온열질환 사망자<br>(2026년 누적)</div>
+        </div>
+        <div class="stat-card">
+          <span class="num">42만+</span>
+          <div class="label">가축 폐사 마리 수<br>(7월 말 기준)</div>
+        </div>
+      </div>
+
+      <h3>🌡️ 역대 기온 기록 비교</h3>
+      <div class="bar-chart">
+        <div class="bar-row">
+          <span class="bar-label">2026 양산 (8/2)</span>
+          <div class="bar-wrap">
+            <div class="bar-fill record" style="width:100%">42.5°C 🏆 역대 1위</div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">2018 경북 의성</span>
+          <div class="bar-wrap">
+            <div class="bar-fill second" style="width:90.1%">40.3°C 종전 최고</div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">2016 경북 경주</span>
+          <div class="bar-wrap">
+            <div class="bar-fill prev" style="width:85.6%">39.4°C</div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">평년 8월 최고</span>
+          <div class="bar-wrap">
+            <div class="bar-fill normal" style="width:73.3%">33.5°C 평년</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="section-title">💀 하루 96명 쓰러졌다 — 온열질환의 민낯</h2>
+    <p>
+      질병관리청에 따르면 8월 1일 하루에만 <strong>96명이 온열질환으로 신고됐다</strong>. 올해 5월 15일부터 7월 31일까지 누적 온열질환자는 이미 1,889명(사망 14명)에 달한다. 충북 영동에서는 에어컨도 없이 밀폐된 차 안에서 쉬다 50대 남성이 숨진 채 발견됐다. 인천 펜타포트 록 페스티벌 현장에서도 온열질환자가 속출했다.
+    </p>
+    <p>
+      더 무서운 건 <strong>밤이 없다는 것</strong>이다. 열대야가 연속으로 이어지면서 더위를 피할 시간 자체가 사라졌다. 낮에 달아오른 콘크리트와 아스팔트가 밤새 열을 내뿜고, 새벽에 최저기온이 30도 아래로 내려오지 않는 지역도 속출하고 있다.
+    </p>
+    <p>
+      독거 노인, 쪽방촌 주민, 야외 노동자들이 가장 위험하다. 에너지바우처가 있다고는 하지만, <strong>세대원 중 노인·영유아·장애인 등 특정 조건을 동시 충족</strong>해야만 신청이 가능하다. 기초생활수급자라도 조건이 맞지 않으면 지원을 받지 못한다. 복지 사각지대는 폭염 앞에서 더 선명하게 드러나고 있다.
+    </p>
+
+    <h2 class="section-title">🌾 땅이 갈라졌다 — 폭염과 가뭄의 이중 재난</h2>
+    <p>
+      폭염만이 아니다. 올여름 남부지방에는 마른장마로 비다운 비가 내리지 않았다. 경남 밀양·창원 일대 농가들은 흙이 바싹 말라 파종을 해도 싹이 나지 않는다며 긴급 용수 지원을 요청하고 있다. 창원시는 소방차를 동원해 농가에 소방용수를 공급하는 비상 대응에 나섰다.
+    </p>
+    <p>
+      가축 피해도 처참하다. 7월 말 기준 전국에서 폐사한 가축은 <strong>42만 마리 이상</strong>으로 집계됐다. 닭, 오리 등 가금류가 특히 취약하다. 여기에 시금치·상추 등 엽채류의 성장 장애로 추석 물가 충격까지 우려되고 있다. 폭염이 밥상을 위협하기 시작했다.
+    </p>
+    <div class="highlight-box">
+      <span class="big-number">500억 원</span>
+      정부가 올해 폭염 대비 비상대책 예산으로 배정한 금액. 냉방비 지원·무더위쉼터 확충·폭염 저감 시설 구축에 집중 투입됐지만, 취약계층 사각지대를 해소하기엔 역부족이라는 지적이 나온다.
+    </div>
+
+    <h2 class="section-title">🌍 왜 이렇게 됐나 — 기후 과학이 말하는 진짜 원인</h2>
+    <p>
+      기상 전문가들은 이번 폭염의 주범으로 <strong>슈퍼 엘니뇨와 기후변화의 복합 메커니즘</strong>을 지목한다. 2026년 3월, 전 지구 해수면 온도는 역대 3월 중 두 번째로 높은 20.97°C를 기록했다. 엘니뇨가 적도 태평양 기온을 끌어올리면, 이것이 한반도에는 북태평양 고기압의 기압 배치를 바꾸어 폭염을 더 오래, 더 강하게 만든다.
+    </p>
+    <p>
+      여기에 서울 같은 대도시의 <strong>열섬 효과</strong>가 가세한다. 콘크리트와 아스팔트가 낮 동안 흡수한 열은 밤에도 방출되며, 자동차와 공장의 온실가스까지 더해져 도심은 주변 지역보다 평균 2~5도가량 더 뜨겁다. 지구 온난화가 없었다면 오늘의 42.5도는 나오지 않았을 가능성이 높다.
+    </p>
+    <p>
+      더 우려되는 건 미래다. 기상청은 "현재의 온실가스 배출 추세가 지속된다면 2040년대 이후 한반도의 여름 최고기온은 45도를 넘어설 수 있다"고 경고한다. 오늘의 42.5도는 끝이 아니라 <strong>시작점</strong>일 수 있다.
+    </p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="date">2018년 — 기존 최고 기록</div>
+        <div class="content">경북 의성 40.3도. 당시 역대 최고 기온 기록 수립. '이 더위는 전례가 없다'는 말이 쏟아졌다.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="date">2026년 7월 말 — 연속 폭염 시작</div>
+        <div class="content">남부지방 39~40도권 진입. 마른장마 이후 가뭄 동반. 가축 폐사 급증 시작.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="date">2026년 8월 1일 — 위기 고조</div>
+        <div class="content">하루 온열질환자 96명 신고. 충북 영동 차량 내 50대 사망. 중대본 2단계 가동.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="date">2026년 8월 2일 — 122년 기록 경신</div>
+        <div class="content">경남 양산 42.5도 달성. 국내 기상관측 사상 최고 기온 기록 수립. 닷새 연속 기록 경신.</div>
+      </div>
+    </div>
+
+    <h2 class="section-title">🏠 나에게 미치는 영향 — 지금 당장 알아야 할 것들</h2>
+    <p>
+      이 더위는 단순히 '덥다'는 불편함을 넘어선다. <strong>전기 요금이 오른다</strong>. 냉방 수요가 폭증하면서 전력망에 과부하가 걸릴 위험이 현실화되고 있다. 정부가 에어컨 사용을 독려하면서도 전기세 부담을 걱정해야 하는 아이러니다.
+    </p>
+    <p>
+      <strong>식탁 물가도 오른다</strong>. 가축 42만 마리 폐사와 채소 생산 차질은 2~4주 뒤 마트 물가에 직격탄이 된다. 삼계탕 재료가 오르고, 상추 가격이 껑충 뛸 수 있다.
+    </p>
+    <p>
+      야외 노동자들에게는 생존의 문제다. 건설, 택배, 농업 종사자들이 가장 큰 위험에 노출되어 있다. 작업중지권을 행사할 수 있지만, 일당을 잃을까 두려워 현장에 나오는 이들이 여전히 많다. <strong>더위가 계층 차별을 더 잔인하게 만들고 있다</strong>.
+    </p>
+
+    <div class="action-box">
+      <h3>💡 지금 바로 할 수 있는 것들</h3>
+      <ul>
+        <li>낮 12시~오후 4시 야외 활동 최대한 자제 (온열질환 최다 발생 시간대)</li>
+        <li>주변 홀몸 노인·장애인 이웃 30분마다 안부 확인</li>
+        <li>에너지바우처 지원 대상 여부 복지로(www.bokjiro.go.kr)에서 즉시 확인</li>
+        <li>가까운 무더위쉼터 위치 확인 (행안부 안전디딤돌 앱)</li>
+        <li>물을 자주, 조금씩 — 갈증 느끼기 전에 마셔야 한다</li>
+        <li>냉방 중인 대형 마트·도서관을 '더위 쉼터'로 활용</li>
+      </ul>
+    </div>
+
+    <h2 class="section-title">📌 전망 — 더위는 언제 끝나나</h2>
+    <p>
+      기상청은 최소 다음 주 중반까지 현재의 폭염이 지속될 것으로 예보했다. 북태평양 고기압의 세력이 강하게 유지되는 한 남서쪽에서 고온다습한 공기가 계속 유입된다. 일부 기상 모델은 8월 셋째 주 이후 태풍 또는 저기압 영향으로 소강이 나타날 가능성을 제시하지만, 아직 불확실성이 크다.
+    </p>
+    <p>
+      분명한 건 <strong>이 폭염이 '예외적 사건'이 아닌 '새로운 일상'이 되어가고 있다는 것</strong>이다. 122년 기록을 깬 오늘이 앞으로 10년, 20년 후엔 그냥 '평범한 여름날'로 기억될 수도 있다. 정책·인프라·개인 대응 방식 모두를 근본적으로 바꾸지 않으면, 우리는 매년 이 계절을 두려워하며 살아야 한다.
+    </p>
+
+  </article>
+
+  <div class="hashtags">
+    <span class="hashtag">#폭염</span>
+    <span class="hashtag">#42도</span>
+    <span class="hashtag">#양산42.5도</span>
+    <span class="hashtag">#122년기록</span>
+    <span class="hashtag">#온열질환</span>
+    <span class="hashtag">#기후위기</span>
+    <span class="hashtag">#2026폭염</span>
+    <span class="hashtag">#가뭄</span>
+    <span class="hashtag">#복합기후재난</span>
+    <span class="hashtag">#취약계층</span>
+    <span class="hashtag">#열사병예방</span>
+    <span class="hashtag">#환경이슈</span>
+  </div>
+
+  <div class="sources">
+    <h4>📎 주요 출처</h4>
+    <p>
+      <a href="https://www.newdaily.co.kr/site/data/html/2026/08/02/2026080200044.html" target="_blank">뉴데일리 — 양산 42.5도, 122년 관측사 최고기온</a> /
+      <a href="https://www.mt.co.kr/society/2026/08/02/2026080214582492345" target="_blank">머니투데이 — 극한더위 수도권 덮친다</a> /
+      <a href="https://www.khan.co.kr/article/202608021729001/" target="_blank">경향신문 — 하루 96명 쓰러졌다</a> /
+      <a href="https://www.fnnews.com/news/202607311041527656" target="_blank">파이낸셜뉴스 — 온열질환자·가축 피해 현황</a> /
+      <a href="https://www.youthassembly.kr/news/940267" target="_blank">유스연합 — 2026년 폭염 재앙, 한국의 대응</a> /
+      <a href="https://namu.wiki/w/2026%EB%85%84%20%ED%8F%AD%EC%97%BC" target="_blank">나무위키 — 2026년 폭염</a>
+    </p>
+  </div>
+
+  <div class="disclaimer">
+    <p>
+      ※ 본 아티클은 공개된 언론 보도 및 정부 발표 자료를 바탕으로 작성된 정보성 콘텐츠입니다. 의료적 판단이나 개인 상황에 맞는 대응은 반드시 전문가와 상담하시기 바랍니다. 온열질환 의심 시 즉시 119에 연락하거나 가까운 응급실을 방문하십시오. 수치 및 통계는 보도 시점 기준이며 이후 변경될 수 있습니다.
+    </p>
+  </div>
+
+</div>
+</body>
+</html>
