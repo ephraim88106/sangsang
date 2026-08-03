@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="건강보험 흑자 88% 증발, 2026년 적자 전환 확정. 초고령사회 원년, 당신의 보험료는 계속 오르는데 재정은 2033년 고갈 위기에 처했다.">
+  <meta name="keywords" content="건강보험 재정, 건강보험 적자, 초고령사회, 노인장기요양보험, 건강보험료 인상, 의료비 위기, 2026 건강보험">
+  <meta property="og:title" content="건강보험 흑자 88% 증발…올해 드디어 '적자 전환', 2033년엔 완전 고갈">
+  <meta property="og:description" content="초고령사회 원년 2026, 건강보험 시한폭탄이 현실화되고 있다. 2년 만에 흑자가 88% 사라졌고, 올해 적자 전환이 공식화됐다.">
+  <meta property="og:type" content="article">
+  <title>건강보험 흑자 88% 증발…올해 '적자 전환' 확정, 2033년엔 바닥난다 | 한국이슈</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary: #e63946; --primary-dark: #c1121f; --secondary: #2563eb;
+      --accent: #f4a261; --bg: #ffffff; --surface: #f8f9fa; --surface-2: #eef2ff;
+      --text: #1a1a2e; --text-muted: #5f6b7a; --border: #e2e8f0;
+      --success: #059669; --warning: #d97706; --danger: #dc2626;
+    }
+    body { font-family: 'Noto Sans KR', sans-serif; background: #f0f2f5; color: var(--text); font-size: 17px; line-height: 1.8; }
+    .container { max-width: 800px; margin: 0 auto; background: var(--bg); min-height: 100vh; }
+    .hero { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%); padding: 48px 32px 40px; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -50px; right: -50px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(230,57,70,0.15) 0%, transparent 70%); border-radius: 50%; }
+    .category-tag { display: inline-flex; align-items: center; gap: 6px; background: rgba(230,57,70,0.15); border: 1px solid rgba(230,57,70,0.4); color: #ff6b7a; padding: 5px 14px; border-radius: 100px; font-size: 13px; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(22px, 4vw, 32px); font-weight: 900; color: #ffffff; line-height: 1.4; margin-bottom: 16px; }
+    .hero h1 .highlight { color: #ff6b7a; }
+    .hero-sub { color: #94a3b8; font-size: 15px; line-height: 1.7; }
+    .meta-bar { display: flex; align-items: center; gap: 16px; margin-top: 24px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); flex-wrap: wrap; }
+    .meta-item { display: flex; align-items: center; gap: 6px; color: #64748b; font-size: 13px; }
+    .content { padding: 40px 32px; }
+    .alert-box { background: linear-gradient(135deg, #fff1f2, #fef2f2); border-left: 5px solid var(--danger); border-radius: 0 12px 12px 0; padding: 20px 24px; margin-bottom: 36px; }
+    .alert-box .label { font-size: 12px; font-weight: 700; color: var(--danger); letter-spacing: 0.1em; margin-bottom: 8px; }
+    .alert-box p { font-size: 16px; color: #7f1d1d; font-weight: 500; line-height: 1.7; }
+    .summary-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 40px; }
+    @media (max-width: 600px) { .summary-grid { grid-template-columns: 1fr; } }
+    .summary-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px; text-align: center; }
+    .summary-card .num { font-size: 26px; font-weight: 900; color: var(--danger); display: block; margin-bottom: 4px; }
+    .summary-card .num.blue { color: var(--secondary); }
+    .summary-card .num.orange { color: var(--warning); }
+    .summary-card .label { font-size: 12px; color: var(--text-muted); font-weight: 500; }
+    h2 { font-size: 21px; font-weight: 800; color: var(--text); margin: 44px 0 18px; padding-bottom: 10px; border-bottom: 2px solid var(--border); display: flex; align-items: center; gap: 8px; }
+    h2 .icon { font-size: 20px; }
+    p { margin-bottom: 18px; color: #2d3748; word-break: keep-all; }
+    strong { color: var(--danger); font-weight: 700; }
+    .strong-blue { color: var(--secondary); font-weight: 700; }
+    .strong-orange { color: var(--warning); font-weight: 700; }
+    .quote-box { background: #f0f4ff; border-left: 4px solid var(--secondary); border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 24px 0; font-style: italic; color: #1e3a8a; }
+    .quote-box cite { display: block; margin-top: 8px; font-size: 13px; color: #64748b; font-style: normal; font-weight: 600; }
+    .infographic { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 28px 24px; margin: 32px 0; }
+    .infographic-title { font-size: 15px; font-weight: 800; color: var(--text-muted); letter-spacing: 0.04em; margin-bottom: 24px; text-align: center; }
+    .bar-chart { margin-bottom: 12px; }
+    .bar-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+    .bar-label { width: 80px; font-size: 13px; font-weight: 600; color: var(--text-muted); text-align: right; flex-shrink: 0; }
+    .bar-wrap { flex: 1; background: #e2e8f0; border-radius: 6px; height: 28px; overflow: hidden; position: relative; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 13px; font-weight: 700; color: white; }
+    .bar-fill.red { background: linear-gradient(90deg, #e63946, #c1121f); }
+    .bar-fill.orange { background: linear-gradient(90deg, #f4a261, #d97706); }
+    .bar-fill.green { background: linear-gradient(90deg, #10b981, #059669); }
+    .bar-fill.blue { background: linear-gradient(90deg, #3b82f6, #2563eb); }
+    .timeline { list-style: none; position: relative; padding-left: 24px; }
+    .timeline::before { content: ''; position: absolute; left: 7px; top: 8px; bottom: 8px; width: 2px; background: var(--border); }
+    .timeline li { position: relative; margin-bottom: 20px; }
+    .timeline li::before { content: ''; position: absolute; left: -20px; top: 8px; width: 10px; height: 10px; border-radius: 50%; border: 2px solid var(--primary); background: white; }
+    .timeline li.danger::before { background: var(--danger); border-color: var(--danger); }
+    .timeline li.warning::before { background: var(--warning); border-color: var(--warning); }
+    .tl-year { font-weight: 800; color: var(--primary); font-size: 14px; }
+    .tl-desc { font-size: 14px; color: var(--text); margin-top: 2px; }
+    .compare-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    .compare-table th { background: #1a1a2e; color: white; padding: 12px 14px; text-align: left; font-weight: 700; }
+    .compare-table td { padding: 11px 14px; border-bottom: 1px solid var(--border); }
+    .compare-table tr:nth-child(even) td { background: var(--surface); }
+    .compare-table .red { color: var(--danger); font-weight: 700; }
+    .compare-table .green { color: var(--success); font-weight: 700; }
+    .impact-box { background: #fff8f0; border: 1px solid #fed7aa; border-radius: 12px; padding: 22px 24px; margin: 24px 0; }
+    .impact-box h3 { font-size: 16px; font-weight: 800; color: #92400e; margin-bottom: 14px; }
+    .impact-item { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
+    .impact-item .ico { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+    .impact-item p { margin: 0; font-size: 14px; color: #7c2d12; }
+    .cta-box { background: linear-gradient(135deg, #1a1a2e, #0f3460); border-radius: 16px; padding: 28px 28px; margin: 40px 0 32px; color: white; }
+    .cta-box h3 { font-size: 18px; font-weight: 800; margin-bottom: 12px; color: #ff6b7a; }
+    .cta-box p { color: #cbd5e1; font-size: 15px; margin-bottom: 0; }
+    .cta-actions { display: flex; flex-direction: column; gap: 8px; margin-top: 16px; }
+    .cta-action-item { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #e2e8f0; }
+    .cta-action-item .num { background: rgba(230,57,70,0.3); color: #ff6b7a; font-weight: 800; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; flex-shrink: 0; }
+    .disclaimer { background: #f8f9fa; border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px 20px; margin-top: 32px; font-size: 12px; color: #94a3b8; line-height: 1.6; }
+    .hashtags { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: var(--surface-2); color: var(--secondary); font-size: 13px; font-weight: 600; padding: 4px 12px; border-radius: 100px; }
+    .sources { margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border); }
+    .sources h4 { font-size: 13px; font-weight: 700; color: var(--text-muted); margin-bottom: 10px; }
+    .sources a { display: block; font-size: 12px; color: var(--secondary); text-decoration: none; margin-bottom: 4px; word-break: break-all; }
+    .footer { background: #f8f9fa; padding: 24px 32px; text-align: center; border-top: 1px solid var(--border); }
+    .footer p { font-size: 13px; color: #94a3b8; }
+    @media (max-width: 600px) { .hero { padding: 36px 20px 32px; } .content { padding: 28px 20px; } }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="hero">
+    <div class="category-tag">🏥 의료·복지</div>
+    <h1>건강보험 흑자 <span class="highlight">88% 증발</span>…<br>올해 드디어 '적자 전환' 확정,<br>2033년엔 완전 바닥난다</h1>
+    <p class="hero-sub">초고령사회 원년, 4조 원이 넘던 건강보험 흑자가 2년 만에 499억 원으로 쪼그라들었다.<br>매달 보험료는 오르는데, 재정은 시한폭탄처럼 째깍거리고 있다.</p>
+    <div class="meta-bar">
+      <span class="meta-item">📅 2026년 8월 3일</span>
+      <span class="meta-item">⏱️ 읽는 시간 약 8분</span>
+      <span class="meta-item">🔥 오늘의 핵심 이슈</span>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="alert-box">
+      <div class="label">🚨 지금 당장 당신에게 벌어지고 있는 일</div>
+      <p>당신이 매달 내는 건강보험료는 계속 오르고 있습니다. 그런데 정작 그 돈이 쌓이던 '금고'는 2년 만에 88%가 비었습니다. 정부는 올해 건강보험이 드디어 적자로 돌아선다고 공식 인정했습니다. 남은 적립금도 2033년이면 완전히 소진될 전망입니다.</p>
+    </div>
+
+    <div class="summary-grid">
+      <div class="summary-card">
+        <span class="num">-88%</span>
+        <div class="label">건강보험 흑자 감소<br>(2023 → 2025)</div>
+      </div>
+      <div class="summary-card">
+        <span class="num blue">2026</span>
+        <div class="label">건강보험 적자<br>전환 예상 연도</div>
+      </div>
+      <div class="summary-card">
+        <span class="num orange">2033</span>
+        <div class="label">건강보험 준비금<br>완전 고갈 전망</div>
+      </div>
+    </div>
+
+    <h2><span class="icon">💰</span> 4조 원이 어떻게 499억이 됐나</h2>
+    <p>2023년 건강보험 당기 흑자는 <strong>4조 1,000억 원</strong>이었습니다. 코로나 이후 의료비 지출이 일시 감소하며 쌓인 여유자금이었죠. 그러나 단 2년 뒤인 2025년, 이 흑자는 <strong>499억 6,000만 원</strong>으로 추락했습니다. 무려 <strong>88% 감소</strong>입니다.</p>
+    <p>건강보험공단의 2025년 재정 결산 결과입니다. 수치만 보면 "아직 흑자 아닌가?"라고 생각할 수 있지만, 전문가들은 이 499억 원이 사실상 '경고등'이라고 말합니다. 추세가 꺾이지 않으면 <span class="strong-blue">2026년에는 당기 기준으로 적자 전환이 사실상 불가피</span>하다는 것입니다.</p>
+    <p>국회예산정책처는 이미 2024년 보고서에서 "<span class="strong-orange">2026년 적자, 2029년 누적 준비금 소진</span>"을 기본 시나리오로 제시했습니다. 일부 기관은 준비금이 2033년까지는 버틸 수 있다고 보지만, 그 이후에 대해서는 누구도 낙관하지 않습니다.</p>
+
+    <div class="infographic">
+      <div class="infographic-title">📊 건강보험 당기 흑자 추이</div>
+      <div class="bar-chart">
+        <div class="bar-row">
+          <span class="bar-label">2021년</span>
+          <div class="bar-wrap"><div class="bar-fill blue" style="width:63%">2.6조 원</div></div>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">2022년</span>
+          <div class="bar-wrap"><div class="bar-fill blue" style="width:76%">3.1조 원</div></div>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">2023년</span>
+          <div class="bar-wrap"><div class="bar-fill green" style="width:100%">4.1조 원 ▲최고</div></div>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">2025년</span>
+          <div class="bar-wrap"><div class="bar-fill orange" style="width:12%">499억 원</div></div>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">2026년↓</span>
+          <div class="bar-wrap"><div class="bar-fill red" style="width:5%">≈ 적자</div></div>
+        </div>
+      </div>
+      <p style="font-size:12px;color:#94a3b8;text-align:center;margin-top:8px;margin-bottom:0">출처: 건강보험공단 재정결산, 국회예산정책처</p>
+    </div>
+
+    <h2><span class="icon">👴</span> 초고령사회 원년, 이 사태의 진짜 주범</h2>
+    <p>2024년 12월 23일, 대한민국은 65세 이상 인구 비율이 <strong>20%를 돌파</strong>하며 공식적인 '초고령사회'에 진입했습니다. 고령사회(14%)에서 초고령사회(20%)로 넘어가는 데 유럽 선진국들이 수십 년 걸린 것과 달리, 한국은 <strong>단 7년</strong>이 걸렸습니다. 세계에서 가장 빠른 속도입니다.</p>
+    <p>문제는 노인이 의료비를 압도적으로 더 많이 쓴다는 사실입니다. 65세 이상 노인 1인당 연평균 건강보험 진료비는 청장년층의 <span class="strong-orange">5~6배</span>에 달합니다. 초고령사회 진입 이후 이 비용은 복리로 불어납니다.</p>
+    <p>국회예산정책처 추계에 따르면, 인구 고령화로 인한 건강보험 추가 부담은 <span class="strong-blue">2032년에만 연 39.4조 원</span>이고, <strong>2042년에는 무려 152.5조 원(전체 지출의 34.8%)</strong>에 이를 전망입니다.</p>
+
+    <div class="quote-box">
+      "한국의 초고령화 속도는 인류 역사상 전례가 없는 수준이다. 복지 재정 시스템을 지금 당장 근본적으로 뜯어고치지 않으면, 다음 세대는 그 대가를 고스란히 떠안게 된다."
+      <cite>— 카네기 국제평화재단, 2026년 3월 「노화 경제 관리: 한국의 선택」 보고서</cite>
+    </div>
+
+    <h2><span class="icon">⏰</span> 이미 '적자'인 노인장기요양보험</h2>
+    <p>건강보험보다 먼저 무너지고 있는 것이 있습니다. 바로 <strong>노인장기요양보험</strong>입니다. 치매·중풍 등 일상생활이 어려운 고령자를 위한 이 제도는 2008년 도입된 지 18년 만에 재정 위기가 현실화됐습니다.</p>
+    <p>2025~2026년 노인장기요양보험은 <strong>"들어온 돈보다 7,000억 원 더 썼다"</strong>는 분석이 공개됐습니다. 보험료율을 인상해도 지출 증가 속도를 따라잡지 못하고 있습니다. 현재 추세가 유지된다면, <span class="strong-orange">2031년에 누적 준비금이 완전 소진</span>될 전망입니다.</p>
+    <p>2026년도 장기요양보험료율은 건강보험료의 <span class="strong-blue">12.95%</span>로 책정됐습니다. 당신이 매달 내는 건강보험료 고지서 아래쪽에 조용히 적혀있는 그 금액이, 사실 별도의 시한폭탄입니다.</p>
+
+    <div class="infographic">
+      <div class="infographic-title">⏳ 건강보험·장기요양보험 재정 위기 타임라인</div>
+      <ul class="timeline">
+        <li>
+          <span class="tl-year">2024년 12월</span>
+          <div class="tl-desc">한국, 초고령사회 공식 진입 (65세 이상 인구 20% 돌파)</div>
+        </li>
+        <li>
+          <span class="tl-year">2025년</span>
+          <div class="tl-desc">건강보험 흑자 499억 원(2년 만에 88% 급감), 장기요양보험 당기 적자 발생</div>
+        </li>
+        <li class="warning">
+          <span class="tl-year">2026년 ← 지금</span>
+          <div class="tl-desc">건강보험 당기 적자 전환 예상, 보험료율 7.19%로 인상</div>
+        </li>
+        <li class="warning">
+          <span class="tl-year">2029~2031년</span>
+          <div class="tl-desc">장기요양보험 준비금 소진 전망, 건강보험 준비금도 급감</div>
+        </li>
+        <li class="danger">
+          <span class="tl-year">2033년</span>
+          <div class="tl-desc">건강보험 누적 준비금 완전 고갈 전망 (국회예산정책처 등 추계)</div>
+        </li>
+        <li class="danger">
+          <span class="tl-year">2042년</span>
+          <div class="tl-desc">고령화 추가 의료비 152.5조 원/년 — 전체 건강보험 지출의 34.8%</div>
+        </li>
+      </ul>
+    </div>
+
+    <h2><span class="icon">🔍</span> 숨겨진 이면: 간병비 폭탄과 요양병원 현실</h2>
+    <p>건강보험 재정 위기는 숫자로만 느껴지지 않습니다. 지금 이 순간, 전국의 수십만 가족이 '간병비 폭탄'에 직면해 있습니다.</p>
+    <p>현재 요양병원에 부모님이 입원해 계신다면, 병원비만 월 150~250만 원이 기본입니다. 여기에 <strong>간병비가 150~250만 원 추가</strong>됩니다. 즉 자녀 1명이 홀로 부담할 경우, <strong>매달 300~500만 원이 그냥 사라집니다</strong>. 이 간병비는 건강보험이 적용되지 않아 100% 본인 부담이었습니다.</p>
+    <p>정부는 2026년 하반기부터 의료중심 요양병원 약 200곳에서 간병비에 건강보험을 적용해, 본인부담률을 30%로 낮추는 시범사업을 시작합니다. 월 200만 원이 60만 원으로 줄어드는 셈입니다. 환영할 만한 정책이지만, <span class="strong-orange">이 비용은 결국 건강보험 재정에서 나옵니다</span>. 이미 적자로 돌아서는 재정에 추가 지출이 얹히는 구조입니다.</p>
+
+    <div class="infographic">
+      <div class="infographic-title">💊 요양병원 입원 시 월 부담 비교 (2026년 기준)</div>
+      <table class="compare-table">
+        <thead>
+          <tr><th>항목</th><th>현재 (간병비 급여화 전)</th><th>간병비 급여화 후</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>요양병원 기본 입원비</td><td>100~150만 원</td><td>100~150만 원</td></tr>
+          <tr><td>간병비</td><td class="red">150~250만 원 (100% 자부담)</td><td class="green">60~80만 원 (30% 자부담)</td></tr>
+          <tr><td>총 월 부담</td><td class="red">300~500만 원</td><td class="green">160~230만 원</td></tr>
+          <tr><td>절감액</td><td>—</td><td class="green">약 130~270만 원 절감</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:12px;color:#94a3b8;text-align:center;margin-top:10px;margin-bottom:0">※ 개인별 상황에 따라 실제 비용 차이 있음 | 시범사업 병원 한정 적용</p>
+    </div>
+
+    <h2><span class="icon">💥</span> 나에게 미치는 영향</h2>
+    <div class="impact-box">
+      <h3>📌 이 위기가 당신 삶을 바꾸는 방식</h3>
+      <div class="impact-item">
+        <span class="ico">💼</span>
+        <p><strong>직장인</strong>: 2026년 건강보험료율 7.19% 인상 적용. 월평균 2,235원 추가 납부. 재정 위기 심화 시 향후 10년간 누적 인상률은 훨씬 가파를 수 있습니다.</p>
+      </div>
+      <div class="impact-item">
+        <span class="ico">🏪</span>
+        <p><strong>자영업자·지역가입자</strong>: 지역 가입자도 월 1,280원 추가. 소득·재산 연계 방식으로 부과되어 사업 규모에 따라 실제 부담이 크게 다를 수 있습니다.</p>
+      </div>
+      <div class="impact-item">
+        <span class="ico">👶</span>
+        <p><strong>20~40대 청년 세대</strong>: 2042년 기준 고령화 추가 부담은 연 152조 원으로, 현재 MZ세대가 중장년이 됐을 때 세대 간 갈등이 폭발할 수 있습니다.</p>
+      </div>
+      <div class="impact-item">
+        <span class="ico">👩‍👦</span>
+        <p><strong>부모님 있는 중장년</strong>: 간병비 급여화가 단계적으로 확대되면 부담이 줄어듭니다. 단, 혜택 대상 병원이 제한적이므로 반드시 확인 필요.</p>
+      </div>
+      <div class="impact-item">
+        <span class="ico">🏥</span>
+        <p><strong>의료 접근성</strong>: 재정 위기 속 보장 범위 축소가 단행될 경우, 지금 당연하게 생각하는 저렴한 진료비가 오를 수 있습니다.</p>
+      </div>
+    </div>
+
+    <h2><span class="icon">📈</span> 숫자로 보는 미래 의료비 폭탄</h2>
+    <div class="infographic">
+      <div class="infographic-title">💸 고령화로 인한 건강보험 추가 지출 전망</div>
+      <div class="bar-chart">
+        <div class="bar-row">
+          <span class="bar-label">2026년</span>
+          <div class="bar-wrap"><div class="bar-fill blue" style="width:13%">~20조</div></div>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">2032년</span>
+          <div class="bar-wrap"><div class="bar-fill orange" style="width:52%">39.4조</div></div>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">2042년</span>
+          <div class="bar-wrap"><div class="bar-fill red" style="width:100%">152.5조 (지출의 34.8%)</div></div>
+        </div>
+      </div>
+      <p style="font-size:12px;color:#94a3b8;text-align:center;margin-top:8px;margin-bottom:0">출처: 국회예산정책처 건강보험 재정전망 보고서 (2023~2042)</p>
+    </div>
+
+    <h2><span class="icon">🌍</span> 해외는 어떻게 하고 있나</h2>
+    <p>일본은 이미 1994년에 초고령사회에 진입, 30년 이상의 시행착오를 겪었습니다. 그 해법은 크게 세 가지였습니다: <span class="strong-blue">①보험료 인상, ②급여 범위 축소, ③조세 보전</span>. 일본도 이 세 가지를 동시에 시행했지만, 재정 부담은 여전히 GDP 대비 세계 최고 수준입니다.</p>
+    <p>독일은 민간 간병보험을 사회적으로 의무화해, 장기요양 위험을 공적·사적 보험으로 나눴습니다. 네덜란드는 지역사회 돌봄을 강화해 요양시설 입소 비율을 획기적으로 낮췄습니다. 한국이 지금부터 제도를 설계해도, 실제 효과가 나타나기까지 10~20년이 필요합니다.</p>
+    <p>한국 정부는 올해 '지역의료체계 구축'과 '의료-요양-돌봄 통합'을 핵심 과제로 내세우며 <strong>3.6조 원을 투자</strong>하겠다고 밝혔습니다. 하지만 전문가들은 현재의 속도와 규모로는 고령화 속도를 따라잡기 역부족이라고 지적합니다.</p>
+
+    <div class="cta-box">
+      <h3>⚡ 전망과 당신이 지금 할 수 있는 것</h3>
+      <p>건강보험 재정 위기는 막을 수 없는 인구 구조 변화에서 비롯됩니다. 하지만 개인적으로 대비할 수 있는 방법은 있습니다.</p>
+      <div class="cta-actions">
+        <div class="cta-action-item">
+          <span class="num">1</span>
+          <span>민간 실손보험 재점검 — 공적 건강보험 보장 공백이 커질 경우 실손보험이 완충 역할. 단 과잉 의료 이용 주의.</span>
+        </div>
+        <div class="cta-action-item">
+          <span class="num">2</span>
+          <span>부모님 장기요양등급 신청 — 등급 인정 시 요양시설 비용의 최대 80%를 보험 부담. 신청을 미루면 손해입니다.</span>
+        </div>
+        <div class="cta-action-item">
+          <span class="num">3</span>
+          <span>간병비 급여화 대상 병원 확인 — 2026년 하반기 시범사업 200개 병원 목록, 건강보험공단 홈페이지에서 확인 가능.</span>
+        </div>
+        <div class="cta-action-item">
+          <span class="num">4</span>
+          <span>건강보험 개혁 공론화 참여 — 이 문제는 결국 국민 의사 표현이 정책을 만듭니다. 청원, 여론 형성에 동참하세요.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hashtags">
+      <span class="hashtag">#건강보험재정</span>
+      <span class="hashtag">#초고령사회</span>
+      <span class="hashtag">#건강보험적자</span>
+      <span class="hashtag">#노인장기요양보험</span>
+      <span class="hashtag">#의료위기</span>
+      <span class="hashtag">#건강보험료인상</span>
+      <span class="hashtag">#간병비급여화</span>
+      <span class="hashtag">#세대간갈등</span>
+      <span class="hashtag">#복지재정</span>
+    </div>
+
+    <div class="sources">
+      <h4>📎 참고 출처</h4>
+      <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12625416/" target="_blank">국회예산정책처 건강보험 재정전망 보고서 2023-2042 (PMC)</a>
+      <a href="https://www.hijournal.co.kr/board_view.php?data=idx%3D2677" target="_blank">건강보험저널 — 2026년 적자, 2033년 고갈 시나리오</a>
+      <a href="https://www.reportera.co.kr/news/long-term-care-insurance-financial-crisis-reform-2026/" target="_blank">리포터아 — 장기요양보험 재정 위기 현실화</a>
+      <a href="https://www.insurancebusinessmag.com/asia/news/life-insurance/south-korea-health-insurance-fund-used-to-bankroll-doctor-standoff-582943.aspx" target="_blank">Insurance Business Asia — 건강보험 기금 현황</a>
+      <a href="https://carnegieendowment.org/research/2026/03/governing-aging-economies-south-korea-and-the-politics-of-care-safety-and-work" target="_blank">Carnegie Endowment — Governing Aging Economies: South Korea (2026)</a>
+      <a href="https://www.hankyung.com/article/2026072813621" target="_blank">한국경제 — 초고령사회 공식 진입, 연금·고용 개혁 시급 (2026.07.28)</a>
+      <a href="https://nhisforeigner.com/2026-korea-health-insurance-rate-hike/" target="_blank">건강보험료율 인상 2026 — 7.19% 확정</a>
+      <a href="https://www.dementianews.co.kr/news/articleView.html?idxno=10731" target="_blank">디멘시아뉴스 — 간병비 급여화 2026년 시작될까</a>
+      <a href="https://www.asiae.co.kr/en/article/bio-health/2026071615593540904" target="_blank">아시아경제 — 3.6조 투자, 지역·필수의료 강화 (2026 하반기 보고)</a>
+    </div>
+
+    <div class="disclaimer">
+      ⚠️ <strong>면책조항</strong>: 본 아티클은 공개된 통계자료, 정부 발표, 언론 보도를 바탕으로 작성된 정보성 콘텐츠입니다. 개인의 의료·재정 결정에 직접 활용하시기 전에 반드시 전문가(의사, 재무상담사, 건강보험공단)와 상담하시기 바랍니다. 통계 수치는 발표 시점에 따라 변동될 수 있습니다. 본 콘텐츠는 특정 정당·정책의 지지·반대를 목적으로 하지 않습니다.
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>🇰🇷 한국이슈 데일리 | 2026년 8월 3일 | 자동 생성 아티클</p>
+    <p style="margin-top:6px">이 기사가 도움이 됐다면 공유해 주세요</p>
+  </div>
+</div>
+</body>
+</html>
