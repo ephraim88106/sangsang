@@ -30,7 +30,7 @@ publish.py — 글을 추가한 뒤 딱 한 번 실행하면 되는 마무리 �
 - 커밋·푸시는 하지 않는다. 이 스크립트를 돌린 뒤 직접 커밋하면 된다.
 """
 
-import os, re, sys, glob, subprocess
+import os, re, sys, glob, fnmatch, subprocess
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SKIP_DIRS = {".git", "node_modules", ".idx", ".vscode", ".github"}
@@ -41,8 +41,31 @@ EXCLUDE_NAMES = {"404.html", "privacy.html", "terms.html", "policy.html"}
 EXCLUDE_PATTERN = re.compile(r"^(naver|google|BingSiteAuth|yandex)[0-9a-zA-Z_-]*\.(html|xml)$", re.I)
 
 
-def is_excluded(name):
-    return name in EXCLUDE_NAMES or bool(EXCLUDE_PATTERN.match(name))
+def _load_ignore():
+    """.publishignore — 점검에서 제외할 파일 패턴 (한 줄에 하나, glob 허용).
+
+    '광고를 일부러 안 넣은 페이지'나 'robots.txt 로 막아둔 페이지'처럼
+    의도적인 예외를 여기에 적어두면 매번 경고가 뜨지 않는다.
+    # 로 시작하는 줄은 주석."""
+    path = os.path.join(ROOT, ".publishignore")
+    if not os.path.exists(path):
+        return []
+    pats = []
+    for line in open(path, encoding="utf-8"):
+        line = line.split("#")[0].strip()
+        if line:
+            pats.append(line)
+    return pats
+
+
+IGNORE = _load_ignore()
+
+
+def is_excluded(rel):
+    name = os.path.basename(rel)
+    if name in EXCLUDE_NAMES or EXCLUDE_PATTERN.match(name):
+        return True
+    return any(fnmatch.fnmatch(rel, p) or fnmatch.fnmatch(name, p) for p in IGNORE)
 
 
 def run(script):
@@ -113,14 +136,14 @@ def audit():
         if bad_enc:
             problems.append("퍼센트 인코딩 안 된 sitemap URL %d개 — sitemap 규격 위반" % len(bad_enc))
         # 404 등 의도적 제외는 경고에서 뺀다
-        real_missing = [m for m in missing if not is_excluded(os.path.basename(m))]
+        real_missing = [m for m in missing if not is_excluded(m)]
         if real_missing:
             problems.append("sitemap 에 없는 페이지 %d개: %s" % (len(real_missing), ", ".join(real_missing[:3])))
     else:
         problems.append("sitemap.xml 이 없다")
 
     if noads:
-        real = [n for n in noads if not is_excluded(os.path.basename(n))]
+        real = [n for n in noads if not is_excluded(n)]
         if real:
             problems.append("광고 유닛 없는 페이지 %d개: %s" % (len(real), ", ".join(real[:3])))
 
