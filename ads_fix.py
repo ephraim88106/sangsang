@@ -32,6 +32,13 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 UNIT_TOP = "DAN-EVlth33UH8CTDu2u"    # 728x90 상단 배너
 UNIT_SIDE = "DAN-KMCr4AoIjIDsi9XA"   # 160x600 우측 고정
 
+# 새 도메인(*.ephseed.com) 전용 유닛 (2026-08-03 발급)
+# 애드핏 매체는 도메인 단위로 등록된다. 위의 옛 유닛은 *.pages.dev 매체에
+# 묶여 있어 새 도메인에서는 채워지지 않는다. 그래서 별도로 발급받았다.
+UNIT_NEW = "DAN-qqfX36xk8gz6faM6"
+UNIT_NEW_W = 320
+UNIT_NEW_H = 50
+
 # 광고를 넣지 않을 페이지
 EXCLUDE = {
     "404.html",
@@ -58,8 +65,22 @@ data-ad-width="160"
 data-ad-height="600"></ins>
 </div>
 <style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
-<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
-'''.replace('__UNIT_TOP__', UNIT_TOP).replace('__UNIT_SIDE__', UNIT_SIDE)
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="__UNIT_NEW__"
+data-ad-width="__UNIT_NEW_W__"
+data-ad-height="__UNIT_NEW_H__"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+'''.replace('__UNIT_TOP__', UNIT_TOP).replace('__UNIT_SIDE__', UNIT_SIDE).replace('__UNIT_NEW__', UNIT_NEW).replace('__UNIT_NEW_W__', str(UNIT_NEW_W)).replace('__UNIT_NEW_H__', str(UNIT_NEW_H))
 
 
 def all_html():
@@ -85,7 +106,8 @@ def inject(path, dry=False):
 
     new = src.replace("<body>", "<body>" + AD_BLOCK, 1)
 
-    if new.count("kakao_ad_area") != 2 or new.count("ba.min.js") != 1:
+    # CSS 선택자에도 kakao_ad_area 문자열이 들어가므로 <ins 태그만 센다
+    if new.count('<ins class="kakao_ad_area"') != 3 or new.count("ba.min.js") != 1:
         return "skip:삽입 검증 실패"
 
     if not dry:
