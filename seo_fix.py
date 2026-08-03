@@ -20,7 +20,14 @@ import os, re, glob, json, html, datetime
 from urllib.parse import quote
 
 # ─────────────────────────── 사이트별 설정 ───────────────────────────
-SITE        = "https://sangsang-2uk.pages.dev"
+# 2026-08-03: pages.dev → 커스텀 도메인으로 전환.
+# *.pages.dev 는 누구나 무료로 서브도메인을 만드는 공용 호스트라 도메인 신뢰도가 0에서
+# 시작한다. Search Console 에서 pages.dev 사이트 6곳은 sitemap 이 "가져올 수 없음"으로
+# 한 번도 안 읽혔고, 같은 날 제출한 커스텀 도메인(expectant.ephseed.com) 하나만
+# 성공했다. 색인 수치도 같은 패턴이었다. 그래서 커스텀 도메인으로 옮긴다.
+# 기존 pages.dev 주소도 계속 살아 있으나, canonical 이 아래 도메인을 가리키므로
+# 구글은 두 주소를 하나로 합쳐서 평가한다.
+SITE        = "https://sangsang.ephseed.com"
 SITE_NAME   = "생생 정보통"
 SITE_DESC   = "매일 아침 배달되는 경제·정책·생활 정보 브리핑"
 GA_ID       = "G-N28MJLW4W9"          # 없으면 None
