@@ -33,7 +33,10 @@ SITE_DESC   = "매일 아침 배달되는 경제·정책·생활 정보 브리�
 GA_ID       = "G-N28MJLW4W9"          # 없으면 None
 OG_IMAGE    = SITE + "/assets/og-default.png"
 # 네이버 서치어드바이저 HTML 태그 방식 content 값 (웹마스터도구에서 발급)
-NAVER_VERIFY = "f539a1f0417d4522145a5f8d7b289aa22fc82920"
+# sangsang.ephseed.com 용 (2026-08-03 발급). 커스텀 도메인 전환에 따라 교체.
+# 옛 pages.dev 용 코드(f539a1f0...)는 index.html 상단에 별도로 남아 있어
+# 두 도메인 모두 네이버 소유확인이 유지된다.
+NAVER_VERIFY = "027da35d9e3313a841db1a6e947978a8db79911d"
 DEAD_DOMAINS = ["ephraim88106.github.io/sangsang", "ephraim88106.github.io"]          # canonical 이 잘못 가리키던 죽은 도메인들
 ARTICLE_RE  = re.compile(r"^\d{4}-\d{2}-\d{2}")   # 글로 취급할 파일명 패턴
 # ────────────────────────────────────────────────────────────────────
