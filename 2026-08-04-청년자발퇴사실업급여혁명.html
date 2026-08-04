@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>"자발적 퇴사"도 실업급여 받는다? 오늘부터 달라지는 청년 노동의 룰 — 당신은 알고 있었나요</title>
+  <meta name="description" content="2026년 8월 4일 정부가 발표한 청년 노동개혁 패키지. 35세 미만 자발적 퇴사 청년에 실업급여 지급, 정년 65세 연내 입법 추진. 니트족 18.5%, 대기업 신입 43% 급감의 현실 속 이 정책이 진짜 답이 될 수 있을까?">
+  <meta name="keywords" content="청년실업급여, 자발적퇴사, 정년연장, 노동개혁, 청년취업, 2026년취업, 니트족, 쉬었음청년">
+  <meta property="og:title" content=""자발적 퇴사"도 실업급여 받는다? 오늘부터 달라지는 청년 노동의 룰" />
+  <meta property="og:description" content="정부가 35세 미만 청년의 자발적 퇴사에 생애 1회 실업급여를 주겠다고 발표했다. 대기업 신입 채용 43% 급감, 니트족 18.5%의 현실 — 이게 진짜 해결책인가?" />
+  <meta property="og:type" content="article" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #f59e0b;
+      --primary-dark: #d97706;
+      --primary-light: #fef3c7;
+      --accent: #dc2626;
+      --text: #111827;
+      --text-secondary: #4b5563;
+      --text-muted: #9ca3af;
+      --border: #e5e7eb;
+      --bg: #ffffff;
+      --bg-card: #f9fafb;
+      --bg-highlight: #fffbeb;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 20px 60px; }
+
+    /* HEADER */
+    .article-header {
+      background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+      color: #fff;
+      padding: 48px 20px 40px;
+      margin-bottom: 0;
+    }
+    .article-header .inner { max-width: 800px; margin: 0 auto; }
+    .category-badge {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    .article-title {
+      font-size: clamp(24px, 4vw, 36px);
+      font-weight: 900;
+      line-height: 1.35;
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .article-title em { color: var(--primary); font-style: normal; }
+    .article-subtitle {
+      font-size: 16px;
+      color: #d1d5db;
+      line-height: 1.7;
+      margin-bottom: 24px;
+      word-break: keep-all;
+    }
+    .article-meta {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: #9ca3af;
+    }
+    .article-meta span { display: flex; align-items: center; gap: 4px; }
+
+    /* BREAKING BANNER */
+    .breaking-banner {
+      background: var(--accent);
+      color: #fff;
+      padding: 12px 20px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    /* BODY */
+    .article-body { padding-top: 36px; }
+
+    /* HOOK */
+    .hook-box {
+      background: var(--bg-highlight);
+      border-left: 5px solid var(--primary);
+      padding: 24px 28px;
+      margin-bottom: 36px;
+      border-radius: 0 12px 12px 0;
+    }
+    .hook-box p { font-size: 18px; font-weight: 600; line-height: 1.75; color: #1f2937; word-break: keep-all; }
+
+    /* SUMMARY BOX */
+    .summary-box {
+      background: #f3f4f6;
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-bottom: 40px;
+    }
+    .summary-box h3 { font-size: 14px; font-weight: 700; color: var(--text-muted); letter-spacing: 0.08em; margin-bottom: 14px; }
+    .summary-list { list-style: none; }
+    .summary-list li {
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 16px;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .summary-list li:last-child { border-bottom: none; }
+    .summary-list li::before { content: "▶"; color: var(--primary); font-size: 10px; margin-top: 6px; flex-shrink: 0; }
+
+    /* SECTIONS */
+    h2 {
+      font-size: 22px;
+      font-weight: 800;
+      color: #1f2937;
+      margin: 44px 0 16px;
+      padding-bottom: 10px;
+      border-bottom: 3px solid var(--primary);
+      word-break: keep-all;
+    }
+    h3 { font-size: 18px; font-weight: 700; color: #374151; margin: 28px 0 12px; }
+    p { margin-bottom: 18px; color: var(--text); word-break: keep-all; }
+    strong { font-weight: 700; color: #111827; }
+
+    /* CALLOUT */
+    .callout {
+      background: #fef3c7;
+      border: 1px solid #fbbf24;
+      border-radius: 10px;
+      padding: 18px 22px;
+      margin: 24px 0;
+      font-size: 16px;
+    }
+    .callout-title { font-weight: 700; color: #92400e; margin-bottom: 8px; font-size: 14px; letter-spacing: 0.06em; }
+
+    .danger-callout {
+      background: #fef2f2;
+      border: 1px solid #fca5a5;
+      border-radius: 10px;
+      padding: 18px 22px;
+      margin: 24px 0;
+      font-size: 16px;
+    }
+    .danger-callout-title { font-weight: 700; color: #991b1b; margin-bottom: 8px; font-size: 14px; letter-spacing: 0.06em; }
+
+    /* INFOGRAPHIC */
+    .infographic {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px 24px;
+      margin: 36px 0;
+    }
+    .infographic-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-secondary);
+      text-align: center;
+      margin-bottom: 28px;
+      letter-spacing: 0.04em;
+    }
+
+    /* STAT GRID */
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .stat-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 16px;
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 36px;
+      font-weight: 900;
+      color: var(--primary-dark);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-number.red { color: var(--accent); }
+    .stat-number.dark { color: #1f2937; }
+    .stat-label { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
+
+    /* BAR CHART */
+    .bar-chart { width: 100%; }
+    .bar-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .bar-label { font-size: 13px; color: var(--text-secondary); min-width: 130px; text-align: right; }
+    .bar-track { flex: 1; background: #e5e7eb; border-radius: 4px; height: 28px; overflow: hidden; position: relative; }
+    .bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      padding-left: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+      transition: width 0.5s;
+    }
+    .bar-fill.amber { background: var(--primary); }
+    .bar-fill.red { background: var(--accent); }
+    .bar-fill.gray { background: #6b7280; }
+    .bar-fill.green { background: #10b981; }
+
+    /* COMPARISON TABLE */
+    .compare-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 15px; }
+    .compare-table th {
+      background: #1f2937;
+      color: #fff;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 600;
+    }
+    .compare-table td { padding: 12px 16px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .compare-table tr:nth-child(even) td { background: #f9fafb; }
+    .badge-new { display: inline-block; background: #d1fae5; color: #065f46; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 10px; margin-left: 6px; }
+    .badge-old { display: inline-block; background: #fee2e2; color: #991b1b; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 10px; margin-left: 6px; }
+
+    /* TIMELINE */
+    .timeline { margin: 20px 0; }
+    .timeline-item {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .timeline-dot {
+      width: 36px;
+      height: 36px;
+      background: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .timeline-dot.dark { background: #374151; }
+    .timeline-content h4 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .timeline-content p { font-size: 14px; color: var(--text-secondary); margin-bottom: 0; }
+
+    /* QUOTE */
+    .pull-quote {
+      border-left: 4px solid #d1d5db;
+      padding: 16px 24px;
+      margin: 28px 0;
+      background: #f9fafb;
+      border-radius: 0 8px 8px 0;
+    }
+    .pull-quote p { font-size: 17px; font-style: italic; color: #374151; margin-bottom: 8px; }
+    .pull-quote cite { font-size: 13px; color: var(--text-muted); font-style: normal; }
+
+    /* HASHTAGS */
+    .hashtag-section { margin: 48px 0 24px; padding-top: 24px; border-top: 1px solid var(--border); }
+    .hashtag-section h3 { font-size: 14px; font-weight: 700; color: var(--text-muted); margin-bottom: 12px; border-bottom: none; }
+    .hashtags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag {
+      background: #f3f4f6;
+      color: #374151;
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+    }
+    .hashtag:hover { background: var(--primary-light); color: var(--primary-dark); }
+
+    /* DISCLAIMER */
+    .disclaimer {
+      background: #f9fafb;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px 20px;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 32px;
+      line-height: 1.7;
+    }
+    .disclaimer strong { color: #6b7280; }
+
+    /* SOURCES */
+    .sources { margin-top: 24px; font-size: 13px; color: var(--text-muted); }
+    .sources a { color: #6b7280; text-decoration: underline; }
+
+    /* FOOTER */
+    .article-footer {
+      background: #111827;
+      color: #9ca3af;
+      text-align: center;
+      padding: 24px 20px;
+      font-size: 13px;
+      margin-top: 48px;
+    }
+
+    @media (max-width: 480px) {
+      .bar-label { min-width: 90px; font-size: 11px; }
+      .stat-number { font-size: 28px; }
+      .compare-table { font-size: 13px; }
+      .compare-table th, .compare-table td { padding: 9px 10px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- BREAKING -->
+<div class="breaking-banner">
+  🚨 2026.08.04 속보 — 정부 청년 노동개혁 패키지 발표 · 자발적 퇴사 실업급여 + 정년 65세 연내 입법 추진
+</div>
+
+<!-- HEADER -->
+<header class="article-header">
+  <div class="inner">
+    <div class="category-badge">💼 취업·노동</div>
+    <h1 class="article-title">
+      "자발적 퇴사"도 <em>실업급여</em> 받는다?<br>
+      오늘부터 달라지는 청년 노동의 룰 —<br>
+      당신은 알고 있었나요
+    </h1>
+    <p class="article-subtitle">
+      35세 미만이면 스스로 직장을 그만둬도 생애 1회 실업급여를 받는 세상이 온다.<br>
+      대기업 신입 채용 43% 급감, 니트족 18.5%… 정부의 승부수가 통할까?
+    </p>
+    <div class="article-meta">
+      <span>📅 2026년 8월 4일</span>
+      <span>✍️ 탐사저널팀</span>
+      <span>⏱️ 읽는 시간 약 7분</span>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="article-body">
+
+    <!-- HOOK -->
+    <div class="hook-box">
+      <p>
+        직장이 맞지 않아, 더 나은 곳으로 가고 싶어서 — 그 이유 하나만으로 실업급여를 포기해야 했던 청년들이 있었다.
+        지금까지 <strong>"자발적 퇴사"는 실업급여 수급 자격을 박탈하는 낙인</strong>이었다.
+        그 룰이 오늘 바뀌려 하고 있다.
+      </p>
+    </div>
+
+    <!-- SUMMARY -->
+    <div class="summary-box">
+      <h3>📌 이 기사 핵심 3줄</h3>
+      <ul class="summary-list">
+        <li>정부, 35세 미만 청년 자발적 퇴사 시 <strong>생애 1회 실업급여(최대 월 100만원)</strong> 지급 추진 발표</li>
+        <li>동시에 정년 60세→65세 <strong>연내 입법</strong> 추진… 노·경 정면충돌 속 중재안 유력</li>
+        <li>대기업 신입 채용 43% 급감·니트족 18.5%… 정책이 근본 처방인지는 여전히 의문</li>
+      </ul>
+    </div>
+
+    <!-- SECTION 1 -->
+    <h2>📋 오늘 발표된 정책 — 구체적으로 뭐가 달라지나</h2>
+
+    <p>
+      고용노동부가 2026년 8월 4일 발표한 <strong>'하반기 노동시장 개편 방안'</strong>의 핵심은 두 가지다.
+      첫째, 자발적으로 직장을 그만둔 <strong>35세 미만 청년에게 생애 단 한 번, 구직급여(실업급여)를 지급</strong>한다.
+      둘째, 법정 정년을 현행 60세에서 <strong>65세로 높이는 입법을 2026년 안에 완료</strong>하겠다는 것이다.
+    </p>
+
+    <div class="callout">
+      <div class="callout-title">💡 핵심 조건 정리</div>
+      <p style="margin:0">
+        ✔ 대상: <strong>35세 미만</strong> 청년<br>
+        ✔ 조건: 일정 기간 이상 근무 후 자발적 이직<br>
+        ✔ 지급액: 이직 전 임금의 <strong>60%</strong>, 월 최대 <strong>100만원</strong> 검토 중<br>
+        ✔ 횟수: 생애 <strong>1회</strong>에 한정<br>
+        ✔ 추진 일정: 3분기 법안 발의 → 4분기 국회 통과 목표
+      </p>
+    </div>
+
+    <p>
+      아울러 <strong>국민취업지원제도의 구직촉진수당</strong>을 현행 월 60만원에서 <strong>65만원으로 인상</strong>하고,
+      처음 취업에 도전하는 청년을 위한 신규 지원 유형도 신설된다.
+      플랫폼·특수고용·프리랜서 등 비정형 노동자 <strong>869만명</strong>을 위한 '일하는 사람 기본법'도
+      12월 일괄 입법을 목표로 추진 중이다.
+    </p>
+
+    <!-- INFOGRAPHIC 1 — 정책 비교 -->
+    <div class="infographic">
+      <p class="infographic-title">📊 지금까지 vs 앞으로 — 청년 실업급여 제도 비교</p>
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>항목</th>
+            <th>현행 제도 <span class="badge-old">지금</span></th>
+            <th>개정안 <span class="badge-new">예정</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>자발적 퇴사</strong></td>
+            <td>구직급여 수급 불가</td>
+            <td>35세 미만 생애 1회 지급</td>
+          </tr>
+          <tr>
+            <td><strong>지급액</strong></td>
+            <td>이직 전 임금의 60%, 월 최대 198만원</td>
+            <td>이직 전 임금의 60%, 월 최대 100만원(안)</td>
+          </tr>
+          <tr>
+            <td><strong>법정 정년</strong></td>
+            <td>60세</td>
+            <td>단계적 65세 (2028~2032년)</td>
+          </tr>
+          <tr>
+            <td><strong>구직촉진수당</strong></td>
+            <td>월 60만원</td>
+            <td>월 65만원 (2027년~)</td>
+          </tr>
+          <tr>
+            <td><strong>플랫폼 노동자</strong></td>
+            <td>별도 법적 보호 없음</td>
+            <td>'일하는 사람 기본법' 연내 입법</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- SECTION 2 -->
+    <h2>🔥 왜 지금? 숫자로 보는 청년 취업 지옥</h2>
+
+    <p>
+      정부가 이례적인 정책 패키지를 꺼낸 데는 이유가 있다.
+      숫자들이 이미 경보를 울리고 있다.
+    </p>
+
+    <!-- STAT GRID -->
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-number red">7.2%</div>
+        <div class="stat-label">2026년 5월 청년(15~29세) 실업률<br><small style="color:#9ca3af">전월 대비 0.6%p↑</small></div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number red">18.5%</div>
+        <div class="stat-label">한국 청년 NEET 비율<br><small style="color:#9ca3af">OECD 평균 15% 초과</small></div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number red">43%</div>
+        <div class="stat-label">대기업 신입 채용 공고 감소율<br><small style="color:#9ca3af">2025년 상반기 기준</small></div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number dark">869만</div>
+        <div class="stat-label">비정형 노동자(플랫폼·프리랜서 등)<br><small style="color:#9ca3af">법적 보호 사각지대</small></div>
+      </div>
+    </div>
+
+    <p>
+      표면적 실업률 7.2%는 OECD 평균(11.4%)보다 낮아 보인다.
+      하지만 이 숫자에는 <strong>단기 아르바이트와 비자발적 단시간 근로자가 '취업자'로 집계</strong>되는 함정이 있다.
+      진짜 문제는 <strong>'괜찮은 일자리'의 절대 부족</strong>이다.
+      대기업 정규직 신입 공고가 전년 대비 43% 급감한 반면,
+      신입 채용 비중은 전체 공고의 <strong>2.6%</strong>에 불과하다.
+    </p>
+
+    <div class="infographic">
+      <p class="infographic-title">📈 한국 청년 취업 지표 — 갈수록 벌어지는 격차</p>
+      <div class="bar-chart">
+        <div class="bar-row">
+          <span class="bar-label">OECD 청년실업률</span>
+          <div class="bar-track">
+            <div class="bar-fill gray" style="width:52%">11.4%</div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">한국 청년실업률</span>
+          <div class="bar-track">
+            <div class="bar-fill green" style="width:33%">7.2%</div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">한국 NEET 비율</span>
+          <div class="bar-track">
+            <div class="bar-fill amber" style="width:85%">18.5%</div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">OECD NEET 평균</span>
+          <div class="bar-track">
+            <div class="bar-fill gray" style="width:69%">15%</div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">대기업 신입 채용↓</span>
+          <div class="bar-track">
+            <div class="bar-fill red" style="width:100%">-43%</div>
+          </div>
+        </div>
+      </div>
+      <p style="font-size:12px; color:#9ca3af; margin-top:12px; text-align:right; margin-bottom:0">
+        출처: 통계청 2026년 고용동향, 유스연합, KBR 채용시장 분석 2026
+      </p>
+    </div>
+
+    <p>
+      그 결과 일도 구직도 하지 않는 <strong>'쉬었음' 청년</strong>이 사상 최대 규모로 늘고 있다.
+      서울신문이 추적한 자료에 따르면, 2026년 7월 기준 '쉬었음' 청년은 전년 동기 대비 14%가량 증가했다.
+      이들 중 상당수는 스스로 일을 그만두고 더 나은 직장을 찾다가 지원금도 못 받고 표류하는 청년들이다.
+    </p>
+
+    <!-- SECTION 3 -->
+    <h2>⚔️ 정년 65세 연장 — 노동계 vs 경영계 격돌의 진실</h2>
+
+    <p>
+      정년 연장 이슈는 청년 실업급여보다 훨씬 복잡한 전선을 형성하고 있다.
+    </p>
+
+    <div class="pull-quote">
+      <p>"법정 정년연장은 혜택이 대기업과 유노조 정규직에만 집중돼 노동시장 이중구조를 심화시킬 것이다."</p>
+      <cite>— 한국경영자총협회</cite>
+    </div>
+
+    <p>
+      <strong>노동계의 입장</strong>은 명확하다: 2026년 안에 법정 정년을 65세로 올려야 한다.
+      고령화 사회에서 60세 정년은 너무 이르고, 국민연금 수령 시기와의 간극이 노후 빈곤을 야기한다는 논리다.
+    </p>
+
+    <p>
+      반면 <strong>경영계는 '계속고용제도'</strong>를 요구한다. 정년 후 재고용 여부를 기업이 선택하게 해달라는 것이다.
+      대기업·공공기관의 고임금 고령 직원이 자리를 차지하면 청년 신규 채용이 줄어든다는 이른바
+      <strong>'노동시장 구축(crowding-out) 효과'</strong>가 핵심 우려다.
+    </p>
+
+    <!-- TIMELINE -->
+    <h3>📅 정년 연장 입법 추진 타임라인</h3>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot">現</div>
+        <div class="timeline-content">
+          <h4>현행: 법정 정년 60세</h4>
+          <p>대부분 기업 적용, 단 공공기관 일부 예외. 국민연금 수령(63세)과 3년 공백 발생.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot">2026</div>
+        <div class="timeline-content">
+          <h4>여당 중재안 발표 예정 (8월말)</h4>
+          <p>단계적 정년 연장안 공개. 2028~2032년 단계 상향이 유력안으로 논의 중.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot">2028</div>
+        <div class="timeline-content">
+          <h4>단계적 정년 연장 시작</h4>
+          <p>1972년생부터 65세 정년 보장 가능성. 기업 규모별 차등 적용 검토.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dark">2032</div>
+        <div class="timeline-content">
+          <h4>전면 65세 정년</h4>
+          <p>전체 근로자 적용 목표. 계속고용제도와 병행 여부 협상 계속.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 4 -->
+    <h2>💸 나에게 직접 미치는 영향 — 시나리오별 정리</h2>
+
+    <p>이 정책들이 현실화되면 당신의 상황은 어떻게 달라질까?</p>
+
+    <div class="callout">
+      <div class="callout-title">✅ 혜택을 받을 수 있는 경우</div>
+      <p style="margin-bottom: 6px; margin-top: 0">
+        ▸ <strong>현재 30대 초반</strong>이고 직장이 맞지 않아 이직을 고민 중이라면: 법 개정 후 자발적 퇴사 시 최대 월 100만원 구직급여 생애 1회 수령 가능<br>
+        ▸ <strong>플랫폼·프리랜서 노동자</strong>: '일하는 사람 기본법' 통과 시 최초로 노동 보호망 진입<br>
+        ▸ <strong>50~60대 재직자</strong>: 정년 연장 입법 시 최대 5년 추가 고용 안정
+      </p>
+    </div>
+
+    <div class="danger-callout">
+      <div class="danger-callout-title">⚠️ 역풍이 우려되는 측면</div>
+      <p style="margin-bottom: 0">
+        ▸ <strong>청년 신규 취업자</strong>: 정년 연장으로 고령 직원이 자리를 유지하면 신규 채용 자리가 더 줄 수 있음<br>
+        ▸ <strong>중소기업 재직자</strong>: 대기업·공공기관 중심 정년 연장 혜택에서 소외될 가능성<br>
+        ▸ <strong>실업급여 수급자</strong>: 기금 재정 압박으로 장기적으로 급여액·기간 축소 가능성
+      </p>
+    </div>
+
+    <!-- SECTION 5 -->
+    <h2>🔍 숨겨진 이면 — 이 정책이 '처방'인가 '진통제'인가</h2>
+
+    <p>
+      전문가들은 오늘 발표에 양가적 평가를 내놓는다.
+      자발적 퇴사 실업급여는 <strong>청년의 이직 자유도를 높여 노동시장 유동성을 개선</strong>할 수 있다.
+      커리어를 탐색하는 시간을 국가가 지원해주는 발상은 독일·덴마크형 '유연안정성(flexicurity)' 모델과 닮아 있다.
+    </p>
+
+    <p>
+      그러나 근본 원인 — <strong>대기업·공공기관 신규 채용 감소, 중소기업-대기업 간 임금 격차, AI에 의한 일자리 대체</strong> —
+      은 현금 지원만으로는 해결되지 않는다.
+      2026년 채용시장 분석에 따르면 수시채용이 54.8%, 경력 우대 비율이 67.6%에 달하는 상황에서
+      신입이 들어갈 문 자체가 협소해지고 있다는 사실은 변하지 않는다.
+    </p>
+
+    <div class="pull-quote">
+      <p>"실업률은 낮아 보이지만 정작 청년들이 원하는 일자리는 없다 — 이게 대한민국 청년 노동시장의 역설이다."</p>
+      <cite>— 한국IT산업뉴스, 유스연합 분석 2026</cite>
+    </div>
+
+    <p>
+      정년 연장 역시 단기적으로 <strong>기존 재직자에게 유리한 '내부자 보호' 정책</strong>이 될 수 있다는 비판을 피하기 어렵다.
+      한국노동연구원이 지적했듯, 정년 연장의 혜택은 대기업·유노조 사업장에 집중되고
+      비정규직·중소기업 청년들에게는 간접 피해로 되돌아올 수 있다.
+    </p>
+
+    <!-- SECTION 6 -->
+    <h2>🔭 전망과 행동 제안 — 지금 당신이 해야 할 것</h2>
+
+    <p>
+      법안은 아직 <strong>'추진 중'</strong>이다. 3분기 법안 발의 → 4분기 국회 통과라는 일정은 국회 정치 지형에 따라 얼마든지 바뀔 수 있다.
+      지금 당장 수혜를 기대하기보다는 아래 사항을 점검하자.
+    </p>
+
+    <div class="callout">
+      <div class="callout-title">📋 오늘 당신이 확인해야 할 체크리스트</div>
+      <p style="margin: 0">
+        ☑ 현재 재직 중이라면: 자발적 퇴사 전 <strong>고용보험 가입 기간</strong>을 확인(법 개정 후 수급 요건 확정 예정)<br>
+        ☑ 구직 중이라면: <strong>국민취업지원제도</strong> 1·2유형 신청 자격 확인 (고용24.go.kr)<br>
+        ☑ 프리랜서·플랫폼 노동자: '일하는 사람 기본법' 입법 동향 계속 추적<br>
+        ☑ 50대 재직자: 정년 연장 적용 연령·기업 규모 조건 중재안 발표(8월말) 확인<br>
+        ☑ 누구든: 법안 확정 전 <strong>자발적 퇴사는 신중하게</strong>
+      </p>
+    </div>
+
+    <p>
+      오늘 발표는 청년 노동의 룰이 바뀌는 출발점이다.
+      하지만 진짜 변화는 법안이 국회를 통과하고, 기업들이 청년 신입 채용을 늘리고,
+      중소기업 근로 환경이 개선될 때 비로소 완성된다.
+      그 사이 표류하지 않으려면, <strong>지금 자신의 고용보험 가입 이력과 구직 지원 자격부터 확인</strong>하는 것이 최선이다.
+    </p>
+
+    <!-- HASHTAGS -->
+    <div class="hashtag-section">
+      <h3>🏷️ 관련 태그</h3>
+      <div class="hashtags">
+        <span class="hashtag">#청년실업급여</span>
+        <span class="hashtag">#자발적퇴사</span>
+        <span class="hashtag">#정년연장65세</span>
+        <span class="hashtag">#노동개혁2026</span>
+        <span class="hashtag">#청년취업</span>
+        <span class="hashtag">#니트족</span>
+        <span class="hashtag">#쉬었음청년</span>
+        <span class="hashtag">#고용보험법</span>
+        <span class="hashtag">#플랫폼노동</span>
+        <span class="hashtag">#대기업신입채용</span>
+        <span class="hashtag">#일하는사람기본법</span>
+        <span class="hashtag">#한국노동시장</span>
+      </div>
+    </div>
+
+    <!-- SOURCES -->
+    <div class="sources">
+      <p><strong>📎 주요 출처</strong></p>
+      <p>
+        파이낸셜뉴스 2026.08.04 / 머니투데이 2026.08.04 / 아시아투데이 2026.08.04 / EBN 2026.08.04 /
+        헤럴드경제 2026.08.04 / KBR 채용시장 분석 2026.07 / 유스연합 2026 / 서울신문 쉬었음 청년 추적기 2026.07 /
+        통계청 고용동향 2026.05 / KDI 경제교육정보센터
+      </p>
+    </div>
+
+    <!-- DISCLAIMER -->
+    <div class="disclaimer">
+      <strong>⚠️ 면책조항</strong><br>
+      본 아티클은 공개된 보도자료 및 언론 기사를 바탕으로 작성된 정보 제공용 콘텐츠입니다.
+      법안은 현재 추진 중이며 국회 심의 과정에서 내용이 변경될 수 있습니다.
+      실업급여 수급 자격 및 구직 지원 신청은 반드시 고용24(www.work24.go.kr) 또는 고용노동부 상담센터(1350)를 통해
+      개인 상황에 맞게 확인하시기 바랍니다.
+      본 콘텐츠는 법률·재정 자문을 대체하지 않습니다.
+    </div>
+
+  </div>
+</div>
+
+<footer class="article-footer">
+  <p>© 2026 한국이슈 데일리 | 매일 대한민국 핵심 이슈를 깊이 파헤칩니다</p>
+  <p style="margin-top: 6px; font-size: 12px; color: #6b7280">정보는 공유될 때 힘이 됩니다 — 주변에 알려주세요</p>
+</footer>
+
+</body>
+</html>
