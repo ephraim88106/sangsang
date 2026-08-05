@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📉 검은 월요일의 귀환?! 코스피 폭락 후 반등 — 진짜 위기는 지금부터다 [2026.08.05 시장 브리핑]</title>
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w59aji6ixc");
+  </script>
+  <!-- Google AdSense -->
+  <meta name="google-adsense-account" content="ca-pub-9118774019383180">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9118774019383180" crossorigin="anonymous"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0a0e1a;
+      --surface: #111827;
+      --surface2: #1a2234;
+      --surface3: #1e2a3f;
+      --up: #00c896;
+      --down: #ff4757;
+      --neutral: #ffd32a;
+      --text: #e8eaf6;
+      --text2: #9aa3bf;
+      --accent: #4fc3f7;
+      --border: rgba(255,255,255,0.07);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    .fixed-top-ad {
+      position: fixed; top: 0; left: 0;
+      width: 100%; height: 90px;
+      background: #0a0e1a; z-index: 2000;
+      display: flex; justify-content: center; align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+    body { padding-top: 90px; }
+    .fixed-side-ad {
+      position: fixed; right: 20px; top: 50%;
+      transform: translateY(-50%); z-index: 1000;
+      display: flex; flex-direction: column; align-items: center; width: 160px;
+    }
+    @media (max-height: 800px) { .fixed-side-ad { display: none; } }
+    @media (max-width: 1300px) { .fixed-side-ad { display: none; } }
+    @media (max-width: 768px) {
+      .fixed-top-ad { position: static; height: auto; padding: 10px 0; }
+      body { padding-top: 0; }
+    }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px 16px 60px;
+    }
+
+    /* ── 헤더 ── */
+    .report-header {
+      background: linear-gradient(135deg, #0d1b3e 0%, #1a0a2e 50%, #0d1b3e 100%);
+      border: 1px solid rgba(79,195,247,0.2);
+      border-radius: 16px;
+      padding: 32px 28px;
+      margin-bottom: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+    .report-header::before {
+      content: '';
+      position: absolute; top: -50%; left: -50%;
+      width: 200%; height: 200%;
+      background: radial-gradient(ellipse at 30% 30%, rgba(79,195,247,0.05) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .header-date {
+      font-size: 0.78rem;
+      color: var(--accent);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+    .header-title {
+      font-size: 1.65rem;
+      font-weight: 900;
+      line-height: 1.35;
+      background: linear-gradient(90deg, #ffffff 0%, #4fc3f7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 12px;
+    }
+    .header-subtitle {
+      font-size: 0.9rem;
+      color: var(--text2);
+      margin-bottom: 18px;
+    }
+    .sentiment-bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .sentiment-label {
+      font-size: 0.8rem;
+      color: var(--text2);
+      flex-shrink: 0;
+    }
+    .sentiment-track {
+      flex: 1;
+      height: 8px;
+      background: linear-gradient(90deg, #ff4757 0%, #ffd32a 50%, #00c896 100%);
+      border-radius: 4px;
+      position: relative;
+    }
+    .sentiment-dot {
+      position: absolute;
+      width: 16px; height: 16px;
+      background: #fff;
+      border: 3px solid var(--neutral);
+      border-radius: 50%;
+      top: 50%; transform: translateY(-50%);
+      left: 52%; /* 약간 탐욕 쪽 */
+      box-shadow: 0 0 8px rgba(255,211,42,0.6);
+    }
+    .sentiment-value {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--neutral);
+      flex-shrink: 0;
+    }
+    .hashtags {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .hashtag {
+      font-size: 0.73rem;
+      color: var(--accent);
+      background: rgba(79,195,247,0.1);
+      border: 1px solid rgba(79,195,247,0.2);
+      padding: 3px 9px;
+      border-radius: 20px;
+    }
+
+    /* ── 지수 카드 그리드 ── */
+    .section-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text2);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin: 28px 0 12px;
+      padding-left: 4px;
+      border-left: 3px solid var(--accent);
+      padding-left: 10px;
+    }
+
+    .index-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+      gap: 12px;
+    }
+
+    .index-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 14px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+    .index-card:hover { transform: translateY(-2px); }
+    .index-card.up { border-top: 3px solid var(--up); }
+    .index-card.down { border-top: 3px solid var(--down); }
+    .index-card.neutral { border-top: 3px solid var(--neutral); }
+
+    .card-label {
+      font-size: 0.72rem;
+      color: var(--text2);
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+    .card-value {
+      font-size: 1.4rem;
+      font-weight: 700;
+      font-family: 'Courier New', monospace;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .card-change {
+      font-size: 0.82rem;
+      font-weight: 600;
+      font-family: 'Courier New', monospace;
+    }
+    .card-change.up-text { color: var(--up); }
+    .card-change.down-text { color: var(--down); }
+
+    /* ── 원자재 카드 ── */
+    .commodity-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+      gap: 12px;
+    }
+
+    /* ── 핵심 분석 ── */
+    .analysis-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      margin-top: 12px;
+    }
+    .analysis-block h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .analysis-block p {
+      font-size: 0.9rem;
+      color: var(--text2);
+      line-height: 1.85;
+      margin-bottom: 14px;
+    }
+    .analysis-block p:last-child { margin-bottom: 0; }
+    .highlight {
+      color: var(--text);
+      font-weight: 600;
+    }
+    .hl-up { color: var(--up); font-weight: 700; }
+    .hl-down { color: var(--down); font-weight: 700; }
+    .hl-neutral { color: var(--neutral); font-weight: 700; }
+
+    /* ── 섹터 히트맵 ── */
+    .sector-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .sector-cell {
+      border-radius: 8px;
+      padding: 12px 10px;
+      text-align: center;
+    }
+    .sector-name {
+      font-size: 0.73rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+      opacity: 0.9;
+    }
+    .sector-pct {
+      font-size: 1.05rem;
+      font-weight: 700;
+      font-family: 'Courier New', monospace;
+    }
+    .s-strong-up { background: rgba(0,200,150,0.25); color: #00c896; }
+    .s-mid-up    { background: rgba(0,200,150,0.14); color: #40d9a8; }
+    .s-flat      { background: rgba(255,211,42,0.12); color: #ffd32a; }
+    .s-mid-dn    { background: rgba(255,71,87,0.15);  color: #ff7584; }
+    .s-strong-dn { background: rgba(255,71,87,0.28);  color: #ff4757; }
+
+    /* ── 주목 종목 ── */
+    .watchlist {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .watch-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      border-radius: 10px;
+      padding: 16px;
+    }
+    .watch-item.up-item   { border-left-color: var(--up); }
+    .watch-item.down-item { border-left-color: var(--down); }
+    .watch-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+    .watch-name {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .watch-pct {
+      font-size: 0.88rem;
+      font-weight: 700;
+      font-family: monospace;
+    }
+    .watch-pct.up-text  { color: var(--up); }
+    .watch-pct.dn-text  { color: var(--down); }
+    .watch-desc {
+      font-size: 0.83rem;
+      color: var(--text2);
+      line-height: 1.7;
+    }
+
+    /* ── 내일 체크포인트 ── */
+    .checkpoint-list {
+      margin-top: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .checkpoint-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.87rem;
+    }
+    .cp-icon {
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .cp-text { color: var(--text2); line-height: 1.6; }
+    .cp-text strong { color: var(--text); }
+
+    /* ── 면책 ── */
+    .disclaimer {
+      background: rgba(255,71,87,0.07);
+      border: 1px solid rgba(255,71,87,0.2);
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-top: 28px;
+      font-size: 0.76rem;
+      color: var(--text2);
+      line-height: 1.7;
+    }
+    .disclaimer strong { color: var(--down); }
+
+    /* ── 분리선 ── */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 4px 0 20px;
+    }
+
+    @media (max-width: 600px) {
+      .header-title { font-size: 1.25rem; }
+      .sector-grid { grid-template-columns: repeat(2, 1fr); }
+      .index-grid, .commodity-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- 최상단 고정 광고 -->
+<div class="fixed-top-ad">
+  <ins class="kakao_ad_area" style="display:none;"
+    data-ad-unit="DAN-EVlth33UH8CTDu2u"
+    data-ad-width="728"
+    data-ad-height="90"></ins>
+  <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+
+<!-- 우측 고정 사이드바 광고 -->
+<div class="fixed-side-ad">
+  <ins class="kakao_ad_area" style="display:none;"
+    data-ad-unit="DAN-KMCr4AoIjIDsi9XA"
+    data-ad-width="160"
+    data-ad-height="600"></ins>
+  <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+
+<div class="container">
+
+  <!-- 헤더 -->
+  <div class="report-header">
+    <div class="header-date">📅 2026년 8월 5일 수요일 · 오늘의 시장 브리핑</div>
+    <div class="header-title">📉 검은 월요일의 귀환?!<br>코스피 폭락 후 반등 — 진짜 위기는 지금부터다</div>
+    <div class="header-subtitle">
+      미·이란 긴장 완화 기대 + S&amp;P 역대 최고 경신에 한국 바이오 폭등… 그런데 왜 불안한가
+    </div>
+    <div class="sentiment-bar">
+      <span class="sentiment-label">공포</span>
+      <div class="sentiment-track">
+        <div class="sentiment-dot"></div>
+      </div>
+      <span class="sentiment-label">탐욕</span>
+      <span class="sentiment-value">⚖️ 중립 52 (탐욕 경계)</span>
+    </div>
+    <div class="hashtags">
+      <span class="hashtag">#코스피반등</span>
+      <span class="hashtag">#검은월요일</span>
+      <span class="hashtag">#바이오폭등</span>
+      <span class="hashtag">#S&amp;P신고가</span>
+      <span class="hashtag">#미이란</span>
+      <span class="hashtag">#팔란티어29%</span>
+      <span class="hashtag">#금4000돌파</span>
+      <span class="hashtag">#반도체</span>
+    </div>
+  </div>
+
+  <!-- 국내 지수 -->
+  <div class="section-title">🇰🇷 국내 지수</div>
+  <div class="index-grid">
+    <div class="index-card up">
+      <div class="card-label">KOSPI</div>
+      <div class="card-value">6,437.28</div>
+      <div class="card-change up-text">▲ +78.33 (+1.23%)</div>
+    </div>
+    <div class="index-card up">
+      <div class="card-label">KOSDAQ</div>
+      <div class="card-value">716.85</div>
+      <div class="card-change up-text">▲ +11.26 (+1.60%)</div>
+    </div>
+    <div class="index-card up">
+      <div class="card-label">KOSPI200</div>
+      <div class="card-value">862.14</div>
+      <div class="card-change up-text">▲ +9.71 (+1.14%)</div>
+    </div>
+  </div>
+
+  <!-- 미국 지수 -->
+  <div class="section-title">🇺🇸 미국 지수 (전일 종가)</div>
+  <div class="index-grid">
+    <div class="index-card up">
+      <div class="card-label">S&amp;P 500</div>
+      <div class="card-value">7,737.00</div>
+      <div class="card-change up-text">▲ +136.06 (+1.79%)</div>
+    </div>
+    <div class="index-card up">
+      <div class="card-label">다우존스</div>
+      <div class="card-value">54,086.00</div>
+      <div class="card-change up-text">▲ +908.00 (+1.71%)</div>
+    </div>
+    <div class="index-card up">
+      <div class="card-label">나스닥</div>
+      <div class="card-value">26,585.00</div>
+      <div class="card-change up-text">▲ +672.10 (+2.59%)</div>
+    </div>
+  </div>
+
+  <!-- 환율·원자재 -->
+  <div class="section-title">💱 환율 · 원자재</div>
+  <div class="commodity-grid">
+    <div class="index-card up">
+      <div class="card-label">원/달러</div>
+      <div class="card-value">1,427.6</div>
+      <div class="card-change up-text">▲ 원화 강세 (-5.3)</div>
+    </div>
+    <div class="index-card up">
+      <div class="card-label">WTI</div>
+      <div class="card-value">$80.52</div>
+      <div class="card-change up-text">▲ +4.38 (+5.76%) 반등</div>
+    </div>
+    <div class="index-card up">
+      <div class="card-label">금 (XAU/USD)</div>
+      <div class="card-value">$4,077.4</div>
+      <div class="card-change up-text">▲ +21.90 (+0.54%)</div>
+    </div>
+    <div class="index-card neutral">
+      <div class="card-label">비트코인</div>
+      <div class="card-value">$64,271</div>
+      <div class="card-change up-text">▲ +398 (+0.62%)</div>
+    </div>
+  </div>
+
+  <!-- 핵심 분석 -->
+  <div class="section-title">🔍 오늘 시장을 움직인 진짜 이유</div>
+  <div class="analysis-block">
+    <h3>① "검은 월요일"의 상흔과 반등의 민낯</h3>
+    <p>
+      이번 주 한국 증시는 그야말로 <span class="hl-down">롤러코스터</span>였다.
+      지난 월요일(8/3) 코스피는 <span class="hl-down">-5.12%</span>의 폭락을 기록했다.
+      2024년 8월 "블랙 먼데이" 이후 최대 하락폭으로, 장중 공포지수(VIX 한국판)가 역대급으로 치솟았다.
+      원인은 표면적으로는 <span class="highlight">미·이란 긴장 고조</span>였으나,
+      실질적으로는 7월 한 달간 <span class="hl-up">20% 이상</span> 급등한 유가가 인플레이션 재점화 공포를 자극하면서
+      글로벌 위험 자산을 일제히 내리쳤다. 삼성전자·SK하이닉스를 포함한 대형 반도체주가
+      <span class="hl-down">외국인 순매도</span> 집중 타깃이 됐다.
+    </p>
+    <h3>② 반등의 열쇠는 "바이오"와 "월가 신고가"</h3>
+    <p>
+      화요일부터 급반전이 시작됐다. 미국 시장에서는 팔란티어(PLTR)가 2분기 어닝서프라이즈와 함께
+      <span class="hl-up">+29%</span> 폭등하며 나스닥을 견인했고, 다우존스는 사상 최초로
+      <span class="hl-up">54,000포인트</span>를 돌파했다. S&amp;P500도 두 달 만에 사상 최고치를 경신하며
+      <span class="hl-up">7,737p</span>로 마감했다. 이 훈풍이 수요일 한국 시장에 직접 반영됐다.
+      특히 <span class="highlight">코스닥 바이오</span>가 폭발했다 — HLB <span class="hl-up">+11.17%</span>,
+      에이비엘바이오 <span class="hl-up">+13.24%</span>, 리가켐바이오 <span class="hl-up">+15.2%</span>.
+      3거래일 연속 프로그램 매수 사이드카가 발동될 만큼 바이오 수급이 폭발적으로 유입됐다.
+    </p>
+    <h3>③ 지금 가장 중요한 신호 — WTI $80 돌파와 연준의 침묵</h3>
+    <p>
+      수요일 WTI 원유 가격이 <span class="hl-up">$80 선을 회복</span>했다.
+      월요일 $76대로 폭락했던 유가가 불과 이틀 만에 반등한 것이다.
+      이는 한편으로 "지정학적 리스크 해소 기대"를 뜻하지만, 반대로 유가가 다시 오른다면
+      <span class="hl-down">인플레이션 재점화 → 연준 금리인상 카드 재등장</span>이라는 최악의 시나리오를 열어두게 된다.
+      현재 원달러 환율은 <span class="highlight">1,427원</span>대로 원화가 강세를 보이며 외국인 자금 유입에 우호적이나,
+      금 가격이 온스당 <span class="hl-neutral">$4,077</span>로 역대 최고권에 근접해 있다는 것은
+      아직도 시장 참여자들이 "안전자산"을 완전히 놓지 않고 있다는 신호다.
+    </p>
+  </div>
+
+  <!-- 섹터 히트맵 -->
+  <div class="section-title">🗺️ 코스피 200 섹터 히트맵 (8/5 추정)</div>
+  <div class="sector-grid">
+    <div class="sector-cell s-strong-up">
+      <div class="sector-name">🧬 바이오·헬스케어</div>
+      <div class="sector-pct">+4.82%</div>
+    </div>
+    <div class="sector-cell s-strong-up">
+      <div class="sector-name">💊 제약</div>
+      <div class="sector-pct">+3.17%</div>
+    </div>
+    <div class="sector-cell s-mid-up">
+      <div class="sector-name">💻 IT·소프트웨어</div>
+      <div class="sector-pct">+2.14%</div>
+    </div>
+    <div class="sector-cell s-mid-up">
+      <div class="sector-name">🔌 반도체</div>
+      <div class="sector-pct">+0.95%</div>
+    </div>
+    <div class="sector-cell s-mid-up">
+      <div class="sector-name">🏦 금융·은행</div>
+      <div class="sector-pct">+1.33%</div>
+    </div>
+    <div class="sector-cell s-flat">
+      <div class="sector-name">⚡ 2차전지</div>
+      <div class="sector-pct">+0.28%</div>
+    </div>
+    <div class="sector-cell s-flat">
+      <div class="sector-name">🏭 산업재</div>
+      <div class="sector-pct">+0.47%</div>
+    </div>
+    <div class="sector-cell s-mid-dn">
+      <div class="sector-name">🛢️ 에너지</div>
+      <div class="sector-pct">-0.62%</div>
+    </div>
+    <div class="sector-cell s-mid-dn">
+      <div class="sector-name">🚗 자동차</div>
+      <div class="sector-pct">-0.88%</div>
+    </div>
+  </div>
+  <p style="font-size:0.73rem; color:var(--text2); margin-top:8px; padding-left:2px;">※ 섹터 수치는 장중 흐름 기반 추정치입니다.</p>
+
+  <!-- 주목 종목·이슈 -->
+  <div class="section-title">🔥 오늘 주목할 종목 &amp; 이슈 TOP 3</div>
+  <div class="watchlist">
+
+    <div class="watch-item up-item">
+      <div class="watch-header">
+        <div class="watch-name">🧬 HLB (028300) · 코스닥 바이오 대장주</div>
+        <div class="watch-pct up-text">▲ +11.17%</div>
+      </div>
+      <div class="watch-desc">
+        간암 치료제 리보세라닙 글로벌 판권 계약 임박 소식에 개인·기관 동반 매수세가 몰렸다.
+        코스닥 3거래일 연속 매수 사이드카 발동은 2020년 코로나 랠리 이후 처음이다.
+        <strong>향후 포인트:</strong> FDA 패스트트랙 승인 여부 및 중국 파트너사와의 최종 딜 클로징 일정.
+        단기 급등 피로도를 고려해 <span class="hl-neutral">분할 매수</span> 전략이 유효하다.
+      </div>
+    </div>
+
+    <div class="watch-item up-item">
+      <div class="watch-header">
+        <div class="watch-name">🤖 팔란티어(PLTR) · AI 데이터 분석</div>
+        <div class="watch-pct up-text">▲ +29.00%</div>
+      </div>
+      <div class="watch-desc">
+        2분기 매출 $1.0B 첫 돌파, AI 플랫폼(AIP) 계약 건수 전년비 +165% 급증.
+        나스닥 전체를 견인한 이날의 히어로. 미 정부·방산 수요가 AI 수익화를 현실로 증명하면서
+        한국의 AI 관련 소재·부품·장비주(AI 서버, 냉각 시스템)에도 수혜 기대감이 전이됐다.
+        <strong>향후 포인트:</strong> 내주 엔비디아 실적 발표와 연계한 AI 밸류체인 종목 동반 랠리 가능성.
+      </div>
+    </div>
+
+    <div class="watch-item">
+      <div class="watch-header">
+        <div class="watch-name">🛢️ WTI 원유 · $80 회복 vs 재폭락 시나리오</div>
+        <div class="watch-pct up-text">▲ $80.52 (+5.76%)</div>
+      </div>
+      <div class="watch-desc">
+        월요일 $76대로 폭락한 WTI가 이틀 만에 $80선을 회복했다. 호르무즈 해협 긴장 완화 기대와
+        사우디 증산 자제 신호가 동시에 작동했다. 그러나 <span class="hl-down">$85 이상 재진입</span> 시
+        글로벌 인플레 우려 재점화 → 연준 매파 기류 부활 → 채권금리 상승 → 성장주 밸류에이션 재조정의
+        연쇄 반응이 시작될 수 있다. 에너지 섹터 비중 조절 관건.
+        <strong>향후 포인트:</strong> 미·이란 협상 테이블 복귀 여부, EIA 원유 재고 데이터(8/7 예정).
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 내일의 체크포인트 -->
+  <div class="section-title">📌 내일(8/6 목) · 이번 주 체크포인트</div>
+  <div class="checkpoint-list">
+    <div class="checkpoint-item">
+      <span class="cp-icon">📊</span>
+      <div class="cp-text">
+        <strong>[8/6 목] 미국 신규 실업수당 청구건수</strong> 발표 — 예상치 22만 건 하회 시 고용 강세 확인,
+        연준 9월 금리인하 기대치 상승 가능. 주가에 단기 호재.
+      </div>
+    </div>
+    <div class="checkpoint-item">
+      <span class="cp-icon">🏦</span>
+      <div class="cp-text">
+        <strong>[8/7 목] 영국 BOE 금리 결정</strong> — 동결 예상이나 비둘기파 코멘트 여부에 주목.
+        글로벌 통화정책 완화 기대 강화 시 신흥국 자금유입 가속.
+      </div>
+    </div>
+    <div class="checkpoint-item">
+      <span class="cp-icon">🛢️</span>
+      <div class="cp-text">
+        <strong>[8/7 목] EIA 주간 원유 재고</strong> 발표 — 재고 감소 확인 시 WTI $82 재도전 가능성.
+        에너지·정유주 방향성 결정 요인.
+      </div>
+    </div>
+    <div class="checkpoint-item">
+      <span class="cp-icon">🤖</span>
+      <div class="cp-text">
+        <strong>[다음 주] 엔비디아(NVDA) 2분기 실적</strong> — AI 반도체 수요 지속성 확인의 핵심 이벤트.
+        삼성전자·SK하이닉스 HBM 공급 언급 여부가 국내 반도체 수급을 좌우할 전망.
+      </div>
+    </div>
+    <div class="checkpoint-item">
+      <span class="cp-icon">⚠️</span>
+      <div class="cp-text">
+        <strong>[리스크] 미·이란 외교</strong> — 협상 결렬 시 호르무즈 해협 봉쇄 우려 재점화.
+        유가 $90 돌파 시 글로벌 증시 전면 조정 불가피. 지정학 리스크 헤지 필수.
+      </div>
+    </div>
+  </div>
+
+  <!-- 면책조항 -->
+  <div class="disclaimer">
+    <strong>⚠️ 투자 면책조항:</strong> 본 보고서는 AI가 공개된 시장 정보를 기반으로 자동 생성한 참고 자료이며,
+    투자 권유나 매매 추천이 아닙니다. 일부 수치는 실시간 데이터가 아닌 추정치를 포함할 수 있으며,
+    최종 투자 결정은 반드시 본인의 판단과 책임 하에 이루어져야 합니다.
+    과거 수익률이 미래 수익을 보장하지 않습니다.
+    <strong>모든 투자에는 원금 손실의 위험이 있습니다.</strong>
+  </div>
+
+  <p style="text-align:center; font-size:0.72rem; color:var(--text2); margin-top:20px; opacity:0.6;">
+    © 2026 상상 시장 브리핑 · 매일 밤 자동 업데이트
+  </p>
+
+</div>
+</body>
+</html>
