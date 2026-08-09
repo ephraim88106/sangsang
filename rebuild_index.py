@@ -172,6 +172,51 @@ def build_headline_grid(koreas):
     return ''.join(items)
 
 # ─── 메인 ───────────────────────────────────────────────────
+# ─── 사이트맵 생성 ─────────────────────────────────────────────
+def build_sitemap(stocks, koreas):
+    """sitemap.xml 자동 생성 — 모든 아티클 URL 포함"""
+    from urllib.parse import quote
+    from datetime import date
+    BASE = "https://sangsang.ephseed.com"
+    SKIP = {'index.html','404.html','about.html','contact.html',
+            'privacy.html','posts.html','post.html'}
+
+    # 홈페이지 항상 포함
+    urls = [
+        f'  <url><loc>{BASE}/</loc>'
+        f'<lastmod>{date.today()}</lastmod>'
+        f'<changefreq>daily</changefreq><priority>1.0</priority></url>'
+    ]
+
+    # 모든 HTML 파일 스캔 (날짜순)
+    all_files = sorted(REPO.glob('*.html'), reverse=True)
+    for fp in all_files:
+        if fp.name in SKIP:
+            continue
+        stem = fp.stem  # 확장자 제외
+        encoded = quote(stem, safe='-')
+        url = f"{BASE}/{encoded}"
+        # 날짜 추출
+        m = re.match(r'(\d{4}-\d{2}-\d{2})', stem)
+        lastmod = m.group(1) if m else str(date.today())
+        priority = "0.9" if stem.endswith('주식보고서') else "0.7"
+        urls.append(
+            f'  <url><loc>{url}</loc>'
+            f'<lastmod>{lastmod}</lastmod>'
+            f'<changefreq>weekly</changefreq><priority>{priority}</priority></url>'
+        )
+
+    xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
+    xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+    xml += '\n'.join(urls)
+    xml += '\n</urlset>\n'
+
+    sitemap_path = REPO / 'sitemap.xml'
+    sitemap_path.write_text(xml, 'utf-8')
+    print(f"✅ sitemap.xml 생성 완료 ({len(urls)}개 URL)")
+    return len(urls)
+
+
 def main():
     if not IDX.exists():
         print(f"[ERR] index.html 없음: {IDX}")
@@ -233,5 +278,8 @@ def main():
 
     IDX.write_text(html, 'utf-8')
     print("✅ index.html 저장 완료")
+
+    # 4) sitemap.xml 자동 갱신
+    build_sitemap(stocks, koreas)
 
 main()
