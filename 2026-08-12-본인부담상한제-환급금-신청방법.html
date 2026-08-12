@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>본인부담상한제 환급금 신청방법 — 소득분위별 상한액과 지급 시기 | 의료·복지</title>
+  <meta name="description" content="본인부담상한제 환급금 대상 여부를 확인하는 방법과 2026년 소득분위별 상한액, 사전급여와 사후환급의 차이, 신청 절차와 지급 시기를 정리했다. 비급여가 빠지는 이유와 실손보험 정산이 엇갈리는 구조까지 함께 살펴본다.">
+  <meta name="keywords" content="본인부담상한제, 본인부담상한제 환급금, 소득분위별 상한액, 사후환급, 사전급여, 건강보험 환급금 조회, 국민건강보험공단, 요양병원 120일">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f2f5f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #0d47a1 0%, #1565c0 45%, #00695c 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #bbdefb; color: #0d47a1; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #e3f2fd; border-left: 5px solid #1565c0; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #1565c0; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #0d47a1; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #1565c0; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #0d47a1; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #e3f2fd; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #1565c0; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #0d47a1; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #e8f4fb; border-left: 4px solid #29b6f6; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #01579b; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f6f9fc; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #0d47a1; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #0d47a1; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #e2eaf0; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-blue { background: linear-gradient(90deg, #0d47a1, #42a5f5); }
+    .bar-teal { background: linear-gradient(90deg, #004d40, #00897b); }
+    .bar-amber { background: linear-gradient(90deg, #e65100, #f9a825); }
+    .bar-red { background: linear-gradient(90deg, #b71c1c, #e53935); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #d6e2ec; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #e3f2fd; color: #0d47a1; font-weight: 700; }
+    table.rate td.up { color: #0d47a1; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #00695c; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #1565c0; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #0d47a1; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #c5dcf0; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #0d47a1; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #c5dcf0; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #1565c0; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #e3f2fd; color: #1565c0; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #1565c0; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<!-- SEO:AUTO BEGIN -->
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-08-12-%EB%B3%B8%EC%9D%B8%EB%B6%80%EB%8B%B4%EC%83%81%ED%95%9C%EC%A0%9C-%ED%99%98%EA%B8%89%EA%B8%88-%EC%8B%A0%EC%B2%AD%EB%B0%A9%EB%B2%95">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="본인부담상한제 환급금 신청방법 — 소득분위별 상한액과 지급 시기">
+<meta property="og:description" content="본인부담상한제 환급금 대상 여부를 확인하는 방법과 2026년 소득분위별 상한액, 사전급여와 사후환급의 차이, 신청 절차와 지급 시기를 정리했다. 비급여가 빠지는 이유와 실손보험 정산이 엇갈리는 구조까지 함께 살펴본다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-08-12-%EB%B3%B8%EC%9D%B8%EB%B6%80%EB%8B%B4%EC%83%81%ED%95%9C%EC%A0%9C-%ED%99%98%EA%B8%89%EA%B8%88-%EC%8B%A0%EC%B2%AD%EB%B0%A9%EB%B2%95">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-08-12T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-08-12T09:00:00+09:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="본인부담상한제 환급금 신청방법 — 소득분위별 상한액과 지급 시기">
+<meta name="twitter:description" content="2026년 소득분위별 상한액과 사전급여·사후환급의 차이, 신청 절차와 지급 시기를 정리했다.">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "본인부담상한제 환급금 신청방법 — 소득분위별 상한액과 지급 시기",
+  "description": "본인부담상한제 환급금 대상 여부를 확인하는 방법과 2026년 소득분위별 상한액, 사전급여와 사후환급의 차이, 신청 절차와 지급 시기를 정리했다. 비급여가 빠지는 이유와 실손보험 정산이 엇갈리는 구조까지 함께 살펴본다.",
+  "url": "https://sangsang.ephseed.com/2026-08-12-%EB%B3%B8%EC%9D%B8%EB%B6%80%EB%8B%B4%EC%83%81%ED%95%9C%EC%A0%9C-%ED%99%98%EA%B8%89%EA%B8%88-%EC%8B%A0%EC%B2%AD%EB%B0%A9%EB%B2%95",
+  "datePublished": "2026-08-12T09:00:00+09:00",
+  "dateModified": "2026-08-12T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+</head>
+<body>
+<article class="article-wrap">
+  <header class="hero">
+    <div class="category-badge">🏥 의료 · 복지</div>
+    <h1>본인부담상한제 환급금 신청방법 —<br>소득분위별 상한액과<br>지급 시기</h1>
+    <p class="hero-sub">한 해 병원비를 많이 쓴 사람에게 건강보험공단이 초과분을 돌려주는 제도가 있다. 따로 가입할 필요도, 신청 시기를 놓쳐 헛걸음할 일도 없는데 정작 "내가 대상인지" 모르는 사람이 많다. 상한액이 어떻게 정해지고, 언제 어떻게 받는지, 그리고 왜 생각보다 적게 돌아오는지를 정리했다.</p>
+    <div class="hero-meta">
+      <span>📅 2026년 8월 12일</span>
+      <span>✍️ 생생 정보통 정책팀</span>
+      <span>⏱️ 읽는 데 약 9분</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+    <div class="summary-box">
+      <h2>3줄 요약</h2>
+      <ul>
+        <li>한 해 동안 낸 건강보험 급여 본인부담금이 소득분위별 상한액을 넘으면 초과분 전액을 공단이 돌려준다. 2026년 상한액은 소득 1분위 90만 원부터 10분위 843만 원까지다.</li>
+        <li>같은 병원에서 최고 상한액을 넘기면 병원이 알아서 처리하고(사전급여), 여러 병원을 다녔다면 이듬해 8월경 합산해 계좌로 돌려준다(사후환급). 지금이 바로 2025년 진료분 지급 시기다.</li>
+        <li>단, 비급여·선별급여·2~3인실 입원료·임플란트는 계산에서 빠진다. "병원비 500만 원 냈는데 왜 대상이 아니냐"는 오해가 대부분 여기서 생긴다.</li>
+      </ul>
+    </div>
+
+    <h2 class="sec">🧾 제도의 뼈대 — "치료비 총액"이 아니라 "급여 본인부담금"이 기준이다</h2>
+    <p>본인부담상한제는 국민건강보험법 시행령 제19조에 근거한 제도다. 이름은 딱딱하지만 구조는 단순하다. <strong>한 해 동안 건강보험이 적용되는 진료를 받고 환자가 직접 부담한 금액을 모두 더해, 소득 수준에 따라 정해진 상한액을 넘으면 그 초과분을 공단이 부담한다.</strong> 별도로 가입할 필요가 없고, 건강보험 가입자라면 누구에게나 자동으로 적용된다.</p>
+    <p>여기서 가장 많이 어긋나는 지점이 <strong>기준 금액의 정의</strong>다. 병원 영수증에 찍힌 총액이 아니라, 영수증에서 '급여' 항목의 '본인부담금' 칸만 합산한다. 도수치료·비급여 주사·상급병실 차액·미용 목적 시술처럼 건강보험이 적용되지 않는 항목은 아무리 많이 지출해도 이 계산에 들어가지 않는다. 실제 지출은 1,000만 원인데 상한제 기준으로는 200만 원밖에 안 잡히는 일이 흔한 이유다.</p>
+    <div class="pullquote">
+      상한제는 "병원에 쓴 돈"을 돌려주는 제도가 아니라,<br>
+      "건강보험이 이미 인정한 진료에 대해 환자가 낸 몫"의 천장을 정해 두는 제도다.<br>
+      비급여가 많은 진료일수록 체감 효과가 떨어지는 것은 설계상 당연한 결과다.
+    </div>
+
+    <h2 class="sec">📊 2026년 소득분위별 상한액 — 1분위 90만 원, 10분위 843만 원</h2>
+    <p>상한액은 매년 전년도 소비자물가변동률을 반영해 조정된다. 국민건강보험공단이 안내한 <strong>2026년 1월 1일부터 12월 31일까지 진료분</strong>에 적용되는 상한액은 다음과 같다. 소득분위는 해당 연도에 낸 건강보험료를 기준으로 사후에 산정된다.</p>
+    <table class="rate">
+      <thead>
+        <tr><th>소득분위</th><th>일반 (요양병원 120일 이하)</th><th>요양병원 120일 초과 입원</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1분위 (하위 10%)</td><td class="up">90만 원</td><td>143만 원</td></tr>
+        <tr><td>2~3분위</td><td class="up">112만 원</td><td>181만 원</td></tr>
+        <tr><td>4~5분위</td><td class="up">173만 원</td><td>245만 원</td></tr>
+        <tr><td>6~7분위</td><td class="up">326만 원</td><td>404만 원</td></tr>
+        <tr><td>8분위</td><td class="up">446만 원</td><td>580만 원</td></tr>
+        <tr><td>9분위</td><td class="up">536만 원</td><td>698만 원</td></tr>
+        <tr><td>10분위 (상위 10%)</td><td class="up">843만 원</td><td>1,096만 원</td></tr>
+      </tbody>
+    </table>
+    <p class="note">출처: 국민건강보험공단 재난상한제운영부-82(2026.1.6.) 안내. 2025년 진료분 상한액은 최저 89만 원~최고 826만 원이었다.</p>
+
+    <div class="infographic-section">
+      <h3>📈 소득분위별 상한액 격차 — 1분위와 10분위는 9.4배</h3>
+      <div class="bar-chart">
+        <div class="bar-item">
+          <div class="bar-label"><span>1분위</span><span class="val">90만 원</span></div>
+          <div class="bar-track"><div class="bar-fill bar-teal" style="width:10.7%"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>2~3분위</span><span class="val">112만 원</span></div>
+          <div class="bar-track"><div class="bar-fill bar-teal" style="width:13.3%"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>4~5분위</span><span class="val">173만 원</span></div>
+          <div class="bar-track"><div class="bar-fill bar-teal" style="width:20.5%"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>6~7분위</span><span class="val">326만 원</span></div>
+          <div class="bar-track"><div class="bar-fill bar-blue" style="width:38.7%"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>8분위</span><span class="val">446만 원</span></div>
+          <div class="bar-track"><div class="bar-fill bar-blue" style="width:52.9%"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>9분위</span><span class="val">536만 원</span></div>
+          <div class="bar-track"><div class="bar-fill bar-blue" style="width:63.6%"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>10분위</span><span class="val">843만 원</span></div>
+          <div class="bar-track"><div class="bar-fill bar-amber" style="width:100%"></div></div>
+        </div>
+      </div>
+      <p class="note">막대 길이는 10분위 상한액(843만 원)을 100%로 놓은 상대 비율이다. 상한액이 낮을수록 환급 대상이 되기 쉽다는 뜻이므로, 막대가 짧은 쪽이 더 두텁게 보호받는 구조다.</p>
+    </div>
+
+    <h2 class="sec">🔀 사전급여와 사후환급 — 내가 신청할 게 있는지부터 갈린다</h2>
+    <p>같은 제도인데 돈이 돌아오는 경로가 둘로 나뉜다. 이 구분을 알면 "왜 나는 아무 연락도 못 받았지?"라는 의문이 대부분 풀린다.</p>
+    <div class="flow">
+      <div class="flow-box">
+        <div class="ft">① 사전급여</div>
+        <div class="fd">한 요양기관에서 계속 진료받다가 그해 본인부담금이 최고 상한액(2026년 기준 843만 원)을 넘어서면, 그 시점부터 초과분을 병원이 환자에게 받지 않고 공단에 직접 청구한다. 환자가 할 일은 없다.</div>
+      </div>
+      <div class="flow-box">
+        <div class="ft">② 사후환급</div>
+        <div class="fd">여러 병·의원을 다녀 한 곳에서는 상한액을 넘지 않았지만 합산하면 넘는 경우다. 공단이 이듬해에 개인별로 합산·정산해 초과분을 돌려준다. 대부분의 환급이 여기에 해당한다.</div>
+      </div>
+    </div>
+    <p>사후환급은 개인별 소득분위가 확정돼야 계산할 수 있다. 보험료 정산이 끝나야 분위가 나오기 때문에, <strong>전년도 진료분에 대한 지급은 매년 8월 말경에 시작</strong>된다. 2024년 진료분은 2025년 8월 28일부터 지급이 개시됐고, <strong>2025년 진료분에 대한 정산·지급도 2026년 8월을 전후해 진행된다.</strong> 지금 시점에 "건강보험공단에서 온 안내문"을 받았다면 대개 이 건이다.</p>
+
+    <h2 class="sec">📮 환급금 신청방법 — 계좌가 등록돼 있으면 아무것도 안 해도 된다</h2>
+    <p>절차는 생각보다 짧다. 순서대로 보면 이렇다.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-t">대상 여부부터 조회한다</div>
+        <div class="step-d">국민건강보험공단 누리집(nhis.or.kr) → 민원여기요 → 개인민원 → '환급금(지원금) 조회/신청' 메뉴에서 확인한다. 모바일은 'The 건강보험' 앱의 환급금 조회 메뉴가 같은 기능을 한다. 공동인증서나 간편인증으로 본인 확인이 필요하다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">안내문(지급신청서)이 왔는지 확인한다</div>
+        <div class="step-d">대상자에게는 공단이 지급신청 안내문을 우편으로 보낸다. 계좌를 미리 등록해 둔 사람은 신청 절차 없이 자동 입금된다. 2024년 진료분에서는 계좌 사전등록자 약 108만 5천 명이 별도 신청 없이 지급받았다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">계좌를 등록하거나 신청서를 낸다</div>
+        <div class="step-d">인터넷·앱 외에 전화(1577-1000), 팩스, 우편, 가까운 지사 방문으로도 신청할 수 있다. 본인 명의 계좌가 원칙이며, 부득이하게 가족 계좌로 받으려면 위임장과 신분증 사본 등 추가 서류가 필요하다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">지급을 확인한다</div>
+        <div class="step-d">신청 접수 후 통상 며칠 안에 입금된다. 미지급 상태로 남아 있는 과거 환급금이 있다면 함께 조회된다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">3년 안에 찾아간다</div>
+        <div class="step-d">환급금 청구권의 소멸시효는 3년이다. 몇 해 전 안내문을 놓친 경우라도 기간 안이라면 지금 신청할 수 있다. 고령의 부모님 계정을 대신 확인해 볼 만한 이유다.</div>
+      </div>
+    </div>
+    <p class="note">공단은 어떤 경우에도 전화·문자로 계좌 비밀번호나 보안카드 번호를 요구하지 않는다. 환급금을 미끼로 한 사칭 문자·전화가 매년 이 시기에 늘어나므로, 링크를 누르지 말고 반드시 공식 누리집이나 1577-1000으로 직접 확인해야 한다.</p>
+
+    <h2 class="sec">💰 실제로 얼마나 돌아가고 있나 — 2024년 진료분 2조 7,920억 원</h2>
+    <p>제도의 규모는 작지 않다. 보건복지부와 국민건강보험공단이 밝힌 2024년도 진료분 정산 결과를 보면, 상한액을 초과한 <strong>213만 5,776명에게 총 2조 7,920억 원</strong>이 지급됐다. 1인당 평균으로 환산하면 약 131만 원이다. 대상자 수와 지급액 모두 전년보다 6.2% 늘었다.</p>
+    <div class="infographic-section">
+      <h3>💡 2024년 진료분 본인부담상한제 지급 실적</h3>
+      <div class="impact-grid">
+        <div class="impact-card">
+          <span class="impact-num">213만 명</span>
+          <span class="impact-label">환급 대상자 수<br>(정확히 2,135,776명)</span>
+        </div>
+        <div class="impact-card">
+          <span class="impact-num">2조 7,920억</span>
+          <span class="impact-label">총 지급액<br>(전년 대비 +6.2%)</span>
+        </div>
+        <div class="impact-card">
+          <span class="impact-num">약 131만 원</span>
+          <span class="impact-label">1인당 평균<br>환급액</span>
+        </div>
+        <div class="impact-card">
+          <span class="impact-num">89%</span>
+          <span class="impact-label">소득 하위 50%가<br>차지한 대상자 비중</span>
+        </div>
+      </div>
+      <p class="note">소득 하위 50% 대상자는 190만 287명, 지급액은 2조 1,352억 원으로 전체 지급액의 76.5%를 차지했다. 1인당 평균 환급액은 총액을 대상자 수로 나눈 단순 계산값이다.</p>
+    </div>
+    <p>이 수치가 말해 주는 것은 분명하다. <strong>혜택이 저소득층에 집중되도록 설계됐고 실제로도 그렇게 작동하고 있다.</strong> 상한액이 소득에 따라 9배 넘게 벌어지는 구조가 그대로 결과에 반영된 셈이다. 동시에, 매년 6% 안팎으로 지급 규모가 늘고 있다는 점은 건강보험 재정 측면에서 부담이 커지고 있다는 신호이기도 하다.</p>
+
+    <h2 class="sec">⚠️ 잘 알려지지 않은 세 가지 함정</h2>
+    <h3 class="sub">① 비급여는 끝까지 계산에 안 들어간다</h3>
+    <p>계산에서 제외되는 항목은 <strong>비급여, 선별급여, 전액본인부담, 임플란트, 상급병실(2~3인실) 입원료, 추나요법 본인일부부담금</strong> 등이다. 중증 질환일수록 비급여 비중이 커지는 경향이 있어, 정작 부담이 큰 환자가 상한제 혜택은 적게 보는 역설이 생긴다. 국민건강보험이 보장하지 못하는 영역이 곧 상한제의 사각지대다.</p>
+    <h3 class="sub">② 요양병원 120일 초과 입원은 상한액이 따로다</h3>
+    <p>요양병원에 연간 120일을 넘겨 입원하면 같은 소득분위라도 더 높은 상한액이 적용된다. 1분위 기준 90만 원이 143만 원으로, 10분위는 843만 원이 1,096만 원으로 올라간다. 치료 필요보다 돌봄 목적의 장기 입원, 이른바 '사회적 입원'을 억제하려는 장치다. 취지는 이해되지만, 돌봄 대안이 부족한 상태에서 부담만 환자 가족에게 돌아간다는 비판도 함께 따라붙는다.</p>
+    <h3 class="sub">③ 실손보험과 정산 시점이 어긋난다</h3>
+    <p>구조적으로 가장 성가신 문제다. 실손의료보험은 진료 직후 빠르게 보험금을 지급하지만, 상한제 환급은 이듬해 8월 이후에야 확정된다. 그래서 <strong>실손보험금을 먼저 받은 뒤 상한제 환급이 나오면 보험사가 그만큼을 환수하거나 재정산</strong>하는 상황이 벌어진다. 이미 쓴 돈을 나중에 돌려달라는 통보를 받는 셈이라 고령자나 중증질환자에게는 그 자체가 부담이다. 업계에서는 공단과 보험사가 시스템 안에서 직접 정산해 소비자를 절차에서 빼자는 개선안이 거론돼 왔지만, 논의는 아직 결론에 이르지 못했다.</p>
+
+    <h2 class="sec">🏠 나에게 미치는 영향 — 세 가지 유형으로 보면</h2>
+    <ul class="plain">
+      <li><strong>① 만성질환으로 여러 병원을 다니는 사람</strong> — 한 곳에서는 상한액을 못 넘겨도 합산하면 넘는 전형적인 사후환급 대상이다. 본인이 알기 어려우므로 8월 이후 조회 메뉴를 한 번 확인하는 것이 가장 확실하다.</li>
+      <li><strong>② 부모님을 요양병원에 모신 가족</strong> — 입원일수 120일을 기점으로 상한액이 달라지므로, 연간 입원일수를 기록해 두면 실제 부담을 예측할 수 있다. 병원이 환급금을 대리 수령하는 방식이었던 과거와 달리 환자 본인 지급 방향으로 정비돼 왔으므로, 누구 계좌로 들어오는지 확인해 둘 필요가 있다.</li>
+      <li><strong>③ 실손보험 가입자</strong> — 환급금이 들어왔다면 보험사 정산 통보가 뒤따를 수 있다. 환급금을 곧바로 다 쓰기보다는 정산 안내가 올 가능성을 감안해 두는 편이 안전하다.</li>
+    </ul>
+
+    <h2 class="sec">🔭 앞으로의 관전 포인트와 실천 제안</h2>
+    <p><strong>첫째, 지금 계좌 등록 여부부터 확인하자.</strong> 자동 입금 대상이 되면 매년 안내문을 기다릴 필요가 없다. 5분이면 끝나는 절차인데, 이걸 안 해서 몇 년째 미지급으로 남아 있는 금액이 매년 발생한다.</p>
+    <p><strong>둘째, 3년치를 한꺼번에 점검하자.</strong> 소멸시효가 3년이므로 2023년 진료분까지는 아직 살아 있을 수 있다. 특히 온라인 조회에 익숙하지 않은 고령 가족의 미지급금은 자녀가 대신 확인해 줄 때 발견되는 경우가 많다.</p>
+    <p><strong>셋째, 영수증의 '급여 본인부담금' 칸을 보는 습관을 들이자.</strong> 상한제 대상 여부를 가늠하는 유일한 숫자다. 총액이 아니라 이 칸의 1년 누계가 자신의 소득분위 상한액에 가까워지고 있는지가 관건이다.</p>
+    <p>제도 차원에서 남은 과제도 분명하다. 지급 규모가 매년 늘어나는 상황에서 <strong>건강보험 재정의 지속 가능성</strong>과 <strong>비급여 영역까지 포괄하지 못하는 보장성의 한계</strong>는 함께 놓인 숙제다. 상한제를 더 두텁게 하려면 재정이 필요하고, 재정을 지키려면 상한액을 올려야 하는 긴장 관계가 있다. 실손보험과의 정산 구조 개선처럼 재정을 크게 건드리지 않고도 국민 불편을 줄일 수 있는 부분부터 정리되는지가 당분간의 관전 포인트가 될 것이다. <strong>제도를 아는 사람만 챙겨 가는 구조가 남아 있는 한, 가장 확실한 실천은 올해 8월에 한 번 조회해 보는 것</strong>이다.</p>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#본인부담상한제</span>
+      <span class="hashtag">#환급금조회</span>
+      <span class="hashtag">#소득분위별상한액</span>
+      <span class="hashtag">#사후환급</span>
+      <span class="hashtag">#사전급여</span>
+      <span class="hashtag">#국민건강보험공단</span>
+      <span class="hashtag">#의료비부담</span>
+      <span class="hashtag">#요양병원120일</span>
+      <span class="hashtag">#실손보험정산</span>
+      <span class="hashtag">#생활정책</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://www.nhis.or.kr/static/html/wbma/c/wbmac0209.html" target="_blank" rel="noopener">국민건강보험공단 — 본인부담액상한제(국민건강보험법 시행령 제19조) 안내</a>
+      <a href="https://www.nhis.or.kr/nhis/minwon/minwonServiceBoard.do?mode=view&amp;articleNo=10945830" target="_blank" rel="noopener">국민건강보험공단 — 본인부담상한액 초과금 조회·신청 안내</a>
+      <a href="https://www.kha.or.kr/kha_home/notice_list.do?mode=view&amp;articleNo=46119" target="_blank" rel="noopener">대한병원협회 — 2026년도 본인부담상한액 변경 안내(재난상한제운영부-82)</a>
+      <a href="https://www.mohw.go.kr/board.es?mid=a10503010100&amp;bid=0027&amp;act=view&amp;list_no=1487258" target="_blank" rel="noopener">보건복지부 보도자료 — 2024년도 진료비 중 본인부담금 2.8조 원 환급, 가입자 213만 명 부담 완화</a>
+      <a href="https://eiec.kdi.re.kr/policy/materialView.do?num=270195" target="_blank" rel="noopener">KDI 경제정보센터 — 2024년도 진료분 본인부담상한제 지급 현황 정책자료</a>
+      <a href="https://www.mohw.go.kr/board.es?mid=a10107010000&amp;bid=0047&amp;act=view&amp;list_no=1486195" target="_blank" rel="noopener">보건복지부 사전정보공표 — 2025년 건강보험 본인부담상한제 소득구간별 상한액</a>
+      <a href="https://www.fins.co.kr/news/articleView.html?idxno=107694" target="_blank" rel="noopener">보험매일 — 실손보험·본인부담금 상한제 '엇박자 정산', 소비자 혼란 키운다</a>
+      <a href="https://www.seoulfn.com/news/articleView.html?idxno=629176" target="_blank" rel="noopener">서울파이낸스 — 실손보험금·건보 환급금 이중지급 제도개선 논의 현황</a>
+    </div>
+
+    <p class="disclaimer">
+      ※ 본 아티클은 국민건강보험공단·보건복지부의 공식 안내와 공개된 언론 보도를 바탕으로 작성한 정보성 콘텐츠이며, 의료·보험·법률 자문이 아닙니다. 소득분위별 상한액과 지급 일정, 신청 절차는 관계 법령과 공단 고시에 따라 변경될 수 있습니다. 본인의 환급 대상 여부와 금액, 요양병원 입원일수 산정, 실손보험과의 정산 문제 등 개별 사안은 국민건강보험공단 누리집(nhis.or.kr) 또는 고객센터(1577-1000)와 가입한 보험사에 직접 확인하시기 바랍니다. 본문의 1인당 평균 환급액은 공표된 총액을 대상자 수로 나눈 단순 계산값이며 공식 통계가 아닙니다.
+    </p>
+
+  </div>
+</article>
+</body>
+</html>
