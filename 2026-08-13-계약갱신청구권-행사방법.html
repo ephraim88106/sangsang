@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>계약갱신청구권 행사방법 — 집주인 실거주 거절 요건과 5% 상한 계산 | 부동산·주거</title>
+  <meta name="description" content="계약갱신청구권을 언제 어떻게 행사하는지, 집주인이 거절할 수 있는 9가지 사유와 실거주 거절의 인정 기준, 5% 상한이 실제로 얼마인지, 거짓 실거주로 밝혀졌을 때 손해배상액을 어떻게 계산하는지 법 조문과 대법원 판례로 정리했다.">
+  <meta name="keywords" content="계약갱신청구권, 계약갱신청구권 행사방법, 계약갱신 거절 사유, 집주인 실거주, 전월세 상한제 5%, 임대차 손해배상, 주택임대차보호법 제6조의3, 환산월차임">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f2f5f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 45%, #00695c 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #c8e6c9; color: #1b5e20; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #e8f5e9; border-left: 5px solid #2e7d32; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #2e7d32; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #1b5e20; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #2e7d32; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #1b5e20; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #e8f5e9; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #2e7d32; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #1b5e20; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #eef7ed; border-left: 4px solid #66bb6a; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #1b5e20; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f5f9f4; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #1b5e20; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #1b5e20; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #e3ece1; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-blue { background: linear-gradient(90deg, #1b5e20, #66bb6a); }
+    .bar-teal { background: linear-gradient(90deg, #004d40, #00897b); }
+    .bar-amber { background: linear-gradient(90deg, #e65100, #f9a825); }
+    .bar-red { background: linear-gradient(90deg, #b71c1c, #e53935); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #d5e5d2; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #e8f5e9; color: #1b5e20; font-weight: 700; }
+    table.rate td.up { color: #1b5e20; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #00695c; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #2e7d32; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #1b5e20; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #c4dfc0; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #1b5e20; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #c4dfc0; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #2e7d32; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #e8f5e9; color: #2e7d32; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #2e7d32; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<!-- SEO:AUTO BEGIN -->
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-08-13-%EA%B3%84%EC%95%BD%EA%B0%B1%EC%8B%A0%EC%B2%AD%EA%B5%AC%EA%B6%8C-%ED%96%89%EC%82%AC%EB%B0%A9%EB%B2%95">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="계약갱신청구권 행사방법 — 집주인 실거주 거절 요건과 5% 상한 계산">
+<meta property="og:description" content="계약갱신청구권을 언제 어떻게 행사하는지, 집주인이 거절할 수 있는 9가지 사유와 실거주 거절의 인정 기준, 5% 상한이 실제로 얼마인지, 거짓 실거주로 밝혀졌을 때 손해배상액을 어떻게 계산하는지 법 조문과 대법원 판례로 정리했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-08-13-%EA%B3%84%EC%95%BD%EA%B0%B1%EC%8B%A0%EC%B2%AD%EA%B5%AC%EA%B6%8C-%ED%96%89%EC%82%AC%EB%B0%A9%EB%B2%95">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-08-13T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-08-13T09:00:00+09:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="계약갱신청구권 행사방법 — 집주인 실거주 거절 요건과 5% 상한 계산">
+<meta name="twitter:description" content="거절 사유 9가지와 실거주 거절의 인정 기준, 5% 상한 계산과 손해배상액 산정 방법을 정리했다.">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "계약갱신청구권 행사방법 — 집주인 실거주 거절 요건과 5% 상한 계산",
+  "description": "계약갱신청구권을 언제 어떻게 행사하는지, 집주인이 거절할 수 있는 9가지 사유와 실거주 거절의 인정 기준, 5% 상한이 실제로 얼마인지, 거짓 실거주로 밝혀졌을 때 손해배상액을 어떻게 계산하는지 법 조문과 대법원 판례로 정리했다.",
+  "url": "https://sangsang.ephseed.com/2026-08-13-%EA%B3%84%EC%95%BD%EA%B0%B1%EC%8B%A0%EC%B2%AD%EA%B5%AC%EA%B6%8C-%ED%96%89%EC%82%AC%EB%B0%A9%EB%B2%95",
+  "datePublished": "2026-08-13T09:00:00+09:00",
+  "dateModified": "2026-08-13T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+</head>
+<body>
+<article class="article-wrap">
+  <header class="hero">
+    <div class="category-badge">🏠 부동산 · 주거</div>
+    <h1>계약갱신청구권 행사방법 —<br>집주인 실거주 거절 요건과<br>5% 상한 계산</h1>
+    <p class="hero-sub">전셋값이 오르면 가장 먼저 확인해야 할 것이 "나는 2년을 더 살 수 있는가"다. 법은 임차인에게 한 번의 연장을 보장하지만, 언제까지 말해야 하는지·집주인이 어떤 이유로 거절할 수 있는지·5%가 정확히 무엇의 5%인지를 모르면 권리가 있어도 쓰지 못한다. 조문과 대법원 판례를 근거로 절차와 계산을 정리했다.</p>
+    <div class="hero-meta">
+      <span>📅 2026년 8월 13일</span>
+      <span>✍️ 생생 정보통 정책팀</span>
+      <span>⏱️ 읽는 데 약 10분</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+    <div class="summary-box">
+      <h2>3줄 요약</h2>
+      <ul>
+        <li>갱신 요구는 계약 만료 <strong>6개월 전부터 2개월 전까지</strong> 해야 하고, 평생 <strong>1회·2년</strong>이 한도다. 기간을 넘기면 권리 자체가 사라진다.</li>
+        <li>집주인이 거절할 수 있는 사유는 법에 <strong>9가지</strong>로 못 박혀 있다. 가장 흔한 '실거주'는 <strong>집주인이 진정성을 증명해야</strong> 하는 사유다.</li>
+        <li>거짓 실거주로 밝혀지면 손해배상액은 <strong>세 가지 산식 중 가장 큰 금액</strong>이다. 사안에 따라 3개월치가 아니라 수천만 원이 될 수 있다.</li>
+      </ul>
+    </div>
+
+    <p>2025년 서울 아파트 갱신계약 가운데 계약갱신요구권을 실제로 쓴 비율은 <strong>49.3%</strong>였다. 2024년의 32.6%에서 1년 만에 16.7%포인트가 뛰었다. 국토교통부 확정일자·전월세 신고 자료에 잡힌 수치다. 전셋값이 오를수록 "그냥 나가겠다"가 아니라 "법이 보장한 2년을 쓰겠다"는 선택이 늘어난다는 뜻이다.</p>
+
+    <p>그런데 이 권리는 자동으로 굴러가지 않는다. <strong>기간을 지켜 의사를 밝혀야 하고, 그 의사가 증명 가능해야 하며, 집주인이 내미는 거절 사유가 법에 있는 것인지를 임차인이 판단할 수 있어야 한다.</strong> 아래는 그 세 가지를 순서대로 짚은 것이다.</p>
+
+    <h2 class="sec">🧾 제도의 뼈대 — 임대차보호법 제6조의3이 정한 것</h2>
+    <p>계약갱신요구권의 근거는 <strong>주택임대차보호법 제6조의3</strong>이다. 2020년 7월 31일 시행된 이른바 '임대차 2법' 중 하나로, 같은 법 제7조의 차임 증액 상한(전월세상한제)과 짝을 이룬다. 조문이 정한 뼈대는 네 줄로 요약된다.</p>
+    <ul class="plain">
+      <li><strong>행사 시기</strong> — 임대차기간이 끝나기 <strong>6개월 전부터 2개월 전까지</strong>의 기간에 갱신을 요구할 수 있다. (2020년 12월 10일 이후 체결·갱신된 계약은 '2개월 전', 그 이전 계약은 '1개월 전'이 마감이다.)</li>
+      <li><strong>횟수와 기간</strong> — <strong>1회에 한정</strong>해 행사할 수 있고, 갱신되는 임대차의 존속기간은 <strong>2년</strong>으로 본다. 이른바 '2+2'다.</li>
+      <li><strong>조건</strong> — 갱신되는 임대차는 <strong>전 임대차와 같은 조건</strong>으로 다시 계약된 것으로 본다. 다만 차임과 보증금은 제7조 범위에서 증감할 수 있다.</li>
+      <li><strong>중도 해지</strong> — 갱신된 계약은 임차인이 언제든 해지를 통지할 수 있고, <strong>임대인이 통지를 받은 날부터 3개월이 지나면</strong> 효력이 생긴다. 2년에 묶이는 것은 임대인이지 임차인이 아니다.</li>
+    </ul>
+
+    <div class="pullquote">기간이 핵심이다. 만료 2개월 전을 하루라도 넘기면 갱신요구권은 소멸한다. 반대로 6개월보다 이른 통보도 효력이 없다. 이 창(窓)은 넉 달뿐이다.</div>
+
+    <h3 class="sub">어떻게 요구해야 하나 — 형식보다 증거</h3>
+    <p>법은 갱신 요구의 형식을 정해 두지 않았다. 구두로 해도 유효하다. 문제는 나중에 "들은 적 없다"는 다툼이 생겼을 때 <strong>기간 안에 요구했다는 사실을 임차인이 증명해야</strong> 한다는 점이다. 그래서 실무에서 권장되는 순서는 이렇다.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-t">만료일부터 역산해 달력에 표시한다</div>
+        <div class="step-d">계약서의 임대차 종료일을 확인하고 6개월 전·2개월 전 두 날짜를 찍어 둔다. 갱신 의사가 있다면 2개월 전 마감에 몰지 말고 여유 있게 통지하는 편이 안전하다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">문자·카카오톡 등 기록이 남는 수단으로 통지한다</div>
+        <div class="step-d">"○년 ○월 ○일 만료되는 임대차에 대해 주택임대차보호법 제6조의3에 따라 계약갱신을 요구합니다"라는 취지를 명확히 적는다. 읽음 표시와 발송 시각이 남는 것이 핵심이다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">답이 없거나 다툼이 예상되면 내용증명을 보낸다</div>
+        <div class="step-d">우체국 내용증명은 발송 사실과 내용, 도달 시점을 공적으로 남긴다. 도달주의가 적용되므로 마감일 '발송'이 아니라 '도달'을 기준으로 여유를 둬야 한다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">거절 통보를 받으면 사유를 문서로 요구한다</div>
+        <div class="step-d">법정 9가지 사유 중 어디에 해당하는지 특정하게 한다. 특히 '실거주'라면 누가(임대인 본인인지 직계존비속인지) 언제부터 거주할 것인지를 남겨 두는 편이 이후 분쟁에서 결정적이다.</div>
+      </div>
+    </div>
+
+    <h2 class="sec">🚫 집주인이 거절할 수 있는 9가지 — 그 밖의 이유는 안 된다</h2>
+    <p>제6조의3 제1항은 임대인이 갱신 요구를 거절할 수 있는 경우를 각 호로 열거한다. <strong>열거된 것 외의 사유로는 거절할 수 없다.</strong> "집을 팔 예정이다", "월세로 돌리겠다", "전세금을 크게 올려야겠다" 같은 이유는 그 자체로는 거절 사유가 아니다.</p>
+    <table class="rate">
+      <thead><tr><th style="width:52px">호</th><th>거절할 수 있는 경우</th><th style="width:150px">쟁점</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>임차인이 <strong>2기의 차임액</strong>에 이르도록 차임을 연체한 사실이 있는 경우</td><td>'현재 연체'가 아니라 <strong>과거에 있었던 사실</strong>이면 해당된다</td></tr>
+        <tr><td>2</td><td>거짓이나 그 밖의 부정한 방법으로 임차한 경우</td><td>계약 체결 과정의 기망</td></tr>
+        <tr><td>3</td><td>서로 합의하여 임대인이 임차인에게 <strong>상당한 보상</strong>을 제공한 경우</td><td>보상액의 '상당성'</td></tr>
+        <tr><td>4</td><td>임대인 동의 없이 주택의 전부 또는 일부를 <strong>전대</strong>한 경우</td><td>단기임대·공유숙박 포함</td></tr>
+        <tr><td>5</td><td>고의나 중대한 과실로 주택의 전부 또는 일부를 <strong>파손</strong>한 경우</td><td>통상의 마모는 제외</td></tr>
+        <tr><td>6</td><td>주택의 전부 또는 일부가 <strong>멸실</strong>되어 임대차의 목적을 달성하지 못할 경우</td><td>화재·붕괴 등</td></tr>
+        <tr><td>7</td><td><strong>철거·재건축</strong>을 위해 점유 회복이 필요한 경우</td><td>계약 당시 공사시기를 <strong>구체적으로 고지</strong>했거나, 안전사고 우려가 있거나, 다른 법령에 따른 경우로 한정</td></tr>
+        <tr><td class="up">8</td><td class="up">임대인(<strong>직계존속·직계비속 포함</strong>)이 목적 주택에 <strong>실제 거주</strong>하려는 경우</td><td class="up">분쟁의 대부분이 여기서 난다</td></tr>
+        <tr><td>9</td><td>임차인 의무를 현저히 위반하거나 임대차를 계속하기 어려운 <strong>중대한 사유</strong>가 있는 경우</td><td>포괄 조항, 엄격 해석</td></tr>
+      </tbody>
+    </table>
+    <p class="note">출처: 주택임대차보호법 제6조의3 제1항 각 호. 7호의 '가·나·다목' 요건과 8호의 '직계존속·직계비속' 범위는 조문에 명시돼 있다.</p>
+
+    <p>표에서 눈여겨볼 것은 <strong>1호</strong>와 <strong>7호</strong>다. 1호는 "지금 밀려 있는" 것이 아니라 <strong>과거에 2기분에 이르도록 밀린 사실이 있으면</strong> 성립한다. 두 달치를 연체했다가 나중에 갚았더라도 거절 사유가 남는다. 7호는 반대로 문턱이 높다. 계약할 때 재건축 계획과 공사 시기를 구체적으로 고지하지 않았다면, 나중에 재건축을 이유로 내보내기 어렵다.</p>
+
+    <h2 class="sec">🏠 8호 '실거주' — 말만으로는 안 된다는 대법원의 기준</h2>
+    <p>실무에서 갱신 거절의 대부분은 8호를 든다. 조문만 보면 임대인이 "내가 들어가 살겠다"고 하면 끝나는 것처럼 보인다. 그러나 <strong>대법원 2023년 12월 7일 선고 2022다279795 판결</strong>은 그 문턱을 분명히 올렸다.</p>
+    <p>이 사건에서 임대인은 다른 아파트를 급매로 처분한 뒤, 노부모를 서울로 모셔와 병원 근처인 이 집에 거주하겠다며 갱신을 거절했다. 대법원은 <strong>"임대인의 의사가 가공된 것이 아니라 진정하다는 것을 통상적으로 수긍할 수 있을 정도의 사정"</strong>이 인정돼야 한다고 판시했다. 그리고 그 판단에 쓸 기준을 이렇게 제시했다.</p>
+    <ul class="plain">
+      <li>임대인의 <strong>현재 주거 상황</strong>과 그 집으로 옮겨야 할 필요성</li>
+      <li>실거주 <strong>의사가 형성된 경위</strong>가 자연스러운지</li>
+      <li>임대인의 언동에 <strong>모순되는 정황</strong>이 없는지</li>
+      <li><strong>이사 준비</strong>가 실제로 진행되고 있는지</li>
+    </ul>
+    <p>대법원은 이 사건에서 임대인 측이 자녀 교육 때문에 다른 지역에 살고 있었고, 그 생활을 정리한 흔적도 이사 준비도 없었으며, 근처 병원 외래진료가 연 1~5회 수준에 그쳤다는 점을 들어 원심을 파기했다. <strong>증명 책임은 임대인에게 있고, 진술이 아니라 정황이 판단 근거가 된다</strong>는 것이 이 판결의 핵심이다.</p>
+
+    <div class="pullquote">"실거주하겠다"는 말은 거절 사유가 아니다. 거절 사유는 '실제로 거주하려는 상태'이며, 그것을 뒷받침할 사정을 내놓아야 하는 쪽은 집주인이다.</div>
+
+    <h2 class="sec">💰 5% 상한 계산 — 무엇의 5%인지가 헷갈린다</h2>
+    <p>갱신은 '같은 조건'이 원칙이지만 차임과 보증금은 올릴 수 있다. 상한을 정한 것이 <strong>주택임대차보호법 제7조</strong>와 시행령이다. 증액 청구는 <strong>약정한 차임·보증금의 20분의 1(5%)</strong>을 넘을 수 없고, 증액이 있은 뒤 <strong>1년 이내</strong>에는 다시 올릴 수 없다.</p>
+    <p>혼동이 잦은 지점은 두 가지다. 첫째, <strong>5%는 시세가 아니라 기존 계약 금액 기준</strong>이다. 옆집이 2억 올랐어도 내 계약의 기준은 내 보증금이다. 둘째, <strong>상한이지 자동 인상률이 아니다.</strong> 임대인이 요구하지 않으면 그대로 가고, 요구하더라도 협의 대상이다. 지방자치단체가 조례로 5%보다 낮은 상한을 정한 경우에는 그 비율이 적용된다.</p>
+
+    <div class="infographic-section">
+      <h3>💡 보증금 3억 원 전세의 5% 상한 — 세 가지 갱신 형태</h3>
+      <div class="impact-grid">
+        <div class="impact-card">
+          <span class="impact-num">1,500만</span>
+          <span class="impact-label">전세 유지 시<br>올릴 수 있는 보증금 한도<br>(3억 → 3억 1,500만 원)</span>
+        </div>
+        <div class="impact-card">
+          <span class="impact-num">56,250원</span>
+          <span class="impact-label">보증금은 그대로 두고<br>월세로만 받을 때의 상한<br>(1,500만 × 4.5% ÷ 12)</span>
+        </div>
+        <div class="impact-card">
+          <span class="impact-num">4.5%</span>
+          <span class="impact-label">2026년 8월 기준<br>법정 전월세전환율 상한<br>(기준금리 2.5% + 2%p)</span>
+        </div>
+        <div class="impact-card">
+          <span class="impact-num">1년</span>
+          <span class="impact-label">한 번 증액한 뒤<br>다시 올릴 수 없는 기간</span>
+        </div>
+      </div>
+      <p class="note">전월세전환율은 주택임대차보호법 제7조의2에 따라 '연 10%'와 '한국은행 기준금리 + 연 2%' 중 <strong>낮은 비율</strong>을 적용한다. 기준금리가 연 2.5%인 국면에서는 4.5%가 상한이 된다. 기준금리가 바뀌면 이 값도 바뀌므로 갱신 시점의 금리를 확인해야 한다.</p>
+    </div>
+
+    <h2 class="sec">📊 갱신요구권 사용은 왜 급증했나</h2>
+    <p>제도가 만들어진 2020년 이후, 갱신요구권은 전셋값이 오를 때 쓰이고 내릴 때 안 쓰이는 패턴을 반복해 왔다. 시세가 계약 금액보다 낮으면 굳이 권리를 쓸 이유 없이 새로 싸게 계약하는 편이 낫기 때문이다. 2025년 수치는 그 반대 국면이 왔다는 신호다.</p>
+
+    <div class="infographic-section">
+      <h3>📈 서울 임대차 시장의 갱신요구권 사용 비율</h3>
+      <div class="bar-chart">
+        <div class="bar-item">
+          <div class="bar-label"><span>서울 아파트 갱신계약 중 사용률 (2025년)</span><span class="val">49.3%</span></div>
+          <div class="bar-track"><div class="bar-fill bar-blue" style="width:49.3%">49.3%</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>서울 아파트 갱신계약 중 사용률 (2024년)</span><span class="val">32.6%</span></div>
+          <div class="bar-track"><div class="bar-fill bar-teal" style="width:32.6%">32.6%</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>서울 아파트 전월세 중 갱신계약이 차지하는 비중 (2025년)</span><span class="val">41.7%</span></div>
+          <div class="bar-track"><div class="bar-fill bar-amber" style="width:41.7%">41.7%</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>서울 빌라(연립·다세대) 갱신요구권 사용률 (2025년)</span><span class="val">32%</span></div>
+          <div class="bar-track"><div class="bar-fill bar-red" style="width:32%">32%</div></div>
+        </div>
+      </div>
+      <p class="note">출처: 국토교통부 전월세 신고·확정일자 자료를 인용한 2025년 12월 언론 보도. 갱신계약 비중 41.7%는 전년 대비 약 10%포인트 상승한 값이다.</p>
+    </div>
+
+    <p>여기에 한 가지 함정이 숨어 있다. 갱신요구권 사용률이 높다는 것은 <strong>임차인이 권리를 쓰지 않으면 시세대로 올려줘야 하는 상황</strong>이라는 뜻이다. 즉 사용률 49.3%는 세입자 권리가 강해졌다는 지표가 아니라 <strong>전셋값이 그만큼 올랐다는 지표</strong>에 가깝다. 그리고 사용률이 올라갈수록, 그 반대편에서 8호 실거주를 이유로 한 갱신 거절 시도도 함께 늘어난다.</p>
+
+    <h2 class="sec">⚖️ 거짓 실거주였다면 — 손해배상 3가지 산식</h2>
+    <p>제6조의3 제5항은 임대인이 8호(실거주)를 이유로 갱신을 거절해 놓고, <strong>갱신되었을 기간이 끝나기 전에 정당한 사유 없이 제3자에게 임대한 경우</strong> 임차인이 손해배상을 청구할 수 있다고 정한다. 제6항은 그 금액을 다음 <strong>세 가지 중 가장 큰 금액</strong>으로 규정한다(당사자 간 합의가 없는 경우).</p>
+    <div class="flow">
+      <div class="flow-box"><div class="ft">기준 ①</div><div class="fd">갱신거절 당시 <strong>환산월차임의 3개월분</strong></div></div>
+      <div class="flow-box"><div class="ft">기준 ②</div><div class="fd">새 임차인의 환산월차임에서 종전 환산월차임을 뺀 차액의 <strong>2년분(24개월)</strong></div></div>
+      <div class="flow-box"><div class="ft">기준 ③</div><div class="fd">갱신거절로 임차인이 <strong>실제 입은 손해액</strong>(이사비·중개보수·주거비 차액 등)</div></div>
+    </div>
+    <p style="margin-top:18px">여기서 '환산월차임'은 보증금을 월세로 환산해 더한 값이다. 전세처럼 월세가 없어도 <strong>보증금 × 전월세전환율 ÷ 12</strong>로 환산한다. 실제 숫자를 넣어 보면 기준 ①과 기준 ②의 차이가 얼마나 큰지 드러난다.</p>
+
+    <div class="infographic-section">
+      <h3>🧮 사례로 보는 계산 — 보증금 3억 전세, 집주인이 실거주를 이유로 거절한 뒤 월세를 놓은 경우</h3>
+      <table class="rate">
+        <thead><tr><th>구분</th><th>내용</th><th style="width:130px">환산월차임</th></tr></thead>
+        <tbody>
+          <tr><td>종전 계약</td><td>보증금 3억 원 / 월세 없음</td><td class="up">112만 5,000원</td></tr>
+          <tr><td>새 임차인</td><td>보증금 1억 원 / 월세 150만 원</td><td class="down">187만 5,000원</td></tr>
+        </tbody>
+      </table>
+      <div class="impact-grid">
+        <div class="impact-card">
+          <span class="impact-num">337만</span>
+          <span class="impact-label">기준 ①<br>112.5만 원 × 3개월</span>
+        </div>
+        <div class="impact-card">
+          <span class="impact-num">1,800만</span>
+          <span class="impact-label">기준 ②<br>(187.5만 − 112.5만) × 24개월</span>
+        </div>
+        <div class="impact-card">
+          <span class="impact-num">실비</span>
+          <span class="impact-label">기준 ③<br>이사비·중개보수·<br>주거비 차액 입증분</span>
+        </div>
+        <div class="impact-card">
+          <span class="impact-num">1,800만</span>
+          <span class="impact-label">→ 셋 중 가장 큰 금액이<br>배상액이 된다</span>
+        </div>
+      </div>
+      <p class="note">환산월차임은 전월세전환율 연 4.5%(기준금리 2.5% + 2%p)를 적용한 계산 예시다. 3억 × 4.5% ÷ 12 = 112만 5,000원, 1억 × 4.5% ÷ 12 = 37만 5,000원 + 월세 150만 원 = 187만 5,000원. 실제 사건의 배상액은 법원이 개별 사정을 따져 정하므로 이 계산은 구조를 이해하기 위한 예시다.</p>
+    </div>
+
+    <h3 class="sub">확인은 어떻게 하나</h3>
+    <p>거짓 실거주였는지 확인하는 가장 확실한 방법은 <strong>해당 주택의 확정일자 부여 현황 열람</strong>이다. 임대차계약이 끝난 임차인도 자신이 살던 주택에 대해 열람을 신청할 수 있어, 자신이 나간 뒤 새 임대차가 신고됐는지 확인할 수 있다. 등기부등본의 소유권 변동, 전입세대 확인서도 함께 본다. 다툼이 생기면 법원 소송 외에 <strong>주택임대차분쟁조정위원회</strong>(대한법률구조공단·한국부동산원·LH 운영) 조정을 이용할 수 있다.</p>
+
+    <h2 class="sec">👥 나에게 미치는 영향 — 네 가지 상황별로</h2>
+    <ul class="plain">
+      <li><strong>① 만료 3개월을 앞둔 세입자</strong> — 지금이 창(窓) 안이다. 계속 살 생각이라면 오늘 문자 한 통으로 갱신 의사를 남겨 두는 것이 가장 저렴한 보험이다. 마음이 바뀌면 갱신 후에도 3개월 전 통지로 나갈 수 있으므로 손해가 없다.</li>
+      <li><strong>② 집주인이 "실거주하겠다"고 통보한 경우</strong> — 누가 언제부터 거주하는지를 문서로 남기게 하고, 이사 후에도 확정일자 열람으로 몇 달간 확인해 두면 나중에 배상 청구의 근거가 된다.</li>
+      <li><strong>③ 계약 기간 중 집이 팔린 경우</strong> — 매수인은 임대인 지위를 승계하므로 임차인의 권리는 원칙적으로 유지된다. 다만 매수인이 소유권이전등기를 마친 뒤 자신의 실거주를 이유로 거절할 수 있는지는 시점에 따라 다투어지는 쟁점이라, 갱신 요구 시점을 앞당겨 두는 편이 유리하다.</li>
+      <li><strong>④ 임대인 입장</strong> — 실거주 계획이 확실하지 않다면 8호를 근거로 삼지 않는 것이 안전하다. 계획이 틀어져 제3자에게 임대하면 배상 책임이 따르고, 그 금액은 위 계산처럼 3개월치를 훨씬 넘길 수 있다.</li>
+    </ul>
+
+    <h2 class="sec">🔭 앞으로의 관전 포인트</h2>
+    <p>제도 자체가 손질 대상에 올라 있다. 정부는 2025년 3월 세종에서 첫 공개 토론회를 열고 <strong>임대차 2법 개편 논의</strong>를 시작했다. 거론된 안 가운데 하나가 국토연구원에서 제시한 <strong>'2+1+1년'</strong> 구조다. 갱신 기간을 1년 단위로 쪼개 임차인에게 거주 기간 선택권을 주는 대신 임대인의 인상 여지를 넓히는 방식이다. 인상률 상한을 5%에서 10% 수준으로 올리는 방안, <strong>실거주 목적 매수인의 갱신 거절 요건을 명확히 하는 방안</strong>도 함께 검토 대상에 올랐다.</p>
+    <p>다만 현재까지는 폐지보다 '손질'에 무게가 실려 있고, 임차인 권리 후퇴 우려를 이유로 한 반대도 만만치 않아 결론은 나지 않았다. <strong>중요한 것은 개편이 이뤄지더라도 이미 체결된 계약에는 통상 종전 규정이 적용된다는 점</strong>이다. 뉴스에 개편안이 나왔다고 해서 지금 내 계약의 권리가 바로 사라지는 것은 아니다.</p>
+    <p>정리하면 실천 사항은 세 가지다. <strong>첫째, 만료일에서 6개월·2개월 두 날짜를 지금 달력에 표시한다.</strong> <strong>둘째, 갱신 의사는 반드시 기록이 남는 방식으로 전달한다.</strong> <strong>셋째, 거절 통보를 받으면 법정 9가지 중 어느 사유인지 특정하게 하고, 8호라면 이사 후에도 몇 달간 확정일자 현황을 확인한다.</strong> 이 세 가지만으로 대부분의 분쟁은 사전에 정리된다.</p>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#계약갱신청구권</span>
+      <span class="hashtag">#계약갱신요구권</span>
+      <span class="hashtag">#전월세상한제</span>
+      <span class="hashtag">#집주인실거주</span>
+      <span class="hashtag">#주택임대차보호법</span>
+      <span class="hashtag">#임대차2법</span>
+      <span class="hashtag">#환산월차임</span>
+      <span class="hashtag">#전월세전환율</span>
+      <span class="hashtag">#임대차분쟁조정</span>
+      <span class="hashtag">#주거정책</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://www.law.go.kr/lsSc.do?menuId=1&amp;subMenuId=15&amp;tabMenuId=81&amp;query=%EC%A3%BC%ED%83%9D%EC%9E%84%EB%8C%80%EC%B0%A8%EB%B3%B4%ED%98%B8%EB%B2%95" target="_blank" rel="noopener">국가법령정보센터 — 주택임대차보호법(제6조의3 계약갱신 요구 등, 제7조 차임 등의 증감청구권, 제7조의2 월차임 전환 시 산정률의 제한)</a>
+      <a href="https://easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&amp;csmSeq=629&amp;ccfNo=4&amp;cciNo=4&amp;cnpClsNo=1" target="_blank" rel="noopener">찾기쉬운 생활법령정보 — 주택임대차 · 임대차계약의 갱신</a>
+      <a href="https://casenote.kr/%EB%8C%80%EB%B2%95%EC%9B%90/2022%EB%8B%A4279795" target="_blank" rel="noopener">대법원 2023. 12. 7. 선고 2022다279795 판결(건물인도) — 실제 거주 의사의 증명 정도</a>
+      <a href="https://www.kimchang.com/ko/insights/detail.kc?sch_section=4&amp;idx=29205" target="_blank" rel="noopener">김·장 법률사무소 — 갱신요구 거절 사유인 '임대인 등이 실제 거주하려는 경우'의 해석에 대한 대법원 판결 해설</a>
+      <a href="https://www.hankyung.com/article/2025122886501" target="_blank" rel="noopener">한국경제 — 전월세 급등에 갱신요구권 사용 급증(국토교통부 자료 인용, 2025년 12월 28일)</a>
+      <a href="https://edaily.co.kr/News/Read?mediaCodeNo=257&amp;newsId=02161526645478112" target="_blank" rel="noopener">이데일리 — 서울 빌라 32% 계약갱신권 사용, 거래량 7.4% 증가</a>
+      <a href="https://webzine.kacta.or.kr/news/articleView.html?idxno=22420" target="_blank" rel="noopener">세무사신문 — '2+2년' 대신 '2+1+1년'? 정부, 임대차2법 개편 논의 본격화</a>
+      <a href="https://biz.heraldcorp.com/article/10448507" target="_blank" rel="noopener">헤럴드경제 — 임대차2법 개편 논의 시작, 폐지보다 '손질'에 무게</a>
+      <a href="https://www.hldcc.or.kr/" target="_blank" rel="noopener">대한법률구조공단 주택·상가건물 임대차분쟁조정위원회</a>
+    </div>
+
+    <p class="disclaimer">
+      ※ 본 아티클은 주택임대차보호법 및 같은 법 시행령 조문, 대법원 판결, 국토교통부 공표 자료와 공개된 언론 보도를 바탕으로 작성한 정보성 콘텐츠이며 법률 자문이 아닙니다. 본문의 5% 상한·전월세전환율·손해배상액 계산은 제도 구조를 설명하기 위한 예시이며, 적용 전월세전환율은 한국은행 기준금리 변동에 따라 달라지고 실제 배상액은 법원이 개별 사정을 종합해 정합니다. 갱신 요구 기간은 계약 체결 시점(2020년 12월 10일 전후)에 따라 '1개월 전'과 '2개월 전'으로 나뉘므로 본인 계약서를 확인하시기 바랍니다. 개별 사안은 대한법률구조공단(132), 주택임대차분쟁조정위원회, 변호사 등 전문가에게 직접 상담하시기 바랍니다.
+    </p>
+
+  </div>
+</article>
+</body>
+</html>
