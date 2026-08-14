@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>공소시효 계산법 — 죄목별 기간과 정지·폐지 기준 정리 | 정치·사법</title>
+  <meta name="description" content="공소시효가 죄목별로 몇 년인지, 언제부터 세는지, 어떤 경우에 멈추는지, 아예 적용되지 않는 범죄는 무엇인지를 형사소송법 제249조·제252조·제253조와 특례법 조문으로 정리했다. 민사 소멸시효와의 차이도 함께 다룬다.">
+  <meta name="keywords" content="공소시효, 공소시효 계산, 공소시효 기간, 공소시효 정지, 공소시효 폐지, 형사소송법 249조, 태완이법, 의제공소시효, 소멸시효 차이">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f2f3f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #1a237e 0%, #283593 45%, #4527a0 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #c5cae9; color: #1a237e; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #e8eaf6; border-left: 5px solid #283593; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #283593; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #1a237e; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #283593; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #1a237e; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #e8eaf6; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #283593; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #1a237e; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #eef0fa; border-left: 4px solid #5c6bc0; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #1a237e; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f5f6fc; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #1a237e; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #1a237e; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #e4e6f2; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-blue { background: linear-gradient(90deg, #1a237e, #5c6bc0); }
+    .bar-teal { background: linear-gradient(90deg, #004d40, #00897b); }
+    .bar-amber { background: linear-gradient(90deg, #e65100, #f9a825); }
+    .bar-red { background: linear-gradient(90deg, #b71c1c, #e53935); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #d5d8ea; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #e8eaf6; color: #1a237e; font-weight: 700; }
+    table.rate td.up { color: #1a237e; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #00695c; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #283593; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #1a237e; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #c8ccdf; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #1a237e; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #c8ccdf; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #283593; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #e8eaf6; color: #283593; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #283593; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<!-- SEO:AUTO BEGIN -->
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-08-14-%EA%B3%B5%EC%86%8C%EC%8B%9C%ED%9A%A8-%EA%B3%84%EC%82%B0%EB%B2%95">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="공소시효 계산법 — 죄목별 기간과 정지·폐지 기준 정리">
+<meta property="og:description" content="공소시효가 죄목별로 몇 년인지, 언제부터 세는지, 어떤 경우에 멈추는지, 아예 적용되지 않는 범죄는 무엇인지를 형사소송법 제249조·제252조·제253조와 특례법 조문으로 정리했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-08-14-%EA%B3%B5%EC%86%8C%EC%8B%9C%ED%9A%A8-%EA%B3%84%EC%82%B0%EB%B2%95">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-08-14T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-08-14T09:00:00+09:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="공소시효 계산법 — 죄목별 기간과 정지·폐지 기준 정리">
+<meta name="twitter:description" content="죄목별 시효 기간표, 기산점과 계산 방법, 시효가 멈추는 세 가지 경우, 시효가 아예 없는 범죄를 조문으로 정리했다.">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "공소시효 계산법 — 죄목별 기간과 정지·폐지 기준 정리",
+  "description": "공소시효가 죄목별로 몇 년인지, 언제부터 세는지, 어떤 경우에 멈추는지, 아예 적용되지 않는 범죄는 무엇인지를 형사소송법 제249조·제252조·제253조와 특례법 조문으로 정리했다.",
+  "url": "https://sangsang.ephseed.com/2026-08-14-%EA%B3%B5%EC%86%8C%EC%8B%9C%ED%9A%A8-%EA%B3%84%EC%82%B0%EB%B2%95",
+  "datePublished": "2026-08-14T09:00:00+09:00",
+  "dateModified": "2026-08-14T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+</head>
+<body>
+<article class="article-wrap">
+  <header class="hero">
+    <div class="category-badge">🏛️ 정치 · 사법</div>
+    <h1>공소시효 계산법 —<br>죄목별 기간과<br>정지·폐지 기준 정리</h1>
+    <p class="hero-sub">"몇 년 지나면 처벌 못 한다"는 말은 절반만 맞다. 기간은 죄목마다 다르고, 세기 시작하는 날도 사건마다 다르며, 도중에 멈추는 경우가 있고, 아예 시효가 없는 범죄도 있다. 형사소송법 조문과 특례법을 근거로 계산 구조를 정리했다.</p>
+    <div class="hero-meta">
+      <span>📅 2026년 8월 14일</span>
+      <span>✍️ 생생 정보통 정책팀</span>
+      <span>⏱️ 읽는 데 약 11분</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+    <div class="summary-box">
+      <h2>3줄 요약</h2>
+      <ul>
+        <li>공소시효 기간은 형량이 아니라 <strong>법에 정해진 최고 형(법정형)</strong>을 기준으로 1년에서 25년까지 일곱 단계로 나뉜다. 내가 받은 피해가 얼마나 큰가와는 무관하다.</li>
+        <li>세기 시작하는 날은 신고한 날이 아니라 <strong>범죄행위가 끝난 날</strong>이다. 다만 미성년 피해자의 성폭력·아동학대는 <strong>피해자가 성년이 된 날</strong>부터 센다.</li>
+        <li>사람을 살해해 사형에 해당하는 범죄, 13세 미만·장애인 대상 강간 등, 내란·외환죄는 <strong>시효 자체가 없다</strong>. 시간이 아무리 흘러도 기소할 수 있다.</li>
+      </ul>
+    </div>
+
+    <p>2026년 2월 기준 경찰이 아직 범인을 잡지 못한 살인사건은 <strong>274건</strong>이다. 1998년 이후 발생분만 센 숫자이고, 이 가운데 <strong>235건(약 86%)</strong>이 2000~2008년에 몰려 있다. 이 사건들을 맡고 있는 전국 17개 시·도경찰청 미제사건 수사팀 인원은 다 합쳐 <strong>71~74명</strong> 수준으로, 시·도청 한 곳당 평균 4명꼴이다.</p>
+
+    <p>그런데 이 274건은 지금도 "수사 중"이다. 예전 같으면 상당수가 이미 <strong>시효 완성</strong>으로 서류상 종결됐을 사건들이다. 2015년에 살인죄의 공소시효가 없어졌기 때문에 지금도 살아 있는 것이다. 반대로 말하면, 그 법이 생기기 전에 시효가 지나 버린 사건은 범인이 나중에 스스로 자백해도 재판에 넘길 수 없다.</p>
+
+    <div class="pullquote">공소시효는 "처벌하지 않기로 한 약속"이 아니라 "국가가 형벌권을 행사할 수 있는 제한 시간"이다. 시간이 지나면 죄가 없어지는 것이 아니라, 재판에 넘길 자격이 사라진다.</div>
+
+    <h2 class="sec">⚖️ 공소시효란 무엇이고 왜 두는가</h2>
+    <p>공소시효는 <strong>범죄가 끝난 뒤 일정 기간이 지나면 검사가 공소를 제기할 수 없게 되는 제도</strong>다. 시효가 완성된 뒤에 기소하면 법원은 유무죄를 따지지 않고 <strong>면소(免訴) 판결</strong>을 내린다. 사실관계를 심리하지 않고 절차를 끝내는 것이다.</p>
+    <p>이런 제도를 두는 이유는 보통 세 가지로 설명된다.</p>
+    <ul class="plain">
+      <li><strong>증거의 노후</strong> — 시간이 지날수록 목격자의 기억은 흐려지고 물증은 사라진다. 오래된 사건일수록 오판 가능성이 커진다.</li>
+      <li><strong>법적 안정성</strong> — 언제 기소될지 모르는 상태가 평생 이어지면 사회 관계 자체가 불안정해진다.</li>
+      <li><strong>처벌 필요성의 감소</strong> — 시간이 흐르면서 사회의 응보 감정과 일반예방 효과가 줄어든다는 전제다.</li>
+    </ul>
+    <p>이 논리는 <strong>중대 강력범죄에서는 잘 작동하지 않는다</strong>는 반론을 오래 받아 왔다. DNA 감정 기술이 발전하면서 "증거가 노후한다"는 첫 번째 전제부터 흔들렸기 때문이다. 뒤에서 보겠지만 지난 20년간의 법 개정은 대부분 이 반론이 반영된 결과다.</p>
+
+    <h2 class="sec">📊 죄목별 기간 — 형사소송법 제249조가 정한 일곱 단계</h2>
+    <p>가장 많이 오해하는 지점이 여기다. 공소시효 기간은 <strong>실제로 선고될 형량이 아니라 그 죄의 법정형 중 가장 무거운 형(장기)</strong>을 기준으로 정해진다. 같은 사기라도 피해액이 100만 원이든 1억 원이든 형법상 사기죄라면 시효는 같다.</p>
+
+    <table class="rate">
+      <thead>
+        <tr><th>기준이 되는 법정형(장기)</th><th class="up">공소시효</th><th>해당하는 대표 죄목</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>사형</td><td class="up">25년</td><td>강도살인, 현주건조물방화치사 등<br>(단, 살인은 아래 특례로 시효 배제)</td></tr>
+        <tr><td>무기징역 또는 무기금고</td><td class="up">15년</td><td>인질살해, 강간등살인의 일부 유형</td></tr>
+        <tr><td>장기 10년 이상의 징역·금고</td><td class="up">10년</td><td>사기, 횡령, 배임, 강도, 강간, 뇌물수수</td></tr>
+        <tr><td>장기 10년 미만의 징역·금고</td><td class="up">7년</td><td>절도, 상해, 강제추행, 허위사실 명예훼손</td></tr>
+        <tr><td>장기 5년 미만의 징역·금고,<br>장기 10년 이상의 자격정지 또는 벌금</td><td class="up">5년</td><td>폭행, 모욕, 사실적시 명예훼손, 단순 음주운전</td></tr>
+        <tr><td>장기 5년 이상의 자격정지</td><td class="up">3년</td><td>일부 선거·공무 관련 죄</td></tr>
+        <tr><td>장기 5년 미만의 자격정지,<br>구류·과료 또는 몰수</td><td class="up">1년</td><td>경범 성격의 일부 죄</td></tr>
+      </tbody>
+    </table>
+    <p class="note">근거: 형사소송법 제249조 제1항 제1호~제7호. 표의 '대표 죄목'은 이해를 돕기 위한 예시이며, 같은 이름의 죄라도 가중처벌 규정(특정경제범죄가중처벌법, 특정범죄가중처벌법 등)이 적용되면 법정형이 올라가 시효가 길어진다.</p>
+
+    <h3 class="sub">가중처벌이 붙으면 시효도 길어진다</h3>
+    <p>이 점이 실무에서 특히 중요하다. 예컨대 사기 피해액이 <strong>5억 원 이상</strong>이면 형법상 사기가 아니라 <strong>특정경제범죄가중처벌등에관한법률</strong>이 적용되고, 법정형이 3년 이상의 유기징역(50억 원 이상은 무기 또는 5년 이상)으로 올라간다. 그 결과 공소시효도 10년에서 <strong>15년</strong>으로 늘어난다. "얼마짜리 사기인가"가 시효를 바꾸는 것이 아니라, 그 금액 때문에 <strong>적용 법조가 바뀌면서</strong> 시효가 바뀌는 구조다.</p>
+
+    <h3 class="sub">의제공소시효 — 기소한 뒤에도 시계는 돈다</h3>
+    <p>덜 알려진 조항이 형사소송법 <strong>제249조 제2항</strong>이다. 공소가 제기된 사건이라도 <strong>판결 확정 없이 25년이 지나면 시효가 완성된 것으로 본다</strong>. 피고인이 재판을 계속 피해 다녀 절차가 진행되지 않는 상황이 무한정 이어지는 것을 막기 위한 규정으로, 실무에서는 '의제(擬制)공소시효'라고 부른다.</p>
+
+    <h2 class="sec">🧮 언제부터 세나 — 기산점이 계산의 절반이다</h2>
+    <p>많은 사람이 "고소한 날" 또는 "경찰이 알게 된 날"부터 센다고 생각하지만 아니다. 형사소송법 <strong>제252조 제1항</strong>은 <strong>"시효는 범죄행위가 종료한 때로부터 진행한다"</strong>고 정한다. 피해자가 그 사실을 알았는지 여부는 원칙적으로 상관이 없다.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-t">범죄행위가 끝난 날을 특정한다</div>
+        <div class="step-d">결과가 나중에 발생하는 범죄(상해치사 등)는 결과 발생 시점이 기준이 된다. 사기처럼 여러 차례에 걸친 범행이 하나의 죄로 묶이는 경우(포괄일죄)에는 <strong>마지막 행위가 끝난 날</strong>이 기산점이다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">적용될 법조와 그 법정형을 확인한다</div>
+        <div class="step-d">형법인지 특별법인지에 따라 장기가 달라지고, 장기가 달라지면 위 표의 단계가 달라진다. 하나의 행위에 여러 죄가 성립하면 <strong>죄마다 시효를 따로</strong> 센다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">표에서 해당 기간을 찾아 더한다</div>
+        <div class="step-d">기간 계산에는 초일(첫날)을 산입한다. 즉 범죄가 끝난 날을 1일째로 세며, 시효 기간의 마지막 날이 지나면 완성된다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">정지 사유가 있었는지 확인한다</div>
+        <div class="step-d">아래에서 볼 정지 사유가 있었다면 그 기간만큼 시계가 멈춰 있었으므로, 달력상 기간이 지났어도 시효는 완성되지 않았을 수 있다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">특례법이 적용되는 사건인지 확인한다</div>
+        <div class="step-d">성폭력·아동학대·헌정질서 파괴범죄는 일반 규정이 아예 적용되지 않거나 기산점이 다르다. 여기서 결론이 완전히 뒤집힌다.</div>
+      </div>
+    </div>
+
+    <h3 class="sub">공범이 있으면 기준이 하나로 묶인다</h3>
+    <p>제252조 제2항은 <strong>공범의 경우 최종행위가 종료한 때로부터 전체 공범에 대한 시효가 기산된다</strong>고 정한다. 먼저 손을 뗀 공범이라도 마지막 공범의 행위가 끝날 때까지 시효가 시작되지 않는다는 뜻이다.</p>
+
+    <h2 class="sec">⏸️ 시효가 멈추는 세 가지 경우</h2>
+    <p>정지 사유는 형사소송법 <strong>제253조</strong>에 있다. 멈춘 기간은 계산에서 빠지므로, 실질적으로 시효가 그만큼 늘어나는 효과가 난다.</p>
+
+    <div class="flow">
+      <div class="flow-box">
+        <div class="ft">① 공소 제기</div>
+        <div class="fd">검사가 기소하면 시효 진행이 멈춘다. 다만 공소기각이나 관할위반 재판이 확정되면 그때부터 다시 진행한다.</div>
+      </div>
+      <div class="flow-box">
+        <div class="ft">② 공범 중 1인에 대한 정지</div>
+        <div class="fd">공범 한 명에 대한 시효 정지는 다른 공범자에게도 효력이 미친다. 그 사건 재판이 확정된 때부터 다시 진행한다.</div>
+      </div>
+      <div class="flow-box">
+        <div class="ft">③ 형사처분을 면할 목적의 국외 체류</div>
+        <div class="fd">범인이 처벌을 피할 목적으로 국외에 있는 동안 시효가 정지된다. 유학·취업 등 다른 목적의 체류는 원칙적으로 해당하지 않는다.</div>
+      </div>
+    </div>
+
+    <p>세 번째 사유는 다툼이 가장 많은 항목이다. 조문은 <strong>"형사처분을 면할 목적으로 국외에 있는 경우"</strong>라고 되어 있어, 단순히 해외에 나가 있었다는 사실만으로는 부족하고 <strong>그 목적이 있었는지</strong>를 따져야 한다. 대법원은 국외 체류 기간의 시효 정지 여부가 쟁점이 된 2024년 판결(2024도8683)을 비롯해, 출국 경위와 체류 사정을 개별적으로 심리해 목적의 존부를 판단해야 한다는 태도를 유지하고 있다. 처음에는 다른 목적으로 나갔더라도 체류 도중 형사처분을 면할 목적이 생겼다면 그 시점부터 정지될 수 있다는 것이 실무의 이해다.</p>
+
+    <h3 class="sub">기산점 자체를 미루는 특례 — 미성년 피해자</h3>
+    <p>정지와는 성격이 다르지만 결과적으로 시효를 크게 늘리는 규정이 있다.</p>
+    <ul class="plain">
+      <li><strong>성폭력처벌법 제21조 제1항</strong> — 미성년자에 대한 성폭력범죄의 공소시효는 형사소송법 제252조 제1항에도 불구하고 <strong>피해자가 성년에 달한 날부터</strong> 진행한다. 10세에 피해를 입었다면 19세가 되는 날부터 시효가 시작된다.</li>
+      <li><strong>아동학대처벌법 제34조 제1항</strong> — 아동학대범죄의 공소시효도 <strong>해당 아동이 성년에 달한 날부터</strong> 진행한다. 가정 내에서 벌어져 피해자가 신고할 수 없는 구조를 감안한 규정이다.</li>
+      <li><strong>성폭력처벌법 제21조 제2항</strong> — DNA 등 <strong>죄를 증명할 수 있는 과학적인 증거</strong>가 있는 때에는 해당 성폭력범죄의 공소시효가 <strong>10년 연장</strong>된다.</li>
+    </ul>
+    <p>대통령의 경우에는 헌법 제84조의 불소추특권과 관련해, 헌법재판소가 1995년 결정에서 <strong>재직 중에는 공소시효가 정지된다</strong>고 본 바 있다. 재직 기간 동안 소추가 불가능한 만큼 그 기간을 시효에 산입하지 않는다는 취지다.</p>
+
+    <h2 class="sec">🚫 시효가 아예 없는 범죄</h2>
+    <p>다음 범죄들은 형사소송법 제249조부터 제253조까지의 규정 자체가 적용되지 않는다. 시간이 얼마나 지나든 기소할 수 있다.</p>
+
+    <table class="rate">
+      <thead>
+        <tr><th>근거 조문</th><th>적용 배제 대상</th><th class="new">도입</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>형사소송법 제253조의2<br>(이른바 '태완이법')</td><td>사람을 살해한 범죄로 <strong>사형에 해당</strong>하는 범죄<br>(종범은 제외)</td><td class="new">2015년</td></tr>
+        <tr><td>성폭력처벌법 제21조 제3항</td><td><strong>13세 미만</strong> 및 신체적·정신적 장애가 있는 사람에 대한 강간·유사강간·준강간·강제추행 등</td><td class="new">2011~2013년</td></tr>
+        <tr><td>성폭력처벌법 제21조 제4항</td><td><strong>강간등 살인</strong>(형법 제301조의2 전단) 및 아동·청소년 대상 강간등 살인</td><td class="new">2012년</td></tr>
+        <tr><td>헌정질서 파괴범죄의 공소시효 등에 관한 특례법 제3조</td><td>형법상 <strong>내란의 죄·외환의 죄</strong>, 군형법상 <strong>반란의 죄·이적의 죄</strong>, 집단살해에 해당하는 범죄</td><td class="new">1995년</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub">태완이법이 바꾼 것과 바꾸지 못한 것</h3>
+    <p>1999년 대구에서 여섯 살 김태완 군이 황산 테러로 숨진 사건이 계기가 되어 2015년 7월 형사소송법에 제253조의2가 신설됐다. 이후 시효가 남아 있던 장기미제 살인사건들이 다시 수사 선상에 올랐고, 오래된 사건에서 DNA 재감정으로 범인이 특정된 사례가 이어졌다.</p>
+    <p>그러나 이 법에는 결정적 한계가 있다. <strong>이미 시효가 완성된 사건에는 소급 적용되지 않는다.</strong> 소급 적용이 헌법상 형벌불소급 원칙과 충돌하기 때문이다. 이 때문에 1980~1990년대에 벌어진 미제 사건 상당수는 범인이 밝혀져도 형사재판이 불가능하다. 1980년대 후반에서 1990년대 초반에 걸쳐 벌어진 화성 연쇄살인 사건의 진범이 2019년 자백으로 특정되고도 기소되지 못한 것이 대표적이다.</p>
+
+    <div class="infographic-section">
+      <h3>📐 같은 사건, 다른 시효 — 기산점과 특례가 만드는 차이</h3>
+      <div class="bar-chart">
+        <div class="bar-item">
+          <div class="bar-label"><span>모욕죄 (장기 1년 징역)</span><span class="val">5년</span></div>
+          <div class="bar-track"><div class="bar-fill bar-blue" style="width:20%">5년</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>절도죄 (장기 6년 징역)</span><span class="val">7년</span></div>
+          <div class="bar-track"><div class="bar-fill bar-blue" style="width:28%">7년</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>형법상 사기죄 (장기 10년 징역)</span><span class="val">10년</span></div>
+          <div class="bar-track"><div class="bar-fill bar-blue" style="width:40%">10년</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>사기 피해액 5억 원 이상 (특경법 적용)</span><span class="val">15년</span></div>
+          <div class="bar-track"><div class="bar-fill bar-teal" style="width:60%">15년</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>성인 대상 강간죄 (장기 30년 징역)</span><span class="val">10년</span></div>
+          <div class="bar-track"><div class="bar-fill bar-blue" style="width:40%">10년</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>+ DNA 등 과학적 증거가 있는 경우</span><span class="val">20년</span></div>
+          <div class="bar-track"><div class="bar-fill bar-amber" style="width:80%">10년 + 10년 연장</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>10세 피해자 대상 강간죄 (13세 미만)</span><span class="val">시효 없음</span></div>
+          <div class="bar-track"><div class="bar-fill bar-red" style="width:100%">적용 배제</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>살인죄 (사형 해당 · 2015년 이후 시효 미완성분)</span><span class="val">시효 없음</span></div>
+          <div class="bar-track"><div class="bar-fill bar-red" style="width:100%">적용 배제</div></div>
+        </div>
+      </div>
+      <p class="note">막대 길이는 25년을 100%로 환산한 상대 비교다. '시효 없음' 항목은 기간이 무제한이라는 의미이며 25년과 같다는 뜻이 아니다. 15세 피해자 대상 성폭력처럼 배제 대상이 아닌 미성년 사건은 기간 자체는 위 표를 따르되 <strong>기산점이 성년 도달일로 미뤄진다</strong>.</p>
+    </div>
+
+    <h2 class="sec">🕳️ 잘 드러나지 않는 이면 — 개정의 사각지대</h2>
+    <p>공소시효 규정은 지난 20년간 여러 차례 늘어나고 배제돼 왔다. 문제는 그 개정들이 <strong>층층이 쌓이면서 같은 이름의 범죄인데도 언제 벌어졌느냐에 따라 결론이 정반대로 갈린다</strong>는 점이다.</p>
+    <ul class="plain">
+      <li><strong>부칙이 결론을 정한다</strong> — 대부분의 개정법은 "이 법 시행 당시 <strong>공소시효가 완성되지 아니한</strong> 범죄에 대해서도 적용한다"는 부칙을 둔다. 시행일 하루 차이로 적용 여부가 갈릴 수 있다.</li>
+      <li><strong>2007년 대개정의 경계선</strong> — 형사소송법 제249조의 기간은 2007년 12월 21일 개정으로 전반적으로 늘어났다(예: 사형 해당 범죄 15년 → 25년). 그 이전에 벌어진 범죄는 개정 전 기간이 적용된다.</li>
+      <li><strong>시효 배제와 시효 정지는 다르다</strong> — 배제는 아예 적용하지 않는 것이고, 정지는 멈췄다가 다시 흐르는 것이다. 언론 보도에서 두 개념이 '공소시효 폐지'로 뭉뚱그려 쓰이는 경우가 잦다.</li>
+    </ul>
+    <p>가장 최근의 변화도 이 사각지대 위에 있다. 2025년 12월 2일 국회 본회의를 통과한 <strong>아동·청소년의 성보호에 관한 법률 개정안</strong>은 19세 미만 피해자에 대한 <strong>친족 성폭력범죄의 공소시효를 폐지</strong>하는 내용을 담았다. 종전에는 13세 미만이거나 장애가 있는 피해자만 배제 대상이었으므로, 13세 이상 미성년 친족 성폭력이 새로 배제 범위에 들어온 것이다. 다만 이 법은 <strong>공포 후 1년이 지난 날부터 시행</strong>하도록 되어 있어 발효 시점이 뒤로 미뤄져 있고, 시행 전에 이미 시효가 완성된 사건에는 적용되지 않는다. "친족 성폭력 공소시효가 폐지됐다"는 문장만 보고 자기 사건에 바로 대입하면 어긋나는 이유다.</p>
+
+    <h2 class="sec">👥 나에게 미치는 영향 — 상황별로</h2>
+    <div class="impact-grid">
+      <div class="impact-card">
+        <span class="impact-num">10년</span>
+        <span class="impact-label">사기·횡령·배임<br>피해를 뒤늦게 알았어도<br>범행 종료일부터 기산</span>
+      </div>
+      <div class="impact-card">
+        <span class="impact-num">5년</span>
+        <span class="impact-label">폭행·모욕<br>사실적시 명예훼손<br>가장 짧은 축</span>
+      </div>
+      <div class="impact-card">
+        <span class="impact-num">성년+</span>
+        <span class="impact-label">미성년 성폭력·아동학대<br>피해자가 19세가 된 날부터<br>비로소 시계가 돈다</span>
+      </div>
+      <div class="impact-card">
+        <span class="impact-num">3년</span>
+        <span class="impact-label">민사 손해배상은 별개<br>가해자·손해를 안 날부터 3년<br>(불법행위일부터 10년)</span>
+      </div>
+    </div>
+
+    <h3 class="sub">형사 공소시효와 민사 소멸시효의 차이</h3>
+    <p>실생활에서 가장 흔한 혼동이다. 둘은 완전히 다른 제도다.</p>
+    <ul class="plain">
+      <li><strong>공소시효(형사)</strong> — 국가가 <strong>범인을 기소</strong>할 수 있는 기간. 완성되면 처벌이 불가능하다.</li>
+      <li><strong>소멸시효(민사)</strong> — 피해자가 <strong>손해배상을 청구</strong>할 수 있는 기간. 민법 제766조에 따라 손해와 가해자를 안 날부터 3년, 불법행위를 한 날부터 10년이다.</li>
+    </ul>
+    <p>따라서 <strong>형사 처벌은 못 해도 민사 배상은 받을 수 있는 경우</strong>, 반대로 <strong>형사 시효는 남았는데 민사 청구권은 이미 소멸한 경우</strong>가 모두 생긴다. 오래된 피해라면 두 시계를 따로 확인해야 한다. 특히 민사 3년은 "안 날"부터 세기 때문에 생각보다 빨리 지나간다.</p>
+
+    <h3 class="sub">고소를 준비한다면 확인할 순서</h3>
+    <p>① 문제 된 행위가 <strong>정확히 언제 끝났는지</strong> 날짜로 특정한다. ② 어떤 죄에 해당하는지, 가중처벌 법률이 붙는지 확인한다. ③ 위 표에서 기간을 찾는다. ④ 피해자가 미성년이었거나 성폭력·아동학대라면 특례를 먼저 본다. ⑤ 상대가 오랜 기간 국외에 있었다면 정지 가능성을 검토한다. 판단이 어려우면 <strong>대한법률구조공단(국번 없이 132)</strong>이나 검찰·경찰의 민원 상담을 통해 시효 도과 여부를 먼저 확인하는 편이 낫다. 시효가 지난 뒤 낸 고소장은 각하되기 때문이다.</p>
+
+    <h2 class="sec">🔭 전망 — 시효 논쟁은 어디로 가나</h2>
+    <p>흐름은 분명하다. <strong>강력범죄와 아동·미성년 대상 범죄에서 시효를 없애거나 기산점을 미루는 방향</strong>으로 계속 움직여 왔고, 2025년 말 아청법 개정도 그 연장선이다. 국회입법조사처 등에서는 미성년 친족 성폭력의 공소시효 폐지를 더 넓게 검토해야 한다는 의견이 제시돼 왔다.</p>
+    <p>반대 논거도 사라지지 않았다. 시효를 없애면 수십 년 전 사건에서 <strong>피고인이 알리바이를 증명할 방법이 사라진다</strong>는 방어권 문제, 그리고 수사 자원이 무한정 늘어나지 않는 한 <strong>서류상으로만 살아 있는 사건</strong>이 쌓인다는 실무 문제다. 앞서 본 274건의 미제 살인사건을 71~74명이 담당하고 있는 구조가 그 실물이다. 시효를 없애는 입법과, 그 사건을 실제로 다시 파헤칠 인력·예산을 늘리는 일은 별개의 과제다.</p>
+    <p>정리하면 이 글에서 기억할 것은 세 가지다. <strong>첫째, 시효는 형량이 아니라 법정형으로 정해진다.</strong> <strong>둘째, 세기 시작하는 날은 신고일이 아니라 범행 종료일이며, 미성년 피해자는 성년 도달일이다.</strong> <strong>셋째, "폐지됐다"는 보도를 봤다면 그 법의 시행일과 부칙을 반드시 함께 확인해야 한다.</strong> 이 세 가지만 알아도 자기 사건이 어느 칸에 들어가는지는 스스로 가늠할 수 있다.</p>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#공소시효</span>
+      <span class="hashtag">#공소시효계산</span>
+      <span class="hashtag">#형사소송법249조</span>
+      <span class="hashtag">#공소시효정지</span>
+      <span class="hashtag">#태완이법</span>
+      <span class="hashtag">#의제공소시효</span>
+      <span class="hashtag">#성폭력처벌법21조</span>
+      <span class="hashtag">#아동학대처벌법</span>
+      <span class="hashtag">#소멸시효차이</span>
+      <span class="hashtag">#장기미제사건</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://www.law.go.kr/lsSc.do?menuId=1&amp;subMenuId=15&amp;tabMenuId=81&amp;query=%ED%98%95%EC%82%AC%EC%86%8C%EC%86%A1%EB%B2%95" target="_blank" rel="noopener">국가법령정보센터 — 형사소송법(제249조 공소시효의 기간, 제252조 시효의 기산점, 제253조 시효의 정지와 효력, 제253조의2 공소시효의 적용 배제)</a>
+      <a href="https://www.law.go.kr/lsInfoP.do?lsId=011187" target="_blank" rel="noopener">국가법령정보센터 — 성폭력범죄의 처벌 등에 관한 특례법(제21조 공소시효에 관한 특례)</a>
+      <a href="https://law.go.kr/LSW/lsRvsDocListP.do?chrClsCd=010202&amp;lsRvsGubun=all&amp;lsId=001119" target="_blank" rel="noopener">국가법령정보센터 — 헌정질서 파괴범죄의 공소시효 등에 관한 특례법(제2조 정의, 제3조 공소시효의 적용 배제)</a>
+      <a href="https://www.easylaw.go.kr/CSP/OnhunqueansInfoRetrieve.laf?onhunqnaAstSeq=89&amp;onhunqueSeq=5171" target="_blank" rel="noopener">찾기쉬운 생활법령정보 — 아동·청소년 대상 성범죄의 공소시효 특례</a>
+      <a href="https://www.scourt.go.kr/portal/news/NewsViewAction.work?pageIndex=1&amp;seqnum=10016&amp;gubun=4&amp;type=5" target="_blank" rel="noopener">대법원 판례속보 — 피고인이 국외에 체류한 기간의 공소시효 정지 여부가 문제된 사건(2024도8683)</a>
+      <a href="https://v.daum.net/v/20260225165246319" target="_blank" rel="noopener">세계일보 — 해결 못 한 미제살인 274건, 열악한 수사 여건 한계(2026년 2월 25일)</a>
+      <a href="https://www.seoul.co.kr/news/society/2019/09/19/20190919500112" target="_blank" rel="noopener">서울신문 — 살인죄 공소시효 없앤 '태완이법' 4년, 범인 잡은 미제사건들</a>
+      <a href="https://www.healtheconomy.co.kr/news/article.html?no=34246" target="_blank" rel="noopener">헬스경제 — 아동·청소년 대상 '친족 성폭력' 공소시효 폐지(아청법 개정안 2025년 12월 2일 국회 본회의 통과)</a>
+      <a href="https://www.lawtalk.co.kr/posts/148025" target="_blank" rel="noopener">로톡 언론기고 — 성범죄 공소시효, 단순히 폐지된 것이 아니다(2026년 3월 16일)</a>
+      <a href="https://nsp.nanet.go.kr/plan/subject/detail.do?nationalPlanControlNo=PLAN0000053245" target="_blank" rel="noopener">국회도서관 입법정보 — 미성년 친족성폭력 공소시효 폐지 적극 검토 필요</a>
+    </div>
+
+    <p class="disclaimer">
+      ※ 본 아티클은 형사소송법·성폭력범죄의 처벌 등에 관한 특례법·아동학대범죄의 처벌 등에 관한 특례법·헌정질서 파괴범죄의 공소시효 등에 관한 특례법 조문과 대법원 판결, 공개된 언론 보도를 바탕으로 작성한 정보성 콘텐츠이며 법률 자문이 아닙니다. 본문의 죄목별 시효 예시는 각 죄의 기본 법정형을 기준으로 한 것으로, 가중처벌 법률의 적용·범행 시점의 구법 적용·개정법 부칙에 따라 실제 결론은 달라질 수 있습니다. 특히 2007년 12월 21일 개정 전에 종료된 범죄에는 개정 전 기간이 적용되며, 이미 공소시효가 완성된 사건에는 이후의 시효 배제·연장 규정이 소급 적용되지 않습니다. 개별 사안의 시효 도과 여부는 대한법률구조공단(국번 없이 132), 수사기관 민원 상담, 변호사 등 전문가에게 직접 확인하시기 바랍니다.
+    </p>
+
+  </div>
+</article>
+</body>
+</html>
