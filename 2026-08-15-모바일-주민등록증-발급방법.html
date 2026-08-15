@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>모바일 주민등록증 발급방법 — 신청 절차와 사용처, 재발급 기준 정리 | 기술·AI</title>
+  <meta name="description" content="모바일 주민등록증을 발급받는 두 가지 방법(IC 주민등록증 태그 방식·QR 방식)의 절차와 준비물, 수수료 1만원이 붙는 조건, 유효기간 3년의 의미, 쓸 수 있는 곳과 아직 안 되는 곳, 휴대폰이나 실물 신분증을 잃어버렸을 때의 효력 정지 규칙을 주민등록법 제24조의2와 행정안전부 안내를 근거로 정리했다.">
+  <meta name="keywords" content="모바일 주민등록증, 모바일 주민등록증 발급방법, 모바일 신분증, IC 주민등록증, 정부24 모바일 주민등록증, 모바일 주민등록증 준비물, 모바일 주민등록증 재발급, 모바일 신분증 사용처, 주민등록법 24조의2">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f1f6f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #004d5a 0%, #00838f 45%, #0277bd 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #b2ebf2; color: #006064; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #e0f7fa; border-left: 5px solid #00838f; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #00838f; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #006064; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #00838f; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #006064; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #e0f7fa; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #00838f; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #006064; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #e6f6f9; border-left: 4px solid #26c6da; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #006064; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f2fafc; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #006064; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #006064; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #d9edf2; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-teal { background: linear-gradient(90deg, #004d5a, #00acc1); }
+    .bar-blue { background: linear-gradient(90deg, #01579b, #4fc3f7); }
+    .bar-amber { background: linear-gradient(90deg, #e65100, #f9a825); }
+    .bar-grey { background: linear-gradient(90deg, #455a64, #90a4ae); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #cfe3e8; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #e0f7fa; color: #006064; font-weight: 700; }
+    table.rate td.up { color: #006064; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #00695c; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #00838f; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #006064; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #c3dee5; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #006064; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #c3dee5; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #00838f; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #e0f7fa; color: #00838f; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #00838f; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<!-- SEO:AUTO BEGIN -->
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-08-15-%EB%AA%A8%EB%B0%94%EC%9D%BC-%EC%A3%BC%EB%AF%BC%EB%93%B1%EB%A1%9D%EC%A6%9D-%EB%B0%9C%EA%B8%89%EB%B0%A9%EB%B2%95">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="모바일 주민등록증 발급방법 — 신청 절차와 사용처, 재발급 기준 정리">
+<meta property="og:description" content="IC 태그 방식과 QR 방식의 절차·준비물·수수료 차이, 유효기간 3년 규칙, 쓸 수 있는 곳과 아직 안 되는 곳, 분실 시 효력 정지 기준을 정리했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-08-15-%EB%AA%A8%EB%B0%94%EC%9D%BC-%EC%A3%BC%EB%AF%BC%EB%93%B1%EB%A1%9D%EC%A6%9D-%EB%B0%9C%EA%B8%89%EB%B0%A9%EB%B2%95">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-08-15T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-08-15T09:00:00+09:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="모바일 주민등록증 발급방법 — 신청 절차와 사용처, 재발급 기준 정리">
+<meta name="twitter:description" content="발급 방식 두 가지의 절차와 수수료, 유효기간 3년의 함정, 사용처와 분실 시 대처를 한 번에 정리했다.">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "모바일 주민등록증 발급방법 — 신청 절차와 사용처, 재발급 기준 정리",
+  "description": "모바일 주민등록증의 두 가지 발급 방식과 절차, 준비물, 수수료, 유효기간, 사용처, 분실 시 효력 정지 규칙을 주민등록법 제24조의2와 행정안전부 안내를 근거로 정리했다.",
+  "url": "https://sangsang.ephseed.com/2026-08-15-%EB%AA%A8%EB%B0%94%EC%9D%BC-%EC%A3%BC%EB%AF%BC%EB%93%B1%EB%A1%9D%EC%A6%9D-%EB%B0%9C%EA%B8%89%EB%B0%A9%EB%B2%95",
+  "datePublished": "2026-08-15T09:00:00+09:00",
+  "dateModified": "2026-08-15T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+</head>
+<body>
+<article class="article-wrap">
+  <header class="hero">
+    <div class="category-badge">📱 기술 · AI</div>
+    <h1>모바일 주민등록증 발급방법 —<br>신청 절차와 사용처,<br>재발급 기준 정리</h1>
+    <p class="hero-sub">주민센터에서 QR 한 번 찍으면 끝나는 줄 알았다가, 3년 뒤 다시 가야 한다는 사실을 뒤늦게 아는 사람이 많다. 발급 방식이 두 가지이고 둘의 비용·유효기간·휴대폰 교체 시 대처가 전부 다르기 때문이다. 주민등록법 제24조의2와 행정안전부 안내를 근거로 절차를 정리했다.</p>
+    <div class="hero-meta">
+      <span>📅 2026년 8월 15일</span>
+      <span>✍️ 생생 정보통 정책팀</span>
+      <span>⏱️ 읽는 데 약 10분</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+    <div class="summary-box">
+      <h2>3줄 요약</h2>
+      <ul>
+        <li>발급 방법은 <strong>두 가지</strong>다. 실물 주민등록증을 들고 주민센터에서 <strong>1회용 QR을 찍는 방식</strong>은 무료지만 <strong>유효기간 3년</strong>이고, <strong>IC 주민등록증을 휴대폰에 태그하는 방식</strong>은 재발급 수수료가 붙는 대신 휴대폰을 바꿔도 다시 방문할 필요가 없다.</li>
+        <li>대상은 <strong>17세 이상 주민등록증 발급자</strong>이고, 2025년 3월 28일부터는 <strong>주소지와 상관없이 전국 어느 주민센터에서든</strong> 신청할 수 있다.</li>
+        <li>실물 주민등록증을 분실 신고하면 <strong>모바일 쪽도 함께 효력이 정지</strong>되고, 휴대폰만 잃어버리거나 앱을 지운 경우에는 <strong>모바일만 정지</strong>된다. 이 비대칭이 재발급 절차를 가른다.</li>
+      </ul>
+    </div>
+
+    <p>주민등록증이 처음 발급된 것은 1968년이다. 그로부터 <strong>56년 만인 2024년 12월 27일</strong>, 주민등록법 제24조의2가 시행되면서 스마트폰 안에 법적 효력을 가진 주민등록증을 넣을 수 있게 됐다. 처음에는 9개 지방자치단체에서만 시범 발급했고, 2025년 2월 14일부터 세 단계에 걸쳐 확대돼 그해 3월 28일 전국 시행에 도달했다.</p>
+
+    <p>제도는 1년 반 넘게 굴러갔지만, 검색창에는 아직도 같은 질문이 반복해서 올라온다. "준비물이 뭔가", "돈이 드나", "편의점에서 받아주나", "휴대폰 바꾸면 어떻게 되나". 질문이 사라지지 않는 이유는 안내가 부실해서가 아니라 <strong>발급 경로가 두 갈래이고, 어느 쪽을 골랐느냐에 따라 답이 정반대가 되기 때문</strong>이다.</p>
+
+    <div class="pullquote">모바일 주민등록증은 실물 신분증의 '사본'이 아니라 '별도의 증'이다. 그래서 실물이 죽으면 같이 죽지만, 모바일이 죽는다고 실물까지 죽지는 않는다.</div>
+
+    <h2 class="sec">📌 배경 — 어떻게 여기까지 왔나</h2>
+
+    <p>모바일 신분증은 주민등록증이 처음이 아니다. 정부는 신분증 종류별로 하나씩 순차 도입해 왔고, 그 순서를 보면 제도의 성격이 드러난다.</p>
+
+    <table class="rate">
+      <thead>
+        <tr><th>모바일 신분증</th><th>도입 시점</th><th>법적 근거</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>모바일 운전면허증</td><td class="up">2022년</td><td>도로교통법 제85조의2</td></tr>
+        <tr><td>모바일 국가보훈등록증</td><td class="up">2023년</td><td>국가유공자 예우 및 지원에 관한 법률 시행령 제101조</td></tr>
+        <tr><td>모바일 재외국민 신원확인증</td><td class="up">2024년 7월 3일</td><td>7개 재외공관 시범 서비스</td></tr>
+        <tr><td><strong>모바일 주민등록증</strong></td><td class="new">2024년 12월 27일</td><td><strong>주민등록법 제24조의2</strong></td></tr>
+        <tr><td>모바일 외국인등록증</td><td class="up">2025년 1월 10일</td><td>출입국관리법 제33조 제6항</td></tr>
+        <tr><td>모바일 장애인등록증</td><td class="up">2026년 1월 22일</td><td>장애인복지법 제32조 제2항</td></tr>
+      </tbody>
+    </table>
+
+    <p>공통점이 있다. <strong>전부 개별 법률에 근거 조항을 새로 만들어 넣었다</strong>는 점이다. 스마트폰 화면에 띄운 이미지가 신분증으로 인정받으려면 "이것도 신분증이다"라고 법이 명시해 줘야 하기 때문이다. 모바일 주민등록증의 근거가 주민등록법 제24조의2인 것도 그래서다. 반대로 말하면 <strong>법에 규정이 없는 화면 캡처나 사진은 어떤 경우에도 신분증이 아니다.</strong></p>
+
+    <h3 class="sub">전국으로 퍼지기까지 6주</h3>
+
+    <p>시범 발급은 2024년 12월 27일 9개 지자체에서 시작했다. 전국 확대는 세 단계로 나뉘어 진행됐다.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-t">2025년 2월 14일 — 1단계</div>
+        <div class="step-d">대구·대전·울산·강원·전북·전남·경북·경남·제주. 시범 운영을 하던 9개 지역이 정식 발급으로 전환됐다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">2025년 2월 28일 — 2단계</div>
+        <div class="step-d">인천·경기·충북·충남. 수도권 일부와 충청권이 합류했다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">2025년 3월 14일 — 3단계</div>
+        <div class="step-d">서울·부산·광주. 인구가 가장 많은 세 곳을 마지막에 열었다. 창구 혼잡을 분산시키려는 순서였다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">2025년 3월 28일 — 전국 시행</div>
+        <div class="step-d">이때부터 <strong>주민등록지와 무관하게</strong> 전국 어느 주민센터에서든 신청할 수 있게 됐다. 그 전까지는 자기 주소지 관할에서만 가능했다.</div>
+      </div>
+    </div>
+
+    <p>지금 신청하려는 사람에게 실질적으로 중요한 것은 마지막 줄 하나다. <strong>회사 근처 주민센터에서 점심시간에 처리해도 된다.</strong> 주소지를 옮기지 않았다고 고향까지 갈 이유가 없다.</p>
+
+    <h2 class="sec">🧾 핵심 — 발급 방법 두 가지와 절차</h2>
+
+    <p>여기가 이 글의 본론이다. 두 방식은 결과물(모바일 주민등록증)이 같지만 <strong>비용·유효기간·휴대폰 교체 대응이 전부 다르다.</strong></p>
+
+    <h3 class="sub">방법 1 — QR 방식 (무료, 유효기간 3년)</h3>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-t">준비물 챙기기</div>
+        <div class="step-d">본인의 <strong>실물 주민등록증</strong>과 <strong>본인 명의 스마트폰</strong>. 대리 신청은 되지 않는다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">모바일 신분증 앱 설치</div>
+        <div class="step-d">가기 전에 미리 깔아 두면 창구에서 기다리는 시간이 줄어든다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">주민센터 방문 후 1회용 QR 촬영</div>
+        <div class="step-d">담당자가 본인 확인 후 1회용 QR코드를 띄워 준다. 앱으로 찍으면 <strong>그 자리에서 즉시 발급</strong>된다. 수수료는 없다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">3년 뒤 재방문</div>
+        <div class="step-d">QR 방식의 유효기간은 <strong>3년</strong>이다. 만료되면 주민센터에 다시 가서 같은 과정을 반복해야 한다.</div>
+      </div>
+    </div>
+
+    <p>이 방식의 진짜 비용은 수수료가 아니라 <strong>시간</strong>이다. 무료지만 3년마다, 그리고 <strong>휴대폰을 바꾸거나 앱을 지울 때마다</strong> 창구에 다시 가야 한다. 2~3년 주기로 기기를 교체하는 사람이라면 사실상 교체할 때마다 주민센터 방문이 한 번씩 따라붙는다는 뜻이다.</p>
+
+    <h3 class="sub">방법 2 — IC 주민등록증 태그 방식 (수수료 있음, 재방문 불필요)</h3>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-t">IC칩이 내장된 주민등록증부터 신청</div>
+        <div class="step-d">정부24에서 온라인으로 신청하거나 주민센터를 방문해, 재발급 신청 시 <strong>"IC칩 내장"</strong>을 선택한다. 기존에 갖고 있던 일반 주민등록증에는 IC칩이 없다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">수수료 확인</div>
+        <div class="step-d"><strong>17세 최초 발급자는 무료</strong>다. 이미 주민등록증이 있는 사람이 IC 방식으로 바꾸려면 <strong>재발급 수수료 1만 원</strong>이 든다(일반 재발급 5,000원에 IC 제작비가 추가되는 구조다).</div>
+      </div>
+      <div class="step">
+        <div class="step-t">IC 주민등록증 수령</div>
+        <div class="step-d">제작 기간이 필요하다. 즉시 발급되는 QR 방식과 가장 크게 갈리는 지점이다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">휴대폰에 태그</div>
+        <div class="step-d">앱을 열고 IC 주민등록증을 휴대폰 뒷면에 접촉(NFC)하면 발급이 끝난다. <strong>이후에는 휴대폰을 바꿔도 새 폰에 다시 태그하면 되므로 주민센터에 갈 필요가 없다.</strong></div>
+      </div>
+    </div>
+
+    <h3 class="sub">한 표로 정리</h3>
+
+    <table class="rate">
+      <thead>
+        <tr><th>구분</th><th>QR 방식</th><th>IC 태그 방식</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>수수료</td><td class="new">무료</td><td class="down">최초 발급자 무료 / 전환 시 1만 원</td></tr>
+        <tr><td>발급 소요</td><td class="new">창구에서 즉시</td><td class="down">IC 주민등록증 제작 기간 필요</td></tr>
+        <tr><td>유효기간</td><td class="down">3년</td><td class="new">실물 주민등록증과 동일</td></tr>
+        <tr><td>휴대폰 교체 시</td><td class="down">주민센터 재방문</td><td class="new">새 폰에 다시 태그</td></tr>
+        <tr><td>앱 삭제 시</td><td class="down">주민센터 재방문</td><td class="new">다시 태그</td></tr>
+        <tr><td>온라인 신청</td><td class="down">불가(방문 필수)</td><td class="new">정부24에서 IC증 신청 가능</td></tr>
+      </tbody>
+    </table>
+
+    <p>선택 기준은 단순하다. <strong>휴대폰을 자주 바꾸지 않고 당장 오늘 필요한 사람은 QR 방식</strong>, <strong>기기를 자주 바꾸거나 앞으로 몇 년간 창구에 가고 싶지 않은 사람은 IC 방식</strong>이다. 마침 주민등록증을 잃어버려 어차피 재발급을 받아야 한다면, 그때가 IC로 갈아탈 가장 저렴한 순간이다. 어차피 내야 할 5,000원에 5,000원만 더 붙기 때문이다.</p>
+
+    <div class="infographic-section">
+      <h3>📊 두 방식의 3년치 부담 비교</h3>
+      <div class="bar-chart">
+        <div class="bar-item">
+          <div class="bar-label"><span>QR 방식 — 금전 비용</span><span class="val">0원</span></div>
+          <div class="bar-track"><div class="bar-fill bar-teal" style="width: 4%;">&nbsp;</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>IC 방식 — 금전 비용(전환 시)</span><span class="val">10,000원</span></div>
+          <div class="bar-track"><div class="bar-fill bar-amber" style="width: 100%;">10,000원</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>QR 방식 — 3년간 예상 창구 방문</span><span class="val">최소 2회 이상</span></div>
+          <div class="bar-track"><div class="bar-fill bar-grey" style="width: 100%;">최초 1회 + 기기교체·만료 시마다</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>IC 방식 — 3년간 예상 창구 방문</span><span class="val">1회</span></div>
+          <div class="bar-track"><div class="bar-fill bar-blue" style="width: 33%;">IC증 신청 1회</div></div>
+        </div>
+      </div>
+      <p class="note">※ 방문 횟수는 유효기간 3년(QR)과 휴대폰 교체 주기를 감안한 추정치다. 기기를 3년 이상 쓰는 사람은 QR 방식도 2회로 끝난다. 금전 비용 막대는 1만 원을 100%로 놓고 그린 상대 비교다.</p>
+    </div>
+
+    <h2 class="sec">🔍 숨겨진 이면 — 실물 신분증이 사라지지 않는 이유</h2>
+
+    <p>"이제 지갑에서 주민등록증을 빼도 되나"라는 질문에 대한 답은 <strong>아직 아니다</strong>이다. 이유가 세 가지 있다.</p>
+
+    <h3 class="sub">① 발급 자체가 실물을 전제로 한다</h3>
+    <p>QR 방식이든 IC 방식이든 <strong>실물 주민등록증이 먼저 있어야 모바일이 나온다.</strong> 모바일은 실물을 대체하는 것이 아니라 실물에 얹히는 구조다. 실물을 없애면 모바일도 근거를 잃는다.</p>
+
+    <h3 class="sub">② 검증 장비가 따라오지 못한 곳이 있다</h3>
+    <p>모바일 신분증을 확인하려면 상대방도 검증 수단(전용 검증앱 등)을 갖고 있어야 한다. 기존 신분증 스캐너는 화면에 뜬 신분증을 읽지 못한다. 실제로 제22대 국회의원 선거 당시 일부 투표소의 기존 신분증 스캐너에서 모바일 신분증 인식에 제약이 있다는 지적이 나왔다. 행정기관·금융기관·병원처럼 검증 체계를 갖춘 곳에서는 <strong>실물과 동일한 효력</strong>을 갖지만, 소규모 점포에서는 담당자가 확인 방법을 모르거나 장비가 없어 거절당하는 일이 여전히 생긴다.</p>
+
+    <h3 class="sub">③ 휴대폰이 곧 신분증이라는 위험</h3>
+    <p>배터리가 나가거나 화면이 깨지면 신분 확인 수단 자체가 사라진다. 특정 제조사·운영체제에 묶이는 문제도 있다. 민간 앱 연동은 계속 늘고 있지만 앱마다 지원 기기가 다르다. 2026년 5월 기준으로 NH농협은행 올원뱅크, 네이버, KB국민은행, 토스, 카카오뱅크, 삼성 월렛 등에서 이용할 수 있고, 신한·우리·IBK기업·하나은행과 삼성카드 등이 도입을 예고한 상태다. 다만 삼성 월렛을 제외하면 <strong>대개 행정안전부 공식 앱과 민간 앱 중 한 곳만 골라야 한다.</strong></p>
+
+    <div class="pullquote">모바일 주민등록증은 "지갑을 없애는 기술"이 아니라 "지갑을 두고 나온 날을 구제하는 기술"에 가깝다. 이 차이를 알고 쓰면 실망할 일이 줄어든다.</div>
+
+    <h2 class="sec">💡 나에게 미치는 영향 — 어디서 쓰고, 잃어버리면 어떻게 하나</h2>
+
+    <h3 class="sub">쓸 수 있는 곳</h3>
+    <ul class="plain">
+      <li><strong>행정기관</strong> — 주민센터 민원 창구, 무인민원발급기. 주민등록등본·가족관계증명서 등 무인발급기에서 무료로 뽑을 수 있는 서류를 실물 없이 발급받을 수 있다.</li>
+      <li><strong>금융기관</strong> — 계좌 개설, 창구 업무의 본인 확인.</li>
+      <li><strong>병원·공항·투표소</strong> — 신원 확인 용도.</li>
+      <li><strong>편의점 등 민간</strong> — 성인 인증에 쓸 수 있으나, 앞서 본 대로 <strong>점포의 검증 수단 보유 여부에 따라 갈린다.</strong></li>
+    </ul>
+
+    <h3 class="sub">분실했을 때 — 방향이 한쪽으로만 흐른다</h3>
+
+    <div class="flow">
+      <div class="flow-box">
+        <div class="ft">실물 주민등록증 분실 신고</div>
+        <div class="fd">→ <strong>모바일도 함께 효력 정지</strong>. 실물을 재발급받은 뒤 모바일도 다시 발급해야 한다.</div>
+      </div>
+      <div class="flow-box">
+        <div class="ft">휴대폰 분실 · 앱 삭제</div>
+        <div class="fd">→ <strong>모바일만 효력 정지</strong>. 실물 주민등록증은 그대로 살아 있다.</div>
+      </div>
+      <div class="flow-box">
+        <div class="ft">재발급 경로</div>
+        <div class="fd">QR 방식이면 주민센터 재방문, IC 방식이면 새 기기에 다시 태그.</div>
+      </div>
+    </div>
+
+    <p>이 비대칭이 실무에서 중요한 이유는, <strong>휴대폰을 잃어버린 상황에서 신분 확인이 필요할 때 실물 주민등록증이 남아 있으면 아무 문제가 없다</strong>는 뜻이기 때문이다. 반대로 실물을 분실 신고한 상태라면 모바일도 못 쓴다. 두 개를 다 들고 다니다가 지갑만 잃어버렸을 때, 분실 신고를 하는 순간 휴대폰 속 모바일 주민등록증도 같이 멈춘다는 점은 미리 알아 둘 필요가 있다.</p>
+
+    <div class="impact-grid">
+      <div class="impact-card">
+        <span class="impact-num">17세</span>
+        <span class="impact-label">발급 대상 연령<br>주민등록증 발급자<br>대리 신청 불가</span>
+      </div>
+      <div class="impact-card">
+        <span class="impact-num">3년</span>
+        <span class="impact-label">QR 방식 유효기간<br>만료 시 주민센터<br>재방문 필요</span>
+      </div>
+      <div class="impact-card">
+        <span class="impact-num">1만 원</span>
+        <span class="impact-label">IC 주민등록증 전환<br>재발급 수수료<br>(17세 최초는 무료)</span>
+      </div>
+      <div class="impact-card">
+        <span class="impact-num">전국</span>
+        <span class="impact-label">2025.3.28부터<br>주소지 무관<br>어느 주민센터든</span>
+      </div>
+    </div>
+
+    <h2 class="sec">🔭 전망과 행동 제안</h2>
+
+    <p>흐름은 분명하다. 운전면허증에서 시작해 보훈등록증·주민등록증·외국인등록증을 거쳐 2026년 1월 장애인등록증까지, <strong>정부는 신분증을 하나씩 모바일로 옮겨 왔다.</strong> 남은 과제는 발급이 아니라 <strong>수용</strong>이다. 발급받은 사람이 아무리 늘어도 받아 주는 곳이 늘지 않으면 지갑은 얇아지지 않는다. 실제 병목은 소규모 사업장의 검증 수단 보급과, 담당자가 확인 방법을 아는지 여부에 걸려 있다.</p>
+
+    <p>지금 신청하려는 사람이라면 순서는 이렇다. <strong>① 휴대폰을 얼마나 자주 바꾸는지 먼저 따진다.</strong> 3년 이상 한 기기를 쓴다면 무료인 QR 방식이 합리적이다. <strong>② 마침 주민등록증을 재발급받아야 하는 상황이라면 IC칩 내장을 선택한다.</strong> 추가 부담이 5,000원 수준이고, 이후 창구 방문이 사라진다. <strong>③ 어느 쪽이든 실물 주민등록증은 계속 갖고 다닌다.</strong> 모바일이 실물을 대체하지 못하는 구간이 아직 남아 있다.</p>
+
+    <p>정리하면 기억할 것은 세 가지다. <strong>첫째, 무료인 QR 방식의 대가는 3년마다·기기 바꿀 때마다의 창구 방문이다.</strong> <strong>둘째, IC 방식의 1만 원은 그 방문을 사는 돈이다.</strong> <strong>셋째, 실물을 분실 신고하면 모바일도 함께 멈춘다.</strong> 이 세 가지만 알면 자기에게 맞는 경로를 스스로 고를 수 있다.</p>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#모바일주민등록증</span>
+      <span class="hashtag">#모바일주민등록증발급방법</span>
+      <span class="hashtag">#모바일신분증</span>
+      <span class="hashtag">#IC주민등록증</span>
+      <span class="hashtag">#정부24</span>
+      <span class="hashtag">#모바일주민등록증준비물</span>
+      <span class="hashtag">#모바일주민등록증재발급</span>
+      <span class="hashtag">#모바일신분증사용처</span>
+      <span class="hashtag">#주민등록법24조의2</span>
+      <span class="hashtag">#디지털신분증</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://www.gov.kr/mw/AA020InfoCappView.do?CappBizCD=17410000052" target="_blank" rel="noopener">정부24 — 모바일 주민등록증 발급(재발급) 민원안내 및 신청</a>
+      <a href="https://www.mobileid.go.kr/mip/hps/issuReqstGuidance/issuReqstGuidanceMrc.do" target="_blank" rel="noopener">모바일 신분증 공식 누리집 — 모바일 주민등록증 발급 신청 안내</a>
+      <a href="https://www.mois.go.kr/frt/bbs/type010/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000008&amp;nttId=115585" target="_blank" rel="noopener">행정안전부 보도자료 — 모바일 주민등록증 발급 2월 14일부터 단계적 전국 확대</a>
+      <a href="https://www.mois.go.kr/frt/bbs/type010/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000008&amp;nttId=114007" target="_blank" rel="noopener">행정안전부 보도자료 — 주민등록증, 56년 만에 모바일 발급 제도기반 갖추다</a>
+      <a href="https://www.korea.kr/news/policyNewsView.do?newsId=148939410" target="_blank" rel="noopener">대한민국 정책브리핑 — 모바일 주민등록증 발급 전국 확대, 14일부터 단계적으로</a>
+      <a href="https://www.kdsn.co.kr/news/article.html?no=46112" target="_blank" rel="noopener">한국재난안전뉴스 — 모바일 주민등록증 발급 2월 14일부터 단계적으로 전국 확대(1~3단계 일정·수수료·안전장치)</a>
+      <a href="https://mediahub.seoul.go.kr/archives/2013916" target="_blank" rel="noopener">내 손안에 서울(서울시) — 실물 신분증 대신할 모바일 주민등록증 발급부터 사용까지</a>
+      <a href="https://www.busan.go.kr/nbnews/1671352" target="_blank" rel="noopener">부산광역시 — 모바일 주민등록증 발급 시행 안내(3월 14일부터)</a>
+      <a href="https://www.fsc.go.kr/no010101/84152" target="_blank" rel="noopener">금융위원회 보도자료 — 모바일 주민등록증 전국 발급 개시, 디지털 신분증 확대</a>
+      <a href="https://www.law.go.kr/lsSc.do?menuId=1&amp;subMenuId=15&amp;tabMenuId=81&amp;query=%EC%A3%BC%EB%AF%BC%EB%93%B1%EB%A1%9D%EB%B2%95" target="_blank" rel="noopener">국가법령정보센터 — 주민등록법(제24조의2 모바일 주민등록증)</a>
+    </div>
+
+    <p class="disclaimer">
+      ※ 본 아티클은 주민등록법 조문과 행정안전부·정부24·지방자치단체의 공개 안내, 언론 보도를 바탕으로 작성한 정보성 콘텐츠이며 행정 처분이나 법률 자문이 아닙니다. 수수료·유효기간·발급 절차는 관계 법령과 지침 개정에 따라 달라질 수 있고, 민간 앱의 지원 범위와 지원 기기는 각 사업자 사정에 따라 수시로 변경됩니다. 특히 모바일 신분증의 수용 여부는 확인 주체(점포·기관)의 검증 수단 보유 여부에 좌우되므로, 반드시 실물 신분증이 필요한 상황이 남아 있습니다. 신청 전 정부24 또는 모바일 신분증 공식 누리집과 관할 주민센터에서 최신 기준을 직접 확인하시기 바랍니다.
+    </p>
+
+  </div>
+</article>
+</body>
+</html>
