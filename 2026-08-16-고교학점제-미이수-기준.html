@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>고교학점제 미이수 기준 — 출석률·학업성취율 요건과 보충이수 절차 정리 | 교육·입시</title>
+  <meta name="description" content="고교학점제에서 학점을 못 받는 기준은 출석률 3분의 2와 학업성취율 40% 두 가지다. 2026년 3월부터 선택과목은 학업성취율 요건이 빠지고 공통과목은 최소 성취수준 보장지도를 이수하면 학점을 인정받는다. 미도달과 미이수의 차이, 보충이수 절차, 192학점 졸업요건과의 관계를 교육부 발표와 시도교육청 시행지침을 근거로 정리했다.">
+  <meta name="keywords" content="고교학점제, 고교학점제 미이수, 고교학점제 미이수 기준, 학업성취율 40%, 출석률 3분의 2, 최소 성취수준 보장지도, 보충이수, 192학점, 고교학점제 이수기준, 미도달">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f5f2f9; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #311b92 0%, #5e35b1 45%, #7b1fa2 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #e1bee7; color: #4a148c; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #f3e5f5; border-left: 5px solid #6a1b9a; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #6a1b9a; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #4a148c; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #6a1b9a; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #4a148c; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #ede7f6; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #6a1b9a; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #4a148c; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #ede7f6; border-left: 4px solid #7e57c2; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #4a148c; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #faf7fd; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #4a148c; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #4a148c; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #e8dff2; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-purple { background: linear-gradient(90deg, #311b92, #7e57c2); }
+    .bar-blue { background: linear-gradient(90deg, #01579b, #4fc3f7); }
+    .bar-amber { background: linear-gradient(90deg, #e65100, #f9a825); }
+    .bar-grey { background: linear-gradient(90deg, #455a64, #90a4ae); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #ddd0ea; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #f3e5f5; color: #4a148c; font-weight: 700; }
+    table.rate td.up { color: #4a148c; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #00695c; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #6a1b9a; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #4a148c; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #d6c7e6; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #4a148c; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #d6c7e6; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #6a1b9a; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #f3e5f5; color: #6a1b9a; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #6a1b9a; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<!-- SEO:AUTO BEGIN -->
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-08-16-%EA%B3%A0%EA%B5%90%ED%95%99%EC%A0%90%EC%A0%9C-%EB%AF%B8%EC%9D%B4%EC%88%98-%EA%B8%B0%EC%A4%80">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="고교학점제 미이수 기준 — 출석률·학업성취율 요건과 보충이수 절차 정리">
+<meta property="og:description" content="학점을 못 받는 두 가지 기준과 2026년 3월부터 달라지는 선택과목·공통과목 요건, 미도달과 미이수의 차이, 보충이수 절차를 정리했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-08-16-%EA%B3%A0%EA%B5%90%ED%95%99%EC%A0%90%EC%A0%9C-%EB%AF%B8%EC%9D%B4%EC%88%98-%EA%B8%B0%EC%A4%80">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-08-16T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-08-16T09:00:00+09:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="고교학점제 미이수 기준 — 출석률·학업성취율 요건과 보충이수 절차 정리">
+<meta name="twitter:description" content="출석률 3분의 2와 학업성취율 40%, 2026년 3월부터 무엇이 빠지고 무엇이 남는지 한 번에 정리했다.">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "고교학점제 미이수 기준 — 출석률·학업성취율 요건과 보충이수 절차 정리",
+  "description": "고교학점제 학점 이수 기준인 출석률 3분의 2와 학업성취율 40%, 2026년 3월 시행되는 완화 내용, 미도달과 미이수의 차이, 최소 성취수준 보장지도와 보충이수 절차, 192학점 졸업요건과의 관계를 정리했다.",
+  "url": "https://sangsang.ephseed.com/2026-08-16-%EA%B3%A0%EA%B5%90%ED%95%99%EC%A0%90%EC%A0%9C-%EB%AF%B8%EC%9D%B4%EC%88%98-%EA%B8%B0%EC%A4%80",
+  "datePublished": "2026-08-16T09:00:00+09:00",
+  "dateModified": "2026-08-16T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+</head>
+<body>
+<article class="article-wrap">
+  <header class="hero">
+    <div class="category-badge">🎓 교육 · 입시</div>
+    <h1>고교학점제 미이수 기준 —<br>출석률·학업성취율 요건과<br>보충이수 절차 정리</h1>
+    <p class="hero-sub">"40점을 못 넘으면 학점을 못 받는다"는 규정 하나가 2025년 고1 교실을 흔들었다. 그리고 2026년 3월, 그 규정의 절반이 사라진다. 무엇이 남고 무엇이 빠지는지, 미도달과 미이수는 어떻게 다른지, 걸렸을 때 무엇을 하면 되는지를 교육부 발표와 시도교육청 학업성적관리 시행지침을 근거로 정리했다.</p>
+    <div class="hero-meta">
+      <span>📅 2026년 8월 16일</span>
+      <span>✍️ 생생 정보통 정책팀</span>
+      <span>⏱️ 읽는 데 약 11분</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+    <div class="summary-box">
+      <h2>3줄 요약</h2>
+      <ul>
+        <li>학점을 받으려면 <strong>출석률 3분의 2 이상</strong>과 <strong>학업성취율 40% 이상</strong>을 함께 채워야 한다. 40% 미만이면 성취도 <strong>I</strong>가 찍히고, 이것이 흔히 말하는 미이수다.</li>
+        <li><strong>2026학년도부터 기준이 갈라진다.</strong> 선택과목은 학업성취율 요건이 빠져 <strong>출석률만</strong> 보고, 공통과목은 두 요건을 유지하되 <strong>최소 성취수준 보장지도를 이수하면 학점을 준다</strong>.</li>
+        <li>중요한 건 <strong>미도달 ≠ 미이수</strong>라는 점이다. 기준에 못 미친 상태가 미도달이고, <strong>보장지도까지 받지 않았을 때</strong> 비로소 미이수가 된다. 그 사이에 만회할 구간이 있다.</li>
+      </ul>
+    </div>
+
+    <p>고교학점제는 2025학년도 고1부터 전면 시행됐다. 대학처럼 학생이 과목을 골라 듣고, 정해진 학점을 채워야 졸업하는 구조다. 졸업 요건은 <strong>3년간 192학점 이상</strong>이다. 여기까지는 널리 알려져 있다.</p>
+
+    <p>그런데 시행 첫 학기가 지나자 검색창에 전에 없던 질문이 올라오기 시작했다. "고교학점제 미이수 기준이 뭔가", "40% 못 넘으면 유급인가", "보충 들으면 되는 건가". 학부모 세대가 겪어 본 적 없는 제도라 참고할 경험이 없고, 학교마다 안내 시점과 표현이 달라 혼선이 컸다. EBS 보도에 따르면 시행 <strong>첫 학기에만 최소 성취수준 미도달 학생이 3만 명대</strong>로 집계됐다.</p>
+
+    <div class="pullquote">미도달은 경고등이고, 미이수는 결과다. 둘 사이에는 학교가 개입하도록 설계된 구간이 하나 놓여 있다. 이 구간을 모르면 경고등을 결과로 착각하게 된다.</div>
+
+    <h2 class="sec">📌 배경 — 학점을 '받는다'는 말의 의미가 바뀌었다</h2>
+
+    <p>과거 고등학교는 성적이 아무리 낮아도 출석만 채우면 진급하고 졸업했다. 점수는 등수를 매기는 수단이었지 통과·탈락을 가르는 선이 아니었다. 고교학점제는 이 전제를 바꿨다. <strong>과목마다 통과선을 두고, 그 선을 넘지 못하면 그 과목의 학점은 인정되지 않는다.</strong></p>
+
+    <p>그래서 2025학년도부터 성취평가 체계도 손봤다. 기존 A~E 5단계 아래에 새 등급이 하나 생겼다.</p>
+
+    <table class="rate">
+      <thead>
+        <tr><th>성취도</th><th>학업성취율</th><th>학점 인정</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>A</td><td>90% 이상</td><td class="up">인정</td></tr>
+        <tr><td>B</td><td>80% 이상 ~ 90% 미만</td><td class="up">인정</td></tr>
+        <tr><td>C</td><td>70% 이상 ~ 80% 미만</td><td class="up">인정</td></tr>
+        <tr><td>D</td><td>60% 이상 ~ 70% 미만</td><td class="up">인정</td></tr>
+        <tr><td>E</td><td>40% 이상 ~ 60% 미만</td><td class="up">인정</td></tr>
+        <tr><td><strong>I</strong></td><td><strong>40% 미만</strong></td><td class="down">미이수</td></tr>
+      </tbody>
+    </table>
+
+    <p>여기서 오해가 자주 생긴다. <strong>학업성취율 40%는 시험 원점수 40점이 아니다.</strong> 성취율은 지필평가와 수행평가를 합산한 학기 총점 기준이며, 학교마다 과목별 성취기준에 따라 산출 방식이 다르다. 수행평가 비중이 큰 과목에서는 지필 점수가 낮아도 성취율이 40%를 넘길 수 있고, 반대의 경우도 있다.</p>
+
+    <h2 class="sec">📊 핵심 팩트 — 이수 기준은 두 개의 관문이다</h2>
+
+    <p>학점 인정 요건은 지금까지 두 축이었다. 둘 중 하나라도 못 채우면 학점이 인정되지 않는다.</p>
+
+    <div class="flow">
+      <div class="flow-box">
+        <div class="ft">① 출석률</div>
+        <div class="fd">과목별 수업 횟수의 <strong>3분의 2 이상</strong>. 1학점은 16회 운영이 기준이므로 2학점 과목이면 32회 중 22회 이상이다.</div>
+      </div>
+      <div class="flow-box">
+        <div class="ft">② 학업성취율</div>
+        <div class="fd">해당 과목 <strong>40% 이상</strong>. 미만이면 성취도 I가 부여된다.</div>
+      </div>
+      <div class="flow-box">
+        <div class="ft">③ 창의적 체험활동</div>
+        <div class="fd">교과가 아닌 창체도 별도로 출석 요건이 있다. 이수하지 못하면 그만큼 학점이 비어 192학점 계산이 틀어진다.</div>
+      </div>
+    </div>
+
+    <p class="note">※ 출석 횟수 기준은 시도교육청 학업성적관리 시행지침에 따라 세부 산정 방식이 다를 수 있다. 소속 학교의 학업성적관리규정이 최종 기준이다.</p>
+
+    <h3 class="sub">결석 3분의 1은 생각보다 빨리 온다</h3>
+
+    <p>출석 요건이 실제로 문제가 되는 경우는 장기 입원, 등교 거부, 잦은 조퇴다. 특히 <strong>주당 시수가 적은 과목일수록 위험하다.</strong> 1학점 과목은 한 학기 16회 수업이므로 6회만 빠져도 3분의 1을 넘긴다. 주 1회짜리 과목에서 한 달 반을 결석하면 그 과목은 출석 요건에서 탈락한다. 반면 주 4시간짜리 공통과목은 같은 기간을 빠져도 비율상 여유가 있다. <strong>결석 일수가 아니라 과목별 비율로 따진다는 점</strong>이 핵심이다.</p>
+
+    <h2 class="sec">🔄 2026년 3월부터 무엇이 바뀌나</h2>
+
+    <p>교육부는 고교학점제 안착 지원 대책을 통해 <strong>2026학년도부터 학점 이수 기준을 완화</strong>한다고 밝혔다. 적용 대상은 2026학년도 고1과 고2다.</p>
+
+    <table class="rate">
+      <thead>
+        <tr><th>구분</th><th>기존 (2025학년도)</th><th>변경 (2026학년도~)</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>공통과목</strong></td>
+          <td>출석률 + 학업성취율 40%</td>
+          <td class="new">요건은 유지하되, 성취율 미도달 시 <strong>최소 성취수준 보장지도를 이수하면 학점 인정</strong></td>
+        </tr>
+        <tr>
+          <td><strong>선택과목</strong></td>
+          <td>출석률 + 학업성취율 40%</td>
+          <td class="new"><strong>출석률만</strong> 적용(성취율 요건 삭제). 출석 미달 시 <strong>100% 온라인 콘텐츠 추가학습</strong>으로 학점 취득 가능</td>
+        </tr>
+        <tr>
+          <td><strong>창의적 체험활동</strong></td>
+          <td>3년간 총 288시간 중 3분의 2 이상</td>
+          <td class="new"><strong>학년별 수업일수의 3분의 2 이상</strong>으로 산정 단위 변경</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>변화의 방향은 분명하다. <strong>성취율이라는 관문을 공통과목에만 남기고, 그마저도 '지도를 받으면 통과'로 바꾼 것</strong>이다. 고등학교 교육과정에서 선택과목의 비중이 훨씬 크다는 점을 감안하면, 실질적으로는 대부분의 과목에서 성취율 탈락이 사라지는 셈이다.</p>
+
+    <p>창의적 체험활동의 변경도 작지 않다. 기존에는 3년 288시간을 통으로 놓고 계산해 3학년이 되어서야 부족분이 드러나는 구조였다. <strong>학년별로 끊으면 그해에 문제를 발견하고 그해에 메울 수 있다.</strong></p>
+
+    <h2 class="sec">🧩 미도달과 미이수 — 같은 말이 아니다</h2>
+
+    <p>제도를 이해하는 가장 빠른 길은 두 용어를 구분하는 것이다. 교육부는 이렇게 정리한다.</p>
+
+    <div class="flow">
+      <div class="flow-box">
+        <div class="ft">미도달</div>
+        <div class="fd">이수 기준(출석률 또는 성취율)을 <strong>충족하지 못한 상태</strong>. 여기까지는 아직 결과가 아니다.</div>
+      </div>
+      <div class="flow-box">
+        <div class="ft">최소 성취수준 보장지도</div>
+        <div class="fd">미도달 학생을 대상으로 학교가 제공하는 <strong>별도 지도 프로그램</strong>. 예방지도와 보충지도로 나뉜다.</div>
+      </div>
+      <div class="flow-box">
+        <div class="ft">미이수</div>
+        <div class="fd">미도달인 데다 <strong>보장지도까지 이수하지 않은 경우</strong>. 이때 학점이 인정되지 않는다.</div>
+      </div>
+    </div>
+
+    <p>즉 <strong>미도달은 안내문이고 미이수는 최종 판정</strong>이다. 학기 중간에 "성취수준 미도달 예상" 통지를 받았다고 해서 이미 미이수가 확정된 것이 아니다. 오히려 그 통지는 만회할 수 있다는 신호에 가깝다.</p>
+
+    <h3 class="sub">예방지도와 보충지도의 차이</h3>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-t">예방지도 — 학기 중</div>
+        <div class="step-d">진단평가나 수시 관찰로 <strong>미도달이 예상되는 학생</strong>을 미리 추려 지도한다. 학기가 끝나기 전에 개입하는 것이 목적이라 부담이 가장 적다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">보충지도 — 학기말 이후</div>
+        <div class="step-d">학기말 결과로 미도달이 확정된 학생을 대상으로, <strong>기본적이고 핵심적인 내용 중심</strong>으로 다시 가르친다. 방과후·방학 중 운영이 일반적이다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">추가학습 — 출석 미달의 경우</div>
+        <div class="step-d">성취율은 40%를 넘겼지만 출석이 모자란 학생에게 적용된다. 2026학년도부터는 <strong>온라인 콘텐츠 100% 이수</strong>로 채울 수 있는 경로가 생긴다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">이수 처리</div>
+        <div class="step-d">지도를 마치면 학점이 인정된다. 마치지 않으면 그 과목은 <strong>미이수</strong>로 남고, 192학점 계산에서 빠진다.</div>
+      </div>
+    </div>
+
+    <h3 class="sub">미이수가 쌓이면 어떻게 되나</h3>
+
+    <p>미이수 과목이 한두 개 생겼다고 곧바로 유급이 되는 것은 아니다. 학점은 과목 단위로 누적되므로, <strong>다른 과목에서 192학점을 채우면 졸업 자체는 가능하다.</strong> 문제는 미이수가 반복적으로 쌓일 때다. 총 학점이 192에 미달하면 상급 학년 진급이 어렵거나 졸업이 유예될 수 있다. 다만 실제 진급·졸업 판정은 학교 학업성적관리위원회의 심의를 거치며, 학교별 규정이 최종 기준이 된다.</p>
+
+    <div class="infographic-section">
+      <h3>📐 숫자로 보는 고교학점제 이수 기준</h3>
+      <div class="bar-chart">
+        <div class="bar-item">
+          <div class="bar-label"><span>졸업에 필요한 총 학점 (3년)</span><span class="val">192학점</span></div>
+          <div class="bar-track"><div class="bar-fill bar-purple" style="width:100%;">192</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>과목별 최소 출석률</span><span class="val">3분의 2 (약 66.7%)</span></div>
+          <div class="bar-track"><div class="bar-fill bar-blue" style="width:66.7%;">66.7%</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>학점 인정 최소 학업성취율</span><span class="val">40%</span></div>
+          <div class="bar-track"><div class="bar-fill bar-amber" style="width:40%;">40%</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>1학점당 수업 운영 횟수</span><span class="val">16회</span></div>
+          <div class="bar-track"><div class="bar-fill bar-grey" style="width:16%;">16회</div></div>
+        </div>
+      </div>
+      <p class="legend" style="margin-top:22px;">
+        <span class="key" style="background:#7e57c2;"></span>졸업 요건 &nbsp;
+        <span class="key" style="background:#4fc3f7;"></span>출석 요건 &nbsp;
+        <span class="key" style="background:#f9a825;"></span>성취 요건 &nbsp;
+        <span class="key" style="background:#90a4ae;"></span>운영 단위
+      </p>
+      <p class="note">막대 길이는 각 기준의 비율을 시각화한 것으로, 항목 간 절대 크기를 비교하기 위한 것이 아니다.</p>
+    </div>
+
+    <h2 class="sec">🔍 숨겨진 이면 — 완화를 반기지 않는 쪽이 있다</h2>
+
+    <p>기준 완화 소식에 학부모는 대체로 안도했지만, <strong>교원단체의 반응은 정반대였다.</strong> 한국교원단체총연합회, 전국교직원노동조합, 교사노동조합연맹은 완화가 아니라 <strong>최소 성취수준 보장제도의 완전 폐지</strong>를 요구했다. 절반만 손댄 개편이 현장 부담을 그대로 남겼다는 것이다.</p>
+
+    <p>이유는 세 가지로 정리된다.</p>
+
+    <ul class="plain">
+      <li><strong>행정 부담이 줄지 않는다.</strong> 성취율 요건이 선택과목에서 빠져도, 공통과목에서는 여전히 미도달자를 추리고 지도 계획을 세우고 이수 여부를 기록해야 한다. 오히려 "지도를 이수하면 학점 인정"으로 바뀌면서 지도 실적을 증빙할 서류가 늘어난다는 지적이 있다.</li>
+      <li><strong>효과에 대한 회의가 있다.</strong> 교총 측에서는 현장에서 제도의 효능을 체감하지 못한다는 취지의 문제 제기가 나왔다. 짧은 보충 지도로 한 학기 학습 결손을 메우기 어렵다는 것이다.</li>
+      <li><strong>'형식적 통과' 논란.</strong> 출석만 채우면 학점이 나오는 구조는 통과선을 세운 취지 자체를 무력화한다는 비판이다. "가짜 책임교육"이라는 표현이 이 맥락에서 나왔다.</li>
+    </ul>
+
+    <p>반대편의 논리도 있다. 강은희 전국시도교육감협의회 회장은 기초학력이 충분히 갖춰지지 않은 학생을 지원하는 것이 교육의 본질이라는 취지로 제도 유지를 옹호했다. <strong>탈락시키는 장치가 아니라 붙잡는 장치로 쓰자는 관점</strong>이다.</p>
+
+    <p>교육부는 부담 경감책도 함께 내놨다. 정규교원 <strong>777명</strong>을 온라인학교와 공동교육과정 거점학교에 추가 배치하고, 농산어촌·소규모학교 <strong>442교</strong>의 강사 채용에 <strong>157억 원</strong>을 지원한다. 학교생활기록부 기재량도 줄여 행동특성 및 종합의견은 500자에서 <strong>300자</strong>로, 진로활동은 700자에서 <strong>500자</strong>로 축소했다.</p>
+
+    <div class="impact-grid">
+      <div class="impact-card">
+        <span class="impact-num">3만 명대</span>
+        <span class="impact-label">시행 첫 학기<br>최소 성취수준<br>미도달 학생 (EBS 보도)</span>
+      </div>
+      <div class="impact-card">
+        <span class="impact-num">777명</span>
+        <span class="impact-label">온라인학교·공동교육과정<br>정규교원 추가 배치</span>
+      </div>
+      <div class="impact-card">
+        <span class="impact-num">157억 원</span>
+        <span class="impact-label">농산어촌·소규모학교<br>442교 강사 채용 지원</span>
+      </div>
+      <div class="impact-card">
+        <span class="impact-num">500 → 300자</span>
+        <span class="impact-label">학생부 행동특성 및<br>종합의견 기재량 축소</span>
+      </div>
+    </div>
+
+    <h2 class="sec">🏠 나에게 미치는 영향 — 학년별로 다르다</h2>
+
+    <h3 class="sub">2026학년도 고1·고2 학생과 학부모</h3>
+
+    <p>완화된 기준의 직접 적용 대상이다. 실무적으로 확인할 것은 두 가지다. <strong>첫째, 내 학교가 공통과목에서 보장지도를 어떤 형태로 운영하는지</strong>. 방과후인지 방학 중인지, 온라인인지 대면인지에 따라 학사 일정이 달라진다. <strong>둘째, 선택과목의 출석 관리</strong>. 성취율 요건이 빠진 만큼 이제 선택과목에서 학점을 잃는 유일한 경로는 출석이다. 주당 시수가 적은 과목의 결석을 특히 주의해야 한다.</p>
+
+    <h3 class="sub">2025학년도에 입학한 현 고2</h3>
+
+    <p>지난해 기준으로 미도달·미이수가 발생했다면, 완화된 기준이 소급되는지가 관심사다. <strong>이 부분은 학교와 시도교육청의 학업성적관리 시행지침에 따라 처리되므로 담임 또는 교무부에 직접 확인해야 한다.</strong> 일반적으로 학점 인정 여부는 해당 학기 시행지침을 기준으로 판단한다.</p>
+
+    <h3 class="sub">중학생 학부모</h3>
+
+    <p>가장 크게 달라지는 것은 <strong>고교 선택의 계산법</strong>이다. 이수 기준이 완화되면서 "어려운 선택과목을 골랐다가 학점을 못 받으면 어쩌나" 하는 걱정의 무게가 줄었다. 반대로 <strong>공통과목의 기초 학력이 상대적으로 더 중요해졌다.</strong> 성취율 관문이 남은 곳이 공통과목이기 때문이다. 중3 겨울의 학습 우선순위가 바뀌는 지점이다.</p>
+
+    <h3 class="sub">확인해야 할 것 체크리스트</h3>
+
+    <ul class="plain">
+      <li>내 학교 <strong>학업성적관리규정</strong>의 과목별 출석 인정 기준(공결·병결 처리 포함)</li>
+      <li>과목별 <strong>지필평가와 수행평가 반영 비율</strong> — 성취율 40% 계산의 실제 근거</li>
+      <li><strong>미도달 예상 통지</strong>를 받는 시점과 통지 방식(가정통신문·학급 안내 등)</li>
+      <li>보장지도 <strong>운영 일정</strong>과 참여가 학사 일정·방학과 겹치는지 여부</li>
+      <li>3년 누적 <strong>이수 학점 현황</strong> — 192학점 대비 현재 위치</li>
+    </ul>
+
+    <h2 class="sec">🔭 전망과 행동 제안</h2>
+
+    <p>이번 개편의 성격은 명확하다. <strong>제도를 없애지 않으면서 통과선의 높이를 낮췄다.</strong> 통과선을 유지한 것은 고교학점제의 설계 원리를 지키기 위해서고, 높이를 낮춘 것은 첫 학기에 드러난 미도달 규모를 감당하기 어려웠기 때문이다. 그 결과 어느 쪽도 완전히 만족하지 못하는 절충안이 나왔다.</p>
+
+    <p>앞으로 관건은 <strong>보장지도의 질</strong>이 될 가능성이 크다. "지도를 이수하면 학점 인정"이라는 구조에서는 지도가 형식적으로 흘러갈 유인이 생긴다. 반대로 온라인 콘텐츠 플랫폼과 공동교육과정이 제대로 작동하면, 학교 규모와 무관하게 결손을 메울 통로가 열린다. <strong>제도의 성패는 기준의 숫자가 아니라 이 통로의 실제 운영에 달려 있다.</strong></p>
+
+    <p>지금 할 수 있는 일은 단순하다. <strong>① 기준 두 개를 정확히 구분해 기억한다.</strong> 출석은 과목별 3분의 2, 성취율은 40%다. <strong>② 미도달 통지는 경고가 아니라 기회로 받아들인다.</strong> 그 시점에 개입하면 대부분 만회된다. <strong>③ 선택과목은 출석, 공통과목은 성취율을 각각 관리한다.</strong> 2026학년도부터 두 과목군의 위험 지점이 서로 다르기 때문이다. <strong>④ 최종 기준은 언제나 소속 학교의 학업성적관리규정이다.</strong> 기사나 요약본이 아니라 그 문서를 확인하는 것이 가장 빠르다.</p>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#고교학점제</span>
+      <span class="hashtag">#고교학점제미이수기준</span>
+      <span class="hashtag">#학업성취율40퍼센트</span>
+      <span class="hashtag">#최소성취수준보장지도</span>
+      <span class="hashtag">#보충이수</span>
+      <span class="hashtag">#192학점</span>
+      <span class="hashtag">#고교학점제이수기준</span>
+      <span class="hashtag">#출석률3분의2</span>
+      <span class="hashtag">#성취도I</span>
+      <span class="hashtag">#교육부</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&amp;boardSeq=105223&amp;lev=0&amp;searchType=null&amp;statusYN=W&amp;page=1&amp;s=moe&amp;m=020402&amp;opType=N" target="_blank" rel="noopener">교육부 보도자료 — 고교학점제 안착을 위한 지원 대책 발표</a>
+      <a href="https://www.korea.kr/news/policyNewsView.do?newsId=148958816" target="_blank" rel="noopener">대한민국 정책브리핑 — 2026년 달라지는 고교학점제</a>
+      <a href="https://www.korea.kr/news/policyNewsView.do?newsId=148958710" target="_blank" rel="noopener">대한민국 정책브리핑 — 고교학점제 학점 이수기준 완화, 선택과목 출석률만 적용</a>
+      <a href="https://seoulhsc.sen.go.kr/fus/MI000000000000001022/html/cont0010v.do" target="_blank" rel="noopener">서울시교육청 고교학점제지원센터 — 학점이수 인정기준 및 최소 성취수준 보장지도</a>
+      <a href="https://star.moe.go.kr/web/contents/m30103.do?schM=view&amp;id=112248" target="_blank" rel="noopener">학교생활기록부 종합지원포털 — 고교학점제 미이수(I) 및 졸업 유예 학생의 학사 처리 절차</a>
+      <a href="https://www.pen.go.kr/upload/dep07/na/bbs_2629/ntt_1164293/doc_dc66vf893=7fvf3=45vbd=92v0e=15bbvdd97vf056_v9335.pdf" target="_blank" rel="noopener">부산광역시교육청 — 2026학년도 고등학교 학업성적관리 시행지침</a>
+      <a href="https://www.goe.go.kr/resource/goe/na/bbs_2675/2026/04/e2b13ae0-cb1b-49f0-a7d0-9d90c781c606.pdf" target="_blank" rel="noopener">경기도교육청 — 최소 성취수준 보장지도 운영 자료</a>
+      <a href="https://news.ebs.co.kr/ebsnews/menu1/newsAllView/60646660/H?eduNewsYn=N" target="_blank" rel="noopener">EBS 뉴스 — '미도달' 학생 첫 학기에만 3만 명, 고교학점제 손질</a>
+      <a href="https://biz.heraldcorp.com/article/10640458" target="_blank" rel="noopener">헤럴드경제 — 출석만 하면 학점 받는다, 들끓는 고교학점제 절반의 완화</a>
+      <a href="https://www.kedupress.com/news/article.html?no=385897" target="_blank" rel="noopener">대한민국교육신문 — 교육부, 2026년 달라지는 고교학점제</a>
+    </div>
+
+    <p class="disclaimer">
+      ※ 본 아티클은 교육부 보도자료와 대한민국 정책브리핑, 시도교육청 학업성적관리 시행지침 및 고교학점제 안내 자료, 언론 보도를 바탕으로 작성한 정보성 콘텐츠이며 개별 학생의 학사 처분에 대한 유권해석이 아닙니다. 학점 이수 인정 기준과 출석 인정 범위, 최소 성취수준 보장지도의 운영 방식과 미이수 학생의 학사 처리 절차는 시도교육청 시행지침과 각 학교의 학업성적관리규정에 따라 달라지며, 제도 개정에 따라 변경될 수 있습니다. 미도달 학생 수 등 일부 수치는 언론 보도를 인용한 것으로 확정 통계와 차이가 있을 수 있습니다. 자녀의 이수 여부와 보충 방법은 반드시 소속 학교 담임교사 또는 교무부에 직접 확인하시기 바랍니다.
+    </p>
+
+  </div>
+</article>
+</body>
+</html>
