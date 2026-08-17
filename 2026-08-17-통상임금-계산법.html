@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>통상임금 계산법 — 포함 항목과 평균임금 차이, 시간급 산정 기준 | 취업·노동</title>
+  <meta name="description" content="통상임금은 월 정기 임금을 209시간으로 나눠 시간급을 구한다. 2024년 12월 대법원 전원합의체가 고정성 요건을 폐기하면서 재직조건이 붙은 정기상여금도 통상임금에 들어가게 됐다. 시간급 산정식과 209시간의 근거, 포함·제외 항목, 평균임금과의 차이, 연장수당 실제 계산 예시를 근로기준법 조문과 고용노동부 지침을 근거로 정리했다.">
+  <meta name="keywords" content="통상임금, 통상임금 계산법, 통상임금 포함 항목, 209시간, 시간급 통상임금, 평균임금 차이, 정기상여금 통상임금, 고정성 폐기, 연장근로수당 계산, 통상임금 산정 기준시간">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #eef4f3; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #004d40 0%, #00695c 45%, #00838f 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #b2dfdb; color: #004d40; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #e0f2f1; border-left: 5px solid #00695c; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #00695c; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #004d40; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #00695c; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #004d40; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #d8ece9; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #00695c; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #004d40; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #e0f2f1; border-left: 4px solid #26a69a; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #004d40; line-height: 1.75; word-break: keep-all; }
+    .formula { background: #fff8e1; border: 1.5px dashed #ffb300; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 17px; font-weight: 800; color: #6d4c00; line-height: 1.7; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #8d6e63; margin-top: 10px; margin-bottom: 0; }
+    .infographic-section { background: #f4faf9; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #004d40; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #004d40; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #dbeceb; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-teal { background: linear-gradient(90deg, #004d40, #26a69a); }
+    .bar-blue { background: linear-gradient(90deg, #01579b, #4fc3f7); }
+    .bar-amber { background: linear-gradient(90deg, #e65100, #f9a825); }
+    .bar-grey { background: linear-gradient(90deg, #455a64, #90a4ae); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #cfe3e0; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #e0f2f1; color: #004d40; font-weight: 700; }
+    table.rate td.up { color: #00695c; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #ef6c00; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #00695c; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #004d40; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #c2ddd9; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #004d40; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #c2ddd9; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #00695c; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #e0f2f1; color: #00695c; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #00695c; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } .formula .f-main { font-size: 15px; } }
+  </style>
+<!-- SEO:AUTO BEGIN -->
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-08-17-%ED%86%B5%EC%83%81%EC%9E%84%EA%B8%88-%EA%B3%84%EC%82%B0%EB%B2%95">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="통상임금 계산법 — 포함 항목과 평균임금 차이, 시간급 산정 기준">
+<meta property="og:description" content="월 정기 임금을 209시간으로 나누는 이유, 정기상여금이 통상임금에 들어오면서 달라진 수당 계산, 평균임금과의 차이를 조문과 판례로 정리했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-08-17-%ED%86%B5%EC%83%81%EC%9E%84%EA%B8%88-%EA%B3%84%EC%82%B0%EB%B2%95">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-08-17T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-08-17T09:00:00+09:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="통상임금 계산법 — 포함 항목과 평균임금 차이, 시간급 산정 기준">
+<meta name="twitter:description" content="209시간의 근거부터 정기상여금 시간급 환산까지, 통상임금을 실제로 계산하는 방법을 정리했다.">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "통상임금 계산법 — 포함 항목과 평균임금 차이, 시간급 산정 기준",
+  "description": "통상임금 시간급 산정식과 209시간의 근거, 2024년 12월 대법원 전원합의체의 고정성 요건 폐기 이후 달라진 포함·제외 항목, 평균임금과의 차이, 연장근로수당 계산 예시를 근로기준법 조문과 고용노동부 지침을 근거로 정리했다.",
+  "url": "https://sangsang.ephseed.com/2026-08-17-%ED%86%B5%EC%83%81%EC%9E%84%EA%B8%88-%EA%B3%84%EC%82%B0%EB%B2%95",
+  "datePublished": "2026-08-17T09:00:00+09:00",
+  "dateModified": "2026-08-17T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+</head>
+<body>
+<article class="article-wrap">
+  <header class="hero">
+    <div class="category-badge">💼 취업 · 노동</div>
+    <h1>통상임금 계산법 —<br>포함 항목과 평균임금 차이,<br>시간급 산정 기준</h1>
+    <p class="hero-sub">연장근로수당도, 연차수당도, 육아휴직급여도 전부 통상임금에서 출발한다. 그런데 정작 자기 통상임금이 얼마인지 아는 직장인은 드물다. 2024년 12월 대법원이 40년 된 판단 기준 하나를 폐기하면서 계산식의 재료 자체가 바뀌었다. 209시간의 근거부터 정기상여금 환산까지, 실제로 숫자를 넣어 계산하는 방법을 정리했다.</p>
+    <div class="hero-meta">
+      <span>📅 2026년 8월 17일</span>
+      <span>✍️ 생생 정보통 정책팀</span>
+      <span>⏱️ 읽는 데 약 12분</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+    <div class="summary-box">
+      <h2>3줄 요약</h2>
+      <ul>
+        <li><strong>시간급 통상임금 = 월 통상임금 ÷ 209시간</strong>이 기본 공식이다. 209는 주 40시간 근로자의 유급 시간(주휴 8시간 포함)을 월 단위로 환산한 값으로, <strong>(40+8)×365÷7÷12 ≈ 208.57</strong>을 올림한 숫자다.</li>
+        <li><strong>2024년 12월 19일 대법원 전원합의체가 '고정성' 요건을 폐기했다.</strong> 재직 중인 사람에게만 준다는 조건이 붙은 정기상여금도 이제 통상임금에 들어간다. 판단 기준은 <strong>소정근로 대가성·정기성·일률성</strong> 세 가지로 정리됐다.</li>
+        <li>통상임금과 평균임금은 <strong>쓰이는 곳이 다르다.</strong> 연장·야간·휴일수당과 해고예고수당은 통상임금, 퇴직금과 휴업수당은 평균임금 기준이다. 다만 평균임금이 통상임금보다 적으면 통상임금을 평균임금으로 본다(근로기준법 제2조 제2항).</li>
+      </ul>
+    </div>
+
+    <p>월급명세서를 열어 보면 기본급 아래로 직책수당, 식대, 정기상여금, 성과급 같은 항목이 줄줄이 붙어 있다. 이 중 <strong>어디까지가 통상임금인지</strong>가 실제 지갑에 들어오는 돈을 가른다. 야근을 열 시간 했을 때 받는 돈이 23만 원인지 27만 원인지가 이 한 줄에서 결정되기 때문이다.</p>
+
+    <p>그런데 통상임금은 "회사가 정하는 것"이 아니다. 명세서에 뭐라고 적혀 있든, <strong>법이 정한 성질을 갖추면 통상임금이고 갖추지 못하면 아니다.</strong> 이름표가 아니라 성질로 판단한다는 원칙은 대법원이 오랫동안 유지해 온 것이고, 2024년 12월 판결에서도 다시 확인됐다.</p>
+
+    <div class="pullquote">통상임금은 회사가 붙여 놓은 항목 이름으로 정해지지 않는다. "소정근로의 대가로 정기적·일률적으로 지급하기로 정한 임금"이라는 성질을 충족하는지만 본다.</div>
+
+    <h2 class="sec">📌 배경 — 통상임금이 기준이 되는 돈은 생각보다 많다</h2>
+
+    <p>통상임금의 법령상 정의는 <strong>근로기준법 시행령 제6조 제1항</strong>에 있다. "근로자에게 정기적이고 일률적으로 소정근로 또는 총 근로에 대하여 지급하기로 정한 시간급·일급·주급·월급 금액 또는 도급 금액"이 그것이다. 문장이 딱딱하지만 핵심은 두 단어다. <strong>'소정근로'와 '정하기로 한'</strong>이다. 정해진 근로시간을 일하면 당연히 받기로 되어 있는 돈이라는 뜻이다.</p>
+
+    <p>이 값이 왜 중요한가. 아래 항목들이 전부 통상임금을 곱해서 나오기 때문이다.</p>
+
+    <table class="rate">
+      <thead>
+        <tr><th>수당·급여</th><th>산정 방식</th><th>근거</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>연장근로수당</td><td class="up">시간급 통상임금 × 1.5 × 연장시간</td><td>근로기준법 제56조 제1항</td></tr>
+        <tr><td>야간근로수당(22시~06시)</td><td class="up">시간급 통상임금 × 0.5 가산</td><td>근로기준법 제56조 제3항</td></tr>
+        <tr><td>휴일근로수당</td><td class="up">8시간 이내 1.5배 / 초과분 2배</td><td>근로기준법 제56조 제2항</td></tr>
+        <tr><td>연차유급휴가수당</td><td class="up">통상임금 또는 평균임금(취업규칙에 정한 바)</td><td>근로기준법 제60조 제5항</td></tr>
+        <tr><td>해고예고수당</td><td class="up">30일분 이상의 통상임금</td><td>근로기준법 제26조</td></tr>
+        <tr><td>출산전후휴가급여·육아휴직급여</td><td class="up">통상임금 기준(상한·하한 적용)</td><td>고용보험법</td></tr>
+        <tr><td>휴업수당</td><td class="down">평균임금의 70% 이상</td><td>근로기준법 제46조</td></tr>
+        <tr><td>퇴직금</td><td class="down">30일분 평균임금 × 근속연수</td><td>근로자퇴직급여 보장법 제8조</td></tr>
+      </tbody>
+    </table>
+
+    <p>표에서 보듯 <strong>일상적으로 매달 받는 수당은 대부분 통상임금 계열</strong>이고, 퇴직·휴업처럼 근로가 끊기는 상황의 보상은 평균임금 계열이다. 이 구분이 통상임금과 평균임금을 헷갈리지 않는 가장 빠른 기준이다.</p>
+
+    <h2 class="sec">🧮 계산법 — 209시간은 어디서 나온 숫자인가</h2>
+
+    <p>월급제 근로자의 통상임금은 시간 단위로 환산해야 쓸 수 있다. 야근 한 시간에 얼마를 더 줄지 계산하려면 시급이 필요하기 때문이다. 그래서 <strong>월 통상임금을 '월 통상임금 산정 기준시간'으로 나눈다.</strong></p>
+
+    <div class="formula">
+      <p class="f-main">시간급 통상임금 = 월 통상임금 총액 ÷ 209시간</p>
+      <p class="f-note">주 40시간·주 5일 근로자 기준. 근로시간이 다르면 기준시간도 달라진다.</p>
+    </div>
+
+    <p>209라는 숫자에 특별한 마법은 없다. 주휴수당 때문에 생긴 값이다. 주 40시간을 일하면 <strong>유급 주휴 8시간</strong>이 붙어 한 주에 급여가 지급되는 시간은 48시간이 된다. 이것을 한 달로 환산하면 이렇게 된다.</p>
+
+    <div class="formula">
+      <p class="f-main">(40시간 + 8시간) × 365일 ÷ 7일 ÷ 12개월<br>= 48 × 52.14 ÷ 12 ≈ <strong>208.57 → 209시간</strong></p>
+      <p class="f-note">1년을 52주가 아니라 365÷7 = 52.14주로 계산하기 때문에 208.57이 나오고, 실무에서는 209로 올려 쓴다.</p>
+    </div>
+
+    <p>근로시간이 다르면 기준시간도 달라진다. 주 44시간 사업장은 226시간, 주 48시간이면 243시간이 쓰인다. <strong>주 40시간이 법정 기준이 된 지금은 209시간이 사실상 표준</strong>이지만, 단시간 근로자나 교대제 사업장은 자기 소정근로시간으로 다시 계산해야 한다.</p>
+
+    <h3 class="sub">정기상여금은 어떻게 시간급으로 바꾸나</h3>
+
+    <p>연 단위로 지급되는 정기상여금이 통상임금에 포함되면, 이것도 시간당 금액으로 환산해야 한다. 방식은 <strong>연간 상여금 총액을 연간 통상임금 산정 기준시간으로 나누는 것</strong>이다. 월 209시간이면 연간은 209 × 12 = <strong>2,508시간</strong>이다.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-t">월 정기 임금 항목을 모은다</div>
+        <div class="step-d">기본급 300만 원 + 고정 식대 20만 원 + 직책수당 10만 원 = <strong>330만 원</strong></div>
+      </div>
+      <div class="step">
+        <div class="step-t">209로 나눈다</div>
+        <div class="step-d">3,300,000 ÷ 209 = 시간당 <strong>15,789원</strong></div>
+      </div>
+      <div class="step">
+        <div class="step-t">연간 정기상여금을 2,508로 나눈다</div>
+        <div class="step-d">연 600만 원 ÷ 2,508 = 시간당 <strong>2,392원</strong></div>
+      </div>
+      <div class="step">
+        <div class="step-t">둘을 더하면 시간급 통상임금</div>
+        <div class="step-d">15,789 + 2,392 = <strong>18,182원</strong></div>
+      </div>
+      <div class="step">
+        <div class="step-t">연장근로 10시간을 대입한다</div>
+        <div class="step-d">18,182 × 1.5 × 10시간 = <strong>272,727원</strong> · 상여금을 빼고 계산했다면 236,842원이었다</div>
+      </div>
+    </div>
+
+    <p>차액은 월 <strong>약 3만 6천 원</strong>, 1년이면 <strong>약 43만 원</strong>이다. 같은 시간을 일하고도 상여금의 통상임금 포함 여부 하나로 이만큼 갈린다. 상여금 규모가 크고 연장근로가 많은 제조업 현장에서는 이 격차가 수백만 원 단위로 벌어진다.</p>
+
+    <h2 class="sec">📋 포함 항목과 제외 항목 — 2024년 12월 이후 기준</h2>
+
+    <p>가장 많이 묻는 부분이다. 결론부터 말하면 <strong>"정해진 근로를 하면 당연히 받는가"</strong>가 갈림선이다. 추가 조건을 채워야 받는 돈은 통상임금이 아니다.</p>
+
+    <table class="rate">
+      <thead>
+        <tr><th>항목</th><th>통상임금</th><th>판단 이유</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>기본급</td><td class="up">포함</td><td>소정근로의 직접 대가</td></tr>
+        <tr><td>직책·직무수당, 기술수당, 면허수당</td><td class="up">포함</td><td>일정 자격·직책이면 일률 지급</td></tr>
+        <tr><td>근속수당</td><td class="up">포함</td><td>근속기간이라는 객관적 조건, 일률성 인정</td></tr>
+        <tr><td>고정 식대·교통비(전 직원 정액)</td><td class="up">포함</td><td>실비 정산이 아닌 정액 지급이면 임금성 인정</td></tr>
+        <tr><td>정기상여금(재직조건부)</td><td class="new">포함 (2024.12.19 변경)</td><td>재직은 근로 제공의 당연한 전제 — 고정성 요건 폐기</td></tr>
+        <tr><td>소정근로일수 이내 근무일수 조건부 임금</td><td class="new">포함 (2024.12.19 변경)</td><td>일한 만큼 비례 지급되므로 대가성 인정</td></tr>
+        <tr><td>성과급·경영성과급</td><td class="down">원칙적 제외</td><td>실적 달성이라는 추가 조건 필요</td></tr>
+        <tr><td>무사고수당 등 조건부 수당</td><td class="down">제외</td><td>소정근로 외의 별도 조건 충족 필요</td></tr>
+        <tr><td>가족수당(부양가족 있는 사람만)</td><td class="down">제외</td><td>일률성 결여 — 단, 전 직원 기본액은 포함</td></tr>
+        <tr><td>실비변상적 금품(출장비 등)</td><td class="down">제외</td><td>임금이 아니라 비용 보전</td></tr>
+      </tbody>
+    </table>
+
+    <p class="note">개별 사업장의 지급 조건과 취업규칙 문언에 따라 결론이 달라질 수 있다. 위 표는 일반적 판단 경향이며 개별 사안의 유권해석이 아니다.</p>
+
+    <h2 class="sec">⚖️ 무엇이 바뀌었나 — 40년 된 요건 하나가 사라졌다</h2>
+
+    <p>2024년 12월 19일, 대법원 전원합의체는 두 건의 임금 사건(<strong>2020다247190</strong>, <strong>2023다302838</strong>)에서 기존 판례를 변경했다. 핵심은 통상임금의 요건에서 <strong>'고정성'을 뺀 것</strong>이다.</p>
+
+    <p>2013년 전원합의체 판결 이래 통상임금은 정기성·일률성·고정성 세 요건을 모두 갖춰야 한다고 봤다. 이 중 고정성은 "추가적인 조건과 관계없이 지급 여부가 사전에 확정되어 있을 것"을 요구했다. 그래서 <strong>"지급일에 재직 중인 사람에게만 준다"</strong>는 조건이 붙은 정기상여금은 통상임금에서 빠졌다. 퇴직하면 못 받으니 사전에 확정된 것이 아니라는 논리였다.</p>
+
+    <p>많은 기업이 이 논리에 맞춰 상여금 규정에 재직조건을 넣었다. 조항 한 줄로 통상임금 총액을 줄일 수 있었기 때문이다. 대법원은 이번 판결에서 <strong>재직은 근로 제공의 당연한 전제이지 별도의 조건이 아니라고 판단했다.</strong> 새 기준은 세 가지로 정리된다.</p>
+
+    <div class="flow">
+      <div class="flow-box">
+        <div class="ft">① 소정근로 대가성</div>
+        <div class="fd">정해진 근로를 제공한 데 대한 보상인가</div>
+      </div>
+      <div class="flow-box">
+        <div class="ft">② 정기성</div>
+        <div class="fd">정해진 주기마다 반복해 지급되는가</div>
+      </div>
+      <div class="flow-box">
+        <div class="ft">③ 일률성</div>
+        <div class="fd">모든 근로자 또는 일정 조건의 근로자에게 동일하게 적용되는가</div>
+      </div>
+    </div>
+
+    <p style="margin-top:20px;">다만 <strong>조건 자체가 무효가 된 것은 아니다.</strong> 고용노동부가 2025년 2월 개정한 노사지도 지침도 같은 취지다. 재직조건이 붙어 있어도 통상임금에는 포함되지만, 실제로 퇴직해 조건을 못 채운 사람에게 그 상여금을 지급할 의무까지 생기는 것은 아니다. <strong>"계산에는 넣되, 지급 조건은 유효하다"</strong>가 정확한 요약이다.</p>
+
+    <p>적용 시점도 중요하다. 대법원은 법적 안정성을 고려해 <strong>새 법리를 원칙적으로 판결 선고일(2024년 12월 19일) 이후에 적용</strong>하도록 했다. 과거 몇 년치 수당을 소급해 일괄 청구하는 길은 원칙적으로 막혀 있고, 판결 당시 이미 진행 중이던 병행사건 등 예외 범위를 두고 실무에서 다툼이 이어지고 있다.</p>
+
+    <div class="infographic-section">
+      <h3>📐 숫자로 보는 통상임금</h3>
+      <div class="bar-chart">
+        <div class="bar-item">
+          <div class="bar-label"><span>월 통상임금 산정 기준시간 (주 40시간)</span><span class="val">209시간</span></div>
+          <div class="bar-track"><div class="bar-fill bar-teal" style="width:100%;">209h</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>주 44시간 사업장 기준시간</span><span class="val">226시간</span></div>
+          <div class="bar-track"><div class="bar-fill bar-blue" style="width:92.5%;">226h</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>연장·야간·휴일근로 법정 가산율</span><span class="val">50%</span></div>
+          <div class="bar-track"><div class="bar-fill bar-amber" style="width:50%;">50%</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>기업이 꼽은 최대 노동 현안 — 통상임금 부담</span><span class="val">38.4%</span></div>
+          <div class="bar-track"><div class="bar-fill bar-grey" style="width:38.4%;">38.4%</div></div>
+        </div>
+      </div>
+      <p class="legend" style="margin-top:22px;">
+        <span class="key" style="background:#26a69a;"></span>표준 기준시간 &nbsp;
+        <span class="key" style="background:#4fc3f7;"></span>변형 기준시간 &nbsp;
+        <span class="key" style="background:#f9a825;"></span>법정 가산율 &nbsp;
+        <span class="key" style="background:#90a4ae;"></span>기업 인식 조사
+      </p>
+      <p class="note">기업 인식 조사는 한국경영자총협회가 2025년 2월 50인 이상 기업 508곳을 대상으로 실시한 복수응답 조사 결과다. 막대 길이는 항목별 비율을 시각화한 것으로 서로 다른 단위 간 절대 비교용이 아니다.</p>
+    </div>
+
+    <div class="impact-grid">
+      <div class="impact-card">
+        <span class="impact-num">209시간</span>
+        <span class="impact-label">주 40시간 근로자<br>월 통상임금 산정<br>기준시간</span>
+      </div>
+      <div class="impact-card">
+        <span class="impact-num">2,508시간</span>
+        <span class="impact-label">연간 기준시간<br>(정기상여금<br>시간급 환산용)</span>
+      </div>
+      <div class="impact-card">
+        <span class="impact-num">38.4%</span>
+        <span class="impact-label">통상임금 확대 등<br>임금 부담을 꼽은<br>기업 비율 (경총, 2025.2)</span>
+      </div>
+      <div class="impact-card">
+        <span class="impact-num">약 7조 원</span>
+        <span class="impact-label">판결 직후 재계가<br>추산한 연간 추가<br>인건비 규모</span>
+      </div>
+    </div>
+
+    <h2 class="sec">🔍 숨겨진 이면 — 퇴직금 계산에서 정부와 법원이 갈렸다</h2>
+
+    <p>여기서부터가 아직 정리되지 않은 영역이다. 통상임금이 커지면 <strong>퇴직금까지 흔들린다.</strong> 근로기준법 제2조 제2항은 "평균임금이 통상임금보다 적으면 그 통상임금액을 평균임금으로 한다"고 정하고 있는데, 이 조항을 어떻게 읽느냐를 두고 고용노동부와 하급심 법원의 입장이 갈렸다.</p>
+
+    <p>고용노동부 행정해석은 조항을 문언 그대로 적용한다. <strong>일급 단위로 둘을 비교해 큰 쪽을 쓴다</strong>는 것이다. 월급 500만 원인 근로자를 예로 들면 이렇게 된다.</p>
+
+    <table class="rate">
+      <thead>
+        <tr><th>구분</th><th>일급 환산</th><th>30일분(1년 근속 퇴직금)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>평균임금 기준</td><td>약 164,800원 (3개월 임금 ÷ 91일)</td><td>약 494만 원</td></tr>
+        <tr><td>통상임금 기준</td><td class="new">약 191,388원 (500만 ÷ 209 × 8시간)</td><td class="new">약 574만 원</td></tr>
+      </tbody>
+    </table>
+
+    <p>왜 이런 역전이 생기는가. <strong>평균임금은 달력상 일수(약 91일)로 나누고, 통상임금 일급은 하루 소정근로 8시간으로 환산한다.</strong> 주말과 휴일이 분모에 들어가는 쪽과 들어가지 않는 쪽을 나란히 비교하니, 수당이 적고 결근이 없는 사무직일수록 통상임금 일급이 더 커진다. 조항의 원래 취지는 결근이나 휴업으로 평균임금이 비정상적으로 낮아진 근로자를 보호하려는 것이었는데, 통상임금이 확대되자 평범한 근로자에게까지 역전이 일어나기 시작했다.</p>
+
+    <p>법원은 다른 해석을 내놨다. <strong>대구지방법원(2025년 8월 21일 판결)</strong>과 <strong>전주지방법원(2024년 7월 15일 판결)</strong>은 일급끼리 비교할 것이 아니라 <strong>3개월치 총액을 비교해야 한다</strong>고 봤다. 통상임금 기준을 그대로 쓰면 퇴직금이 구조적으로 과다 계상되고, 확정기여형(DC) 퇴직연금과의 정합성도 깨진다는 것이 논거였다.</p>
+
+    <div class="pullquote">아직 대법원 판단이 없다. 고용노동부 해석과 하급심 판결이 엇갈린 채로, 같은 조건의 근로자가 회사에 따라 다른 퇴직금을 받는 상태가 이어지고 있다.</div>
+
+    <p>실무적으로는 <strong>회사가 노동부 해석을 따르면 퇴직금이 늘고, 소송으로 가면 결과를 장담하기 어려운 구간</strong>이다. 퇴직을 앞두고 있다면 회사가 어느 기준으로 산정했는지 명세서에서 확인해 둘 필요가 있다.</p>
+
+    <h2 class="sec">🏠 나에게 미치는 영향 — 입장별로 확인할 것</h2>
+
+    <h3 class="sub">정기상여금을 받는 직장인</h3>
+
+    <p>가장 직접적인 수혜 대상이다. 확인 순서는 이렇다. <strong>① 급여규정에서 상여금 지급 주기를 본다.</strong> 격월·분기 등 정해진 주기로 반복 지급되면 정기성이 인정될 가능성이 높다. <strong>② 재직조건 문구가 있어도 포기하지 않는다.</strong> 2024년 12월 이후에는 그 조건만으로 통상임금에서 빠지지 않는다. <strong>③ 회사가 시간급 통상임금을 다시 산정했는지 확인한다.</strong> 명세서의 연장수당 단가가 판결 전과 같다면 반영이 안 됐을 수 있다.</p>
+
+    <h3 class="sub">연장·야간근로가 많은 교대제 근로자</h3>
+
+    <p>통상임금 단가에 가장 민감한 집단이다. 다만 <strong>기준시간이 209가 아닐 수 있다</strong>는 점을 먼저 확인해야 한다. 교대제나 격일제는 소정근로시간 구조가 달라 기준시간부터 다시 계산해야 하고, 이 값이 틀리면 그 뒤 계산이 전부 어긋난다.</p>
+
+    <h3 class="sub">육아휴직·출산전후휴가를 앞둔 근로자</h3>
+
+    <p>육아휴직급여와 출산전후휴가급여는 통상임금을 기준으로 산정하되 <strong>상한액과 하한액</strong>이 적용된다. 통상임금이 늘어도 상한에 걸려 있으면 실제 수령액은 그대로일 수 있다. 신청 전에 해당 연도 상한액을 먼저 확인하는 편이 빠르다.</p>
+
+    <h3 class="sub">사업주·인사담당자</h3>
+
+    <p>확인할 것은 세 가지다. <strong>첫째, 상여금 규정의 재직조건을 근거로 통상임금에서 제외해 온 관행을 점검한다.</strong> 둘째, <strong>연장·야간·휴일수당 단가를 재산정</strong>하고 그 결과를 급여 시스템에 반영한다. 셋째, <strong>퇴직금 산정 기준</strong>을 어느 해석에 맞출지 결정하고 그 근거를 문서로 남긴다. 판단 기준이 정리되지 않은 구간이라 사후 분쟁 시 기록이 방어 수단이 된다.</p>
+
+    <h2 class="sec">📈 전망과 행동 제안</h2>
+
+    <p>남은 쟁점은 세 갈래다. <strong>첫째, 성과급의 통상임금성</strong>이다. 최소 지급분이 보장된 성과급은 그 부분만 통상임금으로 볼 수 있는지가 계속 다퉈지고 있다. <strong>둘째, 복리후생성 금품</strong>이다. 복지포인트나 명절 지급금처럼 성질 판단이 애매한 항목의 기준이 아직 촘촘하지 않다. <strong>셋째, 퇴직금 산정 기준</strong>에 대한 대법원 판단이다. 이 세 가지가 정리되기 전까지는 사업장마다 다른 계산이 공존할 수밖에 없다.</p>
+
+    <p>임금체계 개편도 이어질 전망이다. 통상임금 확대에 대응해 정기상여금을 기본급에 통합하거나 성과연동 비중을 늘리는 흐름이 나타나고 있다. 다만 <strong>기존 근로조건을 불이익하게 바꾸려면 취업규칙 불이익변경 절차</strong>가 필요하므로, 일방적 개편은 또 다른 분쟁의 씨앗이 된다.</p>
+
+    <p>지금 할 수 있는 일은 단순하다. <strong>① 이번 달 명세서를 열어 항목별로 통상임금 해당 여부를 표시해 본다.</strong> 기본급·직책수당·고정 식대·정기상여금이 후보다. <strong>② 합계를 209로 나눠 자기 시간급 통상임금을 계산한다.</strong> 상여금은 연액을 2,508로 나눠 더한다. <strong>③ 연장수당 단가와 비교한다.</strong> 명세서의 단가가 계산값보다 낮으면 회사에 산정 근거를 물어볼 근거가 생긴다. <strong>④ 다툼이 생기면 고용노동부 상담센터(국번 없이 1350)나 관할 지방고용노동관서에 확인한다.</strong> 개별 사업장의 급여규정과 실제 지급 관행을 함께 봐야 결론이 나오기 때문이다.</p>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#통상임금</span>
+      <span class="hashtag">#통상임금계산법</span>
+      <span class="hashtag">#통상임금포함항목</span>
+      <span class="hashtag">#209시간</span>
+      <span class="hashtag">#시간급통상임금</span>
+      <span class="hashtag">#평균임금차이</span>
+      <span class="hashtag">#정기상여금</span>
+      <span class="hashtag">#고정성폐기</span>
+      <span class="hashtag">#연장근로수당</span>
+      <span class="hashtag">#근로기준법</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://www.scourt.go.kr/portal/news/NewsViewAction.work?pageIndex=1&amp;gubun=6&amp;seqnum=2743" target="_blank" rel="noopener">대법원 보도자료 — 2020다247190·2023다302838 임금 사건 전원합의체 판결</a>
+      <a href="https://www.scourt.go.kr/portal/news/NewsViewAction.work?pageIndex=1&amp;seqnum=10200&amp;gubun=4&amp;type=5" target="_blank" rel="noopener">대법원 판례속보 — 재직조건이 부가된 정기상여금의 통상임금 해당 여부</a>
+      <a href="https://casenote.kr/%EB%8C%80%EB%B2%95%EC%9B%90/2023%EB%8B%A4302838" target="_blank" rel="noopener">케이스노트 — 대법원 2024. 12. 19. 선고 2023다302838 전원합의체 판결</a>
+      <a href="https://www.kimchang.com/ko/insights/detail.kc?sch_section=4&amp;idx=31774" target="_blank" rel="noopener">김·장 법률사무소 — 대법원 전원합의체 판결에 따른 고용노동부 통상임금 노사지도 지침 개정</a>
+      <a href="https://www.yulchon.com/ko/resources/publications/legal-update-view/42247/page.do" target="_blank" rel="noopener">율촌 — 고정성 제외 전합판결 이후 가닥 잡혀가는 새 통상임금</a>
+      <a href="https://www.shinkim.com/kor/media/newsletter/2671" target="_blank" rel="noopener">신·김 법률사무소 — 대법원 통상임금 판결이 몰고 올 후폭풍</a>
+      <a href="https://www.lawtimes.co.kr/LawFirm-NewsLetter/204047" target="_blank" rel="noopener">법률신문 — 통상임금에 관한 최근 대법원 전원합의체 판결의 주요 내용과 시사점</a>
+      <a href="https://www.erc.re.kr/webzine/vol49/16.jsp" target="_blank" rel="noopener">노동리뷰 — 통상임금의 판단기준에 관한 판례 법리의 변경</a>
+      <a href="https://www.easylaw.go.kr/CSP/CnpClsMain.laf?csmSeq=1694&amp;ccfNo=1&amp;cciNo=2&amp;cnpClsNo=2" target="_blank" rel="noopener">찾기쉬운 생활법령정보 — 급여 산정기준이 되는 임금: 통상임금</a>
+      <a href="https://www.hankyung.com/article/202512153893i" target="_blank" rel="noopener">한국경제 — 평균임금 vs 통상임금, 퇴직금 산정기준 정부 따로 법원 따로</a>
+      <a href="https://www.labortoday.co.kr/news/articleView.html?idxno=226602" target="_blank" rel="noopener">매일노동뉴스 — 기업들 가장 큰 애로는 통상임금 확대 부담(경총 조사)</a>
+      <a href="https://www.asiatime.co.kr/article/20241220500380" target="_blank" rel="noopener">아시아타임즈 — 통상임금 범위 확대 판결에 재계 우려, 약 7조 추가 인건비 부담</a>
+    </div>
+
+    <p class="disclaimer">
+      ※ 본 아티클은 근로기준법 및 같은 법 시행령, 근로자퇴직급여 보장법, 대법원 2024. 12. 19. 선고 전원합의체 판결(2020다247190·2023다302838)과 고용노동부 통상임금 노사지도 지침, 법률사무소 뉴스레터 및 언론 보도를 바탕으로 작성한 정보성 콘텐츠이며 개별 사안에 대한 법률자문이나 유권해석이 아닙니다. 특정 수당의 통상임금 해당 여부는 사업장의 급여규정·취업규칙·단체협약의 문언과 실제 지급 관행에 따라 달라지며, 하급심 판결은 상급심에서 변경될 수 있습니다. 특히 퇴직금 산정 기준에 관해서는 고용노동부 행정해석과 하급심 판단이 엇갈려 있고 대법원 판단이 확정되지 않았습니다. 본문의 계산 예시는 이해를 돕기 위한 가정치이며 실제 금액과 다를 수 있습니다. 구체적인 임금 계산과 분쟁은 반드시 공인노무사·변호사 또는 관할 지방고용노동관서(고용노동부 상담센터 1350)에 직접 확인하시기 바랍니다.
+    </p>
+
+  </div>
+</article>
+</body>
+</html>
