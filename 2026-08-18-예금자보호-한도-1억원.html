@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>예금자보호 한도 1억원 — 보호 대상 상품과 금융회사별 계산 기준 정리 | 경제·금융</title>
+  <meta name="description" content="예금보호한도는 2025년 9월 1일부터 1인당 5천만 원에서 1억 원으로 올랐다. 예금자보호법 등 6개 법령이 함께 개정돼 은행·저축은행·보험·증권은 물론 신협·농협·새마을금고까지 같은 한도가 적용된다. 보호 대상 상품과 제외 상품, 금융회사별 원금+소정이자 합산 계산법, 퇴직연금·연금저축·사고보험금 별도한도를 금융위원회 발표와 예금보험공사 기준으로 정리했다.">
+  <meta name="keywords" content="예금자보호, 예금자보호 한도, 예금보호한도 1억원, 보호대상 금융상품, 예금보험공사, 예금자보호 계산 기준, 퇴직연금 별도한도, 연금저축 예금보호, 저축은행 예금자보호, 새마을금고 예금자보호">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #eff1f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #14275e 0%, #1f3c8a 45%, #2f56b5 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #c9d4f2; color: #14275e; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #e9edfa; border-left: 5px solid #1f3c8a; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #1f3c8a; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #14275e; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #1f3c8a; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #14275e; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #dbe2f6; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #1f3c8a; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #14275e; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #e9edfa; border-left: 4px solid #5b78d6; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #14275e; line-height: 1.75; word-break: keep-all; }
+    .formula { background: #fff8e1; border: 1.5px dashed #ffb300; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 17px; font-weight: 800; color: #6d4c00; line-height: 1.7; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #8d6e63; margin-top: 10px; margin-bottom: 0; }
+    .infographic-section { background: #f5f7fd; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #14275e; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #14275e; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #dee4f6; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-teal { background: linear-gradient(90deg, #14275e, #5b78d6); }
+    .bar-blue { background: linear-gradient(90deg, #01579b, #4fc3f7); }
+    .bar-amber { background: linear-gradient(90deg, #e65100, #f9a825); }
+    .bar-grey { background: linear-gradient(90deg, #455a64, #90a4ae); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #d3daf0; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #e9edfa; color: #14275e; font-weight: 700; }
+    table.rate td.up { color: #1f3c8a; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #ef6c00; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #1f3c8a; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #14275e; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #c7d0ee; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #14275e; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #c7d0ee; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #1f3c8a; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #e9edfa; color: #1f3c8a; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #1f3c8a; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } .formula .f-main { font-size: 15px; } }
+  </style>
+<!-- SEO:AUTO BEGIN -->
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-08-18-%EC%98%88%EA%B8%88%EC%9E%90%EB%B3%B4%ED%98%B8-%ED%95%9C%EB%8F%84-1%EC%96%B5%EC%9B%90">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="예금자보호 한도 1억원 — 보호 대상 상품과 금융회사별 계산 기준 정리">
+<meta property="og:description" content="보호한도가 1억 원으로 오른 뒤 실제로 내 돈이 얼마나 지켜지는지, 보호 대상 상품과 금융회사별 합산 계산 규칙을 법령과 예금보험공사 기준으로 정리했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-08-18-%EC%98%88%EA%B8%88%EC%9E%90%EB%B3%B4%ED%98%B8-%ED%95%9C%EB%8F%84-1%EC%96%B5%EC%9B%90">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-08-18T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-08-18T09:00:00+09:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="예금자보호 한도 1억원 — 보호 대상 상품과 금융회사별 계산 기준 정리">
+<meta name="twitter:description" content="계좌별이 아니라 사람×금융회사 단위, 원금이 아니라 원금+소정이자. 예금보호 1억 원의 계산 규칙을 정리했다.">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "예금자보호 한도 1억원 — 보호 대상 상품과 금융회사별 계산 기준 정리",
+  "description": "예금보호한도는 2025년 9월 1일부터 1인당 5천만 원에서 1억 원으로 올랐다. 예금자보호법 등 6개 법령이 함께 개정돼 은행·저축은행·보험·증권은 물론 신협·농협·새마을금고까지 같은 한도가 적용된다. 보호 대상 상품과 제외 상품, 금융회사별 원금+소정이자 합산 계산법, 퇴직연금·연금저축·사고보험금 별도한도를 금융위원회 발표와 예금보험공사 기준으로 정리했다.",
+  "url": "https://sangsang.ephseed.com/2026-08-18-%EC%98%88%EA%B8%88%EC%9E%90%EB%B3%B4%ED%98%B8-%ED%95%9C%EB%8F%84-1%EC%96%B5%EC%9B%90",
+  "datePublished": "2026-08-18T09:00:00+09:00",
+  "dateModified": "2026-08-18T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+</head>
+<body>
+<article class="article-wrap">
+  <header class="hero">
+    <div class="category-badge">💰 경제 · 금융</div>
+    <h1>예금자보호 한도 1억원 —<br>보호 대상 상품과<br>금융회사별 계산 기준 정리</h1>
+    <p class="hero-sub">예금을 5천만 원씩 쪼개 여러 은행에 나눠 넣던 습관은 2025년 9월 1일부로 근거를 잃었다. 24년 만에 보호한도가 두 배가 됐기 때문이다. 그런데 한도만 알고 계산 방식을 모르면 여전히 돈이 샌다. 어떤 상품이 보호 대상이고, 한도는 계좌별인지 회사별인지, 퇴직연금은 왜 따로 세는지를 법령과 예금보험공사 기준으로 정리했다.</p>
+    <div class="hero-meta">
+      <span>📅 2026년 8월 18일</span>
+      <span>✍️ 생생 정보통 정책팀</span>
+      <span>⏱️ 읽는 데 약 12분</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+    <div class="summary-box">
+      <h2>3줄 요약</h2>
+      <ul>
+        <li><strong>보호한도는 2025년 9월 1일부터 1인당 5천만 원에서 1억 원으로 올랐다.</strong> 2001년 이후 24년 만의 조정이고, 예금자보호법 시행령을 포함한 6개 법령을 함께 고쳐 은행·저축은행·보험·금융투자뿐 아니라 신협·농협·수협·산림조합·새마을금고까지 같은 한도가 적용된다.</li>
+        <li><strong>한도는 계좌별이 아니라 '1인당 1금융회사별'로 센다.</strong> 같은 은행의 예금·적금을 전부 합산하고, 지점을 나눠도 소용없으며, 금액은 원금이 아니라 <strong>원금+소정이자</strong> 기준이다. 대출이 있으면 상계 후 남은 금액이 대상이다.</li>
+        <li><strong>퇴직연금(DC·IRP)·연금저축·사고보험금은 일반 예금과 별도로 각각 1억 원을 더 받는다.</strong> 반대로 펀드·변액보험 주계약·증권사 CMA·후순위채 같은 실적배당형은 금액과 무관하게 한 푼도 보호되지 않는다.</li>
+      </ul>
+    </div>
+
+    <p>은행 창구에서 "5천만 원까지만 넣으시라"는 안내를 들어본 사람이 많다. 그 숫자는 2001년에 정해진 것이다. 그 사이 1인당 국민소득은 세 배 가까이 늘었고 예금 잔액도 불어났는데 한도만 24년째 그대로였다. 그래서 목돈을 쥔 사람은 은행 대여섯 곳에 통장을 만들어 5천만 원씩 쪼개 넣는 기묘한 일을 반복해야 했다.</p>
+
+    <p>2025년 9월 1일, 그 한도가 <strong>1억 원</strong>으로 올랐다. 금융위원회는 이 상향으로 보호 대상 예금 비중이 <strong>49%에서 58%로</strong> 늘고 약 <strong>241조 원</strong>이 새로 보호 범위에 들어온다고 밝혔다. 숫자만 보면 단순한 상향이지만, 실제로 내 돈이 얼마나 안전해졌는지 계산하려면 규칙 네 가지를 알아야 한다.</p>
+
+    <h2 class="sec">1. 무엇이 바뀌었나 — 6개 법령을 함께 고쳤다</h2>
+
+    <p>흔한 오해가 "예금자보호법만 바뀌었으니 새마을금고나 농협 단위조합은 해당이 없다"는 것이다. 사실이 아니다. 정부는 <strong>예금자보호법 시행령 하나가 아니라 6개 법령의 시행령을 동시에 개정</strong>했다. 예금보험공사가 관리하는 권역과, 각자 자체 기금으로 예금을 보호하는 상호금융 권역을 같은 날 같은 금액으로 맞추기 위해서였다.</p>
+
+    <p>한 권역만 먼저 올리면 그쪽으로 돈이 급격히 몰릴 수 있다. 시행일과 금액을 통일한 것은 그 쏠림을 막기 위한 설계였다.</p>
+
+    <table class="rate">
+      <thead>
+        <tr><th>구분</th><th>해당 금융회사</th><th>보호 주체</th><th>한도</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>예금자보호법</td><td>은행 · 저축은행 · 보험회사 · 투자매매중개업자(증권사) · 종합금융회사</td><td>예금보험공사</td><td class="up">1억 원</td></tr>
+        <tr><td>신용협동조합법</td><td>신협</td><td>신협중앙회 예금자보호기금</td><td class="up">1억 원</td></tr>
+        <tr><td>농업협동조합법</td><td>지역 농·축협</td><td>농협 상호금융예금자보호기금</td><td class="up">1억 원</td></tr>
+        <tr><td>수산업협동조합법</td><td>지구별 수협</td><td>수협 상호금융예금자보호기금</td><td class="up">1억 원</td></tr>
+        <tr><td>산림조합법</td><td>산림조합</td><td>산림조합 상호금융예금자보호기금</td><td class="up">1억 원</td></tr>
+        <tr><td>새마을금고법</td><td>새마을금고</td><td>새마을금고중앙회 예금자보호준비금</td><td class="up">1억 원</td></tr>
+        <tr><td>우체국예금·보험에 관한 법률</td><td>우체국</td><td class="new">국가</td><td class="new">전액 (한도 없음)</td></tr>
+      </tbody>
+    </table>
+
+    <p class="pullquote">우체국은 예금보험공사의 보호 대상이 아니다. 대신 국가가 원리금 전액을 지급 보증한다. 한도가 1억 원이 아니라 아예 없는 셈이라, 한도 개념 자체가 다르다.</p>
+
+    <h3 class="sub">시행일 전에 가입한 예금은?</h3>
+
+    <p>새로 든 예금만 해당된다고 오해하기 쉬운데 그렇지 않다. 보호한도는 <strong>금융회사가 파산해 보험사고가 발생한 시점의 기준</strong>을 적용한다. 2020년에 든 정기예금이든 어제 든 적금이든, 사고가 시행일 이후에 발생하면 1억 원 기준으로 계산된다. 기존 예금을 해지하고 다시 가입할 이유는 없다.</p>
+
+    <h2 class="sec">2. 보호되는 상품과 보호되지 않는 상품</h2>
+
+    <p>가장 자주 틀리는 지점이 여기다. 판단 기준은 상품 이름이 아니라 <strong>원금이 보장되는 구조인가</strong>이다. 운용 성과에 따라 금액이 달라지는 실적배당형은 애초에 예금이 아니므로 보호 대상이 될 수 없다.</p>
+
+    <div class="flow">
+      <div class="flow-box"><div class="ft">✅ 보호 대상</div><div class="fd">예금 · 적금 · 부금, 원금보전형 신탁, 표지어음, 증권사 예탁금(위탁자예수금 등), 보험계약 해약환급금, <strong>외화예금</strong>, DC형 퇴직연금·IRP의 예금성 운용분</div></div>
+      <div class="flow-box"><div class="ft">❌ 보호 제외</div><div class="fd">펀드(수익증권) · 주식 · 채권, 실적배당형 신탁, 변액보험 주계약, <strong>증권사 CMA(RP형·MMF형)</strong>, 환매조건부채권(RP), 양도성예금증서(CD), 후순위채권, 은행 발행 금융채</div></div>
+    </div>
+
+    <p>세 가지만 따로 짚어 둘 만하다.</p>
+
+    <ul class="plain">
+      <li><strong>외화예금은 보호된다.</strong> 달러 예금이라 대상이 아니라고 생각하는 사람이 많은데, 국내 은행의 외화예금은 보호 대상이다. 다만 지급은 사고일 기준 환율로 환산한 원화로 이뤄진다.</li>
+      <li><strong>CMA는 종류를 봐야 한다.</strong> 증권사 CMA 중 RP형·MMF형은 비보호다. 종합금융회사(종금사)가 취급하는 발행어음형 CMA는 예금자보호법 대상이라 1억 원까지 보호된다. 같은 이름을 달고도 결과가 정반대다.</li>
+      <li><strong>주택청약종합저축은 예금보험공사 보호 대상이 아니다.</strong> 대신 국민주택기금(주택도시기금)으로 편입돼 정부가 관리한다. 보호가 없는 게 아니라 보호 체계가 다른 것이다.</li>
+    </ul>
+
+    <h2 class="sec">3. 한도 계산법 — 계좌가 아니라 '사람 × 금융회사'</h2>
+
+    <div class="formula">
+      <p class="f-main">보호금액 = (같은 금융회사 내 예금 원금 합계 + 소정이자) − 해당 금융회사에 대한 대출 잔액<br>단, 1억 원 초과분은 지급되지 않음</p>
+      <p class="f-note">'소정이자'는 약정이자와 예금보험공사가 정한 이자율 중 <strong>낮은 쪽</strong>을 적용해 계산한다. 부실 금융회사가 내걸었던 고금리를 그대로 보전해 주지는 않는다는 뜻이다.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step"><div class="step-t">계좌가 아니라 사람 단위로 센다</div><div class="step-d">같은 은행에 정기예금 7천만 원, 적금 5천만 원이 있으면 합계 1억 2천만 원 중 <strong>1억 원까지만</strong> 보호된다. 계좌를 여러 개로 나눠도 결과는 같다.</div></div>
+      <div class="step"><div class="step-t">지점을 나눠도 소용없다</div><div class="step-d">같은 은행의 강남지점과 부산지점은 하나의 금융회사다. 반면 <strong>같은 이름의 지역 농협·새마을금고라도 법인이 다르면 별개</strong>로 계산된다. 이 차이가 상호금융에서는 실익이 크다.</div></div>
+      <div class="step"><div class="step-t">이자까지 포함해서 1억 원이다</div><div class="step-d">원금 1억 원을 딱 맞춰 넣으면 만기 이자는 보호 범위 밖으로 밀려난다. 안전하게 가려면 <strong>원금을 9천5백만 원 안팎으로</strong> 두고 이자 공간을 남기는 편이 낫다.</div></div>
+      <div class="step"><div class="step-t">대출이 있으면 먼저 상계된다</div><div class="step-d">같은 금융회사에 예금 1억 원과 대출 4천만 원이 있으면, 상계 후 남은 6천만 원이 보호 대상이 된다. 예금 1억 원을 따로 받고 대출을 그대로 갚는 구조가 아니다.</div></div>
+      <div class="step"><div class="step-t">부부·가족은 각자 1억 원</div><div class="step-d">'1인당'이므로 본인 명의와 배우자 명의 계좌는 별개다. 다만 실질 소유자가 한 사람이라고 판단되는 차명 계좌는 보호에서 다퉈질 수 있다.</div></div>
+    </div>
+
+    <h2 class="sec">4. 별도한도 3종 — 여기서 금액이 크게 갈린다</h2>
+
+    <p>제도에서 가장 덜 알려진 부분이자 금액 효과가 가장 큰 부분이다. 노후자금 성격의 계정은 일반 예금과 <strong>합산하지 않고 별도로 각각 1억 원</strong>을 보호한다.</p>
+
+    <div class="impact-grid">
+      <div class="impact-card"><span class="impact-num">1억</span><span class="impact-label">일반 예금·적금<br>(1금융회사당)</span></div>
+      <div class="impact-card"><span class="impact-num">+1억</span><span class="impact-label">DC형 퇴직연금 · IRP<br>예금성 운용분</span></div>
+      <div class="impact-card"><span class="impact-num">+1억</span><span class="impact-label">연금저축<br>(신탁·보험)</span></div>
+      <div class="impact-card"><span class="impact-num">+1억</span><span class="impact-label">사고보험금<br>(별도 산정)</span></div>
+    </div>
+
+    <p>즉 <strong>같은 금융회사 한 곳에서만도 최대 4억 원까지</strong> 보호받을 수 있다는 뜻이다. 예를 들어 한 은행에 일반 예금 6천만 원, 연금저축 1억 2천만 원, DC형 퇴직연금 1억 5천만 원을 두고 있다면, 일반 예금 6천만 원 전액 + 연금저축 1억 원 + 퇴직연금 1억 원이 각각 보호돼 총 2억 6천만 원이 지켜진다. 세 계정을 합산해 1억 원만 받는 구조가 아니다.</p>
+
+    <p>여기서 실무적으로 중요한 점 하나. 퇴직연금 계정 안에 들어 있는 <strong>펀드·ETF는 별도한도의 대상이 아니다.</strong> 별도한도가 적용되는 것은 계정 안에서 <strong>예금으로 운용된 금액</strong>뿐이다. IRP에 1억 원이 있어도 전액 펀드로 굴리고 있다면 예금자보호와는 무관하다.</p>
+
+    <div class="infographic-section">
+      <h3>📊 한도 상향이 바꾼 숫자들</h3>
+      <div class="bar-chart">
+        <div class="bar-item">
+          <div class="bar-label"><span>보호 대상 예금 비중 — 상향 전</span><span class="val">49%</span></div>
+          <div class="bar-track"><div class="bar-fill bar-grey" style="width:49%">49%</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>보호 대상 예금 비중 — 상향 후</span><span class="val">58%</span></div>
+          <div class="bar-track"><div class="bar-fill bar-teal" style="width:58%">58% (+241조 원)</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>예금보험료율 — 은행</span><span class="val">0.08%</span></div>
+          <div class="bar-track"><div class="bar-fill bar-blue" style="width:20%">0.08%</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>예금보험료율 — 저축은행</span><span class="val">0.40%</span></div>
+          <div class="bar-track"><div class="bar-fill bar-amber" style="width:100%">0.40% (은행의 5배)</div></div>
+        </div>
+      </div>
+      <p class="f-note" style="text-align:center;margin-top:22px;font-size:13px;color:#78829c;">보호 비중·추가 보호액은 금융위원회 발표 기준, 예금보험료율은 2025년 5월 시점 업권별 요율.</p>
+    </div>
+
+    <h2 class="sec">5. 숨겨진 이면 — 비용은 누가 내나</h2>
+
+    <p>보호한도는 공짜로 오르지 않는다. 재원은 금융회사가 매년 내는 <strong>예금보험료</strong>다. 보호 대상 금액이 241조 원 늘면 그만큼 기금이 감당해야 할 잠재 부담도 커진다. 그래서 상향 논의 내내 따라붙은 질문이 "예보료율을 얼마나 올릴 것인가"였다.</p>
+
+    <p>업권별 요율 차이는 이미 크다. 은행이 부보예금의 0.08%인 반면 저축은행은 0.40%로 다섯 배다. 부실 위험이 높은 업권이 더 많이 낸다는 원칙이지만, 요율이 추가로 오르면 그 비용이 <strong>대출금리나 수수료로 소비자에게 전가될 수 있다</strong>는 것이 금융권의 일관된 주장이었다.</p>
+
+    <p>정부는 시점을 뒤로 미루는 방식으로 답했다. 요율 조정 논의는 2025년 말부터 시작하되, 새 요율의 적용은 <strong>공적자금 상환이 마무리되는 2027년 이후, 2028년부터</strong> 하기로 한 것이다. 당장의 인상은 없지만 부담이 사라진 것은 아니고 미뤄진 상태다.</p>
+
+    <h3 class="sub">오지 않은 머니무브</h3>
+
+    <p>상향 전 가장 컸던 우려는 <strong>'머니무브'</strong>였다. 1억 원까지 안전해지면 금리가 높은 저축은행으로 자금이 대거 이동해 은행권 자금이 마르고 시장이 흔들린다는 시나리오였다. 실제로는 그 반대에 가까운 일이 벌어졌다.</p>
+
+    <p>시행 직후 집계를 보면 저축은행 수신 잔액은 7월 <strong>100조 9천억 원</strong> 수준으로 100조 원 선을 회복했다. 돈은 들어왔다. 문제는 나가지 않았다는 점이다. 대출 잔액은 6월 말 <strong>94조 9,700억 원</strong>으로 2021년 9월 이후 최저를 기록하며 <strong>7개월 연속 감소</strong>했다. 부동산 PF 부실 정리 압박과 연체율 관리, 예대율 100% 규제가 겹치면서 신규 대출을 최소화한 결과였다.</p>
+
+    <p class="pullquote">예금은 들어오는데 굴릴 데가 없다. 12개월 정기예금 평균 금리 3% 안팎으로 이자는 계속 나가는데 대출 수익이 따라오지 않는 '역마진' 구조가 만들어졌다. 한도 상향이 저축은행에 준 것은 기회이자 동시에 비용이었다.</p>
+
+    <p>같은 기간 시중은행 1년 정기예금 금리는 2.39~2.48% 수준이었다. 금리 차가 0.5%p 남짓으로 좁아진 상태에서는, 한도가 두 배가 됐다는 사실만으로 예금자가 2금융권으로 옮길 유인이 크지 않았던 셈이다. 제도가 바뀌어도 사람들은 금리 차와 안심 사이에서 계산을 다시 한다.</p>
+
+    <h2 class="sec">6. 나에게 미치는 영향 — 무엇을 다시 계산해야 하나</h2>
+
+    <p>예금이 1억 원 미만이라면 사실상 달라지는 것이 없다. 예금보험공사 기준으로 대다수 예금자는 이미 한도 안에 있었다. 제도 변화가 실제로 의미 있는 사람은 다음 네 부류다.</p>
+
+    <ul class="plain">
+      <li><strong>목돈을 쪼개 예치해 온 사람.</strong> 5천만 원 단위로 통장 대여섯 개를 관리하던 부담이 절반으로 줄었다. 관리 비용과 금리 손해를 감수할 이유가 없어졌다.</li>
+      <li><strong>퇴직연금·연금저축 가입자.</strong> 별도한도를 몰라 굳이 여러 회사로 나눠 놨다면 다시 계산해 볼 여지가 있다. 계정별로 각각 1억 원이 붙는다.</li>
+      <li><strong>2금융권 고금리 상품을 망설이던 사람.</strong> 1억 원까지는 저축은행·상호금융도 국가 또는 자체 기금 보호를 받는다. 다만 금리 차가 좁아진 지금은 실익을 따져 봐야 한다.</li>
+      <li><strong>증권사 CMA를 예금처럼 써 온 사람.</strong> 이번 상향과 무관하게 여전히 비보호다. 한도가 오른 것이 아니라 애초에 대상이 아니다.</li>
+    </ul>
+
+    <h3 class="sub">확인하는 가장 빠른 방법</h3>
+
+    <p>내가 든 상품이 보호 대상인지 알아보는 확실한 경로는 두 가지다. 첫째, <strong>상품설명서와 통장·약관에 표기된 예금자보호 문구</strong>를 본다. 보호 대상 상품에는 보호 여부와 한도가 반드시 명시돼 있다. 둘째, <strong>예금보험공사 홈페이지의 '보호대상 금융상품 검색'</strong>에서 금융회사와 상품명을 넣어 조회한다. 광고 문구나 창구 설명이 아니라 이 두 곳이 기준이다.</p>
+
+    <h2 class="sec">7. 전망 — 다음 논점은 요율과 차등화</h2>
+
+    <p>제도는 시행됐지만 남은 숙제가 있다. 하나는 <strong>2028년으로 미뤄진 예보료율 조정</strong>이다. 인상 폭과 업권별 배분이 어떻게 정해지느냐에 따라 대출금리와 수수료에 영향이 갈 수 있다. 다른 하나는 <strong>부실 위험에 따른 차등요율의 정교화</strong>다. 보호 범위가 넓어질수록 "위험을 많이 지는 곳이 더 내야 한다"는 원칙의 설계가 중요해진다.</p>
+
+    <p>개인이 지금 할 수 있는 일은 단순하다. 첫째, 금융회사별로 <strong>원금+이자 합계가 1억 원을 넘는 곳이 있는지</strong> 확인한다. 둘째, 넘는다면 이자 공간을 감안해 원금을 조정하거나 다른 회사로 분산한다. 셋째, 퇴직연금·연금저축은 별도한도라는 점을 반영해 불필요한 분산을 정리한다. 넷째, 보유 상품 중 <strong>펀드·CMA·변액보험처럼 애초에 보호 대상이 아닌 것</strong>을 골라내 예금과 섞어 계산하지 않는다.</p>
+
+    <p>한도가 두 배가 됐다는 소식보다 중요한 것은 계산 규칙이다. 규칙을 모르면 1억 원이 아니라 9천만 원만 지켜지고, 규칙을 알면 같은 은행에서도 3억 원 넘게 지켜진다. 차이를 만드는 것은 금액이 아니라 어디에 어떤 이름으로 넣어 두었는가다.</p>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#예금자보호</span>
+      <span class="hashtag">#예금자보호한도</span>
+      <span class="hashtag">#예금보호1억원</span>
+      <span class="hashtag">#예금보험공사</span>
+      <span class="hashtag">#보호대상금융상품</span>
+      <span class="hashtag">#퇴직연금별도한도</span>
+      <span class="hashtag">#연금저축</span>
+      <span class="hashtag">#저축은행</span>
+      <span class="hashtag">#새마을금고</span>
+      <span class="hashtag">#예금보험료율</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://www.korea.kr/news/policyNewsView.do?newsId=148943235" target="_blank" rel="noopener">대한민국 정책브리핑 — 오는 9월 1일부터 예금보호 한도 5000만 원→1억 원으로 상향</a>
+      <a href="https://www.korea.kr/news/policyNewsView.do?newsId=148946400" target="_blank" rel="noopener">대한민국 정책브리핑 — 9월 1일부터 예금보호한도 1억 원으로, 24년 만에 상향</a>
+      <a href="https://www.fsc.go.kr/no010101/84579" target="_blank" rel="noopener">금융위원회 보도자료 — 예금보호한도 상향을 위한 6개 법령의 일부개정에 관한 건</a>
+      <a href="https://www.fsc.go.kr/no010101/85114" target="_blank" rel="noopener">금융위원회 — 예금보호한도 상향 시행(2025.9.1) 준비상황 점검</a>
+      <a href="https://www.fsc.go.kr/po020201/84975" target="_blank" rel="noopener">금융위원회 — 예금보호한도 상향 관련 주요 QA</a>
+      <a href="https://www.kdic.or.kr/sp/dpstrprot/selectProtSystProtTrgtPrdctSumr.do" target="_blank" rel="noopener">예금보험공사 — 보호대상 금융상품 개요(권역별 보호·비보호 상품)</a>
+      <a href="https://www.kdic.or.kr/sp/dpstrprot/ProtSystFaq/selectScrn.do" target="_blank" rel="noopener">예금보험공사 — 예금자보호제도 FAQ(보호한도·소정이자·상계)</a>
+      <a href="https://www.kimchang.com/ko/insights/detail.kc?sch_section=4&amp;idx=32238" target="_blank" rel="noopener">김·장 법률사무소 — 예금보호한도 상향을 위한 예금자보호법 시행령 등 6개 법령 개정안 입법예고</a>
+      <a href="https://www.insjournal.co.kr/news/articleView.html?idxno=27513" target="_blank" rel="noopener">보험저널 — 예금자 보호한도 9월부터 1억 원으로 확대, 퇴직연금·연금저축도 별도 적용</a>
+      <a href="https://www.newsis.com/view/NISX20250515_0003177791" target="_blank" rel="noopener">뉴시스 — 이제 5천만원씩 쪼개지 않고 1억까지 예금, 소비자 득실은</a>
+      <a href="https://v.daum.net/v/20250901160837465" target="_blank" rel="noopener">예금보호 1억으로 늘었지만 저축은행, 돈 들어와도 대출 안 나가 역마진</a>
+      <a href="https://zdnet.co.kr/view/?no=20250516104904" target="_blank" rel="noopener">지디넷코리아 — 예금자보호한도 5천만→1억, 착잡한 저축은행업계</a>
+      <a href="https://www.cu.co.kr/cu/cm/cntnts/cntntsView.do?mi=100091&amp;cntntsId=1050" target="_blank" rel="noopener">신협 — 예금자보호제도 안내(신협중앙회 자체 기금)</a>
+      <a href="https://kbthink.com/saving-guide/deposit-insurance.html" target="_blank" rel="noopener">KB THINK — 예금자 보호 한도 1억 원으로 늘어났어요</a>
+    </div>
+
+    <p class="disclaimer">
+      ※ 본 아티클은 예금자보호법 및 같은 법 시행령, 신용협동조합법·농업협동조합법·수산업협동조합법·산림조합법·새마을금고법 시행령, 우체국예금·보험에 관한 법률, 금융위원회 보도자료와 예금보험공사 안내 및 언론 보도를 바탕으로 작성한 정보성 콘텐츠이며 개별 사안에 대한 법률자문이나 투자 권유가 아닙니다. 개별 상품의 보호 여부와 보호 금액은 금융회사·상품 구조·계약 시점에 따라 달라질 수 있고, 예금보험료율과 관련 제도는 향후 변경될 수 있습니다. 본문의 계산 예시는 이해를 돕기 위한 가정치이며 실제 지급액과 다를 수 있습니다. 보유 상품의 보호 여부는 반드시 상품설명서와 예금보험공사 '보호대상 금융상품 검색'(대표번호 1588-0037) 또는 해당 금융회사에 직접 확인하시기 바랍니다.
+    </p>
+
+  </div>
+</article>
+</body>
+</html>
