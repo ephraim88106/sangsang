@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>피부양자 자격상실 소득요건 — 재산 기준과 상실 후 보험료 계산 | 의료·복지</title>
+  <meta name="description" content="건강보험 피부양자는 연 합산소득 2,000만원을 넘으면 자격을 잃는다. 사업자등록이 있으면 사업소득 1원에도 상실되고, 없으면 연 500만원이 경계선이다. 재산세 과세표준 5.4억원과 9억원이라는 두 개의 문턱, 관계별 부양요건, 매년 11월 정기 재산정 일정, 그리고 자격을 잃은 뒤 지역가입자로 넘어갈 때 실제로 얼마가 부과되는지를 2026년 기준 수치로 정리했다.">
+  <meta name="keywords" content="피부양자 자격상실, 피부양자 소득요건, 피부양자 재산요건, 건강보험 피부양자 탈락, 지역가입자 전환, 부과점수당 금액, 임의계속가입, 피부양자 부양요건, 합산소득 2000만원, 재산세 과세표준">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f2f5f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #0d47a1 0%, #1565c0 45%, #00695c 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #bbdefb; color: #0d47a1; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #e8f1f8; border-left: 5px solid #00695c; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #1565c0; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #0d47a1; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #00695c; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #0d47a1; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #d3e3f2; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #00695c; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #0d47a1; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #e8f1f8; border-left: 4px solid #4db6ac; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #0d47a1; line-height: 1.75; word-break: keep-all; }
+    .formula { background: #fff8e1; border: 1.5px dashed #ffb300; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 17px; font-weight: 800; color: #6d4c00; line-height: 1.7; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #8d6e63; margin-top: 10px; margin-bottom: 0; }
+    .infographic-section { background: #f4f8fb; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #0d47a1; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #0d47a1; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #dbe7f1; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-teal { background: linear-gradient(90deg, #0d47a1, #4db6ac); }
+    .bar-blue { background: linear-gradient(90deg, #01579b, #4fc3f7); }
+    .bar-amber { background: linear-gradient(90deg, #e65100, #f9a825); }
+    .bar-grey { background: linear-gradient(90deg, #455a64, #90a4ae); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #cfe0ee; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #e8f1f8; color: #0d47a1; font-weight: 700; }
+    table.rate td.up { color: #1565c0; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #ef6c00; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #00695c; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #0d47a1; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #c2d8ea; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #0d47a1; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #c2d8ea; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #00695c; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #e8f1f8; color: #00695c; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #00695c; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } .formula .f-main { font-size: 15px; } }
+  </style>
+<!-- SEO:AUTO BEGIN -->
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-08-20-%ED%94%BC%EB%B6%80%EC%96%91%EC%9E%90-%EC%9E%90%EA%B2%A9%EC%83%81%EC%8B%A4-%EC%86%8C%EB%93%9D%EC%9A%94%EA%B1%B4">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="피부양자 자격상실 소득요건 — 재산 기준과 상실 후 보험료 계산">
+<meta property="og:description" content="보험료를 한 푼도 안 내던 사람이 어느 달 갑자기 고지서를 받는다. 소득 2,000만원·사업소득 500만원·재산 5.4억과 9억, 그리고 상실 후 실제 부과액을 2026년 기준으로 정리했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-08-20-%ED%94%BC%EB%B6%80%EC%96%91%EC%9E%90-%EC%9E%90%EA%B2%A9%EC%83%81%EC%8B%A4-%EC%86%8C%EB%93%9D%EC%9A%94%EA%B1%B4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-08-20T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-08-20T09:00:00+09:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="피부양자 자격상실 소득요건 — 재산 기준과 상실 후 보험료 계산">
+<meta name="twitter:description" content="연 2,000만원 한 줄만 보면 틀린다. 사업자등록 유무로 갈리는 사업소득 기준, 재산 5.4억·9억 두 문턱, 상실 후 지역가입자 보험료 계산을 정리했다.">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "피부양자 자격상실 소득요건 — 재산 기준과 상실 후 보험료 계산",
+  "description": "건강보험 피부양자는 연 합산소득 2,000만원을 넘으면 자격을 잃는다. 사업자등록이 있으면 사업소득 1원에도 상실되고, 없으면 연 500만원이 경계선이다. 재산세 과세표준 5.4억원과 9억원이라는 두 개의 문턱, 관계별 부양요건, 매년 11월 정기 재산정 일정, 그리고 자격을 잃은 뒤 지역가입자로 넘어갈 때 실제로 얼마가 부과되는지를 2026년 기준 수치로 정리했다.",
+  "url": "https://sangsang.ephseed.com/2026-08-20-%ED%94%BC%EB%B6%80%EC%96%91%EC%9E%90-%EC%9E%90%EA%B2%A9%EC%83%81%EC%8B%A4-%EC%86%8C%EB%93%9D%EC%9A%94%EA%B1%B4",
+  "datePublished": "2026-08-20T09:00:00+09:00",
+  "dateModified": "2026-08-20T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+</head>
+<body>
+<article class="article-wrap">
+  <header class="hero">
+    <div class="category-badge">🏥 의료 · 복지</div>
+    <h1>피부양자 자격상실 소득요건 —<br>재산 기준과<br>상실 후 보험료 계산</h1>
+    <p class="hero-sub">건강보험료를 한 푼도 내지 않던 사람이 어느 달 갑자기 고지서를 받는다. 소득이 늘어서가 아니라, 늘어난 소득이 어느 선을 넘었기 때문이다. 그 선은 하나가 아니라 소득·재산·부양관계 세 갈래로 갈라져 있고, 사업자등록증 한 장 유무에 따라 기준이 4배 달라지기도 한다. 피부양자 자격이 어떤 조건에서 무너지고, 무너진 뒤에는 얼마가 부과되는지를 법령과 공단 공고 기준으로 정리했다.</p>
+    <div class="hero-meta">
+      <span>📅 2026년 8월 20일</span>
+      <span>✍️ 생생 정보통 정책팀</span>
+      <span>⏱️ 읽는 데 약 12분</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+    <div class="summary-box">
+      <h2>3줄 요약</h2>
+      <ul>
+        <li><strong>소득 기준은 연 2,000만원 하나가 아니다.</strong> 합산소득 2,000만원이 큰 문턱이지만, 사업자등록이 있으면 사업소득이 1원만 있어도 상실되고 사업자등록이 없으면 연 500만원이 경계선이다. 등록 여부에 따라 허용 폭이 완전히 달라진다.</li>
+        <li><strong>재산에는 문턱이 두 개 있다.</strong> 재산세 과세표준 5.4억원 이하면 소득요건만 보고, 5.4억원 초과 9억원 이하면 연소득 1,000만원 이하일 때만 인정되며, 9억원을 넘으면 소득과 무관하게 상실된다.</li>
+        <li><strong>상실은 조용히, 그러나 소급해서 온다.</strong> 정기 재산정은 매년 11월에 이뤄지고 결과는 그다음 달 고지부터 반영된다. 상실 후에는 소득보험료와 재산보험료를 합해 본인이 전액 부담하며, 2026년 재산보험료 부과점수당 금액은 211.5원, 월 보험료 상한은 4,591,740원, 하한은 20,160원이다.</li>
+      </ul>
+    </div>
+
+    <p>건강보험 피부양자는 보험 혜택은 그대로 받으면서 보험료는 내지 않는 사람이다. 직장에 다니는 자녀나 배우자의 건강보험증에 이름을 올리는 방식이고, 국내 건강보험 적용 인구의 상당 부분이 여기에 속한다. 문제는 이 자격이 신청해서 얻는 자격인 동시에 <strong>가만히 있어도 잃을 수 있는 자격</strong>이라는 점이다.</p>
+
+    <p>자격을 잃는 순간 부담은 0원에서 곧바로 수만 원에서 수십만 원으로 뛴다. 직장가입자는 보험료의 절반을 회사가 내지만, 지역가입자는 전액을 본인이 낸다. 같은 소득이라도 신분이 바뀌는 것만으로 체감 부담이 두 배가 되는 구조다. 그래서 "얼마를 벌면 떨어지느냐"보다 "무엇이 소득으로 잡히느냐"를 정확히 아는 쪽이 실전에서는 더 중요하다.</p>
+
+    <h2 class="sec">1. 제도의 뼈대 — 피부양자는 '부담 능력이 없다고 인정된 사람'</h2>
+
+    <p>국민건강보험법은 가입자를 직장가입자와 지역가입자로 나눈다. 피부양자는 제3의 가입자가 아니라 <strong>직장가입자에게 생계를 의존하는 사람으로서 보험료 납부 의무를 면제받는 지위</strong>다. 법령이 요구하는 조건은 세 가지이고, 이 중 하나라도 무너지면 자격이 사라진다.</p>
+
+    <ul class="plain">
+      <li><strong>부양요건</strong> — 직장가입자와 법이 정한 가족관계에 있고, 동거 여부에 따른 부양 인정 기준을 충족할 것.</li>
+      <li><strong>소득요건</strong> — 연간 합산소득이 일정 금액 이하일 것.</li>
+      <li><strong>재산요건</strong> — 재산세 과세표준이 일정 금액 이하일 것.</li>
+    </ul>
+
+    <p>세 요건은 <strong>병렬이 아니라 동시 충족 조건</strong>이다. 소득이 한 푼도 없어도 재산이 기준을 넘으면 상실되고, 재산이 전혀 없어도 사업소득이 잡히면 상실된다. 실무에서 가장 많은 오해가 이 지점에서 생긴다. "나는 버는 게 없는데 왜 떨어졌냐"는 질문의 답은 대체로 재산요건이거나 부양요건이다.</p>
+
+    <div class="pullquote">피부양자 자격은 '가난하다는 증명'이 아니라 '부양받고 있다는 증명'이다. 그래서 소득이 0이어도 재산이 있으면 떨어지고, 재산이 0이어도 관계가 끊기면 떨어진다.</div>
+
+    <h2 class="sec">2. 소득요건 — 2,000만원 한 줄만 보면 틀린다</h2>
+
+    <p>가장 널리 알려진 숫자는 <strong>연간 합산소득 2,000만원</strong>이다. 이 금액을 초과하면 피부양자 자격을 잃는다. 합산소득에는 이자·배당소득, 사업소득, 근로소득, 연금소득, 기타소득이 모두 들어간다. 근로소득이 없는 은퇴자라도 연금과 금융소득을 더해 2,000만원을 넘으면 대상이 된다.</p>
+
+    <p>이 기준은 처음부터 2,000만원이었던 것이 아니다. 2022년 9월 건강보험료 부과체계 2단계 개편에서 <strong>연 3,400만원에서 2,000만원으로 내려갔다.</strong> 문턱이 1,400만원 낮아지면서 그 사이 구간에 있던 사람들이 대거 지역가입자로 넘어갔고, 지금 나타나는 상실 사례의 상당수가 이 개편의 후속 효과다.</p>
+
+    <h3 class="sub">사업소득 — 등록증 한 장에 기준이 4배 달라진다</h3>
+
+    <p>실무에서 가장 많이 걸리는 항목이 사업소득이다. 여기서는 금액보다 <strong>사업자등록 유무</strong>가 먼저 갈린다.</p>
+
+    <table class="rate">
+      <tr><th>구분</th><th>인정되는 사업소득</th><th>초과 시</th></tr>
+      <tr><td>사업자등록이 <strong>있는</strong> 경우</td><td class="down">0원 (사업소득이 없어야 함)</td><td>1원이라도 발생하면 상실</td></tr>
+      <tr><td>사업자등록이 <strong>없는</strong> 경우</td><td class="up">연 500만원 이하</td><td>500만원 초과 시 상실</td></tr>
+      <tr><td>장애인 · 국가유공자 · 보훈보상상이자</td><td class="new">연 500만원 이하</td><td>등록 여부와 무관하게 500만원 기준 적용</td></tr>
+      <tr><td>주택임대소득</td><td class="down">등록 여부 무관</td><td>소득이 발생하면 상실</td></tr>
+    </table>
+
+    <p>사업자등록이 있는데 사업소득이 0원이면 자격은 유지된다. 반대로 등록 없이 프리랜서로 일하며 <strong>3.3% 원천징수</strong>를 뗀 소득이 있다면 그것은 근로소득이 아니라 사업소득으로 잡힌다. 아르바이트, 보험모집인, 학원 강사, 배달 수입 같은 형태가 여기에 해당한다. 연 500만원은 월 42만원가량이니 결코 넉넉한 선이 아니다.</p>
+
+    <h3 class="sub">금융소득 — 1,000만원을 넘는 순간 전액이 들어온다</h3>
+
+    <p>이자와 배당을 합한 금융소득은 연 1,000만원이 분기점이다. 1,000만원 이하이면 합산소득 계산에서 빠지지만, <strong>1,000만원을 초과하면 초과분이 아니라 전액이 합산소득에 산입된다.</strong> 999만원과 1,001만원의 차이가 1,001만원의 차이로 벌어지는 구조다. 예금 만기가 한 해에 몰리거나 배당이 특정 연도에 집중되면 그해만 자격을 잃는 일이 실제로 발생한다.</p>
+
+    <div class="formula">
+      <p class="f-main">합산소득 = 이자·배당(연 1,000만원 초과 시 전액) + 사업소득 + 근로소득 + 연금소득 + 기타소득</p>
+      <p class="f-note">이 합계가 연 2,000만원을 넘으면 피부양자 자격 상실</p>
+    </div>
+
+    <p>연금소득도 주의할 항목이다. 공적연금은 전액이 아니라 과세 대상 부분이 잡히지만, 월 167만원 안팎이면 연 2,000만원 선에 닿는다. 공무원연금·사학연금 수급자에게서 상실 사례가 두드러지는 이유가 여기에 있다.</p>
+
+    <h2 class="sec">3. 재산요건 — 문턱이 하나가 아니라 둘이다</h2>
+
+    <p>재산은 시가가 아니라 <strong>재산세 과세표준</strong>으로 본다. 주택은 공시가격의 60%, 토지·건축물은 70%를 곱해 과세표준을 구하므로, 공시가격 9억원짜리 주택의 과세표준은 5.4억원이 된다. 흔히 인용되는 "5.4억"이라는 숫자가 여기서 나온다.</p>
+
+    <table class="rate">
+      <tr><th>재산세 과세표준</th><th>추가 조건</th><th>결과</th></tr>
+      <tr><td>5.4억원 이하</td><td>소득요건만 충족하면 됨</td><td class="up">인정</td></tr>
+      <tr><td>5.4억원 초과 ~ 9억원 이하</td><td>연간 합산소득 1,000만원 이하</td><td class="new">조건부 인정</td></tr>
+      <tr><td>9억원 초과</td><td>—</td><td class="down">소득과 무관하게 상실</td></tr>
+    </table>
+
+    <p>중간 구간이 함정이다. 과세표준 6억원짜리 주택을 가진 은퇴자가 연금으로 1,200만원을 받으면, 소득 2,000만원 기준은 통과하지만 재산 중간 구간의 1,000만원 기준에 걸려 자격을 잃는다. <strong>소득 기준이 구간에 따라 2,000만원에서 1,000만원으로 절반이 되는 것</strong>을 모르면 예측이 어긋난다.</p>
+
+    <h2 class="sec">4. 부양요건 — 관계와 동거 여부로 갈린다</h2>
+
+    <p>소득과 재산을 통과해도 관계가 맞지 않으면 등재 자체가 되지 않는다. 배우자는 동거·비동거를 가리지 않고 인정되지만, 나머지 관계는 따로 사는 순간 조건이 붙는다.</p>
+
+    <table class="rate">
+      <tr><th>가입자와의 관계</th><th>동거 시</th><th>비동거 시</th></tr>
+      <tr><td>배우자</td><td class="up">인정</td><td class="up">인정</td></tr>
+      <tr><td>부모(계부모 포함)</td><td class="up">인정</td><td class="new">조건부</td></tr>
+      <tr><td>자녀</td><td class="up">인정</td><td class="new">조건부</td></tr>
+      <tr><td>조부모 이상 직계존속</td><td class="up">인정</td><td class="new">조건부</td></tr>
+      <tr><td>손자녀 이하 직계비속</td><td class="up">인정</td><td class="new">조건부</td></tr>
+      <tr><td>배우자의 부모·직계존속</td><td class="up">인정</td><td class="new">조건부</td></tr>
+      <tr><td>직계비속의 배우자(며느리·사위)</td><td class="up">인정</td><td class="down">불인정</td></tr>
+      <tr><td>형제자매(30세 미만·65세 이상·장애인 등)</td><td class="up">인정</td><td class="new">조건부</td></tr>
+    </table>
+
+    <p class="note">조건부는 함께 사는 다른 가족 중에 부양할 수 있는 사람이 있는지 등을 따져 개별 판정한다.</p>
+
+    <p>형제자매는 별도의 나이 제한이 붙는다. <strong>30세 미만이거나 65세 이상</strong>이어야 하고, 그 사이 연령대는 장애인·국가유공자 등에 해당하지 않는 한 등재되지 않는다. 30대 형제를 부양하고 있어도 건강보험상으로는 피부양자가 될 수 없다는 뜻이다.</p>
+
+    <h2 class="sec">5. 언제 떨어지는가 — 11월에 결정되고 소급된다</h2>
+
+    <p>자격 상실은 실시간으로 일어나지 않는다. 공단은 국세청이 확정한 소득 자료와 지방자치단체의 재산세 자료를 받아 <strong>매년 정기적으로 자격을 재산정</strong>한다. 흐름은 다음과 같다.</p>
+
+    <div class="steps">
+      <div class="step"><div class="step-t">5월 — 종합소득세 신고</div><div class="step-d">전년도 소득이 국세청에서 확정된다. 이때 잡힌 사업소득·금융소득이 그해 심사의 기준이 된다.</div></div>
+      <div class="step"><div class="step-t">6~7월 — 재산세 과세표준 확정</div><div class="step-d">매년 6월 1일 소유 기준으로 재산세가 부과되고, 그 과세표준이 재산요건 판정에 쓰인다.</div></div>
+      <div class="step"><div class="step-t">11월 — 정기 재산정</div><div class="step-d">소득·재산 자료를 반영해 피부양자 자격을 다시 판정하고, 상실 대상자에게 안내가 나간다.</div></div>
+      <div class="step"><div class="step-t">그다음 달 — 지역가입자 보험료 고지</div><div class="step-d">상실이 확정되면 지역가입자로 전환돼 보험료가 부과된다. 자격 변동 시점에 따라 여러 달치가 한꺼번에 청구되기도 한다.</div></div>
+    </div>
+
+    <p>여기서 체감상 가장 곤란한 부분이 <strong>소급</strong>이다. 취업이나 사업자등록처럼 자격 변동 사유가 발생한 시점으로 거슬러 올라가 정리되는 경우, 몇 달치 보험료가 한 장의 고지서로 도착한다. "갑자기 수십만 원이 찍혔다"는 사례의 상당수가 인상이 아니라 소급 정산이다.</p>
+
+    <h2 class="sec">6. 숫자로 본 상실 규모 — 누가 떨어졌나</h2>
+
+    <p>2022년 9월 부과체계 2단계 개편 이후 2025년 2월까지 피부양자 자격을 잃은 사람은 <strong>31만 4,474명</strong>이다. 이 중 <strong>11만 6,306명(37%)</strong>은 본인의 소득 때문이 아니라 배우자가 기준을 넘어 함께 떨어진 동반 상실이었다. 부부 중 한 사람이 기준을 넘으면 다른 한 사람의 자격도 함께 무너지는 구조 때문이다.</p>
+
+    <div class="infographic-section">
+      <h3>연금 종류별 피부양자 자격상실 인원 (2022.9~2025.2 누적)</h3>
+      <div class="bar-chart">
+        <div class="bar-item">
+          <div class="bar-label"><span>공무원연금</span><span class="val">21만 9,532명 · 69.8%</span></div>
+          <div class="bar-track"><div class="bar-fill bar-teal" style="width:100%">69.8%</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>국민연금</span><span class="val">4만 7,620명 · 15.1%</span></div>
+          <div class="bar-track"><div class="bar-fill bar-blue" style="width:21.6%">15.1%</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>사학연금</span><span class="val">2만 5,217명 · 8.0%</span></div>
+          <div class="bar-track"><div class="bar-fill bar-amber" style="width:11.5%">8.0%</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>군인연금</span><span class="val">2만 704명 · 6.6%</span></div>
+          <div class="bar-track"><div class="bar-fill bar-grey" style="width:9.4%">6.6%</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>별정우체국연금</span><span class="val">1,401명 · 0.4%</span></div>
+          <div class="bar-track"><div class="bar-fill bar-grey" style="width:0.6%">0.4%</div></div>
+        </div>
+      </div>
+      <p class="note">막대 길이는 최대값(공무원연금)을 100으로 환산한 상대 비율. 비중은 전체 상실자 31만 4,474명 대비.</p>
+
+      <div class="impact-grid">
+        <div class="impact-card"><span class="impact-num">31만</span><span class="impact-label">2022년 9월 이후<br>누적 자격상실 인원</span></div>
+        <div class="impact-card"><span class="impact-num">37%</span><span class="impact-label">배우자 때문에<br>함께 떨어진 비율</span></div>
+        <div class="impact-card"><span class="impact-num">9.9만원</span><span class="impact-label">상실자 평균 월 보험료<br>(2025년 2월 기준)</span></div>
+        <div class="impact-card"><span class="impact-num">1,400만원</span><span class="impact-label">2022년 개편으로 낮아진<br>소득 기준 폭</span></div>
+      </div>
+    </div>
+
+    <p>연금 종류별 분포가 한쪽으로 크게 쏠려 있다는 점이 눈에 띈다. 공적연금 수급액이 상대적으로 높은 직역연금 쪽에서 상실이 집중됐고, 이는 소득 기준이 3,400만원에서 2,000만원으로 내려간 개편의 직접적인 결과다. 개편의 명분이 '부담 능력에 따른 부과'였던 만큼 예정된 방향이기는 하나, 당사자 입장에서는 은퇴 후 고정 지출이 새로 생긴 셈이다.</p>
+
+    <h2 class="sec">7. 상실 후 보험료 계산 — 소득과 재산을 따로 매긴다</h2>
+
+    <p>피부양자에서 지역가입자로 넘어가면 보험료는 세대 단위로 부과된다. 계산 구조는 2022년 9월 개편 이후 <strong>소득보험료와 재산보험료로 나뉜다.</strong></p>
+
+    <div class="formula">
+      <p class="f-main">지역가입자 월 보험료 = (소득 × 보험료율) + (재산보험료부과점수 × 부과점수당 금액)</p>
+      <p class="f-note">2026년 기준 보험료율 7.19%, 재산보험료 부과점수당 금액 211.5원</p>
+    </div>
+
+    <p>인터넷에 남아 있는 "소득점수+재산점수+자동차점수를 모두 더해 점수당 금액을 곱한다"는 옛 설명은 현재 기준과 맞지 않는다. 소득은 등급표가 아니라 정률로 매기고, 자동차는 아예 빠졌기 때문이다. 2026년에 적용되는 값은 다음과 같다.</p>
+
+    <table class="rate">
+      <tr><th>항목</th><th>2026년 기준</th><th>비고</th></tr>
+      <tr><td>건강보험료율</td><td class="up">7.19%</td><td>2025년 7.09% 대비 1.48% 인상</td></tr>
+      <tr><td>장기요양보험료율</td><td class="up">0.9448%</td><td>2025년 0.9182% 대비 2.90% 인상</td></tr>
+      <tr><td>재산보험료 부과점수당 금액</td><td class="up">211.5원</td><td>전년 대비 1.48% 인상</td></tr>
+      <tr><td>월 보험료 상한</td><td>4,591,740원</td><td>2026년 1월 적용</td></tr>
+      <tr><td>월 보험료 하한</td><td>20,160원</td><td>소득·재산이 거의 없어도 부과되는 최소액</td></tr>
+      <tr><td>재산 기본공제</td><td class="new">1억원</td><td>2024년 2월 5,000만원에서 확대</td></tr>
+      <tr><td>자동차</td><td class="new">부과 제외</td><td>2024년 2월 폐지</td></tr>
+    </table>
+
+    <h3 class="sub">2024년 2월 개편이 바꾼 것</h3>
+
+    <p>지역가입자 부담을 줄인 두 가지 조치가 2024년 2월부터 적용됐다. 첫째, <strong>4,000만원 이상 자동차에 매기던 보험료가 폐지</strong>돼 약 9만 6,000세대의 부담이 월 2만 9,000원~4만 5,000원 줄었다. 둘째, <strong>재산 기본공제가 5,000만원에서 1억원으로 확대</strong>돼 재산보험료를 내던 353만 세대 중 약 330만 세대가 월 2만 4,000원~5만 6,000원 완화됐다. 두 조치에 모두 해당하면 최대 월 10만 1,000원까지 내려갔다.</p>
+
+    <p>따라서 재산이 있어도 <strong>과세표준에서 1억원을 뺀 나머지</strong>만 점수화된다. 전·월세 보증금은 30%만 환산해 더한다. 자기 집이 과세표준 1억원 이하라면 재산보험료는 사실상 발생하지 않고, 소득보험료만 남는다.</p>
+
+    <div class="pullquote">같은 소득이라도 직장가입자는 회사가 절반을 낸다. 피부양자에서 지역가입자로 떨어진다는 것은 부담이 0에서 100으로 가는 것이지, 50에서 100으로 가는 것이 아니다.</div>
+
+    <h2 class="sec">8. 나에게 미치는 영향 — 지금 확인할 것</h2>
+
+    <ul class="plain">
+      <li><strong>퇴직을 앞둔 직장인.</strong> 퇴직 즉시 지역가입자가 되지만 <strong>임의계속가입</strong>을 신청하면 최대 36개월간 직장 다닐 때 내던 수준의 보험료로 유지할 수 있다. 조건은 퇴직 전 18개월 동안 1년 이상 직장가입자였을 것이고, 신청은 지역가입자 최초 보험료 고지서의 납부기한에서 2개월이 지나기 전에 해야 한다. 이 기한을 놓치면 되돌릴 수 없다.</li>
+      <li><strong>연금을 받는 부모님을 피부양자로 올린 사람.</strong> 연금액이 오르면 자동으로 기준선에 가까워진다. 매년 11월 재산정 전에 합산소득을 미리 계산해 두면 갑작스러운 고지를 피할 수 있다. 부부 중 한 사람이 넘으면 배우자도 함께 떨어진다는 점을 반드시 같이 본다.</li>
+      <li><strong>프리랜서·부업 소득이 있는 사람.</strong> 3.3%를 뗀 소득은 사업소득이다. 사업자등록이 없다면 연 500만원이 상한이고, 등록을 내는 순간 상한이 0원이 된다. 등록 여부는 세금 문제만이 아니라 건강보험 자격 문제이기도 하다.</li>
+      <li><strong>집 한 채가 있는 은퇴자.</strong> 공시가격이 아니라 재산세 과세표준으로 판정한다. 과세표준이 5.4억원을 넘으면 소득 허용치가 2,000만원에서 1,000만원으로 절반이 된다. 공시가격이 오르는 해에는 소득이 그대로여도 자격이 흔들릴 수 있다.</li>
+      <li><strong>이미 상실 통보를 받은 사람.</strong> 소득이나 재산이 줄었다면 피부양자 재등록을 신청할 수 있다. 또한 보험료 조정·경감 제도가 있어 소득이 실제로 감소했음을 증빙하면 부과액을 다시 산정받을 수 있다. 확인은 국민건강보험공단(1577-1000)이나 공단 홈페이지 자격 조회에서 가능하다.</li>
+    </ul>
+
+    <h2 class="sec">9. 전망 — 재산 부과 방식이 다음 쟁점이다</h2>
+
+    <p>현재 논의의 축은 두 갈래다. 하나는 <strong>재산보험료의 점수제를 정률제로 바꾸는 방향</strong>이다. 등급 구간의 경계에서 보험료가 계단식으로 뛰는 문제를 완화하자는 취지이고, 실현되면 지금의 '부과점수당 금액' 개념 자체가 사라진다. 다른 하나는 <strong>소득 중심 부과의 확대</strong>다. 재산 비중을 줄이고 실제 소득에 맞춰 매기자는 방향인데, 이 경우 자산은 많지만 소득이 적은 은퇴 가구의 부담은 줄고 소득이 잡히는 계층의 부담은 늘어난다.</p>
+
+    <p>피부양자 제도 자체를 두고도 상반된 시선이 공존한다. 한쪽은 보험료를 내지 않는 인구가 지나치게 많아 재정 지속성을 해친다고 보고, 다른 쪽은 소득 없는 노년층을 일률적으로 지역가입자로 밀어내면 실질 부담이 감당 범위를 넘는다고 본다. 2022년 개편이 소득 기준을 3,400만원에서 2,000만원으로 낮춘 뒤 31만 명이 이탈한 결과는 두 주장 모두에 근거를 제공했다.</p>
+
+    <p>제도가 어느 쪽으로 가든 개인이 지금 할 수 있는 일은 세 가지로 좁혀진다. 첫째, <strong>합산소득을 연 단위로 미리 계산</strong>해 2,000만원(재산 중간 구간이면 1,000만원) 선까지 얼마나 남았는지 파악한다. 둘째, 사업자등록·금융상품 만기·배당 시기처럼 <strong>스스로 조절 가능한 변수</strong>는 연도를 분산한다. 셋째, 퇴직이 예정돼 있다면 <strong>임의계속가입 신청 기한</strong>을 달력에 표시해 둔다. 상실 자체를 막을 수는 없어도, 충격의 크기와 시점은 상당 부분 조절할 수 있다.</p>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#피부양자자격상실</span>
+      <span class="hashtag">#피부양자소득요건</span>
+      <span class="hashtag">#피부양자재산요건</span>
+      <span class="hashtag">#건강보험피부양자</span>
+      <span class="hashtag">#지역가입자전환</span>
+      <span class="hashtag">#부과점수당금액</span>
+      <span class="hashtag">#임의계속가입</span>
+      <span class="hashtag">#합산소득2000만원</span>
+      <span class="hashtag">#재산세과세표준</span>
+      <span class="hashtag">#건강보험료</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://www.mohw.go.kr/board.es?mid=a10503010100&bid=0027&act=view&list_no=1487279" target="_blank" rel="noopener">보건복지부 — 2026년 건강보험료율 7.19%로 결정</a>
+      <a href="https://edi.nhis.or.kr/portal/images/popup/20251204_pop01longdesc.html" target="_blank" rel="noopener">국민건강보험공단 — 2026년도 보험료율 인상 안내</a>
+      <a href="https://www.nhis.or.kr/renewal_popup/poster/20260204_poster_longdesc_1.html" target="_blank" rel="noopener">국민건강보험공단 — 2026년 달라지는 건강보험·장기요양보험 제도</a>
+      <a href="https://www.law.go.kr/LSW/lsLawLinkInfo.do?lsJoLnkSeq=1000920862" target="_blank" rel="noopener">국가법령정보센터 — 피부양자 자격의 인정기준 중 소득 및 재산요건(별표 1의2)</a>
+      <a href="https://law.go.kr/LSW/flDownload.do?gubun=&flSeq=28368278" target="_blank" rel="noopener">국가법령정보센터 — 피부양자 자격의 인정기준 중 부양요건(별표 1)</a>
+      <a href="https://www.easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=4&cciNo=1&cnpClsNo=1&csmSeq=1141" target="_blank" rel="noopener">찾기쉬운 생활법령정보 — 국민건강보험(지역가입자) 보험료 산정</a>
+      <a href="https://mohw.go.kr/board.es?act=view&bid=0027&list_no=372730&mid=a10503000000" target="_blank" rel="noopener">보건복지부 — 건강보험료 부과체계 2단계 개편 시행</a>
+      <a href="https://www.newspim.com/news/view/20240105000537" target="_blank" rel="noopener">뉴스핌 — 2월부터 자동차 건강보험료 폐지, 재산공제 1억원 상향</a>
+      <a href="https://www.hankyung.com/article/2025042419057" target="_blank" rel="noopener">한국경제 — 건강보험 혜택 끝, 피부양자 31만명 탈락 이유</a>
+      <a href="https://www.fnnews.com/news/202206291207029681" target="_blank" rel="noopener">파이낸셜뉴스 — 27만명 피부양자 탈락, 복지부 부담능력 있다 판단</a>
+      <a href="https://www.christiandaily.co.kr/news/159949" target="_blank" rel="noopener">기독일보 — 건강보험 피부양자 탈락 2026, 자격 기준과 지역가입자 전환</a>
+      <a href="https://tuzaga.com/%EA%B1%B4%EA%B0%95%EB%B3%B4%ED%97%98%EB%A3%8C-%EC%82%AC%EC%97%85%EC%86%8C%EB%93%9D-%EA%B4%80%EB%A0%A8-%ED%94%BC%EB%B6%80%EC%96%91%EC%9E%90-%EC%9A%94%EA%B1%B4/" target="_blank" rel="noopener">당신의 세무사 — 건강보험료 사업소득 관련 피부양자 요건</a>
+      <a href="https://policy.ambitstock.com/posts/health-insurance-regional-premium-2026-guide/" target="_blank" rel="noopener">정책모아 — 지역가입자 보험료 계산법과 임의계속가입 정리</a>
+      <a href="https://insight24.co.kr/dependent-loss-eligibility-guide/" target="_blank" rel="noopener">인사이트24 — 피부양자 자격상실 기준과 소급 부과</a>
+    </div>
+
+    <p class="disclaimer">
+      ※ 본 아티클은 국민건강보험법 및 시행규칙, 보건복지부·국민건강보험공단의 공개 자료와 언론 보도를 바탕으로 작성한 정보성 콘텐츠이며, 개별 사안에 대한 법률·세무 자문이 아닙니다. 피부양자 인정기준과 보험료 산정 기준은 개정될 수 있고, 실제 자격 판정은 가족관계·소득 유형·재산 구성에 따라 개별적으로 이뤄집니다. 본문의 요율·상한·공제액은 2026년 기준 공고값이며 연도에 따라 달라집니다. 본인의 자격 여부와 예상 보험료는 국민건강보험공단(1577-1000) 또는 공단 홈페이지의 자격 조회·모의계산을 통해 반드시 확인하시기 바랍니다.
+    </p>
+
+  </div>
+</article>
+</body>
+</html>
