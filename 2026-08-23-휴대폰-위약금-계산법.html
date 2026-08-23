@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>휴대폰 위약금 계산법 — 선택약정 할인반환금과 공시지원금 반환금 차이 | 기술·AI</title>
+  <meta name="description" content="휴대폰 위약금은 하나가 아니라 두 가지다. 요금할인을 토해내는 선택약정 할인반환금과 단말기 지원금을 토해내는 공시지원금 반환금은 계산식도, 최고점이 오는 시점도 다르다. 2018~2020년 통신 3사 산정방식 개편과 2025년 7월 22일 단통법 폐지 이후 달라진 부분까지 계산 구조를 정리했다.">
+  <meta name="keywords" content="휴대폰 위약금, 위약금 계산법, 선택약정 할인반환금, 공시지원금 위약금, 할인반환금 계산, 위약금 조회, 단통법 폐지, 선택약정 25% 할인, 기기변경 위약금 유예, 요금제 변경 위약금">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f1f6f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #004d5a 0%, #00838f 45%, #0277bd 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #b2ebf2; color: #006064; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #e0f7fa; border-left: 5px solid #00838f; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #00838f; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #006064; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #00838f; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #006064; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #e0f7fa; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #00838f; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #006064; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #e6f6f9; border-left: 4px solid #26c6da; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #006064; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f2fafc; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #006064; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #006064; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #d9edf2; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-teal { background: linear-gradient(90deg, #004d5a, #00acc1); }
+    .bar-blue { background: linear-gradient(90deg, #01579b, #4fc3f7); }
+    .bar-amber { background: linear-gradient(90deg, #e65100, #f9a825); }
+    .bar-grey { background: linear-gradient(90deg, #455a64, #90a4ae); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #cfe3e8; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #e0f7fa; color: #006064; font-weight: 700; }
+    table.rate td.up { color: #006064; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #00695c; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #00838f; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #006064; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #c3dee5; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #006064; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #c3dee5; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #00838f; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #e0f7fa; color: #00838f; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #00838f; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<!-- SEO:AUTO BEGIN -->
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-08-23-%ED%9C%B4%EB%8C%80%ED%8F%B0-%EC%9C%84%EC%95%BD%EA%B8%88-%EA%B3%84%EC%82%B0%EB%B2%95">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="휴대폰 위약금 계산법 — 선택약정 할인반환금과 공시지원금 반환금 차이">
+<meta property="og:description" content="선택약정 할인반환금과 공시지원금 반환금의 계산식 차이, 위약금이 최대가 되는 시점, 면제·유예 조건을 정리했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-08-23-%ED%9C%B4%EB%8C%80%ED%8F%B0-%EC%9C%84%EC%95%BD%EA%B8%88-%EA%B3%84%EC%82%B0%EB%B2%95">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-08-23T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-08-23T09:00:00+09:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="휴대폰 위약금 계산법 — 선택약정 할인반환금과 공시지원금 반환금 차이">
+<meta name="twitter:description" content="선택약정 할인반환금과 공시지원금 반환금의 계산식 차이, 위약금이 최대가 되는 시점, 면제·유예 조건을 정리했다.">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "휴대폰 위약금 계산법 — 선택약정 할인반환금과 공시지원금 반환금 차이",
+  "description": "선택약정 할인반환금과 공시지원금 반환금의 계산식 차이, 위약금이 최대가 되는 시점, 면제·유예 조건을 정리했다.",
+  "url": "https://sangsang.ephseed.com/2026-08-23-%ED%9C%B4%EB%8C%80%ED%8F%B0-%EC%9C%84%EC%95%BD%EA%B8%88-%EA%B3%84%EC%82%B0%EB%B2%95",
+  "datePublished": "2026-08-23T09:00:00+09:00",
+  "dateModified": "2026-08-23T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+</head>
+<body>
+<article class="article-wrap">
+  <header class="hero">
+    <div class="category-badge">📱 기술 · AI</div>
+    <h1>휴대폰 위약금 계산법 —<br>선택약정 할인반환금과<br>공시지원금 반환금 차이</h1>
+    <p class="hero-sub">해지하려고 고객센터에 전화했다가 "위약금이 20만 원"이라는 말을 듣고 통화를 끊은 경험이 흔하다. 그런데 그 20만 원이 어디서 나온 숫자인지 설명해 주는 곳은 드물다. 휴대폰 위약금은 하나가 아니라 성격이 완전히 다른 두 가지이고, 계산식도 최고점이 오는 시점도 서로 다르다.</p>
+    <div class="hero-meta">
+      <span>📅 2026년 8월 23일</span>
+      <span>✍️ 생생 정보통 정책팀</span>
+      <span>⏱️ 읽는 데 약 11분</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+    <div class="summary-box">
+      <h2>3줄 요약</h2>
+      <ul>
+        <li>휴대폰 위약금은 <strong>두 종류</strong>다. 요금할인을 받은 만큼 토해내는 <strong>선택약정 할인반환금</strong>과, 단말기 지원금을 토해내는 <strong>공시지원금 반환금</strong>은 계산식이 완전히 다르다. 둘 중 어느 쪽으로 가입했는지부터 확인해야 계산이 시작된다.</li>
+        <li><strong>공시지원금 반환금은 시간이 갈수록 줄고, 선택약정 할인반환금은 중간에 최고점을 찍는다.</strong> 공시지원금은 6개월까지 100%를 물다가 이후 잔여기간에 비례해 감소하고, 할인반환금은 24개월 약정 기준 <strong>12~16개월 구간</strong>에서 가장 크다.</li>
+        <li>통신 3사는 <strong>2018~2020년에 걸쳐 할인반환금 산정식을 대칭형으로 개편</strong>했다. 개편 전에는 23개월차 해지에 약 13만 원이 나오던 사례가 개편 후 약 2만 원으로 줄었다. <strong>가입 시점이 개편 전이냐 후냐에 따라 같은 조건도 금액이 달라진다.</strong></li>
+      </ul>
+    </div>
+
+    <p>휴대폰 요금제를 바꾸거나 통신사를 옮기려 할 때 가장 먼저 부딪히는 벽이 위약금이다. 그런데 이 말이 가리키는 대상이 사람마다 다르다. 어떤 사람에게는 요금할인 반환금이고, 어떤 사람에게는 단말기 지원금 반환금이며, 둘 다 걸려 있는 경우도 있다. 계산이 어렵게 느껴지는 첫 번째 이유가 여기에 있다. <strong>서로 다른 두 제도를 같은 이름으로 부르고 있기 때문이다.</strong></p>
+
+    <p>업계에서는 이 둘을 각각 <strong>'위약3'</strong>과 <strong>'위약4'</strong>라고 부른다. 위약3은 요금할인 반환금 제도로 SK텔레콤이 2012년 11월, KT가 2013년 1월, LG유플러스가 2013년 3월에 도입했다. 위약4는 단말기 지원금 반환금 제도로, 2014년 10월 단말기유통법 시행에 맞춰 순차 도입됐다. 이름은 비슷하지만 <strong>돈이 나가는 방향도, 시간에 따른 곡선 모양도 정반대</strong>다.</p>
+
+    <div class="pullquote">공시지원금 반환금은 "빌린 돈을 갚아 나가는" 구조라 시간이 갈수록 줄어든다. 선택약정 할인반환금은 "받은 할인이 쌓이는" 구조라 중간에 정점을 찍는다. 이 방향 차이가 계산의 전부다.</div>
+
+    <h2 class="sec">📌 배경 — 두 가지 위약금이 생긴 이유</h2>
+
+    <p>2014년 10월 1일 시행된 단말기유통법(단통법)은 보조금 경쟁으로 인한 소비자 차별을 없애겠다는 취지에서 만들어졌다. 이 법은 <strong>공시지원금 상한을 최대 30만 원으로 제한</strong>하고, 유통점이 추가로 줄 수 있는 금액을 <strong>공시지원금의 15% 이내</strong>로 묶었다(이 상한은 2021년 30%로 상향됐다). 그리고 단말기 지원금을 받지 않는 소비자를 위해 <strong>요금할인을 선택할 수 있는 길</strong>을 열었다. 이것이 선택약정할인이다.</p>
+
+    <p>선택약정 할인율은 2014년 12%로 시작해 2015년 4월 20%, 2017년 9월 <strong>25%</strong>로 올라 지금까지 유지되고 있다. 12개월과 24개월 중에 고를 수 있고, 2024년부터는 자동으로 갱신되는 '1+1년' 방식도 운영된다.</p>
+
+    <h3 class="sub">2025년 7월 22일, 단통법이 폐지됐다</h3>
+
+    <p>단통법은 법률 제20675호로 <strong>2025년 7월 22일 폐지</strong>됐다. 이때 사라진 것과 살아남은 것을 구분해야 한다. <strong>공시지원금 공시 의무와 추가지원금 상한은 사라졌고, 선택약정 25% 요금할인은 전기통신사업법 제32조의11로 자리를 옮겨 그대로 유지</strong>됐다.</p>
+
+    <table class="rate">
+      <thead>
+        <tr><th>항목</th><th>단통법 시행기(2014~2025)</th><th>폐지 이후(2025.7.22~)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>공시지원금 상한</td><td>도입 초기 최대 30만 원</td><td class="new">상한 폐지</td></tr>
+        <tr><td>유통점 추가지원금</td><td>공시지원금의 15%(뒤에 30%)</td><td class="new">제한 폐지</td></tr>
+        <tr><td>지원금 공시 의무</td><td>있음</td><td class="new">폐지</td></tr>
+        <tr><td>선택약정 25% 요금할인</td><td>단통법 근거</td><td class="up">전기통신사업법 제32조의11로 이관·유지</td></tr>
+        <tr><td>위약금(반환금) 제도</td><td>지원금·요금할인 각각 존재</td><td class="down">그대로 유지</td></tr>
+      </tbody>
+    </table>
+
+    <p>여기서 놓치기 쉬운 대목이 하나 있다. <strong>지원금 상한이 풀렸다는 말은 위약금 상한도 함께 풀렸다는 뜻이다.</strong> 지원금을 많이 받으면 반환할 금액도 그만큼 커진다. 게다가 폐지 이후 늘어난 유통점 추가지원금은 공시지원금과 별개로 취급돼, <strong>별도의 위약금 조건이 붙는 경우</strong>가 있다. 계약서에 적힌 조건을 확인하지 않으면 해지 시점에야 알게 된다.</p>
+
+    <h2 class="sec">🧾 핵심 계산법 ① — 공시지원금 반환금</h2>
+
+    <p>단말기 값을 깎아 주는 지원금을 받고 24개월 약정을 걸었다면 이쪽이다. 계산 구조는 두 구간으로 나뉜다.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-t">개통 후 6개월(180일) 이내 해지</div>
+        <div class="step-d">받은 <strong>공시지원금의 100%</strong>를 그대로 반환한다. 이 구간에는 할인이 없다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">6개월 경과 후 해지</div>
+        <div class="step-d"><strong>공시지원금 × (잔여 약정일수 ÷ (약정일수 − 180일))</strong>. 24개월 약정이면 분모가 사실상 18개월이 되고, 남은 기간에 비례해 줄어든다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">약정 만료 시점</div>
+        <div class="step-d">잔여기간이 0이 되므로 <strong>반환금도 0원</strong>이 된다. 오래 쓸수록 유리한 구조다.</div>
+      </div>
+    </div>
+
+    <p>숫자를 넣어 보면 감이 온다. 공시지원금 <strong>50만 원</strong>을 받고 24개월 약정을 건 경우를 기준으로 계산해 보자.</p>
+
+    <table class="rate">
+      <thead>
+        <tr><th>해지 시점</th><th>계산식</th><th>반환금</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>3개월차</td><td>50만 원 × 100%</td><td class="down">500,000원</td></tr>
+        <tr><td>7개월차</td><td>50만 원 × (17 ÷ 18)</td><td class="down">약 472,000원</td></tr>
+        <tr><td>12개월차</td><td>50만 원 × (12 ÷ 18)</td><td class="down">약 333,000원</td></tr>
+        <tr><td>18개월차</td><td>50만 원 × (6 ÷ 18)</td><td>약 167,000원</td></tr>
+        <tr><td>22개월차</td><td>50만 원 × (2 ÷ 18)</td><td class="new">약 56,000원</td></tr>
+        <tr><td>24개월(만료)</td><td>50만 원 × (0 ÷ 18)</td><td class="new">0원</td></tr>
+      </tbody>
+    </table>
+
+    <p class="note">※ 통신사 약관은 일(日) 단위로 계산하므로 실제 청구액은 위 월 단위 근사치와 약간 차이가 날 수 있다. 표는 구조를 보여 주기 위한 계산이다.</p>
+
+    <h2 class="sec">📐 핵심 계산법 ② — 선택약정 할인반환금</h2>
+
+    <p>단말기 지원금 대신 <strong>매월 요금의 25%를 할인</strong>받는 쪽을 골랐다면 이 계산이 적용된다. 여기가 사람들이 가장 많이 오해하는 부분이다. <strong>"거의 다 썼으니 위약금이 별로 없겠지"라는 직관이 잘 맞지 않는다.</strong></p>
+
+    <h3 class="sub">왜 중간이 가장 비싼가</h3>
+
+    <p>할인반환금은 <strong>이미 받은 할인 누계</strong>에서 출발한다. 시간이 갈수록 받은 할인이 쌓이므로 반환 대상 금액 자체가 계속 커진다. 그래서 약관은 이용 기간별로 반환 비율을 따로 정해 두고, 후반부에는 <strong>마이너스 비율</strong>을 적용해 깎아 준다. 그 결과 <strong>약정 기간의 절반을 조금 넘긴 지점에서 금액이 정점</strong>을 찍는다.</p>
+
+    <p>다음은 산정방식 개편 이전에 통신 3사가 쓰던 24개월 약정 기준 구간별 반환 비율이다. 회사마다 숫자가 달랐다.</p>
+
+    <table class="rate">
+      <thead>
+        <tr><th>이용 기간</th><th>SK텔레콤</th><th>KT</th><th>LG유플러스</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>6개월 이하</td><td>100%</td><td>100%</td><td>100%</td></tr>
+        <tr><td>6~12개월</td><td>60%</td><td>60%</td><td>50%</td></tr>
+        <tr><td>12~16개월</td><td class="down">35%</td><td class="down">30%</td><td class="down">30%</td></tr>
+        <tr><td>16~20개월</td><td>-15%</td><td>-20%</td><td>-20%</td></tr>
+        <tr><td>20~24개월</td><td class="new">-40%</td><td class="new">-45%</td><td class="new">-40%</td></tr>
+      </tbody>
+    </table>
+
+    <p>비율만 보면 뒤로 갈수록 낮아지는데, <strong>곱해지는 누적 할인액이 계속 커지기 때문에</strong> 실제 금액은 중간에서 최대가 된다. 월 1만 6,000원을 할인받는 24개월 약정을 예로 들면 다음과 같이 움직였다.</p>
+
+    <div class="infographic-section">
+      <h3>📊 24개월 약정, 해지 시점별 위약금 곡선 비교</h3>
+      <p class="note" style="margin-bottom:22px;">아래 위쪽 네 개(청록)는 월 1만 6,000원 할인 조건의 <strong>선택약정 할인반환금</strong>, 아래쪽 네 개(주황)는 공시지원금 50만 원 조건의 <strong>공시지원금 반환금</strong>이다. 막대 길이는 각 그룹의 최대값을 100%로 놓은 상대 비교다.</p>
+      <div class="bar-chart">
+        <div class="bar-item">
+          <div class="bar-label"><span>선택약정 — 6개월차 해지</span><span class="val">96,000원</span></div>
+          <div class="bar-track"><div class="bar-fill bar-teal" style="width: 55%;">55%</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>선택약정 — 12개월차 해지</span><span class="val">153,600원</span></div>
+          <div class="bar-track"><div class="bar-fill bar-teal" style="width: 87%;">87%</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>선택약정 — 16개월차 해지 <strong>(최고점)</strong></span><span class="val">176,000원</span></div>
+          <div class="bar-track"><div class="bar-fill bar-blue" style="width: 100%;">100%</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>선택약정 — 20개월차 해지</span><span class="val">166,400원</span></div>
+          <div class="bar-track"><div class="bar-fill bar-teal" style="width: 95%;">95%</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>공시지원금 — 3개월차 해지 <strong>(최고점)</strong></span><span class="val">500,000원</span></div>
+          <div class="bar-track"><div class="bar-fill bar-amber" style="width: 100%;">100%</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>공시지원금 — 12개월차 해지</span><span class="val">약 333,000원</span></div>
+          <div class="bar-track"><div class="bar-fill bar-amber" style="width: 67%;">67%</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>공시지원금 — 18개월차 해지</span><span class="val">약 167,000원</span></div>
+          <div class="bar-track"><div class="bar-fill bar-amber" style="width: 33%;">33%</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>공시지원금 — 22개월차 해지</span><span class="val">약 56,000원</span></div>
+          <div class="bar-track"><div class="bar-fill bar-grey" style="width: 11%;">11%</div></div>
+        </div>
+      </div>
+      <p class="note">※ 선택약정 수치는 개편 이전 SK텔레콤 구간별 산정방식을 적용한 언론 보도 사례(월 1만 6,000원 할인 기준)이고, 공시지원금 수치는 약관상 산정식에 50만 원을 대입한 계산이다. 두 그룹은 조건이 다르므로 금액을 직접 비교하기보다 <strong>곡선의 모양 차이</strong>를 보는 용도로 읽는 것이 맞다.</p>
+    </div>
+
+    <p>모양이 정반대인 것이 보인다. <strong>공시지원금 쪽은 계속 내려가는 미끄럼틀이고, 선택약정 쪽은 중간이 볼록한 언덕</strong>이다. 그래서 "약정을 거의 다 채웠는데 왜 이렇게 많이 나오냐"는 항의는 선택약정 가입자에게서 훨씬 자주 나온다.</p>
+
+    <h2 class="sec">🔍 숨겨진 이면 — 개편으로 금액이 달라졌다</h2>
+
+    <p>이 구조가 소비자에게 지나치게 불리하다는 지적이 계속되자 통신 3사는 산정방식을 손봤다. <strong>SK텔레콤이 2018년 3월, KT가 2018년 9월, LG유플러스가 2020년 2월 1일</strong>에 개편했다. LG유플러스는 경쟁사보다 약 2년 늦었다.</p>
+
+    <p>개편의 핵심은 <strong>약정 기간의 절반을 지나면 반환금이 서서히 줄어들어 만료 시점에 0에 수렴하도록</strong> 곡선을 대칭형으로 바꾼 것이다. 효과는 컸다. 24개월 약정에서 23개월차에 해지하는 경우, <strong>기존 약 13만 원이던 반환금이 개편 후 약 2만 원으로 줄었다.</strong> 약 11만 원이 깎인 셈이다.</p>
+
+    <div class="impact-grid">
+      <div class="impact-card">
+        <span class="impact-num">13만 원</span>
+        <span class="impact-label">개편 전<br>23개월차 해지<br>할인반환금</span>
+      </div>
+      <div class="impact-card">
+        <span class="impact-num">2만 원</span>
+        <span class="impact-label">개편 후<br>같은 조건<br>할인반환금</span>
+      </div>
+      <div class="impact-card">
+        <span class="impact-num">25%</span>
+        <span class="impact-label">선택약정 할인율<br>2017년 9월부터<br>현재까지 유지</span>
+      </div>
+      <div class="impact-card">
+        <span class="impact-num">551일</span>
+        <span class="impact-label">같은 통신사 기기변경<br>지원금 반환금<br>유예 기준(약 18개월)</span>
+      </div>
+    </div>
+
+    <h3 class="sub">해지가 아닌데도 위약금이 나오는 경우</h3>
+
+    <p>위약금은 해지할 때만 생기는 것이 아니다. 다음 세 가지 상황을 놓치는 사람이 많다.</p>
+
+    <ul class="plain">
+      <li><strong>요금제를 낮출 때</strong> — 지원금은 가입한 요금제 수준을 전제로 지급된다. 약관이 정한 기준 아래로 요금제를 내리면 차액이 청구된다. SK텔레콤과 KT는 <strong>지원금 차액</strong>을 물리고, LG유플러스는 사례에 따라 <strong>공시지원금 전액</strong>을 청구하는 방식으로 알려져 있다. 5G에서 LTE로 갈아탈 때 특히 자주 걸린다.</li>
+      <li><strong>기기변경을 할 때</strong> — 같은 통신사 안에서 기기를 바꿔도 약정이 남아 있으면 반환금 대상이다. 다만 <strong>551일(약 18개월)이 지나면 유예</strong>되는 것이 통상적인 운영이다. 유예는 면제가 아니다. 새 기기로 다시 지원금을 받으면 계약이 겹쳐, 나중에 해지할 때 <strong>두 대 몫이 함께 청구</strong>될 수 있다.</li>
+      <li><strong>번호이동을 할 때</strong> — 알뜰폰으로 옮기는 경우도 예외가 아니다. 기존 약정이 살아 있으면 그대로 정산된다.</li>
+    </ul>
+
+    <div class="pullquote">위약금 상담에서 가장 많이 나오는 오해는 "유예"를 "면제"로 알아듣는 것이다. 유예는 청구 시점을 미뤄 두는 것일 뿐, 조건을 어기면 미뤄 뒀던 금액이 한꺼번에 돌아온다.</div>
+
+    <h2 class="sec">💡 나에게 미치는 영향 — 조회 순서와 면제되는 경우</h2>
+
+    <h3 class="sub">내 위약금부터 확인하는 순서</h3>
+
+    <div class="flow">
+      <div class="flow-box">
+        <div class="ft">1단계 — 가입 유형 확인</div>
+        <div class="fd">선택약정인지 공시지원금인지부터 확인한다. 통신사 앱의 가입정보 화면이나 가입신청서에 적혀 있다.</div>
+      </div>
+      <div class="flow-box">
+        <div class="ft">2단계 — 약정 시작일과 잔여기간</div>
+        <div class="fd">개통일 기준 며칠이 지났는지가 계산의 핵심 변수다. 6개월(180일)과 551일 두 지점이 특히 중요하다.</div>
+      </div>
+      <div class="flow-box">
+        <div class="ft">3단계 — 실제 금액 조회</div>
+        <div class="fd">각 통신사 고객센터 앱·홈페이지의 해지 예상금액 조회 메뉴, 또는 고객센터 상담으로 확인한다. 표시된 금액이 최종 기준이다.</div>
+      </div>
+      <div class="flow-box">
+        <div class="ft">4단계 — 시점 계산</div>
+        <div class="fd">선택약정이라면 정점을 지났는지, 공시지원금이라면 몇 달만 더 쓰면 얼마가 줄어드는지 따져 본다.</div>
+      </div>
+    </div>
+
+    <p>실무적으로 유용한 판단 기준이 하나 있다. <strong>공시지원금 가입자는 기다릴수록 무조건 유리하다.</strong> 만료가 다가올수록 반환금이 0에 수렴하기 때문이다. 반면 <strong>선택약정 가입자는 정점을 지났는지부터 확인</strong>해야 한다. 아직 정점 앞이라면 몇 달 더 기다리는 사이 위약금이 오히려 늘어날 수 있다.</p>
+
+    <h3 class="sub">위약금이 면제되는 경우</h3>
+
+    <p>약관상 위약금은 원칙적으로 가입자 사정으로 약정을 깨는 데 대한 정산이다. 따라서 <strong>사업자 귀책이 인정되면 면제될 수 있다.</strong> 실제 사례가 있다. 2025년 4월 SK텔레콤 유심 정보 유출 사고 이후, 정부는 <strong>2025년 7월 4일 조사 결과를 근거로 위약금 면제 규정 적용이 가능하다</strong>고 발표했다. 발표 뒤 엿새 동안 약 7만 5,000명이 이탈했고, 하루 이탈이 1만 명대를 유지했다. 업계에서는 면제가 이뤄질 경우 3년간 최대 7조 원 규모의 손실이 발생할 수 있다는 추산이 나왔다.</p>
+
+    <p>이 사례가 시사하는 바는 분명하다. <strong>위약금은 절대적으로 고정된 금액이 아니라 약관과 귀책 사유에 따라 달라질 수 있는 정산액</strong>이라는 점이다. 서비스 장애나 개인정보 유출처럼 사업자 책임이 명확한 사안이라면, 면제 여부를 확인해 볼 여지가 있다.</p>
+
+    <p>다툼이 생겼을 때 기댈 곳도 있다. 통신 분야에는 분쟁조정 절차가 마련돼 있고, 이용은 계속 늘고 있다. <strong>2025년 통신서비스 분쟁조정 신청은 2,123건으로 2019년 제도 도입 이후 역대 최대</strong>를 기록했다. 계약 해지와 위약금 관련 다툼이 상당한 비중을 차지한다. 상담만으로 풀리지 않는다면 조정 신청이라는 선택지가 남아 있다는 뜻이다.</p>
+
+    <h2 class="sec">🔭 전망과 행동 제안</h2>
+
+    <p>단통법 폐지 이후 시장의 방향은 <strong>지원금 경쟁 재개</strong> 쪽이다. 상한이 사라졌으니 단말기를 싸게 살 기회는 늘어난다. 문제는 <strong>그만큼 반환 대상 금액도 커진다</strong>는 점이다. 지원금 100만 원을 받고 6개월 안에 해지하면 100만 원을 그대로 토해내야 한다. 게다가 공시 의무가 사라져 조건이 매장마다 달라지면서, <strong>내가 받은 지원금이 정확히 얼마이고 어느 부분에 어떤 위약금이 붙는지를 계약서에서 직접 확인하는 일이 전보다 중요해졌다.</strong></p>
+
+    <p>지금 당장 할 수 있는 일을 순서대로 정리하면 이렇다.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-t">가입 유형과 개통일을 확인한다</div>
+        <div class="step-d">선택약정인지 공시지원금인지, 개통일로부터 며칠이 지났는지. 이 두 가지만 알아도 곡선의 어느 지점에 서 있는지 파악할 수 있다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">통신사 앱에서 예상 위약금을 조회한다</div>
+        <div class="step-d">추정 계산은 참고용이고, 실제 청구 기준은 통신사가 산정한 금액이다. 요금제를 낮추려는 경우에도 변경 전에 미리 조회한다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">선택약정이면 정점 통과 여부를 따진다</div>
+        <div class="step-d">24개월 약정에서 12~16개월 구간이 대체로 가장 비싸다. 아직 그 앞이라면 기다리는 사이 금액이 늘 수 있다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">계약할 때 추가지원금 조건을 문서로 남긴다</div>
+        <div class="step-d">단통법 폐지 이후 늘어난 유통점 추가지원금은 별도의 반환 조건이 붙는 경우가 있다. 구두 설명이 아니라 서면으로 확인한다.</div>
+      </div>
+    </div>
+
+    <p>정리하면 기억할 것은 세 가지다. <strong>첫째, 내 위약금이 지원금 반환금인지 요금할인 반환금인지부터 구분한다.</strong> <strong>둘째, 지원금 반환금은 기다릴수록 줄고 요금할인 반환금은 중간이 가장 비싸다.</strong> <strong>셋째, 유예는 면제가 아니며 사업자 귀책이 인정되는 경우에만 진짜 면제가 가능하다.</strong> 이 세 가지만 알고 있으면 고객센터에서 들은 숫자가 어디서 나온 것인지 스스로 검증할 수 있다.</p>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#휴대폰위약금</span>
+      <span class="hashtag">#위약금계산법</span>
+      <span class="hashtag">#선택약정할인반환금</span>
+      <span class="hashtag">#공시지원금위약금</span>
+      <span class="hashtag">#할인반환금</span>
+      <span class="hashtag">#위약금조회</span>
+      <span class="hashtag">#단통법폐지</span>
+      <span class="hashtag">#선택약정25퍼센트</span>
+      <span class="hashtag">#기기변경위약금</span>
+      <span class="hashtag">#요금제변경위약금</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://www.law.go.kr/lsSc.do?menuId=1&amp;subMenuId=15&amp;tabMenuId=81&amp;query=%EC%A0%84%EA%B8%B0%ED%86%B5%EC%8B%A0%EC%82%AC%EC%97%85%EB%B2%95" target="_blank" rel="noopener">국가법령정보센터 — 전기통신사업법(제32조의11 요금할인 등)</a>
+      <a href="https://namu.wiki/w/%EC%84%A0%ED%83%9D%EC%95%BD%EC%A0%95%ED%95%A0%EC%9D%B8" target="_blank" rel="noopener">선택약정할인 — 제도 연혁, 할인율 12%→20%→25% 변화와 할인반환금 구조</a>
+      <a href="https://namu.wiki/w/%EC%9D%B4%EB%8F%99%ED%86%B5%EC%8B%A0%EB%8B%A8%EB%A7%90%EC%9E%A5%EC%B9%98%20%EC%9C%A0%ED%86%B5%EA%B5%AC%EC%A1%B0%20%EA%B0%9C%EC%84%A0%EC%97%90%20%EA%B4%80%ED%95%9C%20%EB%B2%95%EB%A5%A0" target="_blank" rel="noopener">이동통신단말장치 유통구조 개선에 관한 법률 — 제정 배경, 공시지원금 상한과 2025년 7월 22일 폐지</a>
+      <a href="https://namu.wiki/w/%EC%9C%84%EC%95%BD%EA%B8%88/%ED%86%B5%EC%8B%A0%EC%82%AC" target="_blank" rel="noopener">위약금/통신사 — 위약3(할인반환금)과 위약4(지원금 반환금) 도입 시점과 구조 차이</a>
+      <a href="https://www.consumernews.co.kr/news/articleView.html?idxno=424132" target="_blank" rel="noopener">소비자가 만드는 신문 — 휴대폰 할인반환금 주의보, 통신 3사 구간별 반환 비율과 계산 사례</a>
+      <a href="https://zdnet.co.kr/view/?no=20200203170920" target="_blank" rel="noopener">ZDNet Korea — LG유플러스, 경쟁사보다 2년 늦은 할인반환금 개편(SKT 2018.3·KT 2018.9·LGU+ 2020.2)</a>
+      <a href="https://zdnet.co.kr/view/?no=20250717171304" target="_blank" rel="noopener">ZDNet Korea — 단통법 22일 폐지, 25% 요금할인받고 보조금도 받는다</a>
+      <a href="https://antennagom.com/1021" target="_blank" rel="noopener">공시지원금 위약금 정리 — 6개월 100% 구간과 잔여기간 비례 산정식, 기기변경 551일 유예</a>
+      <a href="https://www.news1.kr/it-science/cc-newmedia/5843087" target="_blank" rel="noopener">뉴스1 — SKT 위약금 면제 발표 후 이탈 7만 5,000여명</a>
+      <a href="https://www.etnews.com/20250508000396" target="_blank" rel="noopener">전자신문 — SK텔레콤 위약금 면제 시 3년간 최대 7조원 손실 예상</a>
+      <a href="https://www.businesspost.co.kr/BP?command=article_view&amp;num=431786" target="_blank" rel="noopener">비즈니스포스트 — 2025년 통신서비스 분쟁조정 2,123건, 2019년 이후 역대 최대</a>
+    </div>
+
+    <p class="disclaimer">
+      ※ 본 아티클은 전기통신사업법 조문과 통신 3사 이용약관 관련 공개 자료, 언론 보도를 바탕으로 작성한 정보성 콘텐츠이며 법률 자문이나 특정 통신 상품의 가입·해지 권유가 아닙니다. 본문의 계산 사례는 산정 구조를 설명하기 위한 예시이며, 실제 위약금은 가입 시점의 약관, 요금제, 단말기, 프로모션 조건, 일할 계산 기준에 따라 달라집니다. 특히 산정방식 개편 이전에 가입한 회선과 이후 가입한 회선은 같은 조건에서도 금액이 다를 수 있고, 유통점이 지급한 추가지원금에는 별도의 반환 조건이 붙기도 합니다. 해지·기기변경·요금제 변경 전에는 반드시 가입한 통신사의 고객센터 또는 공식 앱에서 본인 회선의 실제 청구 예정 금액을 직접 확인하시기 바랍니다.
+    </p>
+
+  </div>
+</article>
+</body>
+</html>
