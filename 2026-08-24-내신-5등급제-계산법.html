@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>내신 5등급제 계산법 — 등급별 비율과 9등급제 환산 차이 | 교육·입시</title>
+  <meta name="description" content="내신 5등급제의 등급별 비율은 10·24·32·24·10%이고 누적으로는 10·34·66·90·100%다. 석차백분율과 동석차(중간석차) 계산식, 단위수 가중 평균 등급 산출법, 9등급제와의 위치 환산, 첫 성적표에서 확인된 전 과목 1등급 1.08% 실측치까지 정리했다.">
+  <meta name="keywords" content="내신 5등급제, 내신 등급 계산법, 석차등급 산출, 중간석차 계산, 동석차 등급, 9등급제 환산, 내신 평균 등급, 고교학점제 내신, 2028 대입 개편, 전 과목 1등급 비율">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f5f2f9; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #311b92 0%, #5e35b1 45%, #7b1fa2 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #e1bee7; color: #4a148c; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #f3e5f5; border-left: 5px solid #6a1b9a; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #6a1b9a; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #4a148c; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #6a1b9a; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #4a148c; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #ede7f6; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #6a1b9a; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #4a148c; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #ede7f6; border-left: 4px solid #7e57c2; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #4a148c; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #faf7fd; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #4a148c; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #4a148c; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #e8dff2; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-purple { background: linear-gradient(90deg, #311b92, #7e57c2); }
+    .bar-blue { background: linear-gradient(90deg, #01579b, #4fc3f7); }
+    .bar-amber { background: linear-gradient(90deg, #e65100, #f9a825); }
+    .bar-grey { background: linear-gradient(90deg, #455a64, #90a4ae); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #ddd0ea; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #f3e5f5; color: #4a148c; font-weight: 700; }
+    table.rate td.up { color: #4a148c; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #00695c; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #6a1b9a; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #4a148c; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #d6c7e6; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #4a148c; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #d6c7e6; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #6a1b9a; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #f3e5f5; color: #6a1b9a; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #6a1b9a; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<style>
+  .band { display:flex; width:100%; height:52px; border-radius:8px; overflow:hidden; margin:6px 0 4px; }
+  .band .seg { display:flex; align-items:center; justify-content:center; font-size:12.5px; font-weight:700; color:#fff; text-align:center; line-height:1.25; }
+  .band-title { font-size:13.5px; font-weight:700; color:#4a148c; margin-top:16px; }
+  .scale { display:flex; justify-content:space-between; font-size:11.5px; color:#78909c; margin-bottom:18px; }
+  .g1{background:#311b92}.g2{background:#5e35b1}.g3{background:#7e57c2}.g4{background:#9575cd}.g5{background:#b39ddb;color:#311b92}
+  .n1{background:#311b92}.n2{background:#452ea0}.n3{background:#5537ad}.n4{background:#6642b8}.n5{background:#7e57c2}
+  .n6{background:#9575cd}.n7{background:#a98fd6}.n8{background:#c0b0e2;color:#311b92}.n9{background:#d6c7e6;color:#311b92}
+  .formula { background:#ede7f6; border:1.5px dashed #9575cd; border-radius:10px; padding:18px 22px; margin:20px 0; font-size:15px; color:#4a148c; font-weight:600; line-height:1.9; word-break:keep-all; }
+  .formula code { background:#fff; padding:2px 8px; border-radius:5px; font-size:14.5px; color:#311b92; }
+</style>
+<!-- SEO:AUTO BEGIN -->
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-08-24-%EB%82%B4%EC%8B%A0-5%EB%93%B1%EA%B8%89%EC%A0%9C-%EA%B3%84%EC%82%B0%EB%B2%95">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="내신 5등급제 계산법 — 등급별 비율과 9등급제 환산 차이">
+<meta property="og:description" content="5등급제 등급별 비율과 석차등급 산출식, 동석차 중간석차 계산, 단위수 가중 평균, 9등급제 환산 기준을 정리했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-08-24-%EB%82%B4%EC%8B%A0-5%EB%93%B1%EA%B8%89%EC%A0%9C-%EA%B3%84%EC%82%B0%EB%B2%95">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-08-24T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-08-24T09:00:00+09:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="내신 5등급제 계산법 — 등급별 비율과 9등급제 환산 차이">
+<meta name="twitter:description" content="5등급제 등급별 비율과 석차등급 산출식, 동석차 중간석차 계산, 단위수 가중 평균, 9등급제 환산 기준을 정리했다.">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "내신 5등급제 계산법 — 등급별 비율과 9등급제 환산 차이",
+  "description": "5등급제 등급별 비율과 석차등급 산출식, 동석차 중간석차 계산, 단위수 가중 평균, 9등급제 환산 기준을 정리했다.",
+  "url": "https://sangsang.ephseed.com/2026-08-24-%EB%82%B4%EC%8B%A0-5%EB%93%B1%EA%B8%89%EC%A0%9C-%EA%B3%84%EC%82%B0%EB%B2%95",
+  "datePublished": "2026-08-24T09:00:00+09:00",
+  "dateModified": "2026-08-24T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+</head>
+<body>
+<article class="article-wrap">
+  <header class="hero">
+    <div class="category-badge">🎓 교육 · 입시</div>
+    <h1>내신 5등급제 계산법 —<br>등급별 비율과<br>9등급제 환산 차이</h1>
+    <p class="hero-sub">1등급 기준이 상위 4%에서 상위 10%로 넓어졌다. 그러자 "이제 1등급 받기 쉬워졌다"는 말과 "1등급 받아도 소용없다"는 말이 동시에 돌기 시작했다. 두 말 모두 등급이 어떤 식으로 계산되는지를 건너뛴 채 나온 결론이다. 계산식부터 따라가 보면 실제로 무엇이 달라졌는지가 드러난다.</p>
+    <div class="hero-meta">
+      <span>📅 2026년 8월 24일</span>
+      <span>✍️ 생생 정보통 정책팀</span>
+      <span>⏱️ 읽는 데 약 12분</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+    <div class="summary-box">
+      <h2>3줄 요약</h2>
+      <ul>
+        <li>5등급제의 등급별 비율은 <strong>10 · 24 · 32 · 24 · 10(%)</strong>이고 누적으로는 <strong>10 · 34 · 66 · 90 · 100(%)</strong>이다. 9등급제의 <strong>4 · 11 · 23 · 40 · 60 · 77 · 89 · 96 · 100(%)</strong>과 비교하면 1등급 문턱은 넓어졌지만 <strong>가운데 3등급 한 칸이 전체의 32%</strong>를 삼켜 중위권 변별이 사라졌다.</li>
+        <li>등급은 점수가 아니라 <strong>석차 백분율</strong>로 정해진다. 동점자가 있으면 <strong>중간석차</strong>를 써서 계산하므로 <strong>100점을 받고도 1등급이 아닐 수 있다.</strong> 이 지점이 5등급제에서 훨씬 자주 발생한다.</li>
+        <li>교육부가 2026년 7월 6일 공개한 자료에 따르면 2025학년도 고1 중 <strong>1·2학기 전 과목 1등급은 4,659명(1.08%)</strong>에 그쳤다. 등급 폭이 2.5배 넓어졌어도 <strong>전 과목을 1등급으로 채우는 일은 여전히 드물다.</strong></li>
+      </ul>
+    </div>
+
+    <p>2026년 현재 고등학교 1·2학년은 5등급제로, 3학년은 9등급제로 성적을 받는다. 한 건물 안에서 두 개의 성적 체계가 동시에 돌아가고 있다는 뜻이다. 그래서 형이나 누나의 등급과 내 등급을 그대로 비교하면 반드시 어긋난다. <strong>같은 '2등급'이라도 9등급제에서는 상위 11% 안, 5등급제에서는 상위 34% 안을 뜻한다.</strong> 숫자는 같지만 가리키는 위치가 세 배 넘게 벌어진다.</p>
+
+    <p>혼란의 대부분은 이 환산을 건너뛴 데서 생긴다. 학원 상담에서 "5등급제 2등급은 예전 4등급 수준"이라는 말이 나오고, 학부모 커뮤니티에서는 "1등급이 흔해져서 의미가 없다"는 글이 돈다. 어느 쪽도 계산식을 따라가 본 결과가 아니다. 이 글에서는 <strong>등급이 실제로 어떤 식으로 산출되는지, 두 체계를 어떻게 환산해야 하는지, 그리고 첫 성적표가 나온 뒤 확인된 실측 데이터가 무엇을 보여 주는지</strong>를 차례로 정리한다.</p>
+
+    <div class="pullquote">내신 등급은 시험 점수로 정해지지 않는다. 같은 과목을 들은 학생들 사이에서 내가 몇 번째인가, 그 순위가 전체의 몇 %인가로 정해진다. 점수가 아니라 위치다.</div>
+
+    <h2 class="sec">📌 배경 — 왜 9등급을 5등급으로 줄였나</h2>
+
+    <p>교육부는 2023년 10월 10일 대입제도 개편 시안을 발표하면서 고교 내신을 <strong>전 학년 5등급 상대평가</strong>로 바꾸겠다고 밝혔고, 같은 해 12월 27일 <strong>2028 대학입시제도 개편 확정안</strong>으로 이를 확정했다. 적용 대상은 2025년에 고등학교에 입학한 학생부터다. 이들이 치르는 대입이 2028학년도이므로 흔히 '2028 대입 개편'이라고 부른다.</p>
+
+    <p>바꾼 이유는 <strong>고교학점제</strong>와 짝을 이룬다. 학생이 과목을 직접 골라 듣는 구조에서 9등급 상대평가를 그대로 두면, 수강 인원이 적은 과목을 고를수록 등급이 불리해진다. 예를 들어 수강자가 20명인 과목에서 9등급제 1등급(상위 4%)을 받으려면 1등을 해도 아슬아슬하다. <strong>결국 학생들은 배우고 싶은 과목이 아니라 등급이 잘 나오는 과목으로 몰리게 되고, 이는 고교학점제의 취지 자체를 무너뜨린다.</strong> 등급 구간을 넓혀 이 압력을 줄이자는 것이 5등급제의 명분이었다.</p>
+
+    <p>동시에 확정안은 <strong>모든 과목에 성취도(A~E)와 성취도별 분포비율을 함께 기재</strong>하도록 했다. 상대평가 등급 하나만 보던 방식에서, 절대평가 성취도와 그 학교의 성취도 분포까지 같이 보게 만든 것이다. 여기에 더해 <strong>사회·과학 융합선택 9개 과목은 석차등급을 산출하지 않고 A~E 절대평가만 적용</strong>한다. 탐구 성격이 강한 과목에서까지 순위를 매기지 않겠다는 취지다.</p>
+
+    <h2 class="sec">📊 등급별 비율 — 5등급제와 9등급제 비교</h2>
+
+    <p>두 체계의 구간을 나란히 놓으면 무엇이 달라졌는지가 한눈에 들어온다. 아래 표의 '비율'은 해당 등급이 차지하는 몫이고, '누적'은 그 등급까지 포함한 상위 백분율이다. <strong>실제 등급 판정은 누적 값을 기준으로 이뤄진다.</strong></p>
+
+    <table class="rate">
+      <thead>
+        <tr><th>등급</th><th>5등급제 비율</th><th>5등급제 누적</th><th>9등급제 비율</th><th>9등급제 누적</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="up">1등급</td><td class="up">10%</td><td class="up">상위 10%</td><td>4%</td><td>상위 4%</td></tr>
+        <tr><td class="up">2등급</td><td class="up">24%</td><td class="up">상위 34%</td><td>7%</td><td>상위 11%</td></tr>
+        <tr><td>3등급</td><td>32%</td><td>상위 66%</td><td>12%</td><td>상위 23%</td></tr>
+        <tr><td>4등급</td><td>24%</td><td>상위 90%</td><td>17%</td><td>상위 40%</td></tr>
+        <tr><td>5등급</td><td>10%</td><td>상위 100%</td><td>20%</td><td>상위 60%</td></tr>
+        <tr><td>6등급</td><td>—</td><td>—</td><td>17%</td><td>상위 77%</td></tr>
+        <tr><td>7등급</td><td>—</td><td>—</td><td>12%</td><td>상위 89%</td></tr>
+        <tr><td>8등급</td><td>—</td><td>—</td><td>7%</td><td>상위 96%</td></tr>
+        <tr><td>9등급</td><td>—</td><td>—</td><td>4%</td><td>상위 100%</td></tr>
+      </tbody>
+    </table>
+
+    <p>여기서 놓치기 쉬운 대목이 <strong>3등급의 크기</strong>다. 5등급제에서 3등급은 상위 34%부터 66%까지, 즉 <strong>전체 학생의 3분의 1을 한 칸에 담는다.</strong> 9등급제에서 이 구간에 해당하던 학생들은 4·5·6등급으로 나뉘어 있었다. 1등급 문턱이 넓어진 것보다 <strong>중간이 뭉개진 쪽이 실제로는 더 큰 변화</strong>이며, "5등급제는 변별력이 없다"는 말의 진짜 근거도 상위권이 아니라 이 중위권에 있다.</p>
+
+    <div class="infographic-section">
+      <h3>등급 구간이 차지하는 폭 — 5등급제 vs 9등급제</h3>
+
+      <div class="band-title">5등급제 (2025년 고교 입학생부터)</div>
+      <div class="band">
+        <div class="seg g1" style="width:10%">1<br>10%</div>
+        <div class="seg g2" style="width:24%">2등급<br>24%</div>
+        <div class="seg g3" style="width:32%">3등급<br>32%</div>
+        <div class="seg g4" style="width:24%">4등급<br>24%</div>
+        <div class="seg g5" style="width:10%">5<br>10%</div>
+      </div>
+      <div class="scale"><span>상위 0%</span><span>50%</span><span>하위 100%</span></div>
+
+      <div class="band-title">9등급제 (2026년 기준 고3까지)</div>
+      <div class="band">
+        <div class="seg n1" style="width:4%">1</div>
+        <div class="seg n2" style="width:7%">2</div>
+        <div class="seg n3" style="width:12%">3<br>12%</div>
+        <div class="seg n4" style="width:17%">4등급<br>17%</div>
+        <div class="seg n5" style="width:20%">5등급<br>20%</div>
+        <div class="seg n6" style="width:17%">6등급<br>17%</div>
+        <div class="seg n7" style="width:12%">7<br>12%</div>
+        <div class="seg n8" style="width:7%">8</div>
+        <div class="seg n9" style="width:4%">9</div>
+      </div>
+      <div class="scale"><span>상위 0%</span><span>50%</span><span>하위 100%</span></div>
+
+      <p class="note">※ 가로 폭이 각 등급이 차지하는 학생 비율이다. 5등급제 3등급 한 칸(32%)이 9등급제 4·5등급을 합친 폭(37%)에 육박한다.</p>
+    </div>
+
+    <h2 class="sec">🧮 계산법 ① — 석차등급은 이렇게 나온다</h2>
+
+    <p>등급을 구하는 절차 자체는 단순하다. 시험 점수가 아니라 <strong>같은 과목을 수강한 학생 안에서의 순위</strong>가 출발점이다.</p>
+
+    <div class="formula">
+      <code>석차백분율 = 석차 ÷ 수강자 수 × 100</code><br>
+      → 이 값이 <strong>10 이하면 1등급, 34 이하면 2등급, 66 이하면 3등급, 90 이하면 4등급</strong>, 그 초과는 5등급.
+    </div>
+
+    <p>예를 들어 수강자 250명인 과목에서 20등을 했다면 석차백분율은 20 ÷ 250 × 100 = 8%이므로 <strong>1등급</strong>이다. 같은 과목에서 30등이면 12%가 되어 <strong>2등급</strong>이 된다. 9등급제였다면 20등은 8%로 2등급, 1등급이 되려면 10등 안(4%)에 들어야 했다. 상위권에서는 이 차이가 실제로 크게 작동한다.</p>
+
+    <h3 class="sub">100점인데 1등급이 아닌 경우 — 동석차 처리</h3>
+
+    <p>문제는 <strong>같은 점수를 받은 학생이 여럿일 때</strong>다. 학교생활기록부 작성 기준은 동점자를 모두 같은 석차로 보되, 등급을 산출할 때는 <strong>중간석차</strong>라는 값을 쓴다.</p>
+
+    <div class="formula">
+      <code>중간석차 = 석차 + (동점자 수 − 1) ÷ 2</code><br>
+      <code>중간석차백분율 = 중간석차 ÷ 수강자 수 × 100</code>
+    </div>
+
+    <p>수강자 200명인 과목에서 <strong>만점자가 30명</strong> 나왔다고 하자. 이들의 석차는 모두 1등이지만 중간석차는 1 + (30 − 1) ÷ 2 = <strong>15.5</strong>가 된다. 중간석차백분율은 15.5 ÷ 200 × 100 = <strong>7.75%</strong>이므로 10% 이내, 즉 1등급이다. 그런데 <strong>만점자가 45명</strong>이면 중간석차는 23이 되고 백분율은 11.5%가 되어 <strong>전원이 2등급</strong>으로 떨어진다. 100점을 맞고도 1등급을 못 받는 상황이 이렇게 만들어진다.</p>
+
+    <p>5등급제에서 이 문제가 더 자주 나타나는 이유는 뒤에서 볼 <strong>시험 난이도 하향</strong>과 맞물려 있다. 등급 구간이 넓어졌으니 시험을 조금 쉽게 내도 된다는 판단이 만점자를 늘리고, 만점자가 늘면 동석차 계산이 등급을 끌어내린다. <strong>구간을 넓힌 조치가 오히려 최상위권의 불확실성을 키우는 구조</strong>다.</p>
+
+    <h2 class="sec">🧮 계산법 ② — 평균 등급은 단위수로 가중한다</h2>
+
+    <p>흔히 말하는 "내신 2.3등급" 같은 숫자는 과목별 등급을 단순 평균한 값이 아니다. <strong>과목마다 이수 단위(학점)가 다르므로 그 단위수로 가중평균</strong>해야 한다.</p>
+
+    <div class="formula">
+      <code>평균 등급 = Σ(과목 등급 × 이수 단위) ÷ Σ(이수 단위)</code>
+    </div>
+
+    <p>국어 4단위 2등급, 수학 4단위 3등급, 영어 4단위 2등급, 통합사회 3단위 1등급, 통합과학 3단위 2등급을 이수했다면 분자는 (2×4)+(3×4)+(2×4)+(1×3)+(2×3) = 37, 분모는 18이므로 평균은 <strong>약 2.06등급</strong>이다. <strong>단위수가 큰 과목 하나가 흔들리면 평균이 크게 움직인다</strong>는 뜻이고, 이것이 국·영·수 관리가 중요하다고 말하는 계산상의 이유다.</p>
+
+    <h3 class="sub">두 체계를 굳이 환산해야 한다면</h3>
+
+    <p>정확한 공식 환산표는 존재하지 않는다. 다만 <strong>누적 백분율을 기준으로 위치를 맞춰 보는 근사</strong>는 가능하다. 5등급제 1등급(상위 10%)은 9등급제로 1~2등급 구간(상위 11%)에 거의 맞아떨어지고, 5등급제 2등급의 끝(상위 34%)은 9등급제 3~4등급 경계(상위 23~40%) 사이에 놓인다. <strong>대략 5등급제 2등급이 9등급제 3~4등급대에 해당한다</strong>는 뜻이다. 정밀한 값이 아니라 위치 감각을 잡기 위한 어림이며, 대학이 쓰는 실제 환산은 전형별 산출식에 따라 달라진다.</p>
+
+    <h2 class="sec">🔍 숨겨진 이면 — 첫 성적표가 보여 준 것</h2>
+
+    <h3 class="sub">① 점수는 올랐고, 등급은 안 흔들렸다</h3>
+
+    <p>종로학원이 학교알리미 공개자료로 전국 <strong>1,695개 일반고 1학년</strong>을 분석한 결과, 2025학년도 2학기 5개 주요 교과의 전교생 평균 점수는 <strong>70.4점</strong>으로 9등급제가 적용된 2024년 2학기 <strong>66.9점</strong>보다 <strong>3.5점</strong> 높았다. 성취도 90% 이상인 A등급 학생 비율도 <strong>21.6% → 24.1%</strong>로 2.5%p 올랐다. 과목별로는 영어가 21.0% → 24.1%로 상승폭이 가장 컸고, 국어는 20.9% → 23.1%, 수학은 18.7% → 20.7%였다.</p>
+
+    <p>이 수치는 <strong>학교가 시험을 쉽게 냈다는 신호</strong>로 읽힌다. 등급 구간이 넓어졌으니 변별을 위해 어렵게 낼 이유가 줄어든 것이다. 그런데 여기서 중요한 점은, <strong>점수가 올랐다고 등급이 후해진 것은 아니라는 사실</strong>이다. 등급은 상대평가라서 평균 점수가 아무리 올라도 1등급은 언제나 상위 10%뿐이다. 점수 인플레이션과 등급 인플레이션은 전혀 다른 이야기다.</p>
+
+    <div class="impact-grid">
+      <div class="impact-card"><span class="impact-num">+3.5점</span><span class="impact-label">일반고 1학년 5개 교과<br>평균 점수 상승폭</span></div>
+      <div class="impact-card"><span class="impact-num">24.1%</span><span class="impact-label">A등급 학생 비율<br>(전년 21.6%)</span></div>
+      <div class="impact-card"><span class="impact-num">1.08%</span><span class="impact-label">고1 1·2학기<br>전 과목 1등급 비율</span></div>
+      <div class="impact-card"><span class="impact-num">2%</span><span class="impact-label">광주 일반고 고2<br>전 과목 평균 1등급</span></div>
+    </div>
+
+    <h3 class="sub">② 전 과목 1등급은 여전히 희소하다</h3>
+
+    <p>교육부가 2026년 7월 6일 밝힌 바에 따르면 <strong>2025학년도 고1 중 1·2학기 전 과목이 모두 1등급인 학생은 4,659명(1.08%)</strong>으로, 1학기 대비 38% 줄었다. 학기가 쌓일수록 한 과목이라도 미끄러지는 학생이 늘기 때문이다. 교육부는 3학년까지 전 과목 1등급을 유지하는 학생 수가 <strong>2028학년도 의대 입학정원(3,671명)보다도 적을 것</strong>으로 추산했다.</p>
+
+    <p>시도교육청 자료도 같은 방향을 가리킨다. 광주광역시교육청이 2026년 4월 13일 지역 일반고 51개교 고2 학생 1만 800명을 분석한 결과 <strong>전 과목 석차등급 평균 1등급은 216명(2%)</strong>이었다. 부산광역시교육청 분석에서는 1학년 1·2학기 연속 1등급이 <strong>1.3%</strong>, 5학기 연속으로 넓히면 <strong>0.3%</strong> 수준으로 추정됐다. 서울 일반고 1학년 기준 전 과목 1등급은 <strong>2.09%</strong>였는데, 흥미롭게도 특목고는 <strong>0.44%</strong>로 오히려 낮았다. 성적 상위권이 모여 있는 학교일수록 과목마다 1등급이 다른 학생에게 돌아가기 때문이다.</p>
+
+    <div class="pullquote">"1등급이 4%에서 10%로 늘었으니 1등급 학생도 2.5배가 된다"는 계산은 과목 하나에서만 성립한다. 이수하는 과목이 열 개, 스무 개로 늘어나면 전 과목을 1등급으로 채울 확률은 오히려 급격히 떨어진다.</div>
+
+    <h3 class="sub">③ 자퇴 통계를 읽을 때 주의할 점</h3>
+
+    <p>'내신 리셋을 노린 상위권 자퇴가 급증했다'는 이야기가 2026년 상반기 내내 돌았다. 교육부가 공개한 일반고 1학년 자퇴생 수는 <strong>2021학년도 6,112명 → 2022학년도 7,880명 → 2023학년도 9,373명 → 2024학년도 9,346명 → 2025학년도 1만 6명</strong>이다. 교육부는 <strong>5등급제 도입 이전부터 이미 늘고 있었다</strong>는 점을 근거로 제도 탓이라는 해석에 선을 그었다.</p>
+
+    <p>다만 교육부가 제시한 또 다른 근거는 그대로 받아들이기 어렵다. 교육부는 2025학년도 자퇴생 평균등급이 <strong>3.7등급</strong>으로 2023년 <strong>6.2등급</strong>·2024년 <strong>6.3등급</strong>보다 낮으니 하위권 자퇴가 늘어난 것이라고 설명했다. 그런데 <strong>3.7등급은 5등급제 값이고 6.2·6.3등급은 9등급제 값</strong>이다. 앞서 본 누적 비율표로 각 등급의 중앙 위치를 잡아 근사 환산하면, 9등급제 6.2등급은 <strong>상위 약 71%</strong>, 5등급제 3.7등급은 <strong>상위 약 70%</strong>에 해당한다. <strong>숫자는 6.2에서 3.7로 뚝 떨어졌지만 실제 위치는 거의 그대로다.</strong></p>
+
+    <p class="note">※ 위 환산은 등급별 누적 백분율 구간의 중앙값을 이용한 어림 계산이며, 교육부가 공식 발표한 환산값이 아니다. 등급 평균값을 백분위로 되돌리는 정확한 방법은 원자료 분포를 알아야 가능하다.</p>
+
+    <p>같은 자료에서 자퇴생 중 1등급 비율은 2023년 7.07%, 2024년 6.04%, 2025년 6.72%로 뚜렷한 추세를 보이지 않았다. <strong>상위권 전략적 자퇴가 폭증했다는 주장도, 하위권 자퇴가 크게 늘었다는 설명도 이 데이터만으로는 확정하기 어렵다.</strong> 서로 다른 등급 체계의 숫자를 나란히 놓을 때는 반드시 환산을 거쳐야 한다는 것이, 이 논쟁이 남긴 실질적인 교훈이다.</p>
+
+    <h2 class="sec">💡 나에게 미치는 영향</h2>
+
+    <p>학생과 학부모 입장에서 실제로 달라지는 지점은 네 가지다.</p>
+
+    <div class="flow">
+      <div class="flow-box"><div class="ft">중위권</div><div class="fd">3등급 한 칸이 32%다. 학교 안에서 위치가 꽤 움직여도 등급이 그대로일 수 있어, 등급만으로는 향상 여부를 확인하기 어렵다.</div></div>
+      <div class="flow-box"><div class="ft">최상위권</div><div class="fd">시험이 쉬워지면 만점자가 늘고, 동석차 계산 때문에 1등급이 날아갈 수 있다. 한 문제 실수의 비용이 오히려 커졌다.</div></div>
+      <div class="flow-box"><div class="ft">과목 선택</div><div class="fd">사회·과학 융합선택 9개 과목은 석차등급이 없다. 등급 부담 없이 고를 수 있지만, 상대평가 과목 수가 줄어 남은 과목의 비중은 커진다.</div></div>
+      <div class="flow-box"><div class="ft">학교 선택</div><div class="fd">상위권이 몰린 학교일수록 전 과목 1등급이 어렵다는 사실이 실측으로 확인됐다. 특목고 0.44% vs 서울 일반고 2.09%가 그 근거다.</div></div>
+    </div>
+
+    <p>정리하면 <strong>등급 하나로 자신의 위치를 판단하기가 예전보다 어려워졌다.</strong> 그래서 성적표에 함께 적히는 원점수, 과목 평균, 표준편차, 성취도별 분포비율을 같이 봐야 한다. <strong>같은 3등급이라도 원점수가 학급 평균보다 15점 높은 3등급과 평균 언저리의 3등급은 전혀 다른 상태</strong>이고, 그 차이는 등급란이 아니라 나머지 항목에 적혀 있다.</p>
+
+    <h2 class="sec">🔭 전망과 확인 순서</h2>
+
+    <p>대학이 5등급제 성적을 어떻게 반영할지는 2028학년도 대입전형 시행계획이 확정되면서 구체화된다. 등급 구간이 넓어진 만큼 <strong>대학이 자체 환산식으로 변별을 되살릴 가능성</strong>이 크고, 학생부종합전형에서 성취도·세부능력특기사항의 비중이 높아질 것이라는 전망도 나온다. 정시 비중이 유지되는 한 <strong>수능의 상대적 무게가 커지는 방향</strong>도 함께 열려 있다.</p>
+
+    <p>지금 확인할 수 있는 것부터 순서대로 정리하면 이렇다.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-t">내 학년이 어느 체계인지 확인한다</div>
+        <div class="step-d">2026년 기준 고1·고2는 5등급제, 고3은 9등급제다. 학원 자료나 인터넷 글이 어느 체계 기준인지부터 확인하지 않으면 모든 비교가 어긋난다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">등급이 아니라 석차백분율로 계산해 본다</div>
+        <div class="step-d">석차 ÷ 수강자 수 × 100을 직접 계산하면 10·34·66·90 경계에서 얼마나 떨어져 있는지 보인다. 동점자가 많은 과목은 중간석차 공식까지 적용한다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">평균은 단위수 가중으로 낸다</div>
+        <div class="step-d">단순 평균과 가중평균은 흔히 0.2~0.3등급 차이가 난다. 단위수가 큰 과목의 등급이 평균을 좌우한다는 점을 계산으로 확인해 두는 편이 낫다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">성적표의 나머지 칸을 함께 읽는다</div>
+        <div class="step-d">원점수·과목평균·표준편차·성취도별 분포비율이 등급이 놓친 정보를 담고 있다. 특히 분포비율은 그 과목의 난이도와 경쟁 강도를 보여 준다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">지망 대학의 반영 방식을 개별 확인한다</div>
+        <div class="step-d">등급 환산 방법과 반영 교과·과목은 대학마다 다르다. 일반화된 환산표가 아니라 해당 대학의 전형 자료를 직접 확인해야 한다.</div>
+      </div>
+    </div>
+
+    <p>결국 5등급제가 바꾼 것은 <strong>등급의 난이도가 아니라 등급이 담는 정보의 양</strong>이다. 칸이 아홉 개에서 다섯 개로 줄면서 같은 칸 안에 훨씬 많은 학생이 들어왔고, 그만큼 등급 하나가 말해 주는 것이 줄었다. <strong>계산식을 알고 나면 남는 결론은 단순하다. 등급만 보지 말고, 그 등급이 만들어진 위치를 직접 계산해 볼 것.</strong></p>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#내신5등급제</span>
+      <span class="hashtag">#내신등급계산법</span>
+      <span class="hashtag">#석차등급</span>
+      <span class="hashtag">#9등급제환산</span>
+      <span class="hashtag">#중간석차</span>
+      <span class="hashtag">#고교학점제</span>
+      <span class="hashtag">#2028대입개편</span>
+      <span class="hashtag">#내신평균등급</span>
+      <span class="hashtag">#성취평가제</span>
+      <span class="hashtag">#전과목1등급</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&amp;lev=0&amp;statusYN=W&amp;s=moe&amp;m=020402&amp;opType=N&amp;boardSeq=97551" target="_blank" rel="noopener">교육부 — 2028 대학입시제도 개편 확정안(2023년 12월 27일 발표)</a>
+      <a href="https://www.seoul.co.kr/news/society/education-news/2023/10/11/20231011002006" target="_blank" rel="noopener">서울신문 — 2025년 고교내신 전 학년 5등급 상대평가, 1등급 4%→10% 확대</a>
+      <a href="https://www.nextplay.kr/news/articleView.html?idxno=6892" target="_blank" rel="noopener">괜찮은 뉴스 — 2028 대입제도 개편 확정안 분석(사회·과학 융합선택 9과목 절대평가, 성취도별 분포비율 병기)</a>
+      <a href="https://www.hidomin.com/news/articleView.html?idxno=706606" target="_blank" rel="noopener">경북도민일보 — 종로학원 분석, 일반고 1,695개교 평균 66.9점→70.4점·A등급 21.6%→24.1%</a>
+      <a href="https://www.newsis.com/view/NISX20260706_0003697338" target="_blank" rel="noopener">뉴시스 — 교육부 "2025학년도 고1 전 과목 1등급 4,659명(1.08%)"(2026년 7월 6일)</a>
+      <a href="https://www.newspim.com/news/view/20260706000739" target="_blank" rel="noopener">뉴스핌 — 일반고 1학년 자퇴생 연도별 추이와 자퇴생 평균등급·1등급 비율</a>
+      <a href="https://www.kyobit.com/news/articleView.html?idxno=4954" target="_blank" rel="noopener">교육을 비추다 — 광주시교육청 일반고 51개교 전 과목 1등급 216명(2%), 부산시교육청 1.3%·0.3% 추정</a>
+      <a href="https://www.edujin.co.kr/news/articleView.html?idxno=51923" target="_blank" rel="noopener">에듀진 — 고교 내신 5등급제 첫 성적표, 서울 일반고 2.09% vs 특목고 0.44%</a>
+      <a href="https://www.classroutine.net/blog/naesin-grade-system" target="_blank" rel="noopener">클래스루틴 — 5등급제·9등급제 등급별 누적 비율표와 단위수 가중평균 계산</a>
+      <a href="https://www.pen.go.kr/upload/dep07/na/bbs_2629/ntt_1135088/doc_7dffv2528=70v5a=48v66=9bve1=7b4cvbbccv4630_v2428.pdf" target="_blank" rel="noopener">부산광역시교육청 — 고등학교 학업성적관리 시행지침(석차등급·중간석차 산출 기준)</a>
+    </div>
+
+    <p class="disclaimer">
+      ※ 본 아티클은 교육부 2028 대학입시제도 개편 확정안, 시도교육청 학업성적관리 시행지침, 공공기관 공개자료 및 언론 보도를 바탕으로 작성한 정보성 콘텐츠이며 특정 학교·학원·전형에 대한 진학 상담이나 컨설팅이 아닙니다. 본문의 계산 사례는 산출 구조를 설명하기 위한 예시이며, 실제 등급은 학교별 학업성적관리규정, 과목별 수강자 수, 동점자 분포, 이수 단위 편성에 따라 달라집니다. 9등급제와 5등급제 사이의 환산은 누적 백분율을 이용한 근사이며 공식 환산표가 아닙니다. 대학별 내신 반영 방식과 환산식은 전형마다 다르므로, 진학 판단이 필요한 경우 재학 중인 학교의 학업성적관리규정과 지망 대학의 최신 대입전형 시행계획을 직접 확인하시기 바랍니다.
+    </p>
+
+  </div>
+</article>
+</body>
+</html>
