@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>정년연장 시행 시기 — 출생연도별 적용 순서와 계속고용제 차이 | 취업·노동</title>
+  <meta name="description" content="2026년 8월 현재 법정 정년은 여전히 60세다. 고령자고용법 제19조와 국민연금 수급개시연령 사이에 생긴 5년 소득 공백, 당정이 검토한 세 가지 단계 연장안(2028~2036·2029~2039·2029~2041), 출생연도를 계산하는 방법, 정년연장과 계속고용(재고용·정년폐지)이 어떻게 다른지, 일본이 65세 고용을 달성한 실제 방식까지 확인된 자료로 짚었다.">
+  <meta name="keywords" content="정년연장, 정년연장 시행 시기, 정년 65세, 출생연도별 정년, 계속고용제도, 고령자고용법 제19조, 계속고용장려금, 국민연금 수급개시연령, 임금피크제, 재고용">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #eef4f3; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #004d40 0%, #00695c 45%, #00838f 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #b2dfdb; color: #004d40; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #e0f2f1; border-left: 5px solid #00695c; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #00695c; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #004d40; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #00695c; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #004d40; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #d8ece9; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #00695c; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #004d40; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #e0f2f1; border-left: 4px solid #26a69a; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #004d40; line-height: 1.75; word-break: keep-all; }
+    .formula { background: #fff8e1; border: 1.5px dashed #ffb300; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 17px; font-weight: 800; color: #6d4c00; line-height: 1.7; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #8d6e63; margin-top: 10px; margin-bottom: 0; }
+    .infographic-section { background: #f4faf9; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #004d40; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #004d40; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #dbeceb; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-teal { background: linear-gradient(90deg, #004d40, #26a69a); }
+    .bar-blue { background: linear-gradient(90deg, #01579b, #4fc3f7); }
+    .bar-amber { background: linear-gradient(90deg, #e65100, #f9a825); }
+    .bar-grey { background: linear-gradient(90deg, #455a64, #90a4ae); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #cfe3e0; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #e0f2f1; color: #004d40; font-weight: 700; }
+    table.rate td.up { color: #00695c; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #ef6c00; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #00695c; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #004d40; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #c2ddd9; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #004d40; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #c2ddd9; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #00695c; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #e0f2f1; color: #00695c; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #00695c; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } .formula .f-main { font-size: 15px; } }
+  </style>
+<style>
+  .band { display:flex; width:100%; height:56px; border-radius:8px; overflow:hidden; margin:6px 0 4px; }
+  .band .seg { display:flex; flex-direction:column; align-items:center; justify-content:center; font-size:12.5px; font-weight:700; color:#fff; text-align:center; line-height:1.3; }
+  .band .seg small { font-weight:500; font-size:11px; opacity:0.85; }
+  .band-title { font-size:13.5px; font-weight:700; color:#004d40; margin-top:18px; }
+  .scale { display:flex; justify-content:space-between; font-size:11.5px; color:#78909c; margin-bottom:4px; }
+  .yearline { display:flex; flex-wrap:wrap; gap:8px; margin:18px 0 6px; }
+  .yearline .yr { flex:1 1 128px; border:1px solid #b2dfdb; border-radius:10px; padding:12px 10px; text-align:center; background:#f1f8f7; }
+  .yearline .yr b { display:block; font-size:19px; color:#00695c; font-weight:900; }
+  .yearline .yr span { font-size:12px; color:#546e7a; }
+</style>
+<!-- SEO:AUTO BEGIN -->
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-08-25-%EC%A0%95%EB%85%84%EC%97%B0%EC%9E%A5-%EC%8B%9C%ED%96%89-%EC%8B%9C%EA%B8%B0">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="정년연장 시행 시기 — 출생연도별 적용 순서와 계속고용제 차이">
+<meta property="og:description" content="인터넷에 도는 '1969년생부터 65세' 표는 아직 법이 아니다. 현행 조문, 세 가지 단계안, 출생연도 계산법, 계속고용과의 차이를 확인된 자료로 짚었다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-08-25-%EC%A0%95%EB%85%84%EC%97%B0%EC%9E%A5-%EC%8B%9C%ED%96%89-%EC%8B%9C%EA%B8%B0">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-08-25T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-08-25T09:00:00+09:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="정년연장 시행 시기 — 출생연도별 적용 순서와 계속고용제 차이">
+<meta name="twitter:description" content="법정 정년은 아직 60세다. 단계 연장안별 출생연도 계산법과 정년연장·재고용의 차이를 정리했다.">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "정년연장 시행 시기 — 출생연도별 적용 순서와 계속고용제 차이",
+  "description": "인터넷에 도는 '1969년생부터 65세' 표는 아직 법이 아니다. 현행 조문, 세 가지 단계안, 출생연도 계산법, 계속고용과의 차이를 확인된 자료로 짚었다.",
+  "url": "https://sangsang.ephseed.com/2026-08-25-%EC%A0%95%EB%85%84%EC%97%B0%EC%9E%A5-%EC%8B%9C%ED%96%89-%EC%8B%9C%EA%B8%B0",
+  "datePublished": "2026-08-25T09:00:00+09:00",
+  "dateModified": "2026-08-25T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+</head>
+<body>
+<article class="article-wrap">
+  <header class="hero">
+    <div class="category-badge">💼 취업 · 노동</div>
+    <h1>정년연장 시행 시기 —<br>출생연도별 적용 순서와<br>계속고용제 차이</h1>
+    <p class="hero-sub">검색창에 '정년연장'을 치면 출생연도가 줄줄이 적힌 표가 쏟아진다. 1969년생부터 65세, 1968년생은 64세. 문제는 그 표를 뒷받침하는 법이 아직 없다는 것이다. 2026년 8월 현재 대한민국의 법정 정년은 여전히 60세다. 확정된 것과 검토 중인 것을 갈라서 짚었다.</p>
+    <div class="hero-meta">
+      <span>💼 취업 · 노동</span>
+      <span>📅 2026년 8월 25일</span>
+      <span>⏱️ 약 9분</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+
+    <div class="summary-box">
+      <h2>핵심 요약</h2>
+      <ul>
+        <li>현행법상 정년은 60세 이상이다. 65세로 올리는 법 개정은 <strong>2026년 8월 현재 국회를 통과하지 않았고</strong>, 8월 본회의 처리 목표도 무산됐다.</li>
+        <li>당정이 검토한 안은 세 가지다. <strong>2028년 또는 2029년에 61세로 시작해 2~3년마다 한 살씩 올려 2036~2041년에 65세</strong>에 닿는 방식이다.</li>
+        <li>정년연장과 계속고용은 다른 말이다. 일본이 65세 고용을 사실상 100% 달성한 방식은 정년연장(25.5%)이 아니라 <strong>정년 후 재고용(70.6%)</strong>이었다.</li>
+      </ul>
+    </div>
+
+    <p>인터넷을 조금만 검색하면 "정년연장 1969년생부터", "68년생은 해당 없음" 같은 제목이 수십 개 나온다. 표까지 곁들여져 있어 이미 결정된 일처럼 보인다. 하지만 <strong>그 표들이 근거로 삼은 법안은 아직 국회를 통과하지 않았다.</strong> 2026년 8월 현재 적용되는 조문은 10년 전에 만들어진 그 조항 그대로다.</p>
+
+    <p class="pullquote">확정된 것은 '정년 60세'뿐이다. 나머지는 전부 검토안이다.</p>
+
+    <h2 class="sec">📜 지금 법은 어떻게 되어 있나</h2>
+
+    <p>정년의 근거 조문은 근로기준법이 아니라 <strong>「고용상 연령차별금지 및 고령자고용촉진에 관한 법률」 제19조</strong>다. 흔히 '고령자고용법'으로 줄여 부른다. 내용은 두 문장으로 끝난다.</p>
+
+    <div class="formula">
+      <p class="f-main">사업주는 근로자의 정년을 <strong>60세 이상</strong>으로 정하여야 한다<br>정년을 60세 미만으로 정한 경우에는 <strong>60세로 정한 것으로 본다</strong></p>
+      <p class="f-note">고용상 연령차별금지 및 고령자고용촉진에 관한 법률 제19조 제1항·제2항</p>
+    </div>
+
+    <p>두 번째 문장이 이 조문의 실질적 힘이다. 취업규칙에 "정년 55세"라고 적혀 있어도 <strong>법이 그 문구를 60세로 바꿔 읽는다.</strong> 사업주 처벌 규정이 따로 없는 대신, 정년 조항 자체를 무효로 만들어 버리는 방식이다.</p>
+
+    <p>이 조문은 2013년에 만들어졌지만 곧바로 시행되지 않았다. <strong>상시 300명 이상 사업장과 공공기관은 2016년 1월 1일, 그 밖의 사업장은 2017년 1월 1일</strong>부터 순차 적용됐다. 지금 논의되는 65세 연장안이 단계 시행 방식을 택한 것도 이때의 전례를 따른 것이다.</p>
+
+    <h3 class="sub">정년이 없는 사업장도 많다</h3>
+
+    <p>오해하기 쉬운 지점이 하나 있다. <strong>제19조는 "정년을 정한다면 60세 이상으로 하라"는 규정이지, 모든 사업장에 정년을 두라는 규정이 아니다.</strong> 취업규칙에 정년 조항이 아예 없는 소규모 사업장에서는 이 조문이 직접 작동하지 않는다. 통계상 고령 취업자의 상당수가 이런 사업장에 있기 때문에, 정년을 65세로 올려도 실제 혜택은 정년 제도가 살아 있는 대기업·공공부문에 먼저 돌아간다.</p>
+
+    <h2 class="sec">⏳ 왜 다시 65세인가 — 5년의 소득 공백</h2>
+
+    <p>정년연장 논의가 반복되는 이유는 하나로 요약된다. <strong>일이 끝나는 나이와 연금이 시작되는 나이가 어긋나 있다.</strong> 국민연금 노령연금의 지급개시연령은 출생연도에 따라 이렇게 갈린다.</p>
+
+    <table class="rate">
+      <thead>
+        <tr><th>출생연도</th><th>노령연금 개시</th><th>정년(60세)과의 간격</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1952년 이전</td><td>60세</td><td class="up">공백 없음</td></tr>
+        <tr><td>1953 ~ 1956년</td><td>61세</td><td>1년</td></tr>
+        <tr><td>1957 ~ 1960년</td><td>62세</td><td>2년</td></tr>
+        <tr><td>1961 ~ 1964년</td><td>63세</td><td>3년</td></tr>
+        <tr><td>1965 ~ 1968년</td><td>64세</td><td class="down">4년</td></tr>
+        <tr><td>1969년생 이후</td><td class="new">65세</td><td class="down">5년</td></tr>
+      </tbody>
+    </table>
+
+    <p>1969년생부터는 정년에 도달하고도 <strong>5년을 연금 없이 버텨야 한다.</strong> 이 구간을 흔히 '소득 크레바스'라고 부른다. 조기노령연금으로 최대 5년 당겨 받을 수 있지만 1년 당길 때마다 연 6%씩 깎이고, 그 감액은 평생 따라온다.</p>
+
+    <p>그런데 통계를 보면 문제는 5년보다 훨씬 크다. 2026년 5월 경제활동인구조사 고령층 부가조사에 따르면, 55~79세 인구가 가장 오래 다닌 일자리에서 <strong>실제로 그만둔 평균 연령은 53.0세</strong>였다. 정년 60세는커녕 그 7년 전에 주된 일자리를 떠난다는 뜻이다. 같은 조사에서 <strong>일하기를 원하는 연령은 평균 73.6세</strong>였다. 20년의 간극이 통계 한 장에 그대로 찍혀 있다.</p>
+
+    <div class="infographic-section">
+      <h3>📐 숫자로 보는 고령 노동</h3>
+      <div class="bar-chart">
+        <div class="bar-item">
+          <div class="bar-label"><span>일하고 싶은 나이 (평균 희망 은퇴 연령)</span><span class="val">73.6세</span></div>
+          <div class="bar-track"><div class="bar-fill bar-teal" style="width:100%;">73.6세</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>1969년생 이후 국민연금 개시</span><span class="val">65세</span></div>
+          <div class="bar-track"><div class="bar-fill bar-blue" style="width:88.3%;">65세</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>현행 법정 정년</span><span class="val">60세</span></div>
+          <div class="bar-track"><div class="bar-fill bar-amber" style="width:81.5%;">60세</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>주된 일자리에서 실제 퇴직한 평균 연령</span><span class="val">53.0세</span></div>
+          <div class="bar-track"><div class="bar-fill bar-grey" style="width:72.0%;">53.0세</div></div>
+        </div>
+      </div>
+      <p class="legend">2026년 5월 경제활동인구조사 고령층 부가조사(55~79세) 및 국민연금 지급개시연령 기준. 막대 길이는 73.6세를 100%로 환산한 값이다.</p>
+    </div>
+
+    <p>연금 액수도 공백을 메우기에는 모자란다. 같은 조사에서 지난 1년간 연금을 받은 비율은 52.7%, <strong>월평균 수령액은 88만 원</strong>이었다. 수령자의 74.6%는 월 100만 원을 밑돌았고, 남성 113만 원·여성 61만 원으로 격차도 컸다. 55~79세 취업자가 사상 처음 1,012만 5천 명을 넘어선 배경에는 이 숫자가 있다. 계속 일하고 싶다고 답한 이들의 <strong>53.4%가 이유로 '생활비'</strong>를 꼽았다.</p>
+
+    <h2 class="sec">📅 출생연도별 적용 순서 — 세 가지 검토안</h2>
+
+    <p>여기가 검색 수요가 가장 몰리는 대목이다. 결론부터 말하면 <strong>확정된 출생연도 표는 아직 존재하지 않는다.</strong> 2026년 4월 29일 당정이 재추진 방침을 밝히면서 공개된 안은 세 가지였다.</p>
+
+    <table class="rate">
+      <thead>
+        <tr><th>안</th><th>시작</th><th>인상 주기</th><th>65세 도달</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1안</td><td>2028년 61세</td><td>2년마다 1세</td><td>2036년</td></tr>
+        <tr><td>2안</td><td>2029년 61세</td><td>2~3년마다 1세</td><td>2039년</td></tr>
+        <tr><td>3안</td><td>2029년 61세</td><td>3년마다 1세</td><td>2041년</td></tr>
+      </tbody>
+    </table>
+
+    <p>이후 더불어민주당 정년연장특별위원회가 다듬은 방향은 <strong>2028년 또는 2029년 61세에서 출발해 2년마다 한 살씩 올려 2037년 65세</strong>에 도달하는 형태다. 인터넷에 도는 "1968년생부터", "1969년생부터"라는 표현은 여기서 나왔다. 2028년에 시작하면 1968년생이, 2029년에 시작하면 1969년생이 첫 적용 대상이 된다는 계산이다.</p>
+
+    <h3 class="sub">출생연도를 직접 계산하는 방법</h3>
+
+    <p>표를 외울 필요는 없다. 단계 연장은 <strong>정년에 도달하는 시점을 기준</strong>으로 적용되므로, 어느 해에 정년이 몇 세인지만 알면 나머지는 뺄셈이다.</p>
+
+    <div class="formula">
+      <p class="f-main">그해 새로 정년을 맞는 출생연도 = <strong>해당 연도 − 60</strong></p>
+      <p class="f-note">예: 2029년에 만 60세가 되는 사람은 1969년생. 그해 정년이 61세라면 한 해를 더 일하게 된다.</p>
+    </div>
+
+    <p>2029년 61세 시작·2년마다 1세 인상을 대입하면 대략 이런 순서가 된다.</p>
+
+    <div class="band-title">단계별 정년 (2029년 61세 시작 · 2년 주기 가정)</div>
+    <div class="scale"><span>2029</span><span>2033</span><span>2037</span></div>
+    <div class="band">
+      <div class="seg" style="width:20%;background:#004d40;">61세<small>1969·70년생</small></div>
+      <div class="seg" style="width:20%;background:#00695c;">62세<small>1971·72년생</small></div>
+      <div class="seg" style="width:20%;background:#00838f;">63세<small>1973·74년생</small></div>
+      <div class="seg" style="width:20%;background:#0097a7;">64세<small>1975·76년생</small></div>
+      <div class="seg" style="width:20%;background:#26a69a;">65세<small>1977년생~</small></div>
+    </div>
+    <p class="note">위 출생연도는 '해당 연도 − 60' 공식을 그대로 적용한 <strong>어림 매핑</strong>이다. 실제로는 법안 부칙의 적용 기준일 문언과 만 나이 도달 시점에 따라 경계 연도가 한 해씩 달라질 수 있고, 시작 연도가 2028년이면 전체가 한 칸씩 앞당겨진다. 법안이 통과되기 전에는 어떤 표도 확정으로 볼 수 없다.</p>
+
+    <h3 class="sub">8월 처리는 무산됐다</h3>
+
+    <p>당초 목표는 2026년 8월 국회 본회의 처리였다. 하지만 대통령실이 <strong>청년 고용 악화와 세대 간 일자리 갈등</strong>을 이유로 속도 조절을 요청하면서 후속 논의 일정이 잡히지 않았다. 대통령실 관계자는 "정부는 국정과제인 세대상생형 정년연장 방안 마련을 추진 중"이라며 정년연장 자체를 접은 것은 아니라고 선을 그었다.</p>
+
+    <p>대신 무게추는 사회적 대화로 옮겨 갔다. 경제사회노동위원회는 <strong>2026년 8월 20일 '인구구조 변화와 일자리 공론화 특별위원회' 제2차 전체회의</strong>를 열고 고령 인력 활용과 청년 진입 기회를 함께 다루기로 했다. 숙의토론회는 <strong>8월 30일 서울 연세대, 9월 5일 충남 천안 한국기술교육대</strong>에서 수도권·비수도권 각 150명씩 총 300명이 참여해 열리고, <strong>10월 집중 숙의</strong>가 예정돼 있다. 사전 온라인 조사(878명)에서는 고령자-청년 상생 고용체계 관련 15개 문항 중 13개가 77% 이상 찬성률을 보였다.</p>
+
+    <h2 class="sec">🔀 정년연장과 계속고용은 어떻게 다른가</h2>
+
+    <p>뉴스에 '계속고용'이라는 말이 함께 나오는 이유가 여기 있다. <strong>65세까지 일하게 만드는 방법이 하나가 아니기 때문이다.</strong> 현행 제도가 인정하는 계속고용 방식은 세 가지다.</p>
+
+    <div class="flow">
+      <div class="flow-box">
+        <div class="ft">① 정년연장</div>
+        <div class="fd">정년 자체를 상향. 근속이 이어져 임금·퇴직금 산정에 유리</div>
+      </div>
+      <div class="flow-box">
+        <div class="ft">② 정년폐지</div>
+        <div class="fd">취업규칙에서 정년 조항 삭제. 가장 강한 형태</div>
+      </div>
+      <div class="flow-box">
+        <div class="ft">③ 재고용</div>
+        <div class="fd">정년에 도달해 퇴직한 뒤 새 근로계약. 조건 재협상 가능</div>
+      </div>
+    </div>
+
+    <p style="margin-top:20px;">세 방식의 결과는 겉보기에 비슷하다. 60세가 넘어도 계속 일한다. 그러나 <strong>③ 재고용은 일단 퇴직 처리가 된다는 점에서 결정적으로 다르다.</strong> 근속이 끊기므로 퇴직금이 정산되고, 새 계약에서 임금과 직무를 다시 정한다. 실무에서 재고용 계약의 임금이 이전보다 낮아지는 경우가 많은 이유다. 노동계가 "정년연장"을, 경영계가 "선별적 재고용"을 각각 요구하는 배경도 정확히 이 차이에 있다.</p>
+
+    <h3 class="sub">계속고용장려금 — 이미 작동하는 제도</h3>
+
+    <p>정부는 법 개정과 별개로 <strong>고령자 계속고용장려금</strong>을 운영하고 있다. 정년연장·정년폐지·재고용 중 하나를 취업규칙이나 단체협약에 반영하고 정년에 도달한 근로자를 계속 고용한 사업주에게 인건비를 분기 단위로 지원하는 제도다. 대상은 <strong>우선지원대상기업(중소기업)과 중견기업</strong>이며 대기업은 제외된다. 지원 기간은 <strong>1인당 최대 2년(24개월)</strong>, 분기별 지원 단가는 매년 고시로 정해진다. 신청은 고용24 온라인 또는 관할 고용센터를 통해 분기마다 한다.</p>
+
+    <p class="note">지원 단가와 세부 요건은 연도별 고시와 사업 시행지침에 따라 달라진다. 신청 전 고용노동부 '고령자 계속고용장려금' 당해 연도 가이드북과 고용24 공고문을 확인해야 한다.</p>
+
+    <h2 class="sec">🔍 숨겨진 이면 — 일본은 정년을 올리지 않았다</h2>
+
+    <p>정년연장을 이야기할 때 거의 항상 일본이 인용된다. "일본은 이미 65세, 이제 70세를 준비한다"는 식이다. 사실이다. 다만 <strong>일본이 그 결과에 도달한 방법은 우리가 상상하는 것과 다르다.</strong></p>
+
+    <p>일본의 고연령자고용안정법은 기업에 65세까지의 '고용확보조치'를 의무화하되, ⓐ 정년연장 ⓑ 정년폐지 ⓒ 계속고용(재고용) 중 <strong>하나를 고르게</strong> 했다. 2022년 기준 상시근로자 21인 이상 기업의 이행률은 <strong>99.9%</strong>였다. 그런데 선택 비율을 뜯어보면 이렇다.</p>
+
+    <div class="band-title">일본 기업의 65세 고용확보조치 선택 (2022년, 21인 이상)</div>
+    <div class="band">
+      <div class="seg" style="width:70.6%;background:#00695c;">재고용 70.6%</div>
+      <div class="seg" style="width:25.5%;background:#0097a7;">정년연장 25.5%</div>
+      <div class="seg" style="width:3.9%;background:#b0bec5;font-size:10px;">3.9%</div>
+    </div>
+    <p class="legend">회색은 정년폐지 3.9%. 65세 고용은 사실상 전면 달성됐지만, 그 실체의 7할은 정년 상향이 아니라 퇴직 후 재고용이었다.</p>
+
+    <p class="pullquote">"정년 65세"와 "65세까지 일한다"는 같은 말이 아니다. 일본은 후자를 달성했고, 전자는 네 곳 중 한 곳만 택했다.</p>
+
+    <p>이 구분이 중요한 이유는 <strong>한국의 논쟁이 갈리는 지점이 정확히 여기</strong>이기 때문이다. 65세까지 일할 기회를 보장한다는 목표에는 노사가 대체로 동의한다. 충돌은 그 기회를 '근속이 이어지는 정년'으로 줄 것이냐, '조건을 다시 정하는 재고용'으로 줄 것이냐에서 벌어진다. 일본식 모델을 인용하며 "일본도 했으니 우리도 하자"고 말할 때, 인용하는 쪽이 ⓐ를 가리키는지 ⓒ를 가리키는지 확인하지 않으면 같은 문장으로 정반대 주장을 하게 된다.</p>
+
+    <p>참고로 일본이 2021년 4월 도입한 <strong>70세 취업확보조치는 의무가 아니라 노력의무</strong>다. 2022년 기준 이행 기업은 27.9%(65,782곳)에 그쳤다. 정년 70세 시대가 열렸다는 표현은 제도의 존재를 말한 것이지 현실을 말한 것이 아니다.</p>
+
+    <h3 class="sub">임금피크제는 자동으로 유효해지지 않는다</h3>
+
+    <p>정년을 올리면 인건비가 늘어난다. 그래서 기업은 임금체계 개편, 특히 임금피크제를 함께 요구한다. 그런데 <strong>대법원 2022년 5월 26일 선고 2017다292343 판결</strong>은 임금피크제가 무조건 허용되지 않는다는 점을 분명히 했다. 정년은 그대로 두고 55세 이상 직원의 임금만 깎은 '정년유지형' 임금피크제를 <strong>합리적 이유 없는 연령차별로 보아 무효</strong>로 판단한 사건이다. 노동조합이 동의한 제도였는데도 결론이 바뀌었다.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-t">① 목적의 정당성</div>
+        <div class="step-d">인건비 절감만으로 임금 삭감을 정당화할 수 있는가</div>
+      </div>
+      <div class="step">
+        <div class="step-t">② 대상 조치의 존재</div>
+        <div class="step-d">삭감에 상응해 업무량이나 업무 강도가 실제로 줄었는가</div>
+      </div>
+      <div class="step">
+        <div class="step-t">③ 불이익의 정도</div>
+        <div class="step-d">감액 폭과 적용 기간이 지나치지 않은가</div>
+      </div>
+      <div class="step">
+        <div class="step-t">④ 재원의 사용</div>
+        <div class="step-d">절감한 재원이 본래 목적대로 쓰였는가</div>
+      </div>
+    </div>
+
+    <p>이 네 가지는 <strong>정년을 실제로 늘리면서 임금 곡선을 조정한 '정년연장형'과, 정년은 그대로 두고 임금만 깎은 '정년유지형'을 가르는 기준</strong>이기도 하다. 정년연장형은 근로자가 더 오래 일할 기회를 얻는 대가가 있어 상대적으로 유효성이 인정되기 쉽다. 65세 연장이 입법되면 임금피크제 설계는 자연스럽게 정년연장형으로 옮겨 가겠지만, 개별 제도의 효력은 여전히 위 네 기준에 따라 사건별로 판단된다.</p>
+
+    <h2 class="sec">📊 비용과 세대 — 숫자가 말하는 것</h2>
+
+    <p>재계가 내놓은 추산부터 보자. 한국경제인협회 의뢰 연구용역(2024년 12월 2일 발표)은 정년을 65세로 올릴 경우 <strong>도입 5년차에 연 30조 2,000억 원</strong>의 추가 비용이 발생한다고 추정했다. 대상 인원은 도입 1년차 약 5만 8,000명(60세 정규직)에서 5년차 약 59만 명(60~64세 전체 정규직)으로 늘어난다. 이 금액을 25~29세 월평균 임금 279만 1,000원으로 나누면 <strong>청년 약 90만 2,000명분</strong>에 해당한다는 계산이다.</p>
+
+    <p>기업의 실제 반응은 어떨까. 한국경영자총협회가 2026년 6월 24일 공개한 조사(정년 후 재고용 제도를 운영 중인 30인 이상 기업 500곳)에서 <strong>52.4%가 정년이 65세로 늘면 추가 조치가 불가피하다</strong>고 답했다. 규모가 클수록 비율이 높아 1,000인 이상은 60.5%였다.</p>
+
+    <div class="impact-grid">
+      <div class="impact-card"><div class="impact-num">34.4%</div><div class="impact-label">임금체계 개편</div></div>
+      <div class="impact-card"><div class="impact-num">25.2%</div><div class="impact-label">신규채용·재고용 축소</div></div>
+      <div class="impact-card"><div class="impact-num">15.3%</div><div class="impact-label">인력 구조조정·희망퇴직</div></div>
+      <div class="impact-card"><div class="impact-num">80.4%</div><div class="impact-label">선별 재고용 운영·계획</div></div>
+    </div>
+
+    <p class="legend">경총 2026년 6월 조사. 앞의 세 항목은 '추가 조치가 불가피하다'고 답한 기업의 응답 비율이다.</p>
+
+    <p>세대 간 대체 효과를 실제로 측정한 연구도 있다. 한국개발연구원(KDI)이 2013년 정년 60세 의무화의 효과를 분석한 결과, <strong>정년연장 수혜자가 1명 늘어날 때 55~60세 고용은 약 0.6명 증가하고 15~29세 청년 고용은 약 0.2명 감소</strong>하는 것으로 나타났다. 감소 폭은 대기업과 기존 정년이 55세 이하로 낮았던 사업장에서 더 커서 <strong>0.4명</strong>까지 벌어졌다. KDI는 급격한 시행의 부작용을 지적하며 단계적 접근을 권고했다.</p>
+
+    <p class="note">이 수치는 2013년 입법의 사후 분석이며, 당시와 지금은 인구구조와 노동시장 여건이 다르다. 같은 크기의 효과가 반복된다고 단정할 수는 없다. 다만 세 차례 검토안이 모두 8~13년에 걸친 단계 시행을 택한 이유를 설명하는 근거로는 여전히 인용된다.</p>
+
+    <h2 class="sec">🙋 나에게 미치는 영향</h2>
+
+    <p>출생연도에 따라 지금 확인할 것이 다르다.</p>
+
+    <table class="rate">
+      <thead>
+        <tr><th>구분</th><th>지금 상황</th><th>확인할 것</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>이미 60세를 넘긴 경우</td><td class="down">법 개정과 무관</td><td>재고용 계약 조건, 계속고용장려금 대상 여부</td></tr>
+        <tr><td>1966~1968년생</td><td>가장 불확실</td><td>시작 연도가 2028년이냐 2029년이냐에 따라 적용 여부가 갈린다</td></tr>
+        <tr><td>1969년생 이후</td><td class="new">연금 개시 65세</td><td>정년 60세와의 5년 공백을 무엇으로 메울지</td></tr>
+        <tr><td>정년 조항이 없는 사업장</td><td>제19조 직접 적용 없음</td><td>취업규칙에 정년 규정이 있는지부터 확인</td></tr>
+      </tbody>
+    </table>
+
+    <p>실무적으로 지금 확인할 수 있는 것은 세 가지다. <strong>① 회사 취업규칙의 정년 조항 문언</strong>을 직접 읽어 본다. 60세 미만으로 적혀 있다면 그 조항은 이미 60세로 읽힌다. <strong>② 재고용 제도가 있다면 그 기준이 취업규칙·단체협약에 문서로 있는지 본다.</strong> 관행으로만 운영되는 선별 재고용은 분쟁이 잦다. <strong>③ 국민연금 예상 수급개시연령과 예상 연금액을 확인한다.</strong> 국민연금공단 홈페이지나 앱에서 조회할 수 있고, 이 숫자가 있어야 공백 기간의 크기가 계산된다.</p>
+
+    <h2 class="sec">🔭 전망 — 무엇을 지켜봐야 하나</h2>
+
+    <p>입법 시점을 예측하기는 어렵다. 다만 경로는 비교적 뚜렷하다. 경사노위 공론화가 <strong>10월 집중 숙의</strong>를 거쳐 권고안을 내면, 그 결과가 국회 환경노동위원회 심사의 재료가 된다. 정부가 준비 중이라고 밝힌 청년 일자리 회복 방안이 함께 나올 가능성도 있다. 쟁점은 처음부터 끝까지 세 가지로 압축된다.</p>
+
+    <div class="flow">
+      <div class="flow-box">
+        <div class="ft">쟁점 1</div>
+        <div class="fd">정년연장이냐 재고용 의무화냐 — 근속 유지 여부</div>
+      </div>
+      <div class="flow-box">
+        <div class="ft">쟁점 2</div>
+        <div class="fd">임금체계 개편을 법에 함께 넣을 것이냐 노사 자율에 맡길 것이냐</div>
+      </div>
+      <div class="flow-box">
+        <div class="ft">쟁점 3</div>
+        <div class="fd">시작 연도와 인상 주기 — 8년이냐 13년이냐</div>
+      </div>
+    </div>
+
+    <p style="margin-top:20px;">그때까지는 <strong>확정된 표를 찾기보다 자기 조건을 확인해 두는 편이 실용적이다.</strong> 취업규칙의 정년 문언, 재고용 기준의 문서화 여부, 국민연금 개시연령과 예상액 세 가지는 법 개정과 무관하게 지금 확인할 수 있고, 어떤 안이 통과되든 계산의 출발점이 된다. 정년 관련 분쟁이나 취업규칙 해석이 필요하면 고용노동부 상담센터(국번 없이 1350)나 관할 지방고용노동관서, 공인노무사에게 확인하는 것이 정확하다.</p>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#정년연장</span>
+      <span class="hashtag">#정년연장시행시기</span>
+      <span class="hashtag">#정년65세</span>
+      <span class="hashtag">#출생연도별정년</span>
+      <span class="hashtag">#계속고용제도</span>
+      <span class="hashtag">#계속고용장려금</span>
+      <span class="hashtag">#고령자고용법</span>
+      <span class="hashtag">#국민연금수급연령</span>
+      <span class="hashtag">#임금피크제</span>
+      <span class="hashtag">#재고용</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://law.go.kr/%EB%B2%95%EB%A0%B9/%EA%B3%A0%EC%9A%A9%EC%83%81%20%EC%97%B0%EB%A0%B9%EC%B0%A8%EB%B3%84%EA%B8%88%EC%A7%80%20%EB%B0%8F%20%EA%B3%A0%EB%A0%B9%EC%9E%90%EA%B3%A0%EC%9A%A9%EC%B4%89%EC%A7%84%EC%97%90%20%EA%B4%80%ED%95%9C%20%EB%B2%95%EB%A5%A0/%EC%A0%9C19%EC%A1%B0" target="_blank" rel="noopener">국가법령정보센터 — 고용상 연령차별금지 및 고령자고용촉진에 관한 법률 제19조(정년)</a>
+      <a href="https://www.nps.or.kr/pnsinfo/ntpsklg/getOHAF0056M0.do" target="_blank" rel="noopener">국민연금공단 — 노령연금 지급개시연령(출생연도별)</a>
+      <a href="https://www.khan.co.kr/article/202604292229005" target="_blank" rel="noopener">경향신문 — 당정 '65세 단계적 정년 연장' 재추진, 노동계 "임금 삭감은 안 돼"</a>
+      <a href="https://www.shinkim.com/kor/media/newsletter/3344" target="_blank" rel="noopener">신·김 법률사무소 — 정년연장 입법 추진과 기업의 대응방안</a>
+      <a href="https://www.wikitree.co.kr/articles/1149459" target="_blank" rel="noopener">위키트리 — 정년연장 법안 8월 처리 불투명, 대통령실 속도 조절 요청</a>
+      <a href="https://www.asiatoday.co.kr/kn/view.php?key=20260820010006856" target="_blank" rel="noopener">아시아투데이 — 경사노위 인구구조 변화와 일자리 공론화 특위 제2차 전체회의</a>
+      <a href="https://www.sedaily.com/article/20076188" target="_blank" rel="noopener">서울경제 — 고령 취업자 첫 1000만명, 73세까지 일하고 싶지만 53세 퇴직</a>
+      <a href="https://eiec.kdi.re.kr/policy/materialView.do?num=269522" target="_blank" rel="noopener">KDI 경제교육·정보센터 — 경제활동인구조사 고령층 부가조사 결과</a>
+      <a href="https://www.kdi.re.kr/research/reportView?pub_no=16456" target="_blank" rel="noopener">KDI — 60세 정년 의무화의 영향: 청년 고용에 미치는 영향을 중심으로</a>
+      <a href="https://www.etoday.co.kr/news/view/1894400" target="_blank" rel="noopener">이투데이 — "정년연장 수혜자 1명 늘면 고령고용 0.6명 늘지만 청년고용 0.2명 줄어"</a>
+      <a href="https://www.kmib.co.kr/article/view.asp?arcid=1733128109" target="_blank" rel="noopener">국민일보 — 한경협 "정년 65세 연장 땐 연 30조 이상 필요, 청년 90만명 채용할 규모"</a>
+      <a href="https://www.hankookilbo.com/news/article/A2026062416560003442" target="_blank" rel="noopener">한국일보 — 경총 "기업 과반, 정년 연장 시 신규 채용 축소 등 제도적 대응"</a>
+      <a href="https://www.segye.com/newsView/20241205507922" target="_blank" rel="noopener">세계일보 — 일본은 '70세 고용' 준비, 한국은 65세 정년연장 '시끌'</a>
+      <a href="https://www.kimchang.com/ko/insights/detail.kc?sch_section=4&amp;idx=25198" target="_blank" rel="noopener">김·장 법률사무소 — 정년유지형 임금피크제를 무효로 본 대법원 판결(2017다292343)</a>
+      <a href="https://www.easylaw.go.kr/CSP/CnpClsMain.laf?csmSeq=1696&amp;ccfNo=4&amp;cciNo=1&amp;cnpClsNo=1" target="_blank" rel="noopener">찾기쉬운 생활법령정보 — 고령자 계속고용장려금</a>
+    </div>
+
+    <p class="disclaimer">
+      ※ 본 아티클은 고용상 연령차별금지 및 고령자고용촉진에 관한 법률, 국민연금법 및 국민연금공단 안내, 통계청 경제활동인구조사 고령층 부가조사, 대법원 2022. 5. 26. 선고 2017다292343 판결, 정부·국회·경제사회노동위원회 발표와 언론 보도, 법률사무소 뉴스레터를 바탕으로 작성한 정보성 콘텐츠이며 법률자문이나 유권해석이 아닙니다. <strong>2026년 8월 25일 작성 시점 기준으로 정년을 65세로 상향하는 법 개정은 이루어지지 않았으며, 본문에 정리한 단계 연장 일정과 출생연도 매핑은 확정된 제도가 아니라 검토 중인 안과 그에 대한 어림 계산입니다.</strong> 실제 적용 여부·시기·경계 출생연도는 최종 입법의 부칙 문언에 따라 달라집니다. 개별 사업장의 정년과 재고용 조건은 취업규칙·단체협약·근로계약의 문언과 실제 운영 관행에 따라 결정되며, 계속고용장려금의 지원 단가와 요건은 연도별 고시로 변경됩니다. 구체적인 사안은 반드시 고용노동부 상담센터(국번 없이 1350), 관할 지방고용노동관서, 공인노무사 또는 국민연금공단(1355)에 직접 확인하시기 바랍니다.
+    </p>
+
+  </div>
+</article>
+</body>
+</html>
