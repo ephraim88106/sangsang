@@ -37,7 +37,7 @@
               data-ad-unit = "DAN-EVlth33UH8CTDu2u"
               data-ad-width = "728"
               data-ad-height = "90"></ins>
-            <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+            <script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
             ```
     *   **하단 사이드바/피드 광고 (전체 페이지):**
         *   **목표:** 사이트 우측에 고정 광고 단위를 배치하여 수익 보완 및 가독성 유지.
@@ -53,7 +53,7 @@
                 data-ad-unit = "DAN-KMCr4AoIjIDsi9XA"
                 data-ad-width = "320"
                 data-ad-height = "480"></ins>
-              <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+              <script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
             </div>
             ```
 
@@ -171,7 +171,7 @@
     data-ad-unit = "DAN-EVlth33UH8CTDu2u"
     data-ad-width = "728"
     data-ad-height = "90"></ins>
-  <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+  <script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
 </div>
 ```
 
@@ -183,7 +183,7 @@
     data-ad-unit = "DAN-KMCr4AoIjIDsi9XA"
     data-ad-width = "320"
     data-ad-height = "480"></ins>
-  <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+  <script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
 </div>
 ```
 

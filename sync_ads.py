@@ -22,7 +22,7 @@ NEW_AD_BLOCK = """  <!-- 우측 고정 사이드바 광고 -->
       data-ad-unit = "DAN-EVlth33UH8CTDu2u"
       data-ad-width = "320"
       data-ad-height = "100"></ins>
-    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+    <script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
   </div>"""
 
 def update_file(file_path):
