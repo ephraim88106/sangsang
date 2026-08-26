@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스트레스 DSR 3단계 적용 조건 — 가산금리와 대출 한도 차이 | 경제·금융</title>
+  <meta name="description" content="스트레스 DSR은 실제 대출금리는 그대로 둔 채 한도 계산에만 가산금리를 붙여 대출 한도를 줄이는 제도다. 2025년 7월 3단계 시행으로 적용 비율이 100%가 됐고, 2025년 10월 16일부터 수도권·규제지역 주택담보대출은 스트레스 금리가 3.0%p로 올랐다. 반면 지방 주담대는 2026년 12월 31일까지 2단계(실효 0.75%p)가 유지된다. DSR 계산 공식과 지역·대출유형별 적용 차이, 소득별 한도 감소폭을 금융위원회·은행연합회 안내와 한국은행 통계로 짚었다.">
+  <meta name="keywords" content="스트레스 DSR, 스트레스 DSR 3단계, DSR 계산, 대출 한도, 가산금리, 스트레스 금리, 주택담보대출 한도, 규제지역 주담대, 지방 주담대 유예, 총부채원리금상환비율">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #eff1f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #14275e 0%, #1f3c8a 45%, #2f56b5 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #c9d4f2; color: #14275e; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #e9edfa; border-left: 5px solid #1f3c8a; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #1f3c8a; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #14275e; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #1f3c8a; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #14275e; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #dbe2f6; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #1f3c8a; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #14275e; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #e9edfa; border-left: 4px solid #5b78d6; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #14275e; line-height: 1.75; word-break: keep-all; }
+    .formula { background: #fff8e1; border: 1.5px dashed #ffb300; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 17px; font-weight: 800; color: #6d4c00; line-height: 1.7; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #8d6e63; margin-top: 10px; margin-bottom: 0; }
+    .infographic-section { background: #f5f7fd; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #14275e; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #14275e; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #dee4f6; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-teal { background: linear-gradient(90deg, #14275e, #5b78d6); }
+    .bar-blue { background: linear-gradient(90deg, #01579b, #4fc3f7); }
+    .bar-amber { background: linear-gradient(90deg, #e65100, #f9a825); }
+    .bar-grey { background: linear-gradient(90deg, #455a64, #90a4ae); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #d3daf0; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #e9edfa; color: #14275e; font-weight: 700; }
+    table.rate td.up { color: #1f3c8a; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #ef6c00; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #1f3c8a; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #14275e; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #c7d0ee; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #14275e; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #c7d0ee; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #1f3c8a; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #e9edfa; color: #1f3c8a; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #1f3c8a; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } .formula .f-main { font-size: 15px; } }
+  </style>
+<!-- SEO:AUTO BEGIN -->
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-08-26-%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%8A%A4-DSR-3%EB%8B%A8%EA%B3%84-%EC%A0%81%EC%9A%A9-%EC%A1%B0%EA%B1%B4">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="스트레스 DSR 3단계 적용 조건 — 가산금리와 대출 한도 차이">
+<meta property="og:description" content="실제 이자는 그대로인데 한도만 줄어드는 이유. 수도권 3.0%p와 지방 0.75%p로 갈린 스트레스 금리 구조를 계산식부터 정리했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-08-26-%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%8A%A4-DSR-3%EB%8B%A8%EA%B3%84-%EC%A0%81%EC%9A%A9-%EC%A1%B0%EA%B1%B4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-08-26T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-08-26T09:00:00+09:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="스트레스 DSR 3단계 적용 조건 — 가산금리와 대출 한도 차이">
+<meta name="twitter:description" content="스트레스 금리는 한도 계산용 가상 금리다. 지역과 금리 유형에 따라 한도가 얼마나 갈리는지 짚었다.">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "스트레스 DSR 3단계 적용 조건 — 가산금리와 대출 한도 차이",
+  "description": "스트레스 DSR은 실제 대출금리는 그대로 둔 채 한도 계산에만 가산금리를 붙여 대출 한도를 줄이는 제도다. 2025년 7월 3단계 시행으로 적용 비율이 100%가 됐고, 2025년 10월 16일부터 수도권·규제지역 주택담보대출은 스트레스 금리가 3.0%p로 올랐다. 반면 지방 주담대는 2026년 12월 31일까지 2단계(실효 0.75%p)가 유지된다. DSR 계산 공식과 지역·대출유형별 적용 차이, 소득별 한도 감소폭을 금융위원회·은행연합회 안내와 한국은행 통계로 짚었다.",
+  "url": "https://sangsang.ephseed.com/2026-08-26-%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%8A%A4-DSR-3%EB%8B%A8%EA%B3%84-%EC%A0%81%EC%9A%A9-%EC%A1%B0%EA%B1%B4",
+  "datePublished": "2026-08-26T09:00:00+09:00",
+  "dateModified": "2026-08-26T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+</head>
+<body>
+<article class="article-wrap">
+  <header class="hero">
+    <div class="category-badge">💰 경제 · 금융</div>
+    <h1>스트레스 DSR 3단계 적용 조건 —<br>가산금리와 대출 한도 차이</h1>
+    <p class="hero-sub">은행에서 "한도가 생각보다 적게 나온다"는 말을 듣는 이유는 대개 금리가 올라서가 아니다. 실제로 갚을 이자는 그대로인데, 한도를 계산할 때만 쓰는 가상의 금리가 따로 붙기 때문이다. 그 가상의 금리가 지금 수도권은 3.0%p, 지방은 0.75%p로 갈라져 있다. 같은 소득, 같은 집값인데 사는 지역에 따라 한도가 달라지는 구조를 계산식부터 짚었다.</p>
+    <div class="hero-meta">
+      <span>📅 2026년 8월 26일</span>
+      <span>✍️ 생생 정보통 정책팀</span>
+      <span>⏱️ 읽는 데 약 12분</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+    <div class="summary-box">
+      <h2>3줄 요약</h2>
+      <ul>
+        <li><strong>스트레스 DSR은 실제 대출금리를 올리는 제도가 아니다.</strong> 한도를 산정할 때만 실제 금리에 '스트레스 금리'를 더해 원리금을 부풀려 계산한다. 내는 이자는 그대로이고 <strong>빌릴 수 있는 금액만 줄어든다.</strong></li>
+        <li><strong>2025년 7월 3단계가 시행되면서 적용 비율이 100%가 됐고, 대상도 전 금융권 가계대출로 넓어졌다.</strong> 이어 2025년 10월 16일부터 수도권·규제지역 주택담보대출의 스트레스 금리가 <strong>1.5%p에서 3.0%p로</strong> 올랐다.</li>
+        <li><strong>지방 주택담보대출은 3단계 전환이 계속 미뤄지고 있다.</strong> 은행연합회 공지 기준으로 2026년 7월 1일부터 12월 31일까지 다시 2단계(적용 비율 50%, 실효 0.75%p)가 유지된다. 세 번째 유예다.</li>
+      </ul>
+    </div>
+
+    <p>대출 상담을 받아 본 사람이라면 한 번쯤 겪는 장면이 있다. 인터넷 계산기로 두드려 본 금액과 은행이 알려 준 한도가 몇천만 원씩 어긋난다. 금리를 잘못 넣은 것도, 소득을 부풀린 것도 아니다. 은행은 내가 실제로 적용받을 금리로 계산하지 않기 때문이다.</p>
+
+    <p>2024년 2월부터 단계적으로 도입된 <strong>스트레스 DSR</strong>이 그 차이를 만든다. 이름이 어렵지만 원리는 단순하다. "앞으로 금리가 오를 수도 있으니, 한도를 정할 때는 지금보다 높은 금리를 가정해서 계산하자"는 것이다. 문제는 그 가정치가 얼마인지, 그리고 그 가정치가 <strong>지역과 대출 종류에 따라 전혀 다르게 적용된다</strong>는 사실을 대부분 모른다는 점이다.</p>
+
+    <h2 class="sec">1. 스트레스 DSR이란 — 이자는 그대로, 한도만 줄어든다</h2>
+
+    <p>먼저 DSR부터 정리하자. DSR(총부채원리금상환비율)은 <strong>내가 1년 동안 갚아야 할 모든 대출의 원리금이 연소득에서 차지하는 비율</strong>이다.</p>
+
+    <div class="formula">
+      <p class="f-main">DSR = (모든 대출의 연간 원리금 상환액 ÷ 연소득) × 100</p>
+      <p class="f-note">은행권은 40%, 제2금융권은 50%가 상한이다. 총 대출금액이 1억 원을 넘으면 차주 단위로 적용된다.</p>
+    </div>
+
+    <p>여기서 핵심은 <strong>분자에 들어가는 '연간 원리금'을 어떤 금리로 계산하느냐</strong>다. 스트레스 DSR은 이 계산에만 가산금리(스트레스 금리)를 얹는다.</p>
+
+    <div class="pullquote">
+      스트레스 금리는 한도 계산용 가상 금리다. 대출을 실행해도 실제 이자에는 한 푼도 반영되지 않는다. 다만 은행 장부상 "이 사람은 원리금을 더 많이 갚는 셈"으로 처리되므로, DSR 40% 선에 먼저 걸려 한도가 깎인다.
+    </div>
+
+    <p>예를 들어 실제 대출금리가 연 4.0%인데 스트레스 금리가 1.5%p라면, 은행은 <strong>5.5%로 계산한 원리금</strong>을 DSR 분자에 넣는다. 원리금이 커지니 같은 소득으로 감당할 수 있는 원금은 줄어든다. 이것이 한도가 깎이는 전 과정이다.</p>
+
+    <div class="flow">
+      <div class="flow-box"><div class="ft">① 실제 금리</div><div class="fd">연 4.0% — 내가 실제로 부담하는 이자율. 끝까지 변하지 않는다.</div></div>
+      <div class="flow-box"><div class="ft">② 스트레스 금리 가산</div><div class="fd">+1.5~3.0%p — 한도 계산에만 쓰이는 가상의 상승분.</div></div>
+      <div class="flow-box"><div class="ft">③ 부풀린 원리금</div><div class="fd">5.5~7.0% 기준으로 연간 상환액을 다시 계산한다.</div></div>
+      <div class="flow-box"><div class="ft">④ DSR 40% 판정</div><div class="fd">부풀린 원리금이 연소득의 40%를 넘지 않는 선까지만 대출이 나온다.</div></div>
+    </div>
+
+    <h2 class="sec">2. 스트레스 금리는 어떻게 정해지나 — 5.64%라는 기준점</h2>
+
+    <p>스트레스 금리는 은행이 임의로 정하는 숫자가 아니다. 산정 기준은 <strong>한국은행이 집계하는 예금은행 가계대출 신규취급분 가중평균금리</strong>다. 과거 5년 사이의 최고치와 현재 금리의 격차를 스트레스 금리로 삼는다.</p>
+
+    <div class="formula">
+      <p class="f-main">스트레스 금리 = 최근 5년 내 최고 가계대출 금리 − 현재 금리</p>
+      <p class="f-note">하한 1.5%p · 상한 3.0%p 범위에서 운영된다. 기준이 되는 최고치는 2022년 12월의 5.64%다.</p>
+    </div>
+
+    <p>즉 금리가 크게 떨어져 격차가 벌어져도 3.0%p를 넘지 않고, 반대로 현재 금리가 과거 최고치에 근접해 격차가 거의 없어져도 <strong>최소 1.5%p는 무조건 붙는다.</strong> 이 하한 때문에 "금리가 내렸는데도 한도는 안 늘어난다"는 체감이 생긴다.</p>
+
+    <h3 class="sub">단계별로 달라진 것은 '비율'이었다</h3>
+
+    <p>제도는 처음부터 100%로 시작하지 않았다. 충격을 줄이려고 스트레스 금리의 일부만 반영하는 방식으로 단계를 나눴다.</p>
+
+    <table class="rate">
+      <thead>
+        <tr><th>단계</th><th>시행 시기</th><th>적용 대상</th><th>스트레스 금리 적용 비율</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1단계</td><td>2024년 2월 26일</td><td>은행권 주택담보대출</td><td class="new">25%</td></tr>
+        <tr><td>2단계</td><td>2024년 9월</td><td>은행권 주담대 + 신용대출</td><td class="new">50%<br>(수도권 주담대 80%)</td></tr>
+        <tr><td><strong>3단계</strong></td><td><strong>2025년 7월 1일</strong></td><td><strong>전 금융권 가계대출</strong></td><td class="down"><strong>100%</strong></td></tr>
+      </tbody>
+    </table>
+
+    <p>3단계의 의미는 두 가지다. 첫째, <strong>스트레스 금리가 깎이지 않고 전액 반영</strong>된다. 둘째, 은행권만이 아니라 <strong>제2금융권까지, 주택담보대출만이 아니라 신용대출·기타대출까지</strong> 전부 대상이 됐다. 규제를 피해 저축은행이나 캐피탈로 옮겨 가는 이른바 풍선효과를 막으려는 설계다.</p>
+
+    <p class="note">신용대출은 잔액이 1억 원을 넘는 경우에 스트레스 금리가 적용된다. 소액 신용대출과 무주택자 전세자금대출, 중도금대출, 보험계약대출, 서민금융상품 등은 원칙적으로 DSR 산정에서 제외된다.</p>
+
+    <h2 class="sec">3. 지금 내게 적용되는 숫자 — 수도권 3.0%p, 지방 0.75%p</h2>
+
+    <p>여기서부터가 실제로 한도를 가르는 지점이다. 3단계가 시행됐다고 해서 모두에게 같은 숫자가 붙지 않는다.</p>
+
+    <h3 class="sub">수도권·규제지역 — 2025년 10월 16일부터 3.0%p</h3>
+
+    <p>2025년 10월 15일 발표된 부동산 대책으로 <strong>수도권 및 규제지역 주택담보대출의 스트레스 금리가 1.5%p에서 3.0%p로 두 배가 됐다.</strong> 2025년 10월 16일 계약분부터 적용된다. 같은 대책에서 서울 전역과 경기 12개 지역(과천·광명·성남 분당·수정·중원, 수원 영통·장안·팔달, 안양 동안, 용인 수지, 의왕, 하남)이 규제지역으로 지정됐다.</p>
+
+    <p>대출 규제도 함께 조여졌다. 시가 15억 원 초과 주택은 주택담보대출 한도가 최대 4억 원, 25억 원 초과는 최대 2억 원으로 제한됐고, <strong>수도권·규제지역에서 1주택자가 임차할 때 쓰는 전세대출의 이자상환분이 DSR에 새로 반영</strong>되기 시작했다. 종전에는 빠져 있던 항목이다.</p>
+
+    <h3 class="sub">지방 주택담보대출 — 세 번째 유예로 2단계 유지</h3>
+
+    <p>반대로 규제지역이 아닌 지방 주택담보대출은 3단계 전환이 계속 미뤄지고 있다. 은행연합회는 금융위원회의 행정지도 변경에 따라 <strong>2026년 7월 1일부터 12월 31일까지 지방 주담대에 2단계(적용 비율 50%)를 유지</strong>한다고 안내했다. 2025년 하반기, 2026년 상반기에 이은 세 번째 연장이다.</p>
+
+    <div class="formula">
+      <p class="f-main">지방 주담대 실효 가산 = 스트레스 금리 1.5%p × 적용 비율 50% = <strong>0.75%p</strong></p>
+      <p class="f-note">"지방은 0.75%"라는 표현과 "지방은 1.5%에 50% 적용"이라는 표현은 같은 말이다. 앞의 것은 실효값, 뒤의 것은 산정 구조를 가리킨다.</p>
+    </div>
+
+    <p>정리하면 2026년 8월 현재 적용 상황은 이렇다.</p>
+
+    <table class="rate">
+      <thead>
+        <tr><th>구분</th><th>단계</th><th>실효 가산금리</th><th>비고</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>수도권·규제지역 주담대</td><td>3단계</td><td class="down"><strong>3.00%p</strong></td><td>2025-10-16 계약분부터</td></tr>
+        <tr><td>지방(비규제지역) 주담대</td><td>2단계 유지</td><td class="up"><strong>0.75%p</strong></td><td>2026-12-31까지 유예</td></tr>
+        <tr><td>신용대출·기타대출(전국)</td><td>3단계</td><td class="new"><strong>1.50%p</strong></td><td>잔액 1억 원 초과 시</td></tr>
+      </tbody>
+    </table>
+
+    <p class="note">규제지역 지정은 변동될 수 있고, 지방 유예도 6개월 단위로 갱신되는 행정지도 사항이다. 계약 시점의 적용 수치는 반드시 취급 금융회사에 확인해야 한다.</p>
+
+    <h2 class="sec">4. 대출 종류에 따라 감소폭이 또 갈린다</h2>
+
+    <p>같은 지역, 같은 소득이라도 <strong>어떤 금리 유형의 상품을 고르느냐</strong>에 따라 스트레스 금리가 다르게 반영된다. 논리는 명확하다. 금리가 고정돼 있는 기간이 길수록 미래 금리 상승 위험이 작으므로, 그만큼 스트레스 금리를 적게 반영해 준다.</p>
+
+    <ul class="plain">
+      <li><strong>변동형</strong> — 금리 상승 위험에 그대로 노출된다. 스트레스 금리가 가장 많이 반영되고 한도 감소폭도 가장 크다.</li>
+      <li><strong>혼합형(고정 후 변동)</strong> — 초기 고정 기간이 있어 변동형보다 적게 반영된다.</li>
+      <li><strong>주기형(일정 주기마다 금리 재산정)</strong> — 세 유형 중 반영 비율이 가장 낮아 한도가 가장 덜 깎인다.</li>
+      <li><strong>순수 고정형</strong> — 만기까지 금리가 고정되므로 스트레스 금리 부담이 사실상 없다.</li>
+    </ul>
+
+    <p class="note">유형별 반영 비율의 구체적 수치(예: 혼합형 60%·주기형 30% 등)는 시기별 행정지도와 기관 안내에 따라 표기가 엇갈린다. 본문에서는 확정 수치를 단정하지 않고 <strong>"고정 기간이 길수록 덜 반영된다"는 원칙</strong>만 제시한다. 실제 적용 비율은 상담 시점에 취급 은행에 직접 확인하는 편이 정확하다.</p>
+
+    <div class="pullquote">
+      한도가 부족할 때 소득을 늘리는 것은 어렵지만, 금리 유형을 바꾸는 것은 그 자리에서 가능하다. 변동형에서 주기형·고정형으로 옮기는 것만으로 한도가 회복되는 경우가 실무에서 드물지 않은 이유다.
+    </div>
+
+    <h2 class="sec">5. 한도는 실제로 얼마나 줄어드나</h2>
+
+    <p>금융권이 공개한 시뮬레이션을 보면 감소폭이 체감된다. 다만 <strong>기관마다 만기·상환방식·금리 가정이 달라 숫자가 서로 다르다.</strong> 절대값이 아니라 감소 방향과 크기의 감각으로 읽어야 한다.</p>
+
+    <div class="infographic-section">
+      <h3>연소득 1억 원 차주의 변동금리 주담대 한도 변화</h3>
+      <div class="bar-chart">
+        <div class="bar-item">
+          <div class="bar-label"><span>규제 도입 전</span><span class="val">6억 5,800만 원</span></div>
+          <div class="bar-track"><div class="bar-fill bar-teal" style="width:100%">100%</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>3단계 적용(스트레스 1.5%p)</span><span class="val">5억 5,600만 원</span></div>
+          <div class="bar-track"><div class="bar-fill bar-blue" style="width:84.5%">84.5%</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>수도권 상향 적용(스트레스 3.0%p)</span><span class="val">5억 100만 원</span></div>
+          <div class="bar-track"><div class="bar-fill bar-amber" style="width:76.1%">76.1%</div></div>
+        </div>
+      </div>
+      <p class="note">※ 뱅크샐러드(규제 전 6.58억 → 3단계 5.56억)와 KB의 안내(스트레스 1.5% 5.87억 → 3.0% 5.01억) 수치를 함께 배치한 것으로, 두 기관의 만기·상환방식 가정이 달라 중간값이 정확히 이어지지 않는다. 막대는 규모 비교용이다.</p>
+    </div>
+
+    <div class="infographic-section">
+      <h3>지방 유예가 유지될 때와 3단계로 전환될 때의 한도 차이</h3>
+      <div class="bar-chart">
+        <div class="bar-item">
+          <div class="bar-label"><span>연소득 5,000만 원</span><span class="val">약 2,400만 원 감소</span></div>
+          <div class="bar-track"><div class="bar-fill bar-grey" style="width:50%">−2,400만</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>연소득 7,000만 원</span><span class="val">약 3,600만 원 감소</span></div>
+          <div class="bar-track"><div class="bar-fill bar-blue" style="width:75%">−3,600만</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>연소득 1억 원</span><span class="val">약 4,800만 원 감소</span></div>
+          <div class="bar-track"><div class="bar-fill bar-amber" style="width:100%">−4,800만</div></div>
+        </div>
+      </div>
+      <p class="legend">변동금리 4.5%, 30년 원리금균등 상환 가정. 지방 유예가 종료돼 3단계로 전환될 경우의 감소 추정치다.</p>
+    </div>
+
+    <p>소득이 높을수록 감소 <strong>금액</strong>이 크다는 점이 눈에 띈다. DSR은 비율 규제이므로 감소율은 비슷하지만, 원래 한도가 크면 깎이는 절대액도 그만큼 커진다.</p>
+
+    <h2 class="sec">6. 숨겨진 이면 — 규제는 전국 단일이 아니라 지역별 조절 장치가 됐다</h2>
+
+    <p>스트레스 DSR은 도입 당시 "금리 상승 위험에 대비한 차주 보호 장치"로 설명됐다. 그런데 운용 실태를 보면 성격이 달라져 있다.</p>
+
+    <p>수도권은 3.0%p, 지방은 0.75%p. <strong>같은 제도의 같은 단계 안에서 실효 가산금리가 네 배 차이</strong>가 난다. 여기에 지방 유예는 세 차례 연장됐고, 그때마다 근거는 "지방 부동산·건설 경기 침체"와 "대내외 불확실성"이었다. 차주의 금리 위험이 아니라 <strong>지역 부동산 경기가 적용 수치를 정하고 있다</strong>는 뜻이다.</p>
+
+    <div class="pullquote">
+      제도의 이름은 '금리 스트레스 대비'인데, 실제로 숫자를 움직이는 변수는 지역 주택시장 상황이다. 스트레스 DSR은 사실상 지역별 대출 총량을 조절하는 밸브로 쓰이고 있다.
+    </div>
+
+    <p>이 관찰이 왜 중요한가. <strong>대비할 대상이 달라지기 때문이다.</strong> 금리 대비 장치라면 한국은행 기준금리 흐름을 보면 된다. 그러나 지역 경기 조절 밸브라면, 규제지역 지정·해제와 6개월마다 돌아오는 행정지도 갱신 시점이 훨씬 직접적인 변수가 된다. 지방에서 주택 구입을 계획 중이라면 <strong>2026년 12월 31일</strong>이라는 날짜가 금리 전망보다 중요하다.</p>
+
+    <h3 class="sub">한도를 조였는데 가계대출은 왜 늘었나</h3>
+
+    <p>규제 강도는 계속 세졌지만 총량은 반대로 움직였다. 한국은행 집계로 <strong>2026년 7월 은행 가계대출은 5조 4,000억 원 늘었다.</strong> 주택담보대출이 3조 4,000억 원, 신용대출 등 기타대출이 2조 원이다. 전년 같은 달(2조 7,000억 원)의 정확히 두 배이고, <strong>5월부터 7월까지 석 달간 19조 9,000억 원</strong>이 불어났다.</p>
+
+    <div class="impact-grid">
+      <div class="impact-card"><span class="impact-num">5.4조</span><span class="impact-label">2026년 7월 은행 가계대출 증가액</span></div>
+      <div class="impact-card"><span class="impact-num">2배</span><span class="impact-label">전년 동월(2.7조) 대비</span></div>
+      <div class="impact-card"><span class="impact-num">19.9조</span><span class="impact-label">2026년 5~7월 석 달 누적 증가액</span></div>
+    </div>
+
+    <p>한도 규제가 총량을 못 막는 이유는 구조에 있다. DSR은 <strong>소득 대비 비율</strong> 규제라 소득이 높은 차주에게는 여전히 여유가 남는다. 게다가 무주택자 전세자금대출과 정책성 대출은 DSR 산정에서 빠지고, 지방 유예까지 겹치면 규제가 실제로 닿는 범위는 생각보다 좁다. 규제가 강해질수록 <strong>규제에서 제외된 통로로 수요가 몰리는</strong> 흐름이 반복되는 셈이다.</p>
+
+    <h2 class="sec">7. 나에게 미치는 영향과 준비 순서</h2>
+
+    <p>실행 단계에서 확인해야 할 것은 다섯 가지다.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-t">대상 주택이 규제지역인지 먼저 본다</div>
+        <div class="step-d">규제지역이면 스트레스 3.0%p, 비규제 지방이면 0.75%p다. 이 한 가지가 한도 차이의 대부분을 만든다. 규제지역 지정은 수시로 바뀌므로 계약일 기준으로 확인한다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">기존 대출을 전부 합산해 본다</div>
+        <div class="step-d">DSR은 신규 대출만 보지 않는다. 신용대출·자동차 할부·카드론·학자금대출의 연간 원리금이 모두 분자에 들어간다. 소액이라도 정리하면 한도가 늘어난다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">금리 유형을 바꿔서 계산해 달라고 요청한다</div>
+        <div class="step-d">변동형 대신 주기형·고정형으로 견적을 다시 받아 본다. 고정 기간이 길수록 스트레스 금리 반영이 줄어 한도가 회복될 수 있다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">만기를 늘리면 한도가 늘지만 총이자도 는다</div>
+        <div class="step-d">만기를 늘리면 연간 원리금이 줄어 DSR이 낮아진다. 다만 상환 기간이 길어진 만큼 총이자 부담은 커지므로 한도만 보고 결정하지 않는다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">지방이라면 유예 종료 시점을 일정에 넣는다</div>
+        <div class="step-d">현재 유예는 2026년 12월 31일까지다. 연장 여부는 그 전에 결정된다. 자금 계획이 걸쳐 있다면 갱신 발표를 확인하고 움직인다.</div>
+      </div>
+    </div>
+
+    <h2 class="sec">8. 전망 — 유예는 언제까지 반복될 수 있나</h2>
+
+    <p>지방 유예는 이미 세 번 연장됐다. 연장의 명분이 지방 주택시장 회복 지연인 이상, 시장이 살아나지 않으면 네 번째 연장 가능성도 남아 있다. 반대로 <strong>가계대출 증가세가 지금처럼 이어지면 유예를 거둘 명분이 쌓인다.</strong> 2026년 5~7월의 석 달 20조 원 가까운 증가가 그 압력이다.</p>
+
+    <p>수도권 쪽은 방향이 다르다. 스트레스 금리는 상한이 3.0%p이므로 이미 천장에 닿아 있다. 더 조이려면 스트레스 금리가 아니라 <strong>LTV·주택가격 구간별 한도·DSR 제외 대상 축소</strong> 같은 다른 수단이 동원될 가능성이 크다. 2025년 10월 대책에서 1주택자 전세대출 이자상환분을 DSR에 넣은 것이 그 예고편에 가깝다.</p>
+
+    <p>결국 차주 입장에서 관리 가능한 변수는 두 가지뿐이다. <strong>기존 대출의 연간 원리금을 줄이는 것</strong>, 그리고 <strong>금리 유형과 만기를 조합해 계산상 원리금을 낮추는 것.</strong> 스트레스 금리 자체는 개인이 협상할 수 있는 항목이 아니다.</p>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#스트레스DSR</span>
+      <span class="hashtag">#DSR3단계</span>
+      <span class="hashtag">#대출한도</span>
+      <span class="hashtag">#가산금리</span>
+      <span class="hashtag">#주택담보대출</span>
+      <span class="hashtag">#총부채원리금상환비율</span>
+      <span class="hashtag">#규제지역</span>
+      <span class="hashtag">#가계부채</span>
+      <span class="hashtag">#지방주담대유예</span>
+      <span class="hashtag">#금융위원회</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://kbthink.com/loan-guide/stressdsr.html" target="_blank" rel="noopener">KB THINK — 스트레스 DSR 3단계 시행, 대출 한도 얼만큼 줄었을까?</a>
+      <a href="https://kbthink.com/realestate/issue/hosing-260701.html" target="_blank" rel="noopener">KB THINK — 지방 주담대 스트레스 DSR 또 연장, 내 대출 한도는?</a>
+      <a href="https://greened.kr/news/articleView.html?idxno=343798" target="_blank" rel="noopener">녹색경제신문 — 지방 주담대 스트레스 DSR 2단계 유지, 3단계 전환 반년 유예</a>
+      <a href="https://www.greened.kr/news/articleView.html?idxno=334096" target="_blank" rel="noopener">녹색경제신문 — 금융당국, 지방 주담대 DSR 3단계 또 6개월 유예</a>
+      <a href="https://www.banksalad.com/articles/%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%8A%A4-DSR-%EA%B7%9C%EC%A0%9C-%EC%A0%84%EC%84%B8%EB%8C%80%EC%B6%9C-%EB%8B%A8%EA%B3%84" target="_blank" rel="noopener">뱅크샐러드 — 스트레스 DSR 3단계 시행, 대출한도 차이는 얼마까지?</a>
+      <a href="https://www.econovill.com/news/articleView.html?idxno=696248" target="_blank" rel="noopener">이코노믹리뷰 — 3단계 스트레스 DSR 도입, 주담대 한도 얼마나 줄어들까</a>
+      <a href="https://namu.wiki/w/10.15%20%EB%B6%80%EB%8F%99%EC%82%B0%20%EB%8C%80%EC%B1%85" target="_blank" rel="noopener">나무위키 — 10.15 부동산 대책(대출 규제 부분)</a>
+      <a href="https://www.khan.co.kr/article/202510151656001" target="_blank" rel="noopener">경향신문 — 10·15 부동산 대책 Q&amp;A, 2년 실거주 의무와 대출 규제</a>
+      <a href="https://www.fnnews.com/news/202608141030561075" target="_blank" rel="noopener">파이낸셜뉴스 — 은행 가계대출 5.4조 증가, 작년의 2배</a>
+      <a href="https://www.fsc.go.kr/no010101/84617" target="_blank" rel="noopener">금융위원회 보도자료 — 3단계 스트레스 DSR 시행방안 확정·발표</a>
+      <a href="https://www.tossbank.com/articles/stressdsr3" target="_blank" rel="noopener">토스뱅크 — 스트레스 DSR 3단계 시행 안내</a>
+      <a href="https://toss.im/tossfeed/article/loan-101-stress-dsr" target="_blank" rel="noopener">토스피드 — 스트레스 DSR 3단계, 대출한도 더 줄어들 수 있어요</a>
+      <a href="https://glasswallet.com/blog/dsr-regulation-guide/" target="_blank" rel="noopener">유리지갑 — DSR 40%면 대출 얼마나 나오나, 2026년 스트레스 DSR 적용</a>
+      <a href="https://www.fnnews.com/news/202606150500509910" target="_blank" rel="noopener">파이낸셜뉴스 — 지방도 주담대도 DSR 족쇄 조인다, 유예 종료 결정</a>
+    </div>
+
+    <p class="disclaimer">
+      ※ 본 아티클은 금융위원회 보도자료와 은행연합회 행정지도 안내, 한국은행 가계대출 통계, 각 금융기관의 공개 설명자료 및 언론 보도를 바탕으로 작성한 정보성 콘텐츠이며 특정 금융상품에 대한 권유나 투자·대출 자문이 아닙니다. 스트레스 DSR의 적용 단계·적용 비율·스트레스 금리 수준과 규제지역 지정은 <strong>행정지도 사항으로 6개월 단위 등으로 갱신되며 발표 시점에 따라 달라질 수 있습니다.</strong> 특히 지방 주택담보대출의 2단계 유지는 2026년 12월 31일까지로 안내된 한시 조치이고, 대출 유형별(변동형·혼합형·주기형) 스트레스 금리 반영 비율은 출처에 따라 표기가 엇갈려 본문에서 확정 수치를 제시하지 않았습니다. 본문의 한도 시뮬레이션은 각 기관이 서로 다른 만기·상환방식·금리를 가정해 산출한 예시로 실제 승인 한도와 다릅니다. 실제 대출 가능 금액과 적용 수치는 반드시 계약 시점에 취급 금융회사에 직접 확인하시기 바랍니다.
+    </p>
+
+  </div>
+</article>
+</body>
+</html>
