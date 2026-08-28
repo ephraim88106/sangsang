@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>조기폐차 지원금 신청방법 — 배출가스 5등급 차량 조회와 상한액 산정 | 환경·기후</title>
+  <meta name="description" content="조기폐차 지원금은 배출가스 4·5등급 차량을 폐차할 때 받는 보조금이다. 2026년 지침 기준 5등급 3.5톤 미만 상한액은 300만원, 4등급 경유차 3.5톤 미만은 800만원이며 상한액은 받는 금액이 아니라 차량기준가액에 지원율을 곱한 값의 천장이다. 5등급 지원사업은 2026년으로 종료되고 4등급은 전기·수소·하이브리드 구매 시에만 2차 보조금이 나온다. 등급 조회 방법, 6개월 등록·6개월 소유 등 5가지 요건, 신청 5단계와 2개월·4개월 청구 기한을 정리했다.">
+  <meta name="keywords" content="조기폐차 지원금, 조기폐차 신청방법, 배출가스 5등급, 배출가스 등급 조회, 노후경유차 조기폐차, 조기폐차 상한액, 4등급 경유차 보조금, 조기폐차 대상, 차량기준가액, 계절관리제 운행제한">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f4f6f3; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 45%, #00695c 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #c5e1a5; color: #1b5e20; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #e8f5e9; border-left: 5px solid #2e7d32; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #2e7d32; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #1b5e20; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #2e7d32; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #1b5e20; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #e8f5e9; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #2e7d32; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #1b5e20; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #f1f8e9; border-left: 4px solid #7cb342; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #33691e; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f7faf6; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #1b5e20; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #1b5e20; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #e0ece0; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-green { background: linear-gradient(90deg, #1b5e20, #43a047); }
+    .bar-teal { background: linear-gradient(90deg, #004d40, #00897b); }
+    .bar-amber { background: linear-gradient(90deg, #e65100, #f9a825); }
+    .bar-red { background: linear-gradient(90deg, #b71c1c, #e53935); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #d7e4d7; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #e8f5e9; color: #1b5e20; font-weight: 700; }
+    table.rate td.up { color: #1b5e20; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #00695c; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #2e7d32; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #1b5e20; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #c8e6c9; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #1b5e20; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .donut-wrap { display: flex; align-items: center; gap: 26px; flex-wrap: wrap; justify-content: center; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #e8f5e9; color: #2e7d32; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #2e7d32; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  
+    .formula { background: #f9fbe7; border: 1.5px dashed #9e9d24; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 16.5px; font-weight: 800; color: #33691e; line-height: 1.8; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #7cb342; margin-top: 10px; margin-bottom: 0; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #c5e1a5; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #2e7d32; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #558b2f; line-height: 1.55; word-break: keep-all; }
+</style>
+<!-- SEO:AUTO BEGIN -->
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-08-28-%EC%A1%B0%EA%B8%B0%ED%8F%90%EC%B0%A8-%EC%A7%80%EC%9B%90%EA%B8%88-%EC%8B%A0%EC%B2%AD%EB%B0%A9%EB%B2%95">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="조기폐차 지원금 신청방법 — 배출가스 5등급 차량 조회와 상한액 산정">
+<meta property="og:description" content="5등급 3.5톤 미만 300만원, 4등급 800만원. 상한액과 실수령액이 다른 이유와 6개월 요건, 청구 기한까지 정리했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-08-28-%EC%A1%B0%EA%B8%B0%ED%8F%90%EC%B0%A8-%EC%A7%80%EC%9B%90%EA%B8%88-%EC%8B%A0%EC%B2%AD%EB%B0%A9%EB%B2%95">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-08-28T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-08-28T09:00:00+09:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="조기폐차 지원금 신청방법 — 배출가스 5등급 차량 조회와 상한액 산정">
+<meta name="twitter:description" content="상한액 300만원을 다 받는 사람은 드물다. 차량기준가액이 실제 금액을 정하는 구조와 신청 5단계를 정리했다.">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "조기폐차 지원금 신청방법 — 배출가스 5등급 차량 조회와 상한액 산정",
+  "description": "조기폐차 지원금은 배출가스 4·5등급 차량을 폐차할 때 받는 보조금이다. 2026년 지침 기준 5등급 3.5톤 미만 상한액은 300만원, 4등급 경유차 3.5톤 미만은 800만원이며 상한액은 받는 금액이 아니라 차량기준가액에 지원율을 곱한 값의 천장이다. 5등급 지원사업은 2026년으로 종료되고 4등급은 전기·수소·하이브리드 구매 시에만 2차 보조금이 나온다. 등급 조회 방법, 6개월 등록·6개월 소유 등 5가지 요건, 신청 5단계와 2개월·4개월 청구 기한을 정리했다.",
+  "url": "https://sangsang.ephseed.com/2026-08-28-%EC%A1%B0%EA%B8%B0%ED%8F%90%EC%B0%A8-%EC%A7%80%EC%9B%90%EA%B8%88-%EC%8B%A0%EC%B2%AD%EB%B0%A9%EB%B2%95",
+  "datePublished": "2026-08-28T09:00:00+09:00",
+  "dateModified": "2026-08-28T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+</head>
+<body>
+<article class="article-wrap">
+  <header class="hero">
+    <div class="category-badge">🌱 환경 · 기후</div>
+    <h1>조기폐차 지원금 신청방법 —<br>배출가스 5등급 차량 조회와 상한액 산정</h1>
+    <p class="hero-sub">"300만원 준다더라"는 말을 듣고 폐차장에 갔다가 통장에 찍힌 금액을 보고 당황하는 일이 매년 반복된다. 조기폐차 보조금에서 흔히 알려진 숫자는 <b>받는 돈이 아니라 넘을 수 없는 천장</b>이기 때문이다. 게다가 5등급 차량을 대상으로 한 이 사업은 올해가 마지막이다. 내 차가 몇 등급인지, 얼마를 받을 수 있는지, 언제까지 무엇을 내야 하는지를 순서대로 정리했다.</p>
+    <div class="hero-meta">
+      <span>📅 2026년 8월 28일</span>
+      <span>✍️ 생생 정보통 정책팀</span>
+      <span>🌱 환경 · 기후</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+
+    <div class="summary-box">
+      <h2>핵심 요약</h2>
+      <ul>
+        <li>2026년 지침 기준 상한액은 5등급 총중량 3.5톤 미만 300만원, 4등급 경유차 3.5톤 미만 800만원이다. 다만 상한액은 지급액이 아니라 <strong>차량기준가액 × 지원율</strong>의 한도다.</li>
+        <li>신청하려면 <strong>6개월 이상 연속 등록·6개월 이상 소유·관능검사 적합·정부 지원 저감장치 미부착</strong>을 모두 충족해야 한다.</li>
+        <li>5등급 조기폐차 지원은 <strong>2026년으로 종료</strong>되고, 4등급은 전기·수소·하이브리드로 바꿀 때만 2차 보조금이 나온다.</li>
+      </ul>
+    </div>
+
+    <h2 class="sec">1. 배경 — 왜 지금 정리가 필요한가</h2>
+
+    <p>조기폐차 보조금은 노후 경유차와 건설기계가 수명을 다하기 전에 스스로 도로에서 빠지도록 돈을 얹어 주는 제도다. 미세먼지 대책의 한 축으로 운영돼 왔고, 대상이 되는 배출가스 5등급 차량은 실제로 빠르게 줄었다.</p>
+
+    <p>기후에너지환경부가 2026년 2월 13일 발표한 개편안에 따르면, <strong>배출가스 5등급 차량 등록 대수는 2020년 말 약 100만 대에서 2025년 말 약 16만 대로 5년 만에 84% 감소</strong>했다. 남은 물량이 줄고 사업 참여 수요도 함께 줄면서, 정부는 5등급 차량을 대상으로 한 조기폐차 지원을 <strong>2026년 말로 종료</strong>하고 무게중심을 4등급 경유차의 무공해차 전환으로 옮기기로 했다.</p>
+
+    <p>2026년 지원 물량은 총 11만 3천 대 규모로 제시됐고, 이 가운데 5등급이 4만 4천 대, 4등급이 6만 4천 대로 안내됐다. 발표 자료의 총계와 세부 물량 합계 사이에는 약 5천 대의 차이가 있어, 실제 배정은 지자체별 예산 편성 과정에서 달라질 수 있다.</p>
+
+    <div class="pullquote">
+      5등급 차주에게 이 제도는 "언젠가 신청하면 되는 것"이 아니라 <b>올해가 지나면 사라지는 것</b>이 됐다. 반대로 4등급 차주에게는 이제 막 열린 문이다.
+    </div>
+
+    <h2 class="sec">2. 배출가스 등급 조회 방법 — 내 차는 몇 등급인가</h2>
+
+    <p>등급은 차령이나 주행거리가 아니라 <strong>제작 당시 적용된 배출허용기준</strong>으로 정해진다. 근거는 환경부고시 「자동차 배출가스등급 산정기준에 관한 규정」이다. 같은 연식이라도 연료가 다르면 등급이 달라지는 이유가 여기에 있다.</p>
+
+    <h3 class="sub">등급을 가르는 경계선</h3>
+
+    <table class="rate">
+      <tr><th>구분</th><th>5등급</th><th>4등급</th></tr>
+      <tr><td>경유 (경형·소형·중형)</td><td class="down">2002년 7월 1일 이전 기준</td><td>2006년 기준</td></tr>
+      <tr><td>휘발유·가스 (경형·소형·중형)</td><td class="down">1987년 이전 기준</td><td>1988~1999년 기준</td></tr>
+      <tr><td>경유 (대형·초대형)</td><td class="down">2002년 7월 이전 기준</td><td>2006년 기준</td></tr>
+      <tr><td>휘발유·가스 (대형·초대형)</td><td class="down">2000년 이전 기준</td><td>2002년 7월 기준</td></tr>
+    </table>
+
+    <p class="note">※ 경유차에는 1등급이 없다. 표의 연도는 제작 당시 적용 기준이며, 실제 등급은 자동차등록증의 형식·인증 정보로 판정된다.</p>
+
+    <h3 class="sub">조회하는 세 가지 경로</h3>
+
+    <div class="flow">
+      <div class="flow-box"><div class="ft">자동차배출가스 종합전산시스템</div><div class="fd">mecar.or.kr 에서 차량번호로 조회한다. 2026년 3월부터는 '내차 종합 정보' 메뉴에서 등급과 함께 <b>예상 지원금</b>까지 확인할 수 있다.</div></div>
+      <div class="flow-box"><div class="ft">전화 확인</div><div class="fd">배출가스 등급 콜센터 1833-7435. 온라인 조회가 어려운 경우 차량번호와 소유자 확인으로 안내받는다.</div></div>
+      <div class="flow-box"><div class="ft">자동차등록증</div><div class="fd">등록증에 적힌 최초등록일과 연료, 형식으로 대략의 등급대를 가늠할 수 있다. 다만 최종 판정은 전산시스템 값이 기준이다.</div></div>
+    </div>
+
+    <h2 class="sec">3. 지원 대상 — 다섯 가지를 모두 넘어야 한다</h2>
+
+    <p>대상 차종은 배출가스 4·5등급 경유차, 2009년 8월 31일 이전 제작된 도로용 3종 건설기계(덤프트럭·콘크리트믹서트럭·펌프트럭), 그리고 Tier-1 이하 엔진의 지게차·굴착기다. 여기에 해당하더라도 다음 다섯 가지 요건을 전부 충족해야 한다.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-t">6개월 이상 연속 등록</div>
+        <div class="step-d">해당 지자체에 6개월 이상 연속으로 등록돼 있어야 한다. 신규·재등록 차량은 그 시점부터 6개월이 지나야 한다. 이사나 명의 이전 직후에 신청하면 여기서 걸린다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">신청일 역산 6개월 이상 소유</div>
+        <div class="step-d">차량 소유자는 신청일로부터 거꾸로 세어 6개월 이상 그 차를 소유하고 있어야 한다. 보조금만 노린 단기 명의 이전을 막는 장치다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">관능검사 적합 판정</div>
+        <div class="step-d">자동차관리법 제43조의2에 따른 관능검사에서 적합 판정을 받아야 한다. 이미 굴러가지 않는 차를 폐차하며 보조금을 받는 것을 막기 위한 조건이다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">'조기폐차 대상차량 확인서' 정상가동 판정</div>
+        <div class="step-d">지자체장 또는 절차대행자가 발급하는 확인서에서 정상가동으로 판정돼야 한다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">정부·지자체 지원 저감장치 미부착</div>
+        <div class="step-d">정부나 지자체 지원을 받아 배출가스저감장치(DPF)를 단 차량은 원칙적으로 제외된다. 한 대에 두 번 지원하지 않는다는 뜻이다(일부 건설기계 예외).</div>
+      </div>
+    </div>
+
+    <h2 class="sec">4. 상한액 산정 — 300만원은 받는 돈이 아니다</h2>
+
+    <p>가장 많은 오해가 여기서 생긴다. 아래 표의 금액은 <strong>상한액</strong>이며, 실제 지급액은 내 차의 가격을 기준으로 계산한 값이 이 상한을 넘지 못하도록 잘라 내는 구조다.</p>
+
+    <div class="formula">
+      <p class="f-main">지급액 = ( 차량기준가액 × 지원율 ) 를 상한액 범위에서 지급</p>
+      <p class="f-note">차량기준가액은 당해연도 1분기 보험개발원 차량기준가액표를 적용하고, 표에 없는 연식은 매년 15%의 감가상각률을 적용한다. 차종은 자동차등록증의 출고 당시 차종 형식 중 기본형을 기준으로 분류한다.</p>
+    </div>
+
+    <p>20년 넘은 소형 경유차의 기준가액은 대개 수십만 원대다. 그래서 5등급 승용차 소유자가 "300만원"을 그대로 받는 경우는 사실상 드물고, 상한액이 의미를 갖는 쪽은 기준가액 자체가 큰 대형 화물차와 건설기계다.</p>
+
+    <h3 class="sub">2026년 지침 기준 상한액 (자동차·도로용 3종 건설기계)</h3>
+
+    <table class="rate">
+      <tr><th>구분</th><th>5등급 자동차</th><th>4등급 경유차</th></tr>
+      <tr><td>총중량 3.5톤 미만</td><td class="up">300만원 (지원율 100%)</td><td class="new">800만원 (폐차 70% + 친환경차 구매 30%)</td></tr>
+      <tr><td>3.5톤 이상, 3,500cc 이하</td><td class="up">440만원</td><td class="new">720만원</td></tr>
+      <tr><td>3,500cc 초과 5,500cc 이하</td><td class="up">750만원</td><td class="new">1,600만원</td></tr>
+      <tr><td>5,500cc 초과 7,500cc 이하</td><td class="up">1,100만원</td><td class="new">2,400만원</td></tr>
+      <tr><td>7,500cc 초과</td><td class="up">3,000만원</td><td class="new">7,800만원</td></tr>
+      <tr><td>덤프·믹서·펌프트럭</td><td class="up">4,000만원</td><td class="new">1억원</td></tr>
+    </table>
+
+    <h3 class="sub">지게차·굴착기</h3>
+
+    <table class="rate">
+      <tr><th>장비</th><th>규격</th><th>상한액</th></tr>
+      <tr><td rowspan="3">굴착기</td><td>16톤 미만</td><td class="up">1,650만원</td></tr>
+      <tr><td>16톤 이상 33톤 미만</td><td class="up">2,700만원</td></tr>
+      <tr><td>33톤 이상</td><td class="up">7,900만원</td></tr>
+      <tr><td rowspan="3">지게차</td><td>9톤 미만</td><td class="up">1,050만원</td></tr>
+      <tr><td>9톤 이상 18톤 미만</td><td class="up">3,400만원</td></tr>
+      <tr><td>18톤 이상</td><td class="up">1억 2,000만원</td></tr>
+    </table>
+
+    <h3 class="sub">추가지원금</h3>
+
+    <ul class="plain">
+      <li><strong>저소득층·소상공인</strong> — 100만원(상한액 범위 내)</li>
+      <li><strong>저감장치 부착 불가 차량</strong> — 화물·특수 100만원, 그 외 60만원</li>
+      <li><strong>지자체 자체 지원</strong> — 예를 들어 서울시는 녹색교통지역 거주자에게 100만원을 추가로 지원한다</li>
+    </ul>
+
+    <div class="infographic-section">
+      <h3>배출가스 5등급 차량 등록 대수 · 2026년 상한액 비교</h3>
+      <div class="bar-chart">
+        <div class="bar-item">
+          <div class="bar-label"><span>2020년 말 5등급 등록 대수</span><span class="val">약 100만 대</span></div>
+          <div class="bar-track"><div class="bar-fill bar-red" style="width:100%">100%</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>2025년 말 5등급 등록 대수</span><span class="val">약 16만 대 (−84%)</span></div>
+          <div class="bar-track"><div class="bar-fill bar-green" style="width:16%">16%</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>2026년 5등급 지원 물량</span><span class="val">4만 4천 대</span></div>
+          <div class="bar-track"><div class="bar-fill bar-teal" style="width:27.5%">남은 물량의 약 28%</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>2026년 4등급 지원 물량</span><span class="val">6만 4천 대</span></div>
+          <div class="bar-track"><div class="bar-fill bar-amber" style="width:40%">전체의 57%</div></div>
+        </div>
+      </div>
+      <p class="note">※ 위 두 막대는 2020년 말 등록 대수를 100으로 둔 상대 비율이다. 아래 두 막대는 물량의 절대 크기를 같은 축에서 비교하기 위한 표현이며, 총계 11만 3천 대와 세부 합계 사이에는 약 5천 대의 차이가 있다.</p>
+      <div class="impact-grid" style="margin-top:26px">
+        <div class="impact-card"><span class="impact-num">300만</span><span class="impact-label">5등급 3.5톤 미만<br>상한액(원)</span></div>
+        <div class="impact-card"><span class="impact-num">800만</span><span class="impact-label">4등급 경유차 3.5톤 미만<br>상한액(원)</span></div>
+        <div class="impact-card"><span class="impact-num">6개월</span><span class="impact-label">등록 기간·소유 기간<br>공통 요건</span></div>
+        <div class="impact-card"><span class="impact-num">10만</span><span class="impact-label">계절관리제 운행제한<br>위반 과태료(원·1일 1회)</span></div>
+      </div>
+    </div>
+
+    <h2 class="sec">5. 신청 절차와 기한 — 놓치면 지급되지 않는다</h2>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-t">신청서 접수</div>
+        <div class="step-d">자동차배출가스 종합전산시스템(mecar.or.kr) 온라인 또는 우편으로 신청한다. 신청서, 신분증 사본, 해당 시 건설기계등록증이 필요하다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">지급대상 확인서 발급 (10일 이내)</div>
+        <div class="step-d">한국자동차환경협회가 접수 후 10일 이내에 보조금 지급대상 확인서를 발급하고 카카오톡이나 문자로 통보한다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">차량 상태 확인 후 말소 등록</div>
+        <div class="step-d">현장 또는 온라인(escar.or.kr)으로 말소 등록을 진행한다. 수수료는 14,000원이며, 협회가 대상차량 확인을 실시하는 경우 현장 확인 수수료 14,000원이 추가 지원된다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">보조금 청구서 제출</div>
+        <div class="step-d">1차(폐차) 보조금은 말소등록증, 통장 사본, 환경개선부담금 납부증 등을 갖춰 <b>확인서 교부 후 2개월 이내</b>에 청구해야 한다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">지급</div>
+        <div class="step-d">협회·지자체 심사를 거쳐 계좌로 입금된다. 2차(차량 구매) 보조금은 <b>신차 구매 후 4개월 이내</b>에 청구해야 하며, 기간이 지나면 지급되지 않는다.</div>
+      </div>
+    </div>
+
+    <p>접수 기간은 지자체마다 다르다. 서울시는 2026년 3월 3일부터 10월 16일까지 접수하되 <strong>예산 소진 시 조기 마감</strong>한다고 안내했다. 예산 소진형 사업이므로 마감일보다 잔여 예산이 실질적인 기한이다.</p>
+
+    <h2 class="sec">6. 숨겨진 이면 — 제도가 바뀐 지점</h2>
+
+    <h3 class="sub">① 4등급은 '폐차 지원'이 아니라 '전환 지원'이다</h3>
+
+    <p>4등급 경유차의 3.5톤 미만 상한액 800만원은 폐차만으로 다 받는 금액이 아니다. 지원율이 <strong>폐차 70%, 친환경차 구매 30%</strong>로 나뉘어 있고, 2차 보조금은 전기·수소·하이브리드 차량을 구매할 때만 지급된다. 휘발유차나 LPG차 등 내연기관으로 바꾸면 2차분은 나오지 않는다. 4등급 경유차를 폐차하고 전기차로 전환할 경우 전환지원금까지 더해 <strong>최대 1,181만원 수준</strong>까지 안내된 사례가 있다.</p>
+
+    <h3 class="sub">② 상한액이 높을수록 나와 무관해진다</h3>
+
+    <p>1억원, 1억 2,000만원 같은 숫자는 덤프트럭과 대형 지게차의 기준가액이 그만큼 크기 때문에 붙은 천장이다. 승용·소형 화물 차주가 표를 보고 기대치를 세우면 어긋난다. 내 차의 예상 금액을 알고 싶다면 상한액표가 아니라 <strong>보험개발원 차량기준가액</strong> 쪽을 봐야 하고, 2026년 3월부터 열린 '내차 종합 정보' 메뉴에서 예상 지원금을 직접 확인하는 편이 정확하다.</p>
+
+    <h3 class="sub">③ 저감장치를 달았다면 이미 한 번 받은 것이다</h3>
+
+    <p>정부·지자체 지원으로 DPF를 부착한 차량이 제외되는 이유는 형평 때문이다. 부착 지원과 폐차 지원은 같은 예산에서 같은 목적으로 나가는 돈이라 중복 수급을 인정하지 않는다. 다만 <b>저감장치를 달 수 없는 차종</b>에는 별도의 추가지원금(화물·특수 100만원, 그 외 60만원)이 있다.</p>
+
+    <h2 class="sec">7. 나에게 미치는 영향 — 신청하지 않으면 생기는 비용</h2>
+
+    <p>5등급 차량을 계속 운행하면 지원금을 못 받는 데서 끝나지 않는다. 운행제한 과태료가 따로 붙는다.</p>
+
+    <table class="rate">
+      <tr><th>제한 유형</th><th>적용 시기·시간</th><th>과태료</th></tr>
+      <tr><td>미세먼지 계절관리제</td><td>매년 12월~3월, 평일 06~21시(토·공휴일 제외)</td><td class="down">1일 1회 10만원</td></tr>
+      <tr><td>비상저감조치</td><td>발령일 06~21시</td><td class="down">1일 1회 10만원</td></tr>
+      <tr><td>녹색교통지역(서울 한양도성 내)</td><td>365일 06~21시</td><td class="down">1일 1회 10만원(3회 이상 20만원)</td></tr>
+      <tr><td>수도권 저공해운행제한지역(LEZ)</td><td>4~11월 상시</td><td class="down">지자체 조례에 따름</td></tr>
+    </table>
+
+    <p>매연저감장치를 부착한 차량, 긴급 차량, 장애인 차량, 국가 특수목적 자동차 등은 단속에서 제외된다. 계절관리제 기간에 평일 출퇴근으로 도심을 오간다면 <strong>한 달만으로도 과태료가 200만원대에 이를 수 있다</strong>는 계산이 나온다. 지원금 규모와 무관하게, 계속 타는 선택에도 가격표가 붙어 있다는 뜻이다.</p>
+
+    <div class="pullquote">
+      5등급 차주가 올해 내려야 하는 결정은 "얼마 받을까"가 아니라 <b>"지원 창구가 닫히기 전에 정리할 것인가"</b>다. 12월이 오면 계절관리제와 사업 종료가 같은 달에 겹친다.
+    </div>
+
+    <h2 class="sec">8. 전망과 행동 제안</h2>
+
+    <p>정책의 방향은 뚜렷하다. 5등급은 정리 단계, 4등급은 전환 단계다. 5등급 잔여 물량이 16만 대까지 줄어든 상황에서 지원을 이어 갈 실익이 크지 않다는 판단이고, 그 예산은 4등급 경유차를 무공해차로 옮기는 쪽으로 이동한다. 2027년 이후 4등급 지원의 지속 여부와 금액은 아직 공개된 확정 계획이 없으므로, 해당 차주도 매년 지침을 다시 확인해야 한다.</p>
+
+    <p>지금 확인할 순서는 단순하다.</p>
+
+    <ul class="plain">
+      <li><strong>등급 확인</strong> — mecar.or.kr에서 차량번호로 조회한다. 5등급이면 올해가 마지막 기회다.</li>
+      <li><strong>요건 점검</strong> — 등록 6개월·소유 6개월이 지났는지, DPF 지원 이력이 있는지 먼저 본다. 여기서 갈린다.</li>
+      <li><strong>금액 확인</strong> — 상한액표가 아니라 '내차 종합 정보'의 예상 지원금을 본다.</li>
+      <li><strong>잔여 예산 확인</strong> — 거주 지자체 담당 부서에 접수 마감 여부를 묻는다. 서울시는 대기정책과 02-2133-4240·4241, 한국자동차환경협회는 1577-7121이다.</li>
+      <li><strong>기한 관리</strong> — 확인서를 받았다면 2개월, 신차를 샀다면 4개월이 청구 시한이다. 달력에 표시해 둔다.</li>
+    </ul>
+
+    <p>정리하면 이 제도에서 개인이 통제할 수 있는 변수는 두 가지다. <strong>요건을 충족한 상태로 신청 시점을 앞당기는 것</strong>, 그리고 <strong>청구 기한을 넘기지 않는 것.</strong> 금액은 차량기준가액이 정하지만, 받을 자격을 유지하는 일은 결국 일정 관리의 문제다.</p>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#조기폐차지원금</span>
+      <span class="hashtag">#배출가스5등급</span>
+      <span class="hashtag">#노후경유차</span>
+      <span class="hashtag">#조기폐차신청방법</span>
+      <span class="hashtag">#차량기준가액</span>
+      <span class="hashtag">#4등급경유차</span>
+      <span class="hashtag">#계절관리제</span>
+      <span class="hashtag">#운행제한</span>
+      <span class="hashtag">#기후에너지환경부</span>
+      <span class="hashtag">#미세먼지</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://www.aea.or.kr/biz/esSubsidized.do" target="_blank" rel="noopener">한국자동차환경협회 — 보조금 지원금액(2026년 지침 기준), 차량기준가액 산정방식</a>
+      <a href="https://www.aea.or.kr/biz/esBizIntro.do" target="_blank" rel="noopener">한국자동차환경협회 — 조기폐차 사업소개 및 신청 절차·지원 요건</a>
+      <a href="https://www.mecar.or.kr/lpm/info/oldCarEarlyScrapping.do" target="_blank" rel="noopener">자동차배출가스 종합전산시스템 — 노후차 조기폐차 안내</a>
+      <a href="https://www.mecar.or.kr/ceg/info/calcRule.do" target="_blank" rel="noopener">자동차배출가스 종합전산시스템 — 등급 산정기준(환경부고시 자동차 배출가스등급 산정기준에 관한 규정)</a>
+      <a href="https://news.seoul.go.kr/env/archives/568794" target="_blank" rel="noopener">서울특별시 — 2026년 조기폐차 지원사업 신청 접수 안내</a>
+      <a href="https://news.seoul.go.kr/env/archives/505710" target="_blank" rel="noopener">서울특별시 — 배출가스 5등급 차량 운행제한 제도 현황</a>
+      <a href="https://www.cvinfo.com/news/articleView.html?idxno=30728" target="_blank" rel="noopener">상용차매거진 — 2026년 노후 상용차 전환 보조금 개편, 5등급 지원 올해 종료</a>
+      <a href="https://easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&amp;csmSeq=1454&amp;ccfNo=3&amp;cciNo=1&amp;cnpClsNo=1" target="_blank" rel="noopener">찾기쉬운 생활법령정보 — 자동차 배출가스 등급제 및 운행제한</a>
+      <a href="https://www.busan.go.kr/depart/ahairsupport2" target="_blank" rel="noopener">부산광역시 — 노후경유차 조기폐차 지원사업 안내</a>
+      <a href="https://www.hyundaimotorgroup.com/ko/story/old-car-scrappage-subsidy-guide" target="_blank" rel="noopener">현대자동차그룹 저널 — 노후차 조기폐차 지원금 안내</a>
+    </div>
+
+    <p class="disclaimer">
+      ※ 본 아티클은 한국자동차환경협회의 사업 안내와 자동차배출가스 종합전산시스템 자료, 지자체 공고 및 언론 보도를 바탕으로 작성한 정보성 콘텐츠이며 개별 상담이 아닙니다. <strong>조기폐차 보조금의 대상·지원율·상한액·추가지원금은 매년 환경부(기후에너지환경부) 지침 개정과 지자체 예산 편성에 따라 달라지고, 접수 기간도 지자체마다 다릅니다.</strong> 본문의 2026년 지침 금액은 작성 시점에 공개된 안내 기준이며, 실제 지급액은 보험개발원 차량기준가액과 지원율에 따라 산정되어 상한액보다 낮은 경우가 일반적입니다. 5등급 지원 종료 시점, 4등급 전환지원금 규모, 지원 물량 배정은 추가 발표로 변경될 수 있으므로 신청 전 반드시 거주 지자체 담당 부서와 한국자동차환경협회(☎1577-7121), 배출가스 등급 콜센터(☎1833-7435)에 직접 확인하시기 바랍니다.
+    </p>
+
+  </div>
+</article>
+</body>
+</html>
