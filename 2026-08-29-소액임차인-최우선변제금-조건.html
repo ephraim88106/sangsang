@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>소액임차인 최우선변제금 조건 — 지역별 보증금 범위와 배당 순위 계산 | 부동산·주거</title>
+  <meta name="description" content="소액임차인 최우선변제금은 확정일자나 순위와 무관하게 선순위 근저당보다 먼저 배당받는 금액이다. 2023년 2월 21일 시행 기준 서울은 보증금 1억6,500만원 이하일 때 5,500만원, 과밀억제권역·세종·용인·화성·김포는 1억4,500만원 이하일 때 4,800만원, 광역시 등은 8,500만원 이하일 때 2,800만원, 그 밖의 지역은 7,500만원 이하일 때 2,500만원이다. 다만 어느 표를 적용할지는 계약일이 아니라 그 집에 가장 먼저 설정된 담보물권의 설정일이 정한다. 지역별 금액표, 시기별 연혁, 배당요구 요건과 주택가액 2분의 1 한도, 방공제까지 정리했다.">
+  <meta name="keywords" content="소액임차인, 최우선변제금, 최우선변제금 조건, 소액임차인 기준, 최우선변제금액 서울, 지역별 최우선변제금, 대항력, 배당요구, 방공제, 주택임대차보호법 시행령">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f2f5f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 45%, #00695c 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #c8e6c9; color: #1b5e20; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #e8f5e9; border-left: 5px solid #2e7d32; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #2e7d32; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #1b5e20; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #2e7d32; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #1b5e20; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #e8f5e9; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #2e7d32; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #1b5e20; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #eef7ed; border-left: 4px solid #66bb6a; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #1b5e20; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f5f9f4; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #1b5e20; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #1b5e20; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #e3ece1; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-blue { background: linear-gradient(90deg, #1b5e20, #66bb6a); }
+    .bar-teal { background: linear-gradient(90deg, #004d40, #00897b); }
+    .bar-amber { background: linear-gradient(90deg, #e65100, #f9a825); }
+    .bar-red { background: linear-gradient(90deg, #b71c1c, #e53935); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #d5e5d2; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #e8f5e9; color: #1b5e20; font-weight: 700; }
+    table.rate td.up { color: #1b5e20; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #00695c; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #2e7d32; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #1b5e20; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #c4dfc0; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #1b5e20; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #c4dfc0; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #2e7d32; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #e8f5e9; color: #2e7d32; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #2e7d32; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<style>
+    .formula { background: #f9fbe7; border: 1.5px dashed #9e9d24; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 16.5px; font-weight: 800; color: #33691e; line-height: 1.8; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #7cb342; margin-top: 10px; margin-bottom: 0; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #c5e1a5; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #2e7d32; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #558b2f; line-height: 1.55; word-break: keep-all; }
+    .warnbox { background: #fff8e1; border-left: 5px solid #f9a825; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 26px 0; }
+    .warnbox .wt { font-size: 14px; font-weight: 800; color: #e65100; margin-bottom: 8px; }
+    .warnbox p { font-size: 15px; color: #5d4037; margin-bottom: 0; word-break: keep-all; }
+    .case { background: #fff; border: 1.5px solid #c8e6c9; border-left: 5px solid #2e7d32; border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; }
+    .case .ct { font-size: 13.5px; font-weight: 800; color: #1b5e20; margin-bottom: 6px; letter-spacing: 0.3px; }
+    .case p { font-size: 14.8px; margin-bottom: 8px; }
+    .case p:last-child { margin-bottom: 0; }
+  </style>
+<!-- SEO:AUTO BEGIN -->
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-08-29-%EC%86%8C%EC%95%A1%EC%9E%84%EC%B0%A8%EC%9D%B8-%EC%B5%9C%EC%9A%B0%EC%84%A0%EB%B3%80%EC%A0%9C%EA%B8%88-%EC%A1%B0%EA%B1%B4">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="소액임차인 최우선변제금 조건 — 지역별 보증금 범위와 배당 순위 계산">
+<meta property="og:description" content="서울 1억6,500만원 이하면 5,500만원. 그런데 어느 표를 쓸지는 계약일이 아니라 근저당 설정일이 정한다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-08-29-%EC%86%8C%EC%95%A1%EC%9E%84%EC%B0%A8%EC%9D%B8-%EC%B5%9C%EC%9A%B0%EC%84%A0%EB%B3%80%EC%A0%9C%EA%B8%88-%EC%A1%B0%EA%B1%B4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-08-29T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-08-29T09:00:00+09:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="소액임차인 최우선변제금 조건 — 지역별 보증금 범위와 배당 순위 계산">
+<meta name="twitter:description" content="표만 보면 소액임차인인데 실제로는 아닌 경우가 많다. 기준시점과 배당 순위, 주택가액 2분의 1 한도를 정리했다.">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "소액임차인 최우선변제금 조건 — 지역별 보증금 범위와 배당 순위 계산",
+  "description": "소액임차인 최우선변제금은 확정일자나 순위와 무관하게 선순위 근저당보다 먼저 배당받는 금액이다. 2023년 2월 21일 시행 기준 서울은 보증금 1억6,500만원 이하일 때 5,500만원, 과밀억제권역·세종·용인·화성·김포는 1억4,500만원 이하일 때 4,800만원, 광역시 등은 8,500만원 이하일 때 2,800만원, 그 밖의 지역은 7,500만원 이하일 때 2,500만원이다. 다만 어느 표를 적용할지는 계약일이 아니라 그 집에 가장 먼저 설정된 담보물권의 설정일이 정한다. 지역별 금액표, 시기별 연혁, 배당요구 요건과 주택가액 2분의 1 한도, 방공제까지 정리했다.",
+  "url": "https://sangsang.ephseed.com/2026-08-29-%EC%86%8C%EC%95%A1%EC%9E%84%EC%B0%A8%EC%9D%B8-%EC%B5%9C%EC%9A%B0%EC%84%A0%EB%B3%80%EC%A0%9C%EA%B8%88-%EC%A1%B0%EA%B1%B4",
+  "datePublished": "2026-08-29T09:00:00+09:00",
+  "dateModified": "2026-08-29T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+</head>
+<body>
+<article class="article-wrap">
+  <header class="hero">
+    <div class="category-badge">🏠 부동산 · 주거</div>
+    <h1>소액임차인 최우선변제금 조건 —<br>지역별 보증금 범위와 배당 순위 계산</h1>
+    <p class="hero-sub">살던 집이 경매로 넘어갔을 때, 은행보다 먼저 돈을 받아 나오는 세입자가 있다. 주택임대차보호법이 정한 <b>소액임차인</b>이다. 그런데 인터넷에 돌아다니는 금액표를 그대로 믿었다가 배당표에서 0원을 확인하는 일이 계속 벌어진다. 표가 틀린 게 아니라, <b>어느 표를 적용할지 정하는 날짜가 따로 있기 때문</b>이다. 금액·요건·기준시점을 순서대로 정리했다.</p>
+    <div class="hero-meta">
+      <span>📅 2026년 8월 29일</span>
+      <span>✍️ 생생 정보통 정책팀</span>
+      <span>🏠 부동산 · 주거</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+
+    <div class="summary-box">
+      <h2>핵심 요약</h2>
+      <ul>
+        <li>2023년 2월 21일 시행 기준 서울은 보증금 <strong>1억6,500만원 이하</strong>일 때 <strong>5,500만원</strong>까지, 그 밖의 지역은 7,500만원 이하일 때 2,500만원까지 순위와 무관하게 먼저 배당받는다.</li>
+        <li>어느 금액표를 적용할지는 계약일도 경매일도 아닌 <strong>그 집에 가장 먼저 설정된 담보물권(근저당)의 설정일</strong>이 정한다. 여기서 대부분의 착오가 생긴다.</li>
+        <li>최우선변제 총액은 <strong>주택가액의 2분의 1</strong>을 넘지 못하고, 임차인이 여럿이면 그 절반을 나눠 갖는다. 대항요건과 배당요구라는 두 가지 절차 요건도 함께 충족해야 한다.</li>
+      </ul>
+    </div>
+
+    <h2 class="sec">1. 최우선변제금이란 — 순위를 뛰어넘는 예외</h2>
+
+    <p>부동산 경매에서 배당은 순위 싸움이다. 등기부에 먼저 이름을 올린 권리자가 먼저 가져가고, 남는 돈이 있으면 다음 순위로 내려간다. 2020년에 근저당을 잡은 은행과 2024년에 전입신고를 한 세입자가 있다면, 원칙적으로 세입자는 은행이 다 가져가고 남은 금액에서만 받는다.</p>
+
+    <p>주택임대차보호법 제8조는 이 원칙에 구멍을 하나 뚫어 놓았다. 보증금이 일정 금액 이하인 임차인, 곧 <strong>소액임차인</strong>에게는 보증금 중 일정액을 <strong>다른 담보물권자보다 먼저</strong> 변제받을 권리를 준다. 선순위 근저당이 아무리 많아도, 이 금액만큼은 맨 앞에서 떼어 간다는 뜻이다. 경매 실무에서 이를 <b>최우선변제</b>라 부르고, 그 금액이 최우선변제금이다.</p>
+
+    <p>제도의 취지는 분명하다. 보증금 규모가 작은 임차인일수록 그 돈이 전 재산이자 다음 집을 구할 유일한 자금이다. 순위 원칙을 그대로 적용하면 이들이 가장 먼저, 가장 크게 무너진다. 그래서 금융기관의 담보 이익을 일부 양보시켜 최소한의 이사 자금을 남겨 주는 구조를 만든 것이다.</p>
+
+    <div class="pullquote">
+      최우선변제는 "먼저 등기한 사람이 먼저 받는다"는 부동산 등기의 대원칙을 법이 정면으로 깨 놓은 자리다. 그래서 요건이 까다롭고, 금액에 천장이 있다.
+    </div>
+
+    <h2 class="sec">2. 지역별 보증금 범위와 변제금액 (현행)</h2>
+
+    <p>주택임대차보호법 시행령 제11조가 소액임차인의 범위를, 제10조가 우선변제 금액을 정한다. 2023년 2월 21일 개정 시행 이후 현재까지 적용되는 기준은 다음과 같다.</p>
+
+    <table class="rate">
+      <tr><th>지역 구분</th><th>소액임차인 보증금 범위</th><th>최우선변제 금액</th></tr>
+      <tr><td>서울특별시</td><td>1억 6,500만원 이하</td><td class="up">5,500만원</td></tr>
+      <tr><td>수도권정비계획법상 과밀억제권역(서울 제외)<br>세종특별자치시 · 용인시 · 화성시 · 김포시</td><td>1억 4,500만원 이하</td><td class="up">4,800만원</td></tr>
+      <tr><td>광역시(과밀억제권역·군지역 제외)<br>안산시 · 광주시 · 파주시 · 이천시 · 평택시</td><td>8,500만원 이하</td><td class="up">2,800만원</td></tr>
+      <tr><td>그 밖의 지역</td><td>7,500만원 이하</td><td class="up">2,500만원</td></tr>
+    </table>
+
+    <p>표를 읽는 방법은 두 단계다. 먼저 <strong>내 보증금이 그 지역의 범위 안에 들어야</strong> 소액임차인 자격이 생기고, 자격이 생기면 오른쪽 금액까지 최우선변제를 받는다. 범위를 1원이라도 넘으면 자격 자체가 없어져 최우선변제금은 <strong>0원</strong>이 된다. 금액이 줄어드는 게 아니라 통째로 사라지는 구조다.</p>
+
+    <p>월세 계약이라면 보증금만 본다. 월 차임은 소액임차인 판정에 들어가지 않는다. 서울에서 보증금 1억원에 월세 60만원으로 사는 임차인은 보증금이 1억6,500만원 이하이므로 소액임차인이고, 5,500만원까지 최우선변제 대상이다.</p>
+
+    <div class="infographic-section">
+      <h3>📊 지역별 최우선변제금이 보증금 상한에서 차지하는 비율</h3>
+      <div class="bar-chart">
+        <div class="bar-item">
+          <div class="bar-label"><span>서울 (5,500만 / 1억6,500만)</span><span class="val">33.3%</span></div>
+          <div class="bar-track"><div class="bar-fill bar-blue" style="width:33.3%">33.3%</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>과밀억제권역·세종·용인·화성·김포 (4,800만 / 1억4,500만)</span><span class="val">33.1%</span></div>
+          <div class="bar-track"><div class="bar-fill bar-teal" style="width:33.1%">33.1%</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>광역시·안산·광주·파주·이천·평택 (2,800만 / 8,500만)</span><span class="val">32.9%</span></div>
+          <div class="bar-track"><div class="bar-fill bar-amber" style="width:32.9%">32.9%</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>그 밖의 지역 (2,500만 / 7,500만)</span><span class="val">33.3%</span></div>
+          <div class="bar-track"><div class="bar-fill bar-red" style="width:33.3%">33.3%</div></div>
+        </div>
+      </div>
+      <p class="note">※ 시행령 제10조·제11조 금액을 나눈 값. 네 구간 모두 보증금 상한의 약 3분의 1 선에서 설계돼 있다. 바꿔 말하면 이 제도는 보증금 전액이 아니라 <b>대략 3분의 1</b>을 건지게 해 주는 장치다.</p>
+    </div>
+
+    <h2 class="sec">3. 기준시점 — 표를 고르는 날짜는 계약일이 아니다</h2>
+
+    <p>여기가 이 제도에서 가장 많은 오해가 쌓이는 지점이다. 위의 금액표는 2023년 2월 21일부터 적용되는데, 이 "적용"의 기준이 되는 사건은 임대차계약도, 전입신고도, 경매개시도 아니다. <strong>그 주택에 담보물권이 설정된 시점</strong>이다.</p>
+
+    <div class="formula">
+      <p class="f-main">적용할 금액표 = 그 주택에 <b>가장 먼저 설정된 담보물권(근저당권 등)</b>의 설정일에 시행 중이던 시행령</p>
+      <p class="f-note">시행령 개정 시마다 부칙에 "개정 시행 전에 담보물권을 취득한 자에 대해서는 종전 규정에 따른다"는 취지의 적용례가 붙는다</p>
+    </div>
+
+    <p>이유는 담보권자의 신뢰 보호에 있다. 은행이 2018년에 근저당을 설정할 때는 "이 집에서 세입자에게 먼저 빠져나갈 수 있는 돈은 최대 3,700만원"이라는 계산 위에서 대출 한도를 정했다. 이후 시행령이 개정돼 그 금액이 5,500만원으로 올랐다고 해서 소급 적용해 버리면, 은행은 대출 당시 예상하지 못한 손실을 떠안게 된다. 그래서 개정된 금액은 개정 이후 새로 설정된 담보물권에 대해서만 작동한다.</p>
+
+    <h3 class="sub">시기별 금액 연혁</h3>
+
+    <table class="rate">
+      <tr><th>담보물권 설정 시기</th><th>서울</th><th>과밀억제권역 등</th><th>광역시 등</th><th>그 밖의 지역</th></tr>
+      <tr><td>2014.01.01 ~ 2016.03.30</td><td>9,500만 / 3,200만</td><td>8,000만 / 2,700만</td><td>6,000만 / 2,000만</td><td>4,500만 / 1,500만</td></tr>
+      <tr><td>2016.03.31 ~ 2018.09.17</td><td>1억 / 3,400만</td><td>8,000만 / 2,700만</td><td>6,000만 / 2,000만</td><td>5,000만 / 1,700만</td></tr>
+      <tr><td>2018.09.18 ~ 2021.05.10</td><td>1억 1,000만 / 3,700만</td><td>1억 / 3,400만</td><td>6,000만 / 2,000만</td><td>5,000만 / 1,700만</td></tr>
+      <tr><td>2021.05.11 ~ 2023.02.20</td><td>1억 5,000만 / 5,000만</td><td>1억 3,000만 / 4,300만</td><td>7,000만 / 2,300만</td><td>6,000만 / 2,000만</td></tr>
+      <tr><td>2023.02.21 ~ 현재</td><td class="new">1억 6,500만 / 5,500만</td><td class="new">1억 4,500만 / 4,800만</td><td class="new">8,500만 / 2,800만</td><td class="new">7,500만 / 2,500만</td></tr>
+    </table>
+    <p class="note">※ 앞 숫자는 소액임차인 보증금 범위, 뒤 숫자는 최우선변제 금액. 지역 구분에 포함되는 시·군은 개정 때마다 조금씩 달라졌으므로 해당 시기의 시행령 조문을 함께 확인해야 한다.</p>
+
+    <div class="case">
+      <div class="ct">📌 사례로 보는 착오</div>
+      <p>서울의 한 다세대주택. 등기부 을구에는 <b>2019년 3월</b>에 설정된 은행 근저당이 최선순위로 잡혀 있다. 임차인 A씨는 2025년에 보증금 <b>1억4,000만원</b>으로 계약하고 전입신고와 확정일자를 받았다.</p>
+      <p>현행 표만 보면 서울 기준 1억6,500만원 이하이므로 A씨는 소액임차인처럼 보인다. 그러나 적용 기준은 2019년 3월에 시행 중이던 <b>2018.09.18 표</b>다. 그 표에서 서울의 소액임차인 범위는 <b>1억1,000만원 이하</b>. A씨의 보증금은 이를 넘으므로 <b>소액임차인이 아니고, 최우선변제금은 0원</b>이다.</p>
+      <p>A씨가 배당에서 받을 수 있는 것은 확정일자에 따른 일반 우선변제권뿐이고, 그 순위는 2019년 근저당보다 뒤다.</p>
+    </div>
+
+    <p>그래서 계약 전에 확인해야 할 것은 최신 금액표가 아니라 <strong>등기부등본 을구의 최선순위 담보물권 설정일</strong>이다. 그 날짜를 찾은 뒤 위 연혁표에서 해당 구간을 고르고, 거기에 내 보증금을 대 봐야 실제 답이 나온다.</p>
+
+    <h2 class="sec">4. 최우선변제를 받기 위한 절차 요건</h2>
+
+    <p>금액 요건을 통과해도 절차 요건을 놓치면 배당표에 이름이 오르지 않는다. 실무에서 요구되는 순서는 다음과 같다.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-t">경매개시결정 등기 전에 대항요건을 갖출 것</div>
+        <div class="step-d">주택의 인도(실제 점유)와 주민등록(전입신고)을 모두 마쳐야 대항력이 생긴다. 이 두 가지를 경매개시결정 등기 이전에 갖추지 못하면 최우선변제권 자체가 인정되지 않는다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">배당요구 종기까지 배당요구를 할 것</div>
+        <div class="step-d">임차인은 법원이 정한 배당요구 종기 안에 채권의 원인과 액수를 적은 서면으로 배당요구를 해야 한다. 자격을 증명하는 서면(임대차계약서, 주민등록등본 등)을 첨부한다. 기한을 넘기면 소액임차인이라도 배당에서 빠진다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">배당요구 종기까지 대항요건을 유지할 것</div>
+        <div class="step-d">전입신고를 해 두었어도 중간에 다른 곳으로 전출하면 대항력이 사라진다. 이사를 가야 한다면 먼저 임차권등기명령을 받아 등기를 마친 뒤 나가야 순위와 대항력이 유지된다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">보증금이 기준시점의 소액임차인 범위 안에 있을 것</div>
+        <div class="step-d">3번 항목에서 설명한 담보물권 설정일 기준 표를 적용한다. 계약서상 증액이 있었다면 증액된 금액이 기준이 된다.</div>
+      </div>
+    </div>
+
+    <div class="warnbox">
+      <div class="wt">⚠️ 확정일자와 혼동하지 말 것</div>
+      <p>최우선변제에는 <b>확정일자가 필요하지 않다.</b> 확정일자는 소액임차인 범위를 넘는 보증금에 대해 일반 우선변제권(순위에 따라 배당받는 권리)을 확보하는 장치다. 다만 보증금이 소액 범위 안이라도 최우선변제금을 넘는 잔액은 순위 배당으로 넘어가므로, 확정일자는 어느 쪽이든 반드시 받아 두는 편이 유리하다.</p>
+    </div>
+
+    <h2 class="sec">5. 주택가액 2분의 1 한도와 여러 임차인의 안분</h2>
+
+    <p>최우선변제는 무한정 인정되지 않는다. 시행령 제10조 제2항은 임차인이 우선변제받을 금액이 <strong>주택가액의 2분의 1을 초과하면 그 2분의 1까지만</strong> 권리가 있다고 정한다. 여기서 주택가액은 대지를 포함한 낙찰대금을 기준으로 산정한다.</p>
+
+    <p>임차인이 여러 명이면 문제가 더 커진다. 제10조 제3항은 각 임차인의 최우선변제 기준액을 모두 합한 금액에 대한 각자의 비율로 <strong>주택가액의 2분의 1을 나눈다</strong>고 규정한다. 다가구주택이나 원룸 건물처럼 한 채에 여러 세대가 사는 경우 실제 배당액이 표상의 금액에 한참 못 미치는 이유가 여기 있다.</p>
+
+    <div class="case">
+      <div class="ct">📌 다가구주택 안분 계산</div>
+      <p>서울의 다가구주택이 <b>3억원</b>에 낙찰됐다. 세입자 5가구가 모두 소액임차인이고 각자 최우선변제 기준액은 5,500만원이다.</p>
+      <p>기준액 합계는 5,500만 × 5 = <b>2억 7,500만원</b>. 그러나 주택가액의 2분의 1은 <b>1억 5,000만원</b>이므로 여기까지만 배당된다. 각 가구의 기준액이 같으므로 1억 5,000만원을 5로 나눈 <b>가구당 3,000만원</b>이 실제 최우선변제액이 된다.</p>
+      <p>표에 적힌 5,500만원을 기대했다가 3,000만원을 받는 셈이다. 세대 수가 많을수록 이 격차는 커진다.</p>
+    </div>
+
+    <h2 class="sec">6. 숨겨진 이면 — 세입자 보호 장치가 대출 한도를 깎는다</h2>
+
+    <p>최우선변제금은 임차인에게는 방패지만, 담보를 잡는 금융기관에는 회수 불능 위험이다. 그래서 은행은 주택담보대출을 실행할 때 그 지역의 최우선변제금만큼을 담보 가치에서 미리 빼고 한도를 계산한다. 실무에서 <strong>방공제</strong> 또는 소액임차보증금 공제라 부르는 관행이다. 서울 소재 주택이라면 5,500만원, 과밀억제권역이라면 4,800만원이 그대로 한도에서 깎인다.</p>
+
+    <p>지금까지는 이를 우회하는 장치가 있었다. 모기지신용보험(MCI)과 모기지신용보증(MCG)에 가입하면 방공제 없이 한도를 온전히 받을 수 있었고, 아파트 담보대출에서는 사실상 기본 옵션처럼 쓰였다. 그런데 2026년 들어 이 창구가 닫히기 시작했다. 보도에 따르면 KB국민은행은 <strong>2026년 6월 26일부터</strong> 아파트 담보대출에 대한 MCI·MCG 취급을 중단했다. 서울에서 기존에 7억원까지 가능했던 차주가 5억4,500만원까지만 받게 되는 식이다.</p>
+
+    <div class="pullquote">
+      임차인을 지키기 위해 만든 금액이, 반대편에서는 차주의 대출 한도를 정확히 같은 금액만큼 깎는 숫자로 쓰인다. 최우선변제금은 세입자 보호 제도인 동시에 <b>주택금융의 상수</b>다.
+    </div>
+
+    <p>이 변화는 가계부채 총량 관리라는 정책 흐름 위에 놓여 있다. 규제 강화의 도구로 오래된 임차인 보호 장치가 다시 호출된 셈인데, 세입자 입장에서 실질적으로 달라지는 것은 없다. 다만 자기 집을 사려는 사람과 세를 사는 사람이 같은 숫자를 사이에 두고 정반대 방향에서 마주하고 있다는 점은 기억해 둘 만하다.</p>
+
+    <h2 class="sec">7. 나에게 미치는 영향 — 확인 순서</h2>
+
+    <p>이 제도가 실제로 작동하는 대상은 보증금이 크지 않은 임차인이다. 서울 기준 상한이 1억6,500만원이므로, 수억 원대 전세 계약은 애초에 소액임차인에 해당하지 않는다. 반대로 보증금 수천만원 규모의 월세로 사는 1인 가구와 청년 임차인에게는 이 제도가 사실상 유일한 안전망이 되는 경우가 많다.</p>
+
+    <div class="flow">
+      <div class="flow-box"><div class="ft">1단계</div><div class="fd">등기부등본을 떼고 <b>을구 최선순위 근저당 설정일</b>을 확인한다</div></div>
+      <div class="flow-box"><div class="ft">2단계</div><div class="fd">그 날짜가 속한 <b>연혁표 구간</b>을 찾는다</div></div>
+      <div class="flow-box"><div class="ft">3단계</div><div class="fd">해당 구간의 <b>보증금 범위</b>와 내 보증금을 비교한다</div></div>
+      <div class="flow-box"><div class="ft">4단계</div><div class="fd">범위를 넘으면 <b>확정일자·보증보험</b>으로 방향을 바꾼다</div></div>
+    </div>
+
+    <p>범위를 넘는다면 최우선변제는 포기하고 다른 수단을 쌓아야 한다. 전입신고와 확정일자를 빠짐없이 받아 우선변제권을 확보하고, 선순위 근저당 규모가 매매 시세 대비 과도하다면 계약 자체를 재고하는 편이 낫다. 전세보증금 반환보증에 가입할 수 있는 조건인지도 계약 전에 확인해야 한다.</p>
+
+    <h2 class="sec">8. 전망과 행동 제안</h2>
+
+    <p>제도의 빈틈 하나가 개선 논의 위에 올라와 있다. 현행법상 임차인의 대항력은 전입신고를 한 <strong>다음 날 0시</strong>에 발생하는 반면, 근저당권은 설정 등기가 이뤄진 <strong>당일 즉시</strong> 효력이 생긴다. 잔금을 치르고 전입신고를 한 바로 그날 집주인이 근저당을 설정하면, 임차인은 하루 차이로 후순위가 된다. 전세사기 수법에서 반복적으로 악용돼 온 구조다.</p>
+
+    <p>정부는 2026년 3월 10일 발표한 전세사기 방지 대책에서 대항력 발생 시기를 <strong>'전입신고 익일 0시'에서 '전입신고 처리 시'로 조정</strong>하는 방안을 제시했다. 같은 대책에는 2026년 9월부터 주택도시보증공사 안심전세 앱을 통해 선순위 권리 정보와 세금 체납 여부를 통합 제공하는 방안, 금융시스템 연계로 선순위 보증금을 즉시 확인해 중복 대출을 막는 방안, 공인중개사에게 선순위 보증금 현황 확인·설명 의무를 부여하고 위반 시 과태료를 상향하는 방안이 함께 담겼다.</p>
+
+    <p>다만 대항력 발생 시기 변경은 주택임대차보호법 개정이 필요한 사안이다. 작성 시점 기준으로 국회 통과와 시행일이 확정된 것은 아니므로, 당분간은 임차인 스스로 방어해야 한다. 지금 할 수 있는 일은 다음과 같다.</p>
+
+    <ul class="plain">
+      <li><strong>계약 전</strong> — 등기부등본 을구에서 최선순위 담보물권의 설정일과 채권최고액을 확인한다. 설정일은 최우선변제 기준시점을, 채권최고액은 배당 가능성을 좌우한다.</li>
+      <li><strong>계약서 작성 시</strong> — 잔금일 다음 날까지 근저당권 등 새로운 담보권을 설정하지 않는다는 특약을 넣고, 위반 시 계약 해제와 손해배상을 규정한다.</li>
+      <li><strong>입주 직후</strong> — 전입신고와 확정일자를 같은 날 처리하고, 실제 점유를 시작한다. 둘 중 하나라도 빠지면 대항력이 성립하지 않는다.</li>
+      <li><strong>경매 통지를 받으면</strong> — 배당요구 종기를 확인하고 그 안에 배당요구서를 제출한다. 이 절차를 놓치면 자격이 있어도 배당에서 제외된다.</li>
+      <li><strong>이사가 필요하면</strong> — 반드시 임차권등기명령을 받아 등기가 완료된 것을 확인한 뒤 전출한다.</li>
+    </ul>
+
+    <p>정리하면 최우선변제금은 "표에 적힌 금액을 받는 제도"가 아니라 <strong>네 개의 관문을 모두 통과한 사람에게만 열리는 제도</strong>다. 기준시점, 보증금 범위, 대항요건, 배당요구. 이 중 하나라도 어긋나면 금액표의 숫자는 의미를 잃는다. 계약서에 도장을 찍기 전에 확인해야 할 것은 금액이 아니라 날짜다.</p>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#소액임차인</span>
+      <span class="hashtag">#최우선변제금</span>
+      <span class="hashtag">#주택임대차보호법</span>
+      <span class="hashtag">#대항력</span>
+      <span class="hashtag">#우선변제권</span>
+      <span class="hashtag">#배당요구</span>
+      <span class="hashtag">#근저당</span>
+      <span class="hashtag">#방공제</span>
+      <span class="hashtag">#전세사기</span>
+      <span class="hashtag">#임차권등기명령</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&amp;csmSeq=629&amp;ccfNo=5&amp;cciNo=2&amp;cnpClsNo=2" target="_blank" rel="noopener">찾기쉬운 생활법령정보 — 주택임대차 소액보증금 우선변제(지역별 범위·금액, 주택가액 2분의 1 한도)</a>
+      <a href="https://easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&amp;csmSeq=629&amp;ccfNo=5&amp;cciNo=2&amp;cnpClsNo=5" target="_blank" rel="noopener">찾기쉬운 생활법령정보 — 주택임대차 배당요구 절차와 종기</a>
+      <a href="https://www.easylaw.go.kr/CSP/OnhunqueansInfoRetrieve.laf?onhunqnaAstSeq=84&amp;onhunqueSeq=2466" target="_blank" rel="noopener">찾기쉬운 생활법령정보 — 소액보증금 최우선변제 요건(경매개시결정 등기 전 대항요건)</a>
+      <a href="https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&amp;lspttninfSeq=130113" target="_blank" rel="noopener">국가법령정보센터 — 주택임대차보호법 시행령 제10조·제11조</a>
+      <a href="https://realscasenote.com/%EC%A3%BC%ED%83%9D%EC%9E%84%EB%8C%80%EC%B0%A8%EB%B3%B4%ED%98%B8%EB%B2%95-%EC%86%8C%EC%95%A1%EC%9E%84%EC%B0%A8%EC%9D%B8-%EC%B5%9C%EC%9A%B0%EC%84%A0%EB%B3%80%EC%A0%9C%EA%B8%88-%EC%97%B0%ED%98%81/" target="_blank" rel="noopener">부동산케이스노트 — 소액임차인 최우선변제금 시기별 연혁표</a>
+      <a href="https://khug.or.kr/jeonse/web/s03/s030301.jsp" target="_blank" rel="noopener">주택도시보증공사 전세사기예방센터 — 대항력과 우선변제권</a>
+      <a href="https://v.daum.net/v/20260310173010857" target="_blank" rel="noopener">2026-03-10 정부 전세사기 방지 대책 — 전입신고 즉시 대항력 발생 추진</a>
+      <a href="https://economist.co.kr/article/view/ecn202606240042" target="_blank" rel="noopener">이코노미스트 — 아파트 방공제 시작, MCI·MCG 중단과 대출 한도 축소</a>
+      <a href="https://r114.com/trends/wiki/finance/36e4a6fa-284b-8066-93d8-e06c581ca0be" target="_blank" rel="noopener">부동산114 — 방공제(소액임차보증금 공제)의 구조</a>
+      <a href="https://r114.com/trends/wiki/rent/37b4a6fa-284b-80ac-83f0-e3fa69ef3cd7" target="_blank" rel="noopener">부동산114 — 최우선변제(소액임차인 보호) 개요</a>
+    </div>
+
+    <p class="disclaimer">
+      ※ 본 아티클은 국가법령정보센터의 주택임대차보호법 및 시행령 조문, 법제처 찾기쉬운 생활법령정보의 해설, 주택도시보증공사 안내와 언론 보도를 바탕으로 작성한 정보성 콘텐츠이며 개별 법률 상담이 아닙니다. <strong>소액임차인 범위와 최우선변제 금액은 시행령 개정에 따라 달라지고, 어느 기준을 적용할지는 개별 사건의 담보물권 설정 시기와 등기 순위에 따라 결정됩니다.</strong> 본문의 연혁표와 사례 계산은 이해를 돕기 위한 예시이며, 지역 구분에 포함되는 시·군은 개정 시기마다 차이가 있습니다. 실제 배당액은 낙찰가, 선순위 채권 규모, 임차인 수, 배당요구 여부에 따라 달라지므로 구체적인 사건에서는 반드시 등기부등본과 경매 사건기록을 확인하고 변호사·법무사 등 전문가의 검토를 받으시기 바랍니다. 대항력 발생 시기 변경 등 2026년 3월 발표된 대책은 법령 개정이 필요한 사항으로, 작성 시점 기준 시행 여부와 시기가 확정되지 않았습니다.
+    </p>
+
+  </div>
+</article>
+</body>
+</html>
