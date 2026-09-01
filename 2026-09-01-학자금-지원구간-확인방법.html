@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>학자금 지원구간 확인 방법 — 소득인정액 산정과 구간별 국가장학금 | 교육·입시</title>
+  <meta name="description" content="학자금 지원구간은 소득만 보는 것이 아니라 소득평가액에 재산을 소득으로 환산한 금액을 더해 정한다. 2026년 기준중위소득 4인 가구 649만 4,738원을 기준으로 1구간 194만원부터 9구간 1,948만원까지 이어지는 경곗값 표, 소득인정액 = 소득평가액 + 재산의 소득환산액 − 형제·자매 공제라는 산식, 기본재산액 6,900만원 공제와 월 소득환산율, 부채가 반영되지 않는 경우, 구간별 국가장학금 지원금액과 이의신청·재산정 절차까지 정리했다.">
+  <meta name="keywords" content="학자금 지원구간, 학자금 지원구간 확인, 소득인정액, 국가장학금, 소득분위, 기준중위소득, 재산의 소득환산액, 기본재산액, 국가장학금 구간별 금액, 소득구간 재산정">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f2f4f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #311b92 0%, #5e35b1 45%, #7b1fa2 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #d6c7e6; color: #4a148c; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #f3e5f5; border-left: 5px solid #6a1b9a; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #6a1b9a; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #4a148c; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #6a1b9a; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #4a148c; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #f3e5f5; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #6a1b9a; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #4a148c; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #f5eefa; border-left: 4px solid #7e57c2; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #4a148c; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f8f4fb; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #4a148c; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #4a148c; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #e6dcef; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-blue { background: linear-gradient(90deg, #4a148c, #9575cd); }
+    .bar-teal { background: linear-gradient(90deg, #004d40, #00897b); }
+    .bar-amber { background: linear-gradient(90deg, #e65100, #f9a825); }
+    .bar-red { background: linear-gradient(90deg, #b71c1c, #e53935); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #ded0e8; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #f3e5f5; color: #4a148c; font-weight: 700; }
+    table.rate td.up { color: #4a148c; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #00695c; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #6a1b9a; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #4a148c; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #d6c7e6; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #4a148c; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #d6c7e6; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #6a1b9a; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .formula { background: #faf5fd; border: 1.5px dashed #7e57c2; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 16.5px; font-weight: 800; color: #4a148c; line-height: 1.8; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #7e57c2; margin-top: 10px; margin-bottom: 0; }
+    .warnbox { background: #fff8e1; border-left: 5px solid #f9a825; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 26px 0; }
+    .warnbox .wt { font-size: 14px; font-weight: 800; color: #e65100; margin-bottom: 8px; }
+    .warnbox p { font-size: 15px; color: #5d4037; margin-bottom: 0; word-break: keep-all; }
+    .case { background: #fff; border: 1.5px solid #d6c7e6; border-left: 5px solid #6a1b9a; border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; }
+    .case .ct { font-size: 13.5px; font-weight: 800; color: #4a148c; margin-bottom: 6px; letter-spacing: 0.3px; }
+    .case p { font-size: 14.8px; margin-bottom: 8px; }
+    .case p:last-child { margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #f3e5f5; color: #6a1b9a; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #6a1b9a; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<!-- SEO:AUTO BEGIN -->
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-09-01-%ED%95%99%EC%9E%90%EA%B8%88-%EC%A7%80%EC%9B%90%EA%B5%AC%EA%B0%84-%ED%99%95%EC%9D%B8%EB%B0%A9%EB%B2%95">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="학자금 지원구간 확인 방법 — 소득인정액 산정과 구간별 국가장학금">
+<meta property="og:description" content="구간은 소득만으로 정해지지 않는다. 재산이 소득으로 환산돼 더해지고, 그 계산에는 공제와 환산율이 따로 있다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-09-01-%ED%95%99%EC%9E%90%EA%B8%88-%EC%A7%80%EC%9B%90%EA%B5%AC%EA%B0%84-%ED%99%95%EC%9D%B8%EB%B0%A9%EB%B2%95">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-09-01T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-09-01T09:00:00+09:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="학자금 지원구간 확인 방법 — 소득인정액 산정과 구간별 국가장학금">
+<meta name="twitter:description" content="2026년 기준중위소득이 6.51% 오르면서 경곗값도 함께 올랐다. 같은 소득이면 구간이 내려갈 수 있다.">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "학자금 지원구간 확인 방법 — 소득인정액 산정과 구간별 국가장학금",
+  "description": "구간은 소득만으로 정해지지 않는다. 재산이 소득으로 환산돼 더해지고, 그 계산에는 공제와 환산율이 따로 있다.",
+  "url": "https://sangsang.ephseed.com/2026-09-01-%ED%95%99%EC%9E%90%EA%B8%88-%EC%A7%80%EC%9B%90%EA%B5%AC%EA%B0%84-%ED%99%95%EC%9D%B8%EB%B0%A9%EB%B2%95",
+  "datePublished": "2026-09-01T09:00:00+09:00",
+  "dateModified": "2026-09-01T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+</head>
+<body>
+<article class="article-wrap">
+  <header class="hero">
+    <div class="category-badge">🎓 교육 · 입시</div>
+    <h1>학자금 지원구간 확인 방법 —<br>소득인정액 산정과 구간별 국가장학금</h1>
+    <p class="hero-sub">국가장학금을 신청한 학생이 결과를 받아 들고 가장 많이 던지는 질문은 하나다. "우리 집 소득이 이 정도인데 왜 구간이 이렇게 높게 나왔나." 답은 <b>지원구간을 정하는 숫자가 소득이 아니라 '소득인정액'</b>이라는 데 있다. 소득에 재산을 소득으로 환산한 금액이 더해진 값이고, 그 계산에는 공제와 환산율이 따로 있다. 산식과 경곗값을 그대로 펼쳐 정리했다.</p>
+    <div class="hero-meta">
+      <span>📅 2026년 9월 1일</span>
+      <span>✍️ 생생 정보통 정책팀</span>
+      <span>🎓 교육 · 입시</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+
+    <div class="summary-box">
+      <h2>핵심 요약</h2>
+      <ul>
+        <li>학자금 지원구간을 정하는 숫자는 월급이 아니라 <strong>월 소득인정액 = 소득평가액 + 재산의 소득환산액 − 형제·자매 수에 따른 공제액</strong>이다. 재산이 소득으로 환산돼 더해지므로, 소득이 적어도 구간이 높게 나올 수 있다.</li>
+        <li>기준은 <strong>4인 가구 기준 중위소득</strong> 하나다. 2026년 값은 월 <strong>649만 4,738원</strong>이고, 1구간은 그 30%(월 194만 8,421원), 9구간은 300%(월 1,948만 4,214원)에서 끊긴다. 5인 이상 가구도 4인 기준을 쓴다.</li>
+        <li>재산은 전부 세는 것이 아니라 <strong>기본재산액 최대 6,900만원</strong>을 뺀 나머지에 월 소득환산율을 곱한다. 부채는 사회보장정보시스템으로 확인되는 것만 차감되고, <strong>마이너스 통장·한도대출은 원칙적으로 빠진다.</strong></li>
+        <li>2026년 기준 중위소득이 <strong>6.51% 올라</strong> 경곗값이 통째로 위로 밀렸다. 소득·재산이 그대로라면 구간이 내려갈 수 있다는 뜻이고, 이는 신청자가 직접 한 일이 없어도 생기는 변화다.</li>
+      </ul>
+    </div>
+
+    <h2 class="sec">1. '소득분위'라는 말이 '지원구간'으로 바뀐 이유</h2>
+
+    <p>학생들 사이에서는 아직도 "소득분위 몇 나왔어?"라는 말이 통용된다. 하지만 한국장학재단의 공식 명칭은 <strong>학자금 지원구간</strong>이다. 이름이 바뀐 것은 단순한 표현 정리가 아니라 계산 방식의 성격을 드러낸다.</p>
+
+    <p>분위(分位)는 통계에서 전체를 순서대로 줄 세운 뒤 등분한 위치를 뜻한다. 10분위라고 하면 소득 상위 10%라는 의미가 자연스럽게 따라붙는다. 그런데 학자금 지원구간은 그런 상대적 순위가 아니다. <strong>미리 정해 둔 금액 경계선에 신청 가구의 소득인정액을 대 보고 어느 칸에 떨어지는지를 보는 방식</strong>이다. 경계선은 매년 고시되는 기준 중위소득의 배수로 정해져 있다. 즉 10구간은 "상위 10%"가 아니라 "월 소득인정액이 4인 가구 중위소득의 300%를 넘는 가구"라는 뜻이다.</p>
+
+    <p>이 차이는 실무에서 곧바로 체감된다. 다른 신청자들의 소득이 어떻게 움직이든 내 구간은 영향받지 않는다. 반대로 내 소득·재산이 그대로여도 <strong>기준 중위소득 고시가 바뀌면 내 구간이 바뀐다.</strong> 뒤에서 보겠지만 2026년에 실제로 일어난 일이 그것이다.</p>
+
+    <div class="pullquote">
+      구간을 정하는 것은 다른 신청자와의 비교가 아니라, 고시된 금액선과 내 가구의 소득인정액이다. 그래서 확인해야 할 것도 순위가 아니라 산식이다.
+    </div>
+
+    <h2 class="sec">2. 2026년 경곗값 — 649만 4,738원이 모든 선의 기준이다</h2>
+
+    <p>2026년도 기준 중위소득은 중앙생활보장위원회 심의·의결을 거쳐 고시됐다. 4인 가구 기준 월 <strong>649만 4,738원</strong>으로, 2025년 609만 7,773원에서 <strong>6.51%</strong> 인상됐다. 1인 가구는 239만 2,013원에서 256만 4,238원으로 <strong>7.20%</strong> 올랐다. 정부는 이를 "역대 최대 수준 인상"으로 설명했다.</p>
+
+    <table class="rate">
+      <tr><th>가구원 수</th><th>2025년 기준 중위소득(월)</th><th>2026년 기준 중위소득(월)</th><th>인상률</th></tr>
+      <tr><td>1인</td><td>2,392,013원</td><td>2,564,238원</td><td class="up">7.20%</td></tr>
+      <tr><td>2인</td><td>3,932,658원</td><td>4,199,292원</td><td class="up">6.78%</td></tr>
+      <tr><td>3인</td><td>5,025,353원</td><td>5,359,036원</td><td class="up">6.64%</td></tr>
+      <tr><td>4인</td><td>6,097,773원</td><td>6,494,738원</td><td class="up">6.51%</td></tr>
+    </table>
+
+    <p>여기서 학자금 지원구간에 실제로 쓰이는 값은 <strong>4인 가구 금액 하나뿐</strong>이다. 가구원이 3명이든 6명이든 경곗값 표는 같다. 서강대 학보의 취재에서 한국장학재단은 "다자녀가 아닌 5인 이상 가구도 4인 가구 기준 중위소득을 적용받는다"고 밝혔다. 가구원 수가 많을수록 1인당 생활 여력이 줄어드는 현실이 경곗값에는 직접 반영되지 않고, 뒤에 나오는 형제·자매 공제로 일부만 보정된다.</p>
+
+    <table class="rate">
+      <tr><th>구간</th><th>기준 중위소득 대비</th><th>월 소득인정액 경곗값</th></tr>
+      <tr><td>1구간</td><td>30% 이하</td><td class="up">1,948,421원</td></tr>
+      <tr><td>2구간</td><td>50% 이하</td><td>3,247,369원</td></tr>
+      <tr><td>3구간</td><td>70% 이하</td><td>4,546,317원</td></tr>
+      <tr><td>4구간</td><td>90% 이하</td><td>5,845,264원</td></tr>
+      <tr><td>5구간</td><td>100% 이하</td><td class="up">6,494,738원</td></tr>
+      <tr><td>6구간</td><td>130% 이하</td><td>8,443,159원</td></tr>
+      <tr><td>7구간</td><td>150% 이하</td><td>9,742,107원</td></tr>
+      <tr><td>8구간</td><td>200% 이하</td><td>12,989,476원</td></tr>
+      <tr><td>9구간</td><td>300% 이하</td><td class="up">19,484,214원</td></tr>
+      <tr><td>10구간</td><td>300% 초과</td><td>19,484,214원 초과</td></tr>
+    </table>
+
+    <p>표를 세로로 훑으면 구간 폭이 균등하지 않다는 점이 드러난다. 1구간에서 5구간까지는 20%포인트 안팎으로 촘촘하지만, 8구간에서 9구간으로 넘어가는 폭은 100%포인트다. <strong>저소득 구간일수록 경계가 촘촘해 작은 소득 변화로도 구간이 흔들리고, 고소득 구간은 넓어서 어지간해서는 움직이지 않는다.</strong> 지원 단가가 저소득 구간에 집중돼 있다는 점을 감안하면, 구간 경계에서 발생하는 체감 격차는 아래쪽에서 훨씬 크다.</p>
+
+    <div class="infographic-section">
+      <h3>📊 2026년 학자금 지원구간 경곗값 — 월 소득인정액 기준</h3>
+      <div class="bar-chart">
+        <div class="bar-item"><div class="bar-label"><span>1구간 (중위 30%)</span><span class="val">194만 8,421원</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:10.0%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>2구간 (중위 50%)</span><span class="val">324만 7,369원</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:16.7%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>3구간 (중위 70%)</span><span class="val">454만 6,317원</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:23.3%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>4구간 (중위 90%)</span><span class="val">584만 5,264원</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:30.0%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>5구간 (중위 100%)</span><span class="val">649만 4,738원</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:33.3%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>6구간 (중위 130%)</span><span class="val">844만 3,159원</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:43.3%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>7구간 (중위 150%)</span><span class="val">974만 2,107원</span></div><div class="bar-track"><div class="bar-fill bar-amber" style="width:50.0%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>8구간 (중위 200%)</span><span class="val">1,298만 9,476원</span></div><div class="bar-track"><div class="bar-fill bar-amber" style="width:66.7%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>9구간 (중위 300%)</span><span class="val">1,948만 4,214원</span></div><div class="bar-track"><div class="bar-fill bar-red" style="width:100%"></div></div></div>
+      </div>
+      <p class="legend" style="margin-top:18px">
+        <span class="key" style="background:#00897b"></span>1~3구간 · 연 600만원 지원 &nbsp;
+        <span class="key" style="background:#7e57c2"></span>4~6구간 · 연 440만원 &nbsp;
+        <span class="key" style="background:#f9a825"></span>7~8구간 · 연 360만원 &nbsp;
+        <span class="key" style="background:#e53935"></span>9구간 · 연 100만원
+      </p>
+      <p class="note">막대 길이는 9구간 경곗값(1,948만 4,214원)을 100%로 둔 상대 비율. 경곗값은 2026년 4인 가구 기준 중위소득 649만 4,738원에 각 구간 비율을 곱한 값이며, 지원금액은 국가장학금Ⅰ유형 기준이다.</p>
+    </div>
+
+    <h2 class="sec">3. 소득인정액 산식 — 재산이 소득으로 바뀌어 더해진다</h2>
+
+    <p>구간을 정하는 실제 숫자는 다음 한 줄로 만들어진다.</p>
+
+    <div class="formula">
+      <p class="f-main">월 소득인정액 = 월 소득평가액 + 월 재산의 소득환산액 − 형제·자매 수에 따른 공제액</p>
+      <p class="f-note">한국장학재단 학자금 지원구간 산정 방식</p>
+    </div>
+
+    <p>세 항을 하나씩 뜯어보면 왜 "소득이 적은데 구간이 높다"는 상황이 생기는지가 보인다.</p>
+
+    <h3 class="sub">① 소득평가액 — 실제로 번 돈</h3>
+
+    <p>근로소득(상시근로·일용근로·공공일자리)과 사업소득(농업·임업·어업·기타)이 기본이고, 재산소득과 연금소득 등이 합산된다. 공제도 있다. <strong>학생 본인의 근로·사업소득에서는 최대 130만원이 공제</strong>되며, 일용근로소득이 있으면 일용소득 50% 공제와 정액공제 130만원 중 많은 쪽을 적용한다. 가구원의 일용근로소득은 월평균의 50%가 공제된다. 방학 아르바이트로 번 돈이 곧바로 구간을 밀어 올리지 않도록 설계된 부분이다.</p>
+
+    <h3 class="sub">② 재산의 소득환산액 — 가진 것을 소득으로 바꾼 값</h3>
+
+    <p>여기가 체감과 가장 크게 어긋나는 항목이다. 집·전세보증금·예금·자동차 같은 재산은 그 자체로 현금 흐름을 만들지 않지만, 산정에서는 <strong>매달 얼마의 소득을 낳는 것으로 간주</strong>된다. 계산은 두 단계다.</p>
+
+    <div class="formula">
+      <p class="f-main">(일반재산 + 금융재산 + 자동차 − 기본재산액 공제 − 부채) × 월 소득환산율</p>
+      <p class="f-note">기본재산액 공제 최대 6,900만원 · 부채는 일반재산 → 금융재산 순으로 차감(자동차 제외)</p>
+    </div>
+
+    <table class="rate">
+      <tr><th>재산 종류</th><th>월 소득환산율</th><th>메모</th></tr>
+      <tr><td>일반재산(주택·토지·전월세보증금 등)</td><td class="up">4.17% ÷ 3</td><td>기본재산액 공제 후 잔액에 적용</td></tr>
+      <tr><td>금융재산(예금·적금·보험·주식 등)</td><td class="up">6.26% ÷ 3</td><td>가장 높은 환산율</td></tr>
+      <tr><td>자동차</td><td class="up">4.17% ÷ 3</td><td>부채로 차감되지 않는 항목</td></tr>
+    </table>
+
+    <p>환산율이 재산 종류마다 다르다는 점이 중요하다. <strong>같은 1억원이라도 예금으로 들고 있을 때가 주택으로 들고 있을 때보다 소득으로 더 크게 환산된다.</strong> 유동성이 높은 자산일수록 등록금 납부에 즉시 쓸 수 있다고 보기 때문이다. 반대로 자동차는 부채 차감 대상에서 빠져 있어, 할부로 산 차도 잔여 할부금이 상계되지 않고 가액이 그대로 잡힌다.</p>
+
+    <h3 class="sub">③ 형제·자매 공제 — 다자녀 보정</h3>
+
+    <div class="formula">
+      <p class="f-main">(본인 포함 형제·자매 수 − 2) × 1인당 40만원</p>
+      <p class="f-note">기혼 신청자는 공제 대상에서 제외</p>
+    </div>
+
+    <p>자녀가 두 명 이하면 공제액이 0원이고, 세 명이면 월 40만원, 네 명이면 월 80만원이 소득인정액에서 빠진다. 앞서 본 대로 경곗값은 가구원 수와 무관하게 4인 기준 하나이므로, <strong>가구원 수 차이를 반영하는 장치는 사실상 이 공제 하나뿐</strong>이다. 자녀가 셋인 5인 가구의 월 40만원 공제가 경곗값 649만원 체계 안에서 얼마나 유의미한지는 별개의 문제다.</p>
+
+    <h2 class="sec">4. 확인 절차 — 어디서 무엇을 보는가</h2>
+
+    <div class="steps">
+      <div class="step"><div class="step-t">한국장학재단 누리집·앱에서 신청</div><div class="step-d">공동인증서·금융인증서 등으로 본인 확인 후 국가장학금을 신청한다. 신청만으로 산정이 시작되지는 않는다.</div></div>
+      <div class="step"><div class="step-t">가구원 정보제공 동의</div><div class="step-d">미혼이면 부모, 기혼이면 배우자가 대상이다. 이 동의가 완료되지 않으면 소득·재산 조사가 진행되지 않아 구간이 '미산정'으로 남는다. 신청과 별개의 절차라는 점이 가장 흔한 누락 지점이다.</div></div>
+      <div class="step"><div class="step-t">서류 제출</div><div class="step-d">가족관계 확인이나 소득·재산 관련 증빙이 필요한 경우 안내된 서류를 기한 내에 제출한다. 화면에 뜬 목록이 기준이다.</div></div>
+      <div class="step"><div class="step-t">소득·재산 조사 및 구간 산정</div><div class="step-d">보건복지부 사회보장정보시스템을 통해 공적자료가 연계돼 소득인정액이 계산된다. 통상 1~2개월이 걸린다.</div></div>
+      <div class="step"><div class="step-t">결과와 상세내역 확인</div><div class="step-d">재단 홈페이지 마이페이지에서 산정된 구간과 함께 소득·재산 항목별 상세내역을 볼 수 있다. 구간 숫자만 보고 넘기지 말고 어떤 재산이 얼마로 잡혔는지를 확인해야 다음 단계가 가능하다.</div></div>
+    </div>
+
+    <p>산정 전에 미리 가늠하고 싶다면 재단이 제공하는 <strong>소득구간 모의계산</strong>을 쓸 수 있다. 다만 모의계산은 입력값 기준이고 실제 산정은 공적자료 기준이므로 결과가 다를 수 있다.</p>
+
+    <h2 class="sec">5. 숨겨진 이면 — 구간이 높게 나오는 네 가지 이유</h2>
+
+    <p>매 학기 반복되는 민원의 유형은 대체로 정해져 있다. 원인은 대부분 산정 오류가 아니라 산식 자체의 설계에 있다.</p>
+
+    <div class="case">
+      <div class="ct">① 부채가 반영되지 않는다</div>
+      <p>한국장학재단은 "보건복지부의 사회보장정보시스템을 통해 확인이 불가능한 경우 부채로 미반영됨을 원칙"으로 한다고 밝히고 있다. 반영되는 것은 금융기관 부채와, 3개월 이상 연체된 50만원 이상 신용카드 미결제금 정도다. <strong>마이너스 통장·한도대출, 개인 간 채무는 원칙적으로 빠진다.</strong> 빚을 내 마련한 재산이 재산으로만 잡히는 구조다.</p>
+    </div>
+
+    <div class="case">
+      <div class="ct">② 5인 이상 가구도 4인 기준을 쓴다</div>
+      <p>경곗값이 4인 가구 하나로 고정돼 있어, 가구원이 많을수록 1인당 여력 대비 구간이 높게 나온다. 보정 장치는 형제·자매 공제(월 40만원/인)뿐이다.</p>
+    </div>
+
+    <div class="case">
+      <div class="ct">③ 자동차는 부채로 깎이지 않는다</div>
+      <p>부채 차감은 일반재산과 금융재산에만 적용되고 자동차는 제외된다. 할부 잔액이 남아 있어도 차량 가액이 그대로 재산에 더해진다.</p>
+    </div>
+
+    <div class="case">
+      <div class="ct">④ 직업군에 따른 차이는 없다</div>
+      <p>"공무원 자녀는 다른 기준으로 조사된다"는 이야기가 오래 돌았지만, 재단은 "학자금 지원 구간은 모든 신청자에게 동일한 기준으로 조사"된다고 확인했다. 공무원 가구의 구간이 높게 나오는 것은 기준이 달라서가 아니라 소득이 공적자료로 100% 포착되기 때문이다. <strong>포착률의 차이가 기준의 차이로 오해된 사례다.</strong></p>
+    </div>
+
+    <div class="warnbox">
+      <div class="wt">⚠️ 산정 결과가 마음에 들지 않는다는 것은 재산정 사유가 아니다</div>
+      <p>재산정(소득구간 최신화) 신청이 가능한 것은 퇴직·폐업·이직 등 <strong>소득 감소</strong>, 이혼·별거 등 <strong>가구원 구성 변동</strong>, <strong>재산 평가 오류</strong>가 있는 경우다. 소득·재산에 변동이 없는데 결과가 기대보다 낮다는 이유만으로는 받아들여지지 않는다. 신청은 재단 홈페이지의 소득구간(분위) 최신화 메뉴 또는 현장지원센터에서 하고, 해당 학기 심사에 반영되려면 <strong>정해진 기간 안에 접수</strong>해야 한다.</p>
+    </div>
+
+    <h2 class="sec">6. 구간이 정해지면 얼마를 받나</h2>
+
+    <table class="rate">
+      <tr><th>학자금 지원구간</th><th>학기당 지원금액</th><th>연간 지원금액</th></tr>
+      <tr><td>기초생활수급자·차상위계층</td><td class="up">등록금 전액</td><td class="up">등록금 전액</td></tr>
+      <tr><td>1~3구간</td><td>300만원</td><td class="up">600만원</td></tr>
+      <tr><td>4~6구간</td><td>220만원</td><td>440만원</td></tr>
+      <tr><td>7~8구간</td><td>180만원</td><td>360만원</td></tr>
+      <tr><td>9구간</td><td>50만원</td><td>100만원</td></tr>
+      <tr><td>10구간</td><td>—</td><td>지원 대상 아님</td></tr>
+    </table>
+
+    <p>지원 대상은 2025년부터 기존 8구간 이하에서 <strong>9구간까지</strong> 넓어졌다. 2026학년도 1학기에는 약 <strong>108만 명</strong>에게 <strong>2조 2,267억원</strong>이 지원돼 1인당 평균 206만원이 돌아갔다. 전년 동기보다 인원은 약 4만 명(3.8%), 금액은 약 931억원(4.4%) 늘었다. 이 가운데 기초·차상위 계층은 10만 6,861명 3,391억원, 1~5구간(중위소득 100% 이하)은 41만 7,682명 1조 395억원이었다.</p>
+
+    <div class="impact-grid">
+      <div class="impact-card"><span class="impact-num">108만</span><span class="impact-label">2026학년도 1학기<br>국가장학금 수혜 인원(명)</span></div>
+      <div class="impact-card"><span class="impact-num">2.23조</span><span class="impact-label">1학기 총 지원금액(원)</span></div>
+      <div class="impact-card"><span class="impact-num">206만</span><span class="impact-label">1인당 평균 지원금(원)</span></div>
+      <div class="impact-card"><span class="impact-num">9구간</span><span class="impact-label">2025년부터 확대된<br>지원 대상 상한</span></div>
+    </div>
+
+    <p>2026년에는 다자녀 지원도 넓어졌다. <strong>8구간 이하 다자녀 가구의 셋째 이상 자녀</strong>는 기초·차상위부터 8구간까지 등록금 전액을 지원받는다. 국가장학금Ⅰ유형 외에 <strong>주거안정장학금</strong>과 <strong>국가근로장학금</strong>도 같은 창구에서 함께 신청할 수 있다. 성적 요건은 통상 직전 학기 12학점 이상 이수에 100점 만점 80점(B학점) 이상이며, 신입생은 첫 학기 성적 기준이 면제된다.</p>
+
+    <p class="note">2026학년도 2학기 국가장학금 2차 신청은 8월 12일 시작해 9월 9일 오후 6시에 마감된다. 2차가 마지막 신청 기회이며, 신·편입생과 재학생·복학생·재입학생 모두 대상이다. 신청 일정과 세부 요건은 학기마다 달라지므로 한국장학재단 공지를 확인해야 한다.</p>
+
+    <h2 class="sec">7. 나에게 미치는 영향 — 확인 순서</h2>
+
+    <p>이 제도를 실제로 다루는 사람이 통제할 수 있는 변수는 많지 않다. 그러나 <strong>확인하지 않아서 잃는 몫</strong>은 통제 가능하다.</p>
+
+    <ul class="plain">
+      <li><strong>가구원 정보제공 동의가 완료됐는지부터 본다.</strong> 신청 자체는 됐는데 동의가 빠져 구간이 산정되지 않는 경우가 가장 흔하다. 산정이 안 되면 지원도 없다.</li>
+      <li><strong>구간 숫자가 아니라 상세내역을 연다.</strong> 어떤 재산이 얼마로 잡혔는지 확인해야 오류인지 설계인지 구분할 수 있다. 오류라면 재산정 사유가 되고, 설계라면 그 학기에는 다툴 여지가 없다.</li>
+      <li><strong>소득이 실제로 줄었다면 즉시 최신화 신청을 한다.</strong> 퇴직·폐업·이직은 명시된 재산정 사유이고, 증빙(퇴직증명서·폐업사실증명원 등)이 필요하다. 다만 기간이 지나면 그 학기에는 반영되지 않는다.</li>
+      <li><strong>1~2개월의 산정 기간을 일정에 넣는다.</strong> 등록금 납부일과 구간 확정일이 어긋나면 일단 납부 후 환급 절차를 밟게 되는 경우가 생긴다.</li>
+      <li><strong>9구간·10구간이라도 신청은 해 둔다.</strong> 지원 대상이 9구간까지 넓어졌고 재산정으로 구간이 내려갈 여지도 있는데, 애초에 신청하지 않으면 어느 쪽도 적용되지 않는다.</li>
+    </ul>
+
+    <h2 class="sec">8. 전망과 행동 제안</h2>
+
+    <p>2026년의 변화에서 가장 조용하지만 실질적인 것은 <strong>기준 중위소득 6.51% 인상</strong>이다. 경곗값이 통째로 위로 밀렸으므로, 소득·재산이 작년과 같은 가구는 구간이 내려갔거나 최소한 유지됐을 가능성이 높다. <strong>구간을 움직인 것은 신청자가 아니라 고시</strong>인 셈이다. 이는 이 제도의 성격을 잘 보여 준다. 개인이 조정할 수 있는 여지는 좁고, 대부분의 변동은 바깥에서 온다.</p>
+
+    <p>남은 쟁점도 분명하다. 하나는 <strong>부채 미반영</strong>이다. 자산 가격이 오르고 그 자산이 대출로 조달되는 구조에서, 확인 가능한 부채만 차감하는 원칙은 실질 여력과 산정 결과의 간격을 벌린다. 다른 하나는 <strong>4인 가구 단일 경곗값</strong>이다. 가구원 수를 월 40만원 공제 하나로 보정하는 방식이 5인 이상 가구의 현실을 담아내는지는 계속 제기되는 물음이다. 지원 대상을 9구간까지 넓힌 최근의 방향은 경계선 자체를 완화하는 쪽이었지, 산식을 손보는 쪽은 아니었다.</p>
+
+    <p>그래서 신청자가 할 일의 순서는 이렇게 정리된다. <strong>첫째, 가구원 동의를 끝낸다. 둘째, 산정 결과의 상세내역에서 재산 항목을 확인한다. 셋째, 소득 변동이 있었다면 기간 안에 최신화를 신청한다.</strong> 구간이 왜 이렇게 나왔는지를 다른 사람의 경험담에서 찾는 대신, 자기 상세내역의 숫자 한 줄을 확인하는 편이 훨씬 빠르고 정확하다. 산식은 공개돼 있고, 그 산식에 들어간 값도 본인이 볼 수 있다.</p>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#학자금지원구간</span>
+      <span class="hashtag">#소득인정액</span>
+      <span class="hashtag">#국가장학금</span>
+      <span class="hashtag">#소득분위</span>
+      <span class="hashtag">#기준중위소득</span>
+      <span class="hashtag">#재산의소득환산액</span>
+      <span class="hashtag">#기본재산액</span>
+      <span class="hashtag">#한국장학재단</span>
+      <span class="hashtag">#소득구간재산정</span>
+      <span class="hashtag">#주거안정장학금</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://www.kosaf.go.kr/ko/tuition.do?pg=tuition04_09_01&amp;type=scholar" target="_blank" rel="noopener">한국장학재단 — 학자금 지원구간 산정 안내</a>
+      <a href="https://www.kosaf.go.kr/ko/tuition.do?pg=tuition04_09_07&amp;type=scholar" target="_blank" rel="noopener">한국장학재단 — 학자금 지원구간 경곗값 확인</a>
+      <a href="https://www.korea.kr/news/policyNewsView.do?newsId=148953762" target="_blank" rel="noopener">대한민국 정책브리핑 — 2026년 기준 중위소득 역대 최대 인상(1인 2,564,238원 7.20%, 4인 6,494,738원 6.51%)</a>
+      <a href="https://www.mohw.go.kr/board.es?mid=a10503010100&amp;bid=0027&amp;act=view&amp;list_no=1487098" target="_blank" rel="noopener">보건복지부 — 2026년도 기준 중위소득 6.51% 역대 최대로 인상</a>
+      <a href="https://angelsitter.co.kr/board.view.php?board=bbs&amp;no=2030" target="_blank" rel="noopener">2026년 학자금 지원구간 경곗값 표(1구간 1,948,421원 ~ 9구간 19,484,214원)와 구간별 지원금액</a>
+      <a href="https://angelsitter.co.kr/board.view.php?board=bbs&amp;no=1686" target="_blank" rel="noopener">소득인정액 산정 상세 — 소득평가액 항목과 학생 130만원 공제, 기본재산액 6,900만원, 월 소득환산율(일반 4.17%/3·금융 6.26%/3·차량 4.17%/3), 형제·자매 공제 (형제자매수−2)×40만원</a>
+      <a href="https://sgunews.sogang.ac.kr/front/cmsboardview.do?siteId=sgunews&amp;bbsConfigFK=3608&amp;pkid=914171" target="_blank" rel="noopener">서강대 학보 — 국가장학금 소득분위 산정에 대한 오해와 진실(부채 미반영 원칙, 5인 이상 가구도 4인 기준, 직업군별 차이 없음)</a>
+      <a href="https://news.unn.net/news/articleView.html?idxno=593722" target="_blank" rel="noopener">한국대학신문 — 2026년 1학기 국가장학금 108만 명 2조 2,267억원 지원, 1인당 평균 206만원, 9구간 확대</a>
+      <a href="https://go.cuk.edu/cms/FrCon/index.do?MENU_ID=1010&amp;CONTENTS_NO=2" target="_blank" rel="noopener">국가장학금Ⅰ유형 안내 — 가구원 정보제공 동의(미혼: 부모 / 기혼: 배우자), 직전학기 12학점·80점 이상 성적기준, 구간별 학기당 지원금액</a>
+      <a href="https://v.daum.net/v/20260812112512622" target="_blank" rel="noopener">2026학년도 2학기 2차 국가장학금·주거안정장학금·국가근로장학금 통합 신청(8월 12일~9월 9일 오후 6시 마감)</a>
+      <a href="https://blog.kwt.co.kr/2026-%EA%B5%AD%EA%B0%80%EC%9E%A5%ED%95%99%EA%B8%88-%EC%8B%A0%EC%B2%AD%EA%B8%B0%EA%B0%84-%EC%B4%9D%EC%A0%95%EB%A6%AC%EC%86%8C%EB%93%9D%EB%B6%84%EC%9C%84%EB%B3%84-%EC%A7%80%EC%9B%90%EA%B8%88%EC%95%A1/" target="_blank" rel="noopener">2026 국가장학금 구간별 연간 지원금액과 8구간 이하 다자녀 셋째 이상 등록금 전액 지원</a>
+      <a href="https://portal.kosaf.go.kr/CO/jspAction.do?forwardOnlyFlag=Y&amp;forwardPage=pt%2Fsm%2Fcustdsgn%2FPTSMIncpSmltMngt_01P&amp;ignoreSession=Y" target="_blank" rel="noopener">한국장학재단 — 소득구간(분위) 모의계산</a>
+    </div>
+
+    <p class="disclaimer">
+      ※ 본 아티클은 한국장학재단·보건복지부·정책브리핑의 공개 자료와 대학 공지, 언론 보도를 정리한 정보성 콘텐츠이며 개별 신청에 대한 상담이 아닙니다. <strong>학자금 지원구간의 경곗값과 구간별 지원금액, 소득·재산 공제 항목과 월 소득환산율은 매년 고시와 사업 지침에 따라 변경될 수 있으므로, 신청 시점의 한국장학재단 공식 안내를 반드시 확인하시기 바랍니다.</strong> 본문의 소득인정액 산식과 공제·환산율은 재단이 공개한 산정 방식을 정리한 것이며, 실제 산정은 보건복지부 사회보장정보시스템을 통해 연계된 공적자료를 기준으로 이뤄지므로 모의계산 결과와 다를 수 있습니다. 신청 기간·서류 제출 기한·재산정(소득구간 최신화) 접수 기간은 학기마다 다르고, 기한을 넘기면 해당 학기 심사에 반영되지 않습니다. 국가장학금Ⅱ유형은 대학 자체 재원과 연계되어 대학마다 지원 기준과 금액이 다릅니다.
+    </p>
+
+  </div>
+</article>
+</body>
+</html>
