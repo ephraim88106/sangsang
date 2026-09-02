@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>육아휴직 급여 계산법 — 월별 상한액과 사후지급금 폐지 시기 | 취업·노동</title>
+  <meta name="description" content="육아휴직 급여는 월급이 아니라 육아휴직 시작일 기준 월 통상임금으로 계산한다. 고용보험법 시행령 제95조에 따라 1~3개월은 통상임금 100%(상한 250만원), 4~6개월도 100%(상한 200만원), 7개월부터는 80%(상한 160만원)로 지급률과 상한이 함께 내려간다. 2025년 1월 1일 사후지급금 폐지, 6+6 부모육아휴직제 월별 상한 250~450만원, 1년 6개월 연장 요건, 2026년 8월 20일 시행된 단기 육아휴직까지 계산 구조로 정리했다.">
+  <meta name="keywords" content="육아휴직 급여 계산, 육아휴직 급여 상한액, 육아휴직 급여 250만원, 사후지급금 폐지, 6+6 부모육아휴직제, 통상임금, 고용보험법 시행령 제95조, 육아휴직 1년 6개월, 단기 육아휴직, 육아휴직 급여 신청">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f2f4f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #004d40 0%, #00695c 45%, #00838f 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #b2dfdb; color: #004d40; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #e0f2f1; border-left: 5px solid #00695c; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #00695c; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #004d40; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #00695c; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #004d40; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #e0f2f1; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #00695c; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #004d40; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #f1f8f7; border-left: 4px solid #26a69a; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #004d40; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f4faf9; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #004d40; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #004d40; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #d5e8e5; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-teal { background: linear-gradient(90deg, #004d40, #26a69a); }
+    .bar-cyan { background: linear-gradient(90deg, #006064, #4dd0e1); }
+    .bar-amber { background: linear-gradient(90deg, #ef6c00, #ffb300); }
+    .bar-grey { background: linear-gradient(90deg, #546e7a, #90a4ae); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #c2ddd9; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #e0f2f1; color: #004d40; font-weight: 700; }
+    table.rate td.up { color: #004d40; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #ef6c00; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #00695c; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #004d40; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #b2dfdb; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #004d40; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #b2dfdb; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #00695c; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .formula { background: #f4faf9; border: 1.5px dashed #26a69a; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 16.5px; font-weight: 800; color: #004d40; line-height: 1.8; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #00838f; margin-top: 10px; margin-bottom: 0; }
+    .warnbox { background: #fff8e1; border-left: 5px solid #f9a825; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 26px 0; }
+    .warnbox .wt { font-size: 14px; font-weight: 800; color: #ef6c00; margin-bottom: 8px; }
+    .warnbox p { font-size: 15px; color: #5d4037; margin-bottom: 0; word-break: keep-all; }
+    .case { background: #fff; border: 1.5px solid #b2dfdb; border-left: 5px solid #00695c; border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; }
+    .case .ct { font-size: 13.5px; font-weight: 800; color: #004d40; margin-bottom: 6px; letter-spacing: 0.3px; }
+    .case p { font-size: 14.8px; margin-bottom: 8px; }
+    .case p:last-child { margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #e0f2f1; color: #00695c; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #00695c; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<!-- SEO:AUTO BEGIN -->
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-09-02-%EC%9C%A1%EC%95%84%ED%9C%B4%EC%A7%81-%EA%B8%89%EC%97%AC-%EA%B3%84%EC%82%B0%EB%B2%95">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="육아휴직 급여 계산법 — 월별 상한액과 사후지급금 폐지 시기">
+<meta property="og:description" content="상한액만 보면 계산이 틀린다. 1~6개월은 통상임금 100%, 7개월부터는 80%로 지급률 자체가 내려간다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-09-02-%EC%9C%A1%EC%95%84%ED%9C%B4%EC%A7%81-%EA%B8%89%EC%97%AC-%EA%B3%84%EC%82%B0%EB%B2%95">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-09-02T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-09-02T09:00:00+09:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="육아휴직 급여 계산법 — 월별 상한액과 사후지급금 폐지 시기">
+<meta name="twitter:description" content="12개월을 상한까지 받아도 2,310만원. 그중 절반 가까이가 대체율이 가장 낮은 후반 6개월에 몰려 있다.">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "육아휴직 급여 계산법 — 월별 상한액과 사후지급금 폐지 시기",
+  "description": "상한액만 보면 계산이 틀린다. 1~6개월은 통상임금 100%, 7개월부터는 80%로 지급률 자체가 내려간다.",
+  "url": "https://sangsang.ephseed.com/2026-09-02-%EC%9C%A1%EC%95%84%ED%9C%B4%EC%A7%81-%EA%B8%89%EC%97%AC-%EA%B3%84%EC%82%B0%EB%B2%95",
+  "datePublished": "2026-09-02T09:00:00+09:00",
+  "dateModified": "2026-09-02T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+</head>
+<body>
+<article class="article-wrap">
+  <header class="hero">
+    <div class="category-badge">💼 취업 · 노동</div>
+    <h1>육아휴직 급여 계산법 —<br>월별 상한액과 사후지급금 폐지 시기</h1>
+    <p class="hero-sub">"육아휴직 급여 월 250만원"이라는 문장은 절반만 맞다. 250만원은 <b>처음 석 달에만 걸리는 상한선</b>이고, 넉 달째에는 200만원으로, 일곱 달째부터는 160만원으로 내려간다. 그런데 진짜 계산을 바꾸는 것은 상한이 아니라 그 아래 숨은 <b>지급률</b>이다. 앞의 여섯 달은 통상임금의 100%, 일곱 달째부터는 80%다. 같은 월급을 받는 사람의 실수령액이 두 번 꺾이는 이유가 여기에 있다.</p>
+    <div class="hero-meta">
+      <span>💼 취업 · 노동</span>
+      <span>📅 2026년 9월 2일</span>
+      <span>⏱️ 약 10분</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+
+    <div class="summary-box">
+      <h2>핵심 요약</h2>
+      <ul>
+        <li>기준이 되는 숫자는 월급이 아니라 <strong>육아휴직 시작일을 기준으로 한 월 통상임금</strong>이다. 시작일에 한 번 고정되므로, 휴직 중 회사 임금이 올라도 급여는 그대로다.</li>
+        <li>고용보험법 시행령 제95조는 기간을 셋으로 나눈다. <strong>1~3개월 통상임금 100%(상한 250만원), 4~6개월 100%(상한 200만원), 7개월 이후 80%(상한 160만원)</strong>. 하한액은 전 구간 70만원이다.</li>
+        <li>2025년 1월 1일부터 <strong>사후지급금이 폐지</strong>됐다. 종전에는 매달 75%만 주고 나머지 25%를 복직 6개월 뒤에 몰아줬지만, 지금은 휴직 기간 중 전액 지급된다. 12개월을 상한까지 받으면 <strong>총 2,310만원</strong>으로, 종전 방식의 1,800만원보다 510만원 많다.</li>
+        <li>부모가 모두 쓰면 계산식이 통째로 바뀐다. 생후 18개월 이내 자녀에 대해 <strong>6+6 부모육아휴직제</strong>가 적용되면 앞 6개월 상한이 250·250·300·350·400·450만원으로 올라간다. 다만 이 상한은 통상임금이 그만큼 높은 사람에게만 실제로 닿는다.</li>
+      </ul>
+    </div>
+
+    <h2 class="sec">1. 계산의 출발점 — '월급'이 아니라 '시작일 기준 통상임금'</h2>
+
+    <p>육아휴직 급여를 계산할 때 가장 많이 어긋나는 지점은 첫 칸이다. 많은 사람이 통장에 찍히는 월급이나 세전 연봉을 12로 나눈 값을 넣고 계산기를 두드린다. 그러나 법이 쓰는 값은 <strong>육아휴직 시작일을 기준으로 한 월 통상임금</strong>이다.</p>
+
+    <p>통상임금은 소정근로의 대가로 <strong>정기적·일률적·고정적으로</strong> 지급하기로 정한 금액이다. 기본급과 직책수당·자격수당처럼 매달 같은 조건으로 나오는 항목은 들어가지만, 실적에 따라 달라지는 성과급, 실제로 일한 시간에 따라 붙는 연장·야간·휴일근로수당, 사용 여부에 따라 달라지는 연차수당 같은 변동 항목은 원칙적으로 빠진다. 그래서 <strong>같은 회사에서 같은 연봉을 받아도 급여 구성이 성과급 쪽으로 기울어 있으면 통상임금이 낮고, 육아휴직 급여도 낮게 나온다.</strong></p>
+
+    <p>두 번째로 놓치기 쉬운 것은 기준 시점이다. 급여액은 <strong>휴직을 시작한 날의 통상임금 하나로 고정</strong>된다. 휴직 중에 회사가 임금을 인상해도, 승진이 되어도 급여는 따라 오르지 않는다. 반대로 휴직 중 회사 사정으로 임금 체계가 바뀌어도 이미 결정된 급여가 깎이지는 않는다. 분할해서 쓰는 경우에도 각 회차마다 새로 재는 것이 아니라, 그 육아휴직의 시작일 기준값을 계속 쓴다.</p>
+
+    <div class="formula">
+      <p class="f-main">월 육아휴직 급여 = 육아휴직 시작일 기준 월 통상임금 × 구간별 지급률<br>(단, 구간별 상한액을 넘지 못하고 하한액 70만원 아래로 내려가지 않는다)</p>
+      <p class="f-note">구간은 사용 개월 수로 나뉜다 — 1~3개월 100% · 4~6개월 100% · 7개월 이후 80%</p>
+    </div>
+
+    <div class="pullquote">
+      상한액 표를 외우는 것보다 자기 통상임금이 얼마인지 아는 편이 먼저다. 상한은 그 값을 자르는 가위일 뿐, 값을 만들어 주지는 않는다.
+    </div>
+
+    <h2 class="sec">2. 2026년 구간표 — 상한과 지급률이 따로 움직인다</h2>
+
+    <p>고용보험법 시행령 제95조가 정한 구조는 아래와 같다. 표에서 눈여겨볼 것은 상한액 열이 아니라 <strong>지급률 열</strong>이다. 4개월째에는 상한만 내려가고 지급률은 100%로 유지되지만, 7개월째에는 상한과 지급률이 동시에 내려간다.</p>
+
+    <table class="rate">
+      <tr><th>사용 기간</th><th>지급률(월 통상임금 대비)</th><th>월 상한액</th><th>월 하한액</th></tr>
+      <tr><td>1~3개월</td><td class="up">100%</td><td class="up">250만원</td><td>70만원</td></tr>
+      <tr><td>4~6개월</td><td class="up">100%</td><td>200만원</td><td>70만원</td></tr>
+      <tr><td>7개월 이후</td><td class="down">80%</td><td class="down">160만원</td><td>70만원</td></tr>
+    </table>
+
+    <p>여기서 곧바로 계산에 쓰이는 경계값이 나온다. 상한에 실제로 닿으려면 통상임금이 얼마여야 하는지를 뒤집어 구해 보면 이렇다.</p>
+
+    <ul class="plain">
+      <li>1~3개월 구간에서 상한 250만원을 받으려면 <strong>통상임금이 250만원 이상</strong>이어야 한다(지급률 100%).</li>
+      <li>4~6개월 구간에서 상한 200만원을 받으려면 <strong>통상임금이 200만원 이상</strong>이면 된다.</li>
+      <li>7개월 이후 구간에서 상한 160만원을 받으려면 지급률이 80%이므로 <strong>통상임금이 200만원 이상</strong>이면 된다(200만원 × 80% = 160만원).</li>
+    </ul>
+
+    <p>즉 통상임금이 200만원을 넘는 순간, 4개월째부터는 사실상 모든 사람이 같은 금액을 받는다. <strong>월급 차이가 급여 차이로 이어지는 구간은 처음 석 달뿐</strong>이고, 그 뒤로는 정액 급여에 가까워진다. 이것이 제도의 설계이자, 고소득자일수록 후반부 소득 대체율이 급격히 떨어지는 이유다.</p>
+
+    <div class="case">
+      <div class="ct">📌 계산 예시 — 통상임금 300만원인 근로자가 12개월을 쓰는 경우</div>
+      <p>1~3개월: 300만원 × 100% = 300만원 → 상한 250만원 적용 → <strong>월 250만원</strong> (대체율 83.3%)</p>
+      <p>4~6개월: 300만원 × 100% = 300만원 → 상한 200만원 적용 → <strong>월 200만원</strong> (대체율 66.7%)</p>
+      <p>7~12개월: 300만원 × 80% = 240만원 → 상한 160만원 적용 → <strong>월 160만원</strong> (대체율 53.3%)</p>
+      <p>12개월 합계 = (250 × 3) + (200 × 3) + (160 × 6) = <strong>2,310만원</strong></p>
+    </div>
+
+    <div class="infographic-section">
+      <h3>📊 12개월 육아휴직 급여의 월별 지급액 — 상한 적용 기준</h3>
+      <div class="bar-chart">
+        <div class="bar-item"><div class="bar-label"><span>1개월차 (통상임금 100%)</span><span class="val">250만원</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:100%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>2개월차 (통상임금 100%)</span><span class="val">250만원</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:100%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>3개월차 (통상임금 100%)</span><span class="val">250만원</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:100%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>4개월차 (통상임금 100%)</span><span class="val">200만원</span></div><div class="bar-track"><div class="bar-fill bar-cyan" style="width:80%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>5개월차 (통상임금 100%)</span><span class="val">200만원</span></div><div class="bar-track"><div class="bar-fill bar-cyan" style="width:80%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>6개월차 (통상임금 100%)</span><span class="val">200만원</span></div><div class="bar-track"><div class="bar-fill bar-cyan" style="width:80%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>7~12개월차 (통상임금 80%)</span><span class="val">각 160만원</span></div><div class="bar-track"><div class="bar-fill bar-grey" style="width:64%"></div></div></div>
+      </div>
+      <p class="note">막대 길이는 1개월차 상한액 250만원을 100%로 둔 상대값이다. 4개월차에서 한 번, 7개월차에서 다시 한 번 꺾인다. 7개월차의 하락은 상한액(200만→160만원)과 지급률(100%→80%)이 동시에 내려간 결과다.</p>
+    </div>
+
+    <p>12개월 총액 2,310만원 가운데 <strong>후반 6개월 몫은 960만원</strong>이다. 절반의 기간이 총액의 41.6%만 차지한다. 육아휴직을 12개월 꽉 채워 쓰려는 가구가 후반부에 체감하는 압박은 여기서 나온다. 뒤에서 볼 6+6 부모육아휴직제가 <strong>앞 6개월에 재원을 몰아 설계된 이유</strong>도 같은 지점에 있다. 제도는 "오래 쓰라"가 아니라 "둘이 나눠 쓰라"는 방향으로 돈을 배치해 두었다.</p>
+
+    <h2 class="sec">3. 사후지급금 폐지 — 2025년 1월 1일, 그리고 '소급'이 아닌 '기간 단위'</h2>
+
+    <p>2024년까지 육아휴직 급여에는 이름이 따로 붙은 유보분이 있었다. <strong>사후지급금</strong>이다. 매달 정해진 급여의 75%만 지급하고, 나머지 25%는 육아휴직이 끝나고 <strong>복직해 6개월 이상 계속 근무한 사실이 확인된 뒤</strong> 한꺼번에 지급하는 방식이었다. 휴직자가 복직하지 않으면 그 25%는 지급되지 않았다.</p>
+
+    <p>정부는 2024년 10월 10일부터 11월 19일까지 고용보험법 시행령 개정안을 입법예고하면서 이 방식을 없애기로 했고, <strong>2025년 1월 1일부터 사후지급 없이 육아휴직 기간 중 전액 지급</strong>하는 것으로 바뀌었다. 같은 개정으로 상한액이 월 150만원에서 월 최대 250만원으로 올랐다.</p>
+
+    <table class="rate">
+      <tr><th>구분</th><th>2024년까지</th><th>2025년 1월 1일 이후</th></tr>
+      <tr><td>지급률</td><td>통상임금 80% 단일</td><td class="up">1~6개월 100% / 7개월~ 80%</td></tr>
+      <tr><td>월 상한액</td><td>150만원 단일</td><td class="up">250만 → 200만 → 160만원</td></tr>
+      <tr><td>지급 방식</td><td class="down">매월 75% + 복직 6개월 후 25%</td><td class="new">휴직 기간 중 전액 지급</td></tr>
+      <tr><td>12개월 총액(상한 기준)</td><td>1,800만원</td><td class="up">2,310만원</td></tr>
+    </table>
+
+    <p>여기서 자주 오해가 생긴다. "2024년에 육아휴직을 시작했으면 옛날 방식인가"라는 질문이다. 고용노동부는 입법예고 당시 <strong>"법 시행 전에 육아휴직을 시작하였더라도 법 시행 이후에 사용한 기간에 대해서는 인상된 급여를 적용"</strong>한다고 밝혔다. 적용 단위는 <strong>사람이 아니라 기간</strong>이다. 2024년 11월에 휴직을 시작해 2025년까지 이어 쓴 사람이라면, 2024년 11~12월분은 종전 기준으로, 2025년 1월 이후분은 새 기준으로 계산된다는 뜻이다.</p>
+
+    <div class="warnbox">
+      <div class="wt">⚠️ 이미 종료된 휴직까지 되돌려 주는 제도는 아니다</div>
+      <p>기간 단위 적용이라는 말은 뒤집어 보면, <strong>2024년 12월 31일까지 사용을 마친 기간은 인상 대상이 아니라는 뜻</strong>이기도 하다. 2024년에 육아휴직을 모두 마친 사람은 종전 기준의 급여와 사후지급금 규정을 그대로 적용받는다. 다만 사후지급금이 아직 지급되지 않은 상태라면, 그 25%는 종전 규정에 따라 복직 후 6개월 계속 근무 요건을 채운 뒤 청구해야 한다. 요건을 채우고도 청구하지 않으면 자동으로 나오지 않는다.</p>
+    </div>
+
+    <h2 class="sec">4. 6+6 부모육아휴직제 — 상한이 올라가도 닿는 사람은 따로 있다</h2>
+
+    <p>부모가 같은 자녀에 대해 <strong>모두 육아휴직을 사용</strong>하고, 그 자녀가 <strong>생후 18개월 이내</strong>라면 앞 6개월에 대해 별도의 상한액이 적용된다. 6+6 부모육아휴직제다. 지급률은 통상임금 100%이고, 상한은 개월이 지날수록 올라간다. 2025년 개정으로 첫 달 상한이 200만원에서 250만원으로 올라 일반 육아휴직 급여의 첫 구간과 같아졌다.</p>
+
+    <table class="rate">
+      <tr><th>사용 개월</th><th>1인 월 상한액</th><th>부부 합산 월 상한액</th><th>지급률</th></tr>
+      <tr><td>1개월</td><td>250만원</td><td>500만원</td><td>통상임금 100%</td></tr>
+      <tr><td>2개월</td><td>250만원</td><td>500만원</td><td>통상임금 100%</td></tr>
+      <tr><td>3개월</td><td>300만원</td><td>600만원</td><td>통상임금 100%</td></tr>
+      <tr><td>4개월</td><td>350만원</td><td>700만원</td><td>통상임금 100%</td></tr>
+      <tr><td>5개월</td><td>400만원</td><td>800만원</td><td>통상임금 100%</td></tr>
+      <tr><td>6개월</td><td class="up">450만원</td><td class="up">900만원</td><td>통상임금 100%</td></tr>
+      <tr><td>7개월 이후</td><td class="down">160만원</td><td class="down">320만원</td><td class="down">통상임금 80%</td></tr>
+    </table>
+
+    <p>표의 상한액을 6개월치 더하면 <strong>1인 2,000만원, 부부 합산 4,000만원</strong>이 나온다(250+250+300+350+400+450). 홍보 문구에 등장하는 "부부 합산 최대 4,000만원"은 이 산술 합계다.</p>
+
+    <div class="warnbox">
+      <div class="wt">⚠️ 상한 450만원은 통상임금 450만원 이상인 사람에게만 의미가 있다</div>
+      <p>6+6의 지급률은 100%이므로 <strong>실제 급여는 '통상임금'과 '그 달의 상한액' 중 작은 쪽</strong>이다. 통상임금이 월 300만원인 사람이라면 1개월 250만원, 2개월 250만원, 3~6개월은 각 300만원으로 6개월 합계 1,700만원에 그친다. 4·5·6개월차의 350·400·450만원 상한은 통상임금이 그만큼 되지 않는 이상 그림의 떡이다. <strong>올라가는 것은 천장이지 바닥이 아니다.</strong></p>
+    </div>
+
+    <p>또 하나 실무에서 자주 걸리는 조건이 있다. 6+6은 <strong>부모가 모두 써야</strong> 성립한다. 한쪽만 쓰면 일반 급여로 계산되고, 나중에 배우자가 요건을 갖춰 사용하면 그 시점에 차액이 정산되는 구조다. 그래서 <strong>가구 단위 총액은 두 사람 중 통상임금이 낮은 쪽에 의해 결정되는 경우가 많다.</strong> 남성 육아휴직 사용률이 오르면 이 제도의 실효 수령액도 함께 오르는 이유가 여기에 있다.</p>
+
+    <p>한부모 근로자에게는 별도의 특례가 있다. 2025년부터 <strong>첫 3개월 상한액이 250만원에서 300만원으로</strong> 상향됐다. 4~6개월 200만원, 7개월 이후 80%·160만원은 일반 기준과 같다.</p>
+
+    <h2 class="sec">5. 기간·분할·신청 — 계산 결과를 실제로 받으려면</h2>
+
+    <p>급여 계산이 맞아도 요건이 어긋나면 지급되지 않는다. 지급 요건은 두 가지다. 첫째, <strong>육아휴직을 30일 이상</strong> 사용해야 한다(출산전후휴가와 겹치는 기간은 뺀다). 둘째, 육아휴직 시작일 이전에 <strong>고용보험 피보험 단위기간이 통산 180일 이상</strong>이어야 한다. 대상 자녀는 <strong>만 8세 이하 또는 초등학교 2학년 이하</strong>다.</p>
+
+    <p>기간은 자녀 1명당 <strong>기본 1년</strong>이고, <strong>부모가 모두 3개월 이상</strong> 사용한 경우 각각 <strong>1년 6개월</strong>까지 늘어난다(2025년 2월 23일 시행). 분할은 <strong>3회</strong>까지 가능하다. 즉 최대 4번에 나눠 쓸 수 있다.</p>
+
+    <div class="steps">
+      <div class="step"><div class="step-t">회사에 육아휴직을 신청한다</div><div class="step-d">시작 예정일 30일 전까지 신청하는 것이 원칙이다. 급여는 고용보험에서 나오지만 휴직 자체는 사업주의 부여 사항이라, 이 단계가 없으면 급여 신청 자체가 성립하지 않는다.</div></div>
+      <div class="step"><div class="step-t">육아휴직을 시작하고 1개월이 지나기를 기다린다</div><div class="step-d">급여는 육아휴직 시작일로부터 1개월이 지난 뒤부터 신청할 수 있다. 시작하자마자는 접수되지 않는다.</div></div>
+      <div class="step"><div class="step-t">고용24(work24.go.kr)에서 신청서를 접수한다</div><div class="step-d">온라인·모바일 앱·거주지 관할 고용센터 방문 모두 가능하다. 사업주가 발급한 육아휴직 확인서와 통상임금을 확인할 수 있는 임금대장·근로계약서 사본이 필요하다.</div></div>
+      <div class="step"><div class="step-t">매월 또는 일괄로 지급을 청구한다</div><div class="step-d">한 달 단위로 청구하는 것이 일반적이다. 2025년부터는 사후지급금이 없으므로 해당 월 급여가 전액 입금된다.</div></div>
+      <div class="step"><div class="step-t">종료 후 12개월 이내에 미청구분을 정리한다</div><div class="step-d">신청 기한은 육아휴직이 끝난 날 이후 12개월 이내다. 이 기간을 넘기면 원칙적으로 청구권이 사라진다. 천재지변·질병·부상 등 정해진 사유가 있으면 사유 종료 후 30일 이내에 신청할 수 있다.</div></div>
+    </div>
+
+    <div class="warnbox">
+      <div class="wt">⚠️ 휴직 중 다른 일을 하면 급여가 끊긴다</div>
+      <p>육아휴직 기간 중 <strong>이직</strong>하거나, <strong>주 15시간 이상 취업</strong>하거나, <strong>자영업 등으로 월 150만원 이상 소득</strong>이 발생하면 그 기간의 급여는 지급되지 않는다. 부정하게 받은 급여는 반환 대상이 되고 추가 징수도 따를 수 있다. 육아휴직은 소득 공백을 메우라고 주는 돈이 아니라 <strong>양육을 위해 일을 멈춘 기간을 보전하는 돈</strong>이라는 성격이 여기서 드러난다.</p>
+    </div>
+
+    <h2 class="sec">6. 2026년에 새로 생긴 것 — 단기 육아휴직과 배우자 휴가</h2>
+
+    <p>2026년 하반기에는 계산이 아니라 <strong>사용 방식</strong>을 바꾸는 개정이 두 건 시행됐다.</p>
+
+    <div class="flow">
+      <div class="flow-box"><div class="ft">단기 육아휴직 · 2026년 8월 20일 시행</div><div class="fd">휴원·휴교·방학, 질병·사고 입원 등 집중 돌봄이 필요할 때 <b>연 1회, 1주 또는 2주</b> 단위로 쓸 수 있다. 방학처럼 예측 가능한 사유는 30일 전 신청, 질병·휴원 같은 긴급 사유는 당일 신청도 가능하다.</div></div>
+      <div class="flow-box"><div class="ft">배우자 출산전후휴가 · 2026년 9월 18일 시행</div><div class="fd">출산 <b>예정일 50일 전부터 출산 후 120일까지</b> 20일을 쓸 수 있다. 출산 전에 미리 쓸 수 있게 된 것이 핵심 변화다.</div></div>
+    </div>
+
+    <p>단기 육아휴직에서 계산상 반드시 알아야 할 점은 하나다. <strong>단기 육아휴직 기간은 육아휴직 기간에서 차감되지만, 분할 사용 횟수에는 포함되지 않는다.</strong> 별도로 얹어 주는 휴가가 아니라 1년 6개월이라는 총량에서 미리 떼어 쓰는 방식이라는 뜻이다. 대신 분할 3회 제한을 쓰지 않으므로, 남은 분할 횟수를 아껴야 하는 사람에게는 실질적인 여유가 생긴다. 이 기간에도 육아휴직 급여는 지급된다.</p>
+
+    <h2 class="sec">7. 숫자로 본 현실 — 쓰는 사람은 늘었고, 절반 가까이가 아빠다</h2>
+
+    <p>고용노동부가 2026년 7월 13일 발표한 집계에 따르면, 2026년 상반기 육아휴직급여 수급자는 <strong>10만 명을 처음 넘었다</strong>. 2025년 같은 기간 94,993명보다 <strong>9.5%</strong> 늘었다. 이 가운데 남성은 <strong>40,320명으로 38.8%</strong>였다. 남성 비율은 2024년 30%, 2025년 36.5%를 거쳐 40%에 근접했다.</p>
+
+    <div class="impact-grid">
+      <div class="impact-card"><span class="impact-num">10만+</span><span class="impact-label">2026년 상반기<br>육아휴직급여 수급자(명)</span></div>
+      <div class="impact-card"><span class="impact-num">38.8%</span><span class="impact-label">남성 비율<br>(40,320명)</span></div>
+      <div class="impact-card"><span class="impact-num">2,310만</span><span class="impact-label">12개월 상한 적용 시<br>총 수령액(원)</span></div>
+      <div class="impact-card"><span class="impact-num">4,000만</span><span class="impact-label">6+6 부부 합산<br>6개월 상한 총액(원)</span></div>
+    </div>
+
+    <p>배우자 출산휴가 급여 수급자도 상반기 <strong>15,820명</strong>으로 전년 동기 10,328명의 1.5배가 됐다. 육아휴직·육아기 근로시간 단축 등 네 개 제도를 합친 이용자는 상반기에만 약 <strong>20만 명</strong>으로, 전년 한 해 34만 2천 명의 절반을 넘겼다. 2024년 연간 육아휴직자는 132,535명으로 이미 역대 최고였는데, 2026년은 그 기록을 다시 밀어낼 흐름에 있다.</p>
+
+    <p>이 통계가 급여 계산과 무관하지 않은 이유가 있다. <strong>6+6은 부모가 모두 써야 성립하는 제도</strong>이므로, 남성 사용률이 오를수록 실제로 6+6 상한을 적용받는 가구가 늘어난다. 제도를 설계할 때 앞 6개월에 재원을 몰아 둔 것은 바로 이 행동 변화를 겨냥한 것이었고, 남성 비율 30%→38.8%라는 숫자는 그 유인이 작동하고 있다는 신호로 읽힌다.</p>
+
+    <h2 class="sec">8. 나에게 미치는 영향 — 계산 전에 확인할 네 가지</h2>
+
+    <ul class="plain">
+      <li><strong>급여명세서에서 통상임금부터 확인한다.</strong> 세전 월급이 아니라 정기·일률·고정으로 지급되는 항목의 합이다. 성과급 비중이 큰 임금 체계라면 예상보다 낮게 나온다. 회사 인사팀에 육아휴직 확인서상 통상임금이 얼마로 기재되는지 미리 물어 두는 편이 확실하다.</li>
+      <li><strong>몇 개월을 쓸지 정하기 전에 4개월차와 7개월차의 낙차를 계산해 본다.</strong> 통상임금 300만원 기준으로 월 250만원 → 200만원 → 160만원이다. 가계 지출 계획은 이 세 숫자로 세워야 하고, 평균값으로 세우면 후반부에 어긋난다.</li>
+      <li><strong>배우자와 함께 쓸 수 있는지부터 따진다.</strong> 자녀가 생후 18개월 이내라면 6+6의 유무가 총액을 가장 크게 바꾸는 변수다. 동시에 부모가 각각 3개월 이상 써야 기간이 1년 6개월로 늘어난다. 두 혜택이 같은 조건 위에 서 있다.</li>
+      <li><strong>신청 기한 두 개를 달력에 적는다.</strong> 시작 후 1개월(이전에는 신청 불가)과 종료 후 12개월(이후에는 청구권 소멸)이다. 특히 후자를 놓쳐 받지 못하는 사례가 매년 나온다.</li>
+    </ul>
+
+    <h2 class="sec">9. 전망과 행동 제안</h2>
+
+    <p>2025년의 개정으로 이 제도의 성격은 한 번 바뀌었다. 종전에는 <strong>급여의 25%를 볼모로 잡아 복직을 유도하는</strong> 구조였다. 사후지급금은 사실상 "돌아오면 주겠다"는 조건부 급여였고, 복직하지 못한 사람은 애초에 계산에 넣었던 돈을 받지 못했다. 그 조건이 사라졌다는 것은, 육아휴직 급여가 <strong>복직에 대한 보상에서 양육 기간 자체에 대한 소득 보전으로</strong> 옮겨 왔다는 뜻이다.</p>
+
+    <p>남은 구조적 긴장도 분명하다. 하나는 <strong>후반부 대체율</strong>이다. 7개월째부터 지급률이 80%로 내려가고 상한도 160만원에 묶이면서, 12개월 총액의 41.6%만 후반 6개월에 배분된다. 1년 6개월까지 기간을 늘려 놓았지만 늘어난 6개월은 전부 이 저대체율 구간이다. <strong>기간을 늘리는 정책과 금액을 앞에 몰아주는 정책이 서로 다른 방향을 가리키고 있는 셈</strong>이다. 다른 하나는 <strong>통상임금이라는 기준값</strong>이다. 성과급 비중이 큰 임금 체계일수록 통상임금이 낮게 잡혀, 같은 연봉이어도 급여가 달라진다. 최근 통상임금의 범위를 둘러싼 판단이 계속 조정돼 온 만큼, 이 기준값 자체가 앞으로의 변수다.</p>
+
+    <p>그래서 지금 확인할 것의 순서는 이렇게 정리된다. <strong>첫째, 자기 통상임금을 숫자로 안다. 둘째, 250·200·160이라는 세 구간을 자기 통상임금에 대입해 실수령액 세 개를 만든다. 셋째, 배우자와 함께 쓸 수 있는지를 자녀 월령 18개월과 각 3개월이라는 두 조건으로 판단한다.</strong> 상한액 표를 외우는 것보다 이 세 단계가 훨씬 빠르고, 결과도 정확하다. 제도의 숫자는 공개돼 있고, 거기에 넣을 값은 본인의 급여명세서 안에 있다.</p>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#육아휴직급여</span>
+      <span class="hashtag">#육아휴직급여계산</span>
+      <span class="hashtag">#통상임금</span>
+      <span class="hashtag">#사후지급금폐지</span>
+      <span class="hashtag">#6plus6부모육아휴직제</span>
+      <span class="hashtag">#육아휴직1년6개월</span>
+      <span class="hashtag">#단기육아휴직</span>
+      <span class="hashtag">#배우자출산휴가</span>
+      <span class="hashtag">#고용보험법시행령제95조</span>
+      <span class="hashtag">#고용24</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://www.law.go.kr/LSW//lsLinkCommonInfo.do?lspttninfSeq=106251&amp;chrClsCd=010202" target="_blank" rel="noopener">국가법령정보센터 — 고용보험법 시행령 제95조(육아휴직 급여): 1~3개월 통상임금 100%·상한 250만원, 4~6개월 100%·상한 200만원, 7개월 이후 80%·상한 160만원, 하한 70만원, 한부모 특례 첫 3개월 300만원</a>
+      <a href="https://easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&amp;csmSeq=1380&amp;ccfNo=2&amp;cciNo=1&amp;cnpClsNo=2" target="_blank" rel="noopener">법제처 찾기 쉬운 생활법령정보 — 육아휴직 급여 지급 요건(30일 이상 사용, 피보험 단위기간 180일), 신청 기한(시작 1개월 후~종료 후 12개월 이내), 지급 제한 사유(이직·주 15시간 이상 취업·월 150만원 이상 소득)</a>
+      <a href="https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=17133" target="_blank" rel="noopener">고용노동부 — 육아휴직 급여 인상 등 시행령 입법예고(월 150만원 → 최대 250만원, 사후지급 폐지, 6+6 첫 달 200만→250만원, 한부모 첫 3개월 300만원, 12개월 총액 1,800만원 → 2,310만원)</a>
+      <a href="https://www.moel.go.kr/news/cardinfo/view.do?bbs_seq=20250100172" target="_blank" rel="noopener">고용노동부 카드뉴스 — 2025년 육아휴직 제도 변경(급여 인상·사후지급금 폐지 2025.1.1 시행, 기간 1년 6개월 연장 2025.2.23 시행)</a>
+      <a href="https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=19652" target="_blank" rel="noopener">고용노동부 2026.7.13 보도자료 — 상반기 육아휴직급여 수급자 10만 명 돌파(전년 동기 94,993명 대비 +9.5%), 남성 40,320명 38.8%, 배우자 출산휴가 15,820명</a>
+      <a href="https://www.korea.kr/news/policyNewsView.do?newsId=148969857" target="_blank" rel="noopener">대한민국 정책브리핑 — 단기 육아휴직(2026.8.20 시행, 연 1회 1~2주, 육아휴직 기간에서 차감하되 분할 횟수 미포함)과 배우자 출산전후휴가 확대(2026.9.18 시행, 출산예정일 50일 전~출산 후 120일, 20일)</a>
+      <a href="https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=17535" target="_blank" rel="noopener">고용노동부 — 2024년 육아휴직자 132,535명 역대 최고, 남성 사용 비율 최초 30% 돌파</a>
+      <a href="https://sj-equity.or.kr/workingmom_data/view/id/1128" target="_blank" rel="noopener">6+6 부모육아휴직제 안내 — 생후 18개월 이내 자녀, 1인 월 상한 250·250·300·350·400·450만원, 통상임금 100%, 7개월부터 일반 급여(160만원)</a>
+      <a href="https://www.korea.kr/news/policyNewsView.do?newsId=148938182" target="_blank" rel="noopener">대한민국 정책브리핑 — 2025년 달라지는 육아휴직 제도</a>
+      <a href="https://www.work24.go.kr/" target="_blank" rel="noopener">고용24 — 육아휴직 급여 신청·모의계산</a>
+    </div>
+
+    <p class="disclaimer">
+      ※ 본 아티클은 국가법령정보센터·법제처·고용노동부·대한민국 정책브리핑의 공개 자료를 정리한 정보성 콘텐츠이며 개별 사안에 대한 노무 상담이 아닙니다. <strong>육아휴직 급여의 지급률·상한액·하한액과 6+6 부모육아휴직제의 월별 상한액은 고용보험법 시행령 개정에 따라 변경될 수 있으므로, 신청 시점의 고용노동부·고용24 공식 안내를 반드시 확인하시기 바랍니다.</strong> 본문의 계산 예시(통상임금 300만원 기준 12개월 2,310만원, 6+6 6개월 1인 2,000만원·부부 합산 4,000만원, 후반 6개월 비중 41.6% 등)는 각 구간의 상한액과 지급률을 그대로 적용해 산출한 값이며, 실제 지급액은 육아휴직 확인서에 기재된 통상임금과 일할 계산, 출산전후휴가와의 중복 기간, 사업주의 급여 지급 여부 등에 따라 달라질 수 있습니다. 통상임금에 포함되는 임금 항목의 판단은 개별 사업장의 임금 체계와 판례에 따라 달라지므로, 다툼이 있는 경우 관할 고용센터 또는 공인노무사의 확인이 필요합니다. 공무원·사립학교 교원 등 고용보험 적용 제외 대상은 별도의 제도가 적용됩니다.
+    </p>
+
+  </div>
+</article>
+</body>
+</html>
