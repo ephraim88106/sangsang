@@ -194,12 +194,16 @@ def build_sitemap(stocks, koreas):
         if fp.name in SKIP:
             continue
         stem = fp.stem  # 확장자 제외
+        # 주식보고서는 noindex 콘텐츠다 (발행-공통규칙 §3 날짜성 예외).
+        # sitemap 에 넣으면 서치콘솔에서 "제출된 URL이 noindex" 오류가 난다.
+        if stem.endswith('주식보고서'):
+            continue
         encoded = quote(stem, safe='-')
         url = f"{BASE}/{encoded}"
         # 날짜 추출
         m = re.match(r'(\d{4}-\d{2}-\d{2})', stem)
         lastmod = m.group(1) if m else str(date.today())
-        priority = "0.9" if stem.endswith('주식보고서') else "0.7"
+        priority = "0.7"
         urls.append(
             f'  <url><loc>{url}</loc>'
             f'<lastmod>{lastmod}</lastmod>'
