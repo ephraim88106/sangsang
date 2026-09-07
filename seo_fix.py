@@ -222,6 +222,14 @@ def fix_file(rel):
 
 
 def write_sitemap(rels):
+    # --- 2026-09-07 색인정리: noindex 표시된 페이지는 sitemap 에서 제외한다 ---
+    def _indexable(_rel):
+        try:
+            _h = open(os.path.join(ROOT, _rel), encoding="utf-8", errors="ignore").read(4000)
+        except Exception:
+            return True
+        return not re.search(r'<meta[^>]+name=["\']robots["\'][^>]*noindex', _h, re.I)
+    rels = [_r for _r in rels if _indexable(_r)]
     urls = []
     for rel in rels:
         pr = "1.0" if rel == "index.html" else ("0.8" if "/" not in rel else "0.7")
