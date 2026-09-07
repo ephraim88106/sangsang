@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>벌금 미납 노역장 유치 — 일당 환산 금액과 분할납부 신청 절차 | 정치·사법</title>
+  <meta name="description" content="벌금을 못 내면 노역장에 유치된다. 형법 제69조는 판결 확정일부터 30일 이내 납입, 제70조는 선고와 동시에 유치기간을 정하도록 규정하고 유치 기간은 1일 이상 3년 이하다. 2014년 신설된 제70조 제2항은 벌금 1억원 이상 300일, 5억원 이상 500일, 50억원 이상 1천일이라는 하한을 두었다. 벌금 500만원 이하는 납부명령일부터 30일 이내에 사회봉사를 신청할 수 있고, 그 밖에는 분할납부·납부연기를 신청한다. 일당 환산 구조와 세 갈래 선택지, 신청 기한을 정리했다.">
+  <meta name="keywords" content="벌금 미납 노역장 유치, 노역장 유치 기간, 환형유치금, 벌금 분할납부 신청, 벌금 납부연기, 벌금 미납자 사회봉사, 형법 제70조, 황제노역, 벌금 일당 환산, 벌금 500만원 사회봉사">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f2f4f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #1a237e 0%, #283593 45%, #4527a0 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #c5cae9; color: #1a237e; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #e8eaf6; border-left: 5px solid #283593; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #283593; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #1a237e; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #283593; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #1a237e; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #e8eaf6; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #283593; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #1a237e; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #eef0fa; border-left: 4px solid #5c6bc0; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #1a237e; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f4f6fb; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #1a237e; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #1a237e; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #e1e5f0; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-blue { background: linear-gradient(90deg, #1a237e, #5c6bc0); }
+    .bar-teal { background: linear-gradient(90deg, #004d40, #00897b); }
+    .bar-amber { background: linear-gradient(90deg, #e65100, #f9a825); }
+    .bar-red { background: linear-gradient(90deg, #b71c1c, #e53935); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #d6dbe8; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #e8eaf6; color: #1a237e; font-weight: 700; }
+    table.rate td.up { color: #1a237e; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #00695c; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #283593; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #1a237e; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #c5cae9; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #1a237e; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #c5cae9; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #283593; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .formula { background: #f3f6fd; border: 1.5px dashed #5c6bc0; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 16.5px; font-weight: 800; color: #1a237e; line-height: 1.8; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #5c6bc0; margin-top: 10px; margin-bottom: 0; }
+    .warnbox { background: #fff8e1; border-left: 5px solid #f9a825; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 26px 0; }
+    .warnbox .wt { font-size: 14px; font-weight: 800; color: #e65100; margin-bottom: 8px; }
+    .warnbox p { font-size: 15px; color: #5d4037; margin-bottom: 0; word-break: keep-all; }
+    .case { background: #fff; border: 1.5px solid #c5cae9; border-left: 5px solid #283593; border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; }
+    .case .ct { font-size: 13.5px; font-weight: 800; color: #1a237e; margin-bottom: 6px; letter-spacing: 0.3px; }
+    .case p { font-size: 14.8px; margin-bottom: 8px; }
+    .case p:last-child { margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #e8eaf6; color: #283593; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #283593; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<!-- SEO:AUTO BEGIN -->
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-09-07-%EB%B2%8C%EA%B8%88-%EB%AF%B8%EB%82%A9-%EB%85%B8%EC%97%AD%EC%9E%A5-%EC%9C%A0%EC%B9%98">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="벌금 미납 노역장 유치 — 일당 환산 금액과 분할납부 신청 절차">
+<meta property="og:description" content="벌금을 못 내면 하루 얼마로 계산될까. 유치 기간 상한 3년, 고액 벌금 하한 규정, 그리고 기한이 지나면 사라지는 두 개의 선택지.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-09-07-%EB%B2%8C%EA%B8%88-%EB%AF%B8%EB%82%A9-%EB%85%B8%EC%97%AD%EC%9E%A5-%EC%9C%A0%EC%B9%98">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-09-07T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-09-07T09:00:00+09:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="벌금 미납 노역장 유치 — 일당 환산 금액과 분할납부 신청 절차">
+<meta name="twitter:description" content="노역장 유치자가 4년 만에 두 배로 늘었다. 사회봉사 대체는 10년째 0.3%대다. 그 격차가 어디서 생기는지 정리했다.">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "벌금 미납 노역장 유치 — 일당 환산 금액과 분할납부 신청 절차",
+  "description": "형법 제69조는 벌금을 판결 확정일부터 30일 이내에 내도록 하고, 제70조는 미납 시 노역장 유치기간을 선고와 동시에 정하도록 한다. 유치 기간은 1일 이상 3년 이하이며 2014년 신설된 제70조 제2항이 고액 벌금에 300일·500일·1천일의 하한을 두었다. 벌금 500만원 이하는 납부명령일부터 30일 이내 사회봉사를 신청할 수 있고, 그 밖에는 분할납부와 납부연기를 신청한다. 일당 환산 구조, 세 갈래 선택지와 각각의 기한, 노역장 유치 증가 통계를 정리했다.",
+  "url": "https://sangsang.ephseed.com/2026-09-07-%EB%B2%8C%EA%B8%88-%EB%AF%B8%EB%82%A9-%EB%85%B8%EC%97%AD%EC%9E%A5-%EC%9C%A0%EC%B9%98",
+  "datePublished": "2026-09-07T09:00:00+09:00",
+  "dateModified": "2026-09-07T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+</head>
+
+<body>
+<article class="article-wrap">
+  <header class="hero">
+    <div class="category-badge">🏛️ 정치 · 사법</div>
+    <h1>벌금 미납 노역장 유치 —<br>일당 환산 금액과 분할납부 신청 절차</h1>
+    <p class="hero-sub">벌금형은 가장 가벼운 형벌로 알려져 있다. 그런데 <b>낼 돈이 없으면 몸으로 대신한다</b>. 이때 하루가 얼마로 계산되는지, 그 계산을 누가 언제 정하는지, 그리고 <b>돈 대신 낼 수 있는 다른 방법이 언제까지 열려 있는지</b>는 판결문에 적히지 않는다. 벌금 집행에서 현금 납부 비중은 10년 사이 20%포인트 넘게 떨어졌고, 그만큼 사람들이 노역장으로 들어가고 있다.</p>
+    <div class="hero-meta">
+      <span>🏛️ 정치 · 사법</span>
+      <span>📅 2026년 9월 7일</span>
+      <span>⏱️ 약 10분</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+
+    <div class="summary-box">
+      <h2>핵심 요약</h2>
+      <ul>
+        <li>벌금은 <b>판결 확정일부터 30일 이내</b>에 내야 하고, 못 내면 <b>1일 이상 3년 이하</b>로 노역장에 유치된다(형법 제69조·제70조).</li>
+        <li>하루로 환산되는 금액은 <b>판결을 선고할 때 법원이 미리 정해</b>둔다. 실무에서 널리 쓰이는 값은 <b>1일 10만원</b>이지만 사건마다 달라진다.</li>
+        <li>벌금이 <b>500만원 이하</b>면 <b>납부명령일부터 30일 이내</b>에 사회봉사로 대신하겠다고 신청할 수 있다. 그 밖의 경우는 <b>분할납부·납부연기</b>가 남은 길이다.</li>
+        <li>둘 다 <b>기한이 지나면 신청 자격 자체가 사라진다.</b> 노역장 유치는 선택이 아니라 다른 선택지가 소멸한 뒤에 남는 결과다.</li>
+      </ul>
+    </div>
+
+    <h2 class="sec">벌금형은 왜 '몸으로 때우는' 형벌이 되었나</h2>
+
+    <p>벌금형은 자유를 빼앗지 않는다는 점에서 징역형보다 가벼운 형벌로 분류된다. 그런데 이 형벌에는 처음부터 <b>지불 능력을 전제한다</b>는 구조적 성격이 있다. 같은 100만원이라도 월 소득 1,000만원인 사람과 소득이 없는 사람에게 갖는 무게가 전혀 다르다. 우리 형법은 이 차이를 형량 단계에서 반영하지 않는 <b>총액벌금제</b>를 쓴다. 행위의 무게로 액수를 정하고, 그 액수를 못 내면 몸으로 환산한다.</p>
+
+    <p>환산 장치가 <b>노역장 유치</b>다. 근거 조문은 두 개다. <b>형법 제69조</b>는 벌금을 판결 확정일부터 30일 안에 내도록 하고, 내지 않으면 <b>1일 이상 3년 이하</b>의 기간 동안 노역장에 유치해 작업하게 한다고 정한다. <b>형법 제70조 제1항</b>은 여기서 한 걸음 더 나아가, 벌금을 선고할 때 <b>납입하지 않는 경우의 유치기간을 함께 선고하도록</b> 의무화한다.</p>
+
+    <p>이 두 번째 조문이 실무에서 중요하다. 유치기간이 판결 시점에 이미 정해져 있다는 뜻이기 때문이다. 벌금을 못 내게 된 뒤에 사정을 설명해 하루 단가를 다시 매기는 절차는 없다. <b>환산율은 사후에 협상되는 값이 아니라 선고와 함께 확정되는 값이다.</b></p>
+
+    <div class="formula">
+      <div class="f-main">노역장 유치기간 = 미납 벌금액 ÷ 판결이 정한 1일 환산금액</div>
+      <p class="f-note">환산금액은 판결문에 적힌다. 실무상 널리 쓰이는 값은 1일 10만원이며, 이 경우 벌금 300만원은 30일, 500만원은 50일에 해당한다. 다만 사건과 벌금 규모에 따라 법원이 다르게 정할 수 있고, 상한은 3년(1,095일)이다.</p>
+    </div>
+
+    <h2 class="sec">하루 5억원짜리 노역이 만든 하한 규정</h2>
+
+    <p>환산율이 판결로 정해진다는 구조는 고액 벌금에서 정반대의 문제를 낳았다. 벌금이 수백억원인데 유치 상한은 3년으로 고정돼 있으니, <b>액수가 커질수록 하루 단가가 자동으로 치솟는다</b>. 2014년 사회적 논란이 된 이른바 <b>'황제노역'</b> 사건이 그 정점이었다. 허재호 전 대주그룹 회장은 벌금 254억원을 선고받고 항소심에서 <b>1일 5억원</b>으로 환산돼, 50일 노역으로 벌금 전액을 소멸시킬 수 있는 상태가 됐다.</p>
+
+    <div class="pullquote">벌금이 254억원이면 3년을 다 채워도 하루 2,300만원이 넘는다. 상한이 고정된 제도에서 액수가 커지면, 환산율은 형벌이 아니라 할인율처럼 작동하기 시작한다.</div>
+
+    <p>국회는 같은 해 <b>2014년 5월 형법 제70조 제2항을 신설</b>해 고액 벌금에 <b>유치기간의 하한</b>을 두었다. 액수 구간별로 최소 며칠 이상은 유치하도록 강제해, 하루 단가가 무한정 올라가지 못하게 막은 장치다.</p>
+
+    <table class="rate">
+      <thead>
+        <tr><th>선고 벌금액</th><th>노역장 유치기간 하한</th><th>하한 적용 시 최대 1일 환산액</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1억원 이상 5억원 미만</td><td class="up">300일 이상</td><td>약 33만~167만원</td></tr>
+        <tr><td>5억원 이상 50억원 미만</td><td class="up">500일 이상</td><td>약 100만~1,000만원</td></tr>
+        <tr><td>50억원 이상</td><td class="up">1,000일 이상</td><td>약 500만원 이상</td></tr>
+        <tr><td>1억원 미만</td><td class="down">별도 하한 없음</td><td>판결이 정한 환산액에 따름</td></tr>
+      </tbody>
+    </table>
+    <p class="note">※ 형법 제70조 제2항(2014. 5. 14. 신설). 오른쪽 열은 각 구간의 경곗값을 하한 일수로 나눈 계산으로, 조문에 규정된 값이 아니라 이해를 돕기 위한 산술이다. 유치기간 상한 3년은 그대로 유지된다.</p>
+
+    <p>이 조항을 이미 확정된 과거 사건에까지 소급 적용하도록 한 부칙은 <b>헌법재판소가 2017년 10월 26일 위헌으로 결정</b>했다. 본문 조항 자체는 합헌으로 유지됐다. 즉 하한 규정은 살아 있되, <b>신설 이전에 벌어진 행위에는 적용되지 않는다.</b></p>
+
+    <h2 class="sec">숫자로 본 이면 — 현금으로 내는 사람이 줄고 있다</h2>
+
+    <p>제도 논의가 고액 벌금에 집중되는 동안, 실제 노역장을 채우는 쪽은 정반대 구간이었다. 벌금 납입 방식별 비율은 지난 10년 사이 뚜렷하게 뒤집혔다.</p>
+
+    <div class="infographic-section">
+      <h3>벌금 납입 방식 비율의 10년 변화 (2015년 → 2024년)</h3>
+      <div class="bar-chart">
+        <div class="bar-item">
+          <div class="bar-label"><span>현금 납입 · 2015년</span><span class="val">76.75%</span></div>
+          <div class="bar-track"><div class="bar-fill bar-blue" style="width:76.75%">76.75%</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>현금 납입 · 2024년</span><span class="val">54.22%</span></div>
+          <div class="bar-track"><div class="bar-fill bar-blue" style="width:54.22%">54.22%</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>노역장 유치 · 2015년</span><span class="val">14.33%</span></div>
+          <div class="bar-track"><div class="bar-fill bar-red" style="width:14.33%">14.33%</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>노역장 유치 · 2024년</span><span class="val">43.94%</span></div>
+          <div class="bar-track"><div class="bar-fill bar-red" style="width:43.94%">43.94%</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>사회봉사 대체 · 2024년</span><span class="val">0.32%</span></div>
+          <div class="bar-track"><div class="bar-fill bar-teal" style="width:1.2%"></div></div>
+        </div>
+      </div>
+      <p class="note">출처: 머니투데이 기획보도(2026. 5. 27.) 인용 법무부 집계. 사회봉사 대체 비율은 지난 10년간 0.28~0.57% 구간에 머물렀다. 막대 길이는 비율을 그대로 반영했으며, 사회봉사 막대는 값이 작아 최소 폭으로 표시했다.</p>
+    </div>
+
+    <p>수용 인원 통계도 같은 방향을 가리킨다. 교정시설에 들어온 <b>노역장 유치자는 2021년 711명에서 2025년 1,468명으로 4년 만에 두 배가 넘게 늘었다.</b> 같은 기간 전체 수용 인원은 5만 2,368명에서 6만 3,680명으로 늘어, 노역장 유치자가 차지하는 비중은 1.4%에서 2.3%로 올라갔다. 이들 가운데 <b>82.9%는 1일 환산액이 10만원 이상 100만원 미만</b> 구간, 즉 고액 벌금 사건이 아닌 통상적인 벌금형이었다.</p>
+
+    <div class="impact-grid">
+      <div class="impact-card"><span class="impact-num">711명</span><span class="impact-label">2021년 노역장 유치자</span></div>
+      <div class="impact-card"><span class="impact-num">1,468명</span><span class="impact-label">2025년 노역장 유치자</span></div>
+      <div class="impact-card"><span class="impact-num">82.9%</span><span class="impact-label">1일 환산액 10만~100만원 구간 비중</span></div>
+      <div class="impact-card"><span class="impact-num">0.32%</span><span class="impact-label">2024년 사회봉사 대체 비율</span></div>
+    </div>
+
+    <p>금액을 기준으로 본 집계도 있다. 국회 법제사법위원회 서영교 의원이 법무부에서 받은 자료에 따르면 <b>2019~2023년 5년간 벌금 총액은 32조 5,966억원</b>(연평균 6조 5,193억원)이었고, 이 가운데 현금 납부는 약 17%, <b>노역 대체가 약 58%</b>였다. 2024년 8월까지는 집행대상액 6조 2,065억원 가운데 노역 대체가 56.7%(3조 5,184억원), 미집행액이 1조 8,506억원이었다.</p>
+
+    <div class="warnbox">
+      <div class="wt">⚠️ 두 통계를 그대로 겹쳐 읽으면 안 된다</div>
+      <p>앞의 76.75%·43.94%는 <b>납입 방식별 비율</b>이고, 뒤의 17%·58%는 <b>금액 기준</b>이다. 고액 벌금 한 건이 금액 통계를 크게 흔들기 때문에 두 수치는 직접 비교 대상이 아니다. 다만 <b>어느 기준으로 보든 노역 대체가 늘고 현금 납부가 줄었다는 방향은 같다.</b></p>
+    </div>
+
+    <h2 class="sec">노역장에서 실제로 벌어지는 일</h2>
+
+    <p>'노역'이라는 말은 강제노동을 연상시키지만, 현실은 다르다. 보도에 따르면 노역장 작업은 <b>오전·오후 각 2시간씩 하루 4시간</b> 수준으로 운영되며, 일감 자체가 부족하다. 법무부 장관은 "노역장 유치자 상당수가 고령이거나 노동 능력이 없어 실제 노역에 참여조차 못 한다"고 밝혔다.</p>
+
+    <p>그 결과 제도는 원래 의도와 어긋난 곳에서 비용을 만든다. 노역장 유치자 가운데 질병으로 입원한 <b>14명의 평균 입원 기간은 11일, 국가가 부담한 의료비는 약 9,800만원</b>이었다. 아이스크림을 훔친 혐의로 유치된 61세 남성의 신부전증 등 치료비로 <b>1,480만원</b>이 쓰인 사례도 보도됐다. 벌금 몇만원을 집행하려다 수천만원의 공공 비용이 발생하는 구조다.</p>
+
+    <div class="pullquote">노역장은 벌금을 받아내는 장치로 설계됐지만, 통계가 보여주는 것은 벌금을 받아내지 못했다는 사실의 기록에 가깝다.</div>
+
+    <h2 class="sec">벌금을 낼 수 없을 때 남은 세 갈래</h2>
+
+    <p>중요한 것은 이 모든 결과가 <b>기한 안에 움직였는지</b>로 갈린다는 점이다. 선택지는 셋이고, 각각 열려 있는 창이 다르다.</p>
+
+    <h3 class="sub">① 분할납부 · 납부연기 — 액수 제한이 없는 대신 허가 사항</h3>
+
+    <p>가장 먼저 검토할 길이다. <b>재산형 등에 관한 검찰 집행사무규칙 제12조</b>에 근거해, 벌금을 한 번에 내기 어려운 사정이 있으면 관할 검찰청 집행과에 <b>분할납부 또는 납부연기</b>를 신청할 수 있다. 신청서와 함께 소득·재산 상황을 소명하는 자료를 낸다. 벌금 액수 상한이 없다는 점이 사회봉사와 다르고, <b>검사의 허가 사항</b>이라 신청했다고 자동으로 인정되지는 않는다.</p>
+
+    <h3 class="sub">② 사회봉사 대체 — 500만원 이하, 30일 이내</h3>
+
+    <p><b>벌금 미납자의 사회봉사 집행에 관한 특례법</b>이 정한 길이다. 시행령이 정한 금액 범위인 <b>벌금 500만원 이하</b>가 확정된 사람이 <b>검사의 납부명령일부터 30일 이내</b>에 주거지 관할 지방검찰청 검사에게 신청한다. 분할납부·납부연기를 허가받은 경우에는 그 허가 기한 내에 신청할 수 있다.</p>
+
+    <p>신청할 수 없는 경우도 법에 정해져 있다. <b>징역·금고와 동시에 벌금을 선고받은 사람</b>, 법원이 벌금 완납까지 노역장 유치를 명한 사람, 다른 사건으로 이미 구금 중이거나 노역장에 유치 중인 사람, 같은 벌금에 대해 이미 불허가·취소를 받은 사람이다.</p>
+
+    <h3 class="sub">③ 노역장 유치 — 남은 결과</h3>
+
+    <p>①과 ②의 기한이 모두 지나면 검찰은 집행에 들어간다. 미납자는 벌금 집행을 위한 <b>지명수배</b> 대상이 되고, 검거되면 유치기간만큼 노역장에 유치된다. 유치가 끝나면 미납 벌금은 소멸하지만, <b>납부 의무가 면제된 것이 아니라 몸으로 집행이 완료된 것</b>이라는 점에서 성격이 다르다.</p>
+
+    <h2 class="sec">사회봉사 신청 절차 — 날짜가 정해진 다섯 단계</h2>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-t">판결 확정 · 납부명령 수령</div>
+        <div class="step-d">벌금형이 확정되면 검찰이 납부명령을 고지한다. 형법 제69조상 납입 기한은 판결 확정일부터 30일이다. 이 시점이 모든 기한의 기산점이므로 고지서를 받은 날짜를 기록해 둔다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">납부명령일부터 30일 이내 신청</div>
+        <div class="step-d">주거지 관할 지방검찰청 검사에게 사회봉사 허가를 신청한다. 소득·재산 관계 소명자료를 함께 낸다. 분할납부·납부연기 허가를 받은 상태라면 그 허가 기한 안에 신청할 수 있다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">검사의 법원 청구 — 신청일부터 7일 이내</div>
+        <div class="step-d">검사는 신청을 검토해 법원에 사회봉사 허가를 청구한다. 신청이 요건을 갖추지 못했다고 판단하면 청구하지 않을 수 있다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">법원의 결정 — 청구일부터 14일 이내</div>
+        <div class="step-d">법원이 허가 여부를 결정하고, 허가하는 경우 미납 벌금액에 상응하는 사회봉사 시간을 함께 정한다. 시간은 판결이 정한 1일 환산금액을 하루 작업시간으로 나눈 값을 기준으로 산정된다.</div>
+      </div>
+      <div class="step">
+        <div class="step-t">허가일부터 6개월 이내 집행 완료</div>
+        <div class="step-d">보호관찰소의 집행 지시에 따라 사회봉사를 이행한다. 특별한 사정이 있으면 검사 허가로 1회 연장할 수 있다. 기간 내 미완료·준수사항 위반 시 검사가 허가 취소를 청구하고, 취소 통지 후 7일 안에 미납 벌금을 내지 않으면 노역장에 유치된다.</div>
+      </div>
+    </div>
+
+    <div class="flow">
+      <div class="flow-box"><div class="ft">벌금 500만원 이하</div><div class="fd">사회봉사 신청 가능 · 기한 30일</div></div>
+      <div class="flow-box"><div class="ft">500만원 초과</div><div class="fd">분할납부·납부연기만 가능</div></div>
+      <div class="flow-box"><div class="ft">기한 도과</div><div class="fd">노역장 유치 절차 · 지명수배</div></div>
+    </div>
+    <p class="note">※ 징역·금고와 벌금을 함께 선고받은 경우에는 벌금 액수와 무관하게 사회봉사를 신청할 수 없다.</p>
+
+    <h2 class="sec">이 제도에서 잘 드러나지 않는 네 가지</h2>
+
+    <p><b>첫째, 늘어난 것은 형벌이 아니라 지불 불능이다.</b> 노역장 유치자의 82.9%가 1일 환산액 10만~100만원 구간에 몰려 있다는 사실은, 이 증가가 고액 벌금 사건에서 온 것이 아님을 보여준다. 벌금 액수 자체가 무거워졌다기보다 <b>같은 액수를 현금으로 마련하지 못하는 사람이 늘었다</b>고 읽는 쪽이 통계에 가깝다.</p>
+
+    <p><b>둘째, 하한 규정은 위쪽만 손봤다.</b> 2014년 신설된 제70조 제2항은 벌금 1억원 이상 구간에 최소 유치일수를 두어 고액 사건의 하루 단가를 눌렀다. 그러나 1억원 미만 구간에는 아무 장치가 없다. 벌금 100만원인 사람의 10일과 벌금 50억원인 사람의 1,000일 가운데 <b>소득 대비로 더 무거운 쪽이 어디인지</b>는 이 조항이 답하지 않는다.</p>
+
+    <p><b>셋째, 제도가 있는데 쓰이지 않는다.</b> 사회봉사 대체는 2009년 도입됐지만 비율이 10년째 0.3% 안팎에 머문다. 벌금 500만원이라는 상한과 30일이라는 기한, 그리고 <b>본인이 직접 신청해야 한다는 신청주의</b>가 겹친 결과로 보인다. 납부명령을 받은 시점에 이 제도의 존재를 아는지가 사실상 자격 요건처럼 작동한다. <b>정보가 도달하지 않는 제도는 통계상 존재하지 않는 것과 같다.</b></p>
+
+    <p><b>넷째, 집행 비용이 벌금액을 넘어선다.</b> 하루 4시간의 형식적 작업, 고령·질병 유치자의 의료비 국가 부담, 수용 공간 압박까지 고려하면 소액 벌금의 노역장 집행은 재정적으로도 남는 장사가 아니다. 벌금 몇만원을 회수하려다 수천만원의 의료비가 발생한 사례는 예외라기보다 <b>구조가 만들어 내는 결과</b>에 가깝다.</p>
+
+    <h2 class="sec">전망 — 논의되는 대안과 지금 할 수 있는 일</h2>
+
+    <p>대안으로 가장 자주 거론되는 것은 <b>일수벌금제</b>다. 행위의 무게로 '일수'를 정하고 소득 수준으로 '1일 벌금액'을 정해 곱하는 방식으로, 같은 범죄에 같은 고통을 부과한다는 취지다. 독일·핀란드 등이 운영한다. 도입하려면 개인 소득 파악 인프라와 형법 총칙 개정이 함께 필요해 논의가 길게 이어져 왔다.</p>
+
+    <p>더 빠르게 손댈 수 있는 쪽은 <b>사회봉사 대체의 문턱</b>이다. 500만원 상한 조정, 30일 기한의 연장, 납부명령서에 신청 안내를 의무적으로 병기하는 방식은 법률 개정 없이도 상당 부분 개선이 가능한 영역이다. 노역을 사회봉사·공공근로로 넓히자는 제안과 가석방 기준 완화 논의도 함께 나오고 있다.</p>
+
+    <div class="case">
+      <div class="ct">사례 1 — 벌금 300만원을 선고받았고 당장 낼 돈이 없다</div>
+      <p>500만원 이하이므로 <b>사회봉사 신청 대상</b>이다. 관건은 날짜다. 납부명령을 받은 날부터 30일이 지나면 이 선택지는 사라진다. 동시에 분할납부 신청도 검토하되, 어느 쪽이든 <b>고지서를 받은 즉시</b> 관할 검찰청 집행과에 문의하는 것이 순서다.</p>
+    </div>
+
+    <div class="case">
+      <div class="ct">사례 2 — 징역형의 집행유예와 벌금을 함께 선고받았다</div>
+      <p>징역·금고와 벌금을 동시에 선고받은 경우는 <b>사회봉사 신청 제외 대상</b>이다. 남은 길은 분할납부·납부연기이며, 액수 제한은 없지만 허가 사항이므로 소득·재산 소명자료를 갖춰 신청해야 한다.</p>
+    </div>
+
+    <div class="case">
+      <div class="ct">사례 3 — 이미 기한이 지나 독촉장을 받았다</div>
+      <p>사회봉사 신청 자격은 소멸했을 가능성이 높지만, <b>분할납부·납부연기는 집행 단계에서도 신청 자체가 막혀 있지 않다</b>. 연락을 피하면 지명수배로 이어지므로, 집행과에 직접 사정을 설명하고 가능한 방법을 확인하는 편이 낫다. 개별 사안의 가부는 검찰 판단에 달려 있다.</p>
+    </div>
+
+    <p>정리하면 이 제도의 핵심은 액수가 아니라 <b>날짜</b>다. 유치기간은 판결 시점에 이미 정해져 있고, 그 뒤에 남는 변수는 <b>기한 안에 신청했는지</b> 하나뿐이다. 벌금 고지서를 받았다면 금액보다 먼저 확인할 것은 <b>① 확정일이 언제인지 ② 납부명령일이 언제인지 ③ 500만원 이하인지</b> 세 가지다. 이 셋으로 자신에게 어떤 선택지가 며칠 동안 열려 있는지가 결정된다.</p>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#벌금미납</span>
+      <span class="hashtag">#노역장유치</span>
+      <span class="hashtag">#환형유치</span>
+      <span class="hashtag">#형법제70조</span>
+      <span class="hashtag">#분할납부</span>
+      <span class="hashtag">#납부연기</span>
+      <span class="hashtag">#사회봉사대체</span>
+      <span class="hashtag">#황제노역</span>
+      <span class="hashtag">#일수벌금제</span>
+      <span class="hashtag">#벌금집행</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://casenote.kr/%EB%B2%95%EB%A0%B9/%ED%98%95%EB%B2%95/%EC%A0%9C70%EC%A1%B0" target="_blank" rel="noopener">형법 제70조(노역장 유치) 조문 — 벌금액 구간별 유치기간 하한</a>
+      <a href="https://casenote.kr/%EB%B2%95%EB%A0%B9/%ED%98%95%EB%B2%95/%EC%A0%9C69%EC%A1%B0" target="_blank" rel="noopener">형법 제69조(벌금과 과료) 조문 — 30일 이내 납입, 1일 이상 3년 이하 유치</a>
+      <a href="https://www.law.go.kr/LSW//lsSideInfoP.do?lsiSeq=92106&joNo=0004&joBrNo=00&docCls=jo&urlMode=lsScJoRltInfoR" target="_blank" rel="noopener">국가법령정보센터 — 벌금 미납자의 사회봉사 집행에 관한 특례법 제4조(사회봉사의 신청)</a>
+      <a href="https://www.law.go.kr/lsInfoP.do?lsiSeq=200754" target="_blank" rel="noopener">국가법령정보센터 — 재산형 등에 관한 검찰 집행사무규칙(제12조 분할납부 등)</a>
+      <a href="https://www.mt.co.kr/mtreport/4593" target="_blank" rel="noopener">머니투데이 기획 '구멍 많은 노역제도'(2026. 5. 27.) — 납입 방식별 비율 10년 변화, 의료비 사례</a>
+      <a href="https://www.hankyung.com/article/2026062211921" target="_blank" rel="noopener">한국경제(2026. 6. 23.) — 노역장 유치자 2021년 711명→2025년 1,468명, 환산액 구간 분포</a>
+      <a href="https://www.lawtimes.co.kr/news/articleView.html?idxno=201976" target="_blank" rel="noopener">법률신문(2024. 10. 11.) — 서영교 의원실·법무부 벌금 집행 현황(금액 기준 노역 대체 비율)</a>
+      <a href="https://www.lawtimes.co.kr/news/articleView.html?idxno=122266" target="_blank" rel="noopener">법률신문 — 헌재 2017. 10. 26. 결정, 황제노역 방지 조항 합헌·소급 부칙 위헌</a>
+      <a href="https://www.intn.co.kr/news/articleView.html?idxno=2007889" target="_blank" rel="noopener">일간NTN — 법무부, 벌금 500만원 이하라야 사회봉사 신청 가능(시행령 금액 범위)</a>
+      <a href="https://www.gov.kr/mw/AA020InfoCappView.do?CappBizCD=12800000029&HighCtgCD=A08006" target="_blank" rel="noopener">정부24 — 벌과금등 분할납부(납부연기) 신청 안내</a>
+    </div>
+
+    <p class="disclaimer">
+      ※ 본 아티클은 국가법령정보센터의 법령 조문, 헌법재판소 결정 관련 보도, 국회 제출 자료를 인용한 언론 보도를 바탕으로 작성한 정보성 콘텐츠이며 개별 법률 자문이 아닙니다. <strong>1일 환산금액은 사건마다 판결로 정해지므로 본문의 '1일 10만원'은 실무상 널리 쓰이는 예시일 뿐 법정 기준이 아니며, 반드시 본인의 판결문에 기재된 금액을 확인해야 합니다.</strong> 분할납부·납부연기와 사회봉사 대체의 허가 여부는 검사와 법원의 개별 판단 사항으로, 요건을 갖춘 신청이라도 허가되지 않을 수 있습니다. 사회봉사 신청 대상 금액과 절차별 기한은 관련 법령·시행령 개정에 따라 달라질 수 있으므로 신청 전 관할 검찰청 집행과 또는 보호관찰소에 최신 기준을 확인하시기 바랍니다. 구체적인 사안의 대응이 필요한 경우 변호사 등 전문가의 상담을 받으시기 바랍니다.
+    </p>
+
+  </div>
+</article>
+</body>
+</html>
