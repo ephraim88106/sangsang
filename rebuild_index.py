@@ -173,6 +173,17 @@ def build_headline_grid(koreas):
 
 # ─── 메인 ───────────────────────────────────────────────────
 # ─── 사이트맵 생성 ─────────────────────────────────────────────
+
+# --- 2026-09-07 색인정리: 단일 기준 목록 -----------------------------------
+def _load_noindex():
+    try:
+        return {l.strip() for l in open(REPO / '.noindex', encoding='utf-8')
+                if l.strip() and not l.startswith('#')}
+    except Exception:
+        return set()
+_NOINDEX = _load_noindex()
+# --------------------------------------------------------------------------
+
 def build_sitemap(stocks, koreas):
     """sitemap.xml 자동 생성 — 모든 아티클 URL 포함"""
     from urllib.parse import quote
@@ -198,13 +209,9 @@ def build_sitemap(stocks, koreas):
         # sitemap 에 넣으면 서치콘솔에서 "제출된 URL이 noindex" 오류가 난다.
         if stem.endswith('주식보고서'):
             continue
-        # 2026-09-07 색인정리: noindex 표시된 페이지는 sitemap 에서 제외
-        try:
-            if re.search(r'<meta[^>]+name=["\']robots["\'][^>]*noindex',
-                         fp.read_text(encoding='utf-8', errors='ignore')[:4000], re.I):
-                continue
-        except Exception:
-            pass
+        # 2026-09-07 색인정리: .noindex 목록의 페이지는 sitemap 에서 제외
+        if fp.name in _NOINDEX:
+            continue
         encoded = quote(stem, safe='-')
         url = f"{BASE}/{encoded}"
         # 날짜 추출
