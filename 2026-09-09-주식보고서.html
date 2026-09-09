@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>일간 시장 리포트 (9월 9일) — 33거래일 만에 7,000선을 되찾은 코스피</title>
+  <meta name="description" content="2026년 9월 9일 코스피 7,051.64(+1.40%) · 코스닥 830.37(+2.28%) 정리. 간밤 뉴욕 3대 지수가 모두 내리고 브렌트유가 99달러를 넘었는데도 한국 증시는 올라 7월 23일 이후 33거래일 만에 7,000선 위에서 마감했다.">
+  <meta property="article:published_time" content="2026-09-09T16:30:00+09:00">
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w59aji6ixc");
+  </script>
+  <!-- Google AdSense -->
+  <meta name="google-adsense-account" content="ca-pub-9118774019383180">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9118774019383180" crossorigin="anonymous"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+
+    :root {
+      --bg-primary: #0a0e1a;
+      --bg-card: #111827;
+      --bg-card2: #0f1623;
+      --rise: #00c896;
+      --fall: #ff4757;
+      --neutral: #ffd32a;
+      --blue: #4da6ff;
+      --purple: #9b59b6;
+      --text-primary: #e8eaf6;
+      --text-secondary: #8892b0;
+      --border: rgba(255,255,255,0.06);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      padding-top: 90px;
+    }
+
+    /* ── 광고 ── */
+    .fixed-top-ad {
+      position: fixed; top: 0; left: 0;
+      width: 100%; height: 90px;
+      background: #0a0e1a; z-index: 2000;
+      display: flex; justify-content: center; align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+    .fixed-side-ad {
+      position: fixed; right: 20px; top: 50%;
+      transform: translateY(-50%); z-index: 1000;
+      display: flex; flex-direction: column; align-items: center; width: 160px;
+    }
+    @media (max-height: 800px) { .fixed-side-ad { display: none; } }
+    @media (max-width: 1300px) { .fixed-side-ad { display: none; } }
+    @media (max-width: 768px) {
+      .fixed-top-ad { position: static; height: auto; padding: 10px 0; }
+      body { padding-top: 0; }
+    }
+
+    /* ── 레이아웃 ── */
+    .container { max-width: 900px; margin: 0 auto; padding: 20px 16px 60px; }
+
+    /* ── 헤더 ── */
+    .report-header {
+      background: linear-gradient(135deg, #0d1b2e 0%, #1a0a2e 100%);
+      border: 1px solid rgba(77,166,255,0.2);
+      border-radius: 16px;
+      padding: 32px 28px;
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .report-header::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 250px; height: 250px;
+      background: radial-gradient(circle, rgba(77,166,255,0.08), transparent 70%);
+      pointer-events: none;
+    }
+    .report-date {
+      font-size: 12px;
+      color: var(--text-secondary);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .report-title {
+      font-size: 26px;
+      font-weight: 900;
+      line-height: 1.3;
+      margin-bottom: 14px;
+      background: linear-gradient(90deg, #ffffff, #4da6ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .report-subtitle {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-bottom: 18px;
+    }
+    .fear-greed {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 71, 87, 0.1);
+      border: 1px solid rgba(255, 71, 87, 0.3);
+      border-radius: 50px;
+      padding: 8px 18px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .fear-greed .dot {
+      width: 10px; height: 10px;
+      background: var(--fall);
+      border-radius: 50%;
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.8); }
+    }
+
+    /* ── 섹션 타이틀 ── */
+    .section-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--blue);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin: 32px 0 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ── 지수 카드 그리드 ── */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .index-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .index-card:hover { transform: translateY(-2px); }
+    .index-card.rise { border-color: rgba(0,200,150,0.25); }
+    .index-card.fall { border-color: rgba(255,71,87,0.25); }
+    .card-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-secondary);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .card-value {
+      font-size: 22px;
+      font-weight: 700;
+      font-family: 'Courier New', monospace;
+      margin-bottom: 4px;
+    }
+    .card-change {
+      font-size: 13px;
+      font-weight: 600;
+      font-family: 'Courier New', monospace;
+    }
+    .rise .card-value, .rise .card-change { color: var(--rise); }
+    .fall .card-value, .fall .card-change { color: var(--fall); }
+    .neutral-card .card-value, .neutral-card .card-change { color: var(--neutral); }
+
+    /* ── 원자재 카드 ── */
+    .commodity-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 12px;
+    }
+
+    /* ── 분석 박스 ── */
+    .analysis-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 16px;
+    }
+    .analysis-box h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 14px;
+      color: var(--neutral);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .analysis-box p {
+      color: #c5cee0;
+      font-size: 14.5px;
+      line-height: 1.85;
+      margin-bottom: 14px;
+    }
+    .analysis-box p:last-child { margin-bottom: 0; }
+    .highlight {
+      color: var(--fall);
+      font-weight: 700;
+    }
+    .highlight-rise {
+      color: var(--rise);
+      font-weight: 700;
+    }
+    .highlight-yellow {
+      color: var(--neutral);
+      font-weight: 700;
+    }
+    .highlight-blue {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    /* ── 섹터 히트맵 ── */
+    .heatmap {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .heat-cell {
+      border-radius: 10px;
+      padding: 14px 12px;
+      text-align: center;
+    }
+    .heat-cell .heat-name {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+      opacity: 0.9;
+    }
+    .heat-cell .heat-pct {
+      font-size: 18px;
+      font-weight: 900;
+      font-family: 'Courier New', monospace;
+    }
+    .heat-strong-rise { background: rgba(0,200,150,0.25); color: var(--rise); }
+    .heat-mild-rise   { background: rgba(0,200,150,0.10); color: #80e8c8; }
+    .heat-flat        { background: rgba(255,211,42,0.10); color: var(--neutral); }
+    .heat-mild-fall   { background: rgba(255,71,87,0.12); color: #ff8090; }
+    .heat-strong-fall { background: rgba(255,71,87,0.28); color: var(--fall); }
+
+    /* ── 주목 종목 ── */
+    .stock-spotlight {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .spotlight-item {
+      background: var(--bg-card2);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--blue);
+      border-radius: 10px;
+      padding: 16px 20px;
+    }
+    .spotlight-item.fall-item { border-left-color: var(--fall); }
+    .spotlight-item.rise-item { border-left-color: var(--rise); }
+    .spotlight-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+    .spotlight-name {
+      font-size: 15px;
+      font-weight: 700;
+    }
+    .spotlight-pct {
+      font-size: 14px;
+      font-weight: 700;
+      font-family: 'Courier New', monospace;
+      background: rgba(255,71,87,0.15);
+      border-radius: 6px;
+      padding: 3px 10px;
+    }
+    .spotlight-pct.pct-rise {
+      background: rgba(0,200,150,0.15);
+      color: var(--rise);
+    }
+    .spotlight-pct.pct-fall {
+      color: var(--fall);
+    }
+    .spotlight-desc {
+      font-size: 13.5px;
+      color: #a0aec0;
+      line-height: 1.7;
+    }
+
+    /* ── 체크포인트 ── */
+    .checkpoint-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .checkpoint-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: var(--bg-card2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      font-size: 14px;
+      color: #c5cee0;
+    }
+    .checkpoint-list li .ck-icon {
+      flex-shrink: 0;
+      font-size: 18px;
+      margin-top: 1px;
+    }
+    .checkpoint-list li strong {
+      color: #e8eaf6;
+    }
+
+    /* ── 면책조항 ── */
+    .disclaimer {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 20px;
+      font-size: 11.5px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-top: 32px;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 600px) {
+      .report-title { font-size: 20px; }
+      .card-grid, .commodity-grid { grid-template-columns: repeat(2, 1fr); }
+      .heatmap { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* ── 구분선 ── */
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 28px 0;
+    }
+
+    /* ── 배지 ── */
+    .badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+    .badge-red { background: rgba(255,71,87,0.2); color: var(--fall); }
+    .badge-green { background: rgba(0,200,150,0.2); color: var(--rise); }
+    .badge-yellow { background: rgba(255,211,42,0.15); color: var(--neutral); }
+
+    /* ── 인용 박스 ── */
+    .quote-box {
+      border-left: 3px solid var(--neutral);
+      padding: 12px 18px;
+      background: rgba(255,211,42,0.04);
+      border-radius: 0 8px 8px 0;
+      margin: 14px 0;
+      font-size: 14px;
+      color: #dde0e8;
+      font-style: italic;
+    }
+
+    /* ── 해시태그 ── */
+    .hashtags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+    .hashtag {
+      font-size: 12px;
+      color: var(--blue);
+      background: rgba(77,166,255,0.08);
+      border: 1px solid rgba(77,166,255,0.15);
+      border-radius: 50px;
+      padding: 4px 12px;
+    }
+
+    /* ── 통계 강조 ── */
+    .stat-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 14px 0;
+    }
+    .stat-block {
+      flex: 1;
+      min-width: 130px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 10px;
+      padding: 12px 16px;
+      text-align: center;
+    }
+    .stat-block .stat-num {
+      font-size: 22px;
+      font-weight: 900;
+      font-family: 'Courier New', monospace;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .stat-block .stat-label {
+      font-size: 11px;
+      color: var(--text-secondary);
+      letter-spacing: 0.5px;
+    }
+    </style>
+<!-- SEO:BEGIN -->
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-09-09-%EC%A3%BC%EC%8B%9D%EB%B3%B4%EA%B3%A0%EC%84%9C">
+<meta name="robots" content="noindex,follow">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="일간 시장 리포트 (9월 9일) — 33거래일 만에 7,000선을 되찾은 코스피">
+<meta property="og:description" content="2026년 9월 9일 코스피 7,051.64(+1.40%) · 코스닥 830.37(+2.28%) 정리. 간밤 뉴욕 3대 지수가 모두 내리고 브렌트유가 99달러를 넘었는데도 한국 증시는 올라 7월 23일 이후 33거래일 만에 7,000선 위에서 마감했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-09-09-%EC%A3%BC%EC%8B%9D%EB%B3%B4%EA%B3%A0%EC%84%9C">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-09-09T16:30:00+09:00">
+<meta property="article:modified_time" content="2026-09-09T16:30:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N28MJLW4W9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-N28MJLW4W9");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://sangsang.ephseed.com/#organization", "name": "생생 정보통", "url": "https://sangsang.ephseed.com/"}, {"@type": "WebSite", "@id": "https://sangsang.ephseed.com/#website", "url": "https://sangsang.ephseed.com/", "name": "생생 정보통", "description": "매일 아침 배달되는 경제·정책·생활 정보 브리핑", "inLanguage": "ko-KR", "publisher": {"@id": "https://sangsang.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://sangsang.ephseed.com/2026-09-09-%EC%A3%BC%EC%8B%9D%EB%B3%B4%EA%B3%A0%EC%84%9C#page", "url": "https://sangsang.ephseed.com/2026-09-09-%EC%A3%BC%EC%8B%9D%EB%B3%B4%EA%B3%A0%EC%84%9C", "headline": "일간 시장 리포트 (9월 9일) — 33거래일 만에 7,000선을 되찾은 코스피", "description": "2026년 9월 9일 코스피 7,051.64(+1.40%) · 코스닥 830.37(+2.28%) 정리. 간밤 뉴욕 3대 지수가 모두 내리고 브렌트유가 99달러를 넘었는데도 한국 증시는 올라 7월 23일 이후 33거래일 만에 7,000선 위에서 마감했다.", "inLanguage": "ko-KR", "image": "https://sangsang.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://sangsang.ephseed.com/#website"}, "datePublished": "2026-09-09", "dateModified": "2026-09-09", "author": {"@id": "https://sangsang.ephseed.com/#organization"}, "publisher": {"@id": "https://sangsang.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+
+<div class="fixed-top-ad">
+  <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-EVlth33UH8CTDu2u" data-ad-width="728" data-ad-height="90"></ins>
+  <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+<div class="fixed-side-ad">
+  <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-KMCr4AoIjIDsi9XA" data-ad-width="160" data-ad-height="600"></ins>
+  <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</div>
+
+<div class="container">
+
+  <div class="report-header">
+    <div class="report-date">2026년 9월 9일(수) · 코스피 종가 기준 · 미국은 현지 9월 8일(화) 마감 기준</div>
+    <div class="report-title">일간 시장 리포트 (9월 9일) — 33거래일 만에 7,000선을 되찾은 코스피</div>
+    <div class="report-subtitle">
+      코스피 7,051.64(+1.40%) · 코스닥 830.37(+2.28%) ·
+      원달러 1,336.1원(-9.5원) · 브렌트 99달러대 · 간밤 뉴욕은 3대 지수 모두 하락
+    </div>
+    <div class="fear-greed">
+      <span class="dot"></span>
+      시장 심리 · <strong>디커플링</strong>
+      — 미국이 내리고 유가가 오른 밤을 지나고도 한국만 올랐습니다. 지수를 떠받친 것은 외국인이 아니라 자사주였습니다
+    </div>
+    <div class="hashtags">
+      <span class="hashtag">#일간시장리포트</span>
+      <span class="hashtag">#코스피7051</span>
+      <span class="hashtag">#33거래일만의7000</span>
+      <span class="hashtag">#퀄컴아마존</span>
+      <span class="hashtag">#자사주매입</span>
+      <span class="hashtag">#2차전지반등</span>
+      <span class="hashtag">#브렌트99달러</span>
+      <span class="hashtag">#8월CPI</span>
+    </div>
+  </div>
+
+  <div class="section-title">한국 주요 지수 (9월 9일 종가)</div>
+  <div class="card-grid">
+    <div class="index-card rise">
+      <div class="card-label">KOSPI</div>
+      <div class="card-value">7,051.64</div>
+      <div class="card-change">▲ +97.12 (+1.40%)</div>
+    </div>
+    <div class="index-card rise">
+      <div class="card-label">KOSDAQ</div>
+      <div class="card-value">830.37</div>
+      <div class="card-change">▲ +18.49 (+2.28%)</div>
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <p>※ 검산하면 6,954.52 + 97.12 = 7,051.64, 811.88 + 18.49 = 830.37입니다.
+    <span class="highlight-rise">종가가 7,000선 위에서 형성된 것은 7월 23일 이후 33거래일 만</span>입니다.</p>
+
+    <p>※ 어제와 오늘을 이어 붙이면 지난 이틀의 성격이 드러납니다.</p>
+
+    <p>· 9월 8일 장중 고점 <strong>7,171.52</strong> — 실제로 거래됐지만 종가까지 217포인트를 반납<br>
+    · 9월 8일 종가 <strong>6,954.52</strong> (-0.58%)<br>
+    · 9월 9일 시가 <strong>6,970선</strong> — 장 초반 7,000선 재돌파<br>
+    · 9월 9일 오후 3시 <strong>7,062.74</strong> (+1.56%) — 오늘의 실질 고점권<br>
+    · 9월 9일 종가 <strong>7,051.64</strong> (+1.40%)</p>
+
+    <p>※ 여기서 한 가지를 분명히 해 둘 필요가 있습니다.
+    <span class="highlight-yellow">오늘 지수는 어제 장중 고점을 넘지 못했습니다.</span>
+    어제 7,171.52까지 올랐던 자리에서 오늘 도달한 최고 수준은 7,062.74 부근이니
+    <strong>약 109포인트가 여전히 비어 있습니다.</strong>
+    "7,000선 회복"이라는 표현이 맞기는 하지만, 회복된 것은 <strong>종가이지 고점이 아닙니다.</strong>
+    어제 7,100선 위에서 산 투자자는 오늘도 손실 구간에 남아 있습니다.</p>
+
+    <p>※ 대신 오늘의 미덕은 <span class="highlight">마감까지 상승분을 지켰다는 점</span>에 있습니다.
+    어제 리포트는 고점과 종가의 거리를 이 지표의 핵심으로 삼았습니다.
+    9월 7일은 0.01포인트, 9월 8일은 217.00포인트였고, 오늘은 11포인트 남짓입니다.
+    <strong>사흘 동안 이 값이 0 → 217 → 11로 움직였습니다.</strong>
+    어제 하루가 예외적이었다는 쪽에 무게가 실립니다.</p>
+
+    <p>※ 코스닥이 코스피보다 강했다는 점도 어제와 뒤집힌 대목입니다.
+    어제는 코스피 -0.58%, 코스닥 -1.25%로 <strong>코스닥이 더 많이 빠졌고</strong>
+    이틀 연속 대형주 쏠림이 이어졌다고 적었습니다.
+    오늘은 코스피 +1.40%, <span class="highlight-rise">코스닥 +2.28%로 순서가 바뀌었습니다.</span>
+    코스닥 시가총액 상위 10종목이 전부 상승 마감했습니다. 돈이 다시 아래쪽까지 내려갔다는 뜻입니다.</p>
+  </div>
+
+  <div class="section-title">미국 주요 지수 (현지 9월 8일 화요일 종가)</div>
+  <div class="card-grid">
+    <div class="index-card fall">
+      <div class="card-label">다우존스</div>
+      <div class="card-value">52,786.07</div>
+      <div class="card-change">▼ -628.18 (-1.18%)</div>
+    </div>
+    <div class="index-card fall">
+      <div class="card-label">S&amp;P 500</div>
+      <div class="card-value">7,673.52</div>
+      <div class="card-change">▼ -45.08 (-0.58%)</div>
+    </div>
+    <div class="index-card fall">
+      <div class="card-label">나스닥</div>
+      <div class="card-value">26,421.41</div>
+      <div class="card-change">▼ -85.58 (-0.32%)</div>
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <p>※ 사흘 동안 같은 숫자를 싣던 미국 지수가 드디어 갱신됐습니다.
+    노동절 휴장으로 9월 4일 종가에 멈춰 있던 값이 어젯밤 움직였고,
+    <span class="highlight-yellow">3대 지수가 모두 내렸습니다.</span>
+    러셀2000도 2,960.20으로 15.44포인트(-0.5%) 하락해 대형주·소형주 구분 없이 내렸습니다.</p>
+
+    <p>※ <strong>여기가 오늘 리포트의 핵심입니다.</strong>
+    어제 리포트는 "뉴욕이 재개되는 오늘 밤 이번 주 실제 방향이 정해진다"고 적었습니다.
+    뉴욕은 재개됐고 <span class="highlight">답은 하락이었습니다.</span>
+    그런데 한국은 올랐습니다. <strong>이틀간의 미국 공백이 끝났는데도 방향이 갈렸다는 것</strong>이
+    오늘 시장에서 실제로 확인된 사실입니다.</p>
+
+    <p>※ 다우가 1.18% 내리는 동안 나스닥은 0.32% 하락에 그쳤습니다.
+    <span class="highlight-yellow">낙폭의 구조가 기술주가 아니라 그 밖에 있었다는 뜻</span>입니다.
+    지수를 끌어내린 것은 유가와 금리였고, 그 압력은 경기민감·금융 쪽에 더 세게 걸렸습니다.
+    실제로 <strong>인텔은 9% 올랐습니다.</strong>
+    같은 밤에 소프트웨어·IT서비스 종목은 "AI가 전문 소프트웨어 용역을 대체할 수 있다"는 우려로 크게 밀렸습니다.</p>
+
+    <p>※ 오늘 한국 증시가 미국 지수 전체가 아니라
+    <span class="highlight-rise">그 안에서 오른 반도체 하드웨어만 골라 받았다</span>는 것이
+    디커플링의 실제 내용입니다. 지수 방향만 보면 설명이 안 되고, 업종별로 쪼개 보면 설명이 됩니다.</p>
+
+    <p>※ 아시아 전체가 같은 모양은 아니었습니다.
+    닛케이225는 오전 0.35% 오른 65,495.23, 대만 가권은 0.81% 오른 47,487.64,
+    상하이종합은 0.21% 오른 3,948.82, 홍콩 항셍은 0.06% 내린 25,302.46이었습니다.
+    <strong>한국의 상승 폭이 아시아에서 가장 컸습니다.</strong>
+    참고로 어제 닛케이는 엔화 강세 부담에 1.70% 내렸습니다. 어제 리포트가 인용한 9월 7일의 2.12% 상승과는 반대입니다.</p>
+  </div>
+
+  <div class="section-title">오늘 지수를 올린 것 — 퀄컴·아마존 80조원 동맹</div>
+  <div class="analysis-box">
+    <p><strong>① 계약의 내용</strong><br>
+    퀄컴과 아마존웹서비스(AWS)가 데이터센터용 AI 추론 칩과 연결 기술을 함께 개발하기로 했습니다.
+    <span class="highlight">10년간 최대 600억 달러, 원화로 약 80조원 규모의 구매 약정</span>이 붙어 있습니다.
+    아마존은 주당 161.26달러에 퀄컴 보통주를 살 수 있는 신주인수권을 받았습니다.
+    초기 375만 주에서 시작해 구매액이 600억 달러에 도달하면 2,500만 주까지 늘어나는 구조로,
+    금액으로 환산하면 약 40억 달러입니다.</p>
+
+    <p><strong>② 왜 한국 반도체가 반응했나</strong><br>
+    AI 추론 칩은 <span class="highlight-yellow">메모리를 대량으로 요구합니다.</span>
+    칩 설계 주체가 엔비디아 한 곳에서 퀄컴·AMD·마벨로 넓어질수록
+    <strong>메모리를 파는 쪽의 고객 수가 늘어납니다.</strong>
+    오늘 KRX 반도체 지수가 2.88% 오른 것은 이 계산이 반영된 결과입니다.</p>
+
+    <p><strong>③ 반복되는 계약 형태</strong><br>
+    구매 약정에 신주인수권을 붙이는 방식은 이번이 처음이 아닙니다.
+    AMD가 오픈AI에 지분 취득권을 줬고, 마벨은 구글에 최대 122억 달러 규모의 주식 매수권을 부여했습니다.
+    <span class="highlight">공급자와 고객이 서로의 주가로 묶이는 구조</span>가 AI 칩 거래의 표준이 되고 있습니다.
+    수요가 계약서에 미리 적히는 만큼 <strong>메모리 업체 입장에서는 주문의 가시성이 길어집니다.</strong></p>
+
+    <p><strong>④ 어제와의 연결</strong><br>
+    어제 리포트는 "지금 시장이 사는 것은 AI라는 주제 전체가 아니라 메모리·전력이라는 물리적 설비"라고 적었습니다.
+    오늘 그 판단이 한 번 더 확인됐습니다.
+    <span class="highlight-yellow">간밤 미국에서 소프트웨어가 밀리고 인텔이 오른 것</span>이 정확히 같은 이야기입니다.
+    설계와 소프트웨어가 아니라 <strong>물건을 만드는 쪽</strong>에 돈이 붙고 있습니다.
+    오늘 IT서비스 업종이 이틀 연속 하락한 것도 같은 선상에 있습니다.</p>
+  </div>
+
+  <div class="section-title">환율 · 원자재</div>
+  <div class="commodity-grid">
+    <div class="index-card rise">
+      <div class="card-label">원달러</div>
+      <div class="card-value">1,336.1원</div>
+      <div class="card-change">▼ -9.5 (-0.71%)</div>
+    </div>
+    <div class="index-card rise">
+      <div class="card-label">WTI</div>
+      <div class="card-value">$94.41</div>
+      <div class="card-change">▲ 6주 최고권 경신</div>
+    </div>
+    <div class="index-card fall">
+      <div class="card-label">금 (현물)</div>
+      <div class="card-value">$4,412</div>
+      <div class="card-change">▼ 이틀 연속 하락</div>
+    </div>
+    <div class="index-card rise">
+      <div class="card-label">비트코인</div>
+      <div class="card-value">$79,725</div>
+      <div class="card-change">▼ -0.30%</div>
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <p>※ 기준 시점이 항목마다 다릅니다.
+    원달러는 <strong>9월 9일 서울외환시장 주간거래 종가(오후 3시 30분)</strong>,
+    WTI·브렌트는 <strong>9월 9일 아시아 시간대 전자거래 값</strong>,
+    금과 비트코인은 <strong>9월 9일 오전~오후 값</strong>입니다.
+    금 현물은 집계처에 따라 4,412달러와 4,430달러로 갈리는데, 방향은 양쪽 모두 하락입니다.</p>
+
+    <p>※ 원달러 1,336.1원은 어제 오른 5.1원을 지우고 <span class="highlight-rise">9.5원을 더 내린 자리</span>입니다.
+    지난 목요일부터 사흘간 28.2원 내렸다가 어제 5.1원 올랐고, 오늘 다시 9.5원 내렸으니
+    <strong>닷새 중 나흘이 하락</strong>입니다.</p>
+
+    <p>※ 그런데 여기에 오늘의 두 번째 역설이 있습니다.
+    어제 리포트는 "환율이 이틀 먼저 움직이고 외국인 수급이 뒤따라온다"는 관계를 짚고,
+    어제 그 관계가 끊긴 것인지 확인하겠다고 적었습니다.
+    <span class="highlight-yellow">오늘 답은 관계가 다시 끊겼다는 쪽입니다.</span>
+    원화가 9.5원이나 강해졌는데도 <strong>외국인은 코스피에서 순매도였습니다.</strong>
+    이틀 연속 환율과 외국인 수급이 따로 놀았습니다.
+    지금 외국인의 판단 기준은 원화 가치가 아니라 다른 곳에 있다고 보는 편이 맞습니다.</p>
+
+    <p>※ 유가는 계속 오르고 있습니다.
+    WTI는 94.41달러, <span class="highlight">브렌트는 99.38달러로 100달러선에 붙었습니다.</span>
+    어제 리포트가 체크포인트로 적은 "브렌트 100달러선"이 하루 만에 코앞까지 왔습니다.
+    미군이 하르크섬 인근에서 이란 혁명수비대 연계 유조선 5척을 무력화하며 원유 수송이 차질을 빚었다는 보도가 배경입니다.
+    <strong>어제는 생산 설비(아람코)가, 오늘은 수송 선단이 표적이었습니다.</strong></p>
+
+    <p>※ 그래서 오늘의 상승은 <span class="highlight-yellow">악재가 사라져서가 아니라 악재를 안고 오른 것</span>입니다.
+    유가는 어제보다 더 올랐고 미국은 내렸는데 한국만 올랐습니다.
+    이 조합은 상승의 근거가 외부 환경이 아니라 개별 재료와 국내 수급에 있다는 뜻이고,
+    <strong>외부 환경이 더 나빠지면 그만큼 쉽게 되돌려질 수 있다는 뜻</strong>이기도 합니다.</p>
+
+    <p>※ 금은 이틀 연속 내렸습니다. 어제 4,404달러대였고 오늘도 1% 안팎 하락했습니다.
+    중동에서 설비가 피격되고 유조선이 파괴되는 국면인데 금이 오르지 않는 상태가 이틀째 이어지고 있습니다.
+    <span class="highlight">지금 금값을 정하는 것은 안전자산 수요가 아니라 금리</span>라는 어제의 판단이 하루 더 유지됐습니다.
+    달러지수는 98.81로 거의 움직이지 않아 달러 강세 때문도 아닙니다.</p>
+
+    <p>※ 비트코인은 79,725달러로 0.3% 내렸습니다.
+    어제 78,917달러에서 소폭 회복했지만 <strong>여전히 8만 달러 아래</strong>입니다.
+    지난주 목요일 3개월 최고인 82,178달러를 찍은 뒤 내려온 자리입니다.
+    이더리움 2,502달러(-0.4%), 리플 1.4086달러(-1.1%), 솔라나 -1.1%로 알트코인도 함께 약했습니다.
+    <span class="highlight-yellow">오늘 한국 주식은 올랐는데 가상자산은 그렇지 않았습니다.</span>
+    오늘의 상승이 위험자산 전반의 회복이 아니라 특정 업종의 재료였다는 것을 여기서도 확인할 수 있습니다.</p>
+
+    <p>※ 참고로 리퀴드 네트워크에서 약 4,000BTC, 3억 2,000만 달러 규모의 탈취 사고가 보고됐습니다.
+    가격에 미친 영향은 제한적이었지만 기록해 둡니다.</p>
+  </div>
+
+  <div class="section-title">업종별 등락 (코스피 · 9월 9일 종가 기준)</div>
+  <div class="heatmap">
+    <div class="heat-cell heat-strong-rise">
+      <div class="heat-name">화학</div><div class="heat-pct">+3.56%</div>
+    </div>
+    <div class="heat-cell heat-strong-rise">
+      <div class="heat-name">기계·장비</div><div class="heat-pct">+2.73%</div>
+    </div>
+    <div class="heat-cell heat-strong-rise">
+      <div class="heat-name">KRX 반도체</div><div class="heat-pct">+2.88%</div>
+    </div>
+    <div class="heat-cell heat-mild-rise">
+      <div class="heat-name">전기·전자</div><div class="heat-pct">+2.01%</div>
+    </div>
+    <div class="heat-cell heat-strong-rise">
+      <div class="heat-name">코스닥 종합</div><div class="heat-pct">+2.28%</div>
+    </div>
+    <div class="heat-cell heat-mild-fall">
+      <div class="heat-name">보험</div><div class="heat-pct">-1.35%</div>
+    </div>
+    <div class="heat-cell heat-mild-fall">
+      <div class="heat-name">IT서비스</div><div class="heat-pct">-1.36%</div>
+    </div>
+    <div class="heat-cell heat-strong-fall">
+      <div class="heat-name">종이·목재</div><div class="heat-pct">-1.57%</div>
+    </div>
+    <div class="heat-cell heat-strong-fall">
+      <div class="heat-name">오락·문화</div><div class="heat-pct">-2.66%</div>
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <p>※ 오늘 업종 표는 <span class="highlight-yellow">어제 표와 상위권이 완전히 교체됐습니다.</span>
+    어제 1·2위였던 전기가스업(+3.27%)과 건설(+3.04%)이 오늘은 상위권에 없고,
+    대신 화학과 기계·장비가 올라왔습니다.
+    <strong>사흘 연속 매일 다른 업종이 지수를 끌어올리고 있습니다.</strong>
+    9월 7일은 전기·전자와 기계·장비, 9월 8일은 전기가스와 건설, 오늘은 화학과 기계·장비입니다.</p>
+
+    <p>※ 화학이 1위라는 사실을 조심해서 읽어야 합니다.
+    <span class="highlight">한국거래소 업종 분류에서 2차전지 소재·셀 종목 상당수가 화학으로 잡힙니다.</span>
+    오늘 화학 +3.56%는 정유·석유화학이 좋아서가 아니라 <strong>2차전지 때문입니다.</strong>
+    유가가 오르는 국면에서 정유주가 오르는 것과는 성격이 다릅니다.</p>
+
+    <p>※ 그리고 이것이 오늘 가장 눈에 띄는 반전입니다.
+    어제 리포트는 2차전지에 대해 이렇게 적었습니다.
+    "AI 데이터센터 이야기가 전력·설비로 번지는 동안 2차전지는 그 서사에서 빠져 있습니다.
+    지금 시장이 전력 수요와 배터리 수요를 완전히 다른 것으로 보고 있다는 뜻입니다."
+    <span class="highlight-yellow">그 판단이 하루 만에 뒤집혔습니다.</span>
+    어제 3.86% 내렸던 LG에너지솔루션이 오늘 6.46% 올라 코스피 시총 상위 10종목 중 상승률 1위였습니다.</p>
+
+    <p>※ 이유는 AI가 아니라 다른 데서 왔습니다.
+    <strong>미국이 중국산 배터리에 대한 규제를 강화할 것이라는 기대</strong>가 배경입니다.
+    즉 2차전지는 AI 서사에 편입된 것이 아니라 <span class="highlight">자기 재료로 따로 오른 것</span>입니다.
+    어제의 판단(전력 수요와 배터리 수요는 다르다)은 여전히 유효하고,
+    다만 배터리 쪽에 독립적인 재료가 하나 붙었다고 읽는 편이 정확합니다.</p>
+
+    <p>※ 하락 업종은 어제와 겹치는 곳이 하나 있습니다. <strong>IT서비스입니다.</strong>
+    어제 -3.21%, 오늘 -1.36%로 이틀 연속 내렸습니다.
+    <span class="highlight-yellow">간밤 미국에서 소프트웨어 종목이 밀린 것과 방향이 같습니다.</span>
+    "AI가 전문 소프트웨어 용역을 대체한다"는 우려가 서울에서도 같은 값으로 반영되고 있습니다.
+    이틀 연속 같은 방향을 유지한 유일한 업종이라는 점에서, 이것은 하루짜리 변덕이 아닙니다.</p>
+
+    <p>※ 보험(-1.35%)과 금융이 내린 것도 기록해 둡니다.
+    삼성생명 -1.46%, KB금융 -0.98%입니다.
+    금리 인상 확률이 60% 안팎인 국면에서 금융주가 내리는 것은 통상의 교과서와 어긋나는데,
+    <strong>오늘 지수 상승분이 특정 업종에 몰리면서 다른 곳의 돈이 빠져나간 결과</strong>로 보는 편이 자연스럽습니다.</p>
+  </div>
+
+  <div class="section-title">주목 종목</div>
+  <div class="stock-spotlight">
+
+    <div class="spotlight-item rise-item">
+      <div class="spotlight-header">
+        <span class="spotlight-name">LG에너지솔루션</span>
+        <span class="spotlight-pct pct-rise">+6.46%</span>
+      </div>
+      <div class="spotlight-desc">
+        종가 37만 1,000원. 코스피 시총 상위 10종목 중 상승률 1위입니다.
+        <strong>어제 3.86% 내렸던 바로 그 종목</strong>이고, 어제 종가 34만 8,500원에서 2만 2,500원이 올랐습니다.
+        이틀을 합치면 순증입니다. 미국의 중국산 배터리 규제 강화 기대가 재료이고,
+        AI 데이터센터 서사와는 무관한 독립 재료라는 점이 중요합니다.
+        어제 이 종목이 빠진 이유와 오늘 오른 이유가 서로 다른 이야기입니다.
+      </div>
+    </div>
+
+    <div class="spotlight-item rise-item">
+      <div class="spotlight-header">
+        <span class="spotlight-name">SK하이닉스</span>
+        <span class="spotlight-pct pct-rise">+3.51%</span>
+      </div>
+      <div class="spotlight-desc">
+        종가 185만 6,000원(+6만 3,000원). 사흘 연속 상승입니다.
+        9월 7일 +8.26%, 9월 8일 +0.56%, 오늘 +3.51%로 사흘간 약 12.7% 올랐습니다.
+        다만 <strong>어제 장중 고가 188만 9,000원은 오늘도 넘지 못했습니다.</strong>
+        어제 고가에서 종가까지 5.08%를 반납한 뒤 오늘 3.51%를 회복했으니, 아직 그 자리에 못 미칩니다.
+        퀄컴·AWS 계약이 메모리 수요의 고객 저변을 넓힌다는 계산이 반영됐습니다.
+      </div>
+    </div>
+
+    <div class="spotlight-item fall-item">
+      <div class="spotlight-header">
+        <span class="spotlight-name">삼성전자</span>
+        <span class="spotlight-pct">0.00%</span>
+      </div>
+      <div class="spotlight-desc">
+        종가 26만 9,500원. <strong>어제와 정확히 같은 값으로 보합 마감</strong>했습니다.
+        장중에는 오른 구간이 있었고 오후 3시 시점에도 0.28% 상승 상태였는데 마감에서 제자리로 돌아왔습니다.
+        우선주는 19만 7,500원으로 0.45% 내렸습니다.
+        <strong>시가총액 1위 종목이 한 걸음도 움직이지 않았는데 지수가 1.40% 올랐다는 사실</strong>이
+        오늘 상승의 폭이 어디에 있었는지를 보여 줍니다.
+        어제는 삼성전자가 하락 전환한 것이 지수 반전의 직접 원인이었는데, 오늘은 지수가 이 종목 없이 올랐습니다.
+      </div>
+    </div>
+
+    <div class="spotlight-item rise-item">
+      <div class="spotlight-header">
+        <span class="spotlight-name">에코프로비엠 (코스닥)</span>
+        <span class="spotlight-pct pct-rise">+9.64%</span>
+      </div>
+      <div class="spotlight-desc">
+        종가 11만 4,900원. 코스닥 시총 상위주 중 상승률이 가장 컸습니다.
+        같은 그룹의 에코프로도 8만 6,800원으로 7.03% 올랐습니다.
+        코스닥이 코스피보다 강했던 이유가 이 두 종목에 상당 부분 들어 있습니다.
+        <strong>2차전지 소재가 코스피의 LG에너지솔루션과 같은 재료로 함께 움직였습니다.</strong>
+      </div>
+    </div>
+
+    <div class="spotlight-item rise-item">
+      <div class="spotlight-header">
+        <span class="spotlight-name">심텍 · 주성엔지니어링 (코스닥)</span>
+        <span class="spotlight-pct pct-rise">+8.87% · +6.12%</span>
+      </div>
+      <div class="spotlight-desc">
+        심텍 13만 2,600원, 주성엔지니어링 20만 6,500원입니다.
+        주성엔지니어링은 <strong>어제 코스닥이 1.25% 내린 날에도 3.95% 올랐던 종목</strong>으로, 이틀 연속 상승입니다.
+        원익IPS도 12만 100원으로 3.71% 올랐습니다.
+        반도체 소재·부품·장비 쪽이 완성품 업체와 같은 방향으로 움직였다는 뜻이고,
+        어제 리포트가 "장비까지 이어진 신호"라고 적은 흐름이 오늘 코스닥 전반으로 넓어졌습니다.
+      </div>
+    </div>
+
+    <div class="spotlight-item rise-item">
+      <div class="spotlight-header">
+        <span class="spotlight-name">삼성전기 · 알테오젠 · 레인보우로보틱스</span>
+        <span class="spotlight-pct pct-rise">+2.48% · +0.90% · +2.89%</span>
+      </div>
+      <div class="spotlight-desc">
+        어제 하락 폭이 컸던 종목들이 나란히 반등했습니다.
+        삼성전기는 어제 5.78% 내린 뒤 오늘 2.48% 올라 140만 4,000원,
+        알테오젠은 어제 3.15% 내린 뒤 오늘 0.90% 올라 27만 9,500원,
+        레인보우로보틱스는 어제 3.35% 내린 뒤 오늘 2.89% 올라 44만 5,500원입니다.
+        <strong>어제 리포트에서 하락 종목으로 적은 세 종목이 모두 오늘 상승 쪽에 있습니다.</strong>
+        다만 반등 폭이 어제 낙폭에 못 미치는 종목이 둘이라, 완전한 회복은 아닙니다.
+      </div>
+    </div>
+
+    <div class="spotlight-item fall-item">
+      <div class="spotlight-header">
+        <span class="spotlight-name">삼성물산 · 삼성생명 · KB금융</span>
+        <span class="spotlight-pct pct-fall">-1.57% · -1.46% · -0.98%</span>
+      </div>
+      <div class="spotlight-desc">
+        삼성물산 37만 6,000원, KB금융 17만 2,000원입니다.
+        지수가 1.40% 오른 날 대형 지주·금융이 내렸다는 것은
+        <strong>오늘 상승이 지수 전반의 상승이 아니라 업종 이동이었다</strong>는 뜻입니다.
+        어제 건설이 3.04% 오르며 상위권이었는데 오늘 삼성물산이 내린 것도 같은 맥락입니다.
+        돈이 새로 들어온 것이 아니라 어제 있던 자리에서 오늘 자리로 옮겨 갔습니다.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section-title">수급 — 오늘 지수를 떠받친 것은 자사주였다</div>
+  <div class="analysis-box">
+    <p>※ 먼저 숫자부터 적습니다. 오늘 코스피 투자자별 매매 동향은
+    <strong>집계처에 따라 값이 갈립니다.</strong> 확인된 범위를 그대로 적습니다.</p>
+
+    <p>· 기관 <strong>+9,005억 ~ +9,417억원</strong> (순매수)<br>
+    · 기타법인 <strong>+1조 7,000억 ~ +1조 7,758억원</strong> (순매수)<br>
+    · 개인 <strong>-2조 2,875억 ~ -2조 5,014억원</strong> (순매도)<br>
+    · 외국인 <strong>-1,702억 ~ -4,350억원</strong> (순매도)</p>
+
+    <p>※ 방향은 어느 집계처를 봐도 같습니다.
+    <span class="highlight-yellow">기관과 기타법인이 사고, 개인과 외국인이 팔았습니다.</span>
+    어제 리포트에 실은 확정치는 외국인 +6,316억원, 기관 +6,427억원이었으니,
+    <strong>외국인이 하루 만에 매수에서 매도로 돌아섰습니다.</strong>
+    어제 체크포인트에 "외국인 순매수가 사흘째 이어지는지"를 적었는데, 답은 이어지지 않았다는 쪽입니다.</p>
+
+    <p>※ 오늘 수급에서 가장 중요한 항목은 <span class="highlight">기타법인 1조 7,000억원대 순매수</span>입니다.
+    이 규모는 평상시의 몇 배에 해당합니다.
+    보도에 따르면 이 금액의 상당 부분이 <strong>삼성전자와 SK하이닉스의 자사주 매입</strong>입니다.</p>
+
+    <p>※ 이것이 오늘 지수를 읽는 데 결정적입니다.
+    개인이 2조원 넘게 팔고 외국인도 팔았는데 지수가 1.40% 오른 이유는
+    <span class="highlight-yellow">기관 9,000억원과 기타법인 1조 7,000억원, 합쳐서 2조 6,000억원대가 아래에서 받았기 때문</span>입니다.
+    그런데 <strong>기타법인 매수는 시장의 판단이 아닙니다.</strong>
+    자사주 매입은 회사가 미리 정한 계획에 따라 집행하는 것이라 주가가 오르든 내리든 같은 금액이 들어옵니다.
+    즉 오늘 지수를 떠받친 힘의 3분의 2가량은 <strong>시장의 매수 의사와 무관한 자금</strong>이었습니다.</p>
+
+    <p>※ 여기서 삼성전자 보합의 의미가 다시 보입니다.
+    <span class="highlight">자사주를 대규모로 사들이는 종목이 보합에 그쳤다는 것</span>은
+    그만큼 반대편의 매도가 두꺼웠다는 뜻입니다.
+    회사가 사지 않았다면 삼성전자는 오늘 내렸을 가능성이 큽니다.</p>
+
+    <p>※ 어제 리포트는 "외국인·기관 순매수가 하루 만에 5조원대에서 1조 3천억원대로 줄었다"며
+    받쳐 주던 힘이 얇아지고 있다고 적었습니다.
+    오늘은 <strong>외국인이 아예 매도로 넘어갔고, 그 빈자리를 자사주가 메웠습니다.</strong>
+    지수는 올랐지만 받는 주체의 성격은 이틀 연속 나빠지는 방향입니다.
+    외국인 → 기관 → 자사주 순으로 매수 주체가 내려왔습니다.</p>
+
+    <p>※ 코스닥 수급은 코스피와 반대입니다.
+    <span class="highlight-rise">외국인이 코스닥에서 2,950억~2,980억원을 순매수</span>했습니다.
+    어제 618억원에서 다섯 배 가까이 늘었습니다.
+    <strong>같은 외국인이 코스피에서는 팔고 코스닥에서는 샀습니다.</strong>
+    코스닥이 코스피보다 강했던 이유가 여기 있고,
+    외국인이 한국 증시 전체를 파는 것이 아니라 <strong>대형주에서 중소형주로 자리를 옮기고 있다</strong>고 읽는 편이 정확합니다.</p>
+
+    <p>※ 기관은 오늘로 <span class="highlight">닷새 연속 순매수</span>입니다.
+    개인은 어제 3조원, 오늘 2조원대로 이틀 연속 대규모 매도입니다.
+    <strong>어제와 오늘은 개인의 매도 규모가 비슷한데 지수 방향이 정반대였습니다.</strong>
+    받는 쪽의 금액이 지수를 정하고 있다는 어제의 관찰이 오늘 한 번 더 확인됐습니다.</p>
+  </div>
+
+  <div class="section-title">리스크 요인</div>
+  <div class="analysis-box">
+    <p><strong>① 상승의 3분의 2가 자사주였다.</strong>
+    기타법인 1조 7,000억원은 시장의 매수 의사가 아닙니다.
+    자사주 매입은 회사가 정한 한도만큼만 집행되고 <span class="highlight-yellow">언젠가 끝납니다.</span>
+    이 자금이 멈추면 개인·외국인의 매도 규모가 그대로 지수에 반영됩니다.
+    오늘 상승을 "수급이 좋아졌다"로 읽으면 안 되는 이유입니다.</p>
+
+    <p><strong>② 외국인이 코스피에서 매도로 돌아섰다.</strong>
+    이틀 전 5조원(현·선물 합산)을 사들이던 주체가 어제 6,316억원으로 줄었고 오늘은 순매도입니다.
+    <span class="highlight">사흘 만에 매수에서 매도로 방향이 바뀌었습니다.</span>
+    원화가 9.5원이나 강해진 날인데도 그랬다는 점이 특히 걸립니다.</p>
+
+    <p><strong>③ 브렌트유가 100달러 문턱에 있다.</strong>
+    99.38달러입니다. 어제 98.06달러에서 하루 만에 더 올랐습니다.
+    <strong>세 자릿수를 넘기면 물가 논의의 전제 자체가 바뀝니다.</strong>
+    골드만삭스는 선박 공격이 확대되면 120달러까지 가능하다고 봤습니다.
+    이번 주 물가 지표 둘이 모두 <span class="highlight-yellow">유가 상승 구간을 반영하는 첫 지표</span>입니다.</p>
+
+    <p><strong>④ 내일이 선물·옵션 동시 만기다.</strong>
+    9월 10일 목요일에 국내 동시 만기, 유럽중앙은행 금리 결정, 미국 8월 생산자물가가 <strong>같은 날 겹칩니다.</strong>
+    어제 기관은 선물에서 1조 4,634억원을 순매도한 상태였습니다.
+    <span class="highlight">만기 전후 프로그램 매매가 평소보다 크게 흔들릴 수 있습니다.</span>
+    ECB는 0.25%p 인상 가능성이 거론됩니다.</p>
+
+    <p><strong>⑤ 어제 고점 매물대가 그대로 남아 있다.</strong>
+    9월 8일 장중 7,171.52는 실제로 거래된 값이고, 오늘 지수는 7,051.64입니다.
+    <strong>그 사이 약 120포인트 구간에 물린 물량이 아직 정리되지 않았습니다.</strong>
+    7,100선 위로 올라갈 때 부담으로 작용합니다.</p>
+
+    <p><strong>⑥ 오늘 상승이 두 개의 재료에만 기대고 있다.</strong>
+    퀄컴·AWS 계약과 중국산 배터리 규제 기대입니다.
+    <span class="highlight-yellow">둘 다 실적이 아니라 기대이고, 둘 다 하루 만에 나온 뉴스입니다.</span>
+    반도체와 2차전지를 빼면 오늘 오른 업종이 많지 않습니다. 금융·보험·오락문화는 내렸습니다.</p>
+  </div>
+
+  <div class="section-title">내일 체크포인트</div>
+  <ul class="checkpoint-list">
+    <li><span class="ck-icon">1</span>
+      <strong>9월 10일(목) · 선물·옵션 동시 만기</strong> — 국내 최대 수급 이벤트입니다.
+      기관의 선물 순매도 포지션이 어떻게 정리되는지, 프로그램 매매가 어느 방향으로 나오는지가 지수의 폭을 정합니다.
+      7,000선 바로 위에서 만기를 맞는다는 점에서 변동성이 커질 자리입니다.</li>
+    <li><span class="ck-icon">2</span>
+      <strong>9월 10일(목) · 미 8월 생산자물가 + ECB 금리 결정</strong> — 같은 날 밤에 둘이 겹칩니다.
+      생산자물가는 소비자물가의 선행 지표 성격이 있어 금요일 지표의 방향을 미리 보여 줍니다.
+      ECB가 0.25%p를 올리면 글로벌 금리 인상 기조가 한 겹 더 확인됩니다.</li>
+    <li><span class="ck-icon">3</span>
+      <strong>9월 11일(금) · 미 8월 소비자물가</strong> — 이번 주의 종착점입니다.
+      시장 예상은 전월 대비 0.4%입니다. 유가 상승이 반영되는 첫 지표라 상향 서프라이즈 가능성이 있습니다.
+      9월 금리 인상 확률은 이미 60% 안팎이고, 지표가 예상을 넘기면 오늘 오른 반도체·2차전지가 먼저 반응합니다.</li>
+    <li><span class="ck-icon">4</span>
+      <strong>기타법인 매수가 이어지는지</strong> — 오늘 지수를 떠받친 1조 7,000억원의 성격을 확인할 자리입니다.
+      내일 이 금액이 크게 줄어드는데 개인·외국인 매도가 유지된다면, 오늘의 7,000선은 하루짜리가 됩니다.</li>
+    <li><span class="ck-icon">5</span>
+      <strong>외국인의 코스피·코스닥 분리 매매가 계속되는지</strong> — 오늘 외국인은 코스피에서 팔고 코스닥에서 2,950억원을 샀습니다.
+      이 구도가 이어지면 지수보다 중소형주 쪽이 강한 장이 며칠 더 갈 수 있습니다.</li>
+    <li><span class="ck-icon">6</span>
+      <strong>브렌트유 100달러</strong> — 99.38달러까지 왔습니다.
+      세 자릿수를 넘긴 뒤 유지되는지가 이번 주 물가 지표의 해석을 좌우합니다.
+      호르무즈·하르크섬 인근 상황에 관한 후속 보도가 관건입니다.</li>
+    <li><span class="ck-icon">7</span>
+      <strong>오늘 밤 뉴욕 · 필라델피아 반도체지수</strong> — 어젯밤 인텔은 9% 올랐고 소프트웨어는 밀렸습니다.
+      이 분화가 하루 더 이어지면 오늘 한국의 업종별 흐름도 그대로 갑니다.
+      마이크론·샌디스크의 방향이 내일 SK하이닉스를 정합니다.</li>
+  </ul>
+
+  <div class="disclaimer">
+    본 리포트는 공개된 시장 데이터와 언론 보도를 정리한 자료이며 투자 권유나 매매 추천이 아닙니다.
+    지수·환율·원자재 수치는 집계 시점과 출처에 따라 달라질 수 있고, 특히 투자자별 매매 동향은
+    장중 잠정치와 마감 확정치가 크게 다를 수 있어 본문에 확인된 범위를 그대로 적었습니다.
+    국제유가·금·비트코인은 24시간 거래되는 자산이라 본문에 적힌 기준 시각 이후에도 값이 변합니다.
+    투자 판단과 그 결과에 대한 책임은 투자자 본인에게 있습니다.
+  </div>
+
+</div>
+
+</body>
+</html>
