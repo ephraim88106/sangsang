@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>주간 시장 리포트 (9월 7일~11일) — 주간 +3.33%에도 마지막 날 6,909로 밀린 코스피</title>
+  <meta name="description" content="2026년 9월 11일 코스피 6,909.91(-1.76%) · 코스닥 820.64(-1.95%) 정리와 9월 7일~11일 주간 집계. WTI 102.48달러와 미 30년물 5.37%가 겹치며 마지막 날 7,000선을 내줬지만 주간으로는 코스피가 3.33% 올랐고, 외국인은 코스피에서 이틀 연속 2조원대를 순매도했다.">
+  <meta property="article:published_time" content="2026-09-11T16:30:00+09:00">
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w59aji6ixc");
+  </script>
+  <!-- Google AdSense -->
+  <meta name="google-adsense-account" content="ca-pub-9118774019383180">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9118774019383180" crossorigin="anonymous"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+
+    :root {
+      --bg-primary: #0a0e1a;
+      --bg-card: #111827;
+      --bg-card2: #0f1623;
+      --rise: #00c896;
+      --fall: #ff4757;
+      --neutral: #ffd32a;
+      --blue: #4da6ff;
+      --purple: #9b59b6;
+      --text-primary: #e8eaf6;
+      --text-secondary: #8892b0;
+      --border: rgba(255,255,255,0.06);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      padding-top: 90px;
+    }
+
+    /* ── 광고 ── */
+    .fixed-top-ad {
+      position: fixed; top: 0; left: 0;
+      width: 100%; height: 90px;
+      background: #0a0e1a; z-index: 2000;
+      display: flex; justify-content: center; align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+    .fixed-side-ad {
+      position: fixed; right: 20px; top: 50%;
+      transform: translateY(-50%); z-index: 1000;
+      display: flex; flex-direction: column; align-items: center; width: 160px;
+    }
+    @media (max-height: 800px) { .fixed-side-ad { display: none; } }
+    @media (max-width: 1300px) { .fixed-side-ad { display: none; } }
+    @media (max-width: 768px) {
+      .fixed-top-ad { position: static; height: auto; padding: 10px 0; }
+      body { padding-top: 0; }
+    }
+
+    /* ── 레이아웃 ── */
+    .container { max-width: 900px; margin: 0 auto; padding: 20px 16px 60px; }
+
+    /* ── 헤더 ── */
+    .report-header {
+      background: linear-gradient(135deg, #0d1b2e 0%, #1a0a2e 100%);
+      border: 1px solid rgba(77,166,255,0.2);
+      border-radius: 16px;
+      padding: 32px 28px;
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .report-header::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 250px; height: 250px;
+      background: radial-gradient(circle, rgba(77,166,255,0.08), transparent 70%);
+      pointer-events: none;
+    }
+    .report-date {
+      font-size: 12px;
+      color: var(--text-secondary);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .report-title {
+      font-size: 26px;
+      font-weight: 900;
+      line-height: 1.3;
+      margin-bottom: 14px;
+      background: linear-gradient(90deg, #ffffff, #4da6ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .report-subtitle {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-bottom: 18px;
+    }
+    .fear-greed {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 71, 87, 0.1);
+      border: 1px solid rgba(255, 71, 87, 0.3);
+      border-radius: 50px;
+      padding: 8px 18px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .fear-greed .dot {
+      width: 10px; height: 10px;
+      background: var(--fall);
+      border-radius: 50%;
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.8); }
+    }
+
+    /* ── 섹션 타이틀 ── */
+    .section-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--blue);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin: 32px 0 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ── 지수 카드 그리드 ── */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .index-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .index-card:hover { transform: translateY(-2px); }
+    .index-card.rise { border-color: rgba(0,200,150,0.25); }
+    .index-card.fall { border-color: rgba(255,71,87,0.25); }
+    .card-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-secondary);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .card-value {
+      font-size: 22px;
+      font-weight: 700;
+      font-family: 'Courier New', monospace;
+      margin-bottom: 4px;
+    }
+    .card-change {
+      font-size: 13px;
+      font-weight: 600;
+      font-family: 'Courier New', monospace;
+    }
+    .rise .card-value, .rise .card-change { color: var(--rise); }
+    .fall .card-value, .fall .card-change { color: var(--fall); }
+    .neutral-card .card-value, .neutral-card .card-change { color: var(--neutral); }
+
+    /* ── 원자재 카드 ── */
+    .commodity-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 12px;
+    }
+
+    /* ── 분석 박스 ── */
+    .analysis-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 16px;
+    }
+    .analysis-box h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 14px;
+      color: var(--neutral);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .analysis-box p {
+      color: #c5cee0;
+      font-size: 14.5px;
+      line-height: 1.85;
+      margin-bottom: 14px;
+    }
+    .analysis-box p:last-child { margin-bottom: 0; }
+    .highlight {
+      color: var(--fall);
+      font-weight: 700;
+    }
+    .highlight-rise {
+      color: var(--rise);
+      font-weight: 700;
+    }
+    .highlight-yellow {
+      color: var(--neutral);
+      font-weight: 700;
+    }
+    .highlight-blue {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    /* ── 섹터 히트맵 ── */
+    .heatmap {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .heat-cell {
+      border-radius: 10px;
+      padding: 14px 12px;
+      text-align: center;
+    }
+    .heat-cell .heat-name {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+      opacity: 0.9;
+    }
+    .heat-cell .heat-pct {
+      font-size: 18px;
+      font-weight: 900;
+      font-family: 'Courier New', monospace;
+    }
+    .heat-strong-rise { background: rgba(0,200,150,0.25); color: var(--rise); }
+    .heat-mild-rise   { background: rgba(0,200,150,0.10); color: #80e8c8; }
+    .heat-flat        { background: rgba(255,211,42,0.10); color: var(--neutral); }
+    .heat-mild-fall   { background: rgba(255,71,87,0.12); color: #ff8090; }
+    .heat-strong-fall { background: rgba(255,71,87,0.28); color: var(--fall); }
+
+    /* ── 주목 종목 ── */
+    .stock-spotlight {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .spotlight-item {
+      background: var(--bg-card2);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--blue);
+      border-radius: 10px;
+      padding: 16px 20px;
+    }
+    .spotlight-item.fall-item { border-left-color: var(--fall); }
+    .spotlight-item.rise-item { border-left-color: var(--rise); }
+    .spotlight-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+    .spotlight-name {
+      font-size: 15px;
+      font-weight: 700;
+    }
+    .spotlight-pct {
+      font-size: 14px;
+      font-weight: 700;
+      font-family: 'Courier New', monospace;
+      background: rgba(255,71,87,0.15);
+      border-radius: 6px;
+      padding: 3px 10px;
+    }
+    .spotlight-pct.pct-rise {
+      background: rgba(0,200,150,0.15);
+      color: var(--rise);
+    }
+    .spotlight-pct.pct-fall {
+      color: var(--fall);
+    }
+    .spotlight-desc {
+      font-size: 13.5px;
+      color: #a0aec0;
+      line-height: 1.7;
+    }
+
+    /* ── 체크포인트 ── */
+    .checkpoint-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .checkpoint-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: var(--bg-card2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      font-size: 14px;
+      color: #c5cee0;
+    }
+    .checkpoint-list li .ck-icon {
+      flex-shrink: 0;
+      font-size: 18px;
+      margin-top: 1px;
+    }
+    .checkpoint-list li strong {
+      color: #e8eaf6;
+    }
+
+    /* ── 면책조항 ── */
+    .disclaimer {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 20px;
+      font-size: 11.5px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-top: 32px;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 600px) {
+      .report-title { font-size: 20px; }
+      .card-grid, .commodity-grid { grid-template-columns: repeat(2, 1fr); }
+      .heatmap { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* ── 구분선 ── */
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 28px 0;
+    }
+
+    /* ── 배지 ── */
+    .badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+    .badge-red { background: rgba(255,71,87,0.2); color: var(--fall); }
+    .badge-green { background: rgba(0,200,150,0.2); color: var(--rise); }
+    .badge-yellow { background: rgba(255,211,42,0.15); color: var(--neutral); }
+
+    /* ── 인용 박스 ── */
+    .quote-box {
+      border-left: 3px solid var(--neutral);
+      padding: 12px 18px;
+      background: rgba(255,211,42,0.04);
+      border-radius: 0 8px 8px 0;
+      margin: 14px 0;
+      font-size: 14px;
+      color: #dde0e8;
+      font-style: italic;
+    }
+
+    /* ── 해시태그 ── */
+    .hashtags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+    .hashtag {
+      font-size: 12px;
+      color: var(--blue);
+      background: rgba(77,166,255,0.08);
+      border: 1px solid rgba(77,166,255,0.15);
+      border-radius: 50px;
+      padding: 4px 12px;
+    }
+
+    /* ── 통계 강조 ── */
+    .stat-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 14px 0;
+    }
+    .stat-block {
+      flex: 1;
+      min-width: 130px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 10px;
+      padding: 12px 16px;
+      text-align: center;
+    }
+    .stat-block .stat-num {
+      font-size: 22px;
+      font-weight: 900;
+      font-family: 'Courier New', monospace;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .stat-block .stat-label {
+      font-size: 11px;
+      color: var(--text-secondary);
+      letter-spacing: 0.5px;
+    }
+    </style>
+<!-- SEO:BEGIN -->
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-09-11-%EC%A3%BC%EC%8B%9D%EB%B3%B4%EA%B3%A0%EC%84%9C">
+<meta name="robots" content="noindex,follow">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="주간 시장 리포트 (9월 7일~11일) — 주간 +3.33%에도 마지막 날 6,909로 밀린 코스피">
+<meta property="og:description" content="2026년 9월 11일 코스피 6,909.91(-1.76%) · 코스닥 820.64(-1.95%) 정리와 9월 7일~11일 주간 집계. WTI 102.48달러와 미 30년물 5.37%가 겹치며 마지막 날 7,000선을 내줬지만 주간으로는 코스피가 3.33% 올랐고, 외국인은 코스피에서 이틀 연속 2조원대를 순매도했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-09-11-%EC%A3%BC%EC%8B%9D%EB%B3%B4%EA%B3%A0%EC%84%9C">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="article:modified_time" content="2026-09-11T16:30:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N28MJLW4W9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-N28MJLW4W9");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://sangsang.ephseed.com/#organization", "name": "생생 정보통", "url": "https://sangsang.ephseed.com/"}, {"@type": "WebSite", "@id": "https://sangsang.ephseed.com/#website", "url": "https://sangsang.ephseed.com/", "name": "생생 정보통", "description": "매일 아침 배달되는 경제·정책·생활 정보 브리핑", "inLanguage": "ko-KR", "publisher": {"@id": "https://sangsang.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://sangsang.ephseed.com/2026-09-11-%EC%A3%BC%EC%8B%9D%EB%B3%B4%EA%B3%A0%EC%84%9C#page", "url": "https://sangsang.ephseed.com/2026-09-11-%EC%A3%BC%EC%8B%9D%EB%B3%B4%EA%B3%A0%EC%84%9C", "headline": "주간 시장 리포트 (9월 7일~11일) — 주간 +3.33%에도 마지막 날 6,909로 밀린 코스피", "description": "2026년 9월 11일 코스피 6,909.91(-1.76%) · 코스닥 820.64(-1.95%) 정리와 9월 7일~11일 주간 집계. WTI 102.48달러와 미 30년물 5.37%가 겹치며 마지막 날 7,000선을 내줬지만 주간으로는 코스피가 3.33% 올랐고, 외국인은 코스피에서 이틀 연속 2조원대를 순매도했다.", "inLanguage": "ko-KR", "image": "https://sangsang.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://sangsang.ephseed.com/#website"}, "datePublished": "2026-09-11", "dateModified": "2026-09-11", "author": {"@id": "https://sangsang.ephseed.com/#organization"}, "publisher": {"@id": "https://sangsang.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+
+<div class="fixed-top-ad">
+  <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-EVlth33UH8CTDu2u" data-ad-width="728" data-ad-height="90"></ins>
+  <script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+</div>
+<div class="fixed-side-ad">
+  <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-KMCr4AoIjIDsi9XA" data-ad-width="160" data-ad-height="600"></ins>
+  <script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+</div>
+<div class="container">
+
+  <div class="report-header">
+    <div class="report-date">2026년 9월 11일(금) · 코스피 종가 기준 · 미국은 현지 9월 10일(목) 마감 기준 · 주간 집계 9월 7일~11일</div>
+    <div class="report-title">주간 시장 리포트 (9월 7일~11일) — 주간 +3.33%에도 마지막 날 6,909로 밀린 코스피</div>
+    <div class="report-subtitle">
+      코스피 6,909.91(-1.76%) · 코스닥 820.64(-1.95%) ·
+      원달러 1,345.9원(+6.7원) · WTI 102.48달러 · 외국인 코스피 2조 4,587억 순매도
+    </div>
+    <div class="fear-greed">
+      <span class="dot"></span>
+      시장 심리 · <strong>위험자산 후퇴</strong>
+      — 이번 주 지수는 올랐는데 마지막 날 하루가 주간 상승분의 절반을 가져갔습니다. 원인은 국내가 아니라 유가와 미국 장기금리였습니다
+    </div>
+    <div class="hashtags">
+      <span class="hashtag">#주간시장리포트</span>
+      <span class="hashtag">#코스피6909</span>
+      <span class="hashtag">#주간3.33퍼센트</span>
+      <span class="hashtag">#WTI102달러</span>
+      <span class="hashtag">#국채30년5.37</span>
+      <span class="hashtag">#외국인이틀연속2조</span>
+      <span class="hashtag">#환율1345</span>
+      <span class="hashtag">#FOMC다음주</span>
+    </div>
+  </div>
+
+  <div class="section-title">한국 주요 지수 (9월 11일 종가)</div>
+  <div class="card-grid">
+    <div class="index-card fall">
+      <div class="card-label">KOSPI</div>
+      <div class="card-value">6,909.91</div>
+      <div class="card-change">▼ -124.01 (-1.76%)</div>
+    </div>
+    <div class="index-card fall">
+      <div class="card-label">KOSDAQ</div>
+      <div class="card-value">820.64</div>
+      <div class="card-change">▼ -16.28 (-1.95%)</div>
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <p>※ 검산하면 7,033.92 − 124.01 = 6,909.91, 836.92 − 16.28 = 820.64입니다.
+    <span class="highlight">코스피는 사흘 만에 7,000선을 다시 내줬고</span>, 코스닥도 830선 아래로 되돌아갔습니다.
+    두 지수 모두 이번 주 들어 가장 큰 하루 낙폭입니다.</p>
+
+    <p>※ 그런데 <strong>이번 주 전체로 보면 코스피는 오른 주였습니다.</strong>
+    9월 4일 종가 6,687.21에서 오늘 6,909.91까지 <span class="highlight-rise">+222.70포인트(+3.33%)</span>입니다.
+    오늘 하루 잃은 124.01포인트가 <strong>주간 상승분 222.70포인트의 55.7%</strong>에 해당합니다.
+    한 주의 성과 절반이 마지막 하루에 빠져나간 셈입니다.</p>
+
+    <p>※ 날짜별로 늘어놓으면 이번 주의 모양이 분명해집니다.</p>
+
+    <p>· 9/7(월) <strong>6,995.39</strong> (+4.61%) — 오픈AI 신모델 발표에 급등<br>
+    · 9/8(화) <strong>6,954.52</strong> (-0.58%) — 장중 7,171 고점 후 반납<br>
+    · 9/9(수) <strong>7,051.64</strong> (+1.40%) — 33거래일 만에 7,000선 회복<br>
+    · 9/10(목) <strong>7,033.92</strong> (-0.25%) — 네 마녀의 날, 장중 6,898까지 밀렸다 되돌림<br>
+    · 9/11(금) <strong>6,909.91</strong> (-1.76%) — <span class="highlight-yellow">7,000선 재이탈</span></p>
+
+    <p>※ 월요일 하루의 +4.61%가 이번 주 상승분 대부분을 만들었고,
+    <strong>나머지 나흘은 그 자리를 지키다 결국 지키지 못한 과정</strong>이었습니다.
+    지수 그래프만 보면 완만한 등락이지만, 내용은 <span class="highlight-blue">한 번의 국내발 호재와 나흘간의 해외발 압력</span>이 맞선 한 주였습니다.</p>
+  </div>
+
+  <div class="section-title">해외 주요 지수 (현지 9월 10일 마감)</div>
+  <div class="card-grid">
+    <div class="index-card fall">
+      <div class="card-label">다우존스</div>
+      <div class="card-value">52,064.10</div>
+      <div class="card-change">▼ -316.56 (-0.60%)</div>
+    </div>
+    <div class="index-card fall">
+      <div class="card-label">S&amp;P 500</div>
+      <div class="card-value">7,591.70</div>
+      <div class="card-change">▼ -44.66 (-0.58%)</div>
+    </div>
+    <div class="index-card fall">
+      <div class="card-label">나스닥</div>
+      <div class="card-value">26,081.72</div>
+      <div class="card-change">▼ -171.61 (-0.65%)</div>
+    </div>
+  </div>
+
+  <div class="section-title">환율 · 원자재 (9월 11일 오후 3시 30분 기준)</div>
+  <div class="commodity-grid">
+    <div class="index-card fall">
+      <div class="card-label">원달러</div>
+      <div class="card-value">1,345.9원</div>
+      <div class="card-change">▲ +6.7 (+0.50%)</div>
+    </div>
+    <div class="index-card rise">
+      <div class="card-label">WTI</div>
+      <div class="card-value">$102.48</div>
+      <div class="card-change">▲ +6.69%</div>
+    </div>
+    <div class="index-card fall">
+      <div class="card-label">금 (현물)</div>
+      <div class="card-value">$4,355.85</div>
+      <div class="card-change">▼ 약 -1.0%</div>
+    </div>
+    <div class="index-card fall">
+      <div class="card-label">비트코인</div>
+      <div class="card-value">$77,198</div>
+      <div class="card-change">▼ -1.70% (24시간)</div>
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <p>※ 원달러 환율은 <strong>1,345.9원</strong>으로 6.7원 올랐고 장중 고점은 1,349.9원이었습니다.
+    사흘 만에 1,340원대로 올라선 것인데, <span class="highlight-yellow">장중 네고물량이 나오지 않았다면 1,350원대에 닿을 흐름이었습니다.</span>
+    다만 <strong>주간으로 보면 환율은 오히려 내렸습니다.</strong>
+    9월 4일 1,350.4원에서 오늘 1,345.9원으로 4.5원(-0.33%) 낮아졌습니다.
+    주 초반 코스피 급등 국면에서 환율이 이틀 연속 9원 안팎씩 내린 것이 컸습니다.</p>
+
+    <p>※ 이번 주의 진짜 주인공은 <span class="highlight">유가</span>입니다.
+    WTI 10월물은 배럴당 102.48달러로 하루에만 6.69% 뛰었고, 브렌트 11월물은 107.63달러(+6.34%)입니다.
+    9월 4일 91.81달러와 비교하면 <strong>한 주 만에 +10.67달러, +11.62%</strong>입니다.
+    <span class="highlight-yellow">주간 두 자릿수 상승률은 이번 국면에서 처음</span>이고,
+    어제 리포트가 체크포인트 5번으로 물었던 "브렌트 101달러가 유지되는지"에 대한 답은
+    <strong>유지된 정도가 아니라 6달러 더 올랐다</strong>입니다.</p>
+
+    <p>※ 여기서 눈여겨볼 대목은 <strong>금이 같이 오르지 않았다는 점</strong>입니다.
+    지정학 위험이 커질 때 금은 통상 함께 오르는데, 오늘 금 현물은 온스당 4,355.85달러로 약 1% 내렸고
+    장중에는 4,323.78달러까지 밀렸습니다. 선물은 4,407.30달러로 1.2% 하락입니다.
+    <span class="highlight-blue">이번 국면이 안전자산 선호가 아니라 금리 상승 국면이라는 신호</span>입니다.
+    금은 이자를 주지 않으므로 실질금리가 오르면 지정학 위험에도 눌립니다.
+    비트코인이 77,198달러(-1.70%, 주간 -3%)로 함께 내린 것도 같은 줄기입니다.</p>
+  </div>
+
+  <div class="section-title">이번 주 핵심 분석</div>
+  <div class="analysis-box">
+    <h3>① 마지막 날을 무너뜨린 것은 국내 재료가 아니었다</h3>
+    <p>오늘 코스피 -1.76%의 원인은 <strong>전부 바깥에서 왔습니다.</strong>
+    간밤 뉴욕에서 3대 지수가 나흘 연속 내렸고, 그 배경은 두 가지였습니다.
+    <span class="highlight">국제유가 6% 급등</span>과
+    <span class="highlight">미국 30년물 국채금리 5.37%</span>입니다.
+    30년물 5.37%는 약 19년 만의 최고 수준이고, 10년물도 장중 4.95%까지 올라
+    2년 11개월 만의 최고치인 4.965%를 찍었습니다.</p>
+
+    <p>여기에 미국 8월 생산자물가가 전년 대비 <strong>5.4%</strong> 상승한 것으로 나오면서
+    인플레이션이 다시 붙는 것 아니냐는 경계가 얹혔습니다.
+    이경민 대신증권 연구원은 "국제 유가와 미국채 금리 급등의 영향"과
+    "미국 소비자물가지수 발표를 앞둔 경계 심리"로 "위험자산 선호 심리가 크게 후퇴했다"고 정리했습니다.</p>
+
+    <p>어제 리포트는 오후의 135포인트 되돌림을 두고
+    "악재가 그대로 남아 있는 상태에서 지수만 제자리로 돌아왔고, 이런 되돌림은 다음 날 다시 시험받는 경우가 많다"고 적었습니다.
+    <strong>하루 만에 시험대에 올랐고, 통과하지 못했습니다.</strong></p>
+
+    <h3>② 외국인 이탈은 만기 정산이 아니었다</h3>
+    <p>어제 리포트의 체크포인트 1번은 "오늘 2조 4,807억원 순매도가 만기 정산인지 실제 이탈인지 내일 하루로 판별된다"였습니다.
+    <span class="highlight">오늘 답이 나왔습니다.</span>
+    만기 효과가 사라진 오늘, 외국인은 코스피에서 <strong>2조 4,587억원</strong>을 또 팔았습니다.
+    어제와 거의 같은 규모입니다. 기관도 1조 6,443억원을 순매도해
+    <strong>양대 주체 합산 4조 1,030억원</strong>이 빠져나갔습니다.
+    이를 받아낸 것은 개인으로 2조 4,259억원을 순매수했습니다.</p>
+
+    <p>코스닥에서도 같은 그림이 반복됐습니다. 외국인 -358억원, 기관 -227억원, 개인 +571억원입니다.
+    <span class="highlight-yellow">규모는 작지만 방향은 코스피와 동일</span>합니다.
+    9월 9일까지 이어지던 "코스피는 팔고 코스닥은 사는" 분리 매매는
+    어제에 이어 오늘까지 이틀 연속 사라졌습니다.</p>
+
+    <p>다만 집계처에 따라 숫자가 갈립니다. 오후 3시 30분 집계 기준으로는 외국인 -2조 2,915억원 · 기관 -1조 2,236억원이었는데,
+    마감 확정 집계에서는 위의 값으로 늘었습니다. <strong>본문에는 마감 확정치를 씁니다.</strong>
+    어느 쪽을 쓰든 <span class="highlight">이틀 연속 2조원대 순매도</span>라는 사실은 달라지지 않습니다.</p>
+
+    <h3>③ 한국과 미국이 이번 주 반대로 움직였다</h3>
+    <p>이번 주 가장 특이한 점은 <strong>디커플링</strong>입니다.</p>
+
+    <p>· 코스피 <span class="highlight-rise">+3.33%</span> · 코스닥 <span class="highlight-rise">+0.88%</span><br>
+    · 다우 <span class="highlight">-3.02%</span> · S&amp;P 500 <span class="highlight">-2.01%</span> · 나스닥 <span class="highlight">-1.89%</span></p>
+
+    <p>한국은 오르고 미국은 내린 주입니다. 보통은 반대이거나 같은 방향입니다.
+    갈린 이유는 <strong>출발점이 달랐기 때문</strong>입니다.
+    코스피는 8월 내내 눌려 있다가 33거래일 만에 7,000선을 회복하는 반등 국면이었고,
+    뉴욕은 사상 최고권에서 금리와 유가라는 두 악재를 새로 맞았습니다.
+    <span class="highlight-blue">반등의 여력이 있던 쪽과 되돌릴 자리가 많던 쪽의 차이</span>입니다.</p>
+
+    <p>그리고 오늘, 그 차이가 좁혀지기 시작했습니다.
+    한국 증시가 나흘 동안 버티던 해외발 압력을 <strong>마지막 날 결국 받아들인 것</strong>이 오늘의 -1.76%입니다.
+    주간 +3.33%라는 숫자는 그대로 남지만, <strong>흐름의 방향은 주 후반에 이미 바뀌어 있었습니다.</strong></p>
+
+    <h3>④ 업종 순위가 통째로 뒤집혔다</h3>
+    <p>오늘 상승한 업종을 보면 <span class="highlight-yellow">금리와 유가가 오를 때 이기는 쪽</span>만 남았습니다.
+    건설 +1.90%, 보험 +1.56%, 일반서비스 +1.43%, 전기·가스 +1.06%입니다.
+    보험은 금리가 오르면 운용 수익이 개선되고, 건설·조선·기자재는 유가와 발주 사이클이 붙어 있습니다.</p>
+
+    <p>반대로 밀린 쪽은 전기·전자 -2.66%, 제조 -2.21%, 의료·정밀기기 -2.18%, 금속 -1.73%, 화학 -1.65%입니다.
+    <strong>이번 주 내내 지수를 끌어올렸던 반도체·성장주가 그대로 하락 상위에 있습니다.</strong>
+    간밤 뉴욕에서 마이크론 -4.90%, 인텔 -5.57%, SK하이닉스 ADR -5.20%, 엔비디아 -2.37%로
+    반도체가 먼저 무너진 것이 오늘 그대로 옮겨 왔습니다.</p>
+
+    <p>어제 리포트 체크포인트 3번은 "SK하이닉스 ADR과 본주의 7%포인트대 괴리가 어느 쪽으로 메워지는지"를 물었습니다.
+    <span class="highlight">ADR이 5.20% 내리고 본주가 2.16% 내리면서 아래쪽으로 메워졌습니다.</span>
+    체크포인트 4번의 삼성전자 보통주·우선주 괴리도 마찬가지로,
+    오늘 보통주 -3.53% · 우선주 -4.78%로 <strong>우선주가 더 빠지며 좁혀졌습니다.</strong>
+    어제의 우선주 강세는 주주환원 기대가 아니라 만기 수급이었다는 뜻입니다.</p>
+  </div>
+
+  <div class="section-title">업종 히트맵 (9월 11일)</div>
+  <div class="heatmap">
+    <div class="heat-cell heat-mild-rise"><div class="heat-name">건설</div><div class="heat-pct">+1.90%</div></div>
+    <div class="heat-cell heat-mild-rise"><div class="heat-name">보험</div><div class="heat-pct">+1.56%</div></div>
+    <div class="heat-cell heat-mild-rise"><div class="heat-name">일반서비스</div><div class="heat-pct">+1.43%</div></div>
+    <div class="heat-cell heat-mild-rise"><div class="heat-name">전기·가스</div><div class="heat-pct">+1.06%</div></div>
+    <div class="heat-cell heat-flat"><div class="heat-name">음식료·담배</div><div class="heat-pct">+0.59%</div></div>
+    <div class="heat-cell heat-flat"><div class="heat-name">운송장비·부품</div><div class="heat-pct">+0.47%</div></div>
+    <div class="heat-cell heat-flat"><div class="heat-name">섬유·의류</div><div class="heat-pct">+0.39%</div></div>
+    <div class="heat-cell heat-mild-fall"><div class="heat-name">제약</div><div class="heat-pct">-1.00%</div></div>
+    <div class="heat-cell heat-mild-fall"><div class="heat-name">화학</div><div class="heat-pct">-1.65%</div></div>
+    <div class="heat-cell heat-mild-fall"><div class="heat-name">금속</div><div class="heat-pct">-1.73%</div></div>
+    <div class="heat-cell heat-strong-fall"><div class="heat-name">의료·정밀기기</div><div class="heat-pct">-2.18%</div></div>
+    <div class="heat-cell heat-strong-fall"><div class="heat-name">제조</div><div class="heat-pct">-2.21%</div></div>
+    <div class="heat-cell heat-strong-fall"><div class="heat-name">전기·전자</div><div class="heat-pct">-2.66%</div></div>
+  </div>
+
+  <div class="section-title">주목 종목 · 이슈</div>
+  <div class="stock-spotlight">
+    <div class="spotlight-item rise-item">
+      <div class="spotlight-header">
+        <span class="spotlight-name">HD현대중공업</span>
+        <span class="spotlight-pct pct-rise">+5.73%</span>
+      </div>
+      <div class="spotlight-desc">
+        시가총액 상위권에서 <strong>오늘 가장 크게 오른 종목</strong>입니다.
+        유가가 배럴당 100달러 위에 자리를 잡으면 해양플랜트와 유조선 발주 여건이 개선된다는 논리가 작동했습니다.
+        지수가 1.76% 내린 날 5% 넘게 오른 종목이라는 점에서
+        오늘 시장이 무엇을 사고 무엇을 팔았는지가 한 줄로 요약됩니다.
+        다만 조선주는 수주 계약이 실제로 나와야 확인되는 업종이라,
+        유가만 보고 붙은 기대는 되돌림 속도도 빠릅니다.
+      </div>
+    </div>
+    <div class="spotlight-item rise-item">
+      <div class="spotlight-header">
+        <span class="spotlight-name">KB금융 · 신한지주</span>
+        <span class="spotlight-pct pct-rise">+2.13% / +2.09%</span>
+      </div>
+      <div class="spotlight-desc">
+        시총 상위 대형주 가운데 금융주만 나란히 올랐습니다. KB금융은 17만 7,900원에 마감했습니다.
+        미 30년물이 5.37%까지 오르며 <strong>장기금리 상승이 예대마진과 보험 운용수익에 유리하다</strong>는 계산이 붙은 결과입니다.
+        보험 업종이 +1.56%로 상승 3위에 오른 것도 같은 이유입니다.
+        금리 상승이 성장주에는 악재이고 금융주에는 호재라는 교과서적 구도가
+        오늘 하루 안에 그대로 나타났습니다.
+      </div>
+    </div>
+    <div class="spotlight-item fall-item">
+      <div class="spotlight-header">
+        <span class="spotlight-name">에코프로비엠 · 원익IPS · 주성엔지니어링</span>
+        <span class="spotlight-pct pct-fall">-7.08% / -7.15% / -5.43%</span>
+      </div>
+      <div class="spotlight-desc">
+        코스닥이 코스피보다 더 많이 내린(-1.95% 대 -1.76%) 이유가 여기 있습니다.
+        <strong>2차전지와 반도체 장비가 동시에 7% 안팎씩 빠졌습니다.</strong>
+        둘 다 실적이 먼 미래에 몰려 있는 성장주라 할인율, 즉 장기금리에 가장 민감합니다.
+        30년물 금리가 19년 만의 최고치를 찍은 날 이 종목들이 가장 크게 밀린 것은 우연이 아닙니다.
+        코스닥 시총 1위 알테오젠도 -3.25%(26만 8,000원)로 지수보다 더 내렸습니다.
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title">이번 주 요약 (9월 7일~11일)</div>
+  <div class="analysis-box">
+    <p>주간 등락을 한자리에 모으면 이렇게 됩니다. 기준은 <strong>9월 4일 종가 대비 9월 11일 종가</strong>입니다.</p>
+
+    <div class="stat-row">
+      <div class="stat-block">
+        <span class="stat-num" style="color:#00c896;">+3.33%</span>
+        <span class="stat-label">코스피 주간</span>
+      </div>
+      <div class="stat-block">
+        <span class="stat-num" style="color:#00c896;">+0.88%</span>
+        <span class="stat-label">코스닥 주간</span>
+      </div>
+      <div class="stat-block">
+        <span class="stat-num" style="color:#ff4757;">-1.89%</span>
+        <span class="stat-label">나스닥 주간</span>
+      </div>
+      <div class="stat-block">
+        <span class="stat-num" style="color:#ffd32a;">+11.62%</span>
+        <span class="stat-label">WTI 주간</span>
+      </div>
+    </div>
+
+    <p>· <strong>코스피</strong> 6,687.21 → 6,909.91 (+222.70, +3.33%)<br>
+    · <strong>코스닥</strong> 813.50 → 820.64 (+7.14, +0.88%)<br>
+    · <strong>다우</strong> 53,685.52 → 52,064.10 (-1,621.42, -3.02%)<br>
+    · <strong>S&amp;P 500</strong> 7,747.60 → 7,591.70 (-155.90, -2.01%)<br>
+    · <strong>나스닥</strong> 26,584.06 → 26,081.72 (-502.34, -1.89%)<br>
+    · <strong>원달러</strong> 1,350.4원 → 1,345.9원 (-4.5원, -0.33%)<br>
+    · <strong>WTI</strong> $91.81 → $102.48 (+$10.67, +11.62%)<br>
+    · <strong>금 현물</strong> $4,437.08 → $4,355.85 (-$81.23, -1.83%)<br>
+    · <strong>비트코인</strong> $80,987 → $77,198 (-$3,789, -4.68%)</p>
+
+    <p>※ 이번 주의 이슈를 네 줄로 줄이면 이렇습니다.</p>
+
+    <p><strong>첫째, 오픈AI 신모델 발표(9/7).</strong> 코스피를 하루에 4.61% 끌어올린 단일 재료였고
+    이번 주 상승분의 대부분을 만들었습니다.</p>
+
+    <p><strong>둘째, 7,000선 회복과 재이탈(9/9 → 9/11).</strong> 33거래일 만에 되찾은 자리를
+    <span class="highlight">이틀 만에 다시 내줬습니다.</span> 회복에 33거래일, 반납에 이틀이었습니다.</p>
+
+    <p><strong>셋째, 유가의 세 자릿수 진입(9/9~9/11).</strong> 호르무즈에 이어 바브엘만데브까지 통항 우려가 번지며
+    브렌트가 100달러를 넘었고, 오늘 WTI도 102달러를 찍었습니다.
+    <strong>생산 차질이 아니라 항로 차질</strong>이라는 점이 이번 국면의 성격입니다.</p>
+
+    <p><strong>넷째, 미 장기금리의 19년 최고(9/10~9/11).</strong> 30년물 5.37%는
+    유가가 만든 물가 압력이 <span class="highlight-yellow">단기가 아니라 장기 구간에 반영되고 있다</span>는 뜻입니다.
+    성장주와 바이오가 이번 주 후반 가장 먼저 밀린 이유가 여기에 있습니다.</p>
+
+    <p>※ 종합하면 <strong>이번 주는 국내 재료로 시작해 해외 재료로 끝난 주</strong>입니다.
+    월요일의 상승은 국내 증시가 스스로 만든 것이 아니라 미국 기술주 뉴스를 받은 것이었고,
+    주 후반의 하락도 국내 사정이 아니라 중동과 미국 채권시장이 만든 것입니다.
+    <span class="highlight-blue">이번 주 코스피의 방향을 정한 변수 가운데 국내에서 나온 것은 하나도 없었습니다.</span></p>
+  </div>
+
+  <div class="section-title">리스크 요인</div>
+  <div class="analysis-box">
+    <p><strong>① 유가가 되돌아오지 않으면 물가가 따라 올라간다</strong><br>
+    WTI 102.48달러, 브렌트 107.63달러입니다. 9월 4일 대비 11.6% 오른 값입니다.
+    한국은 원유를 전량 수입하고 그 상당량이 호르무즈와 바브엘만데브를 지납니다.
+    <span class="highlight-yellow">유가 상승은 시차를 두고 무역수지와 소비자물가에 반영되므로 하루 이틀에 소멸하는 변수가 아닙니다.</span>
+    항로 문제는 설비 피격과 달리 복구 일정이 없다는 점도 다릅니다.</p>
+
+    <p><strong>② 30년물 5.37%는 성장주 밸류에이션의 분모를 바꾼다</strong><br>
+    어제 5.30%에서 오늘 5.37%로 또 올랐습니다. 19년 만의 최고 수준입니다.
+    10년물도 4.965%로 2년 11개월 만의 최고치입니다.
+    장기금리 상승은 실적이 먼 미래에 있는 기업일수록 현재가치를 크게 깎습니다.
+    오늘 2차전지·반도체 장비·바이오가 7% 안팎씩 빠진 것이 바로 그 결과이고,
+    <span class="highlight">금리가 더 오르면 이 압력은 지수 전체로 번집니다.</span></p>
+
+    <p><strong>③ 외국인 이탈이 이틀로 굳었다</strong><br>
+    어제 2조 4,807억원, 오늘 2조 4,587억원입니다.
+    만기 효과가 사라진 오늘도 규모가 거의 같았다는 점이 중요합니다.
+    <strong>이제 이것을 정산 물량으로 설명할 수 없습니다.</strong>
+    다음 주 첫 거래일에도 조 단위 순매도가 이어지면 성격이 한 번 더 달라집니다.</p>
+
+    <p><strong>④ 환율의 방향이 주 후반에 바뀌었다</strong><br>
+    주간으로는 4.5원 내렸지만 오늘 하루에만 6.7원 올랐고 장중 1,349.9원까지 닿았습니다.
+    <span class="highlight-yellow">주 초반의 하락 추세가 마지막 날 뒤집힌 모양</span>입니다.
+    환율이 1,350원대로 올라서면 외국인 입장에서 원화 자산의 환차손 부담이 커져
+    ③의 순매도 흐름과 서로를 강화합니다.</p>
+
+    <p><strong>⑤ 오늘 밤 미 8월 소비자물가 — 이번 주의 마지막 변수</strong><br>
+    한국시간 오늘 밤 9시 30분에 나옵니다.
+    8월 생산자물가가 전년 대비 5.4%로 확인된 뒤라 <strong>상향 서프라이즈 위험이 평소보다 큽니다.</strong>
+    시장의 관심은 근원 지수의 전월 대비가 0.2%냐 0.3%냐에 몰려 있고,
+    이 0.1%포인트가 다음 주 FOMC 해석의 출발점이 됩니다.
+    <span class="highlight">한국 증시는 이 결과를 월요일 개장 때 한꺼번에 반영합니다.</span></p>
+  </div>
+
+  <div class="section-title">다음 주 체크포인트</div>
+  <ul class="checkpoint-list">
+    <li><span class="ck-icon">1</span>
+      <strong>9월 16일~17일 · 미 연준 FOMC와 점도표</strong> — 결과는 한국시간 17일(목) 새벽 3시에 나옵니다.
+      금리 결정 자체보다 <strong>점도표가 올해 남은 인하 횟수를 어떻게 그리는지</strong>가 핵심입니다.
+      유가가 11% 오르고 장기금리가 19년 최고를 찍은 상태에서 나오는 점도표라
+      직전 회의보다 매파적으로 이동할 여지가 있습니다.</li>
+    <li><span class="ck-icon">2</span>
+      <strong>일본은행 금융정책결정회의</strong> — 같은 주에 열립니다.
+      엔화 방향이 원화에도 영향을 주므로, FOMC와 겹치는 주에는 환율 변동성이 평소보다 커집니다.
+      원달러가 1,350원을 넘어서는지 여기서 갈릴 수 있습니다.</li>
+    <li><span class="ck-icon">3</span>
+      <strong>9월 18일 · 미국 쿼드러플 위칭</strong> — 한국의 네 마녀의 날은 9월 10일에 지났고,
+      미국은 다음 주 금요일입니다. 만기 주간 특유의 변동성 확대가
+      FOMC 직후와 겹친다는 점에서 <span class="highlight-yellow">다음 주 후반이 이번 달에서 가장 흔들리기 쉬운 구간</span>입니다.</li>
+    <li><span class="ck-icon">4</span>
+      <strong>월요일 개장가 · 오늘 밤 CPI 반영</strong> — 오늘 밤 미 소비자물가 결과를
+      한국 증시는 월요일 아침에 한꺼번에 소화합니다.
+      6,909라는 종가는 <strong>CPI를 보지 않은 상태에서 만들어진 값</strong>이라는 점을 감안해야 합니다.</li>
+    <li><span class="ck-icon">5</span>
+      <strong>외국인 순매도 사흘째 여부</strong> — 이틀 연속 2조원대입니다.
+      다음 주 월요일에도 같은 규모가 나오면 단기 수급 문제가 아니라
+      <span class="highlight">한국 증시 비중 조정</span>으로 봐야 합니다. 반대로 순매수로 돌아서면
+      이번 이틀은 만기 주간의 뒤처리로 정리됩니다.</li>
+    <li><span class="ck-icon">6</span>
+      <strong>WTI 100달러선의 유지 여부</strong> — 100달러를 넘은 것은 확인됐고,
+      다음 질문은 <strong>세 자릿수가 굳는지</strong>입니다.
+      중동 항로 관련 후속 보도가 나오면 FOMC 해석까지 함께 흔들립니다.
+      반대로 90달러대로 되돌아오면 이번 주 하락분의 상당 부분이 회복 대상이 됩니다.</li>
+    <li><span class="ck-icon">7</span>
+      <strong>7,000선 재진입 시도</strong> — 코스피는 이번 주 7,000선을 회복했다가 이틀 만에 내줬습니다.
+      다음 주에 7,000선을 다시 넘으면 오늘 하락은 조정으로 남고,
+      6,800선 아래로 내려가면 <strong>9월 7일 급등 이전 자리로 되돌아간 것</strong>이 됩니다.
+      이번 주 저점이 9월 10일 장중 6,898.45였다는 점을 함께 보면 됩니다.</li>
+  </ul>
+
+  <div class="disclaimer">
+    본 리포트는 공개된 시장 데이터와 언론 보도를 정리한 자료이며 투자 권유나 매매 추천이 아닙니다.
+    지수·환율·원자재 수치는 집계 시점과 출처에 따라 달라질 수 있습니다. 특히 투자자별 매매 동향은
+    오후 3시 30분 잠정 집계와 마감 확정 집계 사이에 수천억원 단위 차이가 있어 본문에 두 값을 함께 적었으며,
+    업종별 등락률도 분류 기준이 달라 일부 업종에서 출처 간 차이가 있습니다.
+    주간 등락률은 9월 4일 종가를 기준으로 계산한 값입니다.
+    국제유가·금·비트코인은 24시간 거래되는 자산이라 본문에 적힌 기준 시각 이후에도 값이 변합니다.
+    투자 판단과 그 결과에 대한 책임은 투자자 본인에게 있습니다.
+  </div>
+
+</div>
+
+</body>
+</html>
