@@ -161,6 +161,11 @@ def build_block(rel, src):
         parts.append('<meta name="description" content="%s">' % esc(desc))
 
     parts += [
+        # 2026-09-12: 파비콘. 없으면 구글 검색결과에 회색 기본 아이콘이 뜬다.
+        # data: URI 는 안 된다 — 구글 파비콘 크롤러는 크롤 가능한 URL 을 요구한다.
+        '<link rel="icon" href="/favicon.ico" sizes="any">',
+        '<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">',
+        '<link rel="apple-touch-icon" href="/apple-touch-icon.png">',
         '<link rel="canonical" href="%s">' % url,
         '<meta name="robots" content="%s">' % (
             'noindex,follow' if is_noindex(rel)
