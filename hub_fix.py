@@ -169,9 +169,28 @@ INJ_CSS = """<style>
 
 
 def breadcrumb(cfg, hub):
+    """눈에 보이는 경로 + BreadcrumbList 구조화 데이터.
+
+    구조화 데이터가 없으면 구글은 검색결과에 날것의 URL 경로를 그대로 보여준다.
+    welfare 의 `/archive/2026-09-06-1-복지뉴스` 처럼 제목과 어긋나는 주소는
+    그것만으로 클릭을 깎는다. BreadcrumbList 를 주면 그 자리에
+    `사이트명 › 분야` 가 대신 표시된다. URL 을 바꾸지 않고 고칠 수 있는 부분이다.
+    """
+    site = cfg["site"].rstrip("/")
+    ld = json.dumps({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1,
+             "name": cfg["site_name"], "item": site + "/"},
+            {"@type": "ListItem", "position": 2,
+             "name": hub["name"], "item": "%s/%s/" % (site, hub["slug"])},
+        ],
+    }, ensure_ascii=False, separators=(", ", ": "))
     return ('%s\n<nav class="hub-bc"><a href="/">%s</a> &rsaquo; '
-            '<a href="/%s/">%s</a></nav>\n%s'
-            % (BC_B, esc(cfg["site_name"]), hub["slug"], esc(hub["name"]), BC_E))
+            '<a href="/%s/">%s</a></nav>\n'
+            '<script type="application/ld+json">%s</script>\n%s'
+            % (BC_B, esc(cfg["site_name"]), hub["slug"], esc(hub["name"]), ld, BC_E))
 
 
 def related(cfg, hub, pages, me):
