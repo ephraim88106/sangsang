@@ -119,6 +119,8 @@ def inject(path, dry=False):
 def main():
     dry = "--check" in sys.argv
     targets = [p for p in all_html() if os.path.basename(p) not in EXCLUDE]
+    # 2026-09-12: 분야 허브(탐색 페이지)는 광고 대상에서 뺀다.
+    targets = [p for p in targets if "HUB:PAGE" not in open(p, encoding="utf-8").read()]
 
     stats, injected, skipped = {}, [], []
     for p in targets:

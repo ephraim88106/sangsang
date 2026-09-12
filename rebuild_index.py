@@ -86,11 +86,29 @@ def cat(raw, title=''):
             return l, v
     return '일반', 'blue'
 
+# --- 2026-09-07 색인정리: 단일 기준 목록 -----------------------------------
+def _load_noindex():
+    try:
+        return {l.strip() for l in open(REPO / '.noindex', encoding='utf-8')
+                if l.strip() and not l.startswith('#')}
+    except Exception:
+        return set()
+_NOINDEX = _load_noindex()
+# --------------------------------------------------------------------------
+
 # ─── 파일 스캔 ───────────────────────────────────────────────
 def scan_all():
+    """홈페이지 목록에 넣을 글만 고른다.
+
+    2026-09-12: 예전에는 저장소의 모든 글을 링크했다. 9/07 색인정리로
+    288편이 noindex 가 된 뒤에도 홈페이지는 그 288편을 전부 링크하고 있었고,
+    크롤러는 홈에서 출발해 색인도 안 될 페이지만 334번 타고 들어갔다.
+    그래서 .noindex 목록과 주식보고서(날짜성·noindex)를 여기서 뺀다.
+    """
     stocks, koreas = [], []
     for f in REPO.glob('*.html'):
         if f.name in SKIP_FILES: continue
+        if f.name in _NOINDEX: continue          # 색인 제외된 글은 홈에서도 뺀다
         m = DATE_PAT.match(f.name)
         if not m: continue
         date_str = m.group(1)
@@ -174,15 +192,6 @@ def build_headline_grid(koreas):
 # ─── 메인 ───────────────────────────────────────────────────
 # ─── 사이트맵 생성 ─────────────────────────────────────────────
 
-# --- 2026-09-07 색인정리: 단일 기준 목록 -----------------------------------
-def _load_noindex():
-    try:
-        return {l.strip() for l in open(REPO / '.noindex', encoding='utf-8')
-                if l.strip() and not l.startswith('#')}
-    except Exception:
-        return set()
-_NOINDEX = _load_noindex()
-# --------------------------------------------------------------------------
 
 def build_sitemap(stocks, koreas):
     """sitemap.xml 자동 생성 — 모든 아티클 URL 포함"""
@@ -222,6 +231,16 @@ def build_sitemap(stocks, koreas):
             f'  <url><loc>{url}</loc>'
             f'<lastmod>{lastmod}</lastmod>'
             f'<changefreq>weekly</changefreq><priority>{priority}</priority></url>'
+        )
+
+    # 2026-09-12: 분야별 허브 페이지 (<slug>/index.html) 포함
+    for d in sorted(p for p in REPO.iterdir() if p.is_dir()):
+        if d.name.startswith(('.', '_')) or not (d / 'index.html').exists():
+            continue
+        urls.append(
+            f'  <url><loc>{BASE}/{quote(d.name, safe="-")}/</loc>'
+            f'<lastmod>{date.today()}</lastmod>'
+            f'<changefreq>weekly</changefreq><priority>0.9</priority></url>'
         )
 
     xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
