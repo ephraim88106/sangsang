@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>일간 시장 리포트 (9월 16일) — 두 종목이 끌어올린 코스피 6,717과 환율 1,368원</title>
+  <meta name="description" content="2026년 9월 16일 코스피 6,717.97(+1.37%) · 코스닥 815.98(+0.44%) 정리. 삼성전자 2.01%, SK하이닉스 4.08% 상승이 지수를 끌어올렸지만 오른 종목은 304개, 내린 종목은 576개였다. 외국인은 1조 6,840억원을 팔아 닷새째 순매도했고 원달러는 1,368.6원으로 9.2원 올랐다. 미국 10년물 금리는 5.004%로 2007년 7월 이후 처음 5% 위에서 마감했다.">
+  <meta property="article:published_time" content="2026-09-16T16:00:00+09:00">
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w59aji6ixc");
+  </script>
+  <!-- Google AdSense -->
+  <meta name="google-adsense-account" content="ca-pub-9118774019383180">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9118774019383180" crossorigin="anonymous"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+
+    :root {
+      --bg-primary: #0a0e1a;
+      --bg-card: #111827;
+      --bg-card2: #0f1623;
+      --rise: #00c896;
+      --fall: #ff4757;
+      --neutral: #ffd32a;
+      --blue: #4da6ff;
+      --purple: #9b59b6;
+      --text-primary: #e8eaf6;
+      --text-secondary: #8892b0;
+      --border: rgba(255,255,255,0.06);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      padding-top: 90px;
+    }
+
+    /* ── 광고 ── */
+    .fixed-top-ad {
+      position: fixed; top: 0; left: 0;
+      width: 100%; height: 90px;
+      background: #0a0e1a; z-index: 2000;
+      display: flex; justify-content: center; align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+    .fixed-side-ad {
+      position: fixed; right: 20px; top: 50%;
+      transform: translateY(-50%); z-index: 1000;
+      display: flex; flex-direction: column; align-items: center; width: 160px;
+    }
+    @media (max-height: 800px) { .fixed-side-ad { display: none; } }
+    @media (max-width: 1300px) { .fixed-side-ad { display: none; } }
+    @media (max-width: 768px) {
+      .fixed-top-ad { position: static; height: auto; padding: 10px 0; }
+      body { padding-top: 0; }
+    }
+
+    /* ── 레이아웃 ── */
+    .container { max-width: 900px; margin: 0 auto; padding: 20px 16px 60px; }
+
+    /* ── 헤더 ── */
+    .report-header {
+      background: linear-gradient(135deg, #0d1b2e 0%, #1a0a2e 100%);
+      border: 1px solid rgba(77,166,255,0.2);
+      border-radius: 16px;
+      padding: 32px 28px;
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .report-header::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 250px; height: 250px;
+      background: radial-gradient(circle, rgba(77,166,255,0.08), transparent 70%);
+      pointer-events: none;
+    }
+    .report-date {
+      font-size: 12px;
+      color: var(--text-secondary);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .report-title {
+      font-size: 26px;
+      font-weight: 900;
+      line-height: 1.3;
+      margin-bottom: 14px;
+      background: linear-gradient(90deg, #ffffff, #4da6ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .report-subtitle {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-bottom: 18px;
+    }
+    .fear-greed {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 71, 87, 0.1);
+      border: 1px solid rgba(255, 71, 87, 0.3);
+      border-radius: 50px;
+      padding: 8px 18px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .fear-greed .dot {
+      width: 10px; height: 10px;
+      background: var(--fall);
+      border-radius: 50%;
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.8); }
+    }
+
+    /* ── 섹션 타이틀 ── */
+    .section-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--blue);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin: 32px 0 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ── 지수 카드 그리드 ── */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .index-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .index-card:hover { transform: translateY(-2px); }
+    .index-card.rise { border-color: rgba(0,200,150,0.25); }
+    .index-card.fall { border-color: rgba(255,71,87,0.25); }
+    .card-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-secondary);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .card-value {
+      font-size: 22px;
+      font-weight: 700;
+      font-family: 'Courier New', monospace;
+      margin-bottom: 4px;
+    }
+    .card-change {
+      font-size: 13px;
+      font-weight: 600;
+      font-family: 'Courier New', monospace;
+    }
+    .rise .card-value, .rise .card-change { color: var(--rise); }
+    .fall .card-value, .fall .card-change { color: var(--fall); }
+    .neutral-card .card-value, .neutral-card .card-change { color: var(--neutral); }
+
+    /* ── 원자재 카드 ── */
+    .commodity-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 12px;
+    }
+
+    /* ── 분석 박스 ── */
+    .analysis-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 16px;
+    }
+    .analysis-box h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 14px;
+      color: var(--neutral);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .analysis-box p {
+      color: #c5cee0;
+      font-size: 14.5px;
+      line-height: 1.85;
+      margin-bottom: 14px;
+    }
+    .analysis-box p:last-child { margin-bottom: 0; }
+    .highlight {
+      color: var(--fall);
+      font-weight: 700;
+    }
+    .highlight-rise {
+      color: var(--rise);
+      font-weight: 700;
+    }
+    .highlight-yellow {
+      color: var(--neutral);
+      font-weight: 700;
+    }
+    .highlight-blue {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    /* ── 섹터 히트맵 ── */
+    .heatmap {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .heat-cell {
+      border-radius: 10px;
+      padding: 14px 12px;
+      text-align: center;
+    }
+    .heat-cell .heat-name {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+      opacity: 0.9;
+    }
+    .heat-cell .heat-pct {
+      font-size: 18px;
+      font-weight: 900;
+      font-family: 'Courier New', monospace;
+    }
+    .heat-strong-rise { background: rgba(0,200,150,0.25); color: var(--rise); }
+    .heat-mild-rise   { background: rgba(0,200,150,0.10); color: #80e8c8; }
+    .heat-flat        { background: rgba(255,211,42,0.10); color: var(--neutral); }
+    .heat-mild-fall   { background: rgba(255,71,87,0.12); color: #ff8090; }
+    .heat-strong-fall { background: rgba(255,71,87,0.28); color: var(--fall); }
+
+    /* ── 주목 종목 ── */
+    .stock-spotlight {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .spotlight-item {
+      background: var(--bg-card2);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--blue);
+      border-radius: 10px;
+      padding: 16px 20px;
+    }
+    .spotlight-item.fall-item { border-left-color: var(--fall); }
+    .spotlight-item.rise-item { border-left-color: var(--rise); }
+    .spotlight-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+    .spotlight-name {
+      font-size: 15px;
+      font-weight: 700;
+    }
+    .spotlight-pct {
+      font-size: 14px;
+      font-weight: 700;
+      font-family: 'Courier New', monospace;
+      background: rgba(255,71,87,0.15);
+      border-radius: 6px;
+      padding: 3px 10px;
+    }
+    .spotlight-pct.pct-rise {
+      background: rgba(0,200,150,0.15);
+      color: var(--rise);
+    }
+    .spotlight-pct.pct-fall {
+      color: var(--fall);
+    }
+    .spotlight-desc {
+      font-size: 13.5px;
+      color: #a0aec0;
+      line-height: 1.7;
+    }
+
+    /* ── 체크포인트 ── */
+    .checkpoint-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .checkpoint-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: var(--bg-card2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      font-size: 14px;
+      color: #c5cee0;
+    }
+    .checkpoint-list li .ck-icon {
+      flex-shrink: 0;
+      font-size: 18px;
+      margin-top: 1px;
+    }
+    .checkpoint-list li strong {
+      color: #e8eaf6;
+    }
+
+    /* ── 면책조항 ── */
+    .disclaimer {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 20px;
+      font-size: 11.5px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-top: 32px;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 600px) {
+      .report-title { font-size: 20px; }
+      .card-grid, .commodity-grid { grid-template-columns: repeat(2, 1fr); }
+      .heatmap { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* ── 구분선 ── */
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 28px 0;
+    }
+
+    /* ── 배지 ── */
+    .badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+    .badge-red { background: rgba(255,71,87,0.2); color: var(--fall); }
+    .badge-green { background: rgba(0,200,150,0.2); color: var(--rise); }
+    .badge-yellow { background: rgba(255,211,42,0.15); color: var(--neutral); }
+
+    /* ── 인용 박스 ── */
+    .quote-box {
+      border-left: 3px solid var(--neutral);
+      padding: 12px 18px;
+      background: rgba(255,211,42,0.04);
+      border-radius: 0 8px 8px 0;
+      margin: 14px 0;
+      font-size: 14px;
+      color: #dde0e8;
+      font-style: italic;
+    }
+
+    /* ── 해시태그 ── */
+    .hashtags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+    .hashtag {
+      font-size: 12px;
+      color: var(--blue);
+      background: rgba(77,166,255,0.08);
+      border: 1px solid rgba(77,166,255,0.15);
+      border-radius: 50px;
+      padding: 4px 12px;
+    }
+
+    /* ── 통계 강조 ── */
+    .stat-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 14px 0;
+    }
+    .stat-block {
+      flex: 1;
+      min-width: 130px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 10px;
+      padding: 12px 16px;
+      text-align: center;
+    }
+    .stat-block .stat-num {
+      font-size: 22px;
+      font-weight: 900;
+      font-family: 'Courier New', monospace;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .stat-block .stat-label {
+      font-size: 11px;
+      color: var(--text-secondary);
+      letter-spacing: 0.5px;
+    }
+    </style>
+
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-09-16-%EC%A3%BC%EC%8B%9D%EB%B3%B4%EA%B3%A0%EC%84%9C">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="일간 시장 리포트 (9월 16일) — 두 종목이 끌어올린 코스피 6,717과 환율 1,368원">
+<meta property="og:description" content="2026년 9월 16일 코스피 6,717.97(+1.37%) · 코스닥 815.98(+0.44%) 정리. 삼성전자 2.01%, SK하이닉스 4.08% 상승이 지수를 끌어올렸지만 오른 종목은 304개, 내린 종목은 576개였다. 외국인은 1조 6,840억원을 팔아 닷새째 순매도했고 원달러는 1,368.6원으로 9.2원 올랐다. 미국 10년물 금리는 5.004%로 2007년 7월 이후 처음 5% 위에서 마감했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-09-16-%EC%A3%BC%EC%8B%9D%EB%B3%B4%EA%B3%A0%EC%84%9C">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="article:modified_time" content="2026-09-16T16:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N28MJLW4W9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-N28MJLW4W9");</script>
+<!-- SEO:END -->
+</head>
+<body>
+<div class="fixed-top-ad">
+  <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-EVlth33UH8CTDu2u" data-ad-width="728" data-ad-height="90"></ins>
+  <script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+</div>
+<div class="fixed-side-ad">
+  <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-KMCr4AoIjIDsi9XA" data-ad-width="160" data-ad-height="600"></ins>
+  <script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+</div>
+<div class="container">  <div class="report-header">
+    <div class="report-date">2026년 9월 16일(수) · 코스피 종가 기준 · 미국은 현지 9월 15일(화) 마감 기준</div>
+    <div class="report-title">일간 시장 리포트 (9월 16일) — 두 종목이 끌어올린 코스피 6,717과 환율 1,368원</div>
+    <div class="report-subtitle">
+      코스피 6,717.97(+1.37%) · 코스닥 815.98(+0.44%) ·
+      원달러 1,368.6원(+9.2원) · WTI 105.83달러 · 외국인 코스피 1조 6,840억 순매도
+    </div>
+    <div class="fear-greed">
+      <span class="dot"></span>
+      시장 심리 · <strong>지수와 종목이 갈라진 날</strong>
+      — 지수는 1.37% 올랐는데 오른 종목은 304개, 내린 종목은 576개였습니다. 삼성전자와 SK하이닉스 두 종목이 지수를 들어 올렸습니다
+    </div>
+    <div class="hashtags">
+      <span class="hashtag">#일간시장리포트</span>
+      <span class="hashtag">#코스피6717</span>
+      <span class="hashtag">#삼성전자SK하이닉스</span>
+      <span class="hashtag">#미국10년물5퍼센트종가</span>
+      <span class="hashtag">#WTI105달러</span>
+      <span class="hashtag">#원달러1368원</span>
+      <span class="hashtag">#외국인닷새째순매도</span>
+      <span class="hashtag">#클래리티법부결</span>
+      <span class="hashtag">#FOMC당일</span>
+    </div>
+  </div>
+
+  <div class="section-title">한국 주요 지수 (9월 16일 종가)</div>
+  <div class="card-grid">
+    <div class="index-card rise">
+      <div class="card-label">KOSPI</div>
+      <div class="card-value">6,717.97</div>
+      <div class="card-change">▲ +90.71 (+1.37%)</div>
+    </div>
+    <div class="index-card rise">
+      <div class="card-label">KOSDAQ</div>
+      <div class="card-value">815.98</div>
+      <div class="card-change">▲ +3.57 (+0.44%)</div>
+    </div>
+  </div>
+
+  <p style="font-size:13.5px;color:#8892b0;line-height:1.8;margin-bottom:6px;">
+    ※ 오늘은 코스피와 코스닥이 같은 방향이었지만 폭이 세 배 넘게 벌어졌습니다.
+    코스피는 6,611.24로 16.02포인트 내려 출발해 오전에 <strong style="color:#ff8090;">6,598.87까지 밀리며 6,600선을 또 한 번 내줬다가</strong>
+    이후 방향을 바꿔 <strong style="color:#00c896;">장중 고점인 6,717.97에 그대로 마감</strong>했습니다.
+    종가가 그날의 고점이라는 것은 마감 직전까지 사자가 이어졌다는 뜻입니다.
+    고저 폭은 119.10포인트로 어제(133.26포인트)에 이어 이틀째 100포인트를 넘겼습니다.
+    어제 리포트는 "내일 종가가 6,600 아래로 내려가면 확인된 이탈"이라고 적었는데,
+    장중에는 또 깼고 종가로는 6,700선을 되찾았습니다.
+  </p>
+  <p style="font-size:13.5px;color:#8892b0;line-height:1.8;margin-bottom:6px;">
+    ※ <strong style="color:#e8eaf6;">거래는 이틀째 줄었습니다.</strong> 코스피 거래대금은 15조 8,546억원으로
+    어제 16조 2,453억원보다 <strong style="color:#ffd32a;">2.4% 감소</strong>했습니다.
+    다만 거래량은 1억 9,772만 주로 어제 2억 7,404만 주보다 <strong style="color:#ffd32a;">27.9% 줄었습니다.</strong>
+    어제는 거래량이 그대로인데 대금만 줄었고, 오늘은 반대로 대금은 거의 그대로인데 주식 수가 크게 줄었습니다.
+    <strong style="color:#e8eaf6;">주당 가격이 비싼 종목으로 거래가 몰렸다는 뜻</strong>이고,
+    실제로 그 자리에 삼성전자와 SK하이닉스가 있었습니다.
+  </p>
+  <p style="font-size:13.5px;color:#8892b0;line-height:1.8;margin-bottom:6px;">
+    ※ 상승 304종목, 보합 35종목, 하락 576종목입니다. 하한가도 1종목 있었습니다.
+    <strong style="color:#ff8090;">지수가 1.37% 오른 날인데 내린 종목이 오른 종목의 1.9배</strong>입니다.
+    이 한 줄이 오늘 시장의 성격을 거의 다 설명합니다. 뒤에서 자세히 봅니다.
+  </p>
+
+  <div class="section-title">미국 증시 (현지 9월 15일 화요일 마감)</div>
+  <div class="card-grid">
+    <div class="index-card fall">
+      <div class="card-label">다우존스</div>
+      <div class="card-value">52,093.11</div>
+      <div class="card-change">▼ -328.09 (-0.63%)</div>
+    </div>
+    <div class="index-card fall">
+      <div class="card-label">S&amp;P 500</div>
+      <div class="card-value">7,585.73</div>
+      <div class="card-change">▼ -34.25 (-0.45%)</div>
+    </div>
+    <div class="index-card fall">
+      <div class="card-label">나스닥</div>
+      <div class="card-value">25,981.57</div>
+      <div class="card-change">▼ -204.84 (-0.78%)</div>
+    </div>
+  </div>
+
+  <p style="font-size:13.5px;color:#8892b0;line-height:1.8;margin-bottom:6px;">
+    ※ 세 지수가 이틀 연속 내렸지만 <strong style="color:#e8eaf6;">반도체만 방향을 바꿨습니다.</strong>
+    필라델피아 반도체지수는 11,175.55로 44.27포인트, <strong style="color:#00c896;">0.40% 올랐습니다.</strong>
+    전날 5.86% 무너진 다음 날입니다. 엔비디아가 212.17달러로 0.57%, AMD가 2.19%, 메타가 670.24달러로 0.70% 올랐고,
+    반대로 애플 331.34달러(-0.52%), 마이크로소프트 497.12달러(-1.64%), 아마존 248.42달러(-2.02%), 오라클(-3.07%)이 내렸습니다.
+    <strong style="color:#e8eaf6;">어제까지 지수를 눌렀던 반도체가 오늘은 버텼고, 대신 소프트웨어·클라우드 쪽이 빠졌습니다.</strong>
+    에너지는 유가 급등에 힘입어 엑손모빌 2.57%, 셰브론 2.64% 올랐습니다. 변동성지수(VIX)는 17.52로 2.46% 올랐습니다.
+  </p>
+  <p style="font-size:13.5px;color:#8892b0;line-height:1.8;margin-bottom:6px;">
+    ※ 어제 리포트의 두 번째 리스크 항목은 <strong class="highlight-blue">"10년물 5%가 자리를 잡는지"</strong>였습니다.
+    답이 나왔습니다. 미국 10년물 국채금리는 장중 5.041%까지 올랐고
+    <strong style="color:#ff8090;">종가가 5.004%로, 5% 위에서 마감했습니다.</strong>
+    2007년 7월 이후 가장 높은 값입니다. 전날은 장중에만 5%를 넘고 4.957%로 물러섰는데, 하루 만에 종가가 선을 넘었습니다.
+    2년물은 장중 4.688%로 2024년 7월 이후 최고, 30년물은 장중 5.401%까지 올라 5.37%로 마쳤습니다.
+    <strong style="color:#e8eaf6;">장기물이 더 크게 오르는 형태</strong>라 금리 인상 기대보다 물가·재정 쪽 부담이 반영된 모습입니다.
+    달러인덱스는 99.631로 0.15% 올라 약 2주 만의 최고 수준입니다.
+  </p>
+
+  <div class="section-title">환율 · 원자재 (9월 16일 오후 3시 30분 기준)</div>
+  <div class="commodity-grid">
+    <div class="index-card fall">
+      <div class="card-label">원달러</div>
+      <div class="card-value">1,368.6원</div>
+      <div class="card-change">▲ +9.2 (+0.68%)</div>
+    </div>
+    <div class="index-card rise">
+      <div class="card-label">WTI</div>
+      <div class="card-value">$105.83</div>
+      <div class="card-change">▲ +4.44 (+4.38%)</div>
+    </div>
+    <div class="index-card fall">
+      <div class="card-label">금 (현물)</div>
+      <div class="card-value">$4,293</div>
+      <div class="card-change">▼ 약 -0.1%</div>
+    </div>
+    <div class="index-card fall">
+      <div class="card-label">비트코인</div>
+      <div class="card-value">$77,149</div>
+      <div class="card-change">▼ -0.99% (24시간)</div>
+    </div>
+  </div>
+
+  <p style="font-size:13.5px;color:#8892b0;line-height:1.8;margin-bottom:6px;">
+    ※ 어제 리포트의 세 번째 체크포인트는 <strong class="highlight-blue">"원달러 1,360원, 0.6원 남겨 뒀다"</strong>였습니다.
+    그 선은 오늘 개장하자마자 넘었습니다. 원달러는 <strong style="color:#ff8090;">오전 9시 30분에 1,372.9원까지</strong> 뛰어
+    1,370원선을 먼저 건드린 뒤, 오전 11시경 1,364원대까지 내려왔다가 오후 3시 30분 기준 1,368.6원으로 마감했습니다.
+    전날보다 9.2원 올랐습니다. 이틀 동안 21.3원입니다.
+    <strong style="color:#e8eaf6;">주식은 올랐는데 원화는 약해졌습니다.</strong>
+    외국인이 오늘도 1조 6,840억원을 팔았으므로 환전 수요가 계속 나오고 있고,
+    달러인덱스가 2주 최고 수준으로 오른 몫도 겹쳤습니다.
+    원/엔 환율은 100엔당 882.37원으로 4.27원 올랐고, 엔/달러는 155.07엔입니다.
+  </p>
+  <p style="font-size:13.5px;color:#8892b0;line-height:1.8;margin-bottom:6px;">
+    ※ 유가는 어제 리포트가 지목한 방향으로 한 단계 더 갔습니다. WTI 10월물이
+    <strong style="color:#ffd32a;">배럴당 105.83달러로 4.38%</strong>, 브렌트 11월물이 108.75달러로 2.90% 올라
+    둘 다 <strong style="color:#e8eaf6;">지난 5월 19일 이후 최고 종가</strong>를 기록했습니다.
+    이유가 하나 더 붙었습니다. 어제는 사우디 동서 송유관 피격이 전부였는데,
+    오늘은 <strong style="color:#ff8090;">홍해 수출 거점인 얀부항에서 원유 선적이 멈췄고</strong>
+    사우디가 유럽 고객들에게 9월 말 선적분 취소를 통보했습니다.
+    여기에 리비아에서 석유시설경비대 시위로 송유관 밸브가 잠겨 유전 3곳이 멈춰 섰습니다.
+    금은 12월물이 4,332.80달러로 0.4%, 현물이 4,293.29달러로 0.1% 내렸습니다.
+    <strong style="color:#e8eaf6;">유가가 4% 넘게 뛴 날 금이 내렸습니다.</strong>
+    전쟁 공포로 사는 국면이 아니라 금리가 금을 누르는 국면이라는 뜻이고, 이 조합은 이번 주 내내 같습니다.
+  </p>
+
+  <div class="section-title">오늘의 핵심 분석</div>
+
+  <div class="analysis-box">
+    <h3>① 지수는 1.37% 올랐는데, 오른 종목보다 내린 종목이 1.9배 많았다</h3>
+    <p>
+      오늘 코스피에서 오른 종목은 304개, 내린 종목은 576개입니다. 보합이 35개, 하한가가 1개 있었습니다.
+      그런데 지수는 90.71포인트, <strong class="highlight-rise">1.37% 올랐습니다.</strong>
+      이 두 숫자가 같은 날에 나오려면 조건이 하나 필요합니다.
+      <strong class="highlight">시가총액이 아주 큰 소수 종목이 크게 올라야 합니다.</strong>
+    </p>
+    <p>
+      실제로 그랬습니다. 삼성전자가 25만 3,500원으로 2.01%, SK하이닉스가 175만 9,000원으로 4.08% 올랐습니다.
+      코스피 시가총액에서 이 두 종목이 차지하는 비중을 생각하면, 오늘 지수 상승분의 대부분이 여기서 나왔다고 봐도 무리가 없습니다.
+      거래 데이터도 같은 이야기를 합니다. 거래대금은 어제보다 2.4% 줄어 15조 8,546억원인데
+      거래량은 27.9% 줄어 1억 9,772만 주였습니다.
+      <strong class="highlight-blue">같은 돈으로 훨씬 적은 수의 주식을 샀다는 뜻</strong>이고,
+      주당 175만원짜리와 25만원짜리 종목에 거래가 몰렸다는 뜻입니다.
+    </p>
+    <p>
+      어제 리포트는 반대 현상을 적었습니다. 어제는 거래량이 그대로인데 대금만 19.5% 줄었고,
+      "비싼 대형주 대신 가벼운 종목으로 손이 옮겨 갔다"고 해석했습니다.
+      오늘은 그 손이 하루 만에 되돌아왔습니다.
+      다만 되돌아온 자리가 <strong class="highlight-yellow">시장 전체가 아니라 두 종목</strong>이라는 점이 오늘의 특징입니다.
+      지수만 보고 "시장이 반등했다"고 읽으면 실제 계좌의 체감과 어긋납니다.
+      오늘은 코스피 종목 열 개 중 여섯 개가 내린 날입니다.
+    </p>
+  </div>
+
+  <div class="analysis-box">
+    <h3>② 외국인은 닷새째 팔았고, 그 물량은 기관과 기타법인이 받았다</h3>
+    <p>
+      어제의 첫 번째 체크포인트는 <strong class="highlight-blue">"외국인 닷새째 여부와 금액"</strong>이었습니다.
+      리포트는 "금액이 계속 줄면 마무리 국면, 다시 2조원대로 커지면 비중 조정"이라고 적었습니다.
+      오늘 나온 값은 <strong class="highlight">1조 6,840억원 순매도</strong>입니다.
+      어제 1조 5,673억원보다 오히려 늘었습니다. 줄어들다 다시 커진 것도, 2조원을 넘은 것도 아닌
+      애매한 자리인데, 분명한 것은 <strong class="highlight-yellow">닷새 연속 매도가 이어졌고 누적이 11조원대로 올라섰다</strong>는 점입니다.
+    </p>
+    <p>
+      더 눈여겨볼 것은 개인입니다. 오늘 개인은 1조 1,858억원을 <strong class="highlight">팔았습니다.</strong>
+      지난 며칠 동안 외국인 물량을 받아내던 쪽이 오늘은 같이 파는 쪽으로 돌아섰습니다.
+      그런데도 지수가 올랐습니다. 기관과 기타법인을 합한 순매수가 2조 8,698억원이었기 때문입니다.
+      업종을 좁혀 보면 그림이 선명해집니다. 전기·전자 업종 한 곳에서
+      외국인이 9,733억원을 팔고 개인이 1조 7,047억원을 파는 동안,
+      <strong class="highlight-rise">기관이 1조 600억원을 샀고 나머지 주체가 1조 6,180억원어치를 받았습니다.</strong>
+      마지막 숫자는 별도 공표치가 아니라 나머지 세 주체로 역산한 값인데, 규모와 성격을 보면 자사주 매입 자금으로 읽는 것이 자연스럽습니다.
+    </p>
+    <p>
+      종목 단위도 같습니다. 외국인은 삼성전자를 4,906억원, SK하이닉스를 4,406억원 팔았고,
+      기관은 각각 4,121억원, 3,676억원을 샀습니다.
+      <strong class="highlight-blue">외국인이 판 두 종목이 오늘 가장 많이 오른 두 종목</strong>입니다.
+      지난 9일부터 15일까지 닷새간 외국인이 이 두 종목에서 판 금액은 10조 2,408억원(삼성전자 5조 8,539억, SK하이닉스 4조 3,869억)입니다.
+      그만큼을 팔았는데 주가가 오르기 시작했다면, 매도 자체보다 그 물량을 누가 어떤 값에 받아 가는지가 더 중요한 국면에 들어섰다는 뜻입니다.
+    </p>
+  </div>
+
+  <div class="analysis-box">
+    <h3>③ 반도체가 돌아선 이유는 뉴욕이 아니라 재고와 임단협, 그리고 오하이오였다</h3>
+    <p>
+      어제의 다섯 번째 체크포인트는 <strong class="highlight-blue">"반도체 방향"</strong>이었습니다.
+      "플러스로 돌아서면 월요일의 -5.09%가 과했다는 쪽으로 정리된다"고 적었습니다.
+      오늘 플러스로 돌아섰습니다. 그런데 계기가 뉴욕이 아니었습니다.
+      간밤 필라델피아 반도체지수는 0.40% 오르는 데 그쳤고, 엔비디아도 0.57%였습니다.
+      <strong class="highlight">이 정도 값으로 한국 반도체가 2~4% 오를 이유는 없습니다.</strong>
+      오늘 상승분은 국내에서 만들어졌습니다.
+    </p>
+    <p>
+      첫 번째는 재고입니다. KB증권은 메모리 업체들의 재고가 <strong class="highlight-yellow">10일치 미만으로 역사적 최저 수준</strong>이고
+      주요 고객사의 수요 충족률이 60% 수준에 머물러 있다고 밝혔습니다.
+      내년 미국 하이퍼스케일러의 AI 인프라 투자 계획은 1조 3,000억달러로 전년 대비 63% 늘어난 규모이고,
+      전체 생산능력의 70%가 이미 장기공급계약으로 묶여 있다는 설명입니다.
+      지난 주말 불거진 <strong class="highlight-blue">'AI 개발 속도 조절론'이 선언 단계에 머물러 있는 동안,
+      실제 주문은 그대로라는 반론</strong>이 숫자를 갖추고 나온 셈입니다.
+    </p>
+    <p>
+      두 번째와 세 번째는 SK하이닉스에서 나왔습니다. 오전에 노동조합이 성과급을 현금과 주식으로 절반씩 지급하는 임단협 안을
+      찬성 57%로 가결했다는 소식이 전해졌고, 오후에는 SK하이닉스가
+      <strong class="highlight">미국 오하이오주 인텔 시설 일부를 임차해 처음으로 미국 내 메모리 생산을 검토 중</strong>이라는 보도가 나왔습니다.
+      이 보도가 나온 뒤 상승폭이 3%대에서 4%대로 커졌습니다.
+      다만 여기에는 단서가 필요합니다. SK하이닉스는 지난 7월 같은 오하이오 시설을 두고 나온 <strong class="highlight-yellow">'인수설'을 공시로 부인한 적이 있습니다.</strong>
+      이번 보도는 인수가 아니라 임차라는 점에서 구조가 다르지만, 회사의 확인이 나온 사안은 아닙니다.
+      재료의 무게를 재려면 회사 입장이 먼저 나와야 합니다.
+    </p>
+  </div>
+
+  <div class="analysis-box">
+    <h3>④ 유가가 4.4% 뛰었는데 지수는 올랐다 — 이틀 전과 반대로 움직인 이유</h3>
+    <p>
+      그제와 어제, 코스피를 누른 것은 금리와 유가였습니다.
+      어제 리포트는 "유가가 오르면 물가가 오르고, 물가가 오르면 금리가 오르고, 금리가 오르면 성장주 할인율이 높아진다.
+      한 재료가 두 경로로 주식을 누른다"고 적었습니다.
+      그런데 오늘은 그 재료가 더 세졌는데 지수가 올랐습니다.
+      WTI는 4.38% 올라 105.83달러가 됐고, 미국 10년물은 처음으로 5% 위에서 마감했습니다.
+      <strong class="highlight">어제보다 나빠진 조건에서 지수가 반대로 움직였습니다.</strong>
+    </p>
+    <p>
+      설명은 두 가지 중 하나입니다. 하나는 시장이 이 재료를 이미 며칠에 걸쳐 반영했다는 것입니다.
+      코스피는 지난주부터 나흘 연속 내렸고 그 사이 누적 낙폭이 컸습니다.
+      두 번째는 오늘 오른 자리가 <strong class="highlight-blue">금리에 가장 민감한 자리가 아니었다</strong>는 것입니다.
+      메모리 반도체는 지금 가격과 재고가 주가를 정하는 국면이고, 할인율보다 수급 논리가 먼저 작동합니다.
+      실제로 오늘 시장에서 금리에 직접 반응한 자리는 따로 있었습니다. 코스닥이 0.44%밖에 오르지 못했고,
+      상장 종목의 3분의 2가 내렸습니다.
+    </p>
+    <p>
+      그래서 오늘 상승은 <strong class="highlight-yellow">"악재를 이겨낸 반등"이라기보다 "악재와 무관한 자리로 돈이 몰린 결과"</strong>에 가깝습니다.
+      구분하는 방법은 내일 이후에 있습니다. 반도체 밖에서도 오르는 종목이 늘어나면 시장이 금리와 유가를 소화한 것이고,
+      계속 두 종목만 오르면 지수만 오른 상태가 이어지는 것입니다.
+      오늘 하루로는 어느 쪽인지 단정할 근거가 없습니다.
+    </p>
+  </div>
+
+  <div class="analysis-box">
+    <h3>⑤ 가상자산 관련주가 무너졌다 — 표 하나 차이로 갈린 법안</h3>
+    <p>
+      오늘 코스피·코스닥에서 가장 크게 내린 무리는 가상자산 관련주였습니다.
+      헥토파이낸셜 -12.27%, 더즌 -12.26%, 쿠콘 -10.81%, NHN KCP -9.51%, 다날 -8.89%, 카카오페이 -6.78%입니다.
+      원인은 국내에 없습니다. 미국 상원이 가상자산 시장의 법적 기준을 정하는 <strong class="highlight">클래리티법 처리를 부결</strong>했습니다.
+      표결 결과는 <strong class="highlight-yellow">찬성 49표, 반대 50표</strong>입니다.
+      법안을 진행시키려면 60표가 필요했으므로 애초에 표가 모자란 상황이었고,
+      민주당이 전원 반대한 데 더해 공화당에서도 이탈표가 나왔습니다.
+      트럼프 대통령 일가의 가상화폐 사업과 관련한 이해충돌 문제가 반대 명분으로 거론됐습니다.
+    </p>
+    <p>
+      흥미로운 대목은 비트코인 자체는 크게 흔들리지 않았다는 점입니다.
+      비트코인은 24시간 기준 1% 안쪽에서 움직여 7만 7,100달러대에 있고, 장중 저점이 7만 6,705달러, 고점이 7만 8,541달러였습니다.
+      <strong class="highlight-blue">원자산은 1% 움직였는데 국내 관련주는 9~12% 빠졌습니다.</strong>
+      국내 종목들이 코인 가격이 아니라 제도화 기대에 값이 매겨져 있었다는 뜻입니다.
+      법안이 다시 상정될 가능성은 남아 있지만, 60표라는 문턱과 11월 중간선거 일정을 함께 보면
+      단기간에 되돌릴 수 있는 재료로 보기는 어렵습니다.
+    </p>
+  </div>
+
+  <div class="section-title">종목군 히트맵 (9월 16일 종가 · 개별 종목 기준)</div>
+  <div class="heatmap">
+    <div class="heat-cell heat-strong-rise">
+      <div class="heat-name">SK하이닉스</div>
+      <div class="heat-pct">+4.08%</div>
+    </div>
+    <div class="heat-cell heat-mild-rise">
+      <div class="heat-name">삼성전자</div>
+      <div class="heat-pct">+2.01%</div>
+    </div>
+    <div class="heat-cell heat-mild-rise">
+      <div class="heat-name">코스피 지수</div>
+      <div class="heat-pct">+1.37%</div>
+    </div>
+    <div class="heat-cell heat-flat">
+      <div class="heat-name">코스닥 지수</div>
+      <div class="heat-pct">+0.44%</div>
+    </div>
+    <div class="heat-cell heat-mild-fall">
+      <div class="heat-name">카카오페이</div>
+      <div class="heat-pct">-6.78%</div>
+    </div>
+    <div class="heat-cell heat-strong-fall">
+      <div class="heat-name">다날</div>
+      <div class="heat-pct">-8.89%</div>
+    </div>
+    <div class="heat-cell heat-strong-fall">
+      <div class="heat-name">NHN KCP</div>
+      <div class="heat-pct">-9.51%</div>
+    </div>
+    <div class="heat-cell heat-strong-fall">
+      <div class="heat-name">쿠콘</div>
+      <div class="heat-pct">-10.81%</div>
+    </div>
+    <div class="heat-cell heat-strong-fall">
+      <div class="heat-name">더즌</div>
+      <div class="heat-pct">-12.26%</div>
+    </div>
+    <div class="heat-cell heat-strong-fall">
+      <div class="heat-name">헥토파이낸셜</div>
+      <div class="heat-pct">-12.27%</div>
+    </div>
+  </div>
+
+  <p style="font-size:13.5px;color:#8892b0;line-height:1.8;margin-bottom:6px;">
+    ※ 오늘은 업종 분류별 확정 등락률 집계를 이 리포트 작성 시점(장 마감 직후)까지 확보하지 못해,
+    <strong style="color:#e8eaf6;">업종 단위가 아니라 확인된 개별 종목 기준으로</strong> 정리했습니다.
+    어제까지의 히트맵과 형식이 다른 이유입니다.
+    다만 위아래 양끝만 놓고 봐도 오늘 시장의 모양은 분명합니다.
+    <strong style="color:#00c896;">반도체 대형주 두 종목이 지수를 밀어 올린 쪽</strong>에 있고,
+    <strong style="color:#ff8090;">가상자산 결제·핀테크 종목군이 두 자릿수로 빠진 쪽</strong>에 있습니다.
+    그 사이에 코스피 종목의 60% 이상이 하락한 채로 놓여 있습니다.
+    어제는 업종 순위가 하루 만에 위아래로 뒤집혔는데, 오늘은 순위가 바뀐 것이 아니라
+    <strong style="color:#e8eaf6;">지수를 만드는 종목과 대부분의 종목이 따로 움직였습니다.</strong>
+  </p>
+
+  <div class="section-title">주목 종목 · 이슈</div>
+  <div class="stock-spotlight">
+
+    <div class="spotlight-item rise-item">
+      <div class="spotlight-header">
+        <div class="spotlight-name">SK하이닉스</div>
+        <div class="spotlight-pct pct-rise">+4.08% (175만 9,000원)</div>
+      </div>
+      <div class="spotlight-desc">
+        오늘 시가총액 상위에서 가장 크게 오른 종목입니다. 재료가 두 번에 나눠 들어왔습니다.
+        오전에는 노동조합이 성과급을 현금과 주식으로 절반씩 지급하는 임금·단체협상 안을 찬성 57%로 가결했다는 소식이 나왔고,
+        오후에는 미국 오하이오주의 인텔 칩 생산시설 일부를 임차하는 방식으로
+        <strong style="color:#e8eaf6;">처음 미국 내 메모리 생산을 검토 중</strong>이라는 보도가 이어지면서 상승폭이 3%대에서 4%대로 커졌습니다.
+        다만 회사가 확인한 사안은 아닙니다. 지난 7월 같은 시설을 두고 나온 인수설에 대해서는
+        <strong style="color:#ffd32a;">사실이 아니라고 공시로 부인</strong>한 전례가 있습니다.
+        인수와 임차는 구조가 다르므로 그때의 부인이 이번 보도를 반박하지는 않지만,
+        재료의 무게는 회사 입장이 나온 뒤에 다시 재는 편이 안전합니다.
+        한편 간밤 뉴욕에서 SK하이닉스 ADR이 7.60% 빠졌던 것이 전전날이므로,
+        이틀에 걸쳐 본주가 되돌린 셈이기도 합니다.
+      </div>
+    </div>
+
+    <div class="spotlight-item rise-item">
+      <div class="spotlight-header">
+        <div class="spotlight-name">삼성전자</div>
+        <div class="spotlight-pct pct-rise">+2.01% (25만 3,500원)</div>
+      </div>
+      <div class="spotlight-desc">
+        외국인이 4,906억원을 순매도했는데 2.01% 올랐습니다. 받은 쪽은 기관(4,121억원)과 자사주 매입으로 추정되는 자금입니다.
+        재료는 재고입니다. KB증권은 메모리 업체 재고가 <strong style="color:#e8eaf6;">10일치 미만으로 역사적 최저</strong>이고
+        주요 고객사의 수요 충족률이 60% 수준이라며, 주가가 AI 투자 둔화를 선반영하는 동안 실제 주문은 더 강해졌다고 평가했습니다.
+        내년 미국 하이퍼스케일러의 AI 인프라 투자 계획은 1조 3,000억달러로 전년 대비 63% 증가 규모이고,
+        생산능력의 70%가 장기공급계약으로 묶여 있다는 설명도 덧붙였습니다.
+        다만 반론도 같은 날 함께 나왔습니다. BNK투자증권은 메모리 원가 부담과 금리 상승을 들어
+        <strong style="color:#ffd32a;">3·4분기 영업이익이 시장 기대치를 밑돌 수 있다</strong>고 봤습니다.
+        같은 종목을 두고 재고를 보는 쪽과 이익을 보는 쪽의 결론이 갈려 있는 상태입니다.
+      </div>
+    </div>
+
+    <div class="spotlight-item fall-item">
+      <div class="spotlight-header">
+        <div class="spotlight-name">헥토파이낸셜 · 더즌 · 쿠콘 · NHN KCP · 다날 · 카카오페이</div>
+        <div class="spotlight-pct pct-fall">-12.27% ~ -6.78%</div>
+      </div>
+      <div class="spotlight-desc">
+        미국 상원이 가상자산 시장의 법적 기준을 정하는 클래리티법을 부결하면서 국내 결제·핀테크 종목이 한꺼번에 밀렸습니다.
+        표결은 <strong style="color:#ff8090;">찬성 49표, 반대 50표</strong>로, 법안 진행에 필요한 60표에 크게 못 미쳤습니다.
+        민주당 전원 반대에 공화당 이탈표가 더해졌고, 트럼프 대통령 일가의 가상화폐 사업 이해충돌 문제가 반대 명분으로 거론됐습니다.
+        주목할 점은 비트코인 자체는 24시간 기준 1% 안쪽에서 움직였다는 것입니다.
+        <strong style="color:#e8eaf6;">원자산이 1% 움직이는 동안 국내 관련주는 9~12% 빠졌습니다.</strong>
+        이 종목들의 주가가 코인 시세보다 제도화 일정에 더 크게 묶여 있었다는 뜻이고,
+        같은 이유로 다음 상정 일정이 잡히면 반대 방향으로도 크게 움직일 수 있는 구간에 들어가 있습니다.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section-title">리스크 요인</div>
+  <div class="analysis-box">
+    <h3>① FOMC 결과가 오늘 밤에 나온다</h3>
+    <p>
+      회의는 현지 9월 15~16일이고 결과는 <strong class="highlight">한국시간 17일(목) 새벽 3시</strong>입니다.
+      0.25%포인트 인상 확률은 CME 페드워치 기준 <strong class="highlight-yellow">95%를 넘어섰습니다.</strong>
+      한 달 전 33.1%에서 여기까지 올라온 값입니다. 인상되면 기준금리는 3.75~4.00%가 됩니다.
+      관건은 인상 여부가 아니라 성명서와 점도표, 그리고 케빈 워시 의장의 기자회견입니다.
+      6월 점도표 중간값이 유지되는지 위로 올라가는지가 다음 회의의 그림을 정합니다.
+      한국 증시는 이 결과를 목요일 개장에 한꺼번에 반영합니다.
+      오늘 코스피가 장 후반에 고점으로 마감한 것도, 결과를 앞두고 숏 포지션을 정리한 흐름과 떼어 보기 어렵습니다.
+    </p>
+  </div>
+  <div class="analysis-box">
+    <h3>② 10년물이 장중이 아니라 종가로 5%를 넘었다</h3>
+    <p>
+      어제까지는 장중에만 5%를 건드리고 종가는 4.9%대로 물러섰습니다. 간밤에는
+      <strong class="highlight">종가가 5.004%</strong>였습니다. 2007년 7월 이후 처음입니다.
+      장중 고점은 5.041%였고, 30년물은 5.401%까지 올라 5.37%로 마쳤습니다. 2007년 6월 이후 최고입니다.
+      장중 고점과 종가는 성격이 다릅니다. 장중 고점은 주문 한 번으로도 만들어지지만,
+      종가는 그날 하루의 합의 가격입니다.
+      <strong class="highlight-blue">5%가 이제 시장이 인정한 수준이 됐다는 뜻</strong>이고,
+      무위험 수익률이 5%라면 주식에 요구되는 기대수익률도 그만큼 올라갑니다.
+      부담은 이익이 먼 미래에 몰려 있는 종목에서 가장 큽니다.
+      오늘 코스닥이 0.44%밖에 오르지 못한 배경이기도 합니다.
+    </p>
+  </div>
+  <div class="analysis-box">
+    <h3>③ 유가 재료가 하나에서 셋으로 늘었다</h3>
+    <p>
+      어제까지는 사우디 동서 송유관 하나였습니다. 오늘은 세 가지입니다.
+      송유관 가동 중단이 그대로 이어지는 가운데, 홍해 수출 거점인
+      <strong class="highlight">얀부항의 원유 선적이 멈췄고</strong> 사우디가 유럽 고객에게 9월 말 선적분 취소를 통보했습니다.
+      여기에 리비아에서 석유시설경비대 시위로 송유관 밸브가 잠겨 유전 3곳이 멈춰 섰습니다.
+      브렌트는 108.75달러로 <strong class="highlight-yellow">110달러까지 1.25달러를 남겨 뒀습니다.</strong>
+      어제 리포트가 다음 구간으로 지목한 자리입니다.
+      공급 차질이 협상이 아니라 물리적 복구와 치안에 걸려 있다는 점이 이 국면의 성격을 정합니다.
+      유가가 여기서 더 오르면 물가 기대가 밀려 올라가고, 금리가 따라 오르고, 환율도 같이 움직입니다.
+    </p>
+  </div>
+  <div class="analysis-box">
+    <h3>④ 환율이 장중 1,372.9원을 찍었다</h3>
+    <p>
+      어제 1,359.4원, 오늘 1,368.6원입니다. 이틀 동안 21.3원 올랐고
+      장중에는 <strong class="highlight">1,372.9원까지</strong> 갔습니다.
+      오늘 외국인이 코스피에서 판 1조 6,840억원의 환전은 아직 다 나오지 않았을 가능성이 큽니다.
+      어제 리포트가 지적한 <strong class="highlight-blue">매도와 환전 사이의 시차</strong>가 그대로 유지되고 있습니다.
+      환율이 오르면 외국인이 들고 있는 원화 자산의 달러 환산액이 줄어 추가 매도 유인이 생기고,
+      그 매도가 다시 환율을 밀어 올립니다.
+      시장에서는 1,400원 근처까지 열어 둬야 한다는 견해도 나오고 있습니다.
+      오늘 주식이 오른 날에도 원화가 약해졌다는 점이 이 고리가 아직 끊기지 않았음을 보여 줍니다.
+    </p>
+  </div>
+  <div class="analysis-box">
+    <h3>⑤ 지수를 두 종목이 들고 있다</h3>
+    <p>
+      오늘 상승의 구조 자체가 리스크입니다. 오른 종목 304개, 내린 종목 576개인 날에 지수가 1.37% 올랐다면,
+      <strong class="highlight">지수의 방향은 두 종목의 방향</strong>입니다.
+      같은 구조는 반대로도 작동합니다. 이 두 종목이 하루 내리면 지수는 대부분 종목이 올라도 내릴 수 있습니다.
+      실제로 지난 월요일이 그런 날이었습니다. 반도체 업종이 5.09% 빠지면서 지수가 3.26% 내렸습니다.
+      외국인이 닷새 동안 이 두 종목에서 10조원 넘게 팔았고 오늘도 9,312억원을 팔았다는 점을 함께 보면,
+      <strong class="highlight-yellow">지수를 떠받치는 쪽과 파는 쪽이 같은 종목에 몰려 있는 상태</strong>입니다.
+      받아 주는 자금이 자사주 매입이라면 한도와 기간이 있습니다. 그 자금이 멈추는 시점이 이 구조의 시험대가 됩니다.
+    </p>
+  </div>
+
+  <div class="section-title">내일 체크포인트</div>
+  <ul class="checkpoint-list">
+    <li><span class="ck-icon">1</span><span><strong>FOMC 결과와 점도표</strong> — 한국시간 오늘 새벽 3시입니다. 0.25%포인트 인상은 95% 넘게 반영돼 있으므로 가격을 움직이는 것은 인상 자체가 아니라 성명서 문구와 점도표, 워시 의장 기자회견입니다. 목요일 개장이 이 결과를 한꺼번에 반영합니다.</span></li>
+    <li><span class="ck-icon">2</span><span><strong>외국인 엿새째 여부</strong> — 오늘 1조 6,840억원으로 어제(1조 5,673억원)보다 오히려 늘었습니다. 닷새 누적이 11조원대입니다. FOMC 결과 후에도 같은 규모가 나오면 이벤트 대기 매도가 아니라 비중 조정이라는 쪽이 굳어집니다.</span></li>
+    <li><span class="ck-icon">3</span><span><strong>상승·하락 종목 수의 균형</strong> — 오늘은 오른 종목 304개, 내린 종목 576개인 채로 지수가 1.37% 올랐습니다. 내일 지수가 오르면서 오른 종목 수가 하락 종목 수를 넘어서면 반등의 폭이 넓어진 것이고, 오늘 같은 비율이 이어지면 지수만 오른 상태가 계속되는 것입니다.</span></li>
+    <li><span class="ck-icon">4</span><span><strong>반도체 이틀째 여부</strong> — 삼성전자 +2.01%, SK하이닉스 +4.08%입니다. 오늘 상승은 뉴욕이 아니라 재고·임단협·오하이오 보도라는 국내 재료로 만들어졌습니다. 내일도 오르면 재료가 자리를 잡은 것이고, 되밀리면 FOMC 대기 중의 하루짜리 움직임으로 정리됩니다.</span></li>
+    <li><span class="ck-icon">5</span><span><strong>SK하이닉스 오하이오 관련 회사 입장</strong> — 인텔 시설 임차 보도는 아직 회사 확인이 없습니다. 7월에는 같은 시설 인수설을 공시로 부인한 적이 있습니다. 확인 공시가 나오는지, 나온다면 임차와 인수 중 어느 쪽인지가 오늘 붙은 4% 가운데 얼마가 유지될지를 정합니다.</span></li>
+    <li><span class="ck-icon">6</span><span><strong>원달러 1,370원 종가</strong> — 오늘 장중 1,372.9원까지 갔다가 1,368.6원으로 마쳤습니다. 종가가 1,370원 위로 올라서는 날이 나오는지, 그리고 그날 지수가 어떻게 반응하는지를 함께 봐야 합니다.</span></li>
+    <li><span class="ck-icon">7</span><span><strong>브렌트 110달러</strong> — 오늘 108.75달러로 1.25달러를 남겨 뒀습니다. 사우디 얀부항 선적 중단과 리비아 유전 3곳 가동 중단이 언제 풀리는지가 변수입니다. 복구 일정이 나오면 유가·금리·환율이 한꺼번에 되돌려질 수 있는 재료이기도 합니다.</span></li>
+    <li><span class="ck-icon">8</span><span><strong>거래대금 회복 여부</strong> — 코스피 거래대금이 15조 8,546억원으로 이틀째 줄었습니다. 어제 리포트의 여섯 번째 리스크가 "FOMC 이후 20조원대를 회복하는지"였습니다. 목요일에 회복되면 관망이 풀린 것이고, 계속 마르면 방향을 잡지 못한 구간이 길어집니다.</span></li>
+  </ul>
+
+  <div class="disclaimer">
+    본 리포트는 공개된 시장 데이터와 언론 보도를 정리한 자료이며 투자 권유나 매매 추천이 아닙니다.
+    지수·환율·원자재 수치는 집계 시점과 출처에 따라 달라질 수 있습니다.
+    코스피·코스닥 종가와 등락, 시가·고저, 거래대금·거래량, 상승·하락 종목 수, 투자자별 순매수·순매도 금액,
+    개별 종목 종가와 등락률은 장 마감 후 집계와 마감 보도치를 기준으로 적었습니다.
+    투자자별 수급에서 '기관'은 출처에 따라 기타법인 포함 여부가 달라집니다.
+    본문의 코스피 전체 수급은 외국인·개인·기관(기타법인 포함) 세 주체 기준이고,
+    전기·전자 업종의 기타법인 금액은 별도 공표치가 아니라 나머지 세 주체 합계로 역산한 값이므로 확정 집계와 차이가 있을 수 있습니다.
+    오늘은 업종 분류별 확정 등락률 집계를 작성 시점까지 확보하지 못해 히트맵을 개별 종목 기준으로 구성했으며,
+    이 점에서 이전 리포트와 형식이 다릅니다.
+    SK하이닉스의 미국 오하이오 인텔 시설 임차 검토는 언론 보도 내용이며 회사가 확인한 사안이 아닙니다.
+    미국 지수·국채금리·달러인덱스·유가·금은 현지 9월 15일(화) 마감 기준입니다.
+    국제유가·금·비트코인은 24시간 거래되는 자산이라 본문에 적힌 기준 시각 이후에도 값이 변합니다.
+    투자 판단과 그 결과에 대한 책임은 투자자 본인에게 있습니다.
+  </div>
+
+
+</div>
+</body>
+</html>
