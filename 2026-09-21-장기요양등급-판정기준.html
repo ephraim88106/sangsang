@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>장기요양등급 판정기준 — 인정점수별 등급 구분과 신청방법 | 의료·복지</title>
+  <meta name="description" content="노인장기요양보험 등급은 신체·인지·행동·간호·재활 5개 영역 90개 항목을 조사해 산출하는 장기요양인정점수로 갈린다. 1등급 95점 이상, 2등급 75점 이상, 3등급 60점 이상, 4등급 51점 이상, 5등급(치매) 45점 이상, 인지지원등급(치매) 45점 미만이며 점수 구간에 따라 월 한도액이 인지지원등급 67만원대부터 1등급 251만원대까지 벌어진다. 신청부터 인정조사·의사소견서·등급판정위원회 심의·결과통보까지 걸리는 절차와 기한, 갱신신청 시기, 본인부담률까지 정리했다.">
+  <meta name="keywords" content="장기요양등급 판정기준, 장기요양인정점수, 장기요양등급 신청방법, 장기요양등급 1등급 2등급, 장기요양 인지지원등급, 장기요양등급 월한도액, 노인장기요양보험법, 장기요양인정조사표, 장기요양등급 갱신신청, 요양보호사 부족">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f2f4f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #0d47a1 0%, #1565c0 45%, #0277bd 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #bbdefb; color: #0d47a1; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #e3f2fd; border-left: 5px solid #1565c0; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #1565c0; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #0d47a1; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #1565c0; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #0d47a1; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #e3f2fd; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #1565c0; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #0d47a1; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #f1f7fd; border-left: 4px solid #42a5f5; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #0d47a1; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f5f9fe; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #0d47a1; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #0d47a1; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #d9e6f5; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-blue { background: linear-gradient(90deg, #0d47a1, #42a5f5); }
+    .bar-cyan { background: linear-gradient(90deg, #01579b, #4dd0e1); }
+    .bar-amber { background: linear-gradient(90deg, #ef6c00, #ffb300); }
+    .bar-grey { background: linear-gradient(90deg, #546e7a, #90a4ae); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #c5d9ef; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #e3f2fd; color: #0d47a1; font-weight: 700; }
+    table.rate td.up { color: #0d47a1; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #ef6c00; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #1565c0; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #0d47a1; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #bbdefb; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #0d47a1; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #bbdefb; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #1565c0; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .formula { background: #f5f9fe; border: 1.5px dashed #42a5f5; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 16.5px; font-weight: 800; color: #0d47a1; line-height: 1.8; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #0277bd; margin-top: 10px; margin-bottom: 0; }
+    .warnbox { background: #fff8e1; border-left: 5px solid #f9a825; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 26px 0; }
+    .warnbox .wt { font-size: 14px; font-weight: 800; color: #ef6c00; margin-bottom: 8px; }
+    .warnbox p { font-size: 15px; color: #5d4037; margin-bottom: 0; word-break: keep-all; }
+    .case { background: #fff; border: 1.5px solid #bbdefb; border-left: 5px solid #1565c0; border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; }
+    .case .ct { font-size: 13.5px; font-weight: 800; color: #0d47a1; margin-bottom: 6px; letter-spacing: 0.3px; }
+    .case p { font-size: 14.8px; margin-bottom: 8px; }
+    .case p:last-child { margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #e3f2fd; color: #1565c0; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #1565c0; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<!-- SEO:AUTO BEGIN -->
+<meta property="article:published_time" content="2026-09-21T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-09-21T09:00:00+09:00">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "장기요양등급 판정기준 — 인정점수별 등급 구분과 신청방법",
+  "description": "장기요양등급은 신체·인지·행동·간호·재활 5개 영역 90개 항목 조사로 산출하는 인정점수로 갈린다. 1등급 95점 이상부터 인지지원등급 45점 미만까지 여섯 구간의 기준과 월 한도액, 신청 절차와 기한을 정리했다.",
+  "url": "https://sangsang.ephseed.com/2026-09-21-%EC%9E%A5%EA%B8%B0%EC%9A%94%EC%96%91%EB%93%B1%EA%B8%89-%ED%8C%90%EC%A0%95%EA%B8%B0%EC%A4%80",
+  "datePublished": "2026-09-21T09:00:00+09:00",
+  "dateModified": "2026-09-21T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-09-21-%EC%9E%A5%EA%B8%B0%EC%9A%94%EC%96%91%EB%93%B1%EA%B8%89-%ED%8C%90%EC%A0%95%EA%B8%B0%EC%A4%80">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="장기요양등급 판정기준 — 인정점수별 등급 구분과 신청방법 | 의료·복지">
+<meta property="og:description" content="노인장기요양보험 등급은 신체·인지·행동·간호·재활 5개 영역 90개 항목을 조사해 산출하는 장기요양인정점수로 갈린다. 1등급 95점 이상, 2등급 75점 이상, 3등급 60점 이상, 4등급 51점 이상, 5등급(치매) 45점 이상, 인지지원등급(치매) 45점 미만이며 점수 구간에 따라 월 한도액이 인지지원등급 67만원대부터 1등급 251만원대까지 벌어진다. 신청부터 인정조사·의사소견서·등급판정위원회 심의·결과통보까지 걸리는 절차와 기한, 갱신신청 시기, 본인부담률까지 정리했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-09-21-%EC%9E%A5%EA%B8%B0%EC%9A%94%EC%96%91%EB%93%B1%EA%B8%89-%ED%8C%90%EC%A0%95%EA%B8%B0%EC%A4%80">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-09-21T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-09-21T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N28MJLW4W9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-N28MJLW4W9");</script>
+<!-- SEO:END -->
+</head>
+
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-EVlth33UH8CTDu2u"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-KMCr4AoIjIDsi9XA"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-qqfX36xk8gz6faM6"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+<article class="article-wrap">
+<!-- HUB:BREADCRUMB:BEGIN -->
+<nav class="hub-bc"><a href="/">생생 정보통</a> &rsaquo; <a href="/health/">건강보험·의료비</a></nav>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "생생 정보통", "item": "https://sangsang.ephseed.com/"}, {"@type": "ListItem", "position": 2, "name": "건강보험·의료비", "item": "https://sangsang.ephseed.com/health/"}]}</script>
+<!-- HUB:BREADCRUMB:END -->
+  <header class="hero">
+    <div class="category-badge">🏥 의료 · 복지</div>
+    <h1>장기요양등급 판정기준 —<br>인정점수별 등급 구분과 신청방법</h1>
+    <p class="hero-sub">부모님이 갑자기 거동이 불편해지면 가족이 가장 먼저 마주치는 질문은 "이 정도면 등급이 나올까"다. 답은 증상의 무게가 아니라 <b>90개 문항짜리 조사표에서 나오는 점수</b>로 정해진다. 등급마다 한 자리 점수 차이가 월 한도액 수십만원을 가른다. 인정점수 구간과 여섯 등급, 신청부터 결과 통보까지 걸리는 절차를 정리했다.</p>
+    <div class="hero-meta">
+      <span>🏥 의료 · 복지</span>
+      <span>📅 2026년 9월 21일</span>
+      <span>⏱️ 약 10분</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+
+    <div class="summary-box">
+      <h2>핵심 요약</h2>
+      <ul>
+        <li>등급은 신체·인지·행동·간호·재활 <strong>5개 영역 90개 항목</strong>을 조사해 100점 만점으로 산출하는 <strong>장기요양인정점수</strong>로 정해진다. 조사자가 신청인을 직접 방문해 작성한다.</li>
+        <li>등급은 <strong>6단계</strong>다. 1등급 95점 이상, 2등급 75점 이상 95점 미만, 3등급 60점 이상 75점 미만, 4등급 51점 이상 60점 미만, 5등급(치매 한정) 45점 이상 51점 미만, 인지지원등급(치매 한정) 45점 미만이다.</li>
+        <li>등급이 정해지면 재가급여 <strong>월 한도액</strong>이 함께 정해진다. 2026년 기준 1등급 251만 2,900원부터 인지지원등급 67만 6,320원까지, 본인부담률은 재가급여 15%·시설급여 20%다.</li>
+        <li>신청일부터 결과 통보까지 <strong>원칙 30일, 최대 60일</strong>이 걸린다. 유효기간이 끝나기 <strong>90일 전부터 30일 전까지</strong> 갱신신청을 해야 서비스 공백이 생기지 않는다.</li>
+      </ul>
+    </div>
+
+    <h2 class="sec">1. 누가, 왜 신청할 수 있나 — 나이가 아니라 '기능 상태'로 정해진다</h2>
+
+    <p>노인장기요양보험은 65세 이상 노인 또는 65세 미만이라도 치매·뇌혈관질환·파킨슨병 등 <strong>대통령령으로 정한 노인성 질병</strong>을 가진 사람이 <strong>혼자서 일상생활을 수행하기 어려울 때</strong> 신체·가사활동을 지원하는 사회보험 제도다. 건강보험과 가장 다른 점은 여기 있다. 아프다는 진단서만으로는 등급이 나오지 않는다. 등급판정은 <strong>병명이 아니라 '스스로 얼마나 할 수 있는가'라는 기능 상태</strong>를 기준으로 이뤄진다.</p>
+
+    <p>그래서 같은 질환이라도 사람마다 등급이 다르게 나올 수 있고, 반대로 질환명이 다르더라도 기능 저하 정도가 비슷하면 같은 등급이 나올 수 있다. 이 기준을 숫자로 옮긴 것이 다음 장에서 설명하는 <strong>장기요양인정점수</strong>다.</p>
+
+    <h2 class="sec">2. 인정점수는 어떻게 매겨지나 — 90개 항목, 5개 영역</h2>
+
+    <p>신청이 접수되면 국민건강보험공단 소속 조사자가 신청인을 <strong>직접 방문</strong>해 「장기요양인정조사표」에 따라 심신 상태를 조사한다. 조사표는 신체기능·인지기능·행동변화·간호처치·재활 등 <strong>5개 영역, 90개 항목</strong>으로 구성돼 있으며, 항목마다 신청인이 얼마나 도움 없이 수행할 수 있는지를 관찰·확인해 점수화한다. 이 원자료를 계량화 모델에 대입해 나오는 값이 100점 만점의 <strong>장기요양인정점수</strong>다.</p>
+
+    <div class="formula">
+      <div class="f-main">장기요양인정점수 = 신체기능·인지기능·행동변화·간호처치·재활 5개 영역 90개 항목 조사 결과를 계량화한 값 (100점 만점)</div>
+      <p class="f-note">방문 인정조사 결과와 의사소견서를 함께 등급판정위원회에 제출해 최종 등급이 결정된다.</p>
+    </div>
+
+    <p>조사 결과만으로 등급이 확정되지는 않는다. 신청인의 주치의 또는 등급판정위원회가 지정한 의료기관이 발급한 <strong>의사소견서</strong>를 함께 제출해야 하며, 방문조사 결과와 의사소견서를 종합해 <strong>등급판정위원회</strong>가 최종 등급을 심의·결정한다.</p>
+
+    <h2 class="sec">3. 등급별 기준 — 1등급부터 인지지원등급까지</h2>
+
+    <p>등급은 인정점수 구간에 따라 여섯 단계로 나뉜다. 1~4등급은 신체·인지 기능 저하가 기준이고, 5등급과 인지지원등급은 <strong>치매로 진단받은 경우에 한정</strong>해 적용된다는 점이 다르다.</p>
+
+    <table class="rate">
+      <thead>
+        <tr><th>등급</th><th>인정점수</th><th>상태 기준</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1등급</td><td class="up">95점 이상</td><td>일상생활에서 전적으로 다른 사람의 도움이 필요</td></tr>
+        <tr><td>2등급</td><td class="up">75점 이상 95점 미만</td><td>일상생활에서 상당 부분 다른 사람의 도움이 필요</td></tr>
+        <tr><td>3등급</td><td>60점 이상 75점 미만</td><td>일상생활에서 부분적으로 다른 사람의 도움이 필요</td></tr>
+        <tr><td>4등급</td><td>51점 이상 60점 미만</td><td>일상생활에서 일정 부분 다른 사람의 도움이 필요</td></tr>
+        <tr><td>5등급</td><td>45점 이상 51점 미만</td><td>치매환자(노인성 질병에 해당하는 치매로 한정)</td></tr>
+        <tr><td>인지지원등급</td><td class="down">45점 미만</td><td>치매환자로서 신체기능 저하는 크지 않은 경우</td></tr>
+      </tbody>
+    </table>
+    <p class="note">※ 노인장기요양보험법 시행령 제7조 별표1 기준. 5등급·인지지원등급은 신체기능 점수와 무관하게 치매 진단이 전제 조건이다.</p>
+
+    <div class="infographic-section">
+      <h3>📊 등급별 인정점수 구간</h3>
+      <div class="bar-chart">
+        <div class="bar-item"><div class="bar-label"><span>1등급</span><span class="val">95점 이상</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:100%">95~100점</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>2등급</span><span class="val">75~95점 미만</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:88%">75~94점</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>3등급</span><span class="val">60~75점 미만</span></div><div class="bar-track"><div class="bar-fill bar-cyan" style="width:72%">60~74점</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>4등급</span><span class="val">51~60점 미만</span></div><div class="bar-track"><div class="bar-fill bar-cyan" style="width:58%">51~59점</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>5등급(치매)</span><span class="val">45~51점 미만</span></div><div class="bar-track"><div class="bar-fill bar-amber" style="width:49%">45~50점</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>인지지원등급(치매)</span><span class="val">45점 미만</span></div><div class="bar-track"><div class="bar-fill bar-grey" style="width:40%">~44점</div></div></div>
+      </div>
+      <p class="note">막대 폭은 점수 구간의 상대적 위치를 보여주기 위한 도식이며, 실제 배점 간격을 비례로 나타낸 것은 아니다.</p>
+    </div>
+
+    <h2 class="sec">4. 등급마다 월 한도액과 본인부담금이 다르다</h2>
+
+    <p>등급이 확정되면 재가급여(방문요양·주야간보호·방문목욕·방문간호·단기보호 등)를 이용할 수 있는 <strong>월 한도액</strong>이 함께 정해진다. 2026년 기준 등급별 한도액은 다음과 같다.</p>
+
+    <div class="infographic-section">
+      <h3>📊 2026년 등급별 재가급여 월 한도액</h3>
+      <div class="bar-chart">
+        <div class="bar-item"><div class="bar-label"><span>1등급</span><span class="val">2,512,900원</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:100%">2,512,900원</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>2등급</span><span class="val">2,331,200원</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:93%">2,331,200원</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>3등급</span><span class="val">1,528,200원</span></div><div class="bar-track"><div class="bar-fill bar-cyan" style="width:61%">1,528,200원</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>4등급</span><span class="val">1,409,700원</span></div><div class="bar-track"><div class="bar-fill bar-cyan" style="width:56%">1,409,700원</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>5등급</span><span class="val">1,208,900원</span></div><div class="bar-track"><div class="bar-fill bar-amber" style="width:48%">1,208,900원</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>인지지원등급</span><span class="val">676,320원</span></div><div class="bar-track"><div class="bar-fill bar-grey" style="width:27%">676,320원</div></div></div>
+      </div>
+      <p class="note">출처: 보건복지부 2026년도 장기요양급여비용 고시. 전년 대비 등급별로 1만 8,920원~24만 7,800원 인상됐으며, 중증인 1·2등급은 20만원 이상 늘었다.</p>
+    </div>
+
+    <p>한도액의 <strong>15%</strong>가 재가급여 이용자의 본인부담금이고, 나머지 85%는 공단이 부담한다. 요양원 등 <strong>시설급여</strong>를 이용하면 본인부담률이 <strong>20%</strong>로 올라간다. 재가급여보다 시설급여의 비용 기준 자체가 높게 책정돼 있어, 같은 등급이라도 시설을 이용하면 본인부담금이 재가급여 대비 크게 늘어난다. 기초생활수급자는 본인부담금이 면제되고, 소득·재산 기준에 따라 6%·9%로 감경되는 경우도 있다.</p>
+
+    <div class="case">
+      <div class="ct">📌 계산 예시 — 3등급, 재가급여를 한도액까지 이용한 경우</div>
+      <p>월 한도액 1,528,200원 × 본인부담률 15% = <strong>약 229,230원</strong></p>
+      <p>같은 3등급이 요양원(시설급여)을 이용하면 비용 기준 자체가 재가급여보다 높고 부담률도 20%로 올라, 실제 본인부담금은 <strong>월 40만원 후반대</strong>까지 늘어날 수 있다.</p>
+    </div>
+
+    <h2 class="sec">5. 신청부터 결과 통보까지 — 절차와 기한</h2>
+
+    <div class="steps">
+      <div class="step"><div class="step-t">장기요양인정 신청</div><div class="step-d">국민건강보험공단 지사(운영센터) 방문, 우편, 팩스로 신청한다. 인터넷 신청은 65세 이상이거나 65세 미만의 갱신신청인 경우 가능하고, 전화 신청은 갱신신청에 한해 이용할 수 있다.</div></div>
+      <div class="step"><div class="step-t">접수 확인과 조사 일정 안내</div><div class="step-d">공단이 신청을 접수하고 방문 인정조사 일정을 안내한다.</div></div>
+      <div class="step"><div class="step-t">방문 인정조사</div><div class="step-d">조사자가 직접 방문해 신체기능·인지기능·행동변화·간호처치·재활 5개 영역 90개 항목을 조사한다.</div></div>
+      <div class="step"><div class="step-t">의사소견서 제출</div><div class="step-d">신청인의 심신 상태를 아는 의사 또는 공단이 지정한 의료기관에서 의사소견서를 발급받아 제출한다.</div></div>
+      <div class="step"><div class="step-t">등급판정위원회 심의·결정</div><div class="step-d">방문조사 결과와 의사소견서를 종합해 등급판정위원회가 최종 등급을 심의·결정한다.</div></div>
+      <div class="step"><div class="step-t">결과 통보</div><div class="step-d">신청일부터 <strong>원칙적으로 30일 이내</strong> 결과가 나오며, 조사에 시일이 필요한 경우 30일을 넘지 않는 범위에서 한 차례 연장돼 <strong>최장 60일</strong>까지 걸릴 수 있다.</div></div>
+    </div>
+
+    <div class="warnbox">
+      <div class="wt">⚠️ 등급을 받았다고 끝이 아니다 — 유효기간을 놓치면 서비스가 끊긴다</div>
+      <p>장기요양인정의 <strong>유효기간은 최소 1년 6개월에서 갱신 시 최대 4년 6개월</strong>까지 등급판정위원회가 정한다. 유효기간이 끝난 뒤에도 계속 급여를 이용하려면 <strong>만료 90일 전부터 30일 전까지</strong> 갱신신청을 해야 한다. 이 기간을 넘겨 유효기간이 끝나면 새로 신청 절차를 처음부터 밟아야 하고, 그 사이 서비스 이용에 공백이 생긴다.</p>
+    </div>
+
+    <h2 class="sec">6. 숫자로 본 이면 — 수급자는 느는데 돌볼 사람이 부족하다</h2>
+
+    <p>등급 기준과 절차가 갖춰져 있어도, 그 등급을 받은 뒤 실제로 서비스를 받을 수 있느냐는 다른 문제다. 장기요양 수급자 수는 <strong>2022년 101만 9천 명에서 2024년 116만 5천 명</strong>으로 늘었고, 2027년에는 <strong>145만 명</strong>까지 증가할 것으로 전망된다. 반면 이들을 돌볼 요양보호사는 <strong>올해 이미 3,762명이 부족</strong>하고, 3년 뒤인 2028년에는 부족 인원이 <strong>11만 6,734명</strong>으로 불어날 것으로 추산된다.</p>
+
+    <div class="impact-grid">
+      <div class="impact-card"><span class="impact-num">116.5만</span><span class="impact-label">2024년 장기요양<br>수급자 수</span></div>
+      <div class="impact-card"><span class="impact-num">145만</span><span class="impact-label">2027년 전망<br>수급자 수</span></div>
+      <div class="impact-card"><span class="impact-num">11.7만명</span><span class="impact-label">2028년 예상<br>요양보호사 부족 인원</span></div>
+      <div class="impact-card"><span class="impact-num">99만명</span><span class="impact-label">2043년까지 필요한<br>추가 요양보호사</span></div>
+    </div>
+
+    <p>요양보호사 한 명이 감당해야 할 수요자 수도 함께 늘어난다. 2023년 기준 요양보호사 1인당 서비스 수요자는 <strong>1.5~1.9명</strong>이지만, 같은 공급·수요 구조가 유지될 경우 <strong>2030년 1.9~2.4명, 2040년 3.0~3.7명</strong>까지 늘어날 것으로 전망된다.</p>
+
+    <div class="pullquote">등급판정 기준은 정교하게 짜여 있지만, 그 등급이 실제 돌봄으로 이어지느냐는 결국 조사표 밖의 문제 — 누가 그 시간에 방문할 수 있느냐에 달려 있다.</div>
+
+    <p>정부는 2026년 <strong>인력수급취약지역 수당</strong>을 새로 만들어, 인구감소지역이면서 의료취약지역인 곳에서 근무하는 요양보호사에게 월 5만원을 추가 지급하기 시작했다. 지역별 인력난에 대응하는 조치이지만, 전국 단위의 구조적 부족을 해소하기에는 금액과 범위 모두 제한적이라는 평가가 나온다.</p>
+
+    <h2 class="sec">7. 나에게 미치는 영향 — 신청 전 확인할 네 가지</h2>
+
+    <ul class="plain">
+      <li><strong>등급이 나올지 미리 가늠하려면 90개 항목을 기준으로 생각한다.</strong> 진단명이 아니라 세수·식사·이동·배설 등 일상 동작을 얼마나 스스로 할 수 있는지가 점수를 좌우한다.</li>
+      <li><strong>치매 진단이 있다면 5등급·인지지원등급 경로를 함께 검토한다.</strong> 신체기능 저하가 크지 않아도 치매 진단만으로 45점 미만 구간에서 인지지원등급을 받을 수 있다.</li>
+      <li><strong>등급이 낮게 나왔다고 끝이 아니다.</strong> 건강 상태가 악화되면 '등급 변경 신청서'로 재판정을 요청할 수 있고, 결과에 이의가 있으면 이의신청 절차도 있다.</li>
+      <li><strong>달력에 갱신 기한부터 적는다.</strong> 유효기간 만료 90일 전이 되는 날짜를 미리 표시해 두면 30일 전 마감을 넘기지 않는다.</li>
+    </ul>
+
+    <h2 class="sec">8. 전망과 행동 제안</h2>
+
+    <p>등급판정 체계 자체는 90개 항목·5개 영역이라는 촘촘한 기준으로 설계돼 있다. 문제는 그 다음 단계다. <strong>수급자는 매년 늘고 돌봄 인력은 그 속도를 따라가지 못하는 구조</strong>가 이어지면, 등급을 받고도 실제 서비스 배정을 기다리는 기간이 길어질 수 있다. 2043년까지 99만 명의 추가 인력이 필요하다는 전망은 이 격차가 단기간에 좁혀지기 어렵다는 뜻이기도 하다.</p>
+
+    <p>지금 당장 할 수 있는 일은 <strong>절차를 미리 알고 기한을 놓치지 않는 것</strong>이다. 신청은 공단 지사·우편·팩스·인터넷(65세 이상 또는 갱신)으로 할 수 있고, 방문조사와 의사소견서 제출까지 마치면 원칙 30일, 늦어도 60일 안에 결과를 받는다. 등급이 나온 뒤에도 유효기간 만료 90일 전부터 갱신신청 창구가 열린다는 점을 기억해 두면, 서비스가 끊기는 공백을 피할 수 있다.</p>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#장기요양등급판정기준</span>
+      <span class="hashtag">#장기요양인정점수</span>
+      <span class="hashtag">#장기요양등급신청방법</span>
+      <span class="hashtag">#인지지원등급</span>
+      <span class="hashtag">#장기요양월한도액</span>
+      <span class="hashtag">#노인장기요양보험법</span>
+      <span class="hashtag">#장기요양등급갱신신청</span>
+      <span class="hashtag">#요양보호사부족</span>
+      <span class="hashtag">#재가급여본인부담률</span>
+      <span class="hashtag">#등급판정위원회</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=2038&ccfNo=2&cciNo=2&cnpClsNo=1" target="_blank" rel="noopener">법제처 찾기 쉬운 생활법령정보 — 장기요양등급의 판정: 등급판정 절차 및 기준, 인정점수 구간별 1~5등급·인지지원등급 정의</a>
+      <a href="https://www.nhis.or.kr/static/html/wbda/c/wbdac02.html" target="_blank" rel="noopener">국민건강보험공단 — 장기요양인정 신청 절차: 신청 방법, 인정조사표 5개 영역 90개 항목, 등급판정위원회 심의</a>
+      <a href="https://easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=1963&ccfNo=3&cciNo=1&cnpClsNo=2" target="_blank" rel="noopener">법제처 찾기 쉬운 생활법령정보 — 장기요양인정신청: 신청 자격, 결과 통보 기한(30일 원칙, 최대 60일)</a>
+      <a href="https://www.mohw.go.kr/board.es?mid=a10503010100&bid=0027&act=view&list_no=1486570" target="_blank" rel="noopener">보건복지부 보도자료 — 장기요양등급 갱신 유효기간 연장: 최소 1년 6개월~최대 4년 6개월, 갱신신청 기한(만료 90일 전~30일 전)</a>
+      <a href="https://www.mohw.go.kr/menu.es?mid=a10712030100" target="_blank" rel="noopener">보건복지부 — 요양보험제도 정책 안내: 노인장기요양보험 제도 개요와 대상자 기준</a>
+      <a href="https://www.joseilbo.com/news/htmls/2026/04/20260416566708.html" target="_blank" rel="noopener">조세일보(2026. 4. 16.) — 요양보호사 인력 수급 전망: 2028년 11만 6,734명 부족, 2043년 99만명 추가 필요, 2023~2040년 1인당 수요자 수 전망</a>
+      <a href="https://v.daum.net/v/20260429151946545" target="_blank" rel="noopener">실버뉴스(2026. 4. 29.) — 요양보호사 대란 전망: 2043년까지 최대 77만~99만명 추가 필요 추산 근거</a>
+      <a href="https://www.nhis.or.kr/static/html/wbda/c/wbdac05.html" target="_blank" rel="noopener">국민건강보험공단 — 장기요양보험 재원조달 및 급여비용: 재가급여 15%·시설급여 20% 본인부담률, 감경 기준</a>
+    </div>
+
+    <p class="disclaimer">
+      ※ 본 아티클은 법제처 찾기 쉬운 생활법령정보·국민건강보험공단·보건복지부의 공개 자료와 이를 인용한 언론 보도를 바탕으로 작성한 정보성 콘텐츠이며 개별 사안에 대한 상담이 아닙니다. <strong>등급별 인정점수 구간, 월 한도액, 본인부담률은 법령·고시 개정에 따라 변경될 수 있으므로 신청·이용 시점의 국민건강보험공단 공식 안내를 반드시 확인하시기 바랍니다.</strong> 본문의 계산 예시(3등급 재가급여 본인부담금 약 229,230원 등)는 2026년 고시 한도액과 표준 부담률을 그대로 적용한 값이며, 실제 부담금은 이용한 급여의 종류와 양, 감경 적용 여부에 따라 달라질 수 있습니다. 등급판정 결과와 유효기간은 개인의 심신 상태와 등급판정위원회의 심의에 따라 달라지며, 요양보호사 수급 전망 수치는 연구기관·언론 보도의 추산치로 실제 통계와 차이가 있을 수 있습니다. 구체적인 신청·이의제기가 필요한 경우 국민건강보험공단(☎1577-1000) 또는 관할 지사에 문의하시기 바랍니다.
+    </p>
+
+  </div>
+<!-- HUB:RELATED:BEGIN -->
+<style>
+.hub-bc{font-size:13px;color:#5b6672;margin:0 0 18px;font-family:'Noto Sans KR',sans-serif}
+.hub-bc a{color:#5b6672;text-decoration:none}.hub-bc a:hover{text-decoration:underline}
+.hub-rel{margin:38px 0 6px;padding:20px 22px;border:1px solid #e3e8ee;border-radius:10px;
+  background:#fafbfc;font-family:'Noto Sans KR',sans-serif}
+.hub-rel h2{font-size:15px;margin:0 0 14px;font-weight:700;color:#12202e;
+  font-family:'Noto Sans KR',sans-serif;border:0;padding:0}
+.hub-rel ul{list-style:none;padding:0;margin:0}
+.hub-rel li{padding:7px 0;font-size:14.5px;line-height:1.55}
+.hub-rel li a{color:#12202e;text-decoration:none}
+.hub-rel li a:hover{color:#1a5f8a;text-decoration:underline}
+.hub-rel .hub-more{margin:14px 0 0;font-size:13.5px}
+.hub-rel .hub-more a{color:#1a5f8a;text-decoration:none;font-weight:700}
+</style>
+<aside class="hub-rel">
+  <h2>같은 분야 다른 글 — 건강보험·의료비</h2>
+  <ul>
+    <li><a href="/2026-08-20-피부양자-자격상실-소득요건">피부양자 자격상실 소득요건 — 재산 기준과 상실 후 보험료 계산</a></li>
+    <li><a href="/2026-08-27-산정특례-대상질환-본인부담률">산정특례 뜻과 대상 질환 — 본인부담률·적용 기간·연장 신청 절차 정리</a></li>
+    <li><a href="/2026-09-03-건강보험-임의계속가입-조건">건강보험 임의계속가입 조건 — 퇴직 후 보험료 차이와 신청 기한</a></li>
+  </ul>
+  <p class="hub-more"><a href="/health/">건강보험·의료비 전체 보기 →</a></p>
+</aside>
+<!-- HUB:RELATED:END -->
+</article>
+</body>
+</html>
