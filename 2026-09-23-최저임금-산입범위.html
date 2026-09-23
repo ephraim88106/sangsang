@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>최저임금 산입범위란 — 상여금·복리후생비 포함 기준과 실수령액 차이 | 취업·노동</title>
+  <meta name="description" content="2026년 최저임금은 시급 10,320원, 월급 209시간 기준 2,156,880원이다. 그런데 이 금액을 다 채웠는지 판정할 때는 기본급만 보지 않는다. 2019년부터 2024년까지 단계적으로 확대돼 지금은 정기상여금과 현금성 복리후생비 전액이 최저임금 계산에 들어간다. 무엇이 포함되고 무엇이 빠지는지, 왜 시급이 올라도 통장에 찍히는 월급은 그대로인 경우가 생기는지 산입범위 개편 연혁과 함께 정리했다.">
+  <meta name="keywords" content="최저임금 산입범위, 최저임금 계산법, 2026년 최저임금, 최저임금 상여금 포함, 최저임금 복리후생비, 최저임금법 시행령, 최저임금 실수령액, 최저임금 미만율, 최저임금 위반 신고, 최저시급 월급 환산">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f2f4f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #004d40 0%, #00695c 45%, #00838f 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #b2dfdb; color: #004d40; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #e0f2f1; border-left: 5px solid #00695c; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #00695c; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #004d40; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #00695c; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #004d40; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #e0f2f1; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #00695c; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #004d40; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #f1f8f7; border-left: 4px solid #26a69a; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #004d40; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f4faf9; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #004d40; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #004d40; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #d5e8e5; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-teal { background: linear-gradient(90deg, #004d40, #26a69a); }
+    .bar-cyan { background: linear-gradient(90deg, #006064, #4dd0e1); }
+    .bar-amber { background: linear-gradient(90deg, #ef6c00, #ffb300); }
+    .bar-grey { background: linear-gradient(90deg, #546e7a, #90a4ae); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #c2ddd9; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #e0f2f1; color: #004d40; font-weight: 700; }
+    table.rate td.up { color: #004d40; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #ef6c00; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #00695c; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #004d40; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #b2dfdb; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #004d40; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #b2dfdb; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #00695c; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .formula { background: #f4faf9; border: 1.5px dashed #26a69a; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 16.5px; font-weight: 800; color: #004d40; line-height: 1.8; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #00838f; margin-top: 10px; margin-bottom: 0; }
+    .warnbox { background: #fff8e1; border-left: 5px solid #f9a825; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 26px 0; }
+    .warnbox .wt { font-size: 14px; font-weight: 800; color: #ef6c00; margin-bottom: 8px; }
+    .warnbox p { font-size: 15px; color: #5d4037; margin-bottom: 0; word-break: keep-all; }
+    .case { background: #fff; border: 1.5px solid #b2dfdb; border-left: 5px solid #00695c; border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; }
+    .case .ct { font-size: 13.5px; font-weight: 800; color: #004d40; margin-bottom: 6px; letter-spacing: 0.3px; }
+    .case p { font-size: 14.8px; margin-bottom: 8px; }
+    .case p:last-child { margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #e0f2f1; color: #00695c; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #00695c; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<!-- SEO:AUTO BEGIN -->
+<meta property="article:published_time" content="2026-09-23T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-09-23T09:00:00+09:00">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "최저임금 산입범위란 — 상여금·복리후생비 포함 기준과 실수령액 차이",
+  "description": "2026년 최저임금은 시급 10,320원, 월급 2,156,880원이다. 위반 여부를 따질 때는 기본급만 보지 않는다. 2019~2024년 단계적으로 확대된 산입범위에 따라 정기상여금·현금성 복리후생비 전액이 최저임금 계산에 들어간다는 구조와 실수령액에 미치는 영향을 정리했다.",
+  "url": "https://sangsang.ephseed.com/2026-09-23-%EC%B5%9C%EC%A0%80%EC%9E%84%EA%B8%88-%EC%82%B0%EC%9E%85%EB%B2%94%EC%9C%84",
+  "datePublished": "2026-09-23T09:00:00+09:00",
+  "dateModified": "2026-09-23T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-09-23-%EC%B5%9C%EC%A0%80%EC%9E%84%EA%B8%88-%EC%82%B0%EC%9E%85%EB%B2%94%EC%9C%84">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="최저임금 산입범위란 — 상여금·복리후생비 포함 기준과 실수령액 차이 | 취업·노동">
+<meta property="og:description" content="2026년 최저임금은 시급 10,320원, 월급 209시간 기준 2,156,880원이다. 그런데 이 금액을 다 채웠는지 판정할 때는 기본급만 보지 않는다. 2019년부터 2024년까지 단계적으로 확대돼 지금은 정기상여금과 현금성 복리후생비 전액이 최저임금 계산에 들어간다. 무엇이 포함되고 무엇이 빠지는지, 왜 시급이 올라도 통장에 찍히는 월급은 그대로인 경우가 생기는지 산입범위 개편 연혁과 함께 정리했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-09-23-%EC%B5%9C%EC%A0%80%EC%9E%84%EA%B8%88-%EC%82%B0%EC%9E%85%EB%B2%94%EC%9C%84">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-09-23T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-09-23T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N28MJLW4W9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-N28MJLW4W9");</script>
+<!-- SEO:END -->
+</head>
+
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-EVlth33UH8CTDu2u"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-KMCr4AoIjIDsi9XA"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-qqfX36xk8gz6faM6"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+<article class="article-wrap">
+<!-- HUB:BREADCRUMB:BEGIN -->
+<nav class="hub-bc"><a href="/">생생 정보통</a> &rsaquo; <a href="/labor/">노동·급여</a></nav>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "생생 정보통", "item": "https://sangsang.ephseed.com/"}, {"@type": "ListItem", "position": 2, "name": "노동·급여", "item": "https://sangsang.ephseed.com/labor/"}]}</script>
+<!-- HUB:BREADCRUMB:END -->
+  <header class="hero">
+    <div class="category-badge">💼 취업 · 노동</div>
+    <h1>최저임금 산입범위란 —<br>상여금·복리후생비 포함 기준과 실수령액 차이</h1>
+    <p class="hero-sub">2026년 최저임금은 시급 10,320원, 노사공 합의로 정해졌다는 소식까지 뉴스로 나왔다. 그런데 막상 급여명세서를 봐도 시급이 올랐다는 실감이 안 나는 사람이 많다. 이유는 최저임금 위반 여부를 판단할 때 <b>기본급만 보지 않기 때문</b>이다. 상여금·복리후생비가 얼마나, 왜 계산에 들어가는지 정리했다.</p>
+    <div class="hero-meta">
+      <span>💼 취업 · 노동</span>
+      <span>📅 2026년 9월 23일</span>
+      <span>⏱️ 약 9분</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+
+    <div class="summary-box">
+      <h2>핵심 요약</h2>
+      <ul>
+        <li>2026년 최저임금은 <strong>시급 10,320원</strong>, 월 209시간 기준 <strong>월급 2,156,880원</strong>이다. 전년 대비 290원(2.9%) 올랐다.</li>
+        <li>최저임금 위반 여부를 가릴 때 포함되는 임금은 기본급뿐 아니라 <strong>매월 정기적으로 지급되는 상여금·복리후생비</strong>다. 2019년부터 2024년까지 <strong>단계적으로 산입 비율이 확대</strong>돼 지금은 <strong>전액(100%)</strong>이 들어간다.</li>
+        <li>연장·야간·휴일근로수당, 연차수당처럼 <strong>실제 일한 시간에 따라 달라지는 수당은 계산에서 빠진다.</strong> 정기성·일률성 없는 상여금과 현물 복리후생비도 제외다.</li>
+        <li>산입범위가 넓어진 결과 <strong>시급 인상률만큼 통장 입금액이 오르지 않는 경우</strong>가 생긴다. 임금명세서에서 항목별로 직접 확인하는 것이 유일한 대응법이다.</li>
+      </ul>
+    </div>
+
+    <h2 class="sec">1. 왜 "최저임금이 올랐는데 월급은 그대로"인 사람이 있나</h2>
+
+    <p>최저임금은 매년 오른다. 그런데 실수령액이 그만큼 늘지 않았다는 이야기가 매년 반복된다. 이 괴리를 이해하려면 최저임금이 <strong>얼마를 받아야 하는가</strong>의 문제가 아니라 <strong>무엇을 세어서 그 금액을 채웠는지 판정하는가</strong>의 문제라는 점부터 봐야 한다. 기본급이 낮아도 상여금·수당이 두둑하면 합산해서 최저임금을 넘겼다고 판정될 수 있고, 반대로 기본급만 계산에 넣던 시절이라면 같은 급여라도 위반으로 잡혔을 수 있다. 이 '무엇을 셀 것인가'의 범위가 <strong>최저임금 산입범위</strong>다.</p>
+
+    <h2 class="sec">2. 2026년 최저임금 — 시급 10,320원, 월급 2,156,880원</h2>
+
+    <p>2026년 적용 최저임금은 <strong>시급 10,320원</strong>으로 2025년(10,030원)보다 290원, 2.9% 올랐다. 하루 8시간 기준 일급은 82,560원, 주 40시간 근무를 기준으로 주휴수당을 포함한 <strong>월 환산 시간 209시간</strong>을 곱하면 월급은 <strong>2,156,880원</strong>이 된다. 이번 결정은 공익위원안 표결이 아니라 <strong>노·사·공 합의</strong>로 이뤄졌는데, 1988년 최저임금 제도 도입 이후 17년 만에, 역대 여덟 번째로 나온 합의 결정이라는 점에서 화제가 됐다.</p>
+
+    <div class="formula">
+      <div class="f-main">2026년 최저임금 = 시급 10,320원 × 209시간(월 환산 기준시간) = 월 2,156,880원</div>
+      <p class="f-note">4대보험 공제 후 세후 실수령액은 부양가족 수 등에 따라 약 190만~196만원 수준으로 알려져 있다.</p>
+    </div>
+
+    <h2 class="sec">3. 산입범위 — 최저임금을 계산할 때 무엇을 더하고 무엇을 빼나</h2>
+
+    <p>최저임금법상 산입 원칙은 <strong>근로기준법상 임금 중 매월 1회 이상 정기적으로, 일률적으로, 통화로 지급되는 임금</strong>이다. 이 원칙 하나로 포함·제외가 갈린다.</p>
+
+    <div class="flow">
+      <div class="flow-box"><div class="ft">✅ 포함</div><div class="fd">기본급, 직책수당처럼 매달 같은 조건으로 지급되는 수당, 2024년부터는 정기상여금·현금성 복리후생비 전액</div></div>
+      <div class="flow-box"><div class="ft">❌ 제외</div><div class="fd">연장·야간·휴일근로수당, 연차수당 등 소정근로시간 외 대가, 정기성 없는 상여금, 식비·교통비 등을 현물로 지급하는 경우</div></div>
+    </div>
+
+    <p>복리후생비의 예로는 식비·교통비·숙박비·가족수당·처우개선비 등이 있다. 이런 항목이 <strong>현금으로, 매월 정기적으로</strong> 지급되면 산입 대상이고, 명절에 한 번만 주거나 현물(식권, 통근버스)로 제공되면 산입되지 않는다.</p>
+
+    <h2 class="sec">4. 왜 하필 상여금·복리후생비가 논란이었나 — 2019~2024년 단계적 확대</h2>
+
+    <p>지금은 상여금·복리후생비가 전액 산입되지만 처음부터 그랬던 것은 아니다. 2018년 최저임금법 개정으로 <strong>2019년부터 2024년까지 매년 산입 비율을 넓히는 단계적 개편</strong>이 시행됐다. 이전에는 정기상여금·복리후생비를 얼마를 받든 최저임금 계산에서 아예 빼줬는데, 그렇게 되면 기본급은 낮게 두고 상여금·수당 명목을 키워 최저임금 인상 부담을 회피하는 사업장이 생길 수 있다는 문제의식에서 나온 조치였다.</p>
+
+    <div class="infographic-section">
+      <h3>📊 상여금·복리후생비 산입범위 단계적 확대 (2019~2024년)</h3>
+      <div class="bar-chart">
+        <div class="bar-item"><div class="bar-label"><span>2019년</span><span class="val">월 최저임금 25%(상여금)·7%(복리후생비) 초과분만 산입</span></div><div class="bar-track"><div class="bar-fill bar-cyan" style="width:25%">초과분만</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>2020년</span><span class="val">20%·5% 초과분 산입</span></div><div class="bar-track"><div class="bar-fill bar-cyan" style="width:40%">초과분만</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>2021년</span><span class="val">15%·3% 초과분 산입</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:55%">초과분만</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>2022년</span><span class="val">10%·2% 초과분 산입</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:70%">초과분만</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>2023년</span><span class="val">5%·1% 초과분 산입</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:88%">초과분만</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>2024년~</span><span class="val">전액(100%) 산입</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:100%">전액 산입</div></div></div>
+      </div>
+      <p class="note">기준연도가 지날수록 '미산입 허용 비율'(기준 초과분만 산입)이 낮아지는 방식으로 설계됐고, 2024년부터 미산입 허용 비율이 0%가 되면서 사실상 전액이 계산에 들어간다. 근거: 최저임금법 제6조 제4항, 최저임금법 시행령 제5조의2, 고용노동부.</p>
+    </div>
+
+    <p class="note" style="margin-top:-10px;">※ 연도별 세부 비율은 사업장 유형에 따라 예외가 있을 수 있으므로 정확한 수치는 최저임금위원회·고용노동부 공식 자료로 재확인이 필요하다.</p>
+
+    <h2 class="sec">5. 숨겨진 이면 — 산입범위 확대가 인상 효과를 흡수한다는 노동계 주장</h2>
+
+    <p>이 개편은 시행 첫해부터 논쟁거리였다. 경영계는 "상여금·수당까지 넓게 인정해야 실제 지급 임금과 법정 최저임금 사이의 괴리가 줄어든다"는 입장이었고, 노동계는 "산입범위를 넓히면 최저임금이 올라도 그만큼 기본급 인상 압력이 사라져 <strong>인상 효과가 사실상 무력화된다</strong>"고 반박했다. 한 하청업체 노동자는 언론 인터뷰에서 "최저임금법 개정으로 최저임금이 올라도 월급은 오르지 않았다"고 말하기도 했다.</p>
+
+    <div class="pullquote">최저임금이 오른다는 뉴스와 내 월급이 오른다는 사실 사이에는, 무엇을 최저임금으로 셀 것인가라는 계산 기준이 끼어 있다.</div>
+
+    <p>실제로 한 노동조합이 소속 사업장 급여명세서를 연도별로 비교 분석한 결과, 명목 최저임금 인상률이 두 자릿수를 기록한 해에도 실제 통장에 입금되는 금액은 큰 차이가 없었다는 조사 결과가 나오기도 했다. 기본급을 낮게 유지한 채 이미 지급하던 상여금·수당을 최저임금 계산에 끌어와 '위반 아님'으로 만드는 구조가 가능해졌기 때문이다.</p>
+
+    <h2 class="sec">6. 숫자로 본 최저임금 미달 — 여전히 열 명 중 한 명 넘게 못 받는다</h2>
+
+    <p>산입범위를 넓혀 위반 판정 기준을 완화했는데도 최저임금에 미달하는 노동자는 여전히 적지 않다. 2024년 기준 법정 최저임금(시급 9,860원)에 못 미치는 임금을 받은 노동자는 <strong>약 276만 1천 명</strong>으로, 전체 임금노동자 중 <strong>최저임금 미만율 12.5%</strong>였다. 전년보다 1.2%포인트 낮아지긴 했지만, 여전히 여덟 명 중 한 명꼴로 법정 기준에 못 미치는 임금을 받고 있었다는 뜻이다.</p>
+
+    <div class="impact-grid">
+      <div class="impact-card"><span class="impact-num">10,320원</span><span class="impact-label">2026년<br>최저시급</span></div>
+      <div class="impact-card"><span class="impact-num">2.9%</span><span class="impact-label">2025년 대비<br>인상률</span></div>
+      <div class="impact-card"><span class="impact-num">276.1만명</span><span class="impact-label">2024년 최저임금<br>미달 노동자 수</span></div>
+      <div class="impact-card"><span class="impact-num">12.5%</span><span class="impact-label">2024년<br>최저임금 미만율</span></div>
+    </div>
+
+    <p class="note">※ 최저임금 미만율은 고용형태별근로실태조사·경제활동인구부가조사 원자료를 바탕으로 추정한 값으로, 조사 자체가 최저임금 위반 실태 파악을 목적으로 설계되지 않아 '위반율'과 동일시할 수는 없다는 것이 통계 작성 기관의 설명이다.</p>
+
+    <h2 class="sec">7. 나에게 미치는 영향 — 임금명세서에서 직접 확인하는 방법</h2>
+
+    <ul class="plain">
+      <li><strong>기본급만 보고 최저임금 위반 여부를 판단하지 않는다.</strong> 매월 정기적으로 나오는 상여금·복리후생비 항목까지 더해서 시급으로 환산해야 정확하다.</li>
+      <li><strong>연장·야간·휴일수당은 계산에서 빼고 봐야 한다.</strong> 이 항목이 많아 총액이 커 보여도 최저임금 준수 여부와는 무관하다.</li>
+      <li><strong>명절 상여금처럼 부정기적으로 받는 돈은 산입 대상이 아니다.</strong> 매월 지급되는지가 핵심 기준이다.</li>
+      <li><strong>계산이 애매하면 최저임금 모의계산기(고용노동부·nodong.kr 등)에 항목별 금액을 넣어 직접 환산</strong>해 보고, 미달이 의심되면 사업장 관할 지방고용노동관서에 확인·신고할 수 있다.</li>
+    </ul>
+
+    <div class="warnbox">
+      <div class="wt">⚠️ 산입범위와 별개로, 최저임금 자체를 밑도는 것은 명백한 위법이다</div>
+      <p>산입범위 논쟁은 "무엇을 셀 것인가"에 대한 것이지, 셈을 다 마친 뒤에도 최저임금에 못 미치면 사업주는 최저임금법 위반으로 형사처벌(3년 이하 징역 또는 2천만원 이하 벌금) 대상이 된다. 계산이 복잡하다는 이유로 미달 여부 확인 자체를 포기할 필요는 없다.</p>
+    </div>
+
+    <h2 class="sec">8. 전망과 행동 제안</h2>
+
+    <p>산입범위 확대는 2024년으로 법 개정에 따른 단계적 이행이 끝나, 앞으로는 <strong>범위 자체가 다시 바뀔 가능성은 크지 않다.</strong> 대신 매년 반복되는 것은 최저임금 액수를 둘러싼 노사 협상이고, 2026년처럼 노·사·공 합의로 결정되는 경우와 공익위원 표결로 결정되는 경우 모두 다음 해 산입 기준 자체는 그대로 유지된다는 점을 알아두면 매년 벌어지는 "최저임금은 올랐다는데 왜 그대로냐"는 혼란을 줄일 수 있다.</p>
+
+    <p>당장 할 수 있는 일은 <strong>내 임금명세서를 항목별로 뜯어보는 것</strong>이다. 기본급, 정기수당, 상여금, 복리후생비를 구분해 매월 정기 지급분만 합산하고 209시간(또는 실제 소정근로시간)으로 나눠 보면 내가 받는 실질 시급이 10,320원을 넘는지 스스로 확인할 수 있다. 이 계산에서 애매한 항목이 있다면 고용노동부 최저임금 모의계산기를 활용하거나 관할 노동청에 문의하는 것이 가장 확실하다.</p>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#최저임금산입범위</span>
+      <span class="hashtag">#최저임금계산법</span>
+      <span class="hashtag">#2026년최저임금</span>
+      <span class="hashtag">#최저임금상여금포함</span>
+      <span class="hashtag">#최저임금복리후생비</span>
+      <span class="hashtag">#최저임금법시행령</span>
+      <span class="hashtag">#최저임금미만율</span>
+      <span class="hashtag">#최저시급월급환산</span>
+      <span class="hashtag">#임금명세서확인</span>
+      <span class="hashtag">#최저임금위반신고</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://www.moel.go.kr/policy/policydata/view.do?bbs_seq=20180600351" target="_blank" rel="noopener">고용노동부 — 최저임금 산입범위 관련 개정 최저임금법 설명자료: 2019~2024년 단계적 확대 원칙과 근거</a>
+      <a href="https://www.law.go.kr/LSW/lsInfoP.do?urlMode=lsInfoP&lsId=000129" target="_blank" rel="noopener">국가법령정보센터 — 최저임금법: 제6조(최저임금의 효력), 산입 임금의 범위</a>
+      <a href="https://www.minimumwage.go.kr/minWage/policy/underMain.do" target="_blank" rel="noopener">최저임금위원회 — 최저임금 현황: 미만율 정의와 조사 방법론, 연도별 미만율 추이</a>
+      <a href="https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=18144" target="_blank" rel="noopener">고용노동부 — 2026년 적용 최저임금 시간급 10,320원 결정 발표</a>
+      <a href="https://www.mt.co.kr/economy/2026/06/23/2026062316453923068" target="_blank" rel="noopener">머니투데이(2026. 6. 23.) — 2026년 최저임금 노·사·공 합의 결정 과정 보도</a>
+      <a href="https://www.labortoday.co.kr/news/articleView.html?idxno=222140" target="_blank" rel="noopener">매일노동뉴스 — 최저임금 산입범위 확대 이후 기본급 정체와 인상 효과 무력화 논란 취재</a>
+      <a href="https://www.khan.co.kr/article/202505140600091" target="_blank" rel="noopener">경향신문(2025. 5. 14.) — 2024년 최저임금 미달 노동자 276만 1천명, 미만율 12.5% 보도</a>
+    </div>
+
+    <p class="disclaimer">
+      ※ 본 아티클은 고용노동부·최저임금위원회·국가법령정보센터의 공개 자료와 이를 인용한 언론 보도를 바탕으로 작성한 정보성 콘텐츠이며 개별 사안에 대한 법률 상담이 아닙니다. <strong>최저임금액과 산입범위 세부 기준은 매년 고시·법령 개정에 따라 달라질 수 있으므로 적용 시점의 고용노동부·최저임금위원회 공식 자료를 반드시 확인하시기 바랍니다.</strong> 본문의 연도별 산입 비율표(2019년 25%·7%~2024년 전액)는 여러 공개 자료가 공통으로 인용하는 단계적 확대 원칙을 정리한 것으로, 세부 수치는 사업장 유형이나 예외 규정에 따라 다를 수 있어 정확한 적용은 관련 법령 원문으로 재확인이 필요합니다. 최저임금 미만율은 표본조사에 근거한 추정치로 실제 위반 건수와 다를 수 있습니다. 구체적인 임금 계산이나 위반 신고가 필요한 경우 고용노동부 고객상담센터(☎1350) 또는 관할 지방고용노동관서에 문의하시기 바랍니다.
+    </p>
+
+  </div>
+<!-- HUB:RELATED:BEGIN -->
+<style>
+.hub-bc{font-size:13px;color:#5b6672;margin:0 0 18px;font-family:'Noto Sans KR',sans-serif}
+.hub-bc a{color:#5b6672;text-decoration:none}.hub-bc a:hover{text-decoration:underline}
+.hub-rel{margin:38px 0 6px;padding:20px 22px;border:1px solid #e3e8ee;border-radius:10px;
+  background:#fafbfc;font-family:'Noto Sans KR',sans-serif}
+.hub-rel h2{font-size:15px;margin:0 0 14px;font-weight:700;color:#12202e;
+  font-family:'Noto Sans KR',sans-serif;border:0;padding:0}
+.hub-rel ul{list-style:none;padding:0;margin:0}
+.hub-rel li{padding:7px 0;font-size:14.5px;line-height:1.55}
+.hub-rel li a{color:#12202e;text-decoration:none}
+.hub-rel li a:hover{color:#1a5f8a;text-decoration:underline}
+.hub-rel .hub-more{margin:14px 0 0;font-size:13.5px}
+.hub-rel .hub-more a{color:#1a5f8a;text-decoration:none;font-weight:700}
+</style>
+<aside class="hub-rel">
+  <h2>같은 분야 다른 글 — 노동·급여</h2>
+  <ul>
+    <li><a href="/2026-08-17-통상임금-계산법">통상임금 계산법 — 포함 항목과 평균임금 차이, 시간급 산정 기준</a></li>
+    <li><a href="/2026-09-02-육아휴직-급여-계산법">육아휴직 급여 계산법 — 월별 상한액과 사후지급금 폐지 시기</a></li>
+  </ul>
+  <p class="hub-more"><a href="/labor/">노동·급여 전체 보기 →</a></p>
+</aside>
+<!-- HUB:RELATED:END -->
+</article>
+</body>
+</html>
