@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>수능 등급컷 계산법 — 표준점수와 백분위 차이 | 교육·입시</title>
+  <meta name="description" content="수능 성적표에는 원점수 대신 표준점수·백분위·등급 세 숫자가 찍힌다. 표준점수는 (원점수−평균)÷표준편차×20+100(국어·수학), ×10+50(탐구) 공식으로 산출되고, 백분위는 자신보다 낮은 표준점수를 받은 응시자 비율, 등급은 표준점수 순으로 줄 세워 누적 비율 4%·11%·23%…로 끊는다. 국어·수학은 선택과목 조정을 거쳐 같은 만점도 선택과목별로 표준점수가 달라지고, 영어·한국사는 원점수 그대로 등급을 매기는 절대평가라는 점까지 계산 방식을 정리했다.">
+  <meta name="keywords" content="수능 등급컷 계산법, 수능 표준점수 계산법, 수능 백분위 계산, 수능 등급 산출 방식, 표준점수 백분위 차이, 수능 선택과목 유불리, 수능 영어 등급 기준, 수능 한국사 등급, 수능 성적표 읽는법, 수능 등급 구분 비율">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f2f4f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #311b92 0%, #5e35b1 45%, #7b1fa2 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #d6c7e6; color: #4a148c; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #f3e5f5; border-left: 5px solid #6a1b9a; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #6a1b9a; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #4a148c; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #6a1b9a; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #4a148c; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #f3e5f5; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #6a1b9a; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #4a148c; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #f5eefa; border-left: 4px solid #7e57c2; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #4a148c; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f8f4fb; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #4a148c; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #4a148c; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #e6dcef; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-blue { background: linear-gradient(90deg, #4a148c, #9575cd); }
+    .bar-teal { background: linear-gradient(90deg, #004d40, #00897b); }
+    .bar-amber { background: linear-gradient(90deg, #e65100, #f9a825); }
+    .bar-red { background: linear-gradient(90deg, #b71c1c, #e53935); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #ded0e8; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #f3e5f5; color: #4a148c; font-weight: 700; }
+    table.rate td.up { color: #4a148c; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #00695c; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #6a1b9a; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #4a148c; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #d6c7e6; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #4a148c; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #d6c7e6; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #6a1b9a; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .formula { background: #faf5fd; border: 1.5px dashed #7e57c2; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 16.5px; font-weight: 800; color: #4a148c; line-height: 1.8; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #7e57c2; margin-top: 10px; margin-bottom: 0; }
+    .warnbox { background: #fff8e1; border-left: 5px solid #f9a825; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 26px 0; }
+    .warnbox .wt { font-size: 14px; font-weight: 800; color: #e65100; margin-bottom: 8px; }
+    .warnbox p { font-size: 15px; color: #5d4037; margin-bottom: 0; word-break: keep-all; }
+    .case { background: #fff; border: 1.5px solid #d6c7e6; border-left: 5px solid #6a1b9a; border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; }
+    .case .ct { font-size: 13.5px; font-weight: 800; color: #4a148c; margin-bottom: 6px; letter-spacing: 0.3px; }
+    .case p { font-size: 14.8px; margin-bottom: 8px; }
+    .case p:last-child { margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #f3e5f5; color: #6a1b9a; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #6a1b9a; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<!-- SEO:AUTO BEGIN -->
+<meta property="article:published_time" content="2026-09-24T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-09-24T09:00:00+09:00">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "수능 등급컷 계산법 — 표준점수와 백분위 차이",
+  "description": "표준점수는 (원점수−평균)÷표준편차 공식으로 만들어지고, 백분위와 등급은 그 표준점수 순으로 정해진다. 국어·수학은 선택과목 조정을 거쳐 같은 만점도 표준점수가 갈리고, 영어·한국사는 원점수 그대로 등급이 매겨지는 절대평가라는 차이를 정리했다.",
+  "url": "https://sangsang.ephseed.com/2026-09-24-%EC%88%98%EB%8A%A5-%EB%93%B1%EA%B8%89%EC%BB%B7-%EA%B3%84%EC%82%B0%EB%B2%95",
+  "datePublished": "2026-09-24T09:00:00+09:00",
+  "dateModified": "2026-09-24T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-09-24-%EC%88%98%EB%8A%A5-%EB%93%B1%EA%B8%89%EC%BB%B7-%EA%B3%84%EC%82%B0%EB%B2%95">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="수능 등급컷 계산법 — 표준점수와 백분위 차이 | 교육·입시">
+<meta property="og:description" content="수능 성적표에는 원점수 대신 표준점수·백분위·등급 세 숫자가 찍힌다. 표준점수는 (원점수−평균)÷표준편차×20+100(국어·수학), ×10+50(탐구) 공식으로 산출되고, 백분위는 자신보다 낮은 표준점수를 받은 응시자 비율, 등급은 표준점수 순으로 줄 세워 누적 비율 4%·11%·23%…로 끊는다. 국어·수학은 선택과목 조정을 거쳐 같은 만점도 선택과목별로 표준점수가 달라지고, 영어·한국사는 원점수 그대로 등급을 매기는 절대평가라는 점까지 계산 방식을 정리했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-09-24-%EC%88%98%EB%8A%A5-%EB%93%B1%EA%B8%89%EC%BB%B7-%EA%B3%84%EC%82%B0%EB%B2%95">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-09-24T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-09-24T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N28MJLW4W9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-N28MJLW4W9");</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-EVlth33UH8CTDu2u"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-KMCr4AoIjIDsi9XA"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-qqfX36xk8gz6faM6"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+<article class="article-wrap">
+<!-- HUB:BREADCRUMB:BEGIN -->
+<nav class="hub-bc"><a href="/">생생 정보통</a> &rsaquo; <a href="/edu/">교육·학자금</a></nav>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "생생 정보통", "item": "https://sangsang.ephseed.com/"}, {"@type": "ListItem", "position": 2, "name": "교육·학자금", "item": "https://sangsang.ephseed.com/edu/"}]}</script>
+<!-- HUB:BREADCRUMB:END -->
+  <header class="hero">
+    <div class="category-badge">🎓 교육 · 입시</div>
+    <h1>수능 등급컷 계산법 —<br>표준점수와 백분위 차이</h1>
+    <p class="hero-sub">수능 성적표를 받아 든 수험생이 가장 먼저 마주치는 혼란은 "원점수는 어디 갔지"다. 성적표에는 원점수 대신 <b>표준점수·백분위·등급</b> 세 숫자만 찍혀 있다. 셋 다 같은 원점수에서 출발하지만 계산 방식이 다르고, 국어·수학은 선택과목 때문에 같은 만점이라도 표준점수가 갈린다. 세 숫자가 어떤 공식으로 만들어지는지 그대로 펼쳐 정리했다.</p>
+    <div class="hero-meta">
+      <span>📅 2026년 9월 24일</span>
+      <span>✍️ 생생 정보통 정책팀</span>
+      <span>🎓 교육 · 입시</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+
+    <div class="summary-box">
+      <h2>핵심 요약</h2>
+      <ul>
+        <li><strong>표준점수</strong>는 (원점수−평균)÷표준편차×20+100(국어·수학, 0~200점) 또는 ×10+50(탐구, 0~100점) 공식으로 계산된다. 시험이 어려워 평균이 낮을수록 표준점수 최고점은 올라간다.</li>
+        <li><strong>백분위</strong>는 전체 응시자 중 자신보다 낮은 표준점수를 받은 사람의 비율(%)이고, <strong>등급</strong>은 표준점수 순으로 줄을 세운 뒤 <strong>누적 비율 4%·11%·23%·40%·60%·77%·89%·96%</strong> 여덟 개 경계로 9등급을 나눈 것이다.</li>
+        <li>국어·수학은 공통과목+선택과목 구조라 <strong>선택과목 조정 절차</strong>를 거친다. 그 결과 같은 만점이라도 어떤 선택과목을 택했느냐에 따라 표준점수가 달라지며, 실제로 11점까지 벌어진 해도 있다.</li>
+        <li>영어·한국사·제2외국어/한문은 <strong>절대평가</strong>다. 표준점수·백분위 없이 <strong>원점수 구간만으로</strong> 등급이 정해지며, 영어는 10점 단위, 한국사는 5점 단위로 등급이 갈린다.</li>
+      </ul>
+    </div>
+
+    <h2 class="sec">1. 원점수가 성적표에서 사라지는 이유</h2>
+
+    <p>수능 국어·수학·탐구 영역은 해마다 난이도가 다르다. 어느 해는 쉽게 출제돼 평균 원점수가 높고, 어느 해는 어렵게 출제돼 평균이 낮다. 이 상태에서 원점수를 그대로 대학에 제공하면 "쉬운 해의 80점"과 "어려운 해의 80점"이 같은 실력으로 취급되는 문제가 생긴다. 같은 해 안에서도 응시자가 국어·수학의 여러 선택과목 중 하나를 고르기 때문에, 원점수만으로는 과목 간 난이도 차이를 구분할 수 없다.</p>
+
+    <p>그래서 평가원은 원점수를 그대로 공개하지 않고, 응시자 집단 안에서의 상대적 위치를 나타내는 <strong>표준점수·백분위·등급</strong> 세 지표로 바꿔 성적표에 싣는다. 세 지표 모두 원점수에서 출발하지만 만들어지는 순서가 있다. <strong>먼저 표준점수를 계산하고, 그 표준점수를 기준으로 백분위와 등급이 정해진다.</strong> 이 순서를 알아 두면 세 숫자가 왜 항상 같은 방향으로 움직이는지 이해할 수 있다.</p>
+
+    <h2 class="sec">2. 표준점수는 이렇게 계산된다</h2>
+
+    <p>표준점수는 원점수를 평균과 표준편차를 이용해 변환한 값이다. 국어·수학과 탐구영역의 공식이 다르다.</p>
+
+    <div class="formula">
+      <p class="f-main">국어·수학 표준점수 = (원점수 − 평균) ÷ 표준편차 × 20 + 100</p>
+      <p class="f-note">평균을 100점으로 맞춘 값. 이론상 범위는 0~200점</p>
+    </div>
+
+    <div class="formula">
+      <p class="f-main">탐구영역 표준점수 = (원점수 − 평균) ÷ 표준편차 × 10 + 50</p>
+      <p class="f-note">평균을 50점으로 맞춘 값. 이론상 범위는 0~100점</p>
+    </div>
+
+    <p>공식의 의미는 단순하다. <strong>원점수가 평균과 같으면 표준점수는 항상 100점(탐구는 50점)</strong>이 나온다. 난이도와 관계없이 "평균을 한 기준점으로 고정"해 두는 셈이다. 원점수가 평균보다 높을수록, 그리고 표준편차(점수가 퍼진 정도)가 작을수록 표준점수는 더 크게 올라간다. 즉 <strong>같은 원점수라도 시험이 어려워 평균이 낮았던 해에는 표준점수가 더 높게 나온다.</strong> "국어 표준점수 최고점이 150점을 넘었다"는 기사가 나오는 해는 그만큼 그해 시험이 어려워 평균과 표준편차가 낮았다는 뜻이다.</p>
+
+    <div class="case">
+      <div class="ct">📌 계산 예시 — 원점수 84점, 평균 72점, 표준편차 15인 경우(국어·수학)</div>
+      <p>표준점수 = (84 − 72) ÷ 15 × 20 + 100 = 12 ÷ 15 × 20 + 100 = 16 + 100 = <strong>116점</strong></p>
+      <p>같은 원점수라도 그해 평균·표준편차가 다르면 결과값은 달라진다. 실제 값은 매 시험 채점 후 평가원이 공개하는 평균·표준편차를 넣어야 나온다.</p>
+    </div>
+
+    <h2 class="sec">3. 백분위와 등급은 표준점수 순으로 정해진다</h2>
+
+    <p>표준점수가 나오면 그 값을 기준으로 전체 응시자를 한 줄로 세운다. <strong>백분위</strong>는 이 줄에서 자신보다 낮은 표준점수를 받은 응시자가 전체의 몇 %인지를 나타낸다. 백분위 90이면 응시자의 90%가 나보다 낮은 표준점수를 받았다는 뜻이다.</p>
+
+    <p><strong>등급</strong>은 같은 줄을 아홉 구간으로 잘라 매긴다. 국어·수학·탐구·제2외국어/한문은 표준점수를 기준으로 누적 비율에 따라 1등급부터 9등급까지 나뉘며, 구간 경계는 다음과 같다.</p>
+
+    <table class="rate">
+      <thead>
+        <tr><th>등급</th><th>누적 비율(상위 기준)</th><th>해당 등급의 비율 폭</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1등급</td><td class="up">~4%</td><td>4%p</td></tr>
+        <tr><td>2등급</td><td>4~11%</td><td>7%p</td></tr>
+        <tr><td>3등급</td><td>11~23%</td><td>12%p</td></tr>
+        <tr><td>4등급</td><td>23~40%</td><td>17%p</td></tr>
+        <tr><td>5등급</td><td>40~60%</td><td>20%p</td></tr>
+        <tr><td>6등급</td><td>60~77%</td><td>17%p</td></tr>
+        <tr><td>7등급</td><td>77~89%</td><td>12%p</td></tr>
+        <tr><td>8등급</td><td>89~96%</td><td>7%p</td></tr>
+        <tr><td>9등급</td><td>96~100%</td><td class="down">4%p</td></tr>
+      </tbody>
+    </table>
+    <p class="note">※ 동점자는 같은 등급으로 묶여 함께 올라가므로, 특정 등급의 실제 인원 비율은 표의 폭보다 커질 수 있다.</p>
+
+    <div class="infographic-section">
+      <h3>📊 9등급 비율 — 상위 1등급 4%에서 하위 9등급 4%까지</h3>
+      <div class="bar-chart">
+        <div class="bar-item"><div class="bar-label"><span>1등급</span><span class="val">누적 4%</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:4%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>2등급</span><span class="val">누적 11%</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:11%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>3등급</span><span class="val">누적 23%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:23%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>4등급</span><span class="val">누적 40%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:40%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>5등급</span><span class="val">누적 60%</span></div><div class="bar-track"><div class="bar-fill bar-amber" style="width:60%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>6등급</span><span class="val">누적 77%</span></div><div class="bar-track"><div class="bar-fill bar-amber" style="width:77%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>7등급</span><span class="val">누적 89%</span></div><div class="bar-track"><div class="bar-fill bar-red" style="width:89%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>8등급</span><span class="val">누적 96%</span></div><div class="bar-track"><div class="bar-fill bar-red" style="width:96%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>9등급</span><span class="val">누적 100%</span></div><div class="bar-track"><div class="bar-fill bar-red" style="width:100%"></div></div></div>
+      </div>
+      <p class="note">막대 길이는 상위 누적 비율. 5등급 구간(40~60%)이 20%p로 가장 넓고, 1등급·9등급이 4%p로 가장 좁다.</p>
+    </div>
+
+    <h2 class="sec">4. 영어·한국사는 계산 방식 자체가 다르다 — 절대평가</h2>
+
+    <p>모든 영역이 표준점수·백분위로 상대평가되는 것은 아니다. <strong>영어, 한국사, 제2외국어/한문</strong> 세 영역은 <strong>절대평가</strong>다. 다른 응시자 성적과 비교하지 않고 <strong>자신의 원점수가 어느 구간에 속하는지만으로</strong> 등급이 정해지며, 성적표에 표준점수·백분위 자체가 표기되지 않는다.</p>
+
+    <table class="rate">
+      <thead>
+        <tr><th>등급</th><th>영어(100점 만점)</th><th>한국사(50점 만점)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1등급</td><td class="up">90점 이상</td><td class="up">40점 이상</td></tr>
+        <tr><td>2등급</td><td>80~89점</td><td>35~39점</td></tr>
+        <tr><td>3등급</td><td>70~79점</td><td>30~34점</td></tr>
+        <tr><td>4등급</td><td>60~69점</td><td>25~29점</td></tr>
+        <tr><td>5등급</td><td>50~59점</td><td>20~24점</td></tr>
+        <tr><td>6등급</td><td>40~49점</td><td>15~19점</td></tr>
+        <tr><td>7등급</td><td>30~39점</td><td>10~14점</td></tr>
+        <tr><td>8등급</td><td>20~29점</td><td>5~9점</td></tr>
+        <tr><td>9등급</td><td class="down">19점 이하</td><td class="down">4점 이하</td></tr>
+      </tbody>
+    </table>
+    <p class="note">영어는 10점 단위, 한국사는 5점 단위로 등급이 갈린다 — 한국사가 50점 만점(영어의 절반)인 만큼 간격도 정확히 절반이다.</p>
+
+    <p>절대평가는 응시자 전체 실력이 올라가면 <strong>1등급 인원 자체가 늘어날 수 있다</strong>는 점에서 상대평가와 근본적으로 다르다. 상대평가 영역은 누가 잘 보든 못 보든 1등급이 상위 4% 안팎으로 고정되지만, 절대평가 영역은 응시자 대부분이 90점을 넘기면 1등급 비율이 4%를 훌쩍 넘을 수도, 반대로 시험이 어려우면 뚝 떨어질 수도 있다.</p>
+
+    <h2 class="sec">5. 숨겨진 이면 — 같은 만점인데 표준점수가 다른 이유</h2>
+
+    <p>국어·수학은 <strong>공통과목 + 선택과목</strong> 구조다. 국어는 공통과목(독서·문학)에 화법과작문·언어와매체 중 하나를, 수학은 공통과목(수학Ⅰ·수학Ⅱ)에 확률과통계·미적분·기하 중 하나를 얹는다. 문제는 선택과목마다 응시생 집단의 실력 분포와 난이도가 다르다는 점이다. 이를 그대로 두면 상대적으로 어려운 과목을 택한 응시생이 손해를 볼 수 있어, 평가원은 아래와 같은 조정 절차를 거친다.</p>
+
+    <div class="steps">
+      <div class="step"><div class="step-t">① 선택과목 집단별 공통과목 원점수 평균·표준편차 산출</div><div class="step-d">같은 선택과목을 고른 응시생들이 공통과목에서 받은 원점수의 평균·표준편차를 따로 계산한다.</div></div>
+      <div class="step"><div class="step-t">② 선택과목 조정원점수 산출</div><div class="step-d">①에서 구한 공통과목 평균·표준편차를 기준으로 선택과목 원점수를 다시 조정한다.</div></div>
+      <div class="step"><div class="step-t">③ 표준화점수 변환</div><div class="step-d">공통과목 원점수와 선택과목 조정원점수를 평균·표준편차가 같은 표준화점수로 각각 바꾼다.</div></div>
+      <div class="step"><div class="step-t">④ 전체 응시자 대상 최종 표준점수 산출</div><div class="step-d">응시자 전체를 대상으로 최종 표준점수를 산출해 성적표에 기재한다.</div></div>
+    </div>
+
+    <p>이 절차는 유불리를 <strong>완화</strong>하기 위한 장치이지, 완전히 없애는 장치는 아니다. 실제로 2024학년도 수능(2023년 11월 시행)에서는 수학 만점 기준 표준점수가 <strong>미적분 148점, 기하 142점, 확률과통계 137점</strong>으로 최대 11점까지 벌어졌다. 전년도 격차(3점)보다 8점이나 커져 "역대 최고 격차"로 보도됐다. 이듬해인 2025학년도에는 격차가 5점으로 줄었다는 후속 보도도 있었다. 격차의 크기는 해마다 시험 난이도와 응시자 구성에 따라 달라지지만, <strong>같은 만점이라도 선택과목에 따라 표준점수가 갈리는 구조 자체는 매년 반복된다.</strong></p>
+
+    <div class="pullquote">같은 100점을 받아도 어떤 선택과목을 골랐는지에 따라 성적표에 찍히는 표준점수는 다르다. 이과 수험생이 주로 택하는 미적분·기하가 문과 수험생이 많이 택하는 확률과통계보다 대체로 유리하다는 분석이 매년 반복되는 이유다.</div>
+
+    <h2 class="sec">6. 나에게 미치는 영향 — 성적표를 볼 때 확인할 것</h2>
+
+    <ul class="plain">
+      <li><strong>원점수만 보고 등급을 짐작하지 않는다.</strong> 같은 원점수라도 해마다, 과목마다 표준점수·등급이 달라진다. 반드시 그해 채점 결과의 평균·표준편차를 함께 확인해야 한다.</li>
+      <li><strong>국어·수학 선택과목은 유불리를 감안해 고른다.</strong> 조정 절차가 있어도 격차가 완전히 사라지지 않으므로, 전공에 필요한 과목인지와 함께 예년 표준점수 격차 추이를 참고할 필요가 있다.</li>
+      <li><strong>영어·한국사는 점수 관리 전략이 다르다.</strong> 절대평가이므로 다른 응시자와 무관하게 정해진 구간만 넘기면 등급이 확정된다. 1등급 커트라인(90점·40점)을 넘기는 데 집중하면 된다.</li>
+      <li><strong>대학마다 반영 지표가 다르다.</strong> 어떤 대학·전형은 표준점수를, 어떤 곳은 백분위나 변환표준점수를 쓴다. 지원 대학의 모집요강에서 반영 지표를 먼저 확인해야 한다.</li>
+    </ul>
+
+    <h2 class="sec">7. 전망과 행동 제안</h2>
+
+    <p>표준점수·백분위·등급이라는 세 지표는 결국 <strong>난이도와 선택과목이 다른 시험을 하나의 잣대로 비교하기 위한 장치</strong>다. 공식 자체는 해마다 바뀌지 않지만, 그 공식에 들어가는 평균·표준편차 값은 매 시험 난이도에 따라 달라지므로 "몇 점이면 몇 등급"이라는 절대적인 기준은 존재하지 않는다. 선택과목 조정 절차 역시 유불리를 줄이려는 시도일 뿐, 구조적으로 완전히 없애지는 못한다는 점이 매년 보도되는 격차 수치로 확인된다.</p>
+
+    <p>수험생이 지금 할 수 있는 일은 공식을 외우는 것보다 <strong>구조를 이해하는 것</strong>이다. 표준점수는 평균·표준편차에서, 백분위와 등급은 표준점수 순위에서 나온다는 순서를 알면, 가채점 단계에서 나오는 예상 등급컷 자료를 볼 때도 그 숫자가 어디서 온 것인지 스스로 판단할 수 있다. 지원하려는 대학이 어떤 지표를 반영하는지는 모집요강에서, 그해 평균·표준편차는 한국교육과정평가원의 채점 결과 발표에서 확인하는 것이 가장 정확하다.</p>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#수능등급컷계산법</span>
+      <span class="hashtag">#수능표준점수계산법</span>
+      <span class="hashtag">#수능백분위</span>
+      <span class="hashtag">#수능등급산출방식</span>
+      <span class="hashtag">#수능선택과목유불리</span>
+      <span class="hashtag">#수능영어절대평가</span>
+      <span class="hashtag">#수능한국사등급</span>
+      <span class="hashtag">#표준점수백분위차이</span>
+      <span class="hashtag">#수능성적표읽는법</span>
+      <span class="hashtag">#한국교육과정평가원</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://www.newsis.com/view/NISX20251114_0003402990" target="_blank" rel="noopener">뉴시스 — 표준점수·백분위 용어 설명: (원점수−평균)÷표준편차×20+100(국어·수학)·×10+50(탐구) 공식, 등급 누적비율 4%·11%·23%</a>
+      <a href="https://www.jinhak.com/jh/high3/univ-entrance-info/ipsi-analysis/ipsi-strategy/100000515" target="_blank" rel="noopener">진학사 — 원점수 없이 표준점수만 주는 이유와 절대평가 등급 구간</a>
+      <a href="https://www.veritas-a.com/news/articleView.html?idxno=483478" target="_blank" rel="noopener">베리타스알파 — 입시용어 따라잡기: 원점수·등급·표준점수·백분위 정의</a>
+      <a href="https://m.dhnews.co.kr/news/view/179524421752628" target="_blank" rel="noopener">동아일보(단비뉴스) — 평가원 "공통과목 점수로 선택과목 점수 조정해 유불리 완화": 4단계 조정 절차</a>
+      <a href="https://www.hankyung.com/article/202312083473Y" target="_blank" rel="noopener">한국경제(2023. 12. 8.) — 2024학년도 수능 수학 미적·확통 표준점수 차 11점, 역대 최대(미적분 148·기하 142·확통 137)</a>
+      <a href="https://www.sisa-news.com/mobile/article.html?no=249115" target="_blank" rel="noopener">시사뉴스 — 2025학년도 수능 수학 미적분 표준점수 5점 높아, 격차 축소 보도</a>
+      <a href="https://www.korea.kr/briefing/policyBriefingView.do?newsId=148801559" target="_blank" rel="noopener">대한민국 정책브리핑 — 수능 영어 절대평가: 90점 이상 1등급, 10점 단위 등급 구간</a>
+      <a href="https://www.ggilbo.com/news/articleView.html?idxno=566176" target="_blank" rel="noopener">금강일보 — 한국사 등급컷: 40점 이상 1등급부터 5점 단위 등급 구간표</a>
+      <a href="https://naeiledu.co.kr/27296" target="_blank" rel="noopener">내일교육 — "수능은 4%가 넘어도 왜 1등급인가요": 동점자 처리로 실제 등급별 인원 비율이 기준 비율을 넘는 이유</a>
+      <a href="https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=104758&lev=0&searchType=null&statusYN=W&page=1&s=moe&m=020402&opType=N" target="_blank" rel="noopener">교육부 — 2026학년도 대학수학능력시험 채점 결과 발표 자료</a>
+    </div>
+
+    <p class="disclaimer">
+      ※ 본 아티클은 한국교육과정평가원·교육부·정책브리핑의 공개 자료와 이를 인용한 언론 보도를 바탕으로 표준점수·백분위·등급의 계산 방식을 정리한 정보성 콘텐츠이며 특정 연도의 실제 등급컷이나 입시 상담을 제공하지 않습니다. <strong>본문의 계산 예시(원점수 84점·평균 72점·표준편차 15)는 공식을 설명하기 위한 가상의 수치이며, 실제 표준점수는 매 시험 한국교육과정평가원이 발표하는 그해의 평균·표준편차를 적용해야 산출됩니다.</strong> 선택과목 간 표준점수 격차(2024학년도 11점 등)는 해당 연도의 응시자 구성과 난이도에 따른 결과로, 다음 시험에는 격차의 크기나 방향이 달라질 수 있습니다. 대학·전형별로 반영하는 성적 지표(표준점수·백분위·변환표준점수 등)가 다르므로, 정시·수시 지원 시에는 반드시 해당 대학의 모집요강과 한국교육과정평가원의 공식 채점 결과를 확인하시기 바랍니다.
+    </p>
+
+  </div>
+<!-- HUB:RELATED:BEGIN -->
+<style>
+.hub-bc{font-size:13px;color:#5b6672;margin:0 0 18px;font-family:'Noto Sans KR',sans-serif}
+.hub-bc a{color:#5b6672;text-decoration:none}.hub-bc a:hover{text-decoration:underline}
+.hub-rel{margin:38px 0 6px;padding:20px 22px;border:1px solid #e3e8ee;border-radius:10px;
+  background:#fafbfc;font-family:'Noto Sans KR',sans-serif}
+.hub-rel h2{font-size:15px;margin:0 0 14px;font-weight:700;color:#12202e;
+  font-family:'Noto Sans KR',sans-serif;border:0;padding:0}
+.hub-rel ul{list-style:none;padding:0;margin:0}
+.hub-rel li{padding:7px 0;font-size:14.5px;line-height:1.55}
+.hub-rel li a{color:#12202e;text-decoration:none}
+.hub-rel li a:hover{color:#1a5f8a;text-decoration:underline}
+.hub-rel .hub-more{margin:14px 0 0;font-size:13.5px}
+.hub-rel .hub-more a{color:#1a5f8a;text-decoration:none;font-weight:700}
+</style>
+<aside class="hub-rel">
+  <h2>같은 분야 다른 글 — 교육·학자금</h2>
+  <ul>
+    <li><a href="/2026-08-16-고교학점제-미이수-기준">고교학점제 미이수 기준 — 출석률·학업성취율 요건과 보충이수 절차 정리</a></li>
+    <li><a href="/2026-08-24-내신-5등급제-계산법">내신 5등급제 계산법 — 등급별 비율과 9등급제 환산 차이</a></li>
+    <li><a href="/2026-09-01-학자금-지원구간-확인방법">학자금 지원구간 확인 방법 — 소득인정액 산정과 구간별 국가장학금</a></li>
+  </ul>
+  <p class="hub-more"><a href="/edu/">교육·학자금 전체 보기 →</a></p>
+</aside>
+<!-- HUB:RELATED:END -->
+</article>
+</body>
+</html>
