@@ -146,7 +146,13 @@ def _noindex_set():
 NOINDEX = _noindex_set()
 
 def is_noindex(rel):
-    return rel.replace(os.sep, "/") in NOINDEX
+    rel = rel.replace(os.sep, "/")
+    # 주식보고서는 날짜성 콘텐츠라 항상 noindex다(발행-공통규칙 §3).
+    # .noindex 목록은 최근 발행분을 매번 즉시 반영하지 못해 지연이 생기므로,
+    # 목록과 무관하게 파일명 패턴으로 직접 판정한다.
+    if os.path.basename(rel).endswith("주식보고서.html"):
+        return True
+    return rel in NOINDEX
 # --------------------------------------------------------------------------
 
 def build_block(rel, src):
