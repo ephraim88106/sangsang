@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>실업급여 소정급여일수 계산법 — 연령과 가입기간별 지급일수 | 취업·노동</title>
+  <meta name="description" content="실업급여(구직급여) 소정급여일수는 나이가 아니라 '연령'과 '고용보험 가입기간(피보험기간)' 두 축으로 정해지며 최소 120일에서 최대 270일까지 갈린다. 50세 이상·장애인은 같은 가입기간이라도 한 단계 위 일수를 받는다. 1일 지급액은 이직 전 평균임금의 60%이며 2026년 상한액 68,100원(6년 만에 인상)·하한액 66,048원(최저임금 10,320원 기준)이 함께 적용된다. 수급자격 4요건과 신청 절차, 2026년 9월 1일 발표된 고용보험 제도개편안까지 정리했다.">
+  <meta name="keywords" content="실업급여 소정급여일수, 실업급여 계산법, 구직급여 지급일수, 실업급여 상한액 하한액, 실업급여 수급자격, 구직급여 계산, 피보험단위기간 180일, 실업급여 반복수급, 실업급여 신청기한, 고용보험 제도개편">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f2f4f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #004d40 0%, #00695c 45%, #00838f 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #b2dfdb; color: #004d40; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #e0f2f1; border-left: 5px solid #00695c; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #00695c; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #004d40; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #00695c; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #004d40; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #e0f2f1; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #00695c; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #004d40; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #f1f8f7; border-left: 4px solid #26a69a; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #004d40; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f4faf9; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #004d40; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #004d40; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #d5e8e5; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-teal { background: linear-gradient(90deg, #004d40, #26a69a); }
+    .bar-cyan { background: linear-gradient(90deg, #006064, #4dd0e1); }
+    .bar-amber { background: linear-gradient(90deg, #ef6c00, #ffb300); }
+    .bar-grey { background: linear-gradient(90deg, #546e7a, #90a4ae); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #c2ddd9; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #e0f2f1; color: #004d40; font-weight: 700; }
+    table.rate td.up { color: #004d40; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #ef6c00; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #00695c; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #004d40; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #b2dfdb; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #004d40; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #b2dfdb; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #00695c; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .formula { background: #f4faf9; border: 1.5px dashed #26a69a; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 16.5px; font-weight: 800; color: #004d40; line-height: 1.8; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #00838f; margin-top: 10px; margin-bottom: 0; }
+    .warnbox { background: #fff8e1; border-left: 5px solid #f9a825; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 26px 0; }
+    .warnbox .wt { font-size: 14px; font-weight: 800; color: #ef6c00; margin-bottom: 8px; }
+    .warnbox p { font-size: 15px; color: #5d4037; margin-bottom: 0; word-break: keep-all; }
+    .case { background: #fff; border: 1.5px solid #b2dfdb; border-left: 5px solid #00695c; border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; }
+    .case .ct { font-size: 13.5px; font-weight: 800; color: #004d40; margin-bottom: 6px; letter-spacing: 0.3px; }
+    .case p { font-size: 14.8px; margin-bottom: 8px; }
+    .case p:last-child { margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #e0f2f1; color: #00695c; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #00695c; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<!-- SEO:AUTO BEGIN -->
+<meta property="article:published_time" content="2026-09-28T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-09-28T09:00:00+09:00">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "실업급여 소정급여일수 계산법 — 연령과 가입기간별 지급일수",
+  "description": "실업급여 소정급여일수는 연령과 고용보험 가입기간 두 축으로 정해지며 최소 120일~최대 270일이다. 1일 지급액은 이직 전 평균임금의 60%이고 2026년 상한 68,100원·하한 66,048원이 적용된다. 수급자격 요건과 신청 절차, 2026년 9월 발표된 제도개편안까지 정리했다.",
+  "url": "https://sangsang.ephseed.com/2026-09-28-%EC%8B%A4%EC%97%85%EA%B8%89%EC%97%AC-%EC%86%8C%EC%A0%95%EA%B8%89%EC%97%AC%EC%9D%BC%EC%88%98-%EA%B3%84%EC%82%B0%EB%B2%95",
+  "datePublished": "2026-09-28T09:00:00+09:00",
+  "dateModified": "2026-09-28T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-09-28-%EC%8B%A4%EC%97%85%EA%B8%89%EC%97%AC-%EC%86%8C%EC%A0%95%EA%B8%89%EC%97%AC%EC%9D%BC%EC%88%98-%EA%B3%84%EC%82%B0%EB%B2%95">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="실업급여 소정급여일수 계산법 — 연령과 가입기간별 지급일수 | 취업·노동">
+<meta property="og:description" content="실업급여(구직급여) 소정급여일수는 나이가 아니라 '연령'과 '고용보험 가입기간(피보험기간)' 두 축으로 정해지며 최소 120일에서 최대 270일까지 갈린다. 50세 이상·장애인은 같은 가입기간이라도 한 단계 위 일수를 받는다. 1일 지급액은 이직 전 평균임금의 60%이며 2026년 상한액 68,100원(6년 만에 인상)·하한액 66,048원(최저임금 10,320원 기준)이 함께 적용된다. 수급자격 4요건과 신청 절차, 2026년 9월 1일 발표된 고용보험 제도개편안까지 정리했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-09-28-%EC%8B%A4%EC%97%85%EA%B8%89%EC%97%AC-%EC%86%8C%EC%A0%95%EA%B8%89%EC%97%AC%EC%9D%BC%EC%88%98-%EA%B3%84%EC%82%B0%EB%B2%95">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-09-28T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-09-28T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N28MJLW4W9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-N28MJLW4W9");</script>
+<!-- SEO:END -->
+</head>
+
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-EVlth33UH8CTDu2u"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-KMCr4AoIjIDsi9XA"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-qqfX36xk8gz6faM6"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+<article class="article-wrap">
+<!-- HUB:BREADCRUMB:BEGIN -->
+<nav class="hub-bc"><a href="/">생생 정보통</a> &rsaquo; <a href="/labor/">노동·급여</a></nav>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "생생 정보통", "item": "https://sangsang.ephseed.com/"}, {"@type": "ListItem", "position": 2, "name": "노동·급여", "item": "https://sangsang.ephseed.com/labor/"}]}</script>
+<!-- HUB:BREADCRUMB:END -->
+  <header class="hero">
+    <div class="category-badge">💼 취업 · 노동</div>
+    <h1>실업급여 소정급여일수 계산법 —<br>연령과 가입기간별 지급일수</h1>
+    <p class="hero-sub">"나는 며칠치를 받을 수 있을까"라는 질문의 답은 나이 하나로 정해지지 않는다. <b>연령과 고용보험 가입기간</b> 두 축이 겹쳐 최소 120일에서 최대 270일까지 갈리고, 일수가 정해져도 하루에 얼마를 받는지는 또 다른 계산이 필요하다. 소정급여일수 표와 1일 지급액 산정법, 신청 절차와 2026년 9월 발표된 제도개편안까지 정리했다.</p>
+    <div class="hero-meta">
+      <span>💼 취업 · 노동</span>
+      <span>📅 2026년 9월 28일</span>
+      <span>⏱️ 약 9분</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+
+    <div class="summary-box">
+      <h2>핵심 요약</h2>
+      <ul>
+        <li>소정급여일수는 <strong>연령(50세 미만 / 50세 이상·장애인)</strong>과 <strong>피보험기간(가입기간)</strong> 두 기준의 조합으로 정해지며, 최소 <strong>120일</strong>에서 최대 <strong>270일</strong>까지 다섯 구간으로 나뉜다.</li>
+        <li>1일 지급액(구직급여일액)은 <strong>이직 전 평균임금의 60%</strong>다. 2026년 상한액은 <strong>1일 68,100원</strong>(6년 만의 인상), 하한액은 <strong>1일 66,048원</strong>(2026년 최저임금 10,320원 기준)이다.</li>
+        <li>일수·금액 계산 이전에 <strong>피보험단위기간 180일</strong>과 <strong>비자발적 이직</strong> 등 수급자격 4요건을 먼저 충족해야 하며, 신청은 <strong>이직일 다음 날부터 12개월 이내</strong>에 하지 않으면 남은 일수가 있어도 소멸한다.</li>
+        <li>2026년 9월 1일 고용노동부가 <strong>지급방식을 주 7일분에서 주 6일분으로 전환</strong>하고 <strong>반복수급 감액제도</strong>를 신설하는 개편안을 확정했다. 아직 법 개정 전 단계로, 국회 통과 여부에 따라 시행 시기가 달라진다.</li>
+      </ul>
+    </div>
+
+    <h2 class="sec">1. 소정급여일수를 정하는 두 가지 기준 — 나이가 아니라 '가입기간'이 먼저다</h2>
+
+    <p>실업급여(구직급여)를 받을 수 있는 총 일수를 <strong>소정급여일수</strong>라고 부른다. 흔히 "실업급여는 몇 개월 준다"는 식으로 이야기되지만, 법이 정한 단위는 개월이 아니라 <strong>일수</strong>다. 이 일수는 고용보험법 별표1에 따라 <strong>연령</strong>과 <strong>피보험기간(고용보험 가입기간)</strong>을 교차한 표로 정해진다.</p>
+
+    <table class="rate">
+      <thead>
+        <tr><th>피보험기간</th><th>50세 미만</th><th>50세 이상 및 장애인</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1년 미만</td><td>120일</td><td>120일</td></tr>
+        <tr><td>1년 이상 3년 미만</td><td>150일</td><td class="up">180일</td></tr>
+        <tr><td>3년 이상 5년 미만</td><td>180일</td><td class="up">210일</td></tr>
+        <tr><td>5년 이상 10년 미만</td><td>210일</td><td class="up">240일</td></tr>
+        <tr><td>10년 이상</td><td>240일</td><td class="up">270일</td></tr>
+      </tbody>
+    </table>
+    <p class="note">※ 고용보험법 별표1(2019년 10월 1일 이후 이직자 기준). 1년 미만 구간만 연령과 무관하게 동일하고, 그 이상 구간에서는 50세 이상·장애인이 같은 가입기간의 50세 미만보다 한 단계 위 일수를 받는다.</p>
+
+    <div class="infographic-section">
+      <h3>📊 소정급여일수 — 가입기간별 지급일수</h3>
+      <div class="bar-chart">
+        <div class="bar-item"><div class="bar-label"><span>1년 미만</span><span class="val">120일</span></div><div class="bar-track"><div class="bar-fill bar-grey" style="width:44%">120일</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>1~3년(50세 미만)</span><span class="val">150일</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:56%">150일</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>1~3년(50세 이상)</span><span class="val">180일</span></div><div class="bar-track"><div class="bar-fill bar-cyan" style="width:67%">180일</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>5~10년(50세 미만)</span><span class="val">210일</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:78%">210일</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>10년 이상(50세 이상)</span><span class="val">270일</span></div><div class="bar-track"><div class="bar-fill bar-amber" style="width:100%">270일 — 최대</div></div></div>
+      </div>
+      <p class="note">막대 폭은 120~270일 범위 안에서의 상대적 위치를 보여주는 도식이다.</p>
+    </div>
+
+    <h2 class="sec">2. 일수가 정해져도 끝이 아니다 — 1일 지급액과 2026년 상·하한액</h2>
+
+    <p>소정급여일수는 '며칠 받는가'를 정할 뿐, '하루에 얼마씩'은 별도로 계산한다. 1일 구직급여액(기초일액)은 <strong>이직 전 평균임금의 60%</strong>이며, 여기에 상한액과 하한액이라는 두 개의 벽이 걸려 있다.</p>
+
+    <div class="formula">
+      <div class="f-main">1일 구직급여액 = 이직 전 평균임금(기초일액) × 60%<br>총 지급액 = 1일 구직급여액 × 소정급여일수</div>
+      <p class="f-note">단, 계산값이 상한액을 넘으면 상한액으로, 하한액에 못 미치면 하한액으로 조정된다.</p>
+    </div>
+
+    <p>2026년 기준 <strong>상한액은 1일 68,100원</strong>이다. 2019년 이후 <strong>6년 만에 처음 오른 상한액</strong>으로, 최저임금이 계속 오르면서 하한액이 정액으로 묶여 있던 상한액을 역전할 우려가 커지자 정부가 상한액 자체를 인상했다. <strong>하한액은 1일 66,048원</strong>으로, 2026년 최저임금 시급 10,320원의 80%에 1일 소정근로시간 8시간을 곱해 산출한다(10,320원 × 0.8 × 8시간 = 66,048원). 2024년 하한액이 63,104원이었던 것과 비교하면 2년 새 약 2,944원 올랐다.</p>
+
+    <div class="case">
+      <div class="ct">📌 계산 예시 — 가입기간 5년 이상 10년 미만, 50세 미만, 하한액 적용자</div>
+      <p>소정급여일수 <strong>210일</strong> × 1일 하한액 <strong>66,048원</strong> = 총 <strong>13,870,080원</strong></p>
+      <p>같은 가입기간이라도 50세 이상·장애인이면 소정급여일수가 240일로 늘어 총액은 <strong>15,851,520원</strong>이 된다. 일수 차이가 곧 총액 차이로 직결되는 구조다.</p>
+    </div>
+
+    <h2 class="sec">3. 일수·금액 계산 이전의 관문 — 수급자격 4요건</h2>
+
+    <p>소정급여일수 표는 자격을 갖춘 사람에게만 적용된다. 고용보험법 제40조가 정한 수급자격 요건은 네 가지다.</p>
+
+    <ul class="plain">
+      <li><strong>피보험단위기간 180일 이상</strong> — 이직일 이전 18개월간 보수를 받은 날(유급일)을 합산해 180일을 채워야 한다. 재직일수 자체가 아니라 유급 주휴일까지 포함한 '유급일' 기준이라, 주 5일 근무자는 통상 7~8개월가량 재직해야 조건이 채워진다.</li>
+      <li><strong>근로의 의사와 능력</strong> — 일할 수 있고 일하려는 상태여야 하며, 이 상태에서도 취업하지 못하고 있어야 한다.</li>
+      <li><strong>비자발적 이직 원칙</strong> — 원칙적으로 회사 사정에 의한 이직이어야 한다. 다만 임금체불, 최저임금 미달 지급, 채용 시 제시된 조건보다 근로조건이 나빠진 경우, 부당한 차별·성적 괴롭힘 등 시행규칙이 정한 사유가 있으면 자발적으로 그만두었어도 예외로 인정된다.</li>
+      <li><strong>적극적인 재취업 노력</strong> — 실업인정일마다 구직활동 실적을 계속 제출해야 한다.</li>
+    </ul>
+
+    <h2 class="sec">4. 신청 절차와 대기기간 — 놓치면 소정급여일수가 남아도 소멸한다</h2>
+
+    <div class="steps">
+      <div class="step"><div class="step-t">고용24(옛 워크넷) 구직등록</div><div class="step-d">고용24 홈페이지에서 온라인으로 구직신청을 한다.</div></div>
+      <div class="step"><div class="step-t">수급자격 인정신청</div><div class="step-d">거주지 관할 고용센터에 수급자격 인정신청서를 제출한다.</div></div>
+      <div class="step"><div class="step-t">수급자격 심사</div><div class="step-d">이직 사유와 피보험단위기간 등을 고용센터가 심사한다.</div></div>
+      <div class="step"><div class="step-t">대기기간 7일</div><div class="step-d">실업 신고일부터 7일간은 구직급여가 지급되지 않는 대기기간이다.</div></div>
+      <div class="step"><div class="step-t">실업인정과 지급</div><div class="step-d">1~4주 단위 실업인정일마다 구직활동 실적을 제출하면 심사를 거쳐 지급된다.</div></div>
+    </div>
+
+    <div class="warnbox">
+      <div class="wt">⚠️ 신청기한은 이직일 다음 날부터 12개월</div>
+      <p>수급기간 자체가 이직일 다음 날부터 원칙 1년으로 법정돼 있어, 이 기간 안에 신청해 소정급여일수를 다 받지 못하면 <strong>남은 일수가 있어도 잔여 구직급여를 받을 수 없다.</strong> 출산·질병 등 불가피한 사유가 있으면 수급기간 연장신청(최대 4년 한도)이 가능하다.</p>
+    </div>
+
+    <h2 class="sec">5. 숫자로 본 이면 — 사상 최대 지급액과 반복수급 28.8%</h2>
+
+    <p>2025년 회계연도 기준 고용보험 '실업급여 계정' 전체 지출은 <strong>17조 4,833억원</strong>으로 사상 처음 17조원을 넘었다. 이 중 좁은 의미의 구직급여만 따로 집계한 국회 제출자료 기준으로는 <strong>12조 3,655억원</strong>(2025년, 5년 내 최대)이며, 수급자는 <strong>172만 2천명</strong>이었다.</p>
+
+    <div class="impact-grid">
+      <div class="impact-card"><span class="impact-num">17.48조</span><span class="impact-label">2025년 실업급여 계정<br>전체 지출(사상 최대)</span></div>
+      <div class="impact-card"><span class="impact-num">172.2만명</span><span class="impact-label">2025년<br>구직급여 수급자</span></div>
+      <div class="impact-card"><span class="impact-num">49.6만명</span><span class="impact-label">최근 5년 내<br>2회 이상 반복수급자</span></div>
+      <div class="impact-card"><span class="impact-num">28.8%</span><span class="impact-label">전체 수급자 중<br>반복수급자 비율</span></div>
+    </div>
+
+    <p>반복수급자는 <strong>2021년 44만 5천명에서 2025년 49만 6천명</strong>으로 3년 연속 늘었다. 전체 수급자 수는 2021년보다 5만 3천명 줄었는데도 지급액은 오히려 3,030억원 늘었다는 국회 자료도 있다. 이런 흐름이 2026년 9월 1일 발표된 고용보험 제도개편안 — 지급방식을 주 7일분에서 주 6일분으로 바꾸고, 5년 내 3회 이상 반복수급 시 3회째 10%부터 6회 이상 50%까지 감액하는 방안 — 의 배경이 됐다.</p>
+
+    <div class="pullquote">소정급여일수 표 자체는 이번 개편안에서 바뀌지 않는다. 바뀌는 것은 '같은 일수를 어떤 주기로, 얼마씩 나눠 받느냐'는 지급방식이다.</div>
+
+    <h2 class="sec">6. 나에게 미치는 영향 — 계산 전에 확인할 네 가지</h2>
+
+    <ul class="plain">
+      <li><strong>내 가입기간과 연령을 표에 그대로 대입해 본다.</strong> 가입기간 산정 기준일은 이직일이며, 여러 직장을 옮겨 다녔어도 이직 전 18개월 안에서 합산된 유급일이 기준이다.</li>
+      <li><strong>평균임금이 낮으면 계산값보다 하한액(1일 66,048원)이 먼저 적용된다.</strong> 최저임금 근로자·단시간 근로자는 대부분 하한액 구간에 해당한다.</li>
+      <li><strong>자발적으로 그만뒀어도 곧바로 포기하지 않는다.</strong> 임금체불·근로조건 악화 등 예외 사유에 해당하는지 고용센터에 먼저 확인한다.</li>
+      <li><strong>이직일 다음 날부터 12개월</strong>을 달력에 표시해 둔다. 이 기한을 넘기면 소정급여일수가 남아 있어도 받을 수 없다.</li>
+    </ul>
+
+    <h2 class="sec">7. 전망과 행동 제안</h2>
+
+    <p>2026년 9월 1일 고용노동부가 확정 발표한 고용보험 제도개편 방안은 <strong>아직 법 개정 전 단계</strong>다. 정부는 연내 국회 입법을 지원한다는 방침이지만, 실제 시행 시기는 국회 통과 여부에 달려 있다. 개편안의 핵심은 소정급여일수 표 자체를 고치는 것이 아니라 <strong>무급휴일(주로 일요일)까지 포함해 온 주 7일분 지급방식을 주 6일분으로 전환</strong>하는 데 있다. 이렇게 되면 하한액 적용자의 월 지급액은 30일 기준 약 198만원에서 176만원 안팎으로 줄어드는 대신, 같은 소정급여일수를 채우는 데 걸리는 기간(개월수)이 늘어나 설계상 총 지급액은 비슷하게 유지된다. 여기에 반복수급 3회째부터 감액이 적용되는 방안, 상한액을 정액이 아니라 하한액의 103% 수준으로 연동하는 방안도 함께 담겼다.</p>
+
+    <p>지금 당장 할 수 있는 일은 <strong>이번 글의 표와 계산식으로 내가 받을 일수·금액을 먼저 가늠해 보는 것</strong>이다. 이직을 앞두고 있다면 피보험단위기간 180일을 채웠는지, 자발적 이직이라도 예외 사유에 해당하는지부터 확인하고, 개편안이 국회를 통과하면 지급 주기와 반복수급 여부에 따라 실제 수령액이 달라질 수 있다는 점을 함께 염두에 둘 필요가 있다.</p>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#실업급여계산법</span>
+      <span class="hashtag">#소정급여일수</span>
+      <span class="hashtag">#구직급여상한액</span>
+      <span class="hashtag">#구직급여하한액</span>
+      <span class="hashtag">#실업급여수급자격</span>
+      <span class="hashtag">#피보험단위기간180일</span>
+      <span class="hashtag">#실업급여신청기한</span>
+      <span class="hashtag">#실업급여반복수급</span>
+      <span class="hashtag">#고용보험제도개편</span>
+      <span class="hashtag">#구직급여신청절차</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=722&ccfNo=2&cciNo=1&cnpClsNo=1" target="_blank" rel="noopener">찾기 쉬운 생활법령정보 — 구직급여 수급자격: 피보험단위기간 180일, 비자발적 이직 원칙, 근로의사·능력 요건</a>
+      <a href="https://easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=722&ccfNo=2&cciNo=3&cnpClsNo=1" target="_blank" rel="noopener">찾기 쉬운 생활법령정보 — 소정급여일수: 고용보험법 별표1 기준 연령·가입기간별 120~270일 표</a>
+      <a href="https://easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=722&ccfNo=2&cciNo=2&cnpClsNo=1" target="_blank" rel="noopener">찾기 쉬운 생활법령정보 — 실업의 신고와 신청기한: 이직일 다음 날부터 12개월, 대기기간 7일</a>
+      <a href="https://v.daum.net/v/20251216105742951" target="_blank" rel="noopener">다음뉴스(2025. 12. 16.) — 2026년 실업급여 상한액 1일 68,100원, 6년 만의 인상</a>
+      <a href="https://www.welfarehello.com/community/policyInfo/2026-%EC%8B%A4%EC%97%85%EA%B8%89%EC%97%AC-%EC%83%81%ED%95%9C%EC%95%A1-68100%EC%9B%90%ED%95%98%ED%95%9C%EC%95%A1-66048%EC%9B%90-%EB%B3%80%EA%B2%BD-%EB%82%B4%EC%9A%A9--ec705ca3-a171-48db-b397-0fbad43fd751" target="_blank" rel="noopener">2026년 실업급여 상한액 68,100원·하한액 66,048원 변경 내용 정리</a>
+      <a href="https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=19866" target="_blank" rel="noopener">고용노동부 — 노·사 및 전문가 9개월 논의 '고용보험 제도개선 TF 논의결과'(2026. 9. 1. 확정)</a>
+      <a href="https://www.hankyung.com/article/202609016944i" target="_blank" rel="noopener">한국경제(2026. 9. 1.) — 지급방식 주 7일→6일 전환, 반복수급 감액제도, 상한액 하한액 연동 방식 개편안</a>
+      <a href="https://www.sedaily.com/article/20055437" target="_blank" rel="noopener">서울경제(2026. 6. 14.) — 2025회계연도 고용보험기금 실업급여 계정 지출 17조 4,833억원, 사상 최대</a>
+      <a href="https://www.fnnews.com/news/202608131547400351" target="_blank" rel="noopener">파이낸셜뉴스(2026. 8. 13.) — 실업급여 반복수급자 49만 6천명, 전체의 28.8%, 국회 제출자료 기준 통계</a>
+    </div>
+
+    <p class="disclaimer">
+      ※ 본 아티클은 법제처 찾기 쉬운 생활법령정보·고용노동부 공개 자료와 이를 인용한 언론 보도를 바탕으로 작성한 정보성 콘텐츠이며 개별 사안에 대한 상담이 아닙니다. <strong>소정급여일수 표, 상·하한액, 최저임금 연동 계산값은 법령·고시 개정에 따라 달라질 수 있으므로 신청 시점의 고용노동부·고용보험(고용24) 공식 안내를 반드시 확인하시기 바랍니다.</strong> 본문의 계산 예시는 2026년 기준 하한액을 그대로 적용한 값이며, 실제 수급액은 개인의 평균임금과 이직 사유 인정 여부에 따라 달라질 수 있습니다. 2026년 9월 1일 발표된 고용보험 제도개편안은 이 글 작성 시점에 아직 법 개정 전 단계이며, 국회 심의·의결 결과에 따라 시행 여부와 시기, 세부 내용이 바뀔 수 있습니다. 구체적인 신청·상담이 필요한 경우 고용노동부 고객상담센터(☎1350) 또는 관할 고용센터에 문의하시기 바랍니다.
+    </p>
+
+  </div>
+<!-- HUB:RELATED:BEGIN -->
+<style>
+.hub-bc{font-size:13px;color:#5b6672;margin:0 0 18px;font-family:'Noto Sans KR',sans-serif}
+.hub-bc a{color:#5b6672;text-decoration:none}.hub-bc a:hover{text-decoration:underline}
+.hub-rel{margin:38px 0 6px;padding:20px 22px;border:1px solid #e3e8ee;border-radius:10px;
+  background:#fafbfc;font-family:'Noto Sans KR',sans-serif}
+.hub-rel h2{font-size:15px;margin:0 0 14px;font-weight:700;color:#12202e;
+  font-family:'Noto Sans KR',sans-serif;border:0;padding:0}
+.hub-rel ul{list-style:none;padding:0;margin:0}
+.hub-rel li{padding:7px 0;font-size:14.5px;line-height:1.55}
+.hub-rel li a{color:#12202e;text-decoration:none}
+.hub-rel li a:hover{color:#1a5f8a;text-decoration:underline}
+.hub-rel .hub-more{margin:14px 0 0;font-size:13.5px}
+.hub-rel .hub-more a{color:#1a5f8a;text-decoration:none;font-weight:700}
+</style>
+<aside class="hub-rel">
+  <h2>같은 분야 다른 글 — 노동·급여</h2>
+  <ul>
+    <li><a href="/2026-08-17-통상임금-계산법">통상임금 계산법 — 포함 항목과 평균임금 차이, 시간급 산정 기준</a></li>
+    <li><a href="/2026-09-02-육아휴직-급여-계산법">육아휴직 급여 계산법 — 월별 상한액과 사후지급금 폐지 시기</a></li>
+  </ul>
+  <p class="hub-more"><a href="/labor/">노동·급여 전체 보기 →</a></p>
+</aside>
+<!-- HUB:RELATED:END -->
+</article>
+</body>
+</html>
