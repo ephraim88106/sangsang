@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>주휴수당 지급 조건 — 주 15시간 기준과 결근 시 계산 방법 | 취업·노동</title>
+  <meta name="description" content="주휴수당은 4주 평균 주 15시간 이상 일하고 그 주 소정근로일을 개근해야 붙는다. 계산식은 주 소정근로시간÷40×8×시급이며, 2027년 최저시급 1만700원 기준 주 15시간은 3만 2,100원, 40시간은 8만 5,600원이다. 결근·지각·연차 처리와 월급제 시급 환산 209시간까지 정리했다.">
+  <meta name="keywords" content="주휴수당 지급 조건, 주휴수당 계산법, 주 15시간, 주휴수당 결근, 주휴수당 개근, 2027년 최저임금, 209시간, 월급 시급 환산, 초단시간 근로자, 근로기준법 제55조">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f2f4f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #004d40 0%, #00695c 45%, #00838f 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #b2dfdb; color: #004d40; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #e0f2f1; border-left: 5px solid #00695c; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #00695c; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #004d40; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #00695c; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #004d40; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #e0f2f1; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #00695c; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #004d40; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #f1f8f7; border-left: 4px solid #26a69a; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #004d40; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f4faf9; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #004d40; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #004d40; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #d5e8e5; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-teal { background: linear-gradient(90deg, #004d40, #26a69a); }
+    .bar-cyan { background: linear-gradient(90deg, #006064, #4dd0e1); }
+    .bar-amber { background: linear-gradient(90deg, #ef6c00, #ffb300); }
+    .bar-grey { background: linear-gradient(90deg, #546e7a, #90a4ae); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #c2ddd9; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #e0f2f1; color: #004d40; font-weight: 700; }
+    table.rate td.up { color: #004d40; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #ef6c00; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #00695c; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #004d40; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #b2dfdb; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #004d40; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #b2dfdb; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #00695c; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .formula { background: #f4faf9; border: 1.5px dashed #26a69a; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 16.5px; font-weight: 800; color: #004d40; line-height: 1.8; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #00838f; margin-top: 10px; margin-bottom: 0; }
+    .warnbox { background: #fff8e1; border-left: 5px solid #f9a825; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 26px 0; }
+    .warnbox .wt { font-size: 14px; font-weight: 800; color: #ef6c00; margin-bottom: 8px; }
+    .warnbox p { font-size: 15px; color: #5d4037; margin-bottom: 0; word-break: keep-all; }
+    .case { background: #fff; border: 1.5px solid #b2dfdb; border-left: 5px solid #00695c; border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; }
+    .case .ct { font-size: 13.5px; font-weight: 800; color: #004d40; margin-bottom: 6px; letter-spacing: 0.3px; }
+    .case p { font-size: 14.8px; margin-bottom: 8px; }
+    .case p:last-child { margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #e0f2f1; color: #00695c; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #00695c; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<!-- SEO:AUTO BEGIN -->
+<meta property="article:published_time" content="2026-09-29T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-09-29T09:00:00+09:00">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "주휴수당 지급 조건 — 주 15시간 기준과 결근 시 계산 방법",
+  "description": "주휴수당은 4주 평균 주 15시간 이상 일하고 그 주 소정근로일을 개근해야 붙는다. 계산식은 주 소정근로시간÷40×8×시급이며, 2027년 최저시급 1만700원 기준 주 15시간은 3만 2,100원, 40시간은 8만 5,600원이다. 결근·지각·연차 처리와 월급제 시급 환산 209시간까지 정리했다.",
+  "url": "https://sangsang.ephseed.com/2026-09-29-%EC%A3%BC%ED%9C%B4%EC%88%98%EB%8B%B9-%EC%A7%80%EA%B8%89%EC%A1%B0%EA%B1%B4-%EA%B3%84%EC%82%B0%EB%B0%A9%EB%B2%95",
+  "datePublished": "2026-09-29T09:00:00+09:00",
+  "dateModified": "2026-09-29T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-09-29-%EC%A3%BC%ED%9C%B4%EC%88%98%EB%8B%B9-%EC%A7%80%EA%B8%89%EC%A1%B0%EA%B1%B4-%EA%B3%84%EC%82%B0%EB%B0%A9%EB%B2%95">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="주휴수당 지급 조건 — 주 15시간 기준과 결근 시 계산 방법 | 취업·노동">
+<meta property="og:description" content="주휴수당은 4주 평균 주 15시간 이상 일하고 그 주 소정근로일을 개근해야 붙는다. 계산식은 주 소정근로시간÷40×8×시급이며, 2027년 최저시급 1만700원 기준 주 15시간은 3만 2,100원, 40시간은 8만 5,600원이다. 결근·지각·연차 처리와 월급제 시급 환산 209시간까지 정리했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-09-29-%EC%A3%BC%ED%9C%B4%EC%88%98%EB%8B%B9-%EC%A7%80%EA%B8%89%EC%A1%B0%EA%B1%B4-%EA%B3%84%EC%82%B0%EB%B0%A9%EB%B2%95">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-09-29T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-09-29T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N28MJLW4W9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-N28MJLW4W9");</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-EVlth33UH8CTDu2u"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-KMCr4AoIjIDsi9XA"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-qqfX36xk8gz6faM6"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+<article class="article-wrap">
+<!-- HUB:BREADCRUMB:BEGIN -->
+<nav class="hub-bc"><a href="/">생생 정보통</a> &rsaquo; <a href="/labor/">노동·급여</a></nav>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "생생 정보통", "item": "https://sangsang.ephseed.com/"}, {"@type": "ListItem", "position": 2, "name": "노동·급여", "item": "https://sangsang.ephseed.com/labor/"}]}</script>
+<!-- HUB:BREADCRUMB:END -->
+  <header class="hero">
+    <div class="category-badge">💼 취업 · 노동</div>
+    <h1>주휴수당 지급 조건 —<br>주 15시간 기준과 결근 시 계산 방법</h1>
+    <p class="hero-sub">"주 15시간만 넘기면 주휴수당이 나온다"는 말은 절반만 맞다. 시간 기준을 채워도 <b>그 주에 하루라도 결근하면</b> 그 주의 주휴수당은 사라지고, 반대로 지각·조퇴·연차는 결근이 아니다. 계산식은 단순하지만 조건을 잘못 읽으면 한 주에 수만 원이 오간다.</p>
+    <div class="hero-meta">
+      <span>💼 취업 · 노동</span>
+      <span>📅 2026년 9월 29일</span>
+      <span>⏱️ 약 10분</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+
+    <div class="summary-box">
+      <h2>핵심 요약</h2>
+      <ul>
+        <li>주휴수당은 <strong>4주 평균 1주 소정근로시간 15시간 이상</strong>이고 <strong>그 주의 소정근로일을 개근</strong>했을 때 발생한다. 근거는 근로기준법 제55조와 같은 법 시행령 제30조다.</li>
+        <li>계산식은 <strong>(1주 소정근로시간 ÷ 40) × 8 × 시급</strong>이다. 2027년 최저시급 1만 700원 기준으로 주 15시간은 <strong>3만 2,100원</strong>, 주 40시간은 <strong>8만 5,600원</strong>이다.</li>
+        <li><strong>결근이 있는 주는 주휴수당이 없다.</strong> 지각·조퇴는 결근이 아니고, 연차휴가를 쓴 날도 개근으로 본다.</li>
+        <li>월급제라면 이미 주휴수당이 월급에 들어 있다. 월 환산 기준시간 <strong>209시간</strong>으로 나누면 시급이 나오고, 주휴수당을 또 달라고 할 수 있는 구조가 아니다.</li>
+      </ul>
+    </div>
+
+    <h2 class="sec">1. 주휴수당이란 — 일주일에 하루 쉬어도 그날 임금이 나오는 제도</h2>
+
+    <p>근로기준법 제55조는 사용자가 근로자에게 <strong>1주에 평균 1회 이상의 유급휴일</strong>을 주도록 정한다. 이 유급휴일에 지급하는 임금이 흔히 말하는 주휴수당이다. 일한 날이 아니라 <strong>쉬는 날에도 하루치 임금을 준다</strong>는 점이 핵심이고, 대개 일요일이지만 근로계약에서 정한 주휴일이 다른 요일일 수도 있다.</p>
+
+    <p>주휴수당은 5인 미만 사업장에도 적용되고, 정규직·아르바이트·계약직을 가리지 않는다. 다만 조건이 있다. 시행령 제30조가 <strong>1주 동안 소정근로일을 개근한 근로자</strong>에게 준다고 정하고, 4주 평균 1주 15시간 미만인 초단시간 근로자는 유급휴일 규정의 적용에서 빠진다. 다음 장의 두 조건이 사실상 주휴수당의 전부다.</p>
+
+    <h2 class="sec">2. 지급 조건 두 가지 — 주 15시간과 개근</h2>
+
+    <div class="steps">
+      <div class="step"><div class="step-t">조건 1. 4주 평균 주 15시간 이상</div><div class="step-d">계약서에 적힌 <b>소정근로시간</b>을 기준으로 한다. 실제로 연장근로를 더 했더라도 소정근로시간이 15시간에 못 미치면 대상이 아니다. 4주 평균이므로 주마다 시간이 다른 교대제도 평균으로 따진다.</div></div>
+      <div class="step"><div class="step-t">조건 2. 그 주 소정근로일 개근</div><div class="step-d">근무하기로 한 날에 하루도 빠지지 않아야 한다. <b>결근</b>이 한 번이라도 있으면 그 주의 주휴수당은 발생하지 않는다.</div></div>
+    </div>
+
+    <div class="warnbox">
+      <div class="wt">헷갈리기 쉬운 경우</div>
+      <p>지각·조퇴는 결근이 아니어서 주휴수당에 영향이 없고, 연차휴가를 쓴 날도 결근으로 보지 않는다. 1주간 근로관계가 이어지는 동안 개근했다면 8일째에 근무 예정이 없어도(예: 그 주 금요일 퇴사) 주휴수당이 발생한다는 것이 고용노동부 상담 기준이다.</p>
+    </div>
+
+    <h2 class="sec">3. 계산법 — 공식과 근로시간별 금액</h2>
+
+    <div class="formula">
+      <div class="f-main">주휴수당 = (1주 소정근로시간 ÷ 40) × 8시간 × 시급</div>
+      <p class="f-note">1주 소정근로시간이 40시간 이상이어도 주휴 시간은 8시간까지만 계산한다.</p>
+    </div>
+
+    <p>2027년 최저시급은 1만 700원으로 2026년(1만 320원)보다 380원, 3.7% 오른다. 시행은 2027년 1월 1일부터다. 이 시급으로 근로시간별 주휴수당과 월 환산액을 계산하면 아래와 같다. 월 환산은 (주 소정근로시간 + 주휴시간) × 365 ÷ 7 ÷ 12 × 시급으로 구했다.</p>
+
+    <table class="rate">
+      <tr><th>주 소정근로시간</th><th>주휴시간</th><th>주휴수당(2027년 기준)</th><th>주휴수당(2026년 1만 320원)</th><th>월 환산액(주휴 포함, 2027년)</th></tr>
+      <tr><td>15시간</td><td>3시간</td><td class="up">32,100원</td><td>30,960원</td><td>약 83만 6,900원</td></tr>
+      <tr><td>20시간</td><td>4시간</td><td class="up">42,800원</td><td>41,280원</td><td>약 111만 5,900원</td></tr>
+      <tr><td>30시간</td><td>6시간</td><td class="up">64,200원</td><td>61,920원</td><td>약 167만 3,800원</td></tr>
+      <tr><td>40시간</td><td>8시간</td><td class="up">85,600원</td><td>82,560원</td><td>223만 6,300원 (209시간 기준)</td></tr>
+    </table>
+
+    <div class="case">
+      <div class="ct">사례 ① 주 3일, 하루 5시간</div>
+      <p>주 15시간이다. 주휴시간은 15÷40×8 = 3시간이고, 시급 1만 700원이면 <strong>주휴수당 3만 2,100원</strong>이다. 한 주 임금은 일한 시간분 16만 500원(15시간×1만 700원)에 3만 2,100원을 더한 19만 2,600원이다.</p>
+    </div>
+
+    <div class="case">
+      <div class="ct">사례 ② 주 5일 40시간, 하루 결근</div>
+      <p>결근한 주는 개근 조건을 채우지 못한다. 결근한 날의 임금(8시간분 8만 5,600원)이 빠지는 것에 더해 <strong>주휴수당 8만 5,600원도 함께 발생하지 않아</strong> 그 주 임금이 1일치가 아니라 2일치 줄어든다.</p>
+    </div>
+
+    <div class="case">
+      <div class="ct">사례 ③ 월급 230만원, 시급이 궁금할 때</div>
+      <p>월급제는 주휴수당이 월급에 포함돼 있다. <strong>230만원 ÷ 209시간 ≈ 1만 1,005원</strong>이 시급이다. 이 시급에 다시 주휴수당을 얹어 달라고 하면 이중 계산이 된다.</p>
+    </div>
+
+    <div class="infographic-section">
+      <h3>2027년 최저시급 1만 700원 기준 주휴수당(주 1회)</h3>
+      <div class="bar-chart"><div class="bar-item"><div class="bar-label"><span>주 15시간 (주휴 3시간)</span><span class="val">32,100원</span></div><div class="bar-track"><div class="bar-fill bar-cyan" style="width:37.5%"></div></div></div><div class="bar-item"><div class="bar-label"><span>주 20시간 (주휴 4시간)</span><span class="val">42,800원</span></div><div class="bar-track"><div class="bar-fill bar-cyan" style="width:50%"></div></div></div><div class="bar-item"><div class="bar-label"><span>주 30시간 (주휴 6시간)</span><span class="val">64,200원</span></div><div class="bar-track"><div class="bar-fill bar-cyan" style="width:75%"></div></div></div><div class="bar-item"><div class="bar-label"><span>주 40시간 (주휴 8시간)</span><span class="val">85,600원</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:100%"></div></div></div></div>
+      <p class="note">주휴수당 = 주 소정근로시간 ÷ 40 × 8 × 1만 700원. 1주 40시간 이상은 8시간분이 상한.</p>
+    </div>
+
+    <h2 class="sec">4. 월급제와 209시간 — 시급 환산에서 가장 많이 틀리는 부분</h2>
+
+    <p>주 40시간 근로자의 월 환산 기준시간은 <strong>209시간</strong>이다. 주 40시간에 주휴 8시간을 더한 48시간에 365÷7÷12(약 4.345)를 곱해 나온다. 2027년 최저시급 1만 700원에 209시간을 곱하면 <strong>223만 6,300원</strong>이고, 이것이 주휴수당을 포함한 최저 월급이다.</p>
+
+    <p>이 때문에 시급제에서는 주휴수당을 별도로 얹어 받고, 월급제에서는 이미 포함돼 있다. 월급을 시급으로 바꿀 때 <b>174시간(주휴 제외 월 근로시간)으로 나누면</b> 시급이 높게 나와 최저임금 위반 여부를 잘못 판단하기 쉽다. 최저임금 충족 여부는 주휴시간을 포함한 209시간 기준으로 본다.</p>
+
+    <h2 class="sec">5. 이면 — 주휴수당 폐지 논쟁과 쪼개기 계약</h2>
+
+    <p>주휴수당은 1953년 근로기준법 제정 때부터 있던 제도지만, 최저임금 논의 때마다 존폐 논쟁이 되풀이된다. 소상공인을 중심으로 한 경영계는 인건비 부담을 이유로 폐지를 요구하고, 노동계는 주 40시간 근로자 기준으로 <strong>임금의 약 16.7%(8÷48)</strong>가 사라진다며 반대한다.</p>
+
+    <p>또 하나의 쟁점은 <strong>주 15시간 미만 초단시간 계약</strong>이다. 주휴수당·퇴직금을 피하려고 주 14시간 이하로 계약을 쪼개는 관행이 문제로 지적되고, 정부가 공공부문 비정규직 처우개선 가이드라인 등으로 시간 비례 지급 방향을 제시하자 국회 입법 없이 행정지침으로 앞서간다는 비판도 나온다. 현재 법령상 15시간 미만은 주휴수당 대상이 아니라는 점은 그대로다. 제도가 바뀔 가능성은 열려 있어 시행 시점의 법령을 확인해야 한다.</p>
+
+    <h2 class="sec">6. 나에게 미치는 영향 — 체크리스트</h2>
+
+    <ul class="plain">
+      <li><strong>계약서의 소정근로시간을 확인한다.</strong> 주 15시간 기준은 실제 근무가 아니라 계약상 시간으로 판단한다.</li>
+      <li><strong>급여명세서에 주휴수당 항목이 있는지 본다.</strong> 시급제인데 항목이 없고 시급도 최저임금 그대로라면 미지급 가능성이 있다.</li>
+      <li><strong>결근이 있던 주는 차감이 이중으로 된다.</strong> 결근일 임금과 주휴수당이 함께 빠지는 것이 정상이다.</li>
+      <li><strong>미지급이 의심되면</strong> 고용노동부 1350 상담센터나 관할 지방고용노동관서에 진정을 낼 수 있다.</li>
+    </ul>
+
+    <h2 class="sec">7. 전망과 행동 제안</h2>
+
+    <p>2027년 최저시급이 1만 700원으로 확정돼 같은 근로시간이라도 주휴수당이 조금씩 커진다. 당장 할 수 있는 일은 세 가지다. 계약서에서 소정근로시간을 확인하고, 급여명세서에서 주휴수당이 붙는지 대조하고, 월급제라면 209시간으로 환산한 시급이 최저임금 이상인지 계산해 보는 것이다. 폐지·개편 논의는 계속되겠지만 법령이 바뀌기 전까지는 지금의 조건이 그대로 적용된다.</p>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#주휴수당</span><span class="hashtag">#주휴수당계산법</span><span class="hashtag">#주휴수당지급조건</span><span class="hashtag">#주15시간</span><span class="hashtag">#개근</span><span class="hashtag">#2027년최저임금</span><span class="hashtag">#209시간</span><span class="hashtag">#초단시간근로자</span><span class="hashtag">#근로기준법제55조</span><span class="hashtag">#월급시급환산</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://www.news1.kr/society/labor/6228292" target="_blank" rel="noopener">뉴스1 — 2027년 최저임금 시급 1만 700원 확정, 올해보다 380원 인상</a>
+      <a href="https://www.moel.go.kr/minwon/fastcounsel/fastcounselView.do?inetDcssMngId=202404091632517431000" target="_blank" rel="noopener">고용노동부 — 중도입사·퇴사자 주휴수당 상담 사례(1주 개근 시 8일째 근로 예정 여부와 무관하게 발생)</a>
+      <a href="https://1350.moel.go.kr/rtmview.do?id=1000059852" target="_blank" rel="noopener">고용노동부 1350 — 주휴수당 상담 기준</a>
+      <a href="https://www.hankyung.com/article/2026041252261" target="_blank" rel="noopener">한국경제 — 73년 전 도입된 주휴수당, 현실에선 쪼개기 고용을 낳는다</a>
+      <a href="https://www.hankyung.com/article/202609044803g" target="_blank" rel="noopener">한국경제 — 주휴수당 관련 정부 지침과 입법 논란</a>
+      <a href="https://www.etoday.co.kr/news/view/1567239" target="_blank" rel="noopener">이투데이 — 근로기준법 개정 논란, 경영·노동계 입장 차이</a>
+    </div>
+
+    <p class="disclaimer">
+      ※ 본 아티클은 고용노동부 상담 자료와 언론 보도를 정리한 정보성 콘텐츠이며 개별 사안에 대한 노무 상담이 아닙니다. 주휴수당 발생 여부와 금액은 근로계약과 근무 실태에 따라 달라질 수 있으므로 <strong>정확한 판단은 고용노동부(국번 없이 1350) 또는 공인노무사와 확인하시기 바랍니다.</strong> 월 환산액은 (주 소정근로시간+주휴시간)×365÷7÷12×시급으로 계산한 근사값입니다.
+    </p>
+
+  </div>
+<!-- HUB:RELATED:BEGIN -->
+<style>
+.hub-bc{font-size:13px;color:#5b6672;margin:0 0 18px;font-family:'Noto Sans KR',sans-serif}
+.hub-bc a{color:#5b6672;text-decoration:none}.hub-bc a:hover{text-decoration:underline}
+.hub-rel{margin:38px 0 6px;padding:20px 22px;border:1px solid #e3e8ee;border-radius:10px;
+  background:#fafbfc;font-family:'Noto Sans KR',sans-serif}
+.hub-rel h2{font-size:15px;margin:0 0 14px;font-weight:700;color:#12202e;
+  font-family:'Noto Sans KR',sans-serif;border:0;padding:0}
+.hub-rel ul{list-style:none;padding:0;margin:0}
+.hub-rel li{padding:7px 0;font-size:14.5px;line-height:1.55}
+.hub-rel li a{color:#12202e;text-decoration:none}
+.hub-rel li a:hover{color:#1a5f8a;text-decoration:underline}
+.hub-rel .hub-more{margin:14px 0 0;font-size:13.5px}
+.hub-rel .hub-more a{color:#1a5f8a;text-decoration:none;font-weight:700}
+</style>
+<aside class="hub-rel">
+  <h2>같은 분야 다른 글 — 노동·급여</h2>
+  <ul>
+    <li><a href="/2026-08-17-통상임금-계산법">통상임금 계산법 — 포함 항목과 평균임금 차이, 시간급 산정 기준</a></li>
+    <li><a href="/2026-09-02-육아휴직-급여-계산법">육아휴직 급여 계산법 — 월별 상한액과 사후지급금 폐지 시기</a></li>
+  </ul>
+  <p class="hub-more"><a href="/labor/">노동·급여 전체 보기 →</a></p>
+</aside>
+<!-- HUB:RELATED:END -->
+</article>
+</body>
+</html>
