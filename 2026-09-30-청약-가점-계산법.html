@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>청약 가점 계산법 — 무주택기간·부양가족·통장 가입기간별 점수 | 부동산·주거</title>
+  <meta name="description" content="청약 가점제는 무주택기간 32점·부양가족 35점·청약통장 가입기간 17점, 합계 84점 만점이다. 무주택기간은 만 30세(또는 혼인신고일)부터 모집공고일까지 1년당 2점, 부양가족은 본인 제외 1명당 5점을 더해 6명 이상이면 35점, 통장은 15년 이상이면 17점이다. 배우자 통장 합산 최대 3점과 계산 사례, 서울 당첨선까지 정리했다.">
+  <meta name="keywords" content="청약 가점 계산법, 청약 가점제, 청약 가점 84점, 무주택기간 점수, 부양가족 점수, 청약통장 가입기간 점수, 배우자 통장 합산, 청약 당첨가점, 서울 청약 커트라인, 주택공급에 관한 규칙">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f2f4f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #0d47a1 0%, #1565c0 45%, #0277bd 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #bbdefb; color: #0d47a1; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #e3f2fd; border-left: 5px solid #1565c0; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #1565c0; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #0d47a1; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #1565c0; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #0d47a1; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #e3f2fd; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #1565c0; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #0d47a1; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #f1f6fd; border-left: 4px solid #42a5f5; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #0d47a1; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f3f8fe; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #0d47a1; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #0d47a1; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #d6e4f5; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-teal { background: linear-gradient(90deg, #0d47a1, #42a5f5); }
+    .bar-cyan { background: linear-gradient(90deg, #0d47a1, #64b5f6); }
+    .bar-amber { background: linear-gradient(90deg, #ef6c00, #ffb300); }
+    .bar-blue { background: linear-gradient(90deg, #0d47a1, #42a5f5); }
+    .bar-grey { background: linear-gradient(90deg, #546e7a, #90a4ae); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #c3d5ee; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #e3f2fd; color: #0d47a1; font-weight: 700; }
+    table.rate td.up { color: #0d47a1; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #ef6c00; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #1565c0; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #0d47a1; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #bbdefb; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #0d47a1; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #bbdefb; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #1565c0; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .formula { background: #f3f8fe; border: 1.5px dashed #42a5f5; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 16.5px; font-weight: 800; color: #0d47a1; line-height: 1.8; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #0277bd; margin-top: 10px; margin-bottom: 0; }
+    .warnbox { background: #fff8e1; border-left: 5px solid #f9a825; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 26px 0; }
+    .warnbox .wt { font-size: 14px; font-weight: 800; color: #ef6c00; margin-bottom: 8px; }
+    .warnbox p { font-size: 15px; color: #5d4037; margin-bottom: 0; word-break: keep-all; }
+    .case { background: #fff; border: 1.5px solid #bbdefb; border-left: 5px solid #1565c0; border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; }
+    .case .ct { font-size: 13.5px; font-weight: 800; color: #0d47a1; margin-bottom: 6px; letter-spacing: 0.3px; }
+    .case p { font-size: 14.8px; margin-bottom: 8px; }
+    .case p:last-child { margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #e3f2fd; color: #1565c0; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #1565c0; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<!-- SEO:AUTO BEGIN -->
+<meta property="article:published_time" content="2026-09-30T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-09-30T09:00:00+09:00">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "청약 가점 계산법 — 무주택기간·부양가족·통장 가입기간별 점수",
+  "description": "청약 가점제는 무주택기간 32점·부양가족 35점·청약통장 가입기간 17점, 합계 84점 만점이다. 무주택기간은 만 30세(또는 혼인신고일)부터 모집공고일까지 1년당 2점, 부양가족은 본인 제외 1명당 5점을 더해 6명 이상이면 35점, 통장은 15년 이상이면 17점이다. 배우자 통장 합산 최대 3점과 계산 사례, 서울 당첨선까지 정리했다.",
+  "url": "https://sangsang.ephseed.com/2026-09-30-%EC%B2%AD%EC%95%BD-%EA%B0%80%EC%A0%90-%EA%B3%84%EC%82%B0%EB%B2%95",
+  "datePublished": "2026-09-30T09:00:00+09:00",
+  "dateModified": "2026-09-30T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-09-30-%EC%B2%AD%EC%95%BD-%EA%B0%80%EC%A0%90-%EA%B3%84%EC%82%B0%EB%B2%95">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="청약 가점 계산법 — 무주택기간·부양가족·통장 가입기간별 점수 | 부동산·주거">
+<meta property="og:description" content="청약 가점제는 무주택기간 32점·부양가족 35점·청약통장 가입기간 17점, 합계 84점 만점이다. 무주택기간은 만 30세(또는 혼인신고일)부터 모집공고일까지 1년당 2점, 부양가족은 본인 제외 1명당 5점을 더해 6명 이상이면 35점, 통장은 15년 이상이면 17점이다. 배우자 통장 합산 최대 3점과 계산 사례, 서울 당첨선까지 정리했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-09-30-%EC%B2%AD%EC%95%BD-%EA%B0%80%EC%A0%90-%EA%B3%84%EC%82%B0%EB%B2%95">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-09-30T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-09-30T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N28MJLW4W9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-N28MJLW4W9");</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-EVlth33UH8CTDu2u"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-KMCr4AoIjIDsi9XA"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-qqfX36xk8gz6faM6"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+<article class="article-wrap">
+<!-- HUB:BREADCRUMB:BEGIN -->
+<nav class="hub-bc"><a href="/">생생 정보통</a> &rsaquo; <a href="/housing/">주거·임대차</a></nav>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "생생 정보통", "item": "https://sangsang.ephseed.com/"}, {"@type": "ListItem", "position": 2, "name": "주거·임대차", "item": "https://sangsang.ephseed.com/housing/"}]}</script>
+<!-- HUB:BREADCRUMB:END -->
+  <header class="hero">
+    <div class="category-badge">🏠 부동산 · 주거</div>
+    <h1>청약 가점 계산법 —<br>무주택기간·부양가족·통장 가입기간별 점수</h1>
+    <p class="hero-sub">청약 가점제의 만점은 <b>84점</b>이다. 무주택기간 32점, 부양가족 35점, 청약통장 가입기간 17점으로 나뉘고, 세 항목 모두 모집공고일을 기준으로 센다. 내 점수를 정확히 계산해야 어떤 단지에 넣을지, 가점제와 추첨제 중 어느 쪽이 유리한지 판단할 수 있다.</p>
+    <div class="hero-meta">
+      <span>🏠 부동산 · 주거</span>
+      <span>📅 2026년 9월 30일</span>
+      <span>⏱️ 약 10분</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+
+    <div class="summary-box">
+      <h2>핵심 요약</h2>
+      <ul>
+        <li>가점은 <strong>무주택기간 32점 + 부양가족 35점 + 청약통장 가입기간 17점 = 84점 만점</strong>이다. 근거는 주택공급에 관한 규칙 제28조와 별표 1이다.</li>
+        <li>무주택기간은 <strong>만 30세가 되는 날(30세 전 혼인이면 혼인신고일)부터 모집공고일까지</strong> 센다. 1년 미만 2점에서 시작해 1년마다 2점씩 오르고 15년 이상이면 32점이다.</li>
+        <li>부양가족은 <strong>본인을 뺀 인원 1명당 5점</strong>이 더해진다. 0명 5점, 6명 이상 35점이며, 가입자 주민등록등본에 올라 있는 사람만 인정된다.</li>
+        <li>통장 가입기간은 6개월 미만 1점, 이후 1년마다 1점씩 올라 <strong>15년 이상 17점</strong>이다. 2024년 3월부터 배우자 가입기간의 50%를 합산해 <strong>최대 3점</strong>까지 더할 수 있다.</li>
+      </ul>
+    </div>
+
+    <h2 class="sec">1. 청약 가점제란 — 점수 높은 순서로 뽑는 방식</h2>
+
+    <p>민영주택 일반공급에서 1순위 경쟁이 생기면 <strong>가점제</strong>와 <strong>추첨제</strong>로 나눠 당첨자를 정한다. 가점제는 세 항목의 점수를 합산해 <b>높은 사람부터</b> 당첨시키고, 추첨제는 점수와 무관하게 무작위로 뽑는다. 두 방식을 어떤 비율로 적용하는지는 단지의 위치(투기과열지구·청약과열지역 등)와 전용면적에 따라 다르고 <strong>입주자모집공고문에 적혀 있다.</strong> 공고문에서 내가 넣으려는 면적형의 가점제 비율을 먼저 확인해야 한다.</p>
+
+    <p>가점제는 시간이 쌓아 주는 점수다. 세 항목 중 두 개(무주택기간, 통장 가입기간)는 시간이 지나야 오르고, 나머지 하나(부양가족)는 가족 구성에 달려 있다. 그래서 같은 나이라도 가족 수가 많고 무주택 기간이 긴 사람이 유리하고, 신혼부부·청년이 가점제로 서울 인기 단지에 당첨되기는 구조적으로 어렵다.</p>
+
+    <h2 class="sec">2. 항목별 배점 — 84점은 이렇게 나뉜다</h2>
+
+    <h3 class="sub">① 무주택기간 (최대 32점)</h3>
+    <p>기산점은 <strong>만 30세가 되는 날</strong>이고, 만 30세 이전에 혼인했다면 <strong>혼인관계증명서상 최초 혼인신고일</strong>이다. 이 기산점부터 <b>입주자모집공고일</b>까지 세대원 전원이 주택을 갖지 않은 기간이 점수가 된다. 무주택 상태가 중간에 끊기면(주택을 샀다가 처분한 경우 등) 처분 시점부터 다시 센다. 만 30세 미만 미혼자는 무주택기간이 0점이다.</p>
+
+    <table class="rate">
+      <tr><th>무주택기간</th><th>점수</th><th>무주택기간</th><th>점수</th></tr>
+      <tr><td>30세 미만 미혼</td><td class="down">0점</td><td>8년 이상~9년 미만</td><td>18점</td></tr>
+      <tr><td>1년 미만</td><td>2점</td><td>10년 이상~11년 미만</td><td>22점</td></tr>
+      <tr><td>1년 이상~2년 미만</td><td>4점</td><td>12년 이상~13년 미만</td><td>26점</td></tr>
+      <tr><td>3년 이상~4년 미만</td><td>8점</td><td>14년 이상~15년 미만</td><td>30점</td></tr>
+      <tr><td>5년 이상~6년 미만</td><td>12점</td><td>15년 이상</td><td class="up">32점</td></tr>
+    </table>
+    <p class="note">공식: 무주택기간이 N년 이상(N=1~14)이면 (N+1)×2점, 1년 미만은 2점, 15년 이상은 32점.</p>
+
+    <h3 class="sub">② 부양가족 수 (최대 35점)</h3>
+    <p>부양가족은 <strong>배우자, 직계존속(배우자의 직계존속 포함), 직계비속(미혼 자녀)</strong>이며 <b>청약통장 가입자의 주민등록등본에 올라 있어야</b> 한다. 배우자가 분리세대여도 포함된다. 직계존속은 청약자가 세대주로서 <b>3년 이상 계속 부양</b>한 경우에만 인정된다. 본인은 인원에 넣지 않고 5점이 기본으로 주어진다.</p>
+
+    <table class="rate">
+      <tr><th>부양가족 수(본인 제외)</th><th>0명</th><th>1명</th><th>2명</th><th>3명</th><th>4명</th><th>5명</th><th>6명 이상</th></tr>
+      <tr><td>점수</td><td>5점</td><td>10점</td><td>15점</td><td>20점</td><td>25점</td><td>30점</td><td class="up">35점</td></tr>
+    </table>
+
+    <h3 class="sub">③ 청약통장 가입기간 (최대 17점)</h3>
+    <p>입주자모집공고일 현재 <b>청약자 본인 통장의 가입기간</b>으로 계산한다. 통장을 다른 종류로 전환하거나 예치금을 바꾸거나 명의를 변경해도 <strong>최초 가입일</strong>이 기준이다. 6개월 미만은 1점, 6개월 이상~1년 미만은 2점, 그다음부터 1년마다 1점씩 오른다.</p>
+
+    <table class="rate">
+      <tr><th>가입기간</th><th>점수</th><th>가입기간</th><th>점수</th></tr>
+      <tr><td>6개월 미만</td><td>1점</td><td>5년 이상~6년 미만</td><td>7점</td></tr>
+      <tr><td>6개월 이상~1년 미만</td><td>2점</td><td>10년 이상~11년 미만</td><td>12점</td></tr>
+      <tr><td>1년 이상~2년 미만</td><td>3점</td><td>14년 이상~15년 미만</td><td>16점</td></tr>
+      <tr><td>2년 이상~3년 미만</td><td>4점</td><td>15년 이상</td><td class="up">17점</td></tr>
+    </table>
+
+    <div class="warnbox">
+      <div class="wt">2024년 3월부터 달라진 점 — 배우자 통장 합산</div>
+      <p>민영주택 가점제에서 <strong>배우자 통장 가입기간의 50%</strong>를 본인 가입기간에 더할 수 있고, 이렇게 얻는 점수는 <strong>최대 3점</strong>이다. 국토교통부 예시로 본인 5년(7점)·배우자 4년이면 배우자 몫 2년이 붙어 합계 10점이 된다. 부부가 각각 청약통장을 오래 유지하는 쪽이 유리해졌다.</p>
+    </div>
+
+    <h2 class="sec">3. 계산 사례 — 두 가지 가정</h2>
+
+    <div class="case">
+      <div class="ct">사례 ① 만 38세, 배우자와 자녀 1명, 통장 7년</div>
+      <p><strong>무주택기간</strong>: 만 30세 이후 8년 → 18점. <strong>부양가족</strong>: 배우자+자녀 1명 = 2명 → 15점. <strong>통장</strong>: 7년 이상 8년 미만 → 9점.</p>
+      <p>합계 <strong>42점</strong>. 84점 만점의 절반이다. 서울 인기 단지의 당첨선에는 크게 못 미치지만, 경쟁이 덜한 지역이나 추첨제 물량에서는 의미 있는 점수다.</p>
+    </div>
+
+    <div class="case">
+      <div class="ct">사례 ② 만 45세, 배우자와 자녀 2명, 통장 15년</div>
+      <p><strong>무주택기간</strong>: 만 30세 이후 15년 → 32점. <strong>부양가족</strong>: 배우자+자녀 2명 = 3명 → 20점. <strong>통장</strong>: 15년 → 17점.</p>
+      <p>합계 <strong>69점</strong>. 이 정도가 서울 평균 당첨선(아래 6장)을 넘나드는 구간이다. 15년 무주택을 유지했다는 조건이 붙는다.</p>
+    </div>
+
+    <p>공식 계산은 한국부동산원 <strong>청약홈의 청약가점계산기</strong>에서 할 수 있고, 실제 청약 접수 때는 청약홈이 무주택기간·부양가족을 등본·가족관계 자료로 확인한다. 점수를 잘못 입력해 당첨된 경우 <b>부적격 당첨자</b>로 처리돼 일정 기간 청약 자격이 제한될 수 있으니, 입력 전에 등본으로 세대원 구성을 확인해야 한다.</p>
+
+    <div class="infographic-section">
+      <h3>청약 가점 84점의 구성 — 항목별 만점</h3>
+      <div class="bar-chart"><div class="bar-item"><div class="bar-label"><span>부양가족 (6명 이상)</span><span class="val">35점</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:100%"></div></div></div><div class="bar-item"><div class="bar-label"><span>무주택기간 (15년 이상)</span><span class="val">32점</span></div><div class="bar-track"><div class="bar-fill bar-cyan" style="width:91.4%"></div></div></div><div class="bar-item"><div class="bar-label"><span>청약통장 가입기간 (15년 이상)</span><span class="val">17점</span></div><div class="bar-track"><div class="bar-fill bar-amber" style="width:48.6%"></div></div></div></div>
+      <p class="note">합계 84점. 부양가족은 가족 구성으로, 나머지 두 항목은 시간으로 채워진다. 배우자 통장 합산 3점은 통장 항목 17점 안에서 계산된다.</p>
+    </div>
+
+    <h2 class="sec">4. 점수가 깎이거나 어긋나는 흔한 실수</h2>
+
+    <ul class="plain">
+      <li><strong>세대원 중 한 명이라도 주택이 있으면 무주택이 아니다.</strong> 무주택기간은 본인만이 아니라 세대원 전원의 주택 소유를 기준으로 본다.</li>
+      <li><strong>등본에 없는 가족은 부양가족이 아니다.</strong> 따로 사는 부모님이나 다른 세대로 잡힌 가족은 계산에 넣을 수 없다.</li>
+      <li><strong>직계존속은 3년 부양이 필요하다.</strong> 등본에 올린 지 3년이 안 됐다면 부양가족 점수에서 빠진다.</li>
+      <li><strong>통장 가입기간은 해지하면 끊긴다.</strong> 급하게 돈이 필요해 해지하면 최초 가입일 기준의 점수가 사라지므로, 대출이나 납입 조정을 먼저 검토해야 한다.</li>
+      <li><strong>혼인신고일은 무주택 기산점이 될 수 있다.</strong> 만 30세 전에 혼인했다면 기산일이 앞당겨지는 만큼 등본과 혼인관계증명서로 날짜를 확인한다.</li>
+    </ul>
+
+    <h2 class="sec">5. 가점제가 아닌 길 — 추첨제와 특별공급</h2>
+
+    <p>점수가 낮다고 청약을 포기할 이유는 없다. 같은 단지에서도 <b>추첨제 물량</b>은 점수와 관계없이 1순위 자격만 있으면 뽑히고, 신혼부부·생애최초·다자녀 등 <b>특별공급</b>은 가점이 아닌 별도 자격과 소득·자산 기준으로 심사한다. 가점제 물량 비율은 지역과 면적별로 갈리기 때문에, 내 점수가 60점 미만이면 <strong>추첨 물량이 많은 중소형·대형 면적</strong>이나 경쟁이 낮은 지역부터 비교하는 것이 현실적이다.</p>
+
+    <h2 class="sec">6. 이면 — 서울은 가점 60점대가 당첨선이다</h2>
+
+    <p>언론이 청약홈 자료를 집계한 보도에 따르면 청약 경쟁률 상위 10개 단지 가운데 8곳이 서울이었고, 이들 단지의 <strong>평균 당첨가점은 서울 64.12점, 경기 48.89점, 인천 49.03점</strong>이었다. 서초·반포의 신축 단지는 70점을 넘긴 사례도 있었다(아크로 드 서초 74.70점, 오티에르 반포 72.30점). 84점 만점 중 60점대를 넘으려면 무주택 15년 안팎에 부양가족 3~4명이 필요하다는 뜻이다.</p>
+
+    <div class="infographic-section">
+      <h3>청약 경쟁률 상위 단지의 평균 당첨가점 (84점 만점)</h3>
+      <div class="bar-chart"><div class="bar-item"><div class="bar-label"><span>서울</span><span class="val">64.12점</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:76.3%"></div></div></div><div class="bar-item"><div class="bar-label"><span>인천</span><span class="val">49.03점</span></div><div class="bar-track"><div class="bar-fill bar-cyan" style="width:58.4%"></div></div></div><div class="bar-item"><div class="bar-label"><span>경기</span><span class="val">48.89점</span></div><div class="bar-track"><div class="bar-fill bar-grey" style="width:58.2%"></div></div></div></div>
+      <p class="note">언론 보도(EBN 등)가 청약홈 자료를 집계한 수치이며 집계 대상은 경쟁률 상위 10개 단지다. 전체 단지 평균과는 다를 수 있다.</p>
+    </div>
+
+    <p>이 구조는 청년·신혼부부에게 불리한 방향으로 작동한다. 가점제 자체가 <b>무주택 장기 보유자와 다자녀 가구를 우대</b>하도록 설계됐고, 그래서 정책은 특별공급과 추첨제 비율 조정으로 균형을 맞추려 한다. 제도가 바뀌는 지점은 공고 시점의 규칙으로 판단해야 하고, 이 글의 점수표도 <b>주택공급에 관한 규칙 개정 시 달라질 수 있다.</b></p>
+
+    <h2 class="sec">7. 나에게 미치는 영향 — 체크리스트</h2>
+
+    <ul class="plain">
+      <li><strong>청약홈 가점계산기에 등본 기준으로 입력한다.</strong> 무주택기간 기산일과 부양가족을 등본·혼인관계증명서로 확인한다.</li>
+      <li><strong>통장 가입일을 확인한다.</strong> 전환·증액을 했어도 최초 가입일이 기준이다. 배우자 통장도 조회해 합산 3점 가능성을 본다.</li>
+      <li><strong>공고문에서 가점제 비율을 본다.</strong> 넣으려는 면적형이 가점제인지 추첨제인지에 따라 전략이 달라진다.</li>
+      <li><strong>내 점수와 지역 당첨선을 비교한다.</strong> 서울은 60점대, 경기·인천은 40점대 후반이 최근 보도 기준 평균이다.</li>
+    </ul>
+
+    <h2 class="sec">8. 전망과 행동 제안</h2>
+
+    <p>가점은 하루아침에 오르지 않는다. 무주택기간과 통장 가입기간은 <b>유지하는 것만으로</b> 해마다 각각 2점과 1점이 쌓이고, 부양가족은 가족 구성의 변화에 따라 5점씩 움직인다. 지금 할 수 있는 일은 통장을 해지하지 않고 유지하는 것, 주택 소유 여부와 세대원 구성을 점검하는 것, 그리고 내 점수대에서 당첨 가능성이 있는 지역과 물량 유형을 고르는 것이다. 청약 제도는 규칙이 자주 바뀌므로 신청 전 <strong>청약홈의 최신 공고와 규칙</strong>을 확인해야 한다.</p>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#청약가점계산법</span><span class="hashtag">#청약가점제</span><span class="hashtag">#84점만점</span><span class="hashtag">#무주택기간점수</span><span class="hashtag">#부양가족점수</span><span class="hashtag">#청약통장가입기간</span><span class="hashtag">#배우자통장합산</span><span class="hashtag">#서울청약당첨선</span><span class="hashtag">#주택공급에관한규칙</span><span class="hashtag">#청약홈</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://www.applyhome.co.kr/ap/apg/selectAddpntCalculatorView.do" target="_blank" rel="noopener">한국부동산원 청약홈 — 청약가점계산</a>
+      <a href="https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=279483" target="_blank" rel="noopener">국가법령정보센터 — 주택공급에 관한 규칙</a>
+      <a href="https://www.korea.kr/news/policyNewsView.do?newsId=148923954" target="_blank" rel="noopener">대한민국 정책브리핑 — 내년부터 배우자 청약통장 보유기간도 합산…최대 가점 3점</a>
+      <a href="https://www.khug.or.kr/khmb/m/hg/lg/hglg000019.jsp" target="_blank" rel="noopener">HUG 주택청약도우미 — 청약 가점제 안내</a>
+      <a href="https://www.ebn.co.kr/news/articleView.html?idxno=1718788" target="_blank" rel="noopener">EBN — 서울 청약 '바늘구멍'…경쟁률보다 높은 건 '64점 당첨선'</a>
+      <a href="https://homedubu.com/11296/" target="_blank" rel="noopener">홈두부 — 청약 경쟁률 TOP10, 서울이 80% 독식…당첨 문턱도 가장 높았다</a>
+    </div>
+
+    <p class="disclaimer">
+      ※ 본 아티클은 주택공급에 관한 규칙과 청약홈 안내, 언론 보도를 정리한 정보성 콘텐츠이며 개별 청약 자격에 대한 판정이 아닙니다. 가점 산정 기준과 가점제·추첨제 비율은 규칙 개정과 단지별 입주자모집공고에 따라 달라질 수 있으므로 <strong>정확한 자격과 점수는 청약홈(applyhome.co.kr)과 해당 단지 공고문에서 확인하시기 바랍니다.</strong> 당첨가점 수치는 보도 집계이며 전체 단지 평균이 아닙니다.
+    </p>
+
+  </div>
+<!-- HUB:RELATED:BEGIN -->
+<style>
+.hub-bc{font-size:13px;color:#5b6672;margin:0 0 18px;font-family:'Noto Sans KR',sans-serif}
+.hub-bc a{color:#5b6672;text-decoration:none}.hub-bc a:hover{text-decoration:underline}
+.hub-rel{margin:38px 0 6px;padding:20px 22px;border:1px solid #e3e8ee;border-radius:10px;
+  background:#fafbfc;font-family:'Noto Sans KR',sans-serif}
+.hub-rel h2{font-size:15px;margin:0 0 14px;font-weight:700;color:#12202e;
+  font-family:'Noto Sans KR',sans-serif;border:0;padding:0}
+.hub-rel ul{list-style:none;padding:0;margin:0}
+.hub-rel li{padding:7px 0;font-size:14.5px;line-height:1.55}
+.hub-rel li a{color:#12202e;text-decoration:none}
+.hub-rel li a:hover{color:#1a5f8a;text-decoration:underline}
+.hub-rel .hub-more{margin:14px 0 0;font-size:13.5px}
+.hub-rel .hub-more a{color:#1a5f8a;text-decoration:none;font-weight:700}
+</style>
+<aside class="hub-rel">
+  <h2>같은 분야 다른 글 — 주거·임대차</h2>
+  <ul>
+    <li><a href="/2026-08-13-계약갱신청구권-행사방법">계약갱신청구권 행사방법 — 집주인 실거주 거절 요건과 5% 상한 계산</a></li>
+    <li><a href="/2026-08-21-임차권등기명령-신청방법">임차권등기명령 신청방법 — 요건과 절차, 효력 발생 시점 정리</a></li>
+    <li><a href="/2026-08-29-소액임차인-최우선변제금-조건">소액임차인 최우선변제금 조건 — 지역별 보증금 범위와 배당 순위 계산</a></li>
+  </ul>
+  <p class="hub-more"><a href="/housing/">주거·임대차 전체 보기 →</a></p>
+</aside>
+<!-- HUB:RELATED:END -->
+</article>
+</body>
+</html>
