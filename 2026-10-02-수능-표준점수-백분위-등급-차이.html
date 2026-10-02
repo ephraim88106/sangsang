@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>수능 표준점수 백분위 등급 차이 — 성적표 보는 방법과 산출 원리 | 교육·입시</title>
+  <meta name="description" content="수능 성적표에는 원점수 없이 표준점수·백분위·등급 세 가지만 나온다. 표준점수는 국어·수학이 평균 100·표준편차 20, 탐구가 평균 50·표준편차 10으로 맞춘 상대 점수이고, 백분위는 나보다 낮은 수험생의 비율, 등급은 누적 4%·11%·23% 같은 비율로 자른 구간이다. 2027학년도 9월 모의평가에서 국어 최고점 144점·수학 137점, 사탐 최고점은 과목 간 9점 차이가 났다. 세 점수의 산출 원리와 대학이 변환표준점수를 쓰는 이유를 정리했다.">
+  <meta name="keywords" content="수능 표준점수, 수능 백분위, 수능 등급 차이, 수능 성적표 보는 방법, 표준점수 계산, 변환표준점수, 수능 등급 구분점수, 2027학년도 9월 모평">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f2f4f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #311b92 0%, #5e35b1 45%, #7b1fa2 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #d6c7e6; color: #4a148c; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #f3e5f5; border-left: 5px solid #6a1b9a; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #6a1b9a; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #4a148c; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #6a1b9a; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #4a148c; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #f3e5f5; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #6a1b9a; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #4a148c; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #f5eefa; border-left: 4px solid #7e57c2; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #4a148c; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f8f4fb; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #4a148c; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #4a148c; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #e6dcef; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-blue { background: linear-gradient(90deg, #4a148c, #9575cd); }
+    .bar-teal { background: linear-gradient(90deg, #004d40, #00897b); }
+    .bar-amber { background: linear-gradient(90deg, #e65100, #f9a825); }
+    .bar-red { background: linear-gradient(90deg, #b71c1c, #e53935); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #ded0e8; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #f3e5f5; color: #4a148c; font-weight: 700; }
+    table.rate td.up { color: #4a148c; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #00695c; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #6a1b9a; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #4a148c; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #d6c7e6; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #4a148c; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #d6c7e6; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #6a1b9a; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .formula { background: #faf5fd; border: 1.5px dashed #7e57c2; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 16.5px; font-weight: 800; color: #4a148c; line-height: 1.8; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #7e57c2; margin-top: 10px; margin-bottom: 0; }
+    .warnbox { background: #fff8e1; border-left: 5px solid #f9a825; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 26px 0; }
+    .warnbox .wt { font-size: 14px; font-weight: 800; color: #e65100; margin-bottom: 8px; }
+    .warnbox p { font-size: 15px; color: #5d4037; margin-bottom: 0; word-break: keep-all; }
+    .case { background: #fff; border: 1.5px solid #d6c7e6; border-left: 5px solid #6a1b9a; border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; }
+    .case .ct { font-size: 13.5px; font-weight: 800; color: #4a148c; margin-bottom: 6px; letter-spacing: 0.3px; }
+    .case p { font-size: 14.8px; margin-bottom: 8px; }
+    .case p:last-child { margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #f3e5f5; color: #6a1b9a; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #6a1b9a; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<!-- SEO:AUTO BEGIN -->
+<meta property="article:published_time" content="2026-10-02T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-02T09:00:00+09:00">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "수능 표준점수 백분위 등급 차이 — 성적표 보는 방법과 산출 원리",
+  "description": "수능 성적표에는 원점수 없이 표준점수·백분위·등급 세 가지만 나온다. 표준점수는 국어·수학이 평균 100·표준편차 20, 탐구가 평균 50·표준편차 10으로 맞춘 상대 점수이고, 백분위는 나보다 낮은 수험생의 비율, 등급은 누적 4%·11%·23% 같은 비율로 자른 구간이다. 2027학년도 9월 모의평가에서 국어 최고점 144점·수학 137점, 사탐 최고점은 과목 간 9점 차이가 났다. 세 점수의 산출 원리와 대학이 변환표준점수를 쓰는 이유를 정리했다.",
+  "url": "https://sangsang.ephseed.com/2026-10-02-%EC%88%98%EB%8A%A5-%ED%91%9C%EC%A4%80%EC%A0%90%EC%88%98-%EB%B0%B1%EB%B6%84%EC%9C%84-%EB%93%B1%EA%B8%89-%EC%B0%A8%EC%9D%B4",
+  "datePublished": "2026-10-02T09:00:00+09:00",
+  "dateModified": "2026-10-02T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-10-02-%EC%88%98%EB%8A%A5-%ED%91%9C%EC%A4%80%EC%A0%90%EC%88%98-%EB%B0%B1%EB%B6%84%EC%9C%84-%EB%93%B1%EA%B8%89-%EC%B0%A8%EC%9D%B4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="수능 표준점수 백분위 등급 차이 — 성적표 보는 방법과 산출 원리 | 교육·입시">
+<meta property="og:description" content="수능 성적표에는 원점수 없이 표준점수·백분위·등급 세 가지만 나온다. 표준점수는 국어·수학이 평균 100·표준편차 20, 탐구가 평균 50·표준편차 10으로 맞춘 상대 점수이고, 백분위는 나보다 낮은 수험생의 비율, 등급은 누적 4%·11%·23% 같은 비율로 자른 구간이다. 2027학년도 9월 모의평가에서 국어 최고점 144점·수학 137점, 사탐 최고점은 과목 간 9점 차이가 났다. 세 점수의 산출 원리와 대학이 변환표준점수를 쓰는 이유를 정리했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-10-02-%EC%88%98%EB%8A%A5-%ED%91%9C%EC%A4%80%EC%A0%90%EC%88%98-%EB%B0%B1%EB%B6%84%EC%9C%84-%EB%93%B1%EA%B8%89-%EC%B0%A8%EC%9D%B4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-10-02T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-02T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N28MJLW4W9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-N28MJLW4W9");</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-EVlth33UH8CTDu2u"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-KMCr4AoIjIDsi9XA"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-qqfX36xk8gz6faM6"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+<article class="article-wrap">
+<!-- HUB:BREADCRUMB:BEGIN -->
+<nav class="hub-bc"><a href="/">생생 정보통</a> &rsaquo; <a href="/edu/">교육·학자금</a></nav>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "생생 정보통", "item": "https://sangsang.ephseed.com/"}, {"@type": "ListItem", "position": 2, "name": "교육·학자금", "item": "https://sangsang.ephseed.com/edu/"}]}</script>
+<!-- HUB:BREADCRUMB:END -->
+  <header class="hero">
+    <div class="category-badge">🎓 교육 · 입시</div>
+    <h1>수능 표준점수 백분위 등급 차이 —<br>성적표 보는 방법과 산출 원리</h1>
+    <p class="hero-sub">수능 성적표에는 원점수가 없다. 있는 것은 <b>표준점수·백분위·등급</b> 세 가지뿐이다. 같은 시험 결과를 서로 다른 방식으로 환산한 숫자들이라, 어느 값이 어디에 쓰이는지 모르면 대학 지원 때 성적을 잘못 읽게 된다.</p>
+    <div class="hero-meta">
+      <span>🎓 교육 · 입시</span>
+      <span>📅 2026년 10월 2일</span>
+      <span>⏱️ 약 9분</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+
+    <div class="summary-box">
+      <h2>핵심 요약</h2>
+      <ul>
+        <li><strong>표준점수</strong>는 원점수가 응시집단 평균에서 얼마나 떨어졌는지를 보여준다. 국어·수학은 <strong>평균 100·표준편차 20</strong>, 탐구는 <strong>평균 50·표준편차 10</strong>으로 맞춘다.</li>
+        <li><strong>백분위</strong>는 나보다 낮은 점수를 받은 수험생의 비율이다. 표준점수 130·백분위 90이면 상위 약 10%라는 뜻이다.</li>
+        <li><strong>등급</strong>은 누적 비율로 자른다. 1등급은 상위 <strong>4%</strong>, 2등급은 누적 <strong>11%</strong>까지다. 영어와 한국사는 이 방식이 아니라 <strong>절대평가</strong>다.</li>
+        <li>대학은 국어·수학에 표준점수를 쓰고, 탐구에는 <strong>변환표준점수</strong>를 쓰는 곳이 많다. 과목 간 표준점수 차이를 보정하려는 장치다.</li>
+      </ul>
+    </div>
+
+    <h2 class="sec">1. 원점수가 성적표에 없는 이유</h2>
+
+    <p>수능 성적통지표에는 영역·과목별로 <b>표준점수, 백분위, 등급</b>이 표기되고 원점수는 표기되지 않는다. 원점수는 시험이 쉬우면 높게, 어려우면 낮게 나오기 때문에 해마다 또는 과목마다 그대로 비교할 수 없다. 대입에서는 어느 해, 어느 과목이든 "전체 수험생 가운데 어디쯤인가"가 중요하므로 원점수를 환산한 상대 점수만 공식 성적으로 쓴다.</p>
+    <p>그래서 시험을 본 직후에 하는 가채점은 원점수로만 할 수 있고, 그 점수가 표준점수나 등급으로 어떻게 바뀔지는 성적표가 나와야 알 수 있다. 가채점 단계에서 보는 등급컷은 어디까지나 입시 업체의 추정치다.</p>
+
+    <h2 class="sec">2. 표준점수 — 평균과 표준편차로 맞춘 점수</h2>
+
+    <p>표준점수는 원점수에서 응시집단의 평균을 빼고 표준편차로 나눈 뒤, 영역별 기준값을 곱하고 더해 만든다. 시험이 어려워 평균이 낮아졌다면 같은 원점수라도 평균과의 거리가 커져 표준점수가 높아진다.</p>
+
+    <div class="formula">
+      <div class="f-main">국어·수학 표준점수 = {(원점수 − 평균) ÷ 표준편차} × 20 + 100<br>탐구·제2외국어/한문 = {(원점수 − 평균) ÷ 표준편차} × 10 + 50</div>
+      <p class="f-note">표준점수의 범위는 국어·수학 0~200점, 탐구 0~100점이다.</p>
+    </div>
+
+    <div class="case">
+      <div class="ct">가상 계산 사례 (설명용 숫자)</div>
+      <p>국어 원점수 80점, 응시집단 평균 60점, 표준편차 15점이라고 가정하면 (80−60)÷15 = 1.33이고, 여기에 20을 곱해 100을 더하면 <b>약 127점</b>이 된다. 같은 80점이어도 시험이 쉬워 평균이 70점이었다면 (80−70)÷15×20+100 = 약 113점에 그친다.</p>
+    </div>
+
+    <p>이 구조 때문에 <b>표준점수 최고점</b>이 시험 난이도의 지표로 쓰인다. 어려운 시험일수록 만점자의 표준점수가 높게 나온다. 같은 만점이어도 어느 해에는 140점대, 어느 해에는 130점대가 되는 이유다.</p>
+
+    <h2 class="sec">3. 백분위 — 나보다 낮은 사람의 비율</h2>
+
+    <p>백분위는 <b>(나보다 낮은 점수를 받은 수험생 수 + 동점자 수의 절반) ÷ 전체 응시자 수 × 100</b>으로 계산한다. 백분위 90이라면 나보다 낮은 수험생이 약 90%라는 뜻이고, 상위 10% 안팎에 해당한다.</p>
+    <p>표준점수와 백분위는 같은 숫자가 아니다. 표준점수는 점수 간격까지 반영하고, 백분위는 순서만 반영한다. 점수가 촘촘하게 몰린 구간에서는 표준점수 1~2점이 백분위 몇 퍼센트포인트를 가르기도 한다. 반대로 상위권 끝에서는 표준점수 차이가 커도 백분위는 99로 같을 수 있다.</p>
+
+    <h2 class="sec">4. 등급 — 누적 비율로 자른 9단계</h2>
+
+    <p>상대평가 영역은 수험생을 점수순으로 세운 뒤 상위 누적 4%까지를 1등급, 누적 11%까지를 2등급으로 나누는 식으로 9등급을 매긴다. 동점자가 경계 비율을 넘으면 그 동점자 전원이 상위 등급을 받는다. 그래서 실제 1등급 비율은 정확히 4%가 아니라 4% 안팎으로 나온다.</p>
+
+    <table class="rate">
+      <tr><th>등급</th><th>누적 비율</th><th>등급</th><th>누적 비율</th></tr>
+      <tr><td class="up">1</td><td>상위 4%</td><td>6</td><td>상위 77%</td></tr>
+      <tr><td class="up">2</td><td>상위 11%</td><td>7</td><td>상위 89%</td></tr>
+      <tr><td class="up">3</td><td>상위 23%</td><td>8</td><td>상위 96%</td></tr>
+      <tr><td class="up">4</td><td>상위 40%</td><td>9</td><td>나머지 4%</td></tr>
+      <tr><td class="up">5</td><td>상위 60%</td><td colspan="2"></td></tr>
+    </table>
+    <p class="note">등급은 표준점수를 기준으로 가른다. 백분위 반올림 값이 같아도 표준점수 134점은 1등급, 133점은 2등급이 될 수 있다.</p>
+
+    <div class="warnbox">
+      <div class="wt">등급과 백분위는 일대일로 대응하지 않는다</div>
+      <p>등급 경계는 표준점수로 정해지므로, 백분위가 같은 두 학생의 등급이 다를 수 있다. 수능 최저학력기준(예: 3개 영역 합 6 이내)은 등급으로 판정하니, 백분위만 보고 안심하지 말고 성적표의 등급 칸을 따로 확인해야 한다.</p>
+    </div>
+
+    <h2 class="sec">5. 영어·한국사는 절대평가 — 등급 기준이 다르다</h2>
+
+    <p>영어는 2018학년도부터 절대평가다. 응시자 중 순위가 아니라 <b>원점수 구간</b>으로 등급이 정해진다. 90점 이상이 1등급, 80점 이상 90점 미만이 2등급, 이후 10점 단위로 내려가 9등급은 20점 미만이다. 한국사도 절대평가이고 필수 응시 과목이다. 40점 이상이 1등급이며 5점 단위로 내려간다.</p>
+    <p>절대평가 영역에는 표준점수와 백분위가 나오지 않고 등급만 나온다. 대학은 이 등급을 가산점이나 감점으로 환산해 반영하는데, 환산 방식은 대학마다 다르다.</p>
+
+    <div class="infographic-section">
+      <h3>수능 등급별 누적 비율 (상위 %)</h3>
+      <div class="bar-chart">
+        <div class="bar-item"><div class="bar-label"><span>1등급</span><span class="val">상위 4%</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:4%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>2등급</span><span class="val">상위 11%</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:11%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>3등급</span><span class="val">상위 23%</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:23%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>4등급</span><span class="val">상위 40%</span></div><div class="bar-track"><div class="bar-fill bar-cyan" style="width:40%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>5등급</span><span class="val">상위 60%</span></div><div class="bar-track"><div class="bar-fill bar-cyan" style="width:60%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>6등급</span><span class="val">상위 77%</span></div><div class="bar-track"><div class="bar-fill bar-grey" style="width:77%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>7등급</span><span class="val">상위 89%</span></div><div class="bar-track"><div class="bar-fill bar-grey" style="width:89%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>8등급</span><span class="val">상위 96%</span></div><div class="bar-track"><div class="bar-fill bar-grey" style="width:96%"></div></div></div>
+      </div>
+      <p class="note">막대 길이는 해당 등급까지의 누적 비율(%)이다. 9등급은 나머지 4%다.</p>
+    </div>
+
+    <h2 class="sec">6. 2027학년도 9월 모의평가로 보는 표준점수 차이</h2>
+
+    <p>한국교육과정평가원이 발표한 2027학년도 수능 9월 모의평가(9월 2일 시행, 성적통지표는 9월 29일 배부) 채점 결과가 표준점수 개념을 잘 보여준다. 응시자는 <b>39만 6,118명</b>(재학생 29만 8,250명, 졸업생 등 9만 7,868명)이었다.</p>
+
+    <div class="impact-grid">
+      <div class="impact-card"><span class="impact-num">144점</span><span class="impact-label">국어 표준점수 최고점</span></div>
+      <div class="impact-card"><span class="impact-num">137점</span><span class="impact-label">수학 표준점수 최고점</span></div>
+      <div class="impact-card"><span class="impact-num">131점</span><span class="impact-label">국어 1등급 구분점수<br>(1만 6,363명, 4.16%)</span></div>
+      <div class="impact-card"><span class="impact-num">128점</span><span class="impact-label">수학 1등급 구분점수<br>(2만 1,666명, 5.55%)</span></div>
+    </div>
+
+    <p>국어는 최고점이 144점으로 수학보다 7점 높았다. 어려운 시험일수록 표준점수 최고점이 올라간다는 원리 그대로다. 1등급 구분점수는 국어 131점, 수학 128점이다. 수학은 1등급 비율이 5.55%로 4%를 넘었는데, 최고점자가 2,741명에 이를 만큼 상위 점수가 몰려 동점자가 경계를 넘으면 모두 상위 등급을 받는 규칙이 작동한 것으로 보인다.</p>
+    <p>탐구에서는 과목 간 격차가 두드러졌다. 사회탐구 표준점수 최고점은 정치와법이 74점으로 가장 높았고, 한국지리·세계지리·동아시아사는 65점으로 <b>9점 차이</b>가 났다. 과학탐구는 응시자가 줄면서 8개 과목 1등급 인원의 합이 지난해 9월 1만 4,324명에서 8,311명으로 42.0% 감소했다. 같은 백분위여도 과목마다 표준점수가 다르다는 뜻이고, 이 불균형이 다음 장의 변환표준점수가 필요한 이유다.</p>
+
+    <h2 class="sec">7. 대학은 어떤 점수를 쓰나 — 변환표준점수</h2>
+
+    <p>대부분의 대학은 국어·수학에는 표준점수를 그대로 반영하고, 탐구에는 <b>변환표준점수</b>를 쓴다. 변환표준점수는 같은 백분위에 같은 점수를 주도록 대학이 별도로 만든 표준점수 표다. 표준점수를 그대로 쓰면 최고점이 높은 과목을 고른 학생이 유리해지기 때문에, 과목 선택에 따른 유불리를 줄이려는 장치다.</p>
+    <p>다만 변환표준점수는 대학마다 표가 다르다. 같은 성적표라도 대학에 따라 환산 점수가 달라지므로, 지원하려는 대학의 <b>정시모집 성적 산출 방법</b> 안내를 직접 확인해야 한다.</p>
+
+    <h2 class="sec">8. 이면 — 숫자 하나로 모든 것을 판단하면 생기는 오해</h2>
+
+    <p>첫째, 표준점수는 시험이 달라지면 같은 값이어도 의미가 달라진다. 올해 130점과 작년 130점은 다른 난이도 위의 숫자다. 둘째, 백분위는 응시집단이 달라지면 같은 실력이어도 변한다. 졸업생 응시 비율이 높거나 과학탐구 응시자가 줄어드는 해에는 같은 점수의 백분위가 달라진다. 셋째, 모의평가는 수능과 응시집단이 다르다. 9월 모의평가 표준점수와 백분위는 참고용이고, 실제 수능에서 같은 값이 나온다는 보장이 없다.</p>
+
+    <div class="pullquote">세 점수는 같은 성적을 서로 다른 눈금으로 잰 것이다. 표준점수는 간격, 백분위는 순서, 등급은 구간을 본다.</div>
+
+    <h2 class="sec">9. 나에게 미치는 영향 — 성적표를 받으면 확인할 순서</h2>
+
+    <div class="steps">
+      <div class="step"><div class="step-t">수능 최저학력기준은 등급으로 확인</div><div class="step-d">수시 지원 대학의 최저 조건(영역 등급 합 등)을 성적표 등급 칸으로 판정한다. 탐구는 대학에 따라 1과목 또는 2과목 평균을 쓴다.</div></div>
+      <div class="step"><div class="step-t">정시는 표준점수와 백분위를 대학 방식대로 대입</div><div class="step-d">대학별 반영 영역·비율과 표준점수·백분위 선택 여부를 모집요강에서 확인한다.</div></div>
+      <div class="step"><div class="step-t">탐구는 변환표준점수 표 확인</div><div class="step-d">대학이 공개하는 변환표준점수 표에서 내 백분위가 몇 점으로 바뀌는지 본다.</div></div>
+      <div class="step"><div class="step-t">영어·한국사는 등급을 환산 점수로 확인</div><div class="step-d">절대평가 등급이 가산점인지 감점인지, 몇 점인지 대학별 표로 확인한다.</div></div>
+    </div>
+
+    <h2 class="sec">10. 전망 — 2028학년도 통합수능에서 달라지는 점</h2>
+
+    <p>2028학년도 수능은 사회·과학 선택과목이 사라지고 <b>통합사회·통합과학</b> 두 과목을 모두 보는 방식으로 바뀐다. 두 과목은 각각 25문항, 40분으로 출제되고 배점은 1.5점·2점·2.5점이다. 한국교육과정평가원은 2028학년도 표준점수 산출 방식이 선택형 수능 이전인 2021학년도와 같다고 소개했다. 선택과목 간 유불리 문제가 구조적으로 줄어드는 대신, 모든 수험생이 같은 과목을 보는 만큼 성적표 읽는 법의 기본 원리는 그대로 유지된다.</p>
+    <p>정리하면 성적표를 읽는 기본은 단순하다. 최저학력기준은 <b>등급</b>, 대학별 환산은 <b>표준점수·백분위</b>, 탐구는 <b>변환표준점수</b>, 영어·한국사는 <b>절대평가 등급</b>이다. 지원할 대학의 모집요강에서 어느 값을 쓰는지부터 확인하면 된다.</p>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#수능표준점수</span><span class="hashtag">#수능백분위</span><span class="hashtag">#수능등급</span><span class="hashtag">#수능성적표</span><span class="hashtag">#변환표준점수</span><span class="hashtag">#9월모의평가</span><span class="hashtag">#2028통합수능</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="http://www.edujin.co.kr/news/articleView.html?idxno=39592" target="_blank" rel="noopener">에듀진 — 영역·과목별 표준점수의 평균, 표준편차 및 범위</a>
+      <a href="https://www.busan.com/view/busan/view.php?code=20180626000203" target="_blank" rel="noopener">부산일보 — 표준점수 계산법</a>
+      <a href="https://www.veritas-a.com/news/articleView.html?idxno=483478" target="_blank" rel="noopener">베리타스알파 — 원점수/등급/표준점수/백분위</a>
+      <a href="https://www.jinhak.com/jh/high3/univ-entrance-info/ipsi-analysis/ipsi-strategy/100000515" target="_blank" rel="noopener">진학사 — 원점수 없이 표준점수만 주는 이유와 절대평가 등급</a>
+      <a href="https://www.djournal.co.kr/news/article.html?no=119832" target="_blank" rel="noopener">한국교육과정평가원 보도 — 2027학년도 수능 9월 모의평가 채점 결과</a>
+      <a href="https://www.fnnews.com/news/202609281405145312" target="_blank" rel="noopener">파이낸셜뉴스 — 9월 모평 사탐런 뚜렷, 과탐 1등급 인원 42% 감소</a>
+      <a href="https://www.ajunews.com/view/20260928150056092" target="_blank" rel="noopener">아주경제 — 9월 모평 사탐런 현실화, 과탐 1등급 뚝</a>
+      <a href="https://naeiledu.co.kr/28663" target="_blank" rel="noopener">내일교육 — 탐구 변환 표준점수의 배경과 영향</a>
+      <a href="https://sanedu.com/%EC%9E%85%EC%8B%9C%EB%A6%AC%ED%8F%AC%ED%8A%B8-2028%ED%95%99%EB%85%84%EB%8F%84-%EC%88%98%EB%8A%A5%EC%8B%9C%ED%97%98-%ED%91%9C%EC%A4%80%EC%A0%90%EC%88%98-%EC%82%B0%EC%B6%9C-%EB%B0%A9%EC%8B%9D/" target="_blank" rel="noopener">입시리포트 — 2028학년도 수능시험 표준점수 산출 방식</a>
+      <a href="https://www.korea.kr/news/policyNewsView.do?newsId=148938778" target="_blank" rel="noopener">정책브리핑 — 2028학년도 수능 통합·융합형 개편</a>
+    </div>
+
+    <p class="disclaimer">
+      ※ 본 아티클은 한국교육과정평가원 발표와 언론 보도를 정리한 정보성 콘텐츠이며 입시 컨설팅이 아닙니다. 등급 구분점수와 대학별 환산 방식은 시험과 대학에 따라 달라지므로 지원 전 한국교육과정평가원과 각 대학의 모집요강을 확인하세요.
+    </p>
+
+  </div>
+<!-- HUB:RELATED:BEGIN -->
+<style>
+.hub-bc{font-size:13px;color:#5b6672;margin:0 0 18px;font-family:'Noto Sans KR',sans-serif}
+.hub-bc a{color:#5b6672;text-decoration:none}.hub-bc a:hover{text-decoration:underline}
+.hub-rel{margin:38px 0 6px;padding:20px 22px;border:1px solid #e3e8ee;border-radius:10px;
+  background:#fafbfc;font-family:'Noto Sans KR',sans-serif}
+.hub-rel h2{font-size:15px;margin:0 0 14px;font-weight:700;color:#12202e;
+  font-family:'Noto Sans KR',sans-serif;border:0;padding:0}
+.hub-rel ul{list-style:none;padding:0;margin:0}
+.hub-rel li{padding:7px 0;font-size:14.5px;line-height:1.55}
+.hub-rel li a{color:#12202e;text-decoration:none}
+.hub-rel li a:hover{color:#1a5f8a;text-decoration:underline}
+.hub-rel .hub-more{margin:14px 0 0;font-size:13.5px}
+.hub-rel .hub-more a{color:#1a5f8a;text-decoration:none;font-weight:700}
+</style>
+<aside class="hub-rel">
+  <h2>같은 분야 다른 글 — 교육·학자금</h2>
+  <ul>
+    <li><a href="/2026-08-16-고교학점제-미이수-기준">고교학점제 미이수 기준 — 출석률·학업성취율 요건과 보충이수 절차 정리</a></li>
+    <li><a href="/2026-08-24-내신-5등급제-계산법">내신 5등급제 계산법 — 등급별 비율과 9등급제 환산 차이</a></li>
+    <li><a href="/2026-09-01-학자금-지원구간-확인방법">학자금 지원구간 확인 방법 — 소득인정액 산정과 구간별 국가장학금</a></li>
+  </ul>
+  <p class="hub-more"><a href="/edu/">교육·학자금 전체 보기 →</a></p>
+</aside>
+<!-- HUB:RELATED:END -->
+</article>
+</body>
+</html>
