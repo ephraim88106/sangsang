@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배출권거래제 뜻 — 유상할당 비율과 배출권 가격, 전기요금 영향 | 환경·기후</title>
+  <meta name="description" content="배출권거래제는 기업별 온실가스 배출 허용량을 정해 놓고 남거나 모자라는 배출권을 사고팔게 하는 제도다. 2026년 시작된 4기(2026~2030)에는 772개 기업에 23억 6,299만 톤이 할당되고, 발전 부문 유상할당 비율이 15%에서 2030년 50%까지 오른다. 배출권 가격은 올해 톤당 1만 원대에서 3만 원을 넘겼다. 할당·제출·과징금 구조와 전기요금에 닿는 경로를 정리했다.">
+  <meta name="keywords" content="배출권거래제 뜻, 배출권거래제 유상할당, 배출권 가격, K-ETS, 4차 계획기간, 배출권 과징금, 배출권 전기요금">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f2f4f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 45%, #00897b 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #c8e6c9; color: #1b5e20; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #e8f5e9; border-left: 5px solid #2e7d32; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #2e7d32; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #1b5e20; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #2e7d32; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #1b5e20; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #e8f5e9; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #2e7d32; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #1b5e20; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #f1f8f2; border-left: 4px solid #43a047; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #1b5e20; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f3faf4; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #1b5e20; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #1b5e20; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #d5e8d7; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-blue { background: linear-gradient(90deg, #1b5e20, #66bb6a); }
+    .bar-teal { background: linear-gradient(90deg, #004d40, #00897b); }
+    .bar-amber { background: linear-gradient(90deg, #e65100, #f9a825); }
+    .bar-red { background: linear-gradient(90deg, #b71c1c, #e53935); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #cfe3d1; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #e8f5e9; color: #1b5e20; font-weight: 700; }
+    table.rate td.up { color: #1b5e20; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #00695c; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #2e7d32; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #1b5e20; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #c8e6c9; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #1b5e20; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #c8e6c9; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #2e7d32; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .formula { background: #f6fbf6; border: 1.5px dashed #43a047; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 16.5px; font-weight: 800; color: #1b5e20; line-height: 1.8; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #43a047; margin-top: 10px; margin-bottom: 0; }
+    .warnbox { background: #fff8e1; border-left: 5px solid #f9a825; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 26px 0; }
+    .warnbox .wt { font-size: 14px; font-weight: 800; color: #e65100; margin-bottom: 8px; }
+    .warnbox p { font-size: 15px; color: #5d4037; margin-bottom: 0; word-break: keep-all; }
+    .case { background: #fff; border: 1.5px solid #c8e6c9; border-left: 5px solid #2e7d32; border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; }
+    .case .ct { font-size: 13.5px; font-weight: 800; color: #1b5e20; margin-bottom: 6px; letter-spacing: 0.3px; }
+    .case p { font-size: 14.8px; margin-bottom: 8px; }
+    .case p:last-child { margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #e8f5e9; color: #2e7d32; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #2e7d32; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<!-- SEO:AUTO BEGIN -->
+<meta property="article:published_time" content="2026-10-03T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-03T09:00:00+09:00">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "배출권거래제 뜻 — 유상할당 비율과 배출권 가격, 전기요금 영향",
+  "description": "배출권거래제는 기업별 온실가스 배출 허용량을 정해 놓고 남거나 모자라는 배출권을 사고팔게 하는 제도다. 2026년 시작된 4기(2026~2030)에는 772개 기업에 23억 6,299만 톤이 할당되고, 발전 부문 유상할당 비율이 15%에서 2030년 50%까지 오른다. 배출권 가격은 올해 톤당 1만 원대에서 3만 원을 넘겼다. 할당·제출·과징금 구조와 전기요금에 닿는 경로를 정리했다.",
+  "url": "https://sangsang.ephseed.com/2026-10-03-%EB%B0%B0%EC%B6%9C%EA%B6%8C%EA%B1%B0%EB%9E%98%EC%A0%9C-%EB%9C%BB-%EC%9C%A0%EC%83%81%ED%95%A0%EB%8B%B9-%EB%B9%84%EC%9C%A8",
+  "datePublished": "2026-10-03T09:00:00+09:00",
+  "dateModified": "2026-10-03T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-10-03-%EB%B0%B0%EC%B6%9C%EA%B6%8C%EA%B1%B0%EB%9E%98%EC%A0%9C-%EB%9C%BB-%EC%9C%A0%EC%83%81%ED%95%A0%EB%8B%B9-%EB%B9%84%EC%9C%A8">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="배출권거래제 뜻 — 유상할당 비율과 배출권 가격, 전기요금 영향 | 환경·기후">
+<meta property="og:description" content="배출권거래제는 기업별 온실가스 배출 허용량을 정해 놓고 남거나 모자라는 배출권을 사고팔게 하는 제도다. 2026년 시작된 4기(2026~2030)에는 772개 기업에 23억 6,299만 톤이 할당되고, 발전 부문 유상할당 비율이 15%에서 2030년 50%까지 오른다. 배출권 가격은 올해 톤당 1만 원대에서 3만 원을 넘겼다. 할당·제출·과징금 구조와 전기요금에 닿는 경로를 정리했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-10-03-%EB%B0%B0%EC%B6%9C%EA%B6%8C%EA%B1%B0%EB%9E%98%EC%A0%9C-%EB%9C%BB-%EC%9C%A0%EC%83%81%ED%95%A0%EB%8B%B9-%EB%B9%84%EC%9C%A8">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-10-03T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-03T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N28MJLW4W9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-N28MJLW4W9");</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-EVlth33UH8CTDu2u"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-KMCr4AoIjIDsi9XA"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-qqfX36xk8gz6faM6"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+<article class="article-wrap">
+<!-- HUB:BREADCRUMB:BEGIN -->
+<nav class="hub-bc"><a href="/">생생 정보통</a> &rsaquo; <a href="/life/">통신·생활지원</a></nav>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "생생 정보통", "item": "https://sangsang.ephseed.com/"}, {"@type": "ListItem", "position": 2, "name": "통신·생활지원", "item": "https://sangsang.ephseed.com/life/"}]}</script>
+<!-- HUB:BREADCRUMB:END -->
+  <header class="hero">
+    <div class="category-badge">🌱 환경 · 기후</div>
+    <h1>배출권거래제 뜻 —<br>유상할당 비율과 배출권 가격, 전기요금 영향</h1>
+    <p class="hero-sub">공장과 발전소는 온실가스를 내보낼 때마다 "배출권"이라는 허가증이 필요하다. 2026년부터 시작된 4기에서는 이 허가증을 <b>공짜로 받는 몫이 줄고 돈 주고 사야 하는 몫이 늘었다.</b> 그 비용은 결국 어디로 가는지, 제도의 기본 구조부터 정리한다.</p>
+    <div class="hero-meta"><span>🌱 환경 · 기후</span><span>📅 2026년 10월 3일</span><span>⏱️ 약 8분</span></div>
+  </header>
+
+  <div class="body-content">
+
+    <div class="summary-box">
+      <h2>핵심 요약</h2>
+      <ul>
+        <li><strong>배출권거래제</strong>는 기업마다 온실가스 배출 허용량(할당량)을 정해 주고, 남는 배출권은 팔고 모자라는 배출권은 사서 정부에 제출하게 하는 제도다.</li>
+        <li><strong>4기(2026~2030)</strong>에는 772개 기업에 총 23억 6,299만 톤이 할당된다. 발전 부문은 59개 기업 7억 9,575만 톤, 그 외 부문은 713개 기업 15억 6,724만 톤이다.</li>
+        <li><strong>유상할당 비율</strong>은 발전 부문이 10%에서 2026년 15%로 시작해 2030년 50%까지 오른다. 산업 부문 대부분은 무상할당이 유지된다.</li>
+        <li><strong>배출권 가격</strong>은 올해 톤당 1만 원대에서 9월 23일 2026년분 기준 3만 150원까지 올랐다. 가격이 오르면 발전 원가와 전기요금 압박으로 이어질 수 있다.</li>
+      </ul>
+    </div>
+
+    <h2 class="sec">1. 배출권거래제란 무엇인가</h2>
+    <p>배출권거래제(ETS, Emissions Trading System)는 정부가 나라 전체의 온실가스 배출 상한을 정하고, 이를 기업별 <b>배출권</b>으로 쪼개 나눠 준 뒤 기업끼리 사고팔게 하는 제도다. 배출권 1개(KAU)는 이산화탄소 1톤을 배출할 수 있는 권리다. 우리나라는 2015년 시작했고 2026년부터 4번째 계획기간(4기)이 진행 중이다.</p>
+    <p>핵심 발상은 "누가 줄이든 나라 전체 총량은 같다"는 것이다. 감축 비용이 싼 기업은 더 줄여서 남는 배출권을 팔아 이익을 얻고, 감축 비용이 비싼 기업은 배출권을 사서 맞춘다. 규제로 일률 감축을 강제하는 것보다 사회 전체의 비용을 낮춘다는 논리다.</p>
+
+    <h2 class="sec">2. 할당·거래·제출 — 한 해의 흐름</h2>
+    <div class="steps">
+      <div class="step"><div class="step-t">할당</div><div class="step-d">정부가 계획기간 전체의 배출허용총량을 정하고 업체별로 배출권을 나눠 준다. 무상으로 주는 몫과 경매로 사 오게 하는 유상 몫이 있다.</div></div>
+      <div class="step"><div class="step-t">감축 또는 거래</div><div class="step-d">한 해 동안 실제 배출량이 할당량보다 적으면 남는 배출권을 팔 수 있고, 많으면 시장·경매에서 사야 한다.</div></div>
+      <div class="step"><div class="step-t">명세서 제출과 검증</div><div class="step-d">다음 해에 실제 배출량을 보고하고 검증을 받아 정부가 최종 배출량을 확정한다.</div></div>
+      <div class="step"><div class="step-t">배출권 제출</div><div class="step-d">확정된 배출량만큼 배출권을 정부에 내야 한다. 이월분·차입분도 제출에 쓸 수 있다.</div></div>
+    </div>
+    <div class="warnbox">
+      <div class="wt">못 채우면 과징금</div>
+      <p>제출할 배출권이 모자라면 부족분에 대해 이산화탄소 1톤당 10만 원 한도에서 해당 연도 배출권 평균 시장가격의 3배 이하 과징금이 붙는다. 배출권 값이 오를수록 "사서 내는 편이 싸다"는 쪽으로 기업의 계산이 움직인다.</p>
+    </div>
+
+    <h2 class="sec">3. 4기(2026~2030)에서 달라진 것</h2>
+    <p>4기 배출허용총량은 25억 3,730만 톤으로 설정됐다. 환경부는 2030 NDC(국가 온실가스 감축목표)와 3기에 쌓인 배출권 잉여를 고려했다고 밝혔다. 주요 변경 사항은 다음과 같다.</p>
+    <table class="rate">
+      <tr><th>항목</th><th>내용</th></tr>
+      <tr><td>유상할당</td><td class="up">발전 부문 10% → 2030년 50%, 그 외 부문 10% → 15%</td></tr>
+      <tr><td>시장안정화</td><td>예비분을 총량 안에 포함, 기준에 따라 자동 조정하는 한국형 시장안정화제도 시행</td></tr>
+      <tr><td>이월</td><td>순매도량의 3배 → 5배까지 이월 가능</td></tr>
+      <tr><td>상쇄 한도</td><td>해외·국내 감축실적 사용은 제출분의 5%까지</td></tr>
+      <tr><td>배출효율(BM) 할당</td><td>참여 대상의 75% 이상으로 확대, 기준 강화</td></tr>
+      <tr><td>경매 참여자</td><td>할당 대상 업체 전체와 증권사 등 제3자까지 단계적 확대</td></tr>
+    </table>
+    <p class="note">철강·석유화학·시멘트·정유·반도체·디스플레이 등 수출 비중이 높은 업종은 국제 경쟁력을 고려해 100% 무상할당이 유지된다(산업 부문의 약 95%).</p>
+
+    <div class="infographic-section">
+      <h3>발전 부문 유상할당 비율 (2026~2030)</h3>
+      <div class="bar-chart"><div class="bar-item"><div class="bar-label"><span>2026년</span><span class="val">15%</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:30%"></div></div></div><div class="bar-item"><div class="bar-label"><span>2027년</span><span class="val">20%</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:40%"></div></div></div><div class="bar-item"><div class="bar-label"><span>2028년</span><span class="val">30%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:60%"></div></div></div><div class="bar-item"><div class="bar-label"><span>2029년</span><span class="val">40%</span></div><div class="bar-track"><div class="bar-fill bar-amber" style="width:80%"></div></div></div><div class="bar-item"><div class="bar-label"><span>2030년</span><span class="val">50%</span></div><div class="bar-track"><div class="bar-fill bar-red" style="width:100%"></div></div></div></div>
+      <p class="note">2025년까지는 10%였다. 막대 길이는 비율(%)을 두 배로 늘려 표시했다(50% = 가득 참).</p>
+    </div>
+
+    <h2 class="sec">4. 배출권 가격은 얼마나 올랐나</h2>
+    <p>4기 시작 전 전문가들은 2026년 1월 평균 톤당 1만 780원 안팎을 예상했다. 실제로는 올해 초 1만 원대였던 2025년분(KAU25)이 6월에 2만 원을 넘겼고, 9월에는 2026년분(KAU26) 거래가 활발해지며 <b>9월 23일 3만 150원</b>까지 올랐다. 1년 새 약 3배다. 유상할당 확대와 배출허용총량 강화가 가격에 반영됐다는 해석이 나온다.</p>
+    <div class="impact-grid">
+      <div class="impact-card"><span class="impact-num">772개</span><span class="impact-label">4기 할당 대상 기업</span></div>
+      <div class="impact-card"><span class="impact-num">23.6억 톤</span><span class="impact-label">5년간 할당 배출권</span></div>
+      <div class="impact-card"><span class="impact-num">3.0만 원</span><span class="impact-label">KAU26 톤당 가격<br>(9월 23일)</span></div>
+      <div class="impact-card"><span class="impact-num">50%</span><span class="impact-label">2030년 발전 유상할당</span></div>
+    </div>
+
+    <h2 class="sec">5. 이면 — 왜 하필 발전 부문부터 유상으로 돌리나</h2>
+    <p>수출 제조업에 유상할당을 크게 늘리면 해외 경쟁국 대비 비용이 올라 생산이 해외로 옮겨 가는 탄소 누출 우려가 있다. 반면 전기는 국내에서 쓰는 재화라 비용을 전가할 수 있고, 발전 부문이 전체 배출에서 차지하는 비중이 크다. 그래서 정부는 발전 부문을 먼저 유상 비율을 올리는 대상으로 삼았다.</p>
+    <div class="pullquote">유상할당이 늘면 발전사가 배출권을 사는 비용이 늘고, 그 비용이 전기 도매가격과 한전의 구입 원가에 반영되는 경로가 열린다.</div>
+
+    <h2 class="sec">6. 나에게 미치는 영향 — 전기요금</h2>
+    <p>배출권 가격이 2만 원일 때 산업용 전기요금이 kWh당 약 20원 오른다는 추정이 있고, 발전 유상할당이 10%에서 50%로 오르면 제조업 전기요금 부담이 연 약 2조 5,000억 원 늘어난다는 산업계 쪽 추정도 있다. 다만 이는 가정에 따른 추정치이며 실제 요금은 전력시장 구조와 정부의 요금 결정에 달려 있다. 한전이 부담하는 "탄소 비용"이 커질 때 이를 요금에 반영할지, 한전이 떠안을지는 별개의 정책 판단이다.</p>
+    <p>가정용 요금에 곧바로 같은 폭이 붙는 것은 아니지만, 배출권 비용은 한전 적자와 요금 인상 압력을 키우는 변수 중 하나다. 반대로 제도가 의도한 대로라면 비용 신호가 감축 투자를 앞당겨 장기적으로 연료비 의존을 줄일 수 있다는 것이 정부의 설명이다.</p>
+
+    <h2 class="sec">7. 전망 — 확인할 지표</h2>
+    <ul class="plain">
+      <li>KRX 배출권시장 정보플랫폼의 KAU 가격과 거래량(매일 공개)</li>
+      <li>해마다 11월 전후로 공표되는 연도별 유상할당 경매 일정과 시장안정화 조치 발동 여부</li>
+      <li>전기요금 조정 때 정부가 밝히는 "기후환경요금·연료비" 반영 내역</li>
+      <li>2035 NDC 확정 이후 5기(2031~) 총량 설계 논의</li>
+    </ul>
+    <p>정리하면 배출권거래제는 "총량은 정부가 정하고 가격은 시장이 정한다"는 구조다. 4기는 총량을 조이고 유상 비율을 올려 가격 신호를 강화한 단계다. 숫자가 빠르게 움직이는 제도이므로 가격과 비율은 반드시 최신 공시를 확인해야 한다.</p>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#배출권거래제</span><span class="hashtag">#K-ETS</span><span class="hashtag">#유상할당</span><span class="hashtag">#탄소배출권</span><span class="hashtag">#전기요금</span><span class="hashtag">#4차계획기간</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://www.energydaily.co.kr/news/articleView.html?idxno=161652" target="_blank" rel="noopener">에너지데일리 — 발전부문 유상할당 비율 2030년 50%로 상향</a>
+      <a href="https://m.news.nate.com/view/20251228n05608" target="_blank" rel="noopener">배출권거래제 제4차 계획기간(2026~2030) 배출권 할당 완료</a>
+      <a href="https://www.kimchang.com/ko/insights/detail.kc?sch_section=4&amp;idx=33544" target="_blank" rel="noopener">김·장 — 제4차 계획기간 국가 배출권 할당계획 확정 및 배출권거래법 개정 동향</a>
+      <a href="https://www.mt.co.kr/economy/2026/09/25/2026092316294854588" target="_blank" rel="noopener">머니투데이 — 1년 새 3배 오른 K탄소배출권 가격</a>
+      <a href="https://view.asiae.co.kr/article/2026061122461262993" target="_blank" rel="noopener">아시아경제 — 반년 새 2.5배 폭등한 탄소배출권, 전기요금 압박</a>
+      <a href="https://casenote.kr/%EB%B2%95%EB%A0%B9/%EC%98%A8%EC%8B%A4%EA%B0%80%EC%8A%A4_%EB%B0%B0%EC%B6%9C%EA%B6%8C%EC%9D%98_%ED%95%A0%EB%8B%B9_%EB%B0%8F_%EA%B1%B0%EB%9E%98%EC%97%90_%EA%B4%80%ED%95%9C_%EB%B2%95%EB%A5%A0/%EC%A0%9C33%EC%A1%B0" target="_blank" rel="noopener">온실가스 배출권의 할당 및 거래에 관한 법률 제33조(과징금)</a>
+      <a href="https://www.pwc.com/kr/ko/services/sustainability-platform/newsletter/vol27.html" target="_blank" rel="noopener">PwC — 제4차 배출권거래제 기본계획 확정, 기업의 준비 방향</a>
+    </div>
+
+    <p class="disclaimer">※ 본 아티클은 정부 발표와 언론 보도를 정리한 정보성 콘텐츠이며 투자·법률 자문이 아닙니다. 배출권 가격과 요금 영향 추정치는 시점과 가정에 따라 달라지므로 최신 공시를 확인하시기 바랍니다.</p>
+
+  </div>
+<!-- HUB:RELATED:BEGIN -->
+<style>
+.hub-bc{font-size:13px;color:#5b6672;margin:0 0 18px;font-family:'Noto Sans KR',sans-serif}
+.hub-bc a{color:#5b6672;text-decoration:none}.hub-bc a:hover{text-decoration:underline}
+.hub-rel{margin:38px 0 6px;padding:20px 22px;border:1px solid #e3e8ee;border-radius:10px;
+  background:#fafbfc;font-family:'Noto Sans KR',sans-serif}
+.hub-rel h2{font-size:15px;margin:0 0 14px;font-weight:700;color:#12202e;
+  font-family:'Noto Sans KR',sans-serif;border:0;padding:0}
+.hub-rel ul{list-style:none;padding:0;margin:0}
+.hub-rel li{padding:7px 0;font-size:14.5px;line-height:1.55}
+.hub-rel li a{color:#12202e;text-decoration:none}
+.hub-rel li a:hover{color:#1a5f8a;text-decoration:underline}
+.hub-rel .hub-more{margin:14px 0 0;font-size:13.5px}
+.hub-rel .hub-more a{color:#1a5f8a;text-decoration:none;font-weight:700}
+</style>
+<aside class="hub-rel">
+  <h2>같은 분야 다른 글 — 통신·생활지원</h2>
+  <ul>
+    <li><a href="/2026-08-23-휴대폰-위약금-계산법">휴대폰 위약금 계산법 — 선택약정 할인반환금과 공시지원금 반환금 차이</a></li>
+    <li><a href="/2026-08-30-휴대폰-명의도용-확인방법">휴대폰 명의도용 확인방법 — 가입사실현황조회와 가입제한 신청 절차</a></li>
+    <li><a href="/2026-08-11-탄소중립포인트-신청방법">탄소중립포인트 신청방법 — 지급 대상과 적립 기준, 예산 소진 문제 정리</a></li>
+    <li><a href="/2026-08-28-조기폐차-지원금-신청방법">조기폐차 지원금 신청방법 — 배출가스 5등급 차량 조회와 상한액 산정</a></li>
+  </ul>
+  <p class="hub-more"><a href="/life/">통신·생활지원 전체 보기 →</a></p>
+</aside>
+<!-- HUB:RELATED:END -->
+</article>
+</body>
+</html>
