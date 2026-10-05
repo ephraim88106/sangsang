@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>기초연금 선정기준액 얼마 — 2026년 단독·부부가구 소득인정액 계산 방법 | 의료·복지</title>
+  <meta name="description" content="2026년 기초연금 선정기준액은 단독가구 월 247만원, 부부가구 월 395만 2,000원이다. 소득인정액은 근로소득 공제 116만원을 뺀 소득평가액에 기본재산액(대도시 1억 3,500만원·중소도시 8,500만원·농어촌 7,250만원)과 금융재산 2,000만원을 공제한 재산의 소득환산액(연 4%)을 더해 구한다. 계산 공식과 사례, 부부감액·연계감액까지 정리했다.">
+  <meta name="keywords" content="기초연금 선정기준액, 기초연금 소득인정액 계산, 기초연금 2026, 기초연금 수급조건, 기초연금 근로소득 공제, 기초연금 재산 환산, 기초연금 부부감액, 기초연금 국민연금 연계감액, 기초연금 신청방법, 기준연금액 349,700원">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f2f4f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #0d47a1 0%, #1565c0 45%, #0277bd 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #bbdefb; color: #0d47a1; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #e3f2fd; border-left: 5px solid #1565c0; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #1565c0; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #0d47a1; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #1565c0; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #0d47a1; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #e3f2fd; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #1565c0; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #0d47a1; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #f1f7fd; border-left: 4px solid #42a5f5; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #0d47a1; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f5f9fe; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #0d47a1; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #0d47a1; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #d9e6f5; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-blue { background: linear-gradient(90deg, #0d47a1, #42a5f5); }
+    .bar-cyan { background: linear-gradient(90deg, #01579b, #4dd0e1); }
+    .bar-amber { background: linear-gradient(90deg, #ef6c00, #ffb300); }
+    .bar-grey { background: linear-gradient(90deg, #546e7a, #90a4ae); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #c5d9ef; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #e3f2fd; color: #0d47a1; font-weight: 700; }
+    table.rate td.up { color: #0d47a1; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #ef6c00; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #1565c0; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #0d47a1; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #bbdefb; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #0d47a1; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #bbdefb; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #1565c0; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .formula { background: #f5f9fe; border: 1.5px dashed #42a5f5; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 16.5px; font-weight: 800; color: #0d47a1; line-height: 1.8; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #0277bd; margin-top: 10px; margin-bottom: 0; }
+    .warnbox { background: #fff8e1; border-left: 5px solid #f9a825; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 26px 0; }
+    .warnbox .wt { font-size: 14px; font-weight: 800; color: #ef6c00; margin-bottom: 8px; }
+    .warnbox p { font-size: 15px; color: #5d4037; margin-bottom: 0; word-break: keep-all; }
+    .case { background: #fff; border: 1.5px solid #bbdefb; border-left: 5px solid #1565c0; border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; }
+    .case .ct { font-size: 13.5px; font-weight: 800; color: #0d47a1; margin-bottom: 6px; letter-spacing: 0.3px; }
+    .case p { font-size: 14.8px; margin-bottom: 8px; }
+    .case p:last-child { margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #e3f2fd; color: #1565c0; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #1565c0; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<!-- SEO:AUTO BEGIN -->
+<meta property="article:published_time" content="2026-10-05T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-05T09:00:00+09:00">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "기초연금 선정기준액 얼마 — 2026년 단독·부부가구 소득인정액 계산 방법",
+  "description": "2026년 기초연금 선정기준액은 단독가구 월 247만원, 부부가구 월 395만 2,000원이다. 소득인정액을 구하는 공식과 근로소득 공제, 재산 환산, 부부감액을 사례로 정리했다.",
+  "url": "https://sangsang.ephseed.com/2026-10-05-%EA%B8%B0%EC%B4%88%EC%97%B0%EA%B8%88-%EC%84%A0%EC%A0%95%EA%B8%B0%EC%A4%80%EC%95%A1-%EC%86%8C%EB%93%9D%EC%9D%B8%EC%A0%95%EC%95%A1-%EA%B3%84%EC%82%B0%EB%B2%95",
+  "datePublished": "2026-10-05T09:00:00+09:00",
+  "dateModified": "2026-10-05T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-10-05-%EA%B8%B0%EC%B4%88%EC%97%B0%EA%B8%88-%EC%84%A0%EC%A0%95%EA%B8%B0%EC%A4%80%EC%95%A1-%EC%86%8C%EB%93%9D%EC%9D%B8%EC%A0%95%EC%95%A1-%EA%B3%84%EC%82%B0%EB%B2%95">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="기초연금 선정기준액 얼마 — 2026년 단독·부부가구 소득인정액 계산 방법 | 의료·복지">
+<meta property="og:description" content="2026년 기초연금 선정기준액은 단독가구 월 247만원, 부부가구 월 395만 2,000원이다. 소득인정액은 근로소득 공제 116만원을 뺀 소득평가액에 기본재산액(대도시 1억 3,500만원·중소도시 8,500만원·농어촌 7,250만원)과 금융재산 2,000만원을 공제한 재산의 소득환산액(연 4%)을 더해 구한다. 계산 공식과 사례, 부부감액·연계감액까지 정리했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-10-05-%EA%B8%B0%EC%B4%88%EC%97%B0%EA%B8%88-%EC%84%A0%EC%A0%95%EA%B8%B0%EC%A4%80%EC%95%A1-%EC%86%8C%EB%93%9D%EC%9D%B8%EC%A0%95%EC%95%A1-%EA%B3%84%EC%82%B0%EB%B2%95">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-10-05T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-05T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N28MJLW4W9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-N28MJLW4W9");</script>
+<!-- SEO:END -->
+</head>
+
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-EVlth33UH8CTDu2u"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-KMCr4AoIjIDsi9XA"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-qqfX36xk8gz6faM6"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+<article class="article-wrap">
+<!-- HUB:BREADCRUMB:BEGIN -->
+<nav class="hub-bc"><a href="/">생생 정보통</a> &rsaquo; <a href="/health/">건강보험·의료비</a></nav>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "생생 정보통", "item": "https://sangsang.ephseed.com/"}, {"@type": "ListItem", "position": 2, "name": "건강보험·의료비", "item": "https://sangsang.ephseed.com/health/"}]}</script>
+<!-- HUB:BREADCRUMB:END -->
+  <header class="hero">
+    <div class="category-badge">🏥 의료 · 복지</div>
+    <h1>기초연금 선정기준액 얼마 —<br>2026년 단독·부부가구 소득인정액 계산 방법</h1>
+    <p class="hero-sub">기초연금은 "소득 하위 70%"에게 준다고 하지만, 내가 그 70%에 드는지는 월급 하나로 정해지지 않는다. 기준선은 <b>소득인정액</b>이라는 합산 숫자이고, 이 숫자는 소득과 재산을 따로 계산해 더한다. 2026년 기준선과 계산 공식, 사례별 계산을 순서대로 정리했다.</p>
+    <div class="hero-meta">
+      <span>🏥 의료 · 복지</span>
+      <span>📅 2026년 10월 5일</span>
+      <span>⏱️ 약 9분</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+
+    <div class="summary-box">
+      <h2>핵심 요약</h2>
+      <ul>
+        <li>2026년 선정기준액은 <strong>단독가구 월 247만원, 부부가구 월 395만 2,000원</strong>이다. 소득인정액이 이 금액 이하여야 받는다.</li>
+        <li>소득인정액 = <strong>소득평가액 + 재산의 소득환산액</strong>. 근로소득은 월 116만원을 먼저 빼고 30%를 더 깎아 반영하고, 재산은 지역별 기본재산액과 금융재산 2,000만원을 공제한 뒤 연 4%로 환산한다.</li>
+        <li>수급자가 되면 기준연금액 <strong>월 34만 9,700원</strong>이 나오지만, 부부가 함께 받으면 각 20%가 깎이고 국민연금이 많으면 최대 50%까지 줄 수 있다.</li>
+      </ul>
+    </div>
+
+    <h2 class="sec">1. 2026년 선정기준액 — 단독 247만원, 부부 395만 2,000원</h2>
+    <p>보건복지부는 2026년 기초연금 선정기준액을 <strong>단독가구 월 247만원, 부부가구 월 395만 2,000원</strong>으로 정했다. 2025년 단독가구 228만원보다 19만원, 약 8.3% 오른 수치다. 부부가구 기준액은 단독가구 기준액의 80%를 두 사람 몫으로 환산한 값(247만원 × 2 × 0.8)이라 단독의 1.6배로 맞춰진다.</p>
+    <p>기준선이 오른 이유는 정책적 선심이 아니라 계산 방식 때문이다. 이 기준선은 "노인 가구 소득인정액 분포에서 하위 70%에 해당하는 지점"을 매년 다시 찾는 방식으로 정해진다. 복지부는 2026년 인상 배경으로 65세 이상 노인의 공적연금 소득이 7.9%, 사업소득이 5.5% 늘고 주택과 토지의 자산가치가 각각 6.0%, 2.6% 오른 점을 들었다. 노인의 소득·재산이 전반적으로 올랐으니 70% 지점도 함께 올라간 것이다.</p>
+    <p>한편 매달 받는 금액인 <strong>기준연금액은 월 34만 9,700원</strong>이다. 2025년보다 7,190원 올랐고, 전년도 소비자물가 상승률 2.1%를 반영한 결과다. 선정기준액(받을 수 있는지)과 기준연금액(얼마를 받는지)은 서로 다른 숫자라는 점을 먼저 구분해 두면 이후 계산이 쉬워진다.</p>
+
+    <div class="infographic-section">
+      <h3>선정기준액 변화 (단독가구, 월 소득인정액 기준)</h3>
+      <div class="bar-chart">
+        <div class="bar-item">
+          <div class="bar-label"><span>2025년 선정기준액</span><span class="val">228만원</span></div>
+          <div class="bar-track"><div class="bar-fill bar-grey" style="width:92.3%">228만원</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>2026년 선정기준액</span><span class="val">247만원 (+19만원, +8.3%)</span></div>
+          <div class="bar-track"><div class="bar-fill bar-blue" style="width:100%">247만원</div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>2026년 부부가구 선정기준액</span><span class="val">395만 2,000원</span></div>
+          <div class="bar-track"><div class="bar-fill bar-cyan" style="width:100%">395.2만원</div></div>
+        </div>
+      </div>
+      <p class="note">부부가구 막대는 단독가구와 별도 기준이라 길이를 비교하지 않고 같은 폭으로 표시했다. 출처: 보건복지부 보도자료(2025.12).</p>
+    </div>
+
+    <h2 class="sec">2. 소득인정액 공식 — 소득과 재산을 따로 계산해 더한다</h2>
+    <p>소득인정액은 통장에 찍히는 월급이 아니다. 소득을 "평가"하고 재산을 "환산"해서 한 줄의 월 금액으로 맞춘 가상의 숫자다.</p>
+
+    <div class="formula">
+      <div class="f-main">소득인정액 = 소득평가액 + 재산의 소득환산액</div>
+      <p class="f-note">이 값이 선정기준액(단독 247만원·부부 395만 2,000원) 이하이면 수급 대상</p>
+    </div>
+
+    <h3 class="sub">소득평가액 — 근로소득은 116만원을 빼고 30% 더 깎는다</h3>
+    <p>소득평가액은 월 근로소득, 사업소득, 공적연금 등 월 소득을 합해 구한다. 이 중 <strong>근로소득에만</strong> 특별한 공제가 붙는다. 2026년 근로소득 기본공제는 월 116만원(2025년 112만원)이고, 공제한 나머지의 30%를 한 번 더 깎아 70%만 반영한다.</p>
+    <div class="formula">
+      <div class="f-main">근로소득 평가액 = 0.7 × (월 근로소득 − 116만원)</div>
+      <p class="f-note">월 근로소득이 116만원 이하라면 평가액은 0원</p>
+    </div>
+    <p>이 공식 덕분에 소득이 근로소득뿐인 단독가구는 월 소득이 약 468만원이어도 기준 안에 든다. 247만원 ÷ 0.7 = 352.9만원, 여기에 116만원을 더하면 약 468.9만원이기 때문이다. 같은 금액이 공적연금이나 사업소득이라면 사정이 다르다. 근로소득이 아닌 소득에는 이런 기본공제가 같은 방식으로 적용되지 않으므로, 소득의 "종류"가 결과를 바꾼다.</p>
+
+    <h3 class="sub">재산의 소득환산액 — 지역별 공제 후 연 4%를 월로 나눈다</h3>
+    <p>집·토지·건물 같은 일반재산과 예금·주식 같은 금융재산은 먼저 공제를 받고, 남은 금액에 연 4% 환산율을 곱해 12개월로 나눈다. 빚은 재산에서 뺀다.</p>
+    <div class="formula">
+      <div class="f-main">재산의 소득환산액 =<br>{(일반재산 − 기본재산액) + (금융재산 − 2,000만원) − 부채} × 연 4% ÷ 12</div>
+      <p class="f-note">기본재산액은 거주지역에 따라 다르다</p>
+    </div>
+
+    <table class="rate">
+      <thead><tr><th>거주 지역</th><th>일반재산 기본재산액 공제</th><th>금융재산 공제</th></tr></thead>
+      <tbody>
+        <tr><td>대도시(서울 등)</td><td class="up">1억 3,500만원</td><td>2,000만원</td></tr>
+        <tr><td>중소도시</td><td class="up">8,500만원</td><td>2,000만원</td></tr>
+        <tr><td>농어촌</td><td class="up">7,250만원</td><td>2,000만원</td></tr>
+      </tbody>
+    </table>
+    <p class="note">자동차는 별도 기준이 있다. 차량 가격이 4,000만원을 넘는 고급 차량은 가격 전체를 월 소득으로 잡아 수급 탈락으로 이어질 수 있다(생계형 등 예외 기준은 공단 확인).</p>
+
+    <h2 class="sec">3. 사례로 계산해 보기</h2>
+
+    <div class="case">
+      <div class="ct">사례 A — 대도시 거주 단독가구, 근로소득이 있는 경우</div>
+      <p>월 근로소득 200만원, 주택 3억원, 예금 5,000만원, 부채 없음.</p>
+      <p>① 근로소득 평가액: 0.7 × (200만 − 116만) = <strong>58만 8,000원</strong><br>
+         ② 재산 공제 후 금액: (3억 − 1억 3,500만) + (5,000만 − 2,000만) = 1억 9,500만원<br>
+         ③ 월 환산: 1억 9,500만원 × 4% ÷ 12 = <strong>65만원</strong><br>
+         ④ 소득인정액: 58만 8,000원 + 65만원 = <strong>약 123만 8,000원</strong> → 기준 247만원 이하, 수급 가능</p>
+    </div>
+
+    <div class="case">
+      <div class="ct">사례 B — 대도시 거주 단독가구, 집값이 높은 경우</div>
+      <p>소득 없음, 주택 9억원, 예금 1억원, 부채 없음.</p>
+      <p>① 재산 공제 후 금액: (9억 − 1억 3,500만) + (1억 − 2,000만) = 8억 4,500만원<br>
+         ② 월 환산: 8억 4,500만원 × 4% ÷ 12 = <strong>약 281만 7,000원</strong><br>
+         ③ 소득인정액 약 281만 7,000원 → 기준 247만원 초과, <b>소득이 한 푼도 없어도 탈락</b></p>
+    </div>
+
+    <p>사례 B가 보여주는 것은 재산만으로도 기준선을 넘을 수 있다는 점이다. 공제 후 재산 합계로 환산하면 월 247만원 선은 약 7억 4,100만원(247만 × 12 ÷ 0.04)이다. 이보다 공제 후 재산이 많으면 소득이 없어도 기준을 넘는다. 반대로 빚이 있으면 그만큼 재산에서 빠지므로 대출이 있는 집주인은 계산이 달라진다.</p>
+
+    <h2 class="sec">4. 받게 돼도 줄어드는 경우 — 부부감액과 연계감액</h2>
+    <p>소득인정액이 기준 안에 들어 수급자가 되어도 월 34만 9,700원이 그대로 나오지 않을 수 있다. 대표적인 감액 규정이 두 가지다.</p>
+
+    <h3 class="sub">부부감액 — 부부가 둘 다 받으면 각각 20%</h3>
+    <p>부부가 모두 수급자이면 각자의 기초연금에서 <strong>20%가 깎인다</strong>. 계산하면 1인당 34만 9,700원 × 0.8 = <strong>27만 9,760원</strong>, 부부 합계 월 55만 9,520원이다. 부부가 따로 사는 노인과 같은 금액을 받는 구조가 아니라 "함께 살면 생활비가 덜 든다"는 전제를 반영한 감액이다. 보도에 따르면 2025년 한 해 부부감액 규모가 2조 4,000억원에 이른다.</p>
+
+    <h3 class="sub">국민연금 연계감액 — 연금이 많으면 최대 50%</h3>
+    <p>국민연금 급여액이 기준연금액의 150%(월 52만 4,550원)를 넘고 소득재분배급여(A급여)가 월 26만 2,270원을 넘으면 연계감액 대상이 된다. 이 경우 기초연금이 최대 50%까지 줄 수 있다. 국민연금을 받는다고 기초연금을 못 받는 것이 아니라, 두 연금의 합이 지나치게 커지지 않도록 일부를 조정하는 제도다.</p>
+
+    <div class="warnbox">
+      <div class="wt">⚠ 감액은 겹쳐 적용될 수 있다</div>
+      <p>부부감액과 연계감액은 각각 따로 계산되는 규정이라 한 가구에 함께 적용될 수 있다. 실제 지급액은 신청 후 국민연금공단의 결정 통지서로 확인해야 한다.</p>
+    </div>
+
+    <div class="infographic-section">
+      <h3>2025년 말 기초연금 수급자 현황</h3>
+      <div class="impact-grid">
+        <div class="impact-card"><span class="impact-num">706.6만명</span><span class="impact-label">전체 수급자</span></div>
+        <div class="impact-card"><span class="impact-num">337.8만명</span><span class="impact-label">단독가구 수급자</span></div>
+        <div class="impact-card"><span class="impact-num">368.8만명</span><span class="impact-label">부부가구 수급자</span></div>
+        <div class="impact-card"><span class="impact-num">65.3%</span><span class="impact-label">수급률 (2021년 67.6%)</span></div>
+      </div>
+      <p class="note">출처: 2025년 말 기준 보도(2026.9). 수급률은 65세 이상 인구 대비 수급자 비율.</p>
+    </div>
+
+    <h2 class="sec">5. 선정기준이 올라도 수급률은 내려가는 이유</h2>
+    <p>기준선이 해마다 오르는데도 수급률은 2021년 67.6%에서 2025년 65.3%로 4년 연속 내려왔다. 수급자는 706만 6,000명으로 700만명을 넘었지만, 같은 기간 65세 이상 인구가 더 빠르게 늘고 있기 때문이다. 정부는 "하위 70%"를 목표로 선정기준액을 조정하지만, 실제 수급률은 목표인 70%에 미치지 못하는 상태다.</p>
+    <div class="pullquote">"하위 70%"는 목표이고, 내가 받는지는 소득인정액 한 줄이 결정한다. 소득은 줄었는데 집값만 올라 탈락하는 경우가 생기는 이유다.</div>
+    <p>특히 주택·토지 가격이 올라 재산 환산액이 커지면 현금 소득이 낮은 노인이 "자산은 많고 현금은 없는" 상태로 기준선을 넘는 일이 생긴다. 복지부도 2026년 인상 배경으로 주택과 토지의 자산가치 상승을 직접 언급했다. 집 한 채가 전 재산인 노인에게는 선정기준액 인상률보다 집값 상승률이 더 중요한 변수일 수 있다.</p>
+
+    <h2 class="sec">6. 신청 방법과 시기 — 늦으면 소급되지 않는다</h2>
+    <div class="steps">
+      <div class="step"><div class="step-t">대상 확인</div><div class="step-d">만 65세 이상 대한민국 국민으로 국내에 거주해야 한다. 공무원·군인·사학연금 등 직역연금 수급권자와 그 배우자는 원칙적으로 제외된다.</div></div>
+      <div class="step"><div class="step-t">모의계산</div><div class="step-d">국민연금공단 누리집이나 복지로에서 소득·재산을 입력해 수급 가능성을 먼저 확인한다.</div></div>
+      <div class="step"><div class="step-t">신청</div><div class="step-d">주소지 읍·면·동 주민센터, 국민연금공단 지사, 복지로 온라인으로 신청한다. 만 65세 생일이 속한 달의 1개월 전부터 신청할 수 있다.</div></div>
+      <div class="step"><div class="step-t">조사와 결정</div><div class="step-d">공단이 소득·재산 자료를 조회해 소득인정액을 산정하고 결과를 통지한다.</div></div>
+      <div class="step"><div class="step-t">지급</div><div class="step-d">선정되면 매월 25일 지급된다. 신청일 이전 기간은 소급해 받을 수 없으므로 대상이 되는 달에 맞춰 신청하는 편이 유리하다.</div></div>
+    </div>
+
+    <h2 class="sec">7. 전망과 행동 제안</h2>
+    <p>기초연금은 매년 1월 선정기준액과 기준연금액이 새로 고시되고, 재산 가격과 소득이 바뀌면 같은 사람도 올해는 탈락하고 내년에는 선정될 수 있다. 한 번 탈락했다고 포기하기보다 <strong>해마다 소득인정액을 다시 계산</strong>해 보는 것이 방법이다.</p>
+    <ul class="plain">
+      <li>부모님 명의 주택·예금·부채를 한 장에 적고 위 공식에 대입해 본다. 지역 기본재산액은 주민등록상 거주지 기준이다.</li>
+      <li>근로소득이 있다면 월 116만원까지는 평가액이 0원이라는 점을 기억한다.</li>
+      <li>부부는 두 사람의 소득·재산을 합산해 부부가구 기준(395만 2,000원)으로 심사하며, 두 사람 모두 선정되면 각각 20% 감액이 적용된다.</li>
+      <li>모의계산 결과가 기준선 근처라면 신청해서 공단의 정식 산정을 받아 보는 것이 가장 정확하다.</li>
+    </ul>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#기초연금선정기준액</span>
+      <span class="hashtag">#기초연금소득인정액</span>
+      <span class="hashtag">#기초연금2026</span>
+      <span class="hashtag">#기초연금수급조건</span>
+      <span class="hashtag">#기준연금액34만9700원</span>
+      <span class="hashtag">#기초연금부부감액</span>
+      <span class="hashtag">#국민연금연계감액</span>
+      <span class="hashtag">#근로소득공제116만원</span>
+      <span class="hashtag">#재산소득환산율</span>
+      <span class="hashtag">#기초연금신청방법</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://mohw.go.kr/board.es?act=view&bid=0027&list_no=1488478&mid=a10503000000" target="_blank" rel="noopener">보건복지부 보도자료 — 2026년 노인 단독가구 소득인정액 월 247만 원 이하면 기초연금 수급(선정기준액·기준연금액)</a>
+      <a href="https://www.korea.kr/news/policyNewsView.do?newsId=148957428" target="_blank" rel="noopener">대한민국 정책브리핑 — 노인 단독가구, 소득인정액 247만 원 이하면 기초연금 받는다</a>
+      <a href="https://www.khan.co.kr/article/202601012049005" target="_blank" rel="noopener">경향신문(2026.1.1.) — 혼자 사는 노인, 월 소득인정액 247만원 이하면 기초연금 수급</a>
+      <a href="https://m.news.nate.com/view/20260909n27364" target="_blank" rel="noopener">네이트 뉴스(2026.9.9.) — 기초연금 수급자 700만명 돌파, 수급률은 하락</a>
+      <a href="https://webzine.kacta.or.kr/news/articleView.html?idxno=24304" target="_blank" rel="noopener">세무사신문 — 다른 소득·재산 없이 월 468만원 벌어도 기초연금 받는다(근로소득 공제 구조)</a>
+      <a href="https://m.news.nate.com/view/20260213n34444" target="_blank" rel="noopener">네이트 뉴스(2026.2.13.) — 올해 달라진 기초연금 수급 조건(자동차 기준 등)</a>
+      <a href="https://www.korea.kr/special/policyCurationView.do?newsId=148866128" target="_blank" rel="noopener">대한민국 정책브리핑 — 기초연금 제도 안내(부부감액·연계감액)</a>
+    </div>
+
+    <p class="disclaimer">
+      ※ 본 아티클은 보건복지부 보도자료와 공개된 언론 보도를 바탕으로 작성한 정보성 콘텐츠이며 개별 사안에 대한 상담이 아닙니다. <strong>선정기준액, 기본재산액, 감액 기준은 매년 고시가 바뀔 수 있으므로 신청 시점의 국민연금공단·복지로 공식 안내를 반드시 확인하시기 바랍니다.</strong> 본문의 계산 사례는 공식 산식을 단순화해 적용한 예시이며, 실제 소득인정액은 소득 종류별 공제, 재산 평가 방식, 자동차 기준 등에 따라 달라질 수 있습니다. 정확한 수급 여부는 국민연금공단(☎1355) 또는 주민센터 상담과 정식 신청을 통해 확인하시기 바랍니다.
+    </p>
+
+  </div>
+<!-- HUB:RELATED:BEGIN -->
+<style>
+.hub-bc{font-size:13px;color:#5b6672;margin:0 0 18px;font-family:'Noto Sans KR',sans-serif}
+.hub-bc a{color:#5b6672;text-decoration:none}.hub-bc a:hover{text-decoration:underline}
+.hub-rel{margin:38px 0 6px;padding:20px 22px;border:1px solid #e3e8ee;border-radius:10px;
+  background:#fafbfc;font-family:'Noto Sans KR',sans-serif}
+.hub-rel h2{font-size:15px;margin:0 0 14px;font-weight:700;color:#12202e;
+  font-family:'Noto Sans KR',sans-serif;border:0;padding:0}
+.hub-rel ul{list-style:none;padding:0;margin:0}
+.hub-rel li{padding:7px 0;font-size:14.5px;line-height:1.55}
+.hub-rel li a{color:#12202e;text-decoration:none}
+.hub-rel li a:hover{color:#1a5f8a;text-decoration:underline}
+.hub-rel .hub-more{margin:14px 0 0;font-size:13.5px}
+.hub-rel .hub-more a{color:#1a5f8a;text-decoration:none;font-weight:700}
+</style>
+<aside class="hub-rel">
+  <h2>같은 분야 다른 글 — 건강보험·의료비</h2>
+  <ul>
+    <li><a href="/2026-08-12-본인부담상한제-환급금-신청방법">본인부담상한제 환급금 신청방법 — 소득분위별 상한액과 지급 시기</a></li>
+    <li><a href="/2026-08-20-피부양자-자격상실-소득요건">피부양자 자격상실 소득요건 — 재산 기준과 상실 후 보험료 계산</a></li>
+    <li><a href="/2026-08-27-산정특례-대상질환-본인부담률">산정특례 뜻과 대상 질환 — 본인부담률·적용 기간·연장 신청 절차 정리</a></li>
+    <li><a href="/2026-09-03-건강보험-임의계속가입-조건">건강보험 임의계속가입 조건 — 퇴직 후 보험료 차이와 신청 기한</a></li>
+  </ul>
+  <p class="hub-more"><a href="/health/">건강보험·의료비 전체 보기 →</a></p>
+</aside>
+<!-- HUB:RELATED:END -->
+</article>
+</body>
+</html>
