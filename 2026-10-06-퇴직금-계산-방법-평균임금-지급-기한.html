@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>퇴직금 계산 방법 — 평균임금 산정과 지급 기한·IRP 입금 절차 | 취업·노동</title>
+  <meta name="description" content="퇴직금은 1년 이상 계속 근로하고 4주 평균 주 15시간 이상 일한 근로자에게 나온다. 계산식은 1일 평균임금×30일×(재직일수÷365)이고, 평균임금은 퇴직 직전 3개월 임금총액을 그 기간 총일수로 나눈다. 상여금·연차수당 3/12 가산, 14일 이내 지급, IRP 입금 원칙, 3년 시효까지 사례로 정리했다.">
+  <meta name="keywords" content="퇴직금 계산 방법, 평균임금, 퇴직금 지급 기한, 퇴직금 IRP, 퇴직금 지급 조건, 근로자퇴직급여 보장법, 1일 평균임금, 퇴직금 시효, 퇴직금 체불, 퇴직금 14일">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f2f4f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #004d40 0%, #00695c 45%, #00838f 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #b2dfdb; color: #004d40; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #e0f2f1; border-left: 5px solid #00695c; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #00695c; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #004d40; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #00695c; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #004d40; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #e0f2f1; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #00695c; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #004d40; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #f1f8f7; border-left: 4px solid #26a69a; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #004d40; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f4faf9; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #004d40; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #004d40; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #d5e8e5; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-teal { background: linear-gradient(90deg, #004d40, #26a69a); }
+    .bar-cyan { background: linear-gradient(90deg, #006064, #4dd0e1); }
+    .bar-amber { background: linear-gradient(90deg, #ef6c00, #ffb300); }
+    .bar-grey { background: linear-gradient(90deg, #546e7a, #90a4ae); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #c2ddd9; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #e0f2f1; color: #004d40; font-weight: 700; }
+    table.rate td.up { color: #004d40; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #ef6c00; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #00695c; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #004d40; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #b2dfdb; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #004d40; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #b2dfdb; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #00695c; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .formula { background: #f4faf9; border: 1.5px dashed #26a69a; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 16.5px; font-weight: 800; color: #004d40; line-height: 1.8; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #00838f; margin-top: 10px; margin-bottom: 0; }
+    .warnbox { background: #fff8e1; border-left: 5px solid #f9a825; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 26px 0; }
+    .warnbox .wt { font-size: 14px; font-weight: 800; color: #ef6c00; margin-bottom: 8px; }
+    .warnbox p { font-size: 15px; color: #5d4037; margin-bottom: 0; word-break: keep-all; }
+    .case { background: #fff; border: 1.5px solid #b2dfdb; border-left: 5px solid #00695c; border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; }
+    .case .ct { font-size: 13.5px; font-weight: 800; color: #004d40; margin-bottom: 6px; letter-spacing: 0.3px; }
+    .case p { font-size: 14.8px; margin-bottom: 8px; }
+    .case p:last-child { margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #e0f2f1; color: #00695c; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #00695c; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<!-- SEO:AUTO BEGIN -->
+<meta property="article:published_time" content="2026-10-06T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-06T09:00:00+09:00">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "퇴직금 계산 방법 — 평균임금 산정과 지급 기한·IRP 입금 절차",
+  "description": "퇴직금은 1년 이상 계속 근로하고 4주 평균 주 15시간 이상 일한 근로자에게 나온다. 계산식은 1일 평균임금×30일×(재직일수÷365)이고, 평균임금은 퇴직 직전 3개월 임금총액을 그 기간 총일수로 나눈다. 상여금·연차수당 3/12 가산, 14일 이내 지급, IRP 입금 원칙, 3년 시효까지 사례로 정리했다.",
+  "url": "https://sangsang.ephseed.com/2026-10-06-%ED%87%B4%EC%A7%81%EA%B8%88-%EA%B3%84%EC%82%B0-%EB%B0%A9%EB%B2%95-%ED%8F%89%EA%B7%A0%EC%9E%84%EA%B8%88-%EC%A7%80%EA%B8%89-%EA%B8%B0%ED%95%9C",
+  "datePublished": "2026-10-06T09:00:00+09:00",
+  "dateModified": "2026-10-06T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-10-06-%ED%87%B4%EC%A7%81%EA%B8%88-%EA%B3%84%EC%82%B0-%EB%B0%A9%EB%B2%95-%ED%8F%89%EA%B7%A0%EC%9E%84%EA%B8%88-%EC%A7%80%EA%B8%89-%EA%B8%B0%ED%95%9C">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="퇴직금 계산 방법 — 평균임금 산정과 지급 기한·IRP 입금 절차 | 취업·노동">
+<meta property="og:description" content="퇴직금은 1년 이상 계속 근로하고 4주 평균 주 15시간 이상 일한 근로자에게 나온다. 계산식은 1일 평균임금×30일×(재직일수÷365)이고, 평균임금은 퇴직 직전 3개월 임금총액을 그 기간 총일수로 나눈다. 상여금·연차수당 3/12 가산, 14일 이내 지급, IRP 입금 원칙, 3년 시효까지 사례로 정리했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-10-06-%ED%87%B4%EC%A7%81%EA%B8%88-%EA%B3%84%EC%82%B0-%EB%B0%A9%EB%B2%95-%ED%8F%89%EA%B7%A0%EC%9E%84%EA%B8%88-%EC%A7%80%EA%B8%89-%EA%B8%B0%ED%95%9C">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-10-06T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-06T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N28MJLW4W9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-N28MJLW4W9");</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-EVlth33UH8CTDu2u"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-KMCr4AoIjIDsi9XA"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-qqfX36xk8gz6faM6"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+<article class="article-wrap">
+<!-- HUB:BREADCRUMB:BEGIN -->
+<nav class="hub-bc"><a href="/">생생 정보통</a> &rsaquo; <a href="/labor/">노동·급여</a></nav>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "생생 정보통", "item": "https://sangsang.ephseed.com/"}, {"@type": "ListItem", "position": 2, "name": "노동·급여", "item": "https://sangsang.ephseed.com/labor/"}]}</script>
+<!-- HUB:BREADCRUMB:END -->
+  <header class="hero">
+    <div class="category-badge">💼 취업 · 노동</div>
+    <h1>퇴직금 계산 방법 —<br>평균임금 산정과 지급 기한·IRP 입금 절차</h1>
+    <p class="hero-sub">퇴직금은 "월급 한 달치 × 근속연수"가 아니다. 법이 정한 단위는 <b>1일 평균임금 30일분</b>이고, 평균임금은 퇴직 직전 3개월의 상여금·연차수당까지 따져 나온다. 같은 월급이라도 상여금이 있는지에 따라 수백만 원이 달라지고, 지급 기한은 퇴직 후 14일이다.</p>
+    <div class="hero-meta">
+      <span>💼 취업 · 노동</span>
+      <span>📅 2026년 10월 6일</span>
+      <span>⏱️ 약 10분</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+
+    <div class="summary-box">
+      <h2>핵심 요약</h2>
+      <ul>
+        <li>퇴직금은 <strong>계속근로기간 1년 이상</strong>, <strong>4주 평균 1주 소정근로시간 15시간 이상</strong>이면 발생한다. 근거는 근로자퇴직급여 보장법 제4조·제8조다. 정규직·계약직·아르바이트를 가리지 않는다.</li>
+        <li>계산식은 <strong>1일 평균임금 × 30일 × (총 재직일수 ÷ 365)</strong>이다. 평균임금은 퇴직 직전 3개월 임금총액을 그 3개월의 총일수로 나눈 값이다.</li>
+        <li>임금총액에는 기본급·수당뿐 아니라 <strong>연간 상여금의 3/12</strong>, <strong>연차수당의 3/12</strong>이 들어간다. 월급 300만원이어도 상여금이 있으면 퇴직금이 달라진다.</li>
+        <li>사용자는 퇴직 후 <strong>14일 이내</strong>에 지급해야 하고, 지급은 근로자의 <strong>IRP 계좌 입금</strong>이 원칙이다. 받을 권리는 <strong>3년</strong> 안에 행사해야 한다.</li>
+      </ul>
+    </div>
+
+    <h2 class="sec">1. 퇴직금 지급 조건 — 1년과 주 15시간</h2>
+
+    <p>퇴직금은 회사가 호의로 주는 돈이 아니라 근로자퇴직급여 보장법이 정한 의무다. 사용자는 퇴직금제도를 설정해야 하고, 퇴직하는 근로자에게 <strong>계속근로기간 1년에 대해 30일분 이상의 평균임금</strong>을 퇴직금으로 지급해야 한다(제8조). 다만 모든 근로자가 대상은 아니다. 두 가지 조건이 있다.</p>
+
+    <div class="steps">
+      <div class="step"><div class="step-t">조건 1. 계속근로기간 1년 이상</div><div class="step-d">입사일부터 퇴직일까지 근로관계가 이어진 기간을 본다. 계약서가 1년 단위로 여러 번 갱신됐어도 실질적으로 끊기지 않았다면 <b>합산해 계속근로</b>로 본다. 1년이 되기 하루 전에 퇴사하면 퇴직금이 없다.</div></div>
+      <div class="step"><div class="step-t">조건 2. 4주 평균 주 15시간 이상</div><div class="step-d">계약상 소정근로시간 기준이다. 주 15시간 미만인 <b>초단시간 근로자</b>는 퇴직금 대상에서 빠진다. 같은 15시간 기준이 <a href="/2026-09-29-주휴수당-지급조건-계산방법" style="color:#00695c">주휴수당</a>에도 쓰인다.</div></div>
+    </div>
+
+    <div class="warnbox">
+      <div class="wt">흔한 오해</div>
+      <p>"4대보험에 가입하지 않았다", "프리랜서 계약서를 썼다", "5인 미만 사업장이다"는 이유만으로 퇴직금이 사라지지 않는다. 법원은 계약서 이름이 아니라 <b>실제로 지휘·감독을 받으며 일했는지(근로자성)</b>를 기준으로 본다. 사업장 규모와도 무관하다.</p>
+    </div>
+
+    <h2 class="sec">2. 계산 공식 — 평균임금이 핵심이다</h2>
+
+    <div class="formula">
+      <div class="f-main">퇴직금 = 1일 평균임금 × 30일 × (총 재직일수 ÷ 365)</div>
+      <p class="f-note">1일 평균임금 = 퇴직 직전 3개월간 임금총액 ÷ 그 3개월의 총일수(달력 일수, 보통 89~92일)</p>
+    </div>
+
+    <p>평균임금에서 흔히 놓치는 부분은 분모다. 근무한 날이 아니라 <strong>달력상 총일수</strong>로 나누므로 주말·휴일이 모두 포함된다. 분자인 임금총액에는 세전 기준으로 다음이 모두 들어간다.</p>
+
+    <ul class="plain">
+      <li><strong>기본급·고정수당·연장·야간·휴일근로수당</strong> — 퇴직 직전 3개월에 실제 받은 금액</li>
+      <li><strong>연간 상여금의 3/12</strong> — 연 400만원이면 100만원이 3개월분으로 더해진다</li>
+      <li><strong>미사용 연차수당의 3/12</strong> — 퇴직 전년도 출근분에 대해 발생한 연차수당이 대상이다</li>
+    </ul>
+
+    <p>식대·교통비처럼 정기적으로 지급되는 금품도 임금이면 포함된다. 평균임금이 통상임금보다 낮으면 <strong>통상임금을 평균임금으로 본다</strong>는 규정(근로기준법 제2조 제2항)이 있어, 퇴직 직전에 결근·휴직 등으로 임금이 줄어든 경우를 막아 준다. 두 개념의 차이는 <a href="/2026-08-17-통상임금-계산법" style="color:#00695c">통상임금 계산법</a> 글에서 따로 정리했다.</p>
+
+    <h2 class="sec">3. 사례 계산 — 월급 300만원, 3년 근무</h2>
+
+    <div class="case">
+      <div class="ct">사례 ① 7월 1일~9월 30일(92일)이 퇴직 직전 3개월인 경우</div>
+      <p>월급 300만원, 연 상여금 400만원, 전년도분 연차수당 120만원을 가정한다.</p>
+      <p>임금총액 = 기본급 900만원(300만원×3) + 상여금 3/12 100만원 + 연차수당 3/12 30만원 = <strong>1,030만원</strong></p>
+      <p>1일 평균임금 = 1,030만원 ÷ 92일 ≈ <strong>11만 1,957원</strong></p>
+      <p>3년(1,095일) 근무 시 퇴직금 = 11만 1,957원 × 30일 × (1,095÷365) ≈ <strong>1,007만 6,000원</strong></p>
+    </div>
+
+    <p>같은 사람이 상여금과 연차수당이 없다면 임금총액은 900만원, 1일 평균임금은 약 9만 7,826원이어서 3년 퇴직금은 약 880만 4,000원이다. <strong>상여금과 연차수당 몫이 127만원 넘게 차이</strong> 나는 셈이다. 근속연수별 금액은 1일 평균임금 11만 1,957원을 기준으로 아래와 같다.</p>
+
+    <table class="rate">
+      <tr><th>근속기간</th><th>산식</th><th>퇴직금(세전)</th></tr>
+      <tr><td>1년</td><td>11만 1,957원 × 30일 × 1</td><td class="up">약 335만 9,000원</td></tr>
+      <tr><td>3년</td><td>11만 1,957원 × 30일 × 3</td><td class="up">약 1,007만 6,000원</td></tr>
+      <tr><td>5년</td><td>11만 1,957원 × 30일 × 5</td><td class="up">약 1,679만 3,000원</td></tr>
+      <tr><td>10년</td><td>11만 1,957원 × 30일 × 10</td><td class="up">약 3,358만 7,000원</td></tr>
+    </table>
+
+    <div class="infographic-section">
+      <h3>근속연수별 퇴직금 비교 (1일 평균임금 11만 1,957원 기준, 세전)</h3>
+      <div class="bar-chart">
+        <div class="bar-item"><div class="bar-label"><span>1년</span><span class="val">약 336만원</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:10%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>3년</span><span class="val">약 1,008만원</span></div><div class="bar-track"><div class="bar-fill bar-cyan" style="width:30%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>5년</span><span class="val">약 1,679만원</span></div><div class="bar-track"><div class="bar-fill bar-amber" style="width:50%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>10년</span><span class="val">약 3,359만원</span></div><div class="bar-track"><div class="bar-fill bar-grey" style="width:100%"></div></div></div>
+      </div>
+      <p class="note">※ 임의 사례로 계산한 값이며, 실제 금액은 퇴직 직전 3개월 임금과 재직일수에 따라 달라진다.</p>
+    </div>
+
+    <h2 class="sec">4. 지급 기한과 IRP 입금 — 14일, 그리고 지연이자</h2>
+
+    <p>근로자퇴직급여 보장법 제9조는 사용자가 <strong>퇴직한 날부터 14일 이내</strong>에 퇴직금을 지급하도록 정한다. 특별한 사정이 있으면 당사자 간 합의로 기일을 연장할 수 있지만, 합의 없이 넘기면 위반이다. 기일을 넘긴 퇴직금에는 <strong>연 20%의 지연이자</strong>가 붙는다(같은 법 시행령 제7조, 근로기준법 시행령 제17조).</p>
+
+    <p>지급 방식도 바뀌었다. 2022년 4월 14일 이후 퇴직금은 <strong>근로자가 지정한 IRP(개인형 퇴직연금) 계정으로 이전하는 것이 원칙</strong>이다. 근로자가 계정을 지정하지 않으면 사용자가 근로자 명의의 IRP 계정을 만들어 입금한다. 55세 이후 퇴직하거나 퇴직급여가 300만원 이하인 경우 등 예외에 한해 현금으로 받을 수 있다.</p>
+
+    <div class="flow">
+      <div class="flow-box"><div class="ft">① 퇴직일</div><div class="fd">계속근로 1년·주 15시간 확인, 마지막 3개월 급여명세서 보관</div></div>
+      <div class="flow-box"><div class="ft">② IRP 계좌 지정</div><div class="fd">금융회사에서 개설해 사용자에게 계좌 통보(없으면 사용자가 개설)</div></div>
+      <div class="flow-box"><div class="ft">③ 14일 이내 입금</div><div class="fd">퇴직일부터 14일, 합의 시 연장 가능, 초과분은 연 20% 지연이자</div></div>
+      <div class="flow-box"><div class="ft">④ 미지급 시</div><div class="fd">고용노동부 진정(1350) 또는 임금체불 신고, 시효 3년</div></div>
+    </div>
+
+    <h2 class="sec">5. 퇴직소득세와 미지급 시 대응</h2>
+
+    <p>퇴직금은 소득세법상 <strong>퇴직소득</strong>이어서 근로소득과 따로 세금을 계산한다. 근속연수가 길수록 근속연수공제가 커져 같은 금액이라도 월급보다 세 부담이 훨씬 가볍다. IRP로 받은 퇴직금을 55세 이후 연금으로 나누어 받으면 세금이 추가로 줄어든다(연금 수령 시 퇴직소득세 30~40% 감면). 반대로 IRP에서 해지해 일시금으로 인출하면 그 시점에 퇴직소득세가 원천징수된다.</p>
+
+    <p>회사가 퇴직금을 주지 않을 때는 다음 순서로 대응한다.</p>
+
+    <div class="steps">
+      <div class="step"><div class="step-t">자료 확보</div><div class="step-d">근로계약서, 급여명세서·통장 내역, 출퇴근 기록, 상여금·연차수당 지급 내역을 모은다. 근로자성이 다퉈질 때는 업무지시 내역이 증거가 된다.</div></div>
+      <div class="step"><div class="step-t">임금체불 진정</div><div class="step-d">관할 고용노동청에 퇴직금 체불로 진정을 낸다. 온라인(고용노동부 민원마당)이나 국번 없이 1350으로 상담할 수 있다.</div></div>
+      <div class="step"><div class="step-t">체당금·민사소송</div><div class="step-d">사업주가 도산한 경우 일정 한도 안에서 국가가 대신 지급하는 <b>체당금</b>을 신청할 수 있고, 금액이 크면 지급명령·민사소송으로 받는다.</div></div>
+    </div>
+
+    <div class="warnbox">
+      <div class="wt">시효를 놓치지 말 것</div>
+      <p>퇴직금을 받을 권리는 <b>퇴직한 날부터 3년</b> 동안 행사하지 않으면 소멸한다. 퇴사 후 서두르지 않았더라도 3년 안에 진정이나 소송을 제기해야 한다.</p>
+    </div>
+
+    <h2 class="sec">6. 퇴직금 체크리스트</h2>
+
+    <ul class="plain">
+      <li>입사일과 퇴사일 사이가 <strong>1년 이상</strong>이고, 주 소정근로시간이 <strong>15시간 이상</strong>인가</li>
+      <li>퇴직 직전 <strong>3개월 급여명세서</strong>와 연간 상여금·연차수당 내역을 갖고 있는가</li>
+      <li>1일 평균임금이 <strong>통상임금보다 낮지 않은지</strong> 비교했는가</li>
+      <li>퇴직일로부터 <strong>14일 이내</strong>에 IRP 계좌로 입금됐는가(합의 연장 여부 확인)</li>
+      <li>입금액이 계산값과 다르면 <strong>3년 안에</strong> 고용노동청(1350)에 문의했는가</li>
+    </ul>
+
+    <p>정리하면 퇴직금은 "월급×근속연수"보다 조금 복잡한 대신, 상여금과 연차수당까지 챙기면 받을 몫이 커지는 구조다. 퇴사 직전 3개월의 임금과 지급 내역을 기록해 두는 것이 가장 확실한 대비다.</p>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#퇴직금</span><span class="hashtag">#퇴직금계산방법</span><span class="hashtag">#평균임금</span><span class="hashtag">#퇴직금지급기한</span><span class="hashtag">#IRP</span><span class="hashtag">#근로자퇴직급여보장법</span><span class="hashtag">#퇴직금체불</span><span class="hashtag">#퇴직금시효</span><span class="hashtag">#연차수당</span><span class="hashtag">#퇴직소득세</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://korea.legal/wiki/%ea%b7%bc%eb%a1%9c%ec%9e%90%ed%87%b4%ec%a7%81%ea%b8%89%ec%97%ac-%eb%b3%b4%ec%9e%a5%eb%b2%95-%ec%a0%9c9%ec%a1%b0/" target="_blank" rel="noopener">근로자퇴직급여 보장법 제9조(퇴직금의 지급 등) — 14일 이내 지급, IRP 이전 원칙</a>
+      <a href="https://wikidocs.net/blog/@mythos/21200/" target="_blank" rel="noopener">위키독스 — 퇴직금 계산 방법: 평균임금부터 IRP 입금·퇴직소득세까지</a>
+      <a href="https://wikidocs.net/blog/@Insight_Lab/21163/" target="_blank" rel="noopener">위키독스 — 퇴직금 계산 방법(평균임금·근속연수·퇴직소득세)</a>
+      <a href="https://glasswallet.com/calculate/severance-pay/payment-deadline" target="_blank" rel="noopener">퇴직금 지급 기한과 미지급 시 대응 방법</a>
+      <a href="https://www.law.go.kr/" target="_blank" rel="noopener">국가법령정보센터 — 근로자퇴직급여 보장법, 근로기준법 제2조(평균임금)</a>
+    </div>
+
+    <p class="disclaimer">
+      ※ 본 아티클은 법령과 공개 자료를 정리한 정보성 콘텐츠이며 개별 사안에 대한 노무·세무 상담이 아닙니다. 사례의 금액은 가정한 수치로 계산한 근사값이고, 실제 퇴직금과 퇴직소득세는 임금 구성·재직기간·퇴직 시점에 따라 달라질 수 있습니다. <strong>정확한 판단은 고용노동부(국번 없이 1350) 또는 공인노무사·세무사와 확인하시기 바랍니다.</strong>
+    </p>
+
+  </div>
+<!-- HUB:RELATED:BEGIN -->
+<style>
+.hub-bc{font-size:13px;color:#5b6672;margin:0 0 18px;font-family:'Noto Sans KR',sans-serif}
+.hub-bc a{color:#5b6672;text-decoration:none}.hub-bc a:hover{text-decoration:underline}
+.hub-rel{margin:38px 0 6px;padding:20px 22px;border:1px solid #e3e8ee;border-radius:10px;
+  background:#fafbfc;font-family:'Noto Sans KR',sans-serif}
+.hub-rel h2{font-size:15px;margin:0 0 14px;font-weight:700;color:#12202e;
+  font-family:'Noto Sans KR',sans-serif;border:0;padding:0}
+.hub-rel ul{list-style:none;padding:0;margin:0}
+.hub-rel li{padding:7px 0;font-size:14.5px;line-height:1.55}
+.hub-rel li a{color:#12202e;text-decoration:none}
+.hub-rel li a:hover{color:#1a5f8a;text-decoration:underline}
+.hub-rel .hub-more{margin:14px 0 0;font-size:13.5px}
+.hub-rel .hub-more a{color:#1a5f8a;text-decoration:none;font-weight:700}
+</style>
+<aside class="hub-rel">
+  <h2>같은 분야 다른 글 — 노동·급여</h2>
+  <ul>
+    <li><a href="/2026-08-17-통상임금-계산법">통상임금 계산법 — 포함 항목과 평균임금 차이, 시간급 산정 기준</a></li>
+    <li><a href="/2026-09-02-육아휴직-급여-계산법">육아휴직 급여 계산법 — 월별 상한액과 사후지급금 폐지 시기</a></li>
+    <li><a href="/2026-09-29-주휴수당-지급조건-계산방법">주휴수당 지급 조건 — 주 15시간 기준과 결근 시 계산 방법</a></li>
+  </ul>
+  <p class="hub-more"><a href="/labor/">노동·급여 전체 보기 →</a></p>
+</aside>
+<!-- HUB:RELATED:END -->
+</article>
+</body>
+</html>
