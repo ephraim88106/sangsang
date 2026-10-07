@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>전세보증보험 가입 조건 — HUG 보증한도와 보증료 계산 방법 | 부동산·주거</title>
+  <meta name="description" content="전세보증금 반환보증(전세보증보험)은 계약 종료 때 집주인이 보증금을 못 돌려줄 경우 HUG가 대신 지급하는 상품이다. 보증금 수도권 7억·그 외 5억 이하, 보증금과 선순위채권이 주택가격의 90% 이하, 신규 계약은 계약기간 절반이 지나기 전 신청, 보증료는 보증금×요율×기간÷365로 계산한다.">
+  <meta name="keywords" content="전세보증보험 가입 조건, 전세보증금 반환보증, HUG 보증료, 전세보증보험 보증료 계산, 전세보증 신청 기한, 보증한도, 전세가율 90%, 전세사기 예방, 임차인 보증보험">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f2f4f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #0d47a1 0%, #1565c0 45%, #0277bd 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #bbdefb; color: #0d47a1; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #e3f2fd; border-left: 5px solid #1565c0; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #1565c0; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #0d47a1; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #1565c0; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #0d47a1; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #e3f2fd; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #1565c0; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #0d47a1; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #f1f6fd; border-left: 4px solid #42a5f5; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #0d47a1; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f3f8fe; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #0d47a1; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #0d47a1; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #d6e4f5; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-teal { background: linear-gradient(90deg, #0d47a1, #42a5f5); }
+    .bar-cyan { background: linear-gradient(90deg, #0d47a1, #64b5f6); }
+    .bar-amber { background: linear-gradient(90deg, #ef6c00, #ffb300); }
+    .bar-blue { background: linear-gradient(90deg, #0d47a1, #42a5f5); }
+    .bar-grey { background: linear-gradient(90deg, #546e7a, #90a4ae); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #c3d5ee; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #e3f2fd; color: #0d47a1; font-weight: 700; }
+    table.rate td.up { color: #0d47a1; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #ef6c00; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #1565c0; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #0d47a1; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #bbdefb; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #0d47a1; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #bbdefb; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #1565c0; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .formula { background: #f3f8fe; border: 1.5px dashed #42a5f5; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 16.5px; font-weight: 800; color: #0d47a1; line-height: 1.8; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #0277bd; margin-top: 10px; margin-bottom: 0; }
+    .warnbox { background: #fff8e1; border-left: 5px solid #f9a825; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 26px 0; }
+    .warnbox .wt { font-size: 14px; font-weight: 800; color: #ef6c00; margin-bottom: 8px; }
+    .warnbox p { font-size: 15px; color: #5d4037; margin-bottom: 0; word-break: keep-all; }
+    .case { background: #fff; border: 1.5px solid #bbdefb; border-left: 5px solid #1565c0; border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; }
+    .case .ct { font-size: 13.5px; font-weight: 800; color: #0d47a1; margin-bottom: 6px; letter-spacing: 0.3px; }
+    .case p { font-size: 14.8px; margin-bottom: 8px; }
+    .case p:last-child { margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #e3f2fd; color: #1565c0; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #1565c0; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<!-- SEO:AUTO BEGIN -->
+<meta property="article:published_time" content="2026-10-07T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-07T09:00:00+09:00">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "전세보증보험 가입 조건 — HUG 보증한도와 보증료 계산 방법",
+  "description": "전세보증금 반환보증(전세보증보험)은 계약 종료 때 집주인이 보증금을 못 돌려줄 경우 HUG가 대신 지급하는 상품이다. 보증금 수도권 7억·그 외 5억 이하, 보증금과 선순위채권이 주택가격의 90% 이하, 신규 계약은 계약기간 절반이 지나기 전 신청, 보증료는 보증금×요율×기간÷365로 계산한다.",
+  "url": "https://sangsang.ephseed.com/2026-10-07-%EC%A0%84%EC%84%B8%EB%B3%B4%EC%A6%9D%EB%B3%B4%ED%97%98-%EA%B0%80%EC%9E%85%EC%A1%B0%EA%B1%B4-%EB%B3%B4%EC%A6%9D%EB%A3%8C-%EA%B3%84%EC%82%B0%EB%B0%A9%EB%B2%95",
+  "datePublished": "2026-10-07T09:00:00+09:00",
+  "dateModified": "2026-10-07T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-10-07-%EC%A0%84%EC%84%B8%EB%B3%B4%EC%A6%9D%EB%B3%B4%ED%97%98-%EA%B0%80%EC%9E%85%EC%A1%B0%EA%B1%B4-%EB%B3%B4%EC%A6%9D%EB%A3%8C-%EA%B3%84%EC%82%B0%EB%B0%A9%EB%B2%95">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="전세보증보험 가입 조건 — HUG 보증한도와 보증료 계산 방법 | 부동산·주거">
+<meta property="og:description" content="전세보증금 반환보증(전세보증보험)은 계약 종료 때 집주인이 보증금을 못 돌려줄 경우 HUG가 대신 지급하는 상품이다. 보증금 수도권 7억·그 외 5억 이하, 보증금과 선순위채권이 주택가격의 90% 이하, 신규 계약은 계약기간 절반이 지나기 전 신청, 보증료는 보증금×요율×기간÷365로 계산한다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-10-07-%EC%A0%84%EC%84%B8%EB%B3%B4%EC%A6%9D%EB%B3%B4%ED%97%98-%EA%B0%80%EC%9E%85%EC%A1%B0%EA%B1%B4-%EB%B3%B4%EC%A6%9D%EB%A3%8C-%EA%B3%84%EC%82%B0%EB%B0%A9%EB%B2%95">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-10-07T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-07T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N28MJLW4W9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-N28MJLW4W9");</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-EVlth33UH8CTDu2u"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-KMCr4AoIjIDsi9XA"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-qqfX36xk8gz6faM6"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+<article class="article-wrap">
+<!-- HUB:BREADCRUMB:BEGIN -->
+<nav class="hub-bc"><a href="/">생생 정보통</a> &rsaquo; <a href="/housing/">주거·임대차</a></nav>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "생생 정보통", "item": "https://sangsang.ephseed.com/"}, {"@type": "ListItem", "position": 2, "name": "주거·임대차", "item": "https://sangsang.ephseed.com/housing/"}]}</script>
+<!-- HUB:BREADCRUMB:END -->
+  <header class="hero">
+    <div class="category-badge">🏠 부동산 · 주거</div>
+    <h1>전세보증보험 가입 조건 —<br>HUG 보증한도와 보증료 계산 방법</h1>
+    <p class="hero-sub">전세보증금 반환보증은 계약이 끝났는데 집주인이 보증금을 돌려주지 못할 때 <b>보증기관이 대신 지급</b>하는 상품이다. 가입 문턱은 <b>보증금 한도와 90% 기준</b>, 신청 마감은 <b>계약기간의 절반</b>이다. 가입 조건과 보증료 계산법을 순서대로 정리했다.</p>
+    <div class="hero-meta">
+      <span>🏠 부동산 · 주거</span>
+      <span>📅 2026년 10월 7일</span>
+      <span>⏱️ 약 9분</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+
+    <div class="summary-box">
+      <h2>핵심 요약</h2>
+      <ul>
+        <li>전세보증금 반환보증(전세보증보험)은 <strong>임대차 종료 후 보증금을 돌려받지 못할 때 보증기관이 대신 지급</strong>한다. 대표 상품은 주택도시보증공사(HUG)이며 주택금융공사(HF)·서울보증(SGI)도 비슷한 상품을 판다.</li>
+        <li>HUG 기준 보증금은 <strong>수도권 7억원, 그 외 지역 5억원 이하</strong>여야 하고, <strong>보증금과 선순위채권의 합이 주택가격의 90% 이하</strong>여야 한다.</li>
+        <li>신규 계약은 <strong>계약기간의 절반이 지나기 전</strong>에 신청해야 한다. 전입신고와 확정일자를 받은 상태여야 한다.</li>
+        <li>보증료는 <strong>보증금 × 보증료율 × 보증기간 ÷ 365</strong>로 계산한다. 요율은 주택 유형과 전세가율에 따라 달라지고 개편될 수 있으므로 신청 시점의 공식 요율을 확인해야 한다.</li>
+      </ul>
+    </div>
+
+    <h2 class="sec">1. 전세보증보험이란 — 무엇을 보장하나</h2>
+
+    <p>전세 계약이 끝났는데 집주인이 새 세입자를 못 구하거나 자금이 부족해 보증금을 돌려주지 못하는 일이 있다. 전세보증금 반환보증은 이때 <strong>임차인이 낸 보증료를 바탕으로 보증기관이 보증금을 먼저 돌려주고, 이후 집주인에게 구상권을 행사하는 구조</strong>다. 임차인은 이사 자금을 확보하고, 보증기관은 집주인에게서 돈을 회수한다.</p>
+
+    <p>가입자는 <strong>임차인</strong>이다. 집주인 동의 없이도 가입하는 것이 일반적이지만, 등기부등본상 소유자와 계약서상 임대인이 같아야 하고 임대인에게 보증기관이 집주인 정보를 조회할 수 있도록 하는 절차가 따른다. 전세사기가 사회 문제가 된 뒤 가입 심사는 한층 엄격해졌고, 보증료도 전세가율에 따라 차등을 두는 방향으로 바뀌었다.</p>
+
+    <div class="warnbox">
+      <div class="wt">보증은 만능이 아니다</div>
+      <p>보증보험은 <b>보증금 반환 위험을 줄이는 장치</b>이지, 계약 자체의 하자를 고쳐 주지 않는다. 가입이 거절되는 집은 대개 위험 신호가 있는 집이다. 거절 사유를 "해결해야 할 문제"가 아니라 "계약을 다시 볼 이유"로 읽는 편이 안전하다.</p>
+    </div>
+
+    <h2 class="sec">2. 가입 조건 — 한도·90%·신청 기한</h2>
+
+    <p>HUG 전세보증금반환보증의 핵심 조건은 다음과 같다. 세부 수치는 정책에 따라 바뀔 수 있어 <strong>신청 직전에 HUG 공식 안내로 재확인</strong>해야 한다.</p>
+
+    <table class="rate">
+      <tr><th>항목</th><th>기준</th></tr>
+      <tr><td>보증금 한도</td><td class="up">수도권 7억원 이하 · 그 외 5억원 이하</td></tr>
+      <tr><td>담보 비율</td><td class="up">보증금 + 선순위채권 ≤ 주택가격의 90%</td></tr>
+      <tr><td>빌라·다세대 주택가격</td><td>공시가격의 126%를 주택가격으로 인정</td></tr>
+      <tr><td>계약기간</td><td>1년 이상</td></tr>
+      <tr><td>필수 절차</td><td>전입신고 + 확정일자, 보증금 5% 이상 지급</td></tr>
+      <tr><td>신청 기한</td><td class="up">신규 계약은 계약기간의 1/2이 지나기 전</td></tr>
+    </table>
+
+    <p>가장 자주 걸리는 것이 <strong>90% 기준</strong>이다. 예를 들어 시세 5억원 아파트에 선순위 근저당이 1억원 있다면 보증금은 3억 5,000만원까지만 가능하다. 5억원 × 90% = 4억 5,000만원에서 선순위채권 1억원을 뺀 값이다. 선순위채권이 클수록 가입 가능한 보증금은 줄어든다.</p>
+
+    <p>빌라나 다세대는 시세 파악이 어려워 <strong>공시가격 기준</strong>으로 주택가격을 잡는다. 공시가격 3억원 빌라라면 3억 × 126% = 3억 7,800만원이 주택가격이고, 90%를 적용하면 3억 4,020만원이 보증금과 선순위채권의 합계 한도가 된다. 같은 시세여도 공시가격이 낮으면 가입이 어렵다.</p>
+
+    <div class="flow">
+      <div class="flow-box"><div class="ft">① 계약 전 점검</div><div class="fd">등기부등본·선순위채권·위반건축물 여부, 임대인 일치 확인</div></div>
+      <div class="flow-box"><div class="ft">② 계약·잔금</div><div class="fd">계약금 5% 이상 지급, 잔금일에 전입신고와 확정일자</div></div>
+      <div class="flow-box"><div class="ft">③ 보증 신청</div><div class="fd">계약기간 1/2 경과 전, 앱·창구에서 심사 신청</div></div>
+      <div class="flow-box"><div class="ft">④ 보증료 납부</div><div class="fd">보증서 발급, 계약 종료 후 미반환 시 이행 청구</div></div>
+    </div>
+
+    <h2 class="sec">3. 보증료 계산 방법 — 요율과 예시</h2>
+
+    <div class="formula">
+      <div class="f-main">보증료 = 보증금 × 보증료율(연) × 보증기간(일) ÷ 365</div>
+      <p class="f-note">보증기간은 계약기간(통상 2년 = 730일) 기준으로 산정한다</p>
+    </div>
+
+    <p>보증료율은 <strong>주택 유형(아파트 또는 그 외)과 부채비율(전세가율)</strong>에 따라 달라진다. 2025년 3월 31일부터 HUG가 보증료 체계를 개편해 전세가율이 높은 집은 더 높은 요율을 적용받는다고 언론에 보도됐다. 아래 예시는 연 요율을 <strong>가정</strong>해 계산한 값이며 실제 요율은 신청 시점에 달라질 수 있다.</p>
+
+    <div class="case">
+      <div class="ct">계산 사례 — 보증금 3억원, 계약기간 2년</div>
+      <p>연 요율 0.115% 가정: 3억 × 0.00115 × (730÷365) = <strong>69만원</strong></p>
+      <p>연 요율 0.154% 가정: 3억 × 0.00154 × (730÷365) = <strong>92만 4,000원</strong></p>
+      <p>같은 집이라도 요율 차이에 따라 보증료가 20만원 넘게 벌어진다. 일시납·모바일 신청에 따른 할인 제도가 있는지도 신청 화면에서 확인한다.</p>
+    </div>
+
+    <div class="infographic-section">
+      <h3>보증금 3억원·2년 계약 보증료 비교 (가정 요율)</h3>
+      <div class="bar-chart">
+        <div class="bar-item"><div class="bar-label"><span>연 0.115%</span><span class="val">69만원</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:75%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>연 0.130%</span><span class="val">78만원</span></div><div class="bar-track"><div class="bar-fill bar-cyan" style="width:84%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>연 0.154%</span><span class="val">92.4만원</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:100%"></div></div></div>
+      </div>
+      <p class="note">※ 요율은 설명을 위한 가정값이다. 실제 요율은 HUG 공식 안내를 따른다.</p>
+    </div>
+
+    <p>보증료를 임차인이 내는 것이 원칙이지만, 일부 지방자치단체와 청년·신혼부부 대상 제도는 보증료를 지원하기도 한다. 거주 지역의 주거 지원 사업을 함께 찾아볼 만하다.</p>
+
+    <h2 class="sec">4. 가입이 거절되는 대표 사유</h2>
+
+    <div class="steps">
+      <div class="step"><div class="step-t">선순위채권이 너무 많다</div><div class="step-d">근저당·전세권 등을 더한 금액이 90% 기준을 넘으면 거절되거나 보증금을 낮춰야 한다.</div></div>
+      <div class="step"><div class="step-t">권리침해가 있다</div><div class="step-d">압류·가압류·경매 개시 등이 등기부에 있으면 가입이 어렵다.</div></div>
+      <div class="step"><div class="step-t">위반건축물이거나 용도가 맞지 않는다</div><div class="step-d">건축물대장에 위반건축물로 기재됐거나 주거용이 아닌 경우 대상에서 제외될 수 있다.</div></div>
+      <div class="step"><div class="step-t">기한을 넘겼다</div><div class="step-d">신규 계약은 계약기간의 절반이 지나면 신청할 수 없다. 입주 후 미루다 놓치는 경우가 가장 많다.</div></div>
+    </div>
+
+    <h2 class="sec">5. 보증금을 못 받았을 때 — 이행 청구와 임차권등기</h2>
+
+    <p>계약이 끝났는데 보증금을 받지 못하면 보증기관에 <strong>보증이행을 청구</strong>한다. 통상 계약 종료 후 일정 기간(통상 1개월) 안에 반환받지 못해야 하고, 이사해야 한다면 <a href="/2026-08-21-임차권등기명령-신청방법">임차권등기명령</a>으로 대항력을 유지한 채 이사하는 방법을 함께 쓴다. 보증이행이 결정되면 보증기관이 임차인에게 보증금을 지급하고 집주인에게 구상한다.</p>
+
+    <p>HUG 외에 <strong>HF(주택금융공사)</strong>와 <strong>SGI(서울보증)</strong> 상품도 있다. 보증금 한도, 담보 비율, 보증료, 전세대출 연계 여부가 서로 달라 <strong>전세대출을 받는다면 대출 은행이 요구하는 보증기관을 먼저 확인</strong>하는 편이 빠르다. 소액 보증금은 <a href="/2026-08-29-소액임차인-최우선변제금-조건">소액임차인 최우선변제금</a> 대상인지도 함께 보면 좋다.</p>
+
+    <div class="warnbox">
+      <div class="wt">신청 기한 체크</div>
+      <p>계약기간 2년이면 <b>1년이 지나기 전</b>이 마감이다. 입주 날짜를 기준으로 달력에 마감일을 적어 두고, 잔금일에 전입신고·확정일자와 함께 보증 신청까지 끝내는 것이 가장 안전하다.</p>
+    </div>
+
+    <h2 class="sec">6. 가입 전 체크리스트</h2>
+
+    <ul class="plain">
+      <li>보증금이 <strong>수도권 7억원·그 외 5억원</strong> 이하인가</li>
+      <li><strong>보증금 + 선순위채권</strong>이 주택가격의 90% 이하인가(빌라는 공시가격 126% 기준)</li>
+      <li>등기부등본에 압류·가압류·경매 기록이 없고 소유자와 임대인이 같은가</li>
+      <li>건축물대장에 <strong>위반건축물</strong> 표시가 없는가</li>
+      <li>전입신고·확정일자를 받았고 <strong>계약기간 1/2 이전</strong>에 신청하는가</li>
+      <li>보증료가 <strong>보증금×요율×기간÷365</strong>로 얼마인지 미리 계산했는가</li>
+    </ul>
+
+    <p>정리하면 전세보증보험은 한도, 90% 기준, 신청 기한 세 가지만 지키면 가입 여부가 대부분 결정된다. 계약 전에 등기부와 건축물대장을 확인하고, 잔금일에 전입신고·확정일자·보증 신청을 한꺼번에 끝내는 순서를 권한다.</p>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#전세보증보험</span><span class="hashtag">#전세보증금반환보증</span><span class="hashtag">#HUG</span><span class="hashtag">#보증료계산</span><span class="hashtag">#전세사기예방</span><span class="hashtag">#확정일자</span><span class="hashtag">#임차인</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://www.khug.or.kr" target="_blank" rel="noopener">주택도시보증공사(HUG) — 전세보증금반환보증 안내</a>
+      <a href="https://www.sidae.com/article/2025012413243742157" target="_blank" rel="noopener">시대일보 — HUG 전세보증 보증료 체계 개편(2025.3.31 시행)</a>
+      <a href="https://www.mt.co.kr/finance/2025/01/12/2025011014412246709" target="_blank" rel="noopener">머니투데이 — 전세보증금 반환보증, 전세가율 높으면 보증료 인상</a>
+      <a href="https://biz.sbs.co.kr/amp/article/20000225460" target="_blank" rel="noopener">SBS Biz — 매매가 대비 전세가 높은 집, 보증료 인상</a>
+      <a href="https://wikidocs.net/blog/@openwiki/21390/" target="_blank" rel="noopener">위키독스 — 전세보증금 반환보증 가입 조건과 보증료, 신청 방법</a>
+      <a href="https://www.law.go.kr/" target="_blank" rel="noopener">국가법령정보센터 — 주택임대차보호법</a>
+    </div>
+
+    <p class="disclaimer">
+      ※ 본 아티클은 공개 자료를 정리한 정보성 콘텐츠이며 개별 계약에 대한 법률·금융 상담이 아닙니다. 보증료율·한도·가입 요건은 정책에 따라 수시로 바뀌므로 가입 전 HUG·HF·SGI 공식 안내를 반드시 확인하세요. 사례의 보증료는 가정한 요율로 계산한 근사값입니다.
+    </p>
+
+  </div>
+<!-- HUB:RELATED:BEGIN -->
+<style>
+.hub-bc{font-size:13px;color:#5b6672;margin:0 0 18px;font-family:'Noto Sans KR',sans-serif}
+.hub-bc a{color:#5b6672;text-decoration:none}.hub-bc a:hover{text-decoration:underline}
+.hub-rel{margin:38px 0 6px;padding:20px 22px;border:1px solid #e3e8ee;border-radius:10px;
+  background:#fafbfc;font-family:'Noto Sans KR',sans-serif}
+.hub-rel h2{font-size:15px;margin:0 0 14px;font-weight:700;color:#12202e;
+  font-family:'Noto Sans KR',sans-serif;border:0;padding:0}
+.hub-rel ul{list-style:none;padding:0;margin:0}
+.hub-rel li{padding:7px 0;font-size:14.5px;line-height:1.55}
+.hub-rel li a{color:#12202e;text-decoration:none}
+.hub-rel li a:hover{color:#1a5f8a;text-decoration:underline}
+.hub-rel .hub-more{margin:14px 0 0;font-size:13.5px}
+.hub-rel .hub-more a{color:#1a5f8a;text-decoration:none;font-weight:700}
+</style>
+<aside class="hub-rel">
+  <h2>같은 분야 다른 글 — 주거·임대차</h2>
+  <ul>
+    <li><a href="/2026-08-13-계약갱신청구권-행사방법">계약갱신청구권 행사방법 — 집주인 실거주 거절 요건과 5% 상한 계산</a></li>
+    <li><a href="/2026-08-21-임차권등기명령-신청방법">임차권등기명령 신청방법 — 요건과 절차, 효력 발생 시점 정리</a></li>
+    <li><a href="/2026-08-29-소액임차인-최우선변제금-조건">소액임차인 최우선변제금 조건 — 지역별 보증금 범위와 배당 순위 계산</a></li>
+    <li><a href="/2026-09-30-청약-가점-계산법">청약 가점 계산법 — 무주택기간·부양가족·통장 가입기간별 점수</a></li>
+  </ul>
+  <p class="hub-more"><a href="/housing/">주거·임대차 전체 보기 →</a></p>
+</aside>
+<!-- HUB:RELATED:END -->
+</article>
+</body>
+</html>
