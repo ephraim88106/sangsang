@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>보이스피싱 피해금 환급 순서 — 지급정지 요청 후 서류 제출 기한 확인 | 기술·AI</title>
+  <meta name="description" content="보이스피싱 피해를 알았다면 먼저 송금 은행이나 112·1332에 전화해 사기이용계좌 지급정지를 요청한다. 유선 요청 뒤 3영업일 더하기 14일 안에 피해구제신청서를 내야 하고, 채권소멸공고 2개월과 환급액 결정 14일을 거쳐 계좌에 남은 돈이 환급된다. 이의제기와 환급 한계, 금융사 무과실 배상 법안 현황을 정리했다.">
+  <meta name="keywords" content="보이스피싱 환급 신청, 보이스피싱 지급정지, 피해구제신청서, 통신사기피해환급법, 채권소멸공고, 사기이용계좌, 보이스피싱 피해금 환급 절차, 112 1332, 피해환급금">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f2f4f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #0d47a1 0%, #1565c0 45%, #0277bd 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #bbdefb; color: #0d47a1; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #e3f2fd; border-left: 5px solid #1565c0; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #1565c0; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #0d47a1; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #1565c0; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #0d47a1; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #e3f2fd; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #1565c0; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #0d47a1; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #f1f6fd; border-left: 4px solid #42a5f5; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #0d47a1; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f3f8fe; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #0d47a1; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #0d47a1; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #d6e4f5; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-teal { background: linear-gradient(90deg, #0d47a1, #42a5f5); }
+    .bar-cyan { background: linear-gradient(90deg, #0d47a1, #64b5f6); }
+    .bar-amber { background: linear-gradient(90deg, #ef6c00, #ffb300); }
+    .bar-blue { background: linear-gradient(90deg, #0d47a1, #42a5f5); }
+    .bar-grey { background: linear-gradient(90deg, #546e7a, #90a4ae); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #c3d5ee; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #e3f2fd; color: #0d47a1; font-weight: 700; }
+    table.rate td.up { color: #0d47a1; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #ef6c00; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #1565c0; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #0d47a1; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #bbdefb; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #0d47a1; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #bbdefb; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #1565c0; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .formula { background: #f3f8fe; border: 1.5px dashed #42a5f5; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 16.5px; font-weight: 800; color: #0d47a1; line-height: 1.8; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #0277bd; margin-top: 10px; margin-bottom: 0; }
+    .warnbox { background: #fff8e1; border-left: 5px solid #f9a825; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 26px 0; }
+    .warnbox .wt { font-size: 14px; font-weight: 800; color: #ef6c00; margin-bottom: 8px; }
+    .warnbox p { font-size: 15px; color: #5d4037; margin-bottom: 0; word-break: keep-all; }
+    .case { background: #fff; border: 1.5px solid #bbdefb; border-left: 5px solid #1565c0; border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; }
+    .case .ct { font-size: 13.5px; font-weight: 800; color: #0d47a1; margin-bottom: 6px; letter-spacing: 0.3px; }
+    .case p { font-size: 14.8px; margin-bottom: 8px; }
+    .case p:last-child { margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #e3f2fd; color: #1565c0; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #1565c0; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<!-- SEO:AUTO BEGIN -->
+<meta property="article:published_time" content="2026-10-09T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-09T09:00:00+09:00">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "보이스피싱 피해금 환급 순서 — 지급정지 요청 후 서류 제출 기한 확인",
+  "description": "보이스피싱 피해를 알았다면 먼저 송금 은행이나 112·1332에 전화해 사기이용계좌 지급정지를 요청한다. 유선 요청 뒤 3영업일 더하기 14일 안에 피해구제신청서를 내야 하고, 채권소멸공고 2개월과 환급액 결정 14일을 거쳐 계좌에 남은 돈이 환급된다. 이의제기와 환급 한계, 금융사 무과실 배상 법안 현황을 정리했다.",
+  "url": "https://sangsang.ephseed.com/2026-10-09-%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1-%ED%94%BC%ED%95%B4%EA%B8%88-%ED%99%98%EA%B8%89-%EC%88%9C%EC%84%9C-%EC%A7%80%EA%B8%89%EC%A0%95%EC%A7%80-%EA%B8%B0%ED%95%9C",
+  "datePublished": "2026-10-09T09:00:00+09:00",
+  "dateModified": "2026-10-09T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-10-09-%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1-%ED%94%BC%ED%95%B4%EA%B8%88-%ED%99%98%EA%B8%89-%EC%88%9C%EC%84%9C-%EC%A7%80%EA%B8%89%EC%A0%95%EC%A7%80-%EA%B8%B0%ED%95%9C">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="보이스피싱 피해금 환급 순서 — 지급정지 요청 후 서류 제출 기한 확인 | 기술·AI">
+<meta property="og:description" content="보이스피싱 피해를 알았다면 먼저 송금 은행이나 112·1332에 전화해 사기이용계좌 지급정지를 요청한다. 유선 요청 뒤 3영업일 더하기 14일 안에 피해구제신청서를 내야 하고, 채권소멸공고 2개월과 환급액 결정 14일을 거쳐 계좌에 남은 돈이 환급된다. 이의제기와 환급 한계, 금융사 무과실 배상 법안 현황을 정리했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-10-09-%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1-%ED%94%BC%ED%95%B4%EA%B8%88-%ED%99%98%EA%B8%89-%EC%88%9C%EC%84%9C-%EC%A7%80%EA%B8%89%EC%A0%95%EC%A7%80-%EA%B8%B0%ED%95%9C">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N28MJLW4W9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-N28MJLW4W9");</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-EVlth33UH8CTDu2u"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-KMCr4AoIjIDsi9XA"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-qqfX36xk8gz6faM6"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+<article class="article-wrap">
+<!-- HUB:BREADCRUMB:BEGIN -->
+<nav class="hub-bc"><a href="/">생생 정보통</a> &rsaquo; <a href="/law/">법률·행정</a></nav>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "생생 정보통", "item": "https://sangsang.ephseed.com/"}, {"@type": "ListItem", "position": 2, "name": "법률·행정", "item": "https://sangsang.ephseed.com/law/"}]}</script>
+<!-- HUB:BREADCRUMB:END -->
+  <header class="hero">
+    <div class="category-badge">📱 기술 · AI</div>
+    <h1>보이스피싱 피해금 환급 순서 —<br>지급정지 요청 후 서류 제출 기한 확인</h1>
+    <p class="hero-sub">피해를 알았다면 가장 먼저 할 일은 <b>송금 은행 또는 112·1332 전화</b>다. 유선 요청 뒤 <b>3영업일 + 14일</b> 안에 피해구제신청서를 내야 지급정지가 유지되고, 채권소멸공고 2개월을 거쳐 <b>계좌에 남은 돈</b>이 환급된다.</p>
+    <div class="hero-meta">
+      <span>📱 기술 · AI</span>
+      <span>📅 2026년 10월 9일</span>
+      <span>⏱️ 약 8분</span>
+    </div>
+  </header>
+  <div class="body-content">
+
+    <div class="summary-box">
+      <h2>핵심 요약</h2>
+      <ul>
+        <li>1단계는 전화다. 송금한 은행 콜센터, 경찰(112), 금융감독원(1332) 중 어디든 연결해 사기이용계좌의 <b>지급정지</b>를 요청한다.</li>
+        <li>전화로 끝나지 않는다. 유선 요청 뒤 <b>3영업일 + 14일</b> 안에 피해구제신청서와 사건사고사실확인원 등 서류를 내지 않으면 지급정지가 풀린다.</li>
+        <li>환급은 <b>지급정지된 계좌의 잔액 범위</b>로 한정된다. 이미 빠져나간 돈은 이 절차로 돌려받기 어렵다.</li>
+      </ul>
+    </div>
+
+    <p>보이스피싱 피해자가 가장 많이 하는 실수는 "경찰에 신고했으니 됐다"고 생각하는 것이다. 신고와 지급정지는 서로 다른 절차다. 경찰 신고는 수사를 시작하게 하고, 지급정지는 돈이 들어간 계좌를 묶어 추가 인출을 막는다. 환급은 이 계좌에 <strong>남아 있는 돈</strong>을 나눠 돌려주는 행정 절차라서, 시간이 지날수록 돌려받을 몫이 줄어든다.</p>
+
+    <h2 class="sec">1. 먼저 알아둘 것 — 환급 제도가 무엇인가</h2>
+    <p>환급의 근거는 「전기통신금융사기 피해 방지 및 피해금 환급에 관한 특별법」, 흔히 <strong>통신사기피해환급법</strong>이라 부르는 법이다. 소송 없이 사기에 이용된 계좌의 예금채권을 소멸시키고, 그 돈을 피해자에게 돌려주는 구조다. 핵심은 "사기범에게서 받는 돈"이 아니라 "사기이용계좌에 남은 돈"을 대상으로 한다는 점이다.</p>
+    <p>대면으로 현금을 건넨 경우도 수사기관 요청이 있으면 지급정지가 가능하다. 다만 어느 경우든 돈이 이미 다른 계좌로 흩어졌다면 재이체된 계좌까지 지급정지가 이어져야 하므로, 신청을 받은 금융회사가 다른 금융회사에 지급정지를 요청하는 과정이 필요하다.</p>
+
+    <h2 class="sec">2. 신청 순서 — 5단계 절차</h2>
+    <div class="steps">
+      <div class="step"><div class="step-t">지급정지 요청 (알게 된 즉시)</div><div class="step-d">송금 은행 콜센터에 전화해 사기이용계좌의 지급정지를 요청한다. 112나 금융감독원 1332로 전화해도 연결된다. 금융회사는 사기이용계좌로 의심할 사정이 있으면 지급정지를 해야 할 의무가 있다.</div></div>
+      <div class="step"><div class="step-t">경찰 신고와 사건사고사실확인원 발급</div><div class="step-d">112 또는 사이버범죄 신고시스템으로 피해 신고를 한다. 신고를 거쳐 발급받는 사건사고사실확인원이 서면 신청의 핵심 서류다.</div></div>
+      <div class="step"><div class="step-t">피해구제신청서 제출 (유선 요청 후 3영업일 + 14일 이내)</div><div class="step-d">금융회사 양식의 피해구제신청서, 신분증 사본, 이체 확인서 같은 송금 증빙, 사건사고사실확인원을 사기이용계좌가 있는 금융회사에 낸다. 기한을 넘기면 지급정지가 해제된다.</div></div>
+      <div class="step"><div class="step-t">채권소멸공고 (약 2개월)</div><div class="step-d">지급정지한 금융회사가 금융감독원에 예금채권 소멸공고를 요청한다. 공고일부터 2개월이 지나면 계좌 명의인의 채권이 소멸한다. 이 기간에 명의인은 이의를 제기할 수 있다.</div></div>
+      <div class="step"><div class="step-t">환급액 결정과 지급 (종료 후 14일)</div><div class="step-d">채권소멸절차가 끝나면 금융감독원이 피해환급액을 결정하고, 금융회사가 결정된 금액을 지체 없이 피해자에게 환급한다.</div></div>
+    </div>
+    <p class="note">※ 기한과 서류는 금융회사·금융감독원 안내와 법령 개정에 따라 달라질 수 있다. 신청 전 해당 금융회사 또는 금융감독원(1332)에 직접 확인한다.</p>
+
+    <div class="formula">
+      <div class="f-main">지급정지 요청(전화) → 3영업일 + 14일 이내 서면 신청 → 공고 2개월 → 환급액 결정 14일 → 환급</div>
+      <p class="f-note">전체 기간은 이의제기가 없을 때 대략 3개월 안팎으로 설명되는 경우가 많다</p>
+    </div>
+
+    <h2 class="sec">3. 환급이 지연되거나 안 되는 경우</h2>
+    <h3 class="sub">계좌 명의인이 이의를 제기할 때</h3>
+    <p>사기이용계좌의 명의인은 금융회사에 "내 계좌는 사기이용계좌가 아니다"라고 소명하며 이의제기를 할 수 있다. 이의가 받아들여지면 지급정지가 풀리고, 다투는 동안은 절차가 길어진다.</p>
+    <h3 class="sub">압류·가압류, 파산·회생이 걸려 있을 때</h3>
+    <p>사기이용계좌에 이미 다른 채권자의 압류·가압류가 걸려 있거나, 명의인이 파산·회생 절차 중이거나, 사망해 상속인이 한정승인·상속포기를 한 경우에는 채권소멸절차를 진행하지 못할 수 있다. 이때는 민사소송 같은 별도 절차가 필요하다.</p>
+    <h3 class="sub">잔액이 피해액보다 적을 때</h3>
+    <p>같은 계좌에 여러 피해자의 돈이 들어왔다면 남은 잔액을 피해자들에게 나누게 된다. 구체적인 배분 방식은 법 조문과 금융감독원 안내를 따른다.</p>
+
+    <div class="warnbox">
+      <div class="wt">⚠️ 가장 흔한 실수</div>
+      <p>전화로 지급정지만 요청하고 서면 신청서를 내지 않는 경우다. 유선 요청 뒤 정해진 기한 안에 피해구제신청서를 내지 않으면 지급정지가 해제되어, 묶어둔 돈이 빠져나갈 수 있다.</p>
+    </div>
+
+    <h2 class="sec">4. 숫자로 보는 피해와 환급 현실</h2>
+    <p>경찰청 자료를 분석한 보도에 따르면 2025년 보이스피싱 피해액은 <strong>1조 2,578억원</strong>으로 최근 5년 중 가장 컸고 전년보다 47.2% 늘었다. 발생 건수는 2만 3,360건이었다. 건당 피해액은 2021년 약 2,500만원에서 2025년 약 5,384만원으로 커졌다.</p>
+    <p>금융감독원 자료로는 2022년부터 2026년 1분기까지 피해 건수가 11만 1,865건, 피해 규모가 1조 7,731억원이었고, 실제 환급된 금액은 3,986억원으로 <strong>22.4%</strong>에 그쳤다. 경찰청과 금융감독원의 연도별 수치가 다른 것은 집계 기준 차이로 보이나, 구체적 원인은 확인하지 못했다.</p>
+
+    <div class="infographic-section">
+      <h3>2022년~2026년 1분기 누적 피해액 대비 환급 비율 (금융감독원 자료 보도 기준)</h3>
+      <div class="bar-chart">
+        <div class="bar-item"><div class="bar-label"><span>피해액 합계</span><span class="val">1조 7,731억원</span></div><div class="bar-track"><div class="bar-fill bar-grey" style="width:100%">100%</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>환급된 금액</span><span class="val">3,986억원 (22.4%)</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:22.4%">22.4%</div></div></div>
+      </div>
+      <p class="note">환급률은 2025년 단독이 아니라 누적 수치다.</p>
+    </div>
+
+    <div class="impact-grid">
+      <div class="impact-card"><span class="impact-num">1조 2,578억</span><span class="impact-label">2025년 피해액<br>(경찰청, 전년 대비 +47.2%)</span></div>
+      <div class="impact-card"><span class="impact-num">5,384만원</span><span class="impact-label">2025년 건당 평균 피해액<br>(2021년 약 2,500만원)</span></div>
+      <div class="impact-card"><span class="impact-num">22.4%</span><span class="impact-label">누적 환급률<br>(2022~2026년 1분기)</span></div>
+    </div>
+
+    <h2 class="sec">5. 금융회사 무과실 배상 법안은 어디까지 왔나</h2>
+    <p>지금의 환급 제도는 계좌에 남은 돈만 돌려주므로, 이미 빠져나간 돈에 대한 보상 논의가 국회에서 이어지고 있다. 2026년 7월 기준 의원 발의안 두 건은 금융회사의 고의·과실이 없어도 피해자에게 일정 금액을 배상하게 하는 내용을 담았다. 한도는 법에 직접 적지 않고 시행령에 맡기며, 보도된 범위는 최소 1,000만원 이상에서 최대 5,000만원 이하다. 피해자에게 중대한 과실이 있으면 예외로 둔다.</p>
+    <p>다만 2026년 9월 보도 기준으로 법안은 아직 시행되지 않았고, 정무위원회가 국정감사 이후 논의를 시작할 전망이다. 금융권은 통신망에서 시작된 범죄의 책임을 최종 이체 기관에만 지운다고 반발하며, 금융·통신·공공이 함께 출연하는 피해보상기금 같은 대안도 거론된다. 지금 피해를 당했다면 이 법안을 기다리지 말고 현행 환급 절차의 기한부터 지켜야 한다.</p>
+
+    <h2 class="sec">6. 피해를 알았을 때 체크리스트</h2>
+    <table class="rate">
+      <tr><th>순서</th><th>할 일</th><th>비고</th></tr>
+      <tr><td>1</td><td>송금 은행 콜센터·112·1332에 전화해 지급정지 요청</td><td class="up">알게 된 즉시</td></tr>
+      <tr><td>2</td><td>경찰 신고 후 사건사고사실확인원 발급</td><td>피해 사실 증빙</td></tr>
+      <tr><td>3</td><td>피해구제신청서·신분증·이체 확인서 제출</td><td class="down">3영업일 + 14일 이내</td></tr>
+      <tr><td>4</td><td>채권소멸공고 진행 확인</td><td>약 2개월</td></tr>
+      <tr><td>5</td><td>환급액 결정 후 금융회사 환급 수령</td><td>잔액 범위 내</td></tr>
+    </table>
+    <p>범인이 알려준 앱을 설치했다면 휴대전화 악성앱 삭제와 명의도용 여부 확인도 함께 해야 한다. 금융감독원 1332나 금융회사 안내에 따라 계좌·카드 재발급, 본인 명의 계좌 조회 같은 후속 조치를 진행한다.</p>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#보이스피싱</span><span class="hashtag">#지급정지</span><span class="hashtag">#피해구제신청</span><span class="hashtag">#통신사기피해환급법</span><span class="hashtag">#채권소멸공고</span><span class="hashtag">#금융감독원1332</span>
+    </div>
+
+    <div class="sources">
+      <h4>참고 자료</h4>
+      <a href="https://www.lawtalk.co.kr/posts/164985" target="_blank" rel="noopener">로톡 — 보이스피싱 피해금 환급, 지급정지부터 피해환급금 신청까지</a>
+      <a href="https://www.lawtalk.co.kr/posts/139700" target="_blank" rel="noopener">로톡 — 보이스피싱 피해금 환급 절차 꼭 확인하세요</a>
+      <a href="https://www.inews24.com/view/2008688" target="_blank" rel="noopener">아이뉴스24 — 보이스피싱 피해액 1조2578억, 한 번 당하면 5384만원</a>
+      <a href="https://www.mt.co.kr/finance/2026/09/15/2026091010133217571" target="_blank" rel="noopener">머니투데이 — 보이스피싱 배상만 연 2800억, 선도입 영국서도 효과 미미</a>
+      <a href="https://www.heraldk.com/article/2025122917210962133" target="_blank" rel="noopener">헤럴드경제 — 은행 과실 없어도 보이스피싱 보상 한도액 최소 1000만원 이상부터</a>
+    </div>
+
+    <p class="disclaimer">
+      ※ 본 아티클은 통신사기피해환급법 안내와 언론 보도를 정리한 정보성 콘텐츠이며 법률 자문이 아닙니다. 신청 기한, 제출 서류, 환급액은 사건과 시점에 따라 달라질 수 있으므로 피해 발생 시 해당 금융회사, 경찰, 금융감독원(1332)에 직접 확인하시기 바랍니다.
+    </p>
+
+  </div>
+<!-- HUB:RELATED:BEGIN -->
+<style>
+.hub-bc{font-size:13px;color:#5b6672;margin:0 0 18px;font-family:'Noto Sans KR',sans-serif}
+.hub-bc a{color:#5b6672;text-decoration:none}.hub-bc a:hover{text-decoration:underline}
+.hub-rel{margin:38px 0 6px;padding:20px 22px;border:1px solid #e3e8ee;border-radius:10px;
+  background:#fafbfc;font-family:'Noto Sans KR',sans-serif}
+.hub-rel h2{font-size:15px;margin:0 0 14px;font-weight:700;color:#12202e;
+  font-family:'Noto Sans KR',sans-serif;border:0;padding:0}
+.hub-rel ul{list-style:none;padding:0;margin:0}
+.hub-rel li{padding:7px 0;font-size:14.5px;line-height:1.55}
+.hub-rel li a{color:#12202e;text-decoration:none}
+.hub-rel li a:hover{color:#1a5f8a;text-decoration:underline}
+.hub-rel .hub-more{margin:14px 0 0;font-size:13.5px}
+.hub-rel .hub-more a{color:#1a5f8a;text-decoration:none;font-weight:700}
+</style>
+<aside class="hub-rel">
+  <h2>같은 분야 다른 글 — 법률·행정</h2>
+  <ul>
+    <li><a href="/2026-08-14-공소시효-계산법">공소시효 계산법 — 죄목별 기간과 정지·폐지 기준 정리</a></li>
+    <li><a href="/2026-08-22-약식명령-정식재판-청구방법">약식명령 정식재판 청구 방법 — 7일 기간과 벌금 인상 가능 여부 정리</a></li>
+    <li><a href="/2026-08-31-기소유예-전과-기록-여부">기소유예 뜻 — 불기소 처분 종류와 전과 기록 남는지 여부</a></li>
+    <li><a href="/2026-08-15-모바일-주민등록증-발급방법">모바일 주민등록증 발급방법 — 신청 절차와 사용처, 재발급 기준 정리</a></li>
+    <li><a href="/2026-10-01-개인정보-분쟁조정-신청방법">개인정보 분쟁조정 신청방법 — 집단분쟁조정 참여 절차와 조정 효력</a></li>
+    <li><a href="/2026-10-04-국민참여재판-절차-의사확인서-평결효력">국민참여재판 절차 — 7일 의사확인서와 배제결정 사유, 평결 효력</a></li>
+  </ul>
+  <p class="hub-more"><a href="/law/">법률·행정 전체 보기 →</a></p>
+</aside>
+<!-- HUB:RELATED:END -->
+</article>
+</body>
+</html>
