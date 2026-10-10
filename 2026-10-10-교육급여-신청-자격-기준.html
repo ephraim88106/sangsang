@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>교육급여 자격 조건 — 중위소득 50% 소득인정액과 바우처 지원 금액 | 교육·입시</title>
+  <meta name="description" content="교육급여는 기준 중위소득 50% 이하 가구의 초·중·고 학생에게 주는 복지급여다. 2026년 4인 가구 기준 중위소득은 649만 4,738원이라 소득인정액 324만 7,369원 이하가 선정기준이다. 교육활동지원비는 초 50만 2천 원·중 69만 9천 원·고 86만 원이고 고등학생은 교과서대와 입학금·수업료도 받는다. 신청 방법과 바우처 사용 기한, 교육비 지원과의 차이를 정리했다.">
+  <meta name="keywords" content="교육급여 신청 자격, 교육급여 기준, 교육급여 소득인정액, 교육활동지원비, 교육급여 바우처, 교육급여 2026, 중위소득 50%">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f2f4f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #311b92 0%, #5e35b1 45%, #7b1fa2 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #d6c7e6; color: #4a148c; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #f3e5f5; border-left: 5px solid #6a1b9a; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #6a1b9a; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #4a148c; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #6a1b9a; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #4a148c; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #f3e5f5; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #6a1b9a; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #4a148c; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #f5eefa; border-left: 4px solid #7e57c2; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #4a148c; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f8f4fb; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #4a148c; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #4a148c; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #e6dcef; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-blue { background: linear-gradient(90deg, #4a148c, #9575cd); }
+    .bar-teal { background: linear-gradient(90deg, #004d40, #00897b); }
+    .bar-amber { background: linear-gradient(90deg, #e65100, #f9a825); }
+    .bar-red { background: linear-gradient(90deg, #b71c1c, #e53935); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #ded0e8; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #f3e5f5; color: #4a148c; font-weight: 700; }
+    table.rate td.up { color: #4a148c; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #00695c; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #6a1b9a; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #4a148c; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #d6c7e6; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #4a148c; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #d6c7e6; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #6a1b9a; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .formula { background: #faf5fd; border: 1.5px dashed #7e57c2; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 16.5px; font-weight: 800; color: #4a148c; line-height: 1.8; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #7e57c2; margin-top: 10px; margin-bottom: 0; }
+    .warnbox { background: #fff8e1; border-left: 5px solid #f9a825; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 26px 0; }
+    .warnbox .wt { font-size: 14px; font-weight: 800; color: #e65100; margin-bottom: 8px; }
+    .warnbox p { font-size: 15px; color: #5d4037; margin-bottom: 0; word-break: keep-all; }
+    .case { background: #fff; border: 1.5px solid #d6c7e6; border-left: 5px solid #6a1b9a; border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; }
+    .case .ct { font-size: 13.5px; font-weight: 800; color: #4a148c; margin-bottom: 6px; letter-spacing: 0.3px; }
+    .case p { font-size: 14.8px; margin-bottom: 8px; }
+    .case p:last-child { margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #f3e5f5; color: #6a1b9a; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #6a1b9a; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<!-- SEO:AUTO BEGIN -->
+<meta property="article:published_time" content="2026-10-10T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-10T09:00:00+09:00">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "교육급여 자격 조건 — 중위소득 50% 소득인정액과 바우처 지원 금액",
+  "description": "교육급여는 기준 중위소득 50% 이하 가구의 초·중·고 학생에게 주는 복지급여다. 2026년 4인 가구 기준 중위소득은 649만 4,738원이라 소득인정액 324만 7,369원 이하가 선정기준이다. 교육활동지원비는 초 50만 2천 원·중 69만 9천 원·고 86만 원이고 고등학생은 교과서대와 입학금·수업료도 받는다. 신청 방법과 바우처 사용 기한, 교육비 지원과의 차이를 정리했다.",
+  "url": "https://sangsang.ephseed.com/2026-10-10-%EA%B5%90%EC%9C%A1%EA%B8%89%EC%97%AC-%EC%8B%A0%EC%B2%AD-%EC%9E%90%EA%B2%A9-%EA%B8%B0%EC%A4%80",
+  "datePublished": "2026-10-10T09:00:00+09:00",
+  "dateModified": "2026-10-10T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-10-10-%EA%B5%90%EC%9C%A1%EA%B8%89%EC%97%AC-%EC%8B%A0%EC%B2%AD-%EC%9E%90%EA%B2%A9-%EA%B8%B0%EC%A4%80">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="교육급여 자격 조건 — 중위소득 50% 소득인정액과 바우처 지원 금액 | 교육·입시">
+<meta property="og:description" content="교육급여는 기준 중위소득 50% 이하 가구의 초·중·고 학생에게 주는 복지급여다. 2026년 4인 가구 기준 중위소득은 649만 4,738원이라 소득인정액 324만 7,369원 이하가 선정기준이다. 교육활동지원비는 초 50만 2천 원·중 69만 9천 원·고 86만 원이고 고등학생은 교과서대와 입학금·수업료도 받는다. 신청 방법과 바우처 사용 기한, 교육비 지원과의 차이를 정리했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-10-10-%EA%B5%90%EC%9C%A1%EA%B8%89%EC%97%AC-%EC%8B%A0%EC%B2%AD-%EC%9E%90%EA%B2%A9-%EA%B8%B0%EC%A4%80">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-10-10T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-10T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N28MJLW4W9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-N28MJLW4W9");</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-EVlth33UH8CTDu2u"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-KMCr4AoIjIDsi9XA"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-qqfX36xk8gz6faM6"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+<article class="article-wrap">
+<!-- HUB:BREADCRUMB:BEGIN -->
+<nav class="hub-bc"><a href="/">생생 정보통</a> &rsaquo; <a href="/edu/">교육·학자금</a></nav>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "생생 정보통", "item": "https://sangsang.ephseed.com/"}, {"@type": "ListItem", "position": 2, "name": "교육·학자금", "item": "https://sangsang.ephseed.com/edu/"}]}</script>
+<!-- HUB:BREADCRUMB:END -->
+  
+  <header class="hero">
+    <div class="category-badge">🎓 교육 · 입시</div>
+    <h1>교육급여 자격 조건 —<br>중위소득 50% 소득인정액과 바우처 지원 금액</h1>
+    <p class="hero-sub">교육급여는 입시 학원비가 아니라 <b>학교 다니는 데 드는 돈</b>을 국가가 대신 내주는 기초생활보장 급여다. 2026년 4인 가구는 소득인정액이 월 <b>324만 7,369원 이하</b>이면 대상이 된다.</p>
+    <div class="hero-meta">
+      <span>🎓 교육 · 입시</span>
+      <span>📅 2026년 10월 10일</span>
+      <span>⏱️ 약 8분</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+
+    <div class="summary-box">
+      <h2>핵심 요약</h2>
+      <ul>
+        <li>선정기준은 <b>기준 중위소득 50% 이하</b>. 2026년 4인 가구 기준 중위소득은 649만 4,738원, 50%는 324만 7,369원이다.</li>
+        <li>교육활동지원비는 연 <b>초 50만 2천 원 · 중 69만 9천 원 · 고 86만 원</b>. 고등학생은 교과서대와 입학금·수업료도 별도로 지원된다.</li>
+        <li>급여 신청은 연중 가능하고, 신규 수급자는 <b>바우처를 따로 신청</b>해야 한다. 바우처 사용 기한은 2027년 3월 31일까지다.</li>
+      </ul>
+    </div>
+
+    <h2 class="sec">1. 교육급여란 무엇인가</h2>
+    <p>교육급여는 국민기초생활보장제도의 급여 가운데 하나다. 생계급여·의료급여·주거급여와 함께 <b>맞춤형 급여</b>로 묶이지만, 각 급여마다 선정기준이 다르다. 교육급여의 선정기준은 기준 중위소득의 <b>50%</b>로, 생계급여(32%)보다 넓고 주거급여보다 좁다. 그래서 생계급여는 받지 못해도 교육급여는 받는 가구가 생긴다.</p>
+    <p>지원 대상은 <b>초·중·고등학교에 다니는 학생</b>이 있는 가구다. 가구에서 학생 1명당 한 번씩 급여가 나가므로 자녀가 둘이면 두 명분을 받는다. 같은 맞춤형 급여 중에서도 교육급여는 소득이 기준선 바로 위에 있는 가구까지 폭넓게 포함하는 편이라 신청 가능성부터 확인해 볼 가치가 있다.</p>
+
+    <h2 class="sec">2. 2026년 선정기준 — 소득인정액 324만 원</h2>
+    <p>2026년 기준 중위소득은 4인 가구 <b>월 649만 4,738원</b>으로, 2025년(609만 7,773원)보다 6.51% 올랐다. 교육급여 기준선인 50%를 적용하면 아래와 같다.</p>
+    <table class="rate">
+      <tr><th>구분</th><th>2025년</th><th>2026년</th><th>변화</th></tr>
+      <tr><td>4인 가구 기준 중위소득</td><td>609만 7,773원</td><td>649만 4,738원</td><td class="up">+39만 6,965원</td></tr>
+      <tr><td>교육급여 선정기준(50%)</td><td>304만 8,887원</td><td>324만 7,369원</td><td class="up">+약 20만 원</td></tr>
+    </table>
+    <div class="formula">
+      <div class="f-main">소득인정액 = 소득평가액 + 재산의 소득환산액<br>소득인정액 ≤ 기준 중위소득 × 50%</div>
+      <p class="f-note">기준이 되는 것은 월급 자체가 아니라 소득인정액이다</p>
+    </div>
+    <p>핵심은 <b>월급이 아니라 소득인정액</b>이라는 점이다. 근로·사업·재산 소득을 한 달 소득으로 환산한 소득평가액에, 집·토지·금융재산·자동차 같은 재산을 월 소득으로 바꾼 금액(재산의 소득환산액)을 더한다. 월급이 기준 안이어도 재산이 많으면 탈락할 수 있고, 반대로 월급이 기준을 조금 넘어도 근로소득 공제와 부채 공제가 반영되면 대상이 되기도 한다. 가구원 수별 기준액은 복지로의 모의계산에서 가구 구성을 넣으면 바로 확인된다.</p>
+
+    <h2 class="sec">3. 얼마를 받나 — 교육활동지원비와 학교 납입금</h2>
+    <p>교육급여는 두 갈래로 나뉜다. 하나는 학용품·참고서·부교재 등에 쓰는 <b>교육활동지원비</b>(바우처), 다른 하나는 <b>고등학생에게만 해당하는 학교 납입금</b>이다.</p>
+    <div class="infographic-section">
+      <h3>교육활동지원비 연 지급액 (2025년 vs 2026년)</h3>
+      <div class="bar-chart">
+        <div class="bar-item"><div class="bar-label"><span>초등학생 2025</span><span class="val">48만 7천 원</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:56.6%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>초등학생 2026</span><span class="val">50만 2천 원</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:58.4%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>중학생 2025</span><span class="val">67만 9천 원</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:78.9%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>중학생 2026</span><span class="val">69만 9천 원</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:81.3%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>고등학생 2025</span><span class="val">76만 8천 원</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:89.3%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>고등학생 2026</span><span class="val">86만 원</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:100%"></div></div></div>
+      </div>
+      <p class="note">금액은 경상남도 교육급여 안내와 교육청 자료 기준. 고등학생은 약 12% 올라 인상 폭이 가장 크다.</p>
+    </div>
+    <ul class="plain">
+      <li><b>초등학생</b>: 50만 2천 원(전년 대비 약 3% 인상)</li>
+      <li><b>중학생</b>: 69만 9천 원(약 3% 인상)</li>
+      <li><b>고등학생</b>: 86만 원(약 12% 인상). 여기에 해당 학년 <b>교과서 전체</b>와, 학교장이 고지한 <b>입학금·수업료</b> 전액이 학교로 지급된다.</li>
+    </ul>
+    <p>교육활동지원비는 현금이 아니라 <b>바우처</b> 형태다. 따라서 사용처가 정해져 있고 기한이 지나면 소멸한다. 일부 블로그는 연 128만 원 지원처럼 합산 금액을 적어 두었는데 공식 학교급별 금액과 맞지 않으니 주의한다.</p>
+
+    <h2 class="sec">4. 신청 방법과 기한</h2>
+    <div class="steps">
+      <div class="step"><div class="step-t">급여 신청</div><div class="step-d">주민센터 방문 또는 복지로 온라인으로 교육급여를 신청한다. 공식 신청 기간은 2026년 1월 1일~12월 31일이라 연중 가능하다.</div></div>
+      <div class="step"><div class="step-t">조사와 결정</div><div class="step-d">소득·재산 조사를 거쳐 선정 여부가 통보된다. 결정까지 보통 수 주가 걸리므로 서류를 미리 준비해 둔다.</div></div>
+      <div class="step"><div class="step-t">바우처 신청(신규 수급자)</div><div class="step-d">교육급여 바우처 누리집(e-voucher.kosaf.go.kr)에서 교육활동지원비 이용권을 따로 신청한다. 신청 기간 2026.4.1.~2027.2.28.</div></div>
+      <div class="step"><div class="step-t">사용</div><div class="step-d">2026.4.1.~2027.3.31. 사이에 사용한다. 기한이 지난 잔액은 소멸한다.</div></div>
+    </div>
+    <div class="warnbox">
+      <div class="wt">확인할 점</div>
+      <p>신청 시기를 3월 초·중순 집중 기간이라고 적은 자료도 있지만, 공식 자료의 급여 신청 기간은 연중이다. 학기 중간에 소득이 줄었거나 가구원이 바뀌었다면 시기와 상관없이 다시 신청한다.</p>
+    </div>
+
+    <h2 class="sec">5. 교육급여와 교육비 지원은 다른 제도다</h2>
+    <p>자주 헷갈리는 것이 <b>교육비 지원</b>이다. 교육급여는 보건복지부 소관의 법정 급여이고, 교육비 지원은 시·도 교육청이 자체 기준으로 운영하는 사업이다. 교육비 지원에는 방과후학교 자유수강권, 교육정보화비, 무상교육 대상이 아닌 경우의 학비와 급식비 등이 있다.</p>
+    <table class="rate">
+      <tr><th>구분</th><th>교육급여</th><th>교육비 지원</th></tr>
+      <tr><td>소관</td><td>보건복지부(국민기초생활보장법)</td><td>시·도 교육청</td></tr>
+      <tr><td>선정기준</td><td>기준 중위소득 50% 이하</td><td>교육청별 자체 기준</td></tr>
+      <tr><td>주요 항목</td><td>교육활동지원비, 교과서대, 고교 입학금·수업료</td><td>방과후 자유수강권, 정보화비, 급식비 등</td></tr>
+    </table>
+    <p>교육급여 대상이 아니어도 교육청 기준에 맞으면 교육비 지원을 받을 수 있다. 두 제도는 한 번에 신청서를 낼 수 있어 주민센터나 학교에 함께 문의하는 편이 낫다.</p>
+
+    <h2 class="sec">6. 놓치기 쉬운 부분과 문의처</h2>
+    <div class="case">
+      <div class="ct">자주 하는 실수</div>
+      <p>소득만 보고 "나는 기준을 넘는다"고 단정하는 경우가 많다. 소득인정액은 재산 환산액과 각종 공제가 반영된 값이라, 월 소득이 기준에 가까우면 모의계산을 꼭 해 본다.</p>
+      <p>또 고등학생 자녀가 있으면 교과서대와 수업료가 별도 지원이라는 사실을 놓쳐 바우처만 신청하는 경우가 있다.</p>
+    </div>
+    <div class="impact-grid">
+      <div class="impact-card"><span class="impact-num">1544-9654</span><span class="impact-label">교육비 중앙상담센터</span></div>
+      <div class="impact-card"><span class="impact-num">129</span><span class="impact-label">보건복지상담센터</span></div>
+      <div class="impact-card"><span class="impact-num">1599-2000</span><span class="impact-label">교육급여 바우처 상담(한국장학재단)</span></div>
+    </div>
+
+    <h2 class="sec">7. 정리 — 가구 소득이 경계선이라면</h2>
+    <p>기준 중위소득이 6.51% 오르면서 교육급여 문턱도 전년보다 월 약 20만 원 올랐다. 지난해 탈락했던 가구도 올해는 대상일 수 있다. 순서는 단순하다. 복지로에서 가구원 수·소득·재산을 넣어 모의계산을 하고, 기준 이하로 나오면 주민센터에서 급여를 신청한 뒤, 선정되면 바우처를 별도로 신청해 2027년 3월 31일 이전에 쓰면 된다.</p>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#교육급여</span><span class="hashtag">#교육급여신청자격</span><span class="hashtag">#교육활동지원비</span><span class="hashtag">#기준중위소득</span><span class="hashtag">#교육급여바우처</span><span class="hashtag">#소득인정액</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://www.bokjiro.go.kr/ssis-tbu/cms/pc/news/promotion/1308418_1118.html" target="_blank" rel="noopener">복지로 — 2026년도 기준 중위소득 역대 최대 인상</a>
+      <a href="https://www.goe.go.kr/resource/goe/na/bbs_2675/2026/05/1d4e385d-9b72-4d67-84b8-50ff8432fca7.pdf" target="_blank" rel="noopener">경기도교육청 — 2026년 교육급여 안내 자료</a>
+      <a href="https://studygov.kr/blog/0367-basic-livelihood-education-benefit-2026/" target="_blank" rel="noopener">스터디거브 — 기초생활수급자 교육급여 지원 내용</a>
+      <a href="https://dhnews.co.kr/news/view/1065578476641451" target="_blank" rel="noopener">초·중·고 교육급여·교육비 지원 신청 안내 보도</a>
+    </div>
+
+    <p class="disclaimer">
+      ※ 본 아티클은 보건복지부·교육청 공개 자료와 언론 보도를 정리한 정보성 콘텐츠이며 개별 자격을 판정하지 않습니다. 선정 여부와 지급액은 가구 구성·소득·재산과 해마다 바뀌는 지침에 따르므로 신청 전 주민센터, 복지로, 교육비 중앙상담센터에서 확인하시기 바랍니다.
+    </p>
+
+  </div>
+<!-- HUB:RELATED:BEGIN -->
+<style>
+.hub-bc{font-size:13px;color:#5b6672;margin:0 0 18px;font-family:'Noto Sans KR',sans-serif}
+.hub-bc a{color:#5b6672;text-decoration:none}.hub-bc a:hover{text-decoration:underline}
+.hub-rel{margin:38px 0 6px;padding:20px 22px;border:1px solid #e3e8ee;border-radius:10px;
+  background:#fafbfc;font-family:'Noto Sans KR',sans-serif}
+.hub-rel h2{font-size:15px;margin:0 0 14px;font-weight:700;color:#12202e;
+  font-family:'Noto Sans KR',sans-serif;border:0;padding:0}
+.hub-rel ul{list-style:none;padding:0;margin:0}
+.hub-rel li{padding:7px 0;font-size:14.5px;line-height:1.55}
+.hub-rel li a{color:#12202e;text-decoration:none}
+.hub-rel li a:hover{color:#1a5f8a;text-decoration:underline}
+.hub-rel .hub-more{margin:14px 0 0;font-size:13.5px}
+.hub-rel .hub-more a{color:#1a5f8a;text-decoration:none;font-weight:700}
+</style>
+<aside class="hub-rel">
+  <h2>같은 분야 다른 글 — 교육·학자금</h2>
+  <ul>
+    <li><a href="/2026-08-16-고교학점제-미이수-기준">고교학점제 미이수 기준 — 출석률·학업성취율 요건과 보충이수 절차 정리</a></li>
+    <li><a href="/2026-08-24-내신-5등급제-계산법">내신 5등급제 계산법 — 등급별 비율과 9등급제 환산 차이</a></li>
+    <li><a href="/2026-09-01-학자금-지원구간-확인방법">학자금 지원구간 확인 방법 — 소득인정액 산정과 구간별 국가장학금</a></li>
+    <li><a href="/2026-10-02-수능-표준점수-백분위-등급-차이">수능 표준점수 백분위 등급 차이 — 성적표 보는 방법과 산출 원리</a></li>
+  </ul>
+  <p class="hub-more"><a href="/edu/">교육·학자금 전체 보기 →</a></p>
+</aside>
+<!-- HUB:RELATED:END -->
+</article>
+</body>
+</html>
