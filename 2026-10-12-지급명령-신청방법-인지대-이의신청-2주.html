@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>지급명령 신청방법 — 인지대·송달료 계산과 이의신청 2주, 확정 후 강제집행 순서 | 정치·사법</title>
+  <meta name="description" content="지급명령은 금전 채권을 소송 없이 서면 심사로 받는 독촉절차다. 채무자 주소지 지방법원에 전자소송포털로 신청하고, 인지대는 소장의 10분의 1이다. 채무자가 정본을 받은 날부터 2주 안에 이의하면 소송으로 넘어가고, 이의가 없으면 확정되어 강제집행의 근거가 된다. 2024년 독촉사건은 전체 민사사건의 25.8%였다.">
+  <meta name="keywords" content="지급명령 신청방법, 지급명령 인지대, 지급명령 이의신청, 지급명령 확정, 독촉절차, 지급명령 송달료, 전자소송 지급명령, 지급명령 강제집행">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f2f4f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #311b92 0%, #4527a0 45%, #5e35b1 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #d1c4e9; color: #311b92; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #ede7f6; border-left: 5px solid #4527a0; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #4527a0; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #311b92; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #4527a0; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #311b92; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #ede7f6; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #4527a0; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #311b92; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #f3eefb; border-left: 4px solid #9575cd; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #311b92; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f5f1fc; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #311b92; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #311b92; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #e0d7f0; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-teal { background: linear-gradient(90deg, #311b92, #9575cd); }
+    .bar-cyan { background: linear-gradient(90deg, #311b92, #b39ddb); }
+    .bar-amber { background: linear-gradient(90deg, #ef6c00, #ffb300); }
+    .bar-blue { background: linear-gradient(90deg, #311b92, #9575cd); }
+    .bar-grey { background: linear-gradient(90deg, #546e7a, #90a4ae); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #d5cbe8; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #ede7f6; color: #311b92; font-weight: 700; }
+    table.rate td.up { color: #311b92; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #ef6c00; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #4527a0; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #311b92; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #d1c4e9; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #311b92; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #d1c4e9; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #4527a0; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .formula { background: #f5f1fc; border: 1.5px dashed #9575cd; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 16.5px; font-weight: 800; color: #311b92; line-height: 1.8; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #5e35b1; margin-top: 10px; margin-bottom: 0; }
+    .warnbox { background: #fff8e1; border-left: 5px solid #f9a825; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 26px 0; }
+    .warnbox .wt { font-size: 14px; font-weight: 800; color: #ef6c00; margin-bottom: 8px; }
+    .warnbox p { font-size: 15px; color: #5d4037; margin-bottom: 0; word-break: keep-all; }
+    .case { background: #fff; border: 1.5px solid #d1c4e9; border-left: 5px solid #4527a0; border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; }
+    .case .ct { font-size: 13.5px; font-weight: 800; color: #311b92; margin-bottom: 6px; letter-spacing: 0.3px; }
+    .case p { font-size: 14.8px; margin-bottom: 8px; }
+    .case p:last-child { margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #ede7f6; color: #4527a0; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #4527a0; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<!-- SEO:AUTO BEGIN -->
+<meta property="article:published_time" content="2026-10-12T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-12T09:00:00+09:00">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "지급명령 신청방법 — 인지대·송달료 계산과 이의신청 2주, 확정 후 강제집행 순서",
+  "description": "지급명령은 금전 채권을 소송 없이 서면 심사로 받는 독촉절차다. 채무자 주소지 지방법원에 전자소송포털로 신청하고, 인지대는 소장의 10분의 1이다. 채무자가 정본을 받은 날부터 2주 안에 이의하면 소송으로 넘어가고, 이의가 없으면 확정되어 강제집행의 근거가 된다. 2024년 독촉사건은 전체 민사사건의 25.8%였다.",
+  "url": "https://sangsang.ephseed.com/2026-10-12-%EC%A7%80%EA%B8%89%EB%AA%85%EB%A0%B9-%EC%8B%A0%EC%B2%AD%EB%B0%A9%EB%B2%95-%EC%9D%B8%EC%A7%80%EB%8C%80-%EC%9D%B4%EC%9D%98%EC%8B%A0%EC%B2%AD-2%EC%A3%BC",
+  "datePublished": "2026-10-12T09:00:00+09:00",
+  "dateModified": "2026-10-12T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-10-12-%EC%A7%80%EA%B8%89%EB%AA%85%EB%A0%B9-%EC%8B%A0%EC%B2%AD%EB%B0%A9%EB%B2%95-%EC%9D%B8%EC%A7%80%EB%8C%80-%EC%9D%B4%EC%9D%98%EC%8B%A0%EC%B2%AD-2%EC%A3%BC">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="지급명령 신청방법 — 인지대·송달료 계산과 이의신청 2주, 확정 후 강제집행 순서 | 정치·사법">
+<meta property="og:description" content="지급명령은 금전 채권을 소송 없이 서면 심사로 받는 독촉절차다. 채무자 주소지 지방법원에 전자소송포털로 신청하고, 인지대는 소장의 10분의 1이다. 채무자가 정본을 받은 날부터 2주 안에 이의하면 소송으로 넘어가고, 이의가 없으면 확정되어 강제집행의 근거가 된다. 2024년 독촉사건은 전체 민사사건의 25.8%였다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-10-12-%EC%A7%80%EA%B8%89%EB%AA%85%EB%A0%B9-%EC%8B%A0%EC%B2%AD%EB%B0%A9%EB%B2%95-%EC%9D%B8%EC%A7%80%EB%8C%80-%EC%9D%B4%EC%9D%98%EC%8B%A0%EC%B2%AD-2%EC%A3%BC">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-10-12T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-12T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N28MJLW4W9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-N28MJLW4W9");</script>
+<!-- SEO:END -->
+</head>
+<body>
+
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-EVlth33UH8CTDu2u"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-KMCr4AoIjIDsi9XA"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-qqfX36xk8gz6faM6"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+<article class="article-wrap">
+<!-- HUB:BREADCRUMB:BEGIN -->
+<nav class="hub-bc"><a href="/">생생 정보통</a> &rsaquo; <a href="/law/">법률·행정</a></nav>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "생생 정보통", "item": "https://sangsang.ephseed.com/"}, {"@type": "ListItem", "position": 2, "name": "법률·행정", "item": "https://sangsang.ephseed.com/law/"}]}</script>
+<!-- HUB:BREADCRUMB:END -->
+  <header class="hero">
+    <div class="category-badge">🏛️ 정치 · 사법</div>
+    <h1>지급명령 신청방법 —<br>인지대·송달료 계산과 이의신청 2주, 확정 후 강제집행 순서</h1>
+    <p class="hero-sub">떼인 돈을 받으려고 바로 소송부터 할 필요는 없다. <b>서면 심사만으로 집행권원을 받는 지급명령</b>은 인지대가 소송의 10분의 1이고, 채무자가 <b>2주 안에 이의하지 않으면</b> 확정된다.</p>
+    <div class="hero-meta">
+      <span>🏛️ 정치 · 사법</span>
+      <span>📅 2026년 10월 12일</span>
+      <span>⏱️ 약 8분</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+    <div class="summary-box">
+      <h2>핵심 요약</h2>
+      <ul>
+        <li>지급명령은 <strong>금전 그 밖의 대체물·유가증권</strong>의 지급을 구하는 청구에 쓰는 절차다. 법정 심리 없이 서면으로 심사하고, <strong>채무자 주소지 관할 지방법원</strong>에 신청한다(전속관할).</li>
+        <li>인지대는 같은 금액으로 소송을 낼 때의 <strong>10분의 1</strong>이다. 예를 들어 청구금액 500만 원이면 소장 인지액 2만 5,000원, 지급명령 인지대는 2,500원이다.</li>
+        <li>채무자가 정본을 받은 날부터 <strong>2주 안에 이의</strong>하면 소송으로 넘어가고, 이의가 없으면 <strong>확정판결과 같은 효력</strong>이 생긴다. 확정돼도 돈이 자동으로 들어오지는 않아 <strong>강제집행</strong>이 따로 필요하다.</li>
+        <li>2024년 전국 법원 민사사건 470만 9,506건 가운데 <strong>독촉사건이 25.8%</strong>를 차지했다. 그만큼 흔히 쓰이는 절차다.</li>
+      </ul>
+    </div>
+
+    <h2 class="sec">1. 지급명령이란 — 소송 없이 집행권원을 받는 길</h2>
+
+    <p>빌려준 돈, 밀린 월세·공사대금·물품대금처럼 <b>금액이 분명한 채권</b>을 받아야 하는데 상대가 버틴다면 보통 소송을 떠올린다. 그런데 민사소송법에는 소송보다 가볍고 빠른 <strong>독촉절차</strong>가 있다. 채권자가 신청서를 내면 법원은 변론기일을 열지 않고 서류만 보고 <b>지급명령</b>을 내린다. 채무자가 다투지 않으면 그대로 확정돼 강제집행을 할 수 있는 근거(집행권원)가 된다.</p>
+
+    <p>대상은 민사소송법 제462조에 따라 <strong>금전, 그 밖의 대체물이나 유가증권의 일정 수량 지급</strong>을 목적으로 하는 청구권이다. 건물을 비워 달라는 인도 청구나 소유권이전등기 청구처럼 금전이 아닌 청구에는 쓸 수 없다. 또 한 가지 조건이 있다. 채무자에게 <b>공시송달이 아닌 방법으로 송달</b>할 수 있어야 한다. 주소를 몰라 공시송달밖에 할 수 없다면 지급명령은 막힌다.</p>
+
+    <div class="pullquote">지급명령은 "싸고 빠르게 받는 판결"이 아니라 "상대가 가만히 있을 때에만 통하는 판결"에 가깝다. 이의가 한 번 들어오면 소송이 된다.</div>
+
+    <h2 class="sec">2. 신청 순서 — 어디에, 무엇을 내는가</h2>
+
+    <div class="steps">
+      <div class="step"><div class="step-t">관할 법원 확인</div><div class="step-d">원칙적으로 <b>채무자의 주소지(보통재판적) 관할 지방법원</b>이다. 관할은 전속관할이라 당사자가 합의로 바꿀 수 없다. 사건에 따라 소액사건은 시·군법원이 맡는 경우도 있어 접수 전 확인이 필요하다.</div></div>
+      <div class="step"><div class="step-t">증빙 정리</div><div class="step-d">차용증, 계약서, 세금계산서, 계좌이체 내역, 문자·카카오톡 대화처럼 <b>청구 원인과 금액</b>을 보여 줄 자료를 모은다. 지급명령은 서면 심사라 신청서에 청구 취지와 원인을 분명히 써야 한다.</div></div>
+      <div class="step"><div class="step-t">전자소송 또는 서면 접수</div><div class="step-d">대법원 전자소송포털에서 공동인증서 등으로 로그인한 뒤 <b>서류제출 &gt; 민사서류 &gt; 지급명령(독촉)신청</b> 메뉴로 신청한다. 방문·우편 접수도 가능하다. 전자소송에서는 인지대와 송달료를 시스템이 자동 계산한다.</div></div>
+      <div class="step"><div class="step-t">인지대·송달료 납부</div><div class="step-d">인지대는 소장 기준의 10분의 1이고, 송달료는 <b>당사자 1인당 6회분</b>(일반 소송은 15회분)으로 안내된다. 1회분 금액은 바뀔 수 있어 접수 때 확인한다.</div></div>
+      <div class="step"><div class="step-t">지급명령 결정과 송달</div><div class="step-d">법원이 신청을 받아들이면 채무자에게 지급명령 정본을 송달한다. 이때부터 <b>2주</b>가 흐른다.</div></div>
+    </div>
+
+    <div class="warnbox">
+      <div class="wt">주소가 틀리면 처음부터 다시</div>
+      <p>채무자 주소가 달라 송달이 안 되면 주소보정을 요구받고, 끝내 송달이 안 되면 신청이 각하되거나 소송으로 바꿔야 한다. <strong>주민등록 초본으로 최신 주소</strong>를 확인한 뒤 신청하는 편이 안전하다.</p>
+    </div>
+
+    <h2 class="sec">3. 인지대와 송달료 — 소송과 얼마나 다른가</h2>
+
+    <p>소송 인지액은 소송목적의 값(소가)에 따라 정해진다. 1,000만 원 미만은 소가의 0.5%, 1,000만 원 이상 1억 원 미만은 0.45%에 5,000원을 더한 값, 1억 원 이상 10억 원 미만은 0.4%에 5만 5,000원을 더한 값이다. 지급명령은 이 금액의 <strong>10분의 1</strong>만 낸다. 아래는 이 계산식으로 환산한 예시이며, 실제 납부액은 전자소송 화면의 자동 계산값을 따른다.</p>
+
+    <table class="rate">
+      <tr><th>청구금액</th><th>소송 인지액</th><th>지급명령 인지대</th></tr>
+      <tr><td>500만 원</td><td>2만 5,000원</td><td class="up">2,500원</td></tr>
+      <tr><td>3,000만 원</td><td>14만 원</td><td class="up">1만 4,000원</td></tr>
+      <tr><td>1억 원</td><td>45만 5,000원</td><td class="up">4만 5,500원</td></tr>
+    </table>
+    <p class="note">민사소송 등 인지법 계산식으로 환산한 참고값. 인지액은 100원 미만을 버려 계산한다.</p>
+
+    <div class="infographic-section">
+      <h3>청구금액 3,000만 원 기준 — 소송 대 지급명령 인지액</h3>
+      <div class="bar-chart">
+        <div class="bar-item"><div class="bar-label"><span>소송 인지액</span><span class="val">14만 원</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:100%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>지급명령 인지대</span><span class="val">1만 4,000원</span></div><div class="bar-track"><div class="bar-fill bar-amber" style="width:10%"></div></div></div>
+      </div>
+      <p class="note">막대 길이는 소송 인지액을 100으로 환산한 비율이다.</p>
+    </div>
+
+    <h2 class="sec">4. 채무자가 이의하면 — 2주와 소송 이행</h2>
+
+    <p>핵심은 <b>정본 송달일로부터 2주</b>다. 채무자는 이 기간 안에 이의신청서를 내면 된다. 이유를 길게 쓸 필요도 없다. 이의가 적법하게 들어오면 지급명령은 <strong>이의한 범위에서 효력을 잃고</strong>, 채권자가 지급명령을 신청한 때에 소가 제기된 것으로 본다. 이후는 통상의 소송 절차(청구액에 따라 소액사건 또는 일반 민사)로 진행된다.</p>
+
+    <div class="flow">
+      <div class="flow-box"><div class="ft">① 신청</div><div class="fd">채권자가 서면·전자소송으로 신청, 인지대 10분의 1 납부</div></div>
+      <div class="flow-box"><div class="ft">② 지급명령</div><div class="fd">법원이 서면 심사 후 발령, 채무자에게 정본 송달</div></div>
+      <div class="flow-box"><div class="ft">③ 2주</div><div class="fd">이의 없으면 확정, 이의 있으면 소송으로 이행</div></div>
+      <div class="flow-box"><div class="ft">④ 집행</div><div class="fd">확정증명 후 채권압류·강제경매 등 별도 신청</div></div>
+    </div>
+
+    <p>소송으로 넘어가면 채권자는 법원 보정 명령에 따라 <b>소장 인지액과 이미 낸 지급명령 인지대의 차액</b>을 추가로 내야 한다. 결국 인지대 절약은 이의가 없을 때만 온전히 얻는 이익이다. 채무자가 일부 금액만 이의하는 것도 가능한데, 이 경우 <strong>다투지 않은 나머지는 확정</strong>될 수 있으므로 이의 범위를 정확히 써야 한다.</p>
+
+    <h2 class="sec">5. 확정 이후 — 돈을 받으려면 집행이 따로 필요하다</h2>
+
+    <p>이의 없이 2주가 지나면 지급명령은 확정되고 <b>확정판결과 같은 효력</b>을 갖는다. 2주가 지난 뒤 채무자가 "송달받은 줄 몰랐다"고 주장해도 원칙적으로 되돌리기 어렵다. 다만 이것은 서류상 권리를 확인받은 단계일 뿐이다.</p>
+
+    <ul class="plain">
+      <li><strong>확정증명 발급</strong> — 법원에 확정증명원을 내어 확정 사실을 증명받는다.</li>
+      <li><strong>재산 파악</strong> — 채무자의 급여·예금·부동산 등을 알아야 한다. 재산을 모르면 재산명시·재산조회 신청을 검토한다.</li>
+      <li><strong>강제집행 신청</strong> — 채권압류 및 추심(전부)명령, 부동산 강제경매 등을 별도로 신청한다. 이 단계에도 비용이 든다.</li>
+    </ul>
+
+    <p>또 하나 알아 둘 점은 지급명령이 확정되더라도 <b>채무자에게 재산이 없으면 받을 수 없다</b>는 현실이다. 신청 전에 채무자의 변제 능력을 가늠해 보는 것이 비용 대비 효과를 따지는 첫 단계다.</p>
+
+    <h2 class="sec">6. 이면 — 독촉사건이 이렇게 많은데도 안 풀리는 이유</h2>
+
+    <p>법원행정처가 발간한 2025 사법연감 요약에 따르면 2024년 전국 법원에 접수된 민사사건은 <strong>470만 9,506건</strong>이었고, 이 중 독촉사건이 <strong>25.8%</strong>를 차지했다. 단순 계산으로 약 121만 건 수준으로 짐작되지만, 이는 기사 비율을 곱한 추정치다. 정확한 건수와 이의율은 사법연감 원문에서 확인해야 한다.</p>
+
+    <div class="case">
+      <div class="ct">실무에서 자주 막히는 지점</div>
+      <p>① <b>주소 불명</b> — 공시송달이 필요하면 지급명령을 쓸 수 없다. ② <b>다툼이 큰 채권</b> — 채무자가 처음부터 다툴 것으로 예상되면 이의 한 번에 소송이 되므로 처음부터 소송이 낫다. ③ <b>청구 원인 부족</b> — 증빙이 약하면 보정 명령이 오고 시간이 길어진다.</p>
+    </div>
+
+    <h2 class="sec">7. 나에게 미치는 영향 — 신청 전 체크리스트</h2>
+
+    <ul class="plain">
+      <li><strong>채권이 금전인가.</strong> 인도·등기 청구는 지급명령으로 못 받는다.</li>
+      <li><strong>채무자 주소를 아는가.</strong> 공시송달이면 불가능하다.</li>
+      <li><strong>채무자가 다툴 가능성은.</strong> 다툴 것 같으면 인지대 차액을 감안해 소송을 바로 택할 수 있다.</li>
+      <li><strong>채무자가 지급명령을 받았다면.</strong> 송달받은 날을 기록하고 2주 안에 이의 여부를 정한다. 방치하면 확정된다.</li>
+      <li><strong>확정 후 집행 비용과 채무자 재산</strong>까지 함께 따져 본다.</li>
+    </ul>
+
+    <h2 class="sec">8. 전망과 행동 제안</h2>
+
+    <p>전자소송이 보편화되면서 지급명령은 변호사 없이도 낼 수 있는 절차가 됐다. 반면 신청이 쉬워진 만큼 채무자 입장에서는 <b>모르는 사이 확정되는 사례</b>도 늘 수 있다. 우편물을 제때 확인하지 못했다가 2주를 넘기는 경우가 대표적이다.</p>
+
+    <p>정리하면 채권자는 <b>① 금전 채권과 송달 가능한 주소를 확인하고 ② 전자소송으로 신청해 인지대를 아낀 뒤 ③ 이의가 오면 소송 전환 비용을 감수</b>하고, 이의가 없으면 확정증명과 강제집행으로 이어 가는 순서를 밟으면 된다. 채무자는 법원 우편을 받는 즉시 날짜를 기록해야 한다.</p>
+
+
+    <div class="hashtag-wrap"><span class="hashtag">#지급명령</span><span class="hashtag">#독촉절차</span><span class="hashtag">#지급명령신청방법</span><span class="hashtag">#인지대</span><span class="hashtag">#이의신청</span><span class="hashtag">#전자소송</span><span class="hashtag">#강제집행</span><span class="hashtag">#집행권원</span></div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://ecfs.scourt.go.kr" target="_blank" rel="noopener">대법원 전자소송포털 — 서류제출 &gt; 민사서류 &gt; 지급명령(독촉)신청</a>
+      <a href="https://www.lawtimes.co.kr/news/211755" target="_blank" rel="noopener">법률신문 — 법원행정처 발간 2025 사법연감 주요 내용 (2024년 민사 470만 9,506건, 독촉사건 25.8%)</a>
+      <a href="https://www.lawtalk.co.kr/posts/44967" target="_blank" rel="noopener">로톡 — 나홀로소송하기: 지급명령신청 이의신청</a>
+      <a href="https://korea.legal/wiki/%ec%a7%80%ea%b8%89%eb%aa%85%eb%a0%b9%ec%97%90-%eb%8c%80%ed%95%9c-%ec%9d%b4%ec%9d%98%ec%8b%a0%ec%b2%ad-%ec%a0%88%ec%b0%a8/" target="_blank" rel="noopener">korea.legal — 지급명령에 대한 이의신청 절차</a>
+      <a href="https://www.law.go.kr" target="_blank" rel="noopener">국가법령정보센터 — 민사소송법 제462조 이하(독촉절차), 민사소송 등 인지법</a>
+    </div>
+
+    <p class="disclaimer">※ 본 아티클은 민사소송법, 법원 안내와 언론·법률 자료를 정리한 정보성 콘텐츠이며 법률 자문이 아닙니다. 인지대·송달료 금액과 기한은 개정될 수 있고 사건마다 달라지므로, 신청 전 대법원 전자소송포털과 관할 법원 안내로 확인하시기 바랍니다.</p>
+
+  </div>
+<!-- HUB:RELATED:BEGIN -->
+<style>
+.hub-bc{font-size:13px;color:#5b6672;margin:0 0 18px;font-family:'Noto Sans KR',sans-serif}
+.hub-bc a{color:#5b6672;text-decoration:none}.hub-bc a:hover{text-decoration:underline}
+.hub-rel{margin:38px 0 6px;padding:20px 22px;border:1px solid #e3e8ee;border-radius:10px;
+  background:#fafbfc;font-family:'Noto Sans KR',sans-serif}
+.hub-rel h2{font-size:15px;margin:0 0 14px;font-weight:700;color:#12202e;
+  font-family:'Noto Sans KR',sans-serif;border:0;padding:0}
+.hub-rel ul{list-style:none;padding:0;margin:0}
+.hub-rel li{padding:7px 0;font-size:14.5px;line-height:1.55}
+.hub-rel li a{color:#12202e;text-decoration:none}
+.hub-rel li a:hover{color:#1a5f8a;text-decoration:underline}
+.hub-rel .hub-more{margin:14px 0 0;font-size:13.5px}
+.hub-rel .hub-more a{color:#1a5f8a;text-decoration:none;font-weight:700}
+</style>
+<aside class="hub-rel">
+  <h2>같은 분야 다른 글 — 법률·행정</h2>
+  <ul>
+    <li><a href="/2026-08-14-공소시효-계산법">공소시효 계산법 — 죄목별 기간과 정지·폐지 기준 정리</a></li>
+    <li><a href="/2026-08-22-약식명령-정식재판-청구방법">약식명령 정식재판 청구 방법 — 7일 기간과 벌금 인상 가능 여부 정리</a></li>
+    <li><a href="/2026-08-31-기소유예-전과-기록-여부">기소유예 뜻 — 불기소 처분 종류와 전과 기록 남는지 여부</a></li>
+    <li><a href="/2026-08-15-모바일-주민등록증-발급방법">모바일 주민등록증 발급방법 — 신청 절차와 사용처, 재발급 기준 정리</a></li>
+    <li><a href="/2026-10-01-개인정보-분쟁조정-신청방법">개인정보 분쟁조정 신청방법 — 집단분쟁조정 참여 절차와 조정 효력</a></li>
+    <li><a href="/2026-10-04-국민참여재판-절차-의사확인서-평결효력">국민참여재판 절차 — 7일 의사확인서와 배제결정 사유, 평결 효력</a></li>
+    <li><a href="/2026-10-09-보이스피싱-피해금-환급-순서-지급정지-기한">보이스피싱 피해금 환급 순서 — 지급정지 요청 후 서류 제출 기한 확인</a></li>
+  </ul>
+  <p class="hub-more"><a href="/law/">법률·행정 전체 보기 →</a></p>
+</aside>
+<!-- HUB:RELATED:END -->
+</article>
+</body>
+</html>
