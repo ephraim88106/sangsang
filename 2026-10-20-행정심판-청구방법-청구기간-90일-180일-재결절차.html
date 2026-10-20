@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>행정심판 청구방법 — 청구기간 90일·180일 계산과 재결 60일, 집행정지와 비용 | 정치·사법</title>
+  <meta name="description" content="행정심판은 행정청의 처분이 위법·부당할 때 법원 소송 전에 비용 없이 다투는 절차다. 처분이 있음을 안 날부터 90일, 처분이 있은 날부터 180일 안에 심판청구서를 내야 하고, 위원회는 청구서를 받은 날부터 60일 안에 재결한다. 청구만으로 처분 효력은 멈추지 않아 집행정지를 따로 신청해야 한다.">
+  <meta name="keywords" content="행정심판 청구방법, 행정심판 청구기간, 행정심판 90일, 행정심판 180일, 행정심판 재결기간, 행정심판 집행정지, 행정심판 비용, 의무이행심판, 취소심판">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f2f4f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #311b92 0%, #4527a0 45%, #5e35b1 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #d1c4e9; color: #311b92; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #ede7f6; border-left: 5px solid #4527a0; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #4527a0; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #311b92; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #4527a0; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #311b92; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #ede7f6; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #4527a0; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #311b92; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #f3eefb; border-left: 4px solid #9575cd; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #311b92; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f5f1fc; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #311b92; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #311b92; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #e0d7f0; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-teal { background: linear-gradient(90deg, #311b92, #9575cd); }
+    .bar-cyan { background: linear-gradient(90deg, #311b92, #b39ddb); }
+    .bar-amber { background: linear-gradient(90deg, #ef6c00, #ffb300); }
+    .bar-blue { background: linear-gradient(90deg, #311b92, #9575cd); }
+    .bar-grey { background: linear-gradient(90deg, #546e7a, #90a4ae); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #d5cbe8; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #ede7f6; color: #311b92; font-weight: 700; }
+    table.rate td.up { color: #311b92; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #ef6c00; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #4527a0; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #311b92; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #d1c4e9; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #311b92; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #d1c4e9; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #4527a0; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .formula { background: #f5f1fc; border: 1.5px dashed #9575cd; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 16.5px; font-weight: 800; color: #311b92; line-height: 1.8; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #5e35b1; margin-top: 10px; margin-bottom: 0; }
+    .warnbox { background: #fff8e1; border-left: 5px solid #f9a825; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 26px 0; }
+    .warnbox .wt { font-size: 14px; font-weight: 800; color: #ef6c00; margin-bottom: 8px; }
+    .warnbox p { font-size: 15px; color: #5d4037; margin-bottom: 0; word-break: keep-all; }
+    .case { background: #fff; border: 1.5px solid #d1c4e9; border-left: 5px solid #4527a0; border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; }
+    .case .ct { font-size: 13.5px; font-weight: 800; color: #311b92; margin-bottom: 6px; letter-spacing: 0.3px; }
+    .case p { font-size: 14.8px; margin-bottom: 8px; }
+    .case p:last-child { margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #ede7f6; color: #4527a0; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #4527a0; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<!-- SEO:AUTO BEGIN -->
+<meta property="article:published_time" content="2026-10-20T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-20T09:00:00+09:00">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "행정심판 청구방법 — 청구기간 90일·180일 계산과 재결 60일, 집행정지와 비용",
+  "description": "행정심판은 행정청의 처분이 위법·부당할 때 법원 소송 전에 비용 없이 다투는 절차다. 처분이 있음을 안 날부터 90일, 처분이 있은 날부터 180일 안에 심판청구서를 내야 하고, 위원회는 청구서를 받은 날부터 60일 안에 재결한다. 청구만으로 처분 효력은 멈추지 않아 집행정지를 따로 신청해야 한다.",
+  "url": "https://sangsang.ephseed.com/2026-10-20-%ED%96%89%EC%A0%95%EC%8B%AC%ED%8C%90-%EC%B2%AD%EA%B5%AC%EB%B0%A9%EB%B2%95-%EC%B2%AD%EA%B5%AC%EA%B8%B0%EA%B0%84-90%EC%9D%BC-180%EC%9D%BC-%EC%9E%AC%EA%B2%B0%EC%A0%88%EC%B0%A8",
+  "datePublished": "2026-10-20T09:00:00+09:00",
+  "dateModified": "2026-10-20T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-10-20-%ED%96%89%EC%A0%95%EC%8B%AC%ED%8C%90-%EC%B2%AD%EA%B5%AC%EB%B0%A9%EB%B2%95-%EC%B2%AD%EA%B5%AC%EA%B8%B0%EA%B0%84-90%EC%9D%BC-180%EC%9D%BC-%EC%9E%AC%EA%B2%B0%EC%A0%88%EC%B0%A8">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="행정심판 청구방법 — 청구기간 90일·180일 계산과 재결 60일, 집행정지와 비용 | 정치·사법">
+<meta property="og:description" content="행정심판은 행정청의 처분이 위법·부당할 때 법원 소송 전에 비용 없이 다투는 절차다. 처분이 있음을 안 날부터 90일, 처분이 있은 날부터 180일 안에 심판청구서를 내야 하고, 위원회는 청구서를 받은 날부터 60일 안에 재결한다. 청구만으로 처분 효력은 멈추지 않아 집행정지를 따로 신청해야 한다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-10-20-%ED%96%89%EC%A0%95%EC%8B%AC%ED%8C%90-%EC%B2%AD%EA%B5%AC%EB%B0%A9%EB%B2%95-%EC%B2%AD%EA%B5%AC%EA%B8%B0%EA%B0%84-90%EC%9D%BC-180%EC%9D%BC-%EC%9E%AC%EA%B2%B0%EC%A0%88%EC%B0%A8">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-10-20T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-20T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N28MJLW4W9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-N28MJLW4W9");</script>
+<!-- SEO:END -->
+</head>
+<body>
+
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-EVlth33UH8CTDu2u"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-KMCr4AoIjIDsi9XA"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-qqfX36xk8gz6faM6"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+<article class="article-wrap">
+<!-- HUB:BREADCRUMB:BEGIN -->
+<nav class="hub-bc"><a href="/">생생 정보통</a> &rsaquo; <a href="/law/">법률·행정</a></nav>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "생생 정보통", "item": "https://sangsang.ephseed.com/"}, {"@type": "ListItem", "position": 2, "name": "법률·행정", "item": "https://sangsang.ephseed.com/law/"}]}</script>
+<!-- HUB:BREADCRUMB:END -->
+  <header class="hero">
+    <div class="category-badge">🏛️ 정치 · 사법</div>
+    <h1>행정심판 청구방법 —<br>청구기간 90일·180일 계산과 재결 60일, 집행정지와 비용</h1>
+    <p class="hero-sub">운전면허 정지, 영업정지, 각종 신청 거부처럼 행정청 결정이 부당하다고 느껴도 곧바로 소송을 낼 필요는 없다. <b>수수료 없이 서면으로 다투는 행정심판</b>은 기간만 지키면 된다. 이 기간이 가장 자주 무너지는 지점이다.</p>
+    <div class="hero-meta">
+      <span>🏛️ 정치 · 사법</span>
+      <span>📅 2026년 10월 20일</span>
+      <span>⏱️ 약 8분</span>
+    </div>
+  </header>
+  <div class="body-content">
+    <div class="summary-box">
+      <h2>핵심 요약</h2>
+      <ul>
+        <li>행정심판은 <strong>행정청의 처분이나 부작위</strong>가 위법·부당할 때 행정기관 소속 위원회가 심리해 바로잡는 절차다. 법원 소송이 아니라 <b>행정 내부의 권리구제 제도</b>다.</li>
+        <li>청구기간은 처분이 있음을 <strong>안 날부터 90일</strong>, 처분이 <strong>있은 날부터 180일</strong>이다. 둘 중 하나라도 넘기면 정당한 사유가 없는 한 각하된다.</li>
+        <li>위원회는 청구서를 받은 날부터 <strong>60일 안에 재결</strong>해야 하고, 부득이하면 30일 범위에서 한 번 연장할 수 있다.</li>
+        <li>청구한다고 처분 효력이 멈추지 않는다. 영업정지처럼 급한 처분은 <strong>집행정지를 함께 신청</strong>해야 한다.</li>
+      </ul>
+    </div>
+
+    <h2 class="sec">1. 행정심판이란 — 소송 전에 비용 없이 다투는 길</h2>
+    <p>행정청이 내린 결정에 불만이 있을 때 쓸 수 있는 길은 크게 둘이다. 하나는 법원에 내는 <strong>행정소송</strong>, 다른 하나는 행정심판위원회에 내는 <strong>행정심판</strong>이다. 행정심판은 행정심판법이 정한 절차로, 소송보다 서류가 간단하고 <b>청구 수수료가 따로 없다</b>. 변호사 없이 본인이 청구서를 쓰는 사람도 많다.</p>
+    <p>또 하나의 차이는 심리 범위다. 법원은 처분이 <b>위법한지</b>만 따지지만, 행정심판은 위법뿐 아니라 <strong>부당한지</strong>도 본다. 법적으로 하자는 없어도 사정에 비해 지나치게 무겁다면 처분을 줄여 달라고 다툴 여지가 있다.</p>
+    <div class="pullquote">행정심판에서 이기고 지는 것보다 먼저 결정되는 것이 있다. 기간 안에 냈는가다. 본안 판단은 그다음 문제다.</div>
+
+    <h2 class="sec">2. 어떤 처분에 쓰는가 — 심판의 세 가지 종류</h2>
+    <table class="rate">
+      <tr><th>종류</th><th>쓰는 경우</th><th>예시</th></tr>
+      <tr><td class="up">취소심판</td><td>이미 내려진 위법·부당한 처분을 취소하거나 변경해 달라고 할 때</td><td>음주운전 면허취소, 영업정지 처분</td></tr>
+      <tr><td class="up">무효등확인심판</td><td>처분이 무효이거나 존재하지 않음을 확인받고 싶을 때</td><td>중대하고 명백한 하자가 있는 처분</td></tr>
+      <tr><td class="up">의무이행심판</td><td>신청을 거부하거나 방치한 행정청에 일정한 처분을 하라고 요구할 때</td><td>인허가 신청 거부, 급여 신청 무응답</td></tr>
+    </table>
+    <p class="note">행정심판법의 심판 종류를 정리한 것이다. 사건마다 맞는 심판 유형이 달라질 수 있다.</p>
+    <p>실무에서는 취소심판이 가장 많다. 다만 <b>거부처분이나 아무 응답이 없는 부작위</b>에는 의무이행심판을 써야 하고, 이 경우 청구기간 규정이 일부 다르게 적용된다. 행정청이 신청에 응답하지 않는 부작위 상태라면 처분이 없으므로 90일·180일 제한이 없다. 반대로 <strong>거부처분을 받았다면</strong> 그 통지를 받은 날이 시작점이다.</p>
+
+    <h2 class="sec">3. 청구기간 90일과 180일 — 어디서부터 세는가</h2>
+    <p>행정심판법 제27조는 청구기간을 이중으로 정한다. 처분이 있음을 <strong>알게 된 날부터 90일</strong>, 알았는지와 상관없이 처분이 <strong>있었던 날부터 180일</strong>이다. 두 기간은 따로 흐르고 먼저 끝나는 쪽이 기준이 된다.</p>
+    <div class="formula">
+      <div class="f-main">청구 마감 = (안 날 + 90일) 과 (있은 날 + 180일) 중 빠른 날</div>
+      <p class="f-note">천재지변 등 불가항력으로 못 냈다면 그 사유가 끝난 날부터 14일 안에 청구할 수 있다.</p>
+    </div>
+    <div class="case">
+      <div class="ct">계산 예시 — 영업정지 통지를 늦게 받은 경우</div>
+      <p>처분일이 3월 1일, 우편으로 알게 된 날이 3월 10일이라면 90일 기준 마감은 6월 8일이다. 180일 기준은 8월 28일이다. 이때는 <b>6월 8일</b>이 실질 마감이다.</p>
+      <p>반대로 처분은 있었는데 통지를 아주 늦게 받아 알게 된 날이 처분 후 150일째라면, 90일 기준으로는 240일째가 되지만 180일 기준이 먼저 닥친다. 이 경우 <strong>처분일로부터 180일</strong>이 한계다. 다만 천재지변, 전쟁, 사변 등 불가항력이 아닌 <b>정당한 사유</b>가 있으면 180일이 지나도 청구할 수 있는 예외가 법에 있다.</p>
+    </div>
+    <div class="warnbox">
+      <div class="wt">기간의 끝은 "제출한 날"이다</div>
+      <p>기간은 <strong>도달한 날이 아니라 청구서를 제출한 날</strong>을 기준으로 따진다. 처분을 한 행정청이나 위원회 가운데 어느 쪽에 내도 기간 안에 낸 것으로 본다. 마감이 임박했다면 행정청에 먼저 접수해 접수증을 받아 두는 편이 안전하다.</p>
+    </div>
+
+    <h2 class="sec">4. 청구 절차 — 누구에게, 무엇을 내는가</h2>
+    <div class="steps">
+      <div class="step"><div class="step-t">처분서와 기한 확인</div><div class="step-d">처분서에는 <b>행정심판을 청구할 수 있는지, 청구기간과 제출 기관</b>을 알려야 한다(고지제도). 처분서를 받은 날이 바로 안 날이 되므로 받은 날짜를 기록해 둔다.</div></div>
+      <div class="step"><div class="step-t">심판청구서 작성</div><div class="step-d">청구인 이름과 주소, 피청구인(처분한 행정청), 처분의 내용, 청구 취지와 이유를 적는다. 처분서 사본을 첨부한다. 서식은 위원회 누리집과 온라인행정심판 포털에서 받을 수 있다.</div></div>
+      <div class="step"><div class="step-t">제출</div><div class="step-d">처분을 한 행정청 또는 해당 <b>행정심판위원회</b>에 낸다. 온라인으로도 제출할 수 있다. 행정청에 냈다면 그 행정청이 청구서를 위원회로 보낸다.</div></div>
+      <div class="step"><div class="step-t">답변서와 보충서면</div><div class="step-d">피청구인은 청구서를 받으면 <b>답변서</b>를 내야 하고, 청구인은 그 내용을 보고 보충서면을 낼 수 있다. 증거서류는 이때 보강한다.</div></div>
+      <div class="step"><div class="step-t">심리와 재결</div><div class="step-d">위원회가 서면 심리를 하고, 필요하면 구술심리를 연다. 결론은 <b>재결서</b>로 알려 준다. 재결의 기한은 청구서 접수일부터 60일이다.</div></div>
+    </div>
+
+    <div class="infographic-section">
+      <h3>재결 기한 — 접수부터 결정까지 법정 일수</h3>
+      <div class="bar-chart">
+        <div class="bar-item"><div class="bar-label"><span>원칙 재결 기한</span><span class="val">60일</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:66.7%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>연장 시 최대 (30일 연장)</span><span class="val">90일</span></div><div class="bar-track"><div class="bar-fill bar-amber" style="width:100%"></div></div></div>
+      </div>
+      <p class="note">막대 길이는 연장 시 최대 기한 90일을 100으로 환산한 비율이다. 연장은 위원회 직권으로 한 번만 가능하다.</p>
+    </div>
+
+    <h2 class="sec">5. 집행정지 — 청구해도 처분은 멈추지 않는다</h2>
+    <p>가장 오해가 많은 대목이다. 행정심판법 제30조는 심판청구가 <strong>처분의 효력이나 집행에 영향을 주지 않는다</strong>고 정한다. 영업정지 30일 처분을 받고 행정심판을 청구했더라도, 아무 조치를 하지 않으면 심판 결과가 나오기 전에 정지 기간이 지나갈 수 있다.</p>
+    <p>이를 막는 장치가 <b>집행정지</b>다. 처분이나 그 집행으로 생길 <strong>중대한 손해를 예방해야 할 긴급한 필요</strong>가 인정되면 위원회가 처분의 효력을 멈추게 한다. 다만 공공복리에 중대한 영향을 줄 우려가 있으면 허용되지 않는다. 신청은 심판청구와 함께 하거나 위원회 의결 전까지 서면으로 할 수 있다.</p>
+    <ul class="plain">
+      <li><strong>신청 시점</strong> — 청구서와 같이 내는 것이 가장 안전하다.</li>
+      <li><strong>소명 대상</strong> — 처분을 그대로 집행하면 어떤 손해가 생기는지, 왜 나중에 금전으로 회복하기 어려운지를 구체적으로 쓴다.</li>
+      <li><strong>한계</strong> — 이미 집행이 끝난 처분은 멈출 대상이 없다.</li>
+    </ul>
+
+    <h2 class="sec">6. 재결 결과와 그다음 — 인용·기각·각하, 그리고 행정소송</h2>
+    <table class="rate">
+      <tr><th>결과</th><th>의미</th><th>이후</th></tr>
+      <tr><td class="up">인용</td><td>청구가 이유 있어 처분을 취소·변경하거나 이행을 명함</td><td>처분청은 재결 취지에 따라야 함(기속력)</td></tr>
+      <tr><td class="down">기각</td><td>본안 판단 결과 청구에 이유가 없음</td><td>원처분은 유지, 행정소송으로 다툴 수 있음</td></tr>
+      <tr><td class="new">각하</td><td>기간 도과 등 요건을 갖추지 못해 본안 판단을 하지 않음</td><td>기간 문제라면 사실상 구제 곤란</td></tr>
+    </table>
+    <p>인용 재결이 나오면 행정청은 재결 내용에 맞게 처분을 바꿔야 한다. 특히 <b>거부처분이 취소된 경우</b> 행정청은 신청에 대해 다시 처분을 해야 한다. 기각이나 각하로 끝났다면 행정소송으로 넘어갈 수 있다. 이때 소송 제기 기간은 <strong>재결서 정본을 송달받은 날부터 90일</strong>이다.</p>
+    <p>행정심판을 거쳐야만 소송이 가능한 경우도 있다. 대표적으로 <b>운전면허 정지·취소 같은 도로교통법상 처분</b>은 행정심판 재결을 거친 뒤에만 소송을 낼 수 있다. 반면 대부분의 처분은 행정심판을 건너뛰고 바로 소송을 내도 된다. 어느 쪽인지는 처분서 안내와 해당 법률을 확인해야 한다.</p>
+
+    <h2 class="sec">7. 이면 — 기간을 넘겨서 각하되는 사례, 그리고 인용률의 변화</h2>
+    <p>처분서를 받고도 대응을 미루다가 90일을 넘겨 각하되는 사건이 적지 않다. 처분의 의미를 몰라서 시기를 놓치는 경우가 대부분이어서, <strong>처분서를 받은 날 달력에 마감일을 적어 두는 일</strong>이 가장 효과적인 대비다.</p>
+    <p>국민권익위원회 중앙행정심판위원회의 2025년 상반기 일반 사건 인용률은 <strong>27.4%</strong>로, 전년 같은 기간 15.7%보다 11.7%포인트 올랐다고 보도됐다. 같은 기간 접수된 본안·집행정지 사건은 9,504건이었다. 다만 인용률은 각하 포함 여부와 사건 유형에 따라 집계 방식이 달라 단순 비교에는 주의가 필요하다. 재결이 60일을 넘긴 사건도 2024년 14.3%(2,775건)로 보도돼, 법정 기한이 항상 지켜지는 것은 아니다.</p>
+    <div class="infographic-section">
+      <h3>중앙행정심판위원회 일반 사건 인용률 (상반기)</h3>
+      <div class="bar-chart">
+        <div class="bar-item"><div class="bar-label"><span>2024년 상반기</span><span class="val">15.7%</span></div><div class="bar-track"><div class="bar-fill bar-grey" style="width:57.3%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>2025년 상반기</span><span class="val">27.4%</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:100%"></div></div></div>
+      </div>
+      <p class="note">막대 길이는 27.4%를 100으로 환산한 비율이다. 출처 보도의 일반 사건 기준 수치다.</p>
+    </div>
+
+    <h2 class="sec">8. 나에게 미치는 영향 — 청구 전 체크리스트</h2>
+    <ul class="plain">
+      <li><strong>처분서를 받은 날을 기록했는가.</strong> 그날이 90일의 시작점이다.</li>
+      <li><strong>마감일을 두 가지로 계산했는가.</strong> 90일과 180일 중 빠른 쪽이 기준이다.</li>
+      <li><strong>급한 처분인가.</strong> 영업정지나 퇴거처럼 곧 집행되는 처분은 집행정지를 함께 신청한다.</li>
+      <li><strong>소송이 우선 절차인가.</strong> 면허 처분 등은 행정심판 후에만 소송이 가능하다.</li>
+      <li><strong>증거는 충분한가.</strong> 처분서, 통지서, 소명자료를 사본으로 모아 둔다.</li>
+    </ul>
+
+    <h2 class="sec">9. 전망과 행동 제안</h2>
+    <p>인용률이 오르는 흐름이라면 행정심판은 비용 대비 효과가 큰 선택지다. 반면 기간 요건은 엄격하다. 정리하면 <b>① 처분서를 받은 날 마감일 계산 ② 청구서와 집행정지 신청을 한 번에 제출 ③ 재결 결과에 따라 90일 안에 소송 여부 결정</b>의 순서로 움직이면 된다. 기간이 불확실하다면 일단 제출해 두는 것이 낫다.</p>
+
+    <div class="hashtag-wrap"><span class="hashtag">#행정심판</span><span class="hashtag">#행정심판청구방법</span><span class="hashtag">#청구기간</span><span class="hashtag">#집행정지</span><span class="hashtag">#재결</span><span class="hashtag">#의무이행심판</span><span class="hashtag">#취소심판</span><span class="hashtag">#중앙행정심판위원회</span></div>
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://korea.legal/wiki/%ed%96%89%ec%a0%95%ec%8b%ac%ed%8c%90%eb%b2%95-%ec%a0%9c27%ec%a1%b0/" target="_blank" rel="noopener">korea.legal — 행정심판법 제27조(심판청구의 기간)</a>
+      <a href="https://korea.legal/wiki/%ed%96%89%ec%a0%95%ec%8b%ac%ed%8c%90%eb%b2%95-%ec%a0%9c30%ec%a1%b0/" target="_blank" rel="noopener">korea.legal — 행정심판법 제30조(집행정지)</a>
+      <a href="https://www.guri.go.kr/www/contents.do?key=273" target="_blank" rel="noopener">구리시 — 행정심판 안내(재결 기간 60일)</a>
+      <a href="https://easylaw.go.kr/CSP/OnhunqueansLstPopRetrieve.laf?csmSeq=763" target="_blank" rel="noopener">찾기쉬운 생활법령정보 — 행정심판 100문100답</a>
+      <a href="https://www.imaeil.com/page/view/2026052914175099073" target="_blank" rel="noopener">매일신문 — 중앙행정심판위원회 2025년 상반기 인용률 27.4%</a>
+      <a href="https://www.law.go.kr" target="_blank" rel="noopener">국가법령정보센터 — 행정심판법, 행정소송법</a>
+    </div>
+    <p class="disclaimer">※ 본 아티클은 행정심판법과 공개 안내 자료, 언론 보도를 정리한 정보성 콘텐츠이며 법률 자문이 아닙니다. 기간과 절차는 개별 법령과 사건에 따라 달라질 수 있으므로, 청구 전 처분서의 고지 내용과 중앙행정심판위원회·관할 위원회 안내를 확인하시기 바랍니다.</p>
+  </div>
+<!-- HUB:RELATED:BEGIN -->
+<style>
+.hub-bc{font-size:13px;color:#5b6672;margin:0 0 18px;font-family:'Noto Sans KR',sans-serif}
+.hub-bc a{color:#5b6672;text-decoration:none}.hub-bc a:hover{text-decoration:underline}
+.hub-rel{margin:38px 0 6px;padding:20px 22px;border:1px solid #e3e8ee;border-radius:10px;
+  background:#fafbfc;font-family:'Noto Sans KR',sans-serif}
+.hub-rel h2{font-size:15px;margin:0 0 14px;font-weight:700;color:#12202e;
+  font-family:'Noto Sans KR',sans-serif;border:0;padding:0}
+.hub-rel ul{list-style:none;padding:0;margin:0}
+.hub-rel li{padding:7px 0;font-size:14.5px;line-height:1.55}
+.hub-rel li a{color:#12202e;text-decoration:none}
+.hub-rel li a:hover{color:#1a5f8a;text-decoration:underline}
+.hub-rel .hub-more{margin:14px 0 0;font-size:13.5px}
+.hub-rel .hub-more a{color:#1a5f8a;text-decoration:none;font-weight:700}
+</style>
+<aside class="hub-rel">
+  <h2>같은 분야 다른 글 — 법률·행정</h2>
+  <ul>
+    <li><a href="/2026-08-14-공소시효-계산법">공소시효 계산법 — 죄목별 기간과 정지·폐지 기준 정리</a></li>
+    <li><a href="/2026-08-22-약식명령-정식재판-청구방법">약식명령 정식재판 청구 방법 — 7일 기간과 벌금 인상 가능 여부 정리</a></li>
+    <li><a href="/2026-08-31-기소유예-전과-기록-여부">기소유예 뜻 — 불기소 처분 종류와 전과 기록 남는지 여부</a></li>
+    <li><a href="/2026-08-15-모바일-주민등록증-발급방법">모바일 주민등록증 발급방법 — 신청 절차와 사용처, 재발급 기준 정리</a></li>
+    <li><a href="/2026-10-01-개인정보-분쟁조정-신청방법">개인정보 분쟁조정 신청방법 — 집단분쟁조정 참여 절차와 조정 효력</a></li>
+    <li><a href="/2026-10-04-국민참여재판-절차-의사확인서-평결효력">국민참여재판 절차 — 7일 의사확인서와 배제결정 사유, 평결 효력</a></li>
+    <li><a href="/2026-10-09-보이스피싱-피해금-환급-순서-지급정지-기한">보이스피싱 피해금 환급 순서 — 지급정지 요청 후 서류 제출 기한 확인</a></li>
+    <li><a href="/2026-10-12-지급명령-신청방법-인지대-이의신청-2주">지급명령 신청방법 — 인지대·송달료 계산과 이의신청 2주, 확정 후 강제집행 순서</a></li>
+    <li><a href="/2026-10-16-중고거래-사기-신고방법-고소-배상명령-순서">중고거래 사기 신고방법 — 지급정지 안 되는 이유와 고소·배상명령 순서</a></li>
+  </ul>
+  <p class="hub-more"><a href="/law/">법률·행정 전체 보기 →</a></p>
+</aside>
+<!-- HUB:RELATED:END -->
+</article>
+</body>
+</html>
