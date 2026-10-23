@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스미싱 문자 클릭 대처방법 — 악성앱 삭제·118 신고·소액결제 차단 순서 | 기술·플랫폼</title>
+  <meta name="description" content="스미싱 문자의 링크를 눌렀다면 설치된 악성앱(apk) 삭제, 118 상담센터와 182 사이버범죄 신고, 통신사 114 소액결제 차단, PASS 앱 결제내역 확인 순서로 대응한다. 클릭 직후 할 일, 피해가 났을 때 증빙과 구제 경로, 환불 사칭 2차 사기까지 정리했다.">
+  <meta name="keywords" content="스미싱 문자 클릭, 스미싱 대처방법, 스미싱 신고방법, 118 신고, 악성앱 삭제, 소액결제 차단, 스미싱 소액결제 환불, 문자 링크 클릭">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f2f4f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #4527a0 0%, #5e35b1 45%, #7e57c2 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #d1c4e9; color: #4527a0; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #ede7f6; border-left: 5px solid #5e35b1; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #5e35b1; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #4527a0; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #5e35b1; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #4527a0; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #ede7f6; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #5e35b1; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #4527a0; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #f5f1fb; border-left: 4px solid #9575cd; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #4527a0; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f5f1fb; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #4527a0; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #4527a0; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #e1d8f1; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-teal { background: linear-gradient(90deg, #4527a0, #9575cd); }
+    .bar-cyan { background: linear-gradient(90deg, #4527a0, #b39ddb); }
+    .bar-amber { background: linear-gradient(90deg, #ef6c00, #ffb300); }
+    .bar-blue { background: linear-gradient(90deg, #4527a0, #9575cd); }
+    .bar-grey { background: linear-gradient(90deg, #546e7a, #90a4ae); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #d9cfee; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #ede7f6; color: #4527a0; font-weight: 700; }
+    table.rate td.up { color: #4527a0; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #ef6c00; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #5e35b1; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #4527a0; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #d1c4e9; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #4527a0; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #d1c4e9; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #5e35b1; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .formula { background: #f5f1fb; border: 1.5px dashed #9575cd; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 16.5px; font-weight: 800; color: #4527a0; line-height: 1.8; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #7e57c2; margin-top: 10px; margin-bottom: 0; }
+    .warnbox { background: #fff8e1; border-left: 5px solid #f9a825; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 26px 0; }
+    .warnbox .wt { font-size: 14px; font-weight: 800; color: #ef6c00; margin-bottom: 8px; }
+    .warnbox p { font-size: 15px; color: #5d4037; margin-bottom: 0; word-break: keep-all; }
+    .case { background: #fff; border: 1.5px solid #d1c4e9; border-left: 5px solid #5e35b1; border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; }
+    .case .ct { font-size: 13.5px; font-weight: 800; color: #4527a0; margin-bottom: 6px; letter-spacing: 0.3px; }
+    .case p { font-size: 14.8px; margin-bottom: 8px; }
+    .case p:last-child { margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #ede7f6; color: #5e35b1; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #5e35b1; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+
+<meta property="article:published_time" content="2026-10-23T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-23T09:00:00+09:00">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "스미싱 문자 클릭 대처방법 — 악성앱 삭제·118 신고·소액결제 차단 순서",
+  "description": "스미싱 문자의 링크를 눌렀다면 설치된 악성앱(apk) 삭제, 118 상담센터와 182 사이버범죄 신고, 통신사 114 소액결제 차단, PASS 앱 결제내역 확인 순서로 대응한다. 클릭 직후 할 일, 피해가 났을 때 증빙과 구제 경로, 환불 사칭 2차 사기까지 정리했다.",
+  "url": "https://sangsang.ephseed.com/2026-10-23-%EC%8A%A4%EB%AF%B8%EC%8B%B1-%EB%AC%B8%EC%9E%90-%ED%81%B4%EB%A6%AD-%EB%8C%80%EC%B2%98%EB%B0%A9%EB%B2%95-%EC%95%85%EC%84%B1%EC%95%B1-%EC%82%AD%EC%A0%9C-118-%EC%8B%A0%EA%B3%A0-%EC%86%8C%EC%95%A1%EA%B2%B0%EC%A0%9C-%EC%B0%A8%EB%8B%A8",
+  "datePublished": "2026-10-23T09:00:00+09:00",
+  "dateModified": "2026-10-23T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-10-23-%EC%8A%A4%EB%AF%B8%EC%8B%B1-%EB%AC%B8%EC%9E%90-%ED%81%B4%EB%A6%AD-%EB%8C%80%EC%B2%98%EB%B0%A9%EB%B2%95-%EC%95%85%EC%84%B1%EC%95%B1-%EC%82%AD%EC%A0%9C-118-%EC%8B%A0%EA%B3%A0-%EC%86%8C%EC%95%A1%EA%B2%B0%EC%A0%9C-%EC%B0%A8%EB%8B%A8">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="스미싱 문자 클릭 대처방법 — 악성앱 삭제·118 신고·소액결제 차단 순서 | 기술·플랫폼">
+<meta property="og:description" content="스미싱 문자의 링크를 눌렀다면 설치된 악성앱(apk) 삭제, 118 상담센터와 182 사이버범죄 신고, 통신사 114 소액결제 차단, PASS 앱 결제내역 확인 순서로 대응한다. 클릭 직후 할 일, 피해가 났을 때 증빙과 구제 경로, 환불 사칭 2차 사기까지 정리했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-10-23-%EC%8A%A4%EB%AF%B8%EC%8B%B1-%EB%AC%B8%EC%9E%90-%ED%81%B4%EB%A6%AD-%EB%8C%80%EC%B2%98%EB%B0%A9%EB%B2%95-%EC%95%85%EC%84%B1%EC%95%B1-%EC%82%AD%EC%A0%9C-118-%EC%8B%A0%EA%B3%A0-%EC%86%8C%EC%95%A1%EA%B2%B0%EC%A0%9C-%EC%B0%A8%EB%8B%A8">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-10-23T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-23T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N28MJLW4W9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-N28MJLW4W9");</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-EVlth33UH8CTDu2u"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-KMCr4AoIjIDsi9XA"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-qqfX36xk8gz6faM6"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+<article class="article-wrap">
+<!-- HUB:BREADCRUMB:BEGIN -->
+<nav class="hub-bc"><a href="/">생생 정보통</a> &rsaquo; <a href="/life/">통신·생활지원</a></nav>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "생생 정보통", "item": "https://sangsang.ephseed.com/"}, {"@type": "ListItem", "position": 2, "name": "통신·생활지원", "item": "https://sangsang.ephseed.com/life/"}]}</script>
+<!-- HUB:BREADCRUMB:END -->
+  <header class="hero">
+    <div class="category-badge">📱 기술 · 플랫폼</div>
+    <h1>스미싱 문자 클릭 대처방법 —<br>악성앱 삭제·118 신고·소액결제 차단 순서</h1>
+    <p class="hero-sub">링크를 눌렀다고 곧바로 돈이 빠져나가는 것은 아니다. 다만 <b>악성앱(apk)이 깔렸는지 확인하고, 118과 182에 신고하고, 통신사에 소액결제를 막는 순서</b>를 놓치면 피해가 이어진다. 클릭한 직후부터 피해가 났을 때까지 해야 할 일을 단계별로 정리했다.</p>
+    <div class="hero-meta">
+      <span>📱 기술 · 플랫폼</span>
+      <span>📅 2026년 10월 23일</span>
+      <span>⏱️ 약 9분</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+
+    <div class="summary-box">
+      <h2>핵심 요약</h2>
+      <ul>
+        <li>문자 속 링크를 눌렀다면 <b>먼저 비행기 모드나 와이파이 차단으로 통신을 끊고</b>, 다운로드 폴더에서 확장자 apk 파일을 찾아 지운다. 지워지지 않으면 서비스센터를 가거나 초기화한다.</li>
+        <li>신고는 <b>한국인터넷진흥원 118 상담센터(24시간 무료)</b>와 <b>경찰청 사이버범죄 신고시스템(182)</b>, 결제 차단은 <b>통신사 고객센터(114)</b>다.</li>
+        <li>돈이 이미 나갔다면 통신사·결제대행사에 피해 사실을 알리고, 문자 캡처와 결제 내역으로 증빙을 모은 뒤 경찰에 신고한다. <b>"환불해 준다"는 문자는 2차 사기</b>다.</li>
+      </ul>
+    </div>
+
+    <p>스미싱(smishing)은 문자메시지(SMS)와 피싱(phishing)을 합친 말이다. 택배 배송 안내, 청첩장·부고장, 정부 지원금 안내처럼 보이는 문자에 인터넷 주소(URL)를 넣어 눌러 보게 만든 뒤, 휴대전화에 악성 프로그램을 설치하거나 개인정보를 빼 가는 수법이다. 문제는 "눌렀는데 어떡하지"라는 순간에 무엇부터 해야 하는지 알려 주는 정리가 드물다는 점이다. 이 글은 그 순서를 공식 기관 안내를 기준으로 풀어 쓴다.</p>
+
+    <h2 class="sec">스미싱 문자 링크를 눌렀을 때 일어나는 일</h2>
+    <p>한국인터넷진흥원(KISA)과 생활법령정보 안내를 종합하면, 안드로이드 휴대전화에서는 링크를 누르는 것만으로 악성앱이 자동으로 내려받아지는 경우가 있다. 아이폰은 구조상 외부 앱 설치가 막혀 있어 같은 방식의 감염 가능성이 낮지만, 가짜 로그인 화면에 아이디·비밀번호·인증번호를 입력하게 만드는 피싱 페이지는 기기 종류와 관계없이 작동한다.</p>
+    <p>그래서 대응은 두 갈래로 나뉜다. <strong>① 링크만 누르고 아무것도 설치·입력하지 않은 경우</strong>와 <strong>② 앱이 설치됐거나 인증번호·개인정보를 입력한 경우</strong>다. ①이면 문자 삭제와 신고로 끝나는 일이 많고, ②면 아래 순서를 끝까지 밟아야 한다.</p>
+
+    <div class="infographic-section">
+      <h3>대응 흐름 — 클릭 이후 4단계</h3>
+      <div class="flow">
+        <div class="flow-box"><div class="ft">1단계 · 즉시</div><div class="fd">통신 끊기(비행기 모드), 문자는 삭제하되 캡처는 먼저 저장</div></div>
+        <div class="flow-box"><div class="ft">2단계 · 점검</div><div class="fd">다운로드 폴더의 apk 파일 확인·삭제, 안 지워지면 서비스센터·초기화</div></div>
+        <div class="flow-box"><div class="ft">3단계 · 차단·신고</div><div class="fd">114로 소액결제 차단, 118·182에 신고</div></div>
+        <div class="flow-box"><div class="ft">4단계 · 피해 확인</div><div class="fd">PASS 앱 결제내역, 통신사 청구내역, 금융 앱 거래 확인</div></div>
+      </div>
+    </div>
+
+    <h2 class="sec">클릭 직후 해야 할 일 — 순서대로</h2>
+    <div class="steps">
+      <div class="step"><div class="step-t">통신을 먼저 끊는다</div><div class="step-d">악성앱이 설치됐다면 외부 서버와 통신하며 인증번호 문자를 가로채려 한다. 비행기 모드를 켜거나 모바일 데이터와 와이파이를 꺼서 통신을 막는다. 이 상태에서 아래 점검을 이어 간다.</div></div>
+      <div class="step"><div class="step-t">문자는 캡처한 뒤 삭제한다</div><div class="step-d">나중에 신고와 피해 구제에 증빙이 되므로 문자 내용과 발신번호, 수신 시각이 보이게 화면을 캡처해 둔다. 그다음 문자를 삭제해 실수로 다시 누르는 일을 막는다.</div></div>
+      <div class="step"><div class="step-t">다운로드 폴더에서 apk 파일을 찾는다</div><div class="step-d">KISA 안내 기준으로 '내 파일' 또는 '다운로드' 앱에서 <b>문자를 누른 시점 이후에 생성된 확장자 apk 파일</b>이 있는지 본다. 있으면 설치하지 말고 삭제한다. 이미 설치됐다면 설정의 앱 목록에서 처음 보는 앱이나 이름이 없는 앱을 삭제한다.</div></div>
+      <div class="step"><div class="step-t">삭제가 안 되면 서비스센터나 초기화</div><div class="step-d">악성파일이 지워지지 않거나 기기 관리자 권한을 잡고 버티면 휴대전화 서비스센터를 방문하거나 스마트폰을 초기화해야 한다. 초기화 전에 사진·연락처 등은 클라우드가 아닌 믿을 수 있는 방법으로 백업하되, 백업본에 악성 파일이 딸려 가지 않도록 앱 데이터는 제외한다.</div></div>
+      <div class="step"><div class="step-t">다른 기기에서 비밀번호를 바꾼다</div><div class="step-d">감염이 의심되는 휴대전화가 아니라 <b>PC나 가족의 기기</b>에서 포털·금융·간편결제 앱 비밀번호를 바꾼다. 인증번호를 입력했거나 개인정보를 적었다면 필수다.</div></div>
+    </div>
+
+    <h2 class="sec">신고는 어디에 — 118, 182, 114의 역할</h2>
+    <p>세 번호는 하는 일이 다르다. 겹쳐서 신고해도 문제 없지만, 어느 번호가 무엇을 해 주는지 알아 두면 헤매지 않는다.</p>
+    <table class="rate">
+      <tr><th>창구</th><th>하는 일</th><th>언제</th></tr>
+      <tr><td class="up">118 (KISA 상담센터)</td><td>의심 문자 신고·상담, 악성앱 감염 점검 안내. 24시간 무료. 신고가 쌓이면 발신번호·URL 차단에 쓰인다</td><td>클릭 직후, 피해 유무와 무관</td></tr>
+      <tr><td class="up">182 (경찰청 사이버범죄 신고시스템)</td><td>범죄 신고와 수사 접수. 인터넷 신고시스템(ECRM)으로 온라인 접수 가능</td><td>돈이 빠져나갔거나 개인정보가 유출된 때</td></tr>
+      <tr><td class="up">114 (통신사 고객센터)</td><td>휴대폰 소액결제 차단·한도 조정, 청구 내역 확인, 피해 사실 접수</td><td>클릭 직후 예방 차원, 피해 발생 시 즉시</td></tr>
+    </table>
+    <p>피해가 없어도 118에 신고하는 것이 좋다. 같은 번호·주소로 들어오는 신고가 쌓이면 해당 번호가 차단되어 다른 사람의 피해를 막는다는 것이 KISA의 설명이다. 방송통신위원회는 의심 문자를 카카오톡 '보호나라' 채널에 붙여넣어 진위를 물어볼 수 있다고 안내한다.</p>
+
+    <h2 class="sec">소액결제 차단 — 일반 차단과 원천차단의 차이</h2>
+    <p>스미싱 피해의 상당수는 휴대폰 소액결제로 나타난다. 악성앱이 인증번호 문자를 가로채 게임 아이템·상품권 결제를 승인하는 방식이다. 그래서 결제 기능 자체를 막는 것이 가장 확실한 예방이다.</p>
+    <ul class="plain">
+      <li><strong>일반 차단·한도 조정</strong> — 통신사 앱이나 114, 또는 PASS 앱에서 설정하고, 필요할 때 풀 수 있다. 다만 풀기 쉽다는 것은 해제 절차가 가벼워졌다는 뜻이기도 하다.</li>
+      <li><strong>원천차단</strong> — 한 번 신청하면 소액결제 기능을 영구적으로 정지하고 PASS 앱에서도 해제가 안 된다. 2025년 보도에 따르면 통신사마다 정책이 달라 SK텔레콤·LG유플러스는 신청이 가능했지만 KT는 피해자 등 특별한 경우가 아니면 어려웠고, 알뜰폰은 불가능한 곳도 있었다. <b>현재 정책은 바뀌었을 수 있으니 가입한 통신사에 직접 확인해야 한다.</b></li>
+      <li><strong>결제 내역 확인</strong> — KISA는 PASS 앱 전체 메뉴의 '휴대폰결제' 기능으로 결제 내역을 확인하라고 안내한다. 통신요금 청구서의 '소액결제' 항목과 문자로 온 결제 승인 알림도 같이 본다.</li>
+    </ul>
+
+    <div class="warnbox">
+      <div class="wt">⚠ 이 신호가 있으면 이미 승인된 것일 수 있다</div>
+      <p>내가 요청하지 않은 인증번호 문자가 왔거나, 결제 승인·완료 문자가 도착했거나, 문자 수신함에서 내가 지우지 않은 문자가 사라졌다면 악성앱이 가로채고 있을 가능성이 있다. 이때는 확인보다 <b>차단과 통신 끊기가 먼저</b>다.</p>
+    </div>
+
+    <h2 class="sec">돈이 빠져나갔다면 — 증빙과 구제 경로</h2>
+    <p>방송통신위원회는 피해 사실이 확인되면 이동통신사나 결제대행사 등에 피해를 알리고, 필요하면 결제 내역 등 증빙자료를 확보해 관할 경찰서에 신고하라고 당부한다. 생활법령정보는 경찰청 사이버범죄 신고시스템(182)에 신고하고 통신사 고객센터(114)에 소액결제 차단을 신청하는 순서를 안내한다.</p>
+    <div class="steps">
+      <div class="step"><div class="step-t">통신사·결제대행사에 피해 접수</div><div class="step-d">결제가 일어난 업체(결제대행사)와 통신사 양쪽에 알린다. 결제 승인 문자의 가맹점명, 금액, 시각을 같이 전달해야 처리가 빠르다.</div></div>
+      <div class="step"><div class="step-t">증빙을 모은다</div><div class="step-d">스미싱 문자 캡처, 결제 내역(PASS 앱·청구서), 악성앱 설치 화면, 통신사의 소액결제 확인서 등을 모은다. 서류 명칭과 발급 방법은 기관마다 다를 수 있으니 접수할 때 필요한 서류를 먼저 물어본다.</div></div>
+      <div class="step"><div class="step-t">경찰에 신고하고 사건 확인 서류를 받는다</div><div class="step-d">경찰서 방문 또는 사이버범죄 신고시스템으로 접수한다. 접수 후 받는 사건사고 사실 확인서 등은 통신사·금융회사의 구제 절차에서 쓰일 수 있다.</div></div>
+      <div class="step"><div class="step-t">금융 앱·계좌도 확인한다</div><div class="step-d">인증번호나 계좌정보를 입력했다면 은행·카드사에도 피해를 알리고 지급정지를 요청한다. 계좌에서 돈이 빠져나간 경우의 환급 절차는 <a href="/2026-10-09-보이스피싱-피해금-환급-순서-지급정지-기한">보이스피싱 피해금 환급 순서</a>와 같은 틀을 따른다.</div></div>
+    </div>
+
+    <div class="case">
+      <div class="ct">사례 — 택배 문자를 눌렀지만 앱 설치 화면은 닫은 경우</div>
+      <p>"배송지 확인" 문자의 링크를 누르자 앱 설치를 요구하는 화면이 떴고 바로 닫았다. 이 경우 설치가 완료되지 않았을 가능성이 높지만, 확실히 하려면 ① 비행기 모드 ② 다운로드 폴더 apk 확인 ③ 114로 소액결제 차단 ④ 118 신고 순으로 해 두는 편이 안전하다. 10분이면 끝나고, 확인 후 문제가 없으면 차단은 해제해도 된다.</p>
+    </div>
+
+    <h2 class="sec">"환불해 드립니다"는 2차 스미싱이다</h2>
+    <p>피해가 알려지면 그 사건을 이용한 문자가 뒤따른다. 방송통신위원회는 소액결제 피해 사고와 관련해 취소·환불·피해보상을 가장한 악성 불법스팸이 유포될 수 있다고 경고했다. KISA는 결제대행사나 분쟁조정기관을 사칭해 승인번호를 입력·제공하게 하는 수법을 주의하라고 당부한다.</p>
+    <div class="pullquote">환불·보상 안내를 문자 링크로 받았다면 그 문자가 다시 스미싱이다. 환불은 통신사 고객센터에 직접 전화하거나 공식 앱으로 확인한다.</div>
+    <p>정부 안내 문자도 마찬가지다. 정부 정책뉴스는 소비쿠폰 등 지원금 안내 문자에 URL이 포함되어 있다면 사기로 보라고 밝혔다. 공식 안내 문자에는 인터넷 주소가 들어가지 않는다는 것이 기준이다. "지원금 신청", "건강검진 결과", "과태료 고지" 같은 문자의 링크는 누르지 않는다.</p>
+
+    <div class="infographic-section">
+      <h3>KISA 집계 스미싱 탐지 건수 (보도 인용)</h3>
+      <div class="bar-chart">
+        <div class="bar-item"><div class="bar-label"><span>2022년</span><span class="val">약 3.7만 건</span></div><div class="bar-track"><div class="bar-fill bar-grey" style="width:2%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>2023년</span><span class="val">약 50.3만 건</span></div><div class="bar-track"><div class="bar-fill bar-amber" style="width:23%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>2024년</span><span class="val">약 219.6만 건</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:100%">2년 만에 약 59배</div></div></div>
+      </div>
+      <p class="note">※ 2022~2024년 KISA 집계로 보도된 수치. 이후 연도의 스미싱 단독 집계는 확인하지 못했으며, 일부 보도는 피해액이 2024년 546억 원에서 2025년 328억 원으로 줄었다고 전한다. 보도 수치는 공식 통계와 다를 수 있다.</p>
+    </div>
+
+    <h2 class="sec">미리 막는 설정 — 5분이면 끝나는 것들</h2>
+    <ul class="plain">
+      <li><b>출처 불명 앱 설치 허용 끄기</b> — 안드로이드 설정에서 '알 수 없는 앱 설치'를 허용한 앱(브라우저·메신저)이 없도록 한다.</li>
+      <li><b>소액결제를 쓰지 않으면 차단</b> — 통신사 앱이나 114에서 신청한다. 쓸 일이 없다면 원천차단 가능 여부를 통신사에 물어본다.</li>
+      <li><b>스팸 차단·문자 필터 켜기</b> — 통신사 스팸 차단 서비스와 휴대폰 기본 안심 기능(백신·피싱 URL 차단)을 켜 둔다.</li>
+      <li><b>지인 사칭 문자 의심</b> — 청첩장·부고장은 지인 주소록을 이용해 퍼지는 경우가 있어 신고 건수에 비해 위험이 크다는 분석이 있다. 링크를 누르기 전에 전화로 확인한다.</li>
+      <li><b>명의도용 점검</b> — 개인정보가 유출됐다면 <a href="/2026-08-30-휴대폰-명의도용-확인방법">휴대폰 명의도용 확인 방법</a>에서 내 명의로 개통된 회선을 조회한다.</li>
+    </ul>
+
+    <h2 class="sec">정리 — 클릭한 날 해야 할 체크리스트</h2>
+    <div class="impact-grid">
+      <div class="impact-card"><span class="impact-num">118</span><span class="impact-label">의심 문자·악성앱 상담<br>(24시간 무료)</span></div>
+      <div class="impact-card"><span class="impact-num">182</span><span class="impact-label">경찰 사이버범죄 신고<br>(피해·유출 시)</span></div>
+      <div class="impact-card"><span class="impact-num">114</span><span class="impact-label">통신사 소액결제 차단<br>·피해 접수</span></div>
+    </div>
+    <ul class="plain">
+      <li>통신 끊기 → 문자 캡처 후 삭제 → apk 파일·낯선 앱 삭제</li>
+      <li>다른 기기에서 비밀번호 변경 → 118 신고</li>
+      <li>114로 소액결제 차단 → PASS 앱·청구서로 결제내역 확인</li>
+      <li>피해가 있으면 통신사·결제대행사 접수 → 증빙 확보 → 182 또는 경찰서 신고</li>
+      <li>"환불·보상" 문자는 누르지 않기</li>
+    </ul>
+    <p>스미싱은 의심을 늦게 할수록 피해가 커지고, 클릭 직후 10분의 대응이 피해 규모를 가른다. 이미 눌렀다고 자책할 필요는 없다. 위 순서대로 점검하고 신고해 두면 대부분 상황을 수습할 수 있다.</p>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#스미싱</span><span class="hashtag">#스미싱대처방법</span><span class="hashtag">#118신고</span><span class="hashtag">#악성앱삭제</span><span class="hashtag">#소액결제차단</span><span class="hashtag">#문자링크클릭</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://www.korea.kr/news/policyNewsView.do?newsId=148945781" target="_blank" rel="noopener">정책브리핑 — 소비쿠폰 문자에 URL 링크 있다면 100% 사기, 118 신고</a>
+      <a href="https://www.kisa.or.kr/402/form?postSeq=2540&amp;page=1" target="_blank" rel="noopener">한국인터넷진흥원(KISA) — URL 포함 문자 관련 안내</a>
+      <a href="https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&amp;csmSeq=1592&amp;ccfNo=2&amp;cciNo=2&amp;cnpClsNo=2&amp;menuType=cnpcls" target="_blank" rel="noopener">생활법령정보 — 스미싱 대처방안</a>
+      <a href="https://www.boho.or.kr/kr/bbs/view.do?searchCnd=&amp;bbsId=B0000133&amp;searchWrd=&amp;menuNo=205021&amp;pageIndex=1&amp;categoryCode=&amp;nttId=71862" target="_blank" rel="noopener">KISA 보호나라 — 소액결제 피해 등 사회적 이슈를 악용한 스미싱 주의</a>
+      <a href="https://v.daum.net/v/20250911102226552" target="_blank" rel="noopener">팩트체크 — 휴대전화 소액결제 피해 예방법(한도조정·원천차단)</a>
+      <a href="https://www.giprism.com/news/articleView.html?idxno=10924" target="_blank" rel="noopener">시사프리즘 — 스미싱, 2년 만에 60배 폭증</a>
+    </div>
+
+    <p class="disclaimer">※ 본 아티클은 공개 자료를 정리한 정보성 콘텐츠이며 법률·금융 상담이 아니다. 신고 창구, 통신사별 차단 정책과 구제 절차는 바뀔 수 있으므로 실제 대응 전 118 상담센터와 가입 통신사, 경찰에서 최신 내용을 확인하라. 통계 수치는 언론 보도 인용이며 공식 집계와 다를 수 있다.</p>
+
+  </div>
+<!-- HUB:RELATED:BEGIN -->
+<style>
+.hub-bc{font-size:13px;color:#5b6672;margin:0 0 18px;font-family:'Noto Sans KR',sans-serif}
+.hub-bc a{color:#5b6672;text-decoration:none}.hub-bc a:hover{text-decoration:underline}
+.hub-rel{margin:38px 0 6px;padding:20px 22px;border:1px solid #e3e8ee;border-radius:10px;
+  background:#fafbfc;font-family:'Noto Sans KR',sans-serif}
+.hub-rel h2{font-size:15px;margin:0 0 14px;font-weight:700;color:#12202e;
+  font-family:'Noto Sans KR',sans-serif;border:0;padding:0}
+.hub-rel ul{list-style:none;padding:0;margin:0}
+.hub-rel li{padding:7px 0;font-size:14.5px;line-height:1.55}
+.hub-rel li a{color:#12202e;text-decoration:none}
+.hub-rel li a:hover{color:#1a5f8a;text-decoration:underline}
+.hub-rel .hub-more{margin:14px 0 0;font-size:13.5px}
+.hub-rel .hub-more a{color:#1a5f8a;text-decoration:none;font-weight:700}
+</style>
+<aside class="hub-rel">
+  <h2>같은 분야 다른 글 — 통신·생활지원</h2>
+  <ul>
+    <li><a href="/2026-08-23-휴대폰-위약금-계산법">휴대폰 위약금 계산법 — 선택약정 할인반환금과 공시지원금 반환금 차이</a></li>
+    <li><a href="/2026-08-30-휴대폰-명의도용-확인방법">휴대폰 명의도용 확인방법 — 가입사실현황조회와 가입제한 신청 절차</a></li>
+    <li><a href="/2026-08-11-탄소중립포인트-신청방법">탄소중립포인트 신청방법 — 지급 대상과 적립 기준, 예산 소진 문제 정리</a></li>
+    <li><a href="/2026-08-28-조기폐차-지원금-신청방법">조기폐차 지원금 신청방법 — 배출가스 5등급 차량 조회와 상한액 산정</a></li>
+    <li><a href="/2026-10-03-배출권거래제-뜻-유상할당-비율">배출권거래제 뜻 — 유상할당 비율과 배출권 가격, 전기요금 영향</a></li>
+    <li><a href="/2026-10-11-전기차-보조금-신청방법-전환지원금-조건">전기차 보조금 신청방법 — 국비 상한과 가격 구간, 전환지원금 조건</a></li>
+    <li><a href="/2026-10-19-에너지바우처-대상-자격-지원금액-사용기한">에너지바우처 대상 자격 — 세대원 수별 지원금액과 사용기한 언제까지</a></li>
+  </ul>
+  <p class="hub-more"><a href="/life/">통신·생활지원 전체 보기 →</a></p>
+</aside>
+<!-- HUB:RELATED:END -->
+</article>
+</body>
+</html>
