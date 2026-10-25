@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>폐가전 무상수거 품목 종류 — 냉장고 1대·소형가전 5개 조건과 수거 불가 확인 | 환경·기후</title>
+  <meta name="description" content="폐가전 무상수거는 1599-0903 전화나 배출예약 누리집으로 신청하면 집 앞까지 와서 수수료 없이 가져가는 제도다. 냉장고·세탁기·에어컨 같은 대형가전은 1대부터, 소형가전은 5개 이상 모아야 한다는 안내가 일반적이다. 품목, 예약 순서, 수거 불가 목록을 정리했다.">
+  <meta name="keywords" content="폐가전 무상수거, 폐가전 무상방문수거, 폐가전 무료 수거, 냉장고 무료 수거, 소형가전 5개, 1599-0903, 폐가전 수거 불가 품목, 에어컨 철거">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f2f4f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 45%, #00897b 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #c8e6c9; color: #1b5e20; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #e8f5e9; border-left: 5px solid #2e7d32; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #2e7d32; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #1b5e20; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #2e7d32; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #1b5e20; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #e8f5e9; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #2e7d32; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #1b5e20; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #f1f8f2; border-left: 4px solid #43a047; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #1b5e20; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f3faf4; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #1b5e20; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #1b5e20; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #d5e8d7; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-blue { background: linear-gradient(90deg, #1b5e20, #66bb6a); }
+    .bar-teal { background: linear-gradient(90deg, #004d40, #00897b); }
+    .bar-amber { background: linear-gradient(90deg, #e65100, #f9a825); }
+    .bar-red { background: linear-gradient(90deg, #b71c1c, #e53935); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #cfe3d1; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #e8f5e9; color: #1b5e20; font-weight: 700; }
+    table.rate td.up { color: #1b5e20; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #00695c; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #2e7d32; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #1b5e20; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #c8e6c9; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #1b5e20; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #c8e6c9; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #2e7d32; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .formula { background: #f6fbf6; border: 1.5px dashed #43a047; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 16.5px; font-weight: 800; color: #1b5e20; line-height: 1.8; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #43a047; margin-top: 10px; margin-bottom: 0; }
+    .warnbox { background: #fff8e1; border-left: 5px solid #f9a825; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 26px 0; }
+    .warnbox .wt { font-size: 14px; font-weight: 800; color: #e65100; margin-bottom: 8px; }
+    .warnbox p { font-size: 15px; color: #5d4037; margin-bottom: 0; word-break: keep-all; }
+    .case { background: #fff; border: 1.5px solid #c8e6c9; border-left: 5px solid #2e7d32; border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; }
+    .case .ct { font-size: 13.5px; font-weight: 800; color: #1b5e20; margin-bottom: 6px; letter-spacing: 0.3px; }
+    .case p { font-size: 14.8px; margin-bottom: 8px; }
+    .case p:last-child { margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #e8f5e9; color: #2e7d32; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #2e7d32; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<!-- SEO:AUTO BEGIN -->
+<meta property="article:published_time" content="2026-10-25T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-25T09:00:00+09:00">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "폐가전 무상수거 품목 종류 — 냉장고 1대·소형가전 5개 조건과 수거 불가 확인",
+  "description": "폐가전 무상수거는 1599-0903 전화나 배출예약 누리집으로 신청하면 집 앞까지 와서 수수료 없이 가져가는 제도다. 냉장고·세탁기·에어컨 같은 대형가전은 1대부터, 소형가전은 5개 이상 모아야 한다는 안내가 일반적이다. 품목, 예약 순서, 수거 불가 목록을 정리했다.",
+  "url": "https://sangsang.ephseed.com/2026-10-25-%ED%8F%90%EA%B0%80%EC%A0%84-%EB%AC%B4%EC%83%81%EC%88%98%EA%B1%B0-%ED%92%88%EB%AA%A9-%EC%A2%85%EB%A5%98-%EB%83%89%EC%9E%A5%EA%B3%A0-%EC%86%8C%ED%98%95%EA%B0%80%EC%A0%84-5%EA%B0%9C-%EC%A1%B0%EA%B1%B4-%EC%88%98%EA%B1%B0%EB%B6%88%EA%B0%80-%ED%99%95%EC%9D%B8",
+  "datePublished": "2026-10-25T09:00:00+09:00",
+  "dateModified": "2026-10-25T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-10-25-%ED%8F%90%EA%B0%80%EC%A0%84-%EB%AC%B4%EC%83%81%EC%88%98%EA%B1%B0-%ED%92%88%EB%AA%A9-%EC%A2%85%EB%A5%98-%EB%83%89%EC%9E%A5%EA%B3%A0-%EC%86%8C%ED%98%95%EA%B0%80%EC%A0%84-5%EA%B0%9C-%EC%A1%B0%EA%B1%B4-%EC%88%98%EA%B1%B0%EB%B6%88%EA%B0%80-%ED%99%95%EC%9D%B8">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="폐가전 무상수거 품목 종류 — 냉장고 1대·소형가전 5개 조건과 수거 불가 확인 | 환경·기후">
+<meta property="og:description" content="폐가전 무상수거는 1599-0903 전화나 배출예약 누리집으로 신청하면 집 앞까지 와서 수수료 없이 가져가는 제도다. 냉장고·세탁기·에어컨 같은 대형가전은 1대부터, 소형가전은 5개 이상 모아야 한다는 안내가 일반적이다. 품목, 예약 순서, 수거 불가 목록을 정리했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-10-25-%ED%8F%90%EA%B0%80%EC%A0%84-%EB%AC%B4%EC%83%81%EC%88%98%EA%B1%B0-%ED%92%88%EB%AA%A9-%EC%A2%85%EB%A5%98-%EB%83%89%EC%9E%A5%EA%B3%A0-%EC%86%8C%ED%98%95%EA%B0%80%EC%A0%84-5%EA%B0%9C-%EC%A1%B0%EA%B1%B4-%EC%88%98%EA%B1%B0%EB%B6%88%EA%B0%80-%ED%99%95%EC%9D%B8">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-10-25T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-25T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N28MJLW4W9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-N28MJLW4W9");</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-EVlth33UH8CTDu2u"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-KMCr4AoIjIDsi9XA"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-qqfX36xk8gz6faM6"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+<article class="article-wrap">
+<!-- HUB:BREADCRUMB:BEGIN -->
+<nav class="hub-bc"><a href="/">생생 정보통</a> &rsaquo; <a href="/life/">통신·생활지원</a></nav>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "생생 정보통", "item": "https://sangsang.ephseed.com/"}, {"@type": "ListItem", "position": 2, "name": "통신·생활지원", "item": "https://sangsang.ephseed.com/life/"}]}</script>
+<!-- HUB:BREADCRUMB:END -->
+  <header class="hero">
+    <div class="category-badge">🌱 환경 · 기후</div>
+    <h1>폐가전 무상수거 품목 종류 —<br>냉장고 1대·소형가전 5개 조건과 수거 불가 확인</h1>
+    <p class="hero-sub">냉장고나 세탁기를 바꿀 때 구청 대형폐기물 스티커를 사거나 업체를 부르기 전에 확인할 것이 있다. 전화 한 통으로 <b>수수료 없이 집 앞까지 와서 가져가는 제도</b>가 있기 때문이다. 다만 모든 가전이 해당되는 것은 아니어서, 품목과 수량 기준을 먼저 알아야 헛걸음이 없다.</p>
+    <div class="hero-meta"><span>🌱 환경 · 기후</span><span>📅 2026년 10월 25일</span><span>⏱️ 약 8분</span></div>
+  </header>
+
+  <div class="body-content">
+
+    <div class="summary-box">
+      <h2>핵심 요약</h2>
+      <ul>
+        <li><strong>신청</strong>은 1599-0903 콜센터 전화 또는 폐가전제품 배출예약 누리집(15990903.or.kr)에서 한다. 수거 수수료는 없다.</li>
+        <li><strong>대형가전</strong>(냉장고·세탁기·에어컨·TV 등)은 1대부터 신청되고, <strong>소형가전</strong>은 단독이면 5개 이상 모아야 한다는 안내가 일반적이다. 대형가전과 함께 내놓으면 소형가전은 1개도 가능하다는 안내가 있다.</li>
+        <li><strong>수거 불가</strong>는 장롱 같은 폐가구, 전기장판, 피아노 등 악기, 원형이 훼손된 제품이다. 설치형 에어컨은 미리 철거해 둬야 한다.</li>
+        <li><strong>수거까지</strong> 걸리는 기간은 지역마다 다르다. 강남구는 영업일 기준 7일 이상으로 안내한다.</li>
+      </ul>
+    </div>
+
+    <h2 class="sec">1. 폐가전 무상수거는 어떤 제도인가</h2>
+    <p>폐가전 무상수거는 흔히 <b>폐가전 무상방문수거</b>라고 부른다. 전기·전자제품 제조사와 수입사가 쓰고 난 제품의 회수·재활용 책임을 지는 생산자책임재활용(EPR) 제도 안에서 운영된다. 소비자는 돈을 내지 않고, 회수 비용은 생산자 쪽이 부담하는 구조다. 운영 창구는 e순환거버넌스(한국전자제품자원순환공제조합)가 맡고 있다.</p>
+    <p>핵심은 <b>"내가 직접 들고 가는" 제도가 아니라 "집 앞까지 오는" 제도</b>라는 점이다. 구청 대형폐기물은 배출 신고를 하고 수수료 스티커를 붙여 지정일에 내놓는 방식이라 가전을 버릴 때마다 비용이 든다. 반면 폐가전 무상수거는 같은 냉장고를 돈 없이 처리할 수 있어 대형가전을 바꾸는 가정이 가장 먼저 확인해야 할 경로다.</p>
+    <div class="pullquote">같은 냉장고라도 구청에 대형폐기물로 내놓으면 수수료가 붙고, 폐가전 무상수거로 신청하면 붙지 않는다. 품목이 해당되는지만 맞으면 된다.</div>
+
+    <h2 class="sec">2. 품목별 수거 기준 — 1대면 되는 것과 5개 모아야 하는 것</h2>
+    <p>가장 많이 헷갈리는 부분이 수량이다. 여러 지자체 안내와 정리 자료를 종합하면 기준은 아래와 같이 나뉜다.</p>
+    <table class="rate">
+      <tr><th>구분</th><th>예시 품목</th><th>신청 가능 수량</th></tr>
+      <tr><td class="up">대형가전</td><td>냉장고, 세탁기, 에어컨, 대형 TV·모니터</td><td class="up">1대부터</td></tr>
+      <tr><td>소형가전</td><td>선풍기, 밥솥, 전기포트, 청소기, 드라이어 등</td><td>단독이면 5개 이상</td></tr>
+      <tr><td>동반 배출</td><td>대형가전 1대 + 소형가전</td><td>소형가전 1개도 가능(안내 기준)</td></tr>
+    </table>
+    <p>광주시 안내는 "소형가전 단독 배출은 불가능하며 5개 이상 또는 대상 품목과 함께 배출할 때 방문수거가 가능하다"고 설명한다. 같은 취지로 커버링 같은 민간 안내글도 소형가전은 5개를 모으거나 대형가전과 묶어 내놓으라고 정리한다. 반면 소형가전도 1개부터 된다는 글이 일부 있는데, 이는 출처가 블로그에 한정돼 있고 안내가 서로 어긋난다. 신청 전에 콜센터에 품목과 수량을 직접 확인하는 것이 안전하다.</p>
+    <h3 class="sub">TV·모니터는 크기를 본다</h3>
+    <p>정리글에는 대형 TV·모니터를 "31인치 이상"으로 구분해 단독 수거 대상으로 적은 곳이 있다. 이 크기 기준은 공식 사이트에서 직접 확인하지 못했으므로, 작은 모니터라면 소형가전처럼 5개 기준이 적용될 수 있다고 생각하고 예약 단계에서 확인하자.</p>
+
+    <h2 class="sec">3. 신청 순서 — 예약부터 수거까지</h2>
+    <div class="steps">
+      <div class="step"><div class="step-t">품목과 수량 정리</div><div class="step-d">내놓을 가전을 모두 적는다. 대형가전이 있는지, 소형가전이 몇 개인지가 접수 가능 여부를 가른다.</div></div>
+      <div class="step"><div class="step-t">예약 접수</div><div class="step-d">1599-0903 콜센터에 전화하거나 폐가전제품 배출예약 누리집(15990903.or.kr)에서 신청한다. 주소지, 품목, 수량, 배출 위치를 입력한다.</div></div>
+      <div class="step"><div class="step-t">수거일 확인</div><div class="step-d">수거 전에 사전 안내가 온다. 집 앞 수거와 문 앞 비대면 수거 중 고를 수 있다는 후기가 있으니 접수할 때 확인한다.</div></div>
+      <div class="step"><div class="step-t">지정 장소에 내놓기</div><div class="step-d">약속한 날 정해진 위치에 내놓는다. 아파트라면 엘리베이터 사용 가능 여부와 공동현관 출입 방법을 미리 알려 두면 수거가 수월하다.</div></div>
+    </div>
+    <div class="infographic-section">
+      <h3>무상수거 신청 흐름</h3>
+      <div class="flow">
+        <div class="flow-box"><div class="ft">① 품목·수량 확인</div><div class="fd">대형 1대 / 소형 5개</div></div>
+        <div class="flow-box"><div class="ft">② 예약</div><div class="fd">1599-0903 또는 누리집</div></div>
+        <div class="flow-box"><div class="ft">③ 수거일 안내</div><div class="fd">지역별 영업일 기준 며칠 소요</div></div>
+        <div class="flow-box"><div class="ft">④ 집 앞 배출</div><div class="fd">비용 없음</div></div>
+      </div>
+      <p class="note">소요 기간은 지역과 신청 시기에 따라 다르다. 위 흐름은 지자체·민간 안내글을 종합한 것이다.</p>
+    </div>
+
+    <h2 class="sec">4. 수거 불가 품목과 에어컨 철거 — 헛걸음 막는 확인 목록</h2>
+    <p>예약했는데 수거 기사가 그냥 돌아가는 경우는 대부분 아래 항목에서 생긴다.</p>
+    <ul class="plain">
+      <li><b>설치형 에어컨</b>: 벽에 걸려 있거나 실외기가 고정된 상태로는 수거되지 않는다. 철거를 마쳐 바닥에 내려둔 상태여야 한다. 철거는 설치 업체나 전문 업체에 따로 맡겨야 할 수 있다.</li>
+      <li><b>폐가구</b>: 장롱, 책상 같은 가구는 가전이 아니므로 대상이 아니다. 이런 품목은 구청 대형폐기물로 따로 신고해야 한다.</li>
+      <li><b>전기장판·악기</b>: 전기장판과 피아노 같은 악기는 수거 대상에서 빠진다는 지자체 안내가 있다.</li>
+      <li><b>원형이 훼손된 제품</b>: 냉장고 문짝만 떼어 내놓는 경우처럼 부품만 따로 나오거나 심하게 분해된 제품은 받지 않는다.</li>
+    </ul>
+    <div class="warnbox">
+      <div class="wt">내놓기 전에 데이터부터 지운다</div>
+      <p>TV, 컴퓨터, 휴대용 기기처럼 저장 기능이 있는 제품은 개인정보가 남아 있을 수 있다. 계정 로그아웃과 초기화를 마친 뒤 내놓자. 냉장고는 안의 음식물과 선반을 비우고 물기를 닦아 두면 수거가 수월하다.</p>
+    </div>
+
+    <h2 class="sec">5. 수거량으로 본 제도 흐름</h2>
+    <p>기후에너지환경부(환경부)는 폐가전 무상 방문수거 대상 품목을 넓힌 뒤 수거량이 크게 늘었다고 밝혔다. 보도 내용에 따르면 월 수거량은 2월 4만 2,000대에서 3월 5만 9,000대로 약 40% 증가했고, 이 추세라면 연간 약 2만 3,000톤(50만 대)을 수거해 경제적 편익이 800억 원 안팎이라는 전망도 나왔다. 수리해서 다시 쓸 수 있는 제품을 재활용센터 등으로 넘기는 시범사업도 계획돼 있었다.</p>
+    <div class="infographic-section">
+      <h3>무상 방문수거 월 수거량 (만 대)</h3>
+      <div class="bar-chart">
+        <div class="bar-item"><div class="bar-label"><span>2월</span><span class="val">4.2만 대</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:71%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>3월</span><span class="val">5.9만 대</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:100%"></div></div></div>
+      </div>
+      <p class="note">막대 길이는 3월 수거량(5만 9,000대)을 100으로 놓은 비례다. 출처: 기후에너지환경부 보도자료.</p>
+    </div>
+    <p>수거량이 느는 것은 쓸 만한 구리·철·플라스틱 같은 자원이 쓰레기로 묻히지 않고 재활용 경로로 돌아간다는 뜻이다. 소비자 입장에서는 이 제도를 알면 처리 비용을 아끼고, 사회적으로는 자원 회수율이 올라가는 구조다.</p>
+
+    <h2 class="sec">6. 무상수거가 안 될 때 — 대안 경로</h2>
+    <p>소형가전이 한두 개뿐이라면 방문수거를 기다리기 어렵다. 이때는 <b>지자체가 설치한 소형 폐가전 수거함</b>(아파트 단지, 주민센터 등)을 쓰는 방법이 있다. 설치 위치는 지자체 자원순환 누리집에 안내돼 있다. 가구나 이불, 매트리스 같은 비가전 대형 물품은 구청 대형폐기물 신고(인터넷·전화·앱)로 수수료를 내고 스티커나 신청번호를 붙여 배출한다. 수수료는 지자체가 정하므로 지역마다 다르고, 허위 신고 시 수거하지 않는다는 지자체 안내도 있다.</p>
+    <div class="case">
+      <div class="ct">사례로 보는 선택</div>
+      <p><b>냉장고 1대 교체</b>: 폐가전 무상수거로 신청하면 비용이 들지 않는다. 새 제품 구입처의 회수 서비스와 겹치지 않도록, 신제품 배송 때 기존 제품을 가져가는지 먼저 판매점에 확인하자.</p>
+      <p><b>소형가전 3개 + 침대 매트리스</b>: 소형가전은 단독 5개 기준에 못 미치므로 수거함을 찾고, 매트리스는 구청 대형폐기물로 신고한다.</p>
+    </div>
+
+    <h2 class="sec">7. 정리 — 신청 전 마지막 확인</h2>
+    <ul class="plain">
+      <li>대형가전이면 1대부터, 소형가전만이라면 5개 이상 모아서 신청한다.</li>
+      <li>에어컨은 철거해 둔 상태여야 하고, 가구·전기장판·악기·훼손 제품은 대상이 아니다.</li>
+      <li>정확한 수량·품목 기준과 수거 기간은 지역과 시기에 따라 달라질 수 있으니 1599-0903에서 최종 확인한다.</li>
+      <li>저장 기능이 있는 제품은 초기화 후 내놓는다.</li>
+    </ul>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#폐가전무상수거</span><span class="hashtag">#폐가전무상방문수거</span><span class="hashtag">#냉장고무료수거</span><span class="hashtag">#소형가전5개</span><span class="hashtag">#1599-0903</span><span class="hashtag">#대형폐기물</span>
+    </div>
+
+    <div class="sources">
+      <h4>참고 자료</h4>
+      <a href="https://mcee.go.kr/home/web/board/read.do?boardId=509450&amp;boardMasterId=1" target="_blank" rel="noopener">기후에너지환경부 — 폐가전제품 무상 방문수거 품목확대…수거량 40% 증가</a>
+      <a href="https://clean.gangnam.go.kr/use/biwa/USEBIWA03000000.do" target="_blank" rel="noopener">강남구 자원순환 종합포털 — 소형폐가전 무상수거 안내</a>
+      <a href="https://www.gwangju.go.kr/envi/contentsView.do?pageId=envi240" target="_blank" rel="noopener">광주광역시 환경 — 폐가전제품 방문수거 안내</a>
+      <a href="https://www.vegannews.co.kr/news/article.html?no=390564" target="_blank" rel="noopener">비건뉴스 — 냉장고 한 대도 되나요? 폐가전 방문수거 대상과 예약</a>
+      <a href="https://blog.covering.app/free-waste-appliance-pickup-guide" target="_blank" rel="noopener">커버링 — 폐가전 무상수거 신청 방법과 대상 품목 총정리</a>
+      <a href="https://paju.go.kr/www/www_02/environment/environment_05/environment_05_01/environment_05_01_04.jsp" target="_blank" rel="noopener">파주시 — 대형폐기물 배출방법</a>
+      <a href="https://www.gongju.go.kr/clean/html/sub01/0101.html" target="_blank" rel="noopener">공주시 — 대형폐기물 배출신고 안내</a>
+    </div>
+
+    <p class="disclaimer">※ 본 아티클은 정부 보도자료와 지자체·언론·민간 안내를 정리한 정보성 콘텐츠이며 법률·행정 자문이 아닙니다. 소형가전 수량 기준, TV 크기 구분, 수거 기간은 지역과 시기에 따라 다르고 자료마다 설명이 달라 공식 확인이 필요합니다. 신청 전 e순환거버넌스(1599-0903, 15990903.or.kr)와 거주 지자체 안내를 확인하시기 바랍니다.</p>
+
+  </div>
+<!-- HUB:RELATED:BEGIN -->
+<style>
+.hub-bc{font-size:13px;color:#5b6672;margin:0 0 18px;font-family:'Noto Sans KR',sans-serif}
+.hub-bc a{color:#5b6672;text-decoration:none}.hub-bc a:hover{text-decoration:underline}
+.hub-rel{margin:38px 0 6px;padding:20px 22px;border:1px solid #e3e8ee;border-radius:10px;
+  background:#fafbfc;font-family:'Noto Sans KR',sans-serif}
+.hub-rel h2{font-size:15px;margin:0 0 14px;font-weight:700;color:#12202e;
+  font-family:'Noto Sans KR',sans-serif;border:0;padding:0}
+.hub-rel ul{list-style:none;padding:0;margin:0}
+.hub-rel li{padding:7px 0;font-size:14.5px;line-height:1.55}
+.hub-rel li a{color:#12202e;text-decoration:none}
+.hub-rel li a:hover{color:#1a5f8a;text-decoration:underline}
+.hub-rel .hub-more{margin:14px 0 0;font-size:13.5px}
+.hub-rel .hub-more a{color:#1a5f8a;text-decoration:none;font-weight:700}
+</style>
+<aside class="hub-rel">
+  <h2>같은 분야 다른 글 — 통신·생활지원</h2>
+  <ul>
+    <li><a href="/2026-08-23-휴대폰-위약금-계산법">휴대폰 위약금 계산법 — 선택약정 할인반환금과 공시지원금 반환금 차이</a></li>
+    <li><a href="/2026-08-30-휴대폰-명의도용-확인방법">휴대폰 명의도용 확인방법 — 가입사실현황조회와 가입제한 신청 절차</a></li>
+    <li><a href="/2026-08-11-탄소중립포인트-신청방법">탄소중립포인트 신청방법 — 지급 대상과 적립 기준, 예산 소진 문제 정리</a></li>
+    <li><a href="/2026-08-28-조기폐차-지원금-신청방법">조기폐차 지원금 신청방법 — 배출가스 5등급 차량 조회와 상한액 산정</a></li>
+    <li><a href="/2026-10-03-배출권거래제-뜻-유상할당-비율">배출권거래제 뜻 — 유상할당 비율과 배출권 가격, 전기요금 영향</a></li>
+    <li><a href="/2026-10-11-전기차-보조금-신청방법-전환지원금-조건">전기차 보조금 신청방법 — 국비 상한과 가격 구간, 전환지원금 조건</a></li>
+    <li><a href="/2026-10-19-에너지바우처-대상-자격-지원금액-사용기한">에너지바우처 대상 자격 — 세대원 수별 지원금액과 사용기한 언제까지</a></li>
+    <li><a href="/2026-10-23-스미싱-문자-클릭-대처방법-악성앱-삭제-118-신고-소액결제-차단">스미싱 문자 클릭 대처방법 — 악성앱 삭제·118 신고·소액결제 차단 순서</a></li>
+  </ul>
+  <p class="hub-more"><a href="/life/">통신·생활지원 전체 보기 →</a></p>
+</aside>
+<!-- HUB:RELATED:END -->
+</article>
+</body>
+</html>
