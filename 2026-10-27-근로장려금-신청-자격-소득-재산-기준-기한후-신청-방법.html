@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>근로장려금 자격 — 가구별 소득 한도·재산 한도와 지급액 차이 | 경제·금융</title>
+  <meta name="description" content="근로장려금은 가구 유형별 총소득(단독 2,200만원·홑벌이 3,200만원·맞벌이 4,400만원 미만)과 재산 2억 4천만원 미만을 모두 충족해야 받는다. 1억 7천만원 이상이면 50% 지급, 정기 신청을 놓치면 기한 후 신청으로 95%를 받는다. 제외 대상과 신청 순서를 정리했다.">
+  <meta name="keywords" content="근로장려금 신청자격, 근로장려금 소득 기준, 근로장려금 재산 기준, 근로장려금 기한 후 신청, 근로장려금 지급액, 단독 홑벌이 맞벌이, 근로장려금 반기신청, 홈택스 장려금">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f2f4f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #0d47a1 0%, #1565c0 45%, #0277bd 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #bbdefb; color: #0d47a1; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #e3f2fd; border-left: 5px solid #1565c0; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #1565c0; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #0d47a1; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #1565c0; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #0d47a1; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #e3f2fd; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #1565c0; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #0d47a1; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #f1f6fd; border-left: 4px solid #42a5f5; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #0d47a1; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f3f8fe; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #0d47a1; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #0d47a1; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #d6e4f5; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-teal { background: linear-gradient(90deg, #0d47a1, #42a5f5); }
+    .bar-cyan { background: linear-gradient(90deg, #0d47a1, #64b5f6); }
+    .bar-amber { background: linear-gradient(90deg, #ef6c00, #ffb300); }
+    .bar-blue { background: linear-gradient(90deg, #0d47a1, #42a5f5); }
+    .bar-grey { background: linear-gradient(90deg, #546e7a, #90a4ae); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #c3d5ee; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #e3f2fd; color: #0d47a1; font-weight: 700; }
+    table.rate td.up { color: #0d47a1; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #ef6c00; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #1565c0; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #0d47a1; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #bbdefb; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #0d47a1; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #bbdefb; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #1565c0; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .formula { background: #f3f8fe; border: 1.5px dashed #42a5f5; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 16.5px; font-weight: 800; color: #0d47a1; line-height: 1.8; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #0277bd; margin-top: 10px; margin-bottom: 0; }
+    .warnbox { background: #fff8e1; border-left: 5px solid #f9a825; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 26px 0; }
+    .warnbox .wt { font-size: 14px; font-weight: 800; color: #ef6c00; margin-bottom: 8px; }
+    .warnbox p { font-size: 15px; color: #5d4037; margin-bottom: 0; word-break: keep-all; }
+    .case { background: #fff; border: 1.5px solid #bbdefb; border-left: 5px solid #1565c0; border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; }
+    .case .ct { font-size: 13.5px; font-weight: 800; color: #0d47a1; margin-bottom: 6px; letter-spacing: 0.3px; }
+    .case p { font-size: 14.8px; margin-bottom: 8px; }
+    .case p:last-child { margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #e3f2fd; color: #1565c0; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #1565c0; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<!-- SEO:AUTO BEGIN -->
+<meta property="article:published_time" content="2026-10-27T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-27T09:00:00+09:00">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "근로장려금 자격 — 가구별 소득 한도·재산 한도와 지급액 차이",
+  "description": "근로장려금은 가구 유형별 총소득(단독 2,200만원·홑벌이 3,200만원·맞벌이 4,400만원 미만)과 재산 2억 4천만원 미만을 모두 충족해야 받는다. 1억 7천만원 이상이면 50% 지급, 정기 신청을 놓치면 기한 후 신청으로 95%를 받는다. 제외 대상과 신청 순서를 정리했다.",
+  "url": "https://sangsang.ephseed.com/2026-10-27-%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88-%EC%8B%A0%EC%B2%AD-%EC%9E%90%EA%B2%A9-%EC%86%8C%EB%93%9D-%EC%9E%AC%EC%82%B0-%EA%B8%B0%EC%A4%80-%EA%B8%B0%ED%95%9C%ED%9B%84-%EC%8B%A0%EC%B2%AD-%EB%B0%A9%EB%B2%95",
+  "datePublished": "2026-10-27T09:00:00+09:00",
+  "dateModified": "2026-10-27T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-10-27-%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88-%EC%8B%A0%EC%B2%AD-%EC%9E%90%EA%B2%A9-%EC%86%8C%EB%93%9D-%EC%9E%AC%EC%82%B0-%EA%B8%B0%EC%A4%80-%EA%B8%B0%ED%95%9C%ED%9B%84-%EC%8B%A0%EC%B2%AD-%EB%B0%A9%EB%B2%95">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="근로장려금 자격 — 가구별 소득 한도·재산 한도와 지급액 차이 | 경제·금융">
+<meta property="og:description" content="근로장려금은 가구 유형별 총소득(단독 2,200만원·홑벌이 3,200만원·맞벌이 4,400만원 미만)과 재산 2억 4천만원 미만을 모두 충족해야 받는다. 1억 7천만원 이상이면 50% 지급, 정기 신청을 놓치면 기한 후 신청으로 95%를 받는다. 제외 대상과 신청 순서를 정리했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-10-27-%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88-%EC%8B%A0%EC%B2%AD-%EC%9E%90%EA%B2%A9-%EC%86%8C%EB%93%9D-%EC%9E%AC%EC%82%B0-%EA%B8%B0%EC%A4%80-%EA%B8%B0%ED%95%9C%ED%9B%84-%EC%8B%A0%EC%B2%AD-%EB%B0%A9%EB%B2%95">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-10-27T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-27T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N28MJLW4W9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-N28MJLW4W9");</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-EVlth33UH8CTDu2u"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-KMCr4AoIjIDsi9XA"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-qqfX36xk8gz6faM6"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+<article class="article-wrap">
+<!-- HUB:BREADCRUMB:BEGIN -->
+<nav class="hub-bc"><a href="/">생생 정보통</a> &rsaquo; <a href="/money/">금융·대출</a></nav>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "생생 정보통", "item": "https://sangsang.ephseed.com/"}, {"@type": "ListItem", "position": 2, "name": "금융·대출", "item": "https://sangsang.ephseed.com/money/"}]}</script>
+<!-- HUB:BREADCRUMB:END -->
+  <header class="hero">
+    <div class="category-badge">💰 경제 · 금융</div>
+    <h1>근로장려금 자격 —<br>가구별 소득 한도·재산 한도와 지급액 차이</h1>
+    <p class="hero-sub">근로장려금은 <b>가구 유형별 총소득 기준과 재산 2억 4천만원 미만</b> 두 가지를 모두 넘어야 받는다. 정기 신청을 놓쳤다면 <b>기한 후 신청</b>으로 정상 지급액의 95%를 받을 수 있다. 기준을 숫자로 짚는다.</p>
+    <div class="hero-meta">
+      <span>💰 경제 · 금융</span>
+      <span>📅 2026년 10월 27일</span>
+      <span>⏱️ 약 9분</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+
+    <div class="summary-box">
+      <h2>핵심 요약</h2>
+      <ul>
+        <li>부부합산 <strong>총소득이 단독 2,200만원·홑벌이 3,200만원·맞벌이 4,400만원 미만</strong>이어야 한다. 맞벌이 기준은 2025년 이후 신청분부터 3,800만원에서 4,400만원으로 올랐다.</li>
+        <li>가구원 전체 <strong>재산 합계액이 2억 4천만원 미만</strong>이어야 하고, 1억 7천만원 이상이면 산정액의 <strong>50%만</strong> 지급된다. 기준일은 전년도 6월 1일이다.</li>
+        <li>최대 지급액은 <strong>단독 165만원·홑벌이 285만원·맞벌이 330만원</strong>이다. 소득이 기준에 가까울수록 실제 지급액은 줄어든다.</li>
+        <li>정기 신청(5월)을 놓쳤으면 <strong>기한 후 신청</strong>이 가능하나 지급액의 5%가 깎인다. 마감은 11월 말~12월 초로 안내되므로 홈택스에서 정확한 날짜를 확인해야 한다.</li>
+      </ul>
+    </div>
+
+    <h2 class="sec">1. 근로장려금이란 — 일은 하지만 소득이 낮은 가구에 주는 현금</h2>
+    <p>근로장려금은 근로·사업·종교인소득이 있으면서 소득과 재산이 일정 기준 미만인 가구에 국세청이 현금으로 지급하는 제도다. 조세특례제한법 제100조의2 이하에 근거를 두며, 이름은 세금 제도에 들어 있지만 실질은 <strong>일하는 저소득 가구의 소득을 보충하는 복지성 지급</strong>이다. 일을 해야 받을 수 있다는 점에서 기초생활보장 같은 생계 지원과 성격이 다르다.</p>
+    <p>자녀가 있는 가구는 근로장려금과 별도로 자녀장려금도 신청할 수 있다. 이 글은 근로장려금의 자격 기준에 집중한다.</p>
+
+    <h2 class="sec">2. 가구 유형 — 단독·홑벌이·맞벌이 어디에 해당하나</h2>
+    <p>소득 기준과 최대 지급액이 가구 유형에 따라 달라지므로 먼저 내가 어느 유형인지 확인해야 한다. 유형은 신청 시점의 가족 구성과 배우자 소득으로 정해진다.</p>
+    <table class="rate">
+      <tr><th>유형</th><th>해당 요건(요약)</th><th>총소득 기준</th><th>최대 지급액</th></tr>
+      <tr><td>단독가구</td><td>배우자·부양자녀·70세 이상 부양 직계존속이 없는 가구</td><td class="up">2,200만원 미만</td><td class="up">165만원</td></tr>
+      <tr><td>홑벌이가구</td><td>배우자나 부양자녀, 70세 이상 직계존속이 있고 배우자 총급여 등이 300만원 미만</td><td class="up">3,200만원 미만</td><td class="up">285만원</td></tr>
+      <tr><td>맞벌이가구</td><td>신청인과 배우자 각각의 총급여 등이 300만원 이상</td><td class="up">4,400만원 미만</td><td class="up">330만원</td></tr>
+    </table>
+    <p class="note">※ 국세청 안내 기준 요약. 총소득 4,400만원(맞벌이)은 2025년 이후 신청분부터 적용된 기준이며, 2023년 등 이전 안내 자료에는 3,800만원으로 적혀 있다.</p>
+    <p>부양자녀는 18세 미만이면서 연간 소득금액 합계가 100만원 이하인 자녀가 기본이고, 직계존속은 70세 이상이면서 소득이 같은 수준 이하여야 한다. <strong>다른 가구의 부양자녀나 직계존속으로 이미 올라 있는 사람은 본인이 따로 신청할 수 없다.</strong></p>
+
+    <h2 class="sec">3. 소득 요건 — 무엇이 '총소득'에 들어가나</h2>
+    <p>총소득은 부부 합산으로 보며 아래 소득을 더한다. 근로소득은 비과세를 뺀 총급여액이고, 사업소득은 수입금액에 업종별 비율을 곱한 금액으로 계산한다.</p>
+    <ul class="plain">
+      <li>근로소득: 연간 총급여액(비과세 제외)</li>
+      <li>사업소득: 수입금액에 업종별 조정률을 적용한 금액</li>
+      <li>종교인소득: 종교활동으로 받은 소득</li>
+      <li>이자·배당·연금·기타소득: 합계액이 일정 금액을 넘으면 지급 대상에서 빠지는 구조로 안내된다(국세청 안내 확인 필요)</li>
+    </ul>
+    <p>실제 지급액은 총소득이 오르는 구간(점증), 최대액이 유지되는 구간(평탄), 기준 쪽으로 갈수록 줄어드는 구간(점감)에 따라 달라진다. 소득이 기준에 가까운 가구는 최대액보다 훨씬 적게 받는다.</p>
+    <div class="pullquote">소득이 기준 이하여도 재산이 2억 4천만원을 넘으면 대상이 아니다. 두 요건은 하나만 통과해서는 안 되고 함께 통과해야 한다.</div>
+
+    <h2 class="sec">4. 재산 요건 — 2억 4천만원과 1억 7천만원, 무엇을 합산하나</h2>
+    <p>재산은 <strong>신청인과 배우자, 부양가족 등 가구원 전체</strong>의 것을 합한다. 기준일은 신청 전년도 6월 1일이다. 이 날짜 이후에 집을 팔거나 샀더라도 판정에는 6월 1일 상태가 쓰인다.</p>
+    <h3 class="sub">재산에 들어가는 항목</h3>
+    <ul class="plain">
+      <li>토지·건축물·주택: 공시가격 등 기준시가로 평가하고, <strong>대출이 있어도 부채를 빼 주지 않는다</strong></li>
+      <li>승용자동차: 영업용은 제외하고 평가액을 반영한다</li>
+      <li>전세금과 임차보증금: 세입자로 내는 보증금도 재산에 포함한다</li>
+      <li>예금·적금, 주식, 펀드 등 금융재산과 회원권 등</li>
+    </ul>
+    <div class="warnbox">
+      <div class="wt">⚠ 전세 사는 가구도 해당된다</div>
+      <p>집이 없어도 임차보증금이 재산에 잡힌다. 예금과 보증금, 자동차를 합해 2억 4천만원이 넘는지 먼저 계산해 보자.</p>
+    </div>
+    <h3 class="sub">구간별 지급 방식</h3>
+    <div class="flow">
+      <div class="flow-box"><div class="ft">1억 7천만원 미만</div><div class="fd">산정된 금액 전액 지급</div></div>
+      <div class="flow-box"><div class="ft">1억 7천만원 이상 ~ 2억 4천만원 미만</div><div class="fd">산정된 금액의 50% 지급</div></div>
+      <div class="flow-box"><div class="ft">2억 4천만원 이상</div><div class="fd">지급 대상 제외</div></div>
+    </div>
+
+    <h2 class="sec">5. 이런 경우는 신청해도 제외된다</h2>
+    <ul class="plain">
+      <li>전문직 사업자(변호사·의사·회계사 등 법령에 정한 업종)를 하는 경우</li>
+      <li>상용근로자로서 월평균 근로소득이 500만원 이상인 경우(배우자 포함 가구 단위로 적용)</li>
+      <li>다른 거주자의 부양자녀나 직계존속으로 이미 신청된 경우</li>
+      <li>외국인은 원칙적으로 제외되며, 한국인 배우자나 자녀가 있는 등 예외 요건을 갖춘 경우에만 대상이 된다</li>
+      <li>재산이 2억 4천만원 이상인 경우</li>
+    </ul>
+    <p>제외 업종과 예외 요건의 세부는 시행령에 따라 정해지므로 국세청 안내문에서 본인 업종을 확인하는 것이 안전하다.</p>
+
+    <h2 class="sec">6. 신청 시기 — 정기·반기·기한 후 신청</h2>
+    <div class="steps">
+      <div class="step"><div class="step-t">정기 신청: 5월</div><div class="step-d">전년도 소득분을 5월 한 달 동안 신청한다. 2026년분은 5월 초에 시작해 5월 말~6월 초까지로 안내됐고, 결정된 금액은 9월경 지급 일정으로 설명된다.</div></div>
+      <div class="step"><div class="step-t">반기 신청: 근로소득만 있는 가구</div><div class="step-d">상반기 소득분은 9월, 하반기 소득분은 다음 해 3월에 신청한다. 반기에 먼저 받은 금액은 이후 정기 신청 때 정산한다.</div></div>
+      <div class="step"><div class="step-t">기한 후 신청: 정기 신청을 놓친 경우</div><div class="step-d">정기 신청 기한이 지난 뒤에도 일정 기한까지 신청할 수 있으나 <strong>산정된 금액의 95%만</strong> 지급된다. 마감은 11월 말~12월 초로 안내되므로 홈택스 공지로 정확한 날짜를 확인한다.</div></div>
+    </div>
+    <div class="infographic-section">
+      <h3>가구 유형별 최대 지급액과 총소득 기준 (만원)</h3>
+      <div class="bar-chart">
+        <div class="bar-item"><div class="bar-label"><span>단독가구 최대 지급액</span><span class="val">165만원</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:50%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>홑벌이가구 최대 지급액</span><span class="val">285만원</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:86%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>맞벌이가구 최대 지급액</span><span class="val">330만원</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:100%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>기한 후 신청 시 맞벌이 최대(95%)</span><span class="val">약 313만원</span></div><div class="bar-track"><div class="bar-fill bar-amber" style="width:95%"></div></div></div>
+      </div>
+      <p class="note">※ 최대 지급액은 소득이 가장 유리한 구간 기준이며 대부분의 가구는 이보다 적게 받는다. 막대 길이는 맞벌이 330만원을 100%로 환산했다.</p>
+    </div>
+
+    <h2 class="sec">7. 신청 방법 — 홈택스·손택스·ARS</h2>
+    <div class="steps">
+      <div class="step"><div class="step-t">안내문 확인</div><div class="step-d">국세청이 대상으로 보이는 가구에 안내문을 보낸다. 받지 못해도 요건을 충족하면 직접 신청할 수 있다.</div></div>
+      <div class="step"><div class="step-t">홈택스 또는 손택스(모바일 앱)로 신청</div><div class="step-d">공동·간편인증으로 로그인해 근로·자녀장려금 메뉴에서 신청한다. 세무서에 가지 않아도 된다.</div></div>
+      <div class="step"><div class="step-t">소득·재산 정보 확인</div><div class="step-d">홈택스에 표시된 가구원, 소득, 재산 자료가 맞는지 점검한다. 틀린 부분은 증빙을 내 정정한다.</div></div>
+      <div class="step"><div class="step-t">결과 통지와 지급</div><div class="step-d">심사 후 결정 통지서를 받고, 지급은 신청한 계좌로 이뤄진다. 상담은 장려금 상담센터 1566-3636에서 받을 수 있다.</div></div>
+    </div>
+    <div class="case">
+      <div class="ct">예시 — 재산 판정</div>
+      <p>단독가구 A씨가 전세보증금 1억 2천만원, 예금 3천만원, 승용차 1천만원을 가졌다면 재산은 약 1억 6천만원이다. 1억 7천만원 미만이므로 소득 요건만 충족하면 산정액 전액이 지급된다.</p>
+      <p>예금이 1,500만원 더 많았다면 합계가 1억 7천만원을 넘어 산정액의 50%만 받게 된다.</p>
+    </div>
+
+    <h2 class="sec">8. 제도가 바뀐다 — 개편안과 행동 제안</h2>
+    <p>2026년 세제개편안에는 <strong>2027년 9월 신청분부터</strong> 총소득 기준을 단독 2,600만원, 홑벌이 3,700만원, 맞벌이 5,200만원으로 올리고 최대 지급액을 180만원·310만원·360만원으로 늘리는 내용이 포함된 것으로 보도됐다. 다만 국회 심의가 끝나기 전에는 확정된 기준이 아니므로 <strong>지금 신청하는 분은 위의 현행 기준</strong>을 따른다.</p>
+    <ul class="plain">
+      <li>안내문이 없어도 홈택스 '근로장려금 모의계산'으로 대상 여부를 먼저 확인한다.</li>
+      <li>정기 신청을 놓쳤으면 기한 후 신청 마감 전에 신청한다. 5% 감액이 있어도 안 받는 것보다 낫다.</li>
+      <li>재산은 전년도 6월 1일 기준이라 판정이 바뀌려면 한 해를 기다려야 한다는 점을 기억한다.</li>
+      <li>소득이나 재산을 잘못 신고하면 환수와 이후 신청 제한이 따를 수 있으니 정확히 기재한다.</li>
+    </ul>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#근로장려금</span><span class="hashtag">#신청자격</span><span class="hashtag">#소득재산기준</span><span class="hashtag">#기한후신청</span><span class="hashtag">#자녀장려금</span><span class="hashtag">#홈택스</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7781&mi=2450" target="_blank" rel="noopener">국세청 — 근로장려금 소개</a>
+      <a href="https://d.nts.go.kr/nts/cm/cntnts/cntntsView.do?mi=2452&cntntsId=7783" target="_blank" rel="noopener">국세청 — 근로·자녀장려금 신청자격</a>
+      <a href="https://www.gov.kr/portal/service/serviceInfo/105100000001" target="_blank" rel="noopener">정부24 — 근로장려금 신청</a>
+      <a href="https://www.korea.kr/news/policyNewsView.do?newsId=148938224" target="_blank" rel="noopener">정책브리핑 — 근로장려금 맞벌이 기준 완화</a>
+      <a href="https://www.korea.kr/multi/visualNewsView.do?newsId=148969661" target="_blank" rel="noopener">정책브리핑 — 2027년 9월 신청분부터 달라지는 근로장려금</a>
+      <a href="https://www.law.go.kr/" target="_blank" rel="noopener">국가법령정보센터 — 조세특례제한법 제100조의2 이하</a>
+    </div>
+
+    <p class="disclaimer">※ 본 아티클은 공개 자료를 정리한 정보성 콘텐츠이며 개별 세무 상담이 아닙니다. 소득·재산 기준과 신청 기한은 신청 연도와 법령 개정에 따라 달라질 수 있으므로 신청 전 국세청 홈택스와 장려금 상담센터(1566-3636)에서 확인하세요.</p>
+
+  </div>
+
+<!-- HUB:RELATED:BEGIN -->
+<style>
+.hub-bc{font-size:13px;color:#5b6672;margin:0 0 18px;font-family:'Noto Sans KR',sans-serif}
+.hub-bc a{color:#5b6672;text-decoration:none}.hub-bc a:hover{text-decoration:underline}
+.hub-rel{margin:38px 0 6px;padding:20px 22px;border:1px solid #e3e8ee;border-radius:10px;
+  background:#fafbfc;font-family:'Noto Sans KR',sans-serif}
+.hub-rel h2{font-size:15px;margin:0 0 14px;font-weight:700;color:#12202e;
+  font-family:'Noto Sans KR',sans-serif;border:0;padding:0}
+.hub-rel ul{list-style:none;padding:0;margin:0}
+.hub-rel li{padding:7px 0;font-size:14.5px;line-height:1.55}
+.hub-rel li a{color:#12202e;text-decoration:none}
+.hub-rel li a:hover{color:#1a5f8a;text-decoration:underline}
+.hub-rel .hub-more{margin:14px 0 0;font-size:13.5px}
+.hub-rel .hub-more a{color:#1a5f8a;text-decoration:none;font-weight:700}
+</style>
+<aside class="hub-rel">
+  <h2>같은 분야 다른 글 — 금융·대출</h2>
+  <ul>
+    <li><a href="/2026-08-18-예금자보호-한도-1억원">예금자보호 한도 1억원 — 보호 대상 상품과 금융회사별 계산 기준 정리</a></li>
+    <li><a href="/2026-08-26-스트레스-DSR-3단계-적용-조건">스트레스 DSR 3단계 적용 조건 — 가산금리와 대출 한도 차이</a></li>
+    <li><a href="/2026-10-08-연금저축-IRP-세액공제-한도-환급액">연금저축 IRP 세액공제 한도 — 900만원 공제율과 환급액 구하는 방법</a></li>
+    <li><a href="/2026-10-17-금융소득종합과세-기준-2천만원-계산방법-신고시기">금융소득종합과세 2천만원 초과 시 세액 — 비교과세 방식과 신고 시기</a></li>
+  </ul>
+  <p class="hub-more"><a href="/money/">금융·대출 전체 보기 →</a></p>
+</aside>
+<!-- HUB:RELATED:END -->
+</article>
+</body>
+</html>
