@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>국가건강검진 대상자 확인 — 짝수년생·비사무직 일반검진과 암검진 종류별 나이 | 의료·복지</title>
+  <meta name="description" content="2026년은 출생연도가 짝수인 사람이 일반건강검진 차례이고, 직장 비사무직은 매년 받는다. 검진 가능 기간은 보통 연말까지다. 위암·대장암 등 국가암검진은 연령과 주기가 일반검진과 다르며, 건강보험료 하위 50%와 의료급여 수급자는 본인부담이 면제된다. 대상 조회 방법과 항목, 생애전환기 검진을 정리했다.">
+  <meta name="keywords" content="국가건강검진 대상 조회, 건강검진 대상자 조회, 짝수년생 건강검진, 비사무직 건강검진, 국가암검진 연령, 위암 검진 나이, 대장암 검진 주기, 생애전환기 건강진단, 건강검진 본인부담">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f2f4f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #004d40 0%, #00695c 45%, #00897b 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #b2dfdb; color: #004d40; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #e0f2f1; border-left: 5px solid #00695c; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #00695c; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #004d40; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #00695c; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #004d40; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #e0f2f1; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #00695c; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #004d40; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #e8f5f3; border-left: 4px solid #4db6ac; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #004d40; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #eef8f6; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #004d40; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #004d40; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #cfe8e4; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-teal { background: linear-gradient(90deg, #004d40, #4db6ac); }
+    .bar-cyan { background: linear-gradient(90deg, #004d40, #80cbc4); }
+    .bar-amber { background: linear-gradient(90deg, #ef6c00, #ffb300); }
+    .bar-blue { background: linear-gradient(90deg, #004d40, #4db6ac); }
+    .bar-grey { background: linear-gradient(90deg, #546e7a, #90a4ae); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #c5e1dd; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #e0f2f1; color: #004d40; font-weight: 700; }
+    table.rate td.up { color: #004d40; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #ef6c00; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #00695c; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #004d40; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #b2dfdb; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #004d40; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #b2dfdb; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #00695c; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .formula { background: #eef8f6; border: 1.5px dashed #4db6ac; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 16.5px; font-weight: 800; color: #004d40; line-height: 1.8; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #00897b; margin-top: 10px; margin-bottom: 0; }
+    .warnbox { background: #fff8e1; border-left: 5px solid #f9a825; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 26px 0; }
+    .warnbox .wt { font-size: 14px; font-weight: 800; color: #ef6c00; margin-bottom: 8px; }
+    .warnbox p { font-size: 15px; color: #5d4037; margin-bottom: 0; word-break: keep-all; }
+    .case { background: #fff; border: 1.5px solid #b2dfdb; border-left: 5px solid #00695c; border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; }
+    .case .ct { font-size: 13.5px; font-weight: 800; color: #004d40; margin-bottom: 6px; letter-spacing: 0.3px; }
+    .case p { font-size: 14.8px; margin-bottom: 8px; }
+    .case p:last-child { margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #e0f2f1; color: #00695c; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #00695c; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<!-- SEO:AUTO BEGIN -->
+<meta property="article:published_time" content="2026-10-29T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-29T09:00:00+09:00">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "국가건강검진 대상자 확인 — 짝수년생·비사무직 일반검진과 암검진 종류별 나이",
+  "description": "2026년은 출생연도가 짝수인 사람이 일반건강검진 차례이고, 직장 비사무직은 매년 받는다. 검진 가능 기간은 보통 연말까지다. 위암·대장암 등 국가암검진은 연령과 주기가 일반검진과 다르며, 건강보험료 하위 50%와 의료급여 수급자는 본인부담이 면제된다. 대상 조회 방법과 항목, 생애전환기 검진을 정리했다.",
+  "url": "https://sangsang.ephseed.com/2026-10-29-%EA%B5%AD%EA%B0%80%EA%B1%B4%EA%B0%95%EA%B2%80%EC%A7%84-%EB%8C%80%EC%83%81-%EC%A1%B0%ED%9A%8C-%EC%A7%9D%EC%88%98%EB%85%84%EC%83%9D-%EB%B9%84%EC%82%AC%EB%AC%B4%EC%A7%81-%EC%9D%BC%EB%B0%98%EA%B2%80%EC%A7%84-%EC%95%94%EA%B2%80%EC%A7%84-%EC%97%B0%EB%A0%B9",
+  "datePublished": "2026-10-29T09:00:00+09:00",
+  "dateModified": "2026-10-29T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-10-29-%EA%B5%AD%EA%B0%80%EA%B1%B4%EA%B0%95%EA%B2%80%EC%A7%84-%EB%8C%80%EC%83%81-%EC%A1%B0%ED%9A%8C-%EC%A7%9D%EC%88%98%EB%85%84%EC%83%9D-%EB%B9%84%EC%82%AC%EB%AC%B4%EC%A7%81-%EC%9D%BC%EB%B0%98%EA%B2%80%EC%A7%84-%EC%95%94%EA%B2%80%EC%A7%84-%EC%97%B0%EB%A0%B9">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="국가건강검진 대상자 확인 — 짝수년생·비사무직 일반검진과 암검진 종류별 나이 | 의료·복지">
+<meta property="og:description" content="2026년은 출생연도가 짝수인 사람이 일반건강검진 차례이고, 직장 비사무직은 매년 받는다. 검진 가능 기간은 보통 연말까지다. 위암·대장암 등 국가암검진은 연령과 주기가 일반검진과 다르며, 건강보험료 하위 50%와 의료급여 수급자는 본인부담이 면제된다. 대상 조회 방법과 항목, 생애전환기 검진을 정리했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-10-29-%EA%B5%AD%EA%B0%80%EA%B1%B4%EA%B0%95%EA%B2%80%EC%A7%84-%EB%8C%80%EC%83%81-%EC%A1%B0%ED%9A%8C-%EC%A7%9D%EC%88%98%EB%85%84%EC%83%9D-%EB%B9%84%EC%82%AC%EB%AC%B4%EC%A7%81-%EC%9D%BC%EB%B0%98%EA%B2%80%EC%A7%84-%EC%95%94%EA%B2%80%EC%A7%84-%EC%97%B0%EB%A0%B9">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-10-29T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-29T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N28MJLW4W9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-N28MJLW4W9");</script>
+<!-- SEO:END -->
+</head>
+<body>
+
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-EVlth33UH8CTDu2u"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-KMCr4AoIjIDsi9XA"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-qqfX36xk8gz6faM6"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+<article class="article-wrap">
+<!-- HUB:BREADCRUMB:BEGIN -->
+<nav class="hub-bc"><a href="/">생생 정보통</a> &rsaquo; <a href="/health/">건강보험·의료비</a></nav>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "생생 정보통", "item": "https://sangsang.ephseed.com/"}, {"@type": "ListItem", "position": 2, "name": "건강보험·의료비", "item": "https://sangsang.ephseed.com/health/"}]}</script>
+<!-- HUB:BREADCRUMB:END -->
+  <header class="hero">
+    <div class="category-badge">🏥 의료 · 복지</div>
+    <h1>국가건강검진 대상 조회 —<br>짝수년생·비사무직 기준과 암검진 연령·주기</h1>
+    <p class="hero-sub">건강검진 안내문이 오지 않았는데 대상인지 헷갈리거나, 올해 받았는데 내년에 또 받아야 하는지 궁금한 사람이 많다. <b>일반건강검진은 출생연도와 직업에 따라 주기가 갈리고, 암검진은 별도의 나이·주기 기준</b>을 따른다. 내가 올해 대상인지 조회하는 방법과 검진 항목, 비용 면제 기준을 순서대로 정리했다.</p>
+    <div class="hero-meta">
+      <span>🏥 의료 · 복지</span>
+      <span>📅 2026년 10월 29일</span>
+      <span>⏱️ 약 8분</span>
+    </div>
+  </header>
+  <div class="body-content">
+    <div class="summary-box">
+      <h2>핵심 요약</h2>
+      <ul>
+        <li>일반건강검진은 <strong>만 20세 이상, 2년에 1회</strong>가 기본이다. 2026년은 <strong>출생연도 끝자리가 짝수</strong>인 사람이 대상이고, 직장 <strong>비사무직</strong>은 출생연도와 관계없이 매년 받는다.</li>
+        <li>검진 가능 기간은 조회 결과에 나오며 보통 <strong>해당 연도 12월 31일까지</strong>다. 연말에 몰리기 전에 예약하는 편이 낫다.</li>
+        <li>국가암검진은 <strong>위암 40세, 대장암 50세</strong> 등 암 종류마다 시작 나이와 주기가 다르다. <b>건강보험료 하위 50%와 의료급여 수급자는 본인부담이 면제</b>되고, 나머지는 검진비의 10%를 낸다.</li>
+        <li>대상 여부는 국민건강보험공단 누리집, <b>The건강보험 앱</b>, 고객센터 <b>1577-1000</b>에서 확인한다.</li>
+      </ul>
+    </div>
+
+    <h2 class="sec">1. 국가건강검진이란 — 일반검진·암검진·영유아검진</h2>
+    <p>국가건강검진은 국민건강보험공단이 주관하는 검진 제도를 묶어 부르는 말이다. 크게 <strong>일반건강검진, 국가암검진, 영유아건강검진</strong>으로 나뉜다. 이 글은 성인이 가장 많이 헷갈리는 일반건강검진과 암검진 두 가지를 다룬다.</p>
+    <p>일반건강검진은 고혈압·당뇨병·이상지질혈증 같은 만성질환을 일찍 찾는 것이 목적이다. 암검진은 특정 암을 증상이 없을 때 찾아내는 검사로, 일반검진과 <b>대상 나이와 주기가 따로 정해져 있다.</b> 그래서 "올해 일반검진을 받았으니 암검진도 끝났다"는 생각은 틀릴 수 있다.</p>
+
+    <h2 class="sec">2. 일반건강검진 대상 — 짝수년생과 비사무직 기준</h2>
+    <p>일반건강검진 대상은 건강보험 가입자 가운데 <strong>만 20세 이상</strong>이다. 주기는 가입 유형에 따라 다르다.</p>
+    <table class="rate">
+      <tr><th>구분</th><th>주기</th><th>2026년 대상</th></tr>
+      <tr><td>지역가입자·피부양자</td><td>2년에 1회</td><td>출생연도가 짝수인 사람</td></tr>
+      <tr><td>직장가입자 (사무직)</td><td>2년에 1회</td><td>출생연도가 짝수인 사람</td></tr>
+      <tr><td>직장가입자 (비사무직)</td><td class="up">매년 1회</td><td>출생연도와 관계없이 전원</td></tr>
+    </table>
+    <p>예를 들어 1980년생, 1992년생, 2004년생은 2026년이 검진 차례다. 반대로 1981년생 사무직 직장인은 내년인 2027년에 대상이 된다. 비사무직은 제조·현장·서비스 등 직무에 따라 구분되며, 사업장이 어느 쪽으로 분류했는지는 사업주나 공단에 확인해야 한다.</p>
+    <div class="formula">
+      <div class="f-main">올해(연도) 끝자리 짝수 + 출생연도 끝자리 짝수 = 일반검진 대상<br>비사무직 직장가입자 = 매년 대상</div>
+      <p class="f-note">만 20세 이상일 것. 2026년 기준으로는 2006년생까지 해당한다.</p>
+    </div>
+
+    <h2 class="sec">3. 내 검진 대상인지 조회하는 방법</h2>
+    <p>안내문이 우편이나 문자로 오지 않았다고 대상이 아닌 것은 아니다. 직접 조회하는 것이 가장 정확하다.</p>
+    <div class="steps">
+      <div class="step"><div class="step-t">공단 누리집·앱 접속</div><div class="step-d">국민건강보험공단(nhis.or.kr) 또는 <b>The건강보험</b> 앱에서 본인 인증 후 '건강검진 대상 조회' 메뉴로 들어간다.</div></div>
+      <div class="step"><div class="step-t">검진 종류와 기간 확인</div><div class="step-d">조회 결과에 올해 받을 수 있는 검진 종류(일반·암·생애전환기)와 검진 가능 기간이 표시된다. 기간은 보통 12월 31일까지다.</div></div>
+      <div class="step"><div class="step-t">검진기관 예약</div><div class="step-d">공단 지정 검진기관에서 예약한다. 신분증을 지참하고, 검진 전 안내 사항(금식 등)을 확인한다.</div></div>
+      <div class="step"><div class="step-t">모르겠으면 전화 문의</div><div class="step-d">고객센터 <b>1577-1000</b>에서 대상 여부, 지난해 미수검 이월 여부 등을 물을 수 있다.</div></div>
+    </div>
+
+    <h2 class="sec">4. 일반건강검진 항목 — 무엇을 검사하나</h2>
+    <p>기본 항목은 문진, 키·체중·허리둘레·체질량지수 같은 신체계측, 혈압, 시력·청력, 혈액검사(빈혈, 공복혈당, 총콜레스테롤, 간기능, 신장기능), 요검사, 흉부 X선, 구강검진이다. 모두 대상자는 공단 부담으로 받는다.</p>
+    <p>항목 가운데 <b>이상지질혈증 검사는 남자 24세 이상, 여자 40세 이상에서 4년마다</b> 하는 것으로 안내된다. 그래서 같은 해 검진을 받아도 사람마다 혈액검사 항목이 조금 다를 수 있다.</p>
+    <h3 class="sub">만 40세·66세는 생애전환기 검진이 추가된다</h3>
+    <p>생애전환기 건강진단은 평생 두 번, 만 40세와 만 66세에 받는다. 만 40세에는 B형간염 항원·항체 검사와 우울증 등 정신건강 검사가, 만 66세에는 골밀도 검사(여성), 인지기능장애 검사, 노인신체기능검사, 우울증 검사가 더해진다. 2026년에는 <b>1986년생이 만 40세, 1960년생이 만 66세</b>에 해당한다.</p>
+
+    <h2 class="sec">5. 국가암검진 — 암 종류마다 나이와 주기가 다르다</h2>
+    <p>국가암검진은 일반검진과 별도로 운영된다. 대상은 건강보험 가입자·의료급여 수급자 중 암별 기준 연령 이상이다. 보건복지부 고시 기준으로 안내되는 대표적인 시작 나이와 주기는 아래와 같다.</p>
+    <table class="rate">
+      <tr><th>암 종류</th><th>대상</th><th>주기·검사</th></tr>
+      <tr><td>위암</td><td>만 40세 이상</td><td>2년 · 위내시경(또는 위장조영)</td></tr>
+      <tr><td>대장암</td><td>만 50세 이상</td><td>1년 · 분변잠혈검사, 양성이면 대장내시경</td></tr>
+      <tr><td>유방암</td><td>만 40세 이상 여성</td><td>2년 · 유방촬영</td></tr>
+      <tr><td>자궁경부암</td><td>만 20세 이상 여성</td><td>2년 · 자궁경부세포검사</td></tr>
+      <tr><td>간암</td><td>만 40세 이상 고위험군</td><td>6개월 · 복부초음파와 혈액검사</td></tr>
+      <tr><td>폐암</td><td>만 54~74세 중 흡연 30갑년 이상</td><td>2년 · 저선량 흉부CT</td></tr>
+    </table>
+    <p class="note">※ 위암·대장암 기준은 다수 안내 자료에서 일치하게 확인된다. 나머지 암의 세부 기준은 개정될 수 있으므로 공단 안내를 함께 확인한다. 간암 고위험군은 간경변증, B·C형 간염 항원·항체 양성자 등이다.</p>
+
+    <div class="infographic-section">
+      <h3>암검진 시작 나이 비교 (만 나이)</h3>
+      <div class="bar-chart">
+        <div class="bar-item"><div class="bar-label"><span>자궁경부암 (여성)</span><span class="val">20세</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:37%">20</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>위암</span><span class="val">40세</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:74%">40</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>유방암 (여성)</span><span class="val">40세</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:74%">40</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>간암 (고위험군)</span><span class="val">40세</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:74%">40</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>대장암</span><span class="val">50세</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:93%">50</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>폐암 (흡연 30갑년 이상)</span><span class="val">54~74세</span></div><div class="bar-track"><div class="bar-fill bar-amber" style="width:100%">54</div></div></div>
+      </div>
+      <p class="note">막대 길이는 시작 나이에 비례한다. 위 기준은 보건복지부 고시를 따른 일반적인 안내이며 세부는 공단에서 확인한다.</p>
+    </div>
+
+    <h2 class="sec">6. 비용 — 무료인 사람과 10%를 내는 사람</h2>
+    <p>일반건강검진 기본 항목은 대상자에게 공단이 비용을 부담한다. 다만 검진기관이 권하는 추가 검사나 선택 항목은 본인이 부담할 수 있다. 예약할 때 "공단 검진 범위"와 "추가 검사"를 구분해서 확인하는 것이 안전하다.</p>
+    <p>국가암검진은 <strong>검진비의 10%가 본인부담</strong>이다. 단 <b>건강보험료 하위 50%와 의료급여 수급자는 본인부담이 면제</b>된다. 하위 50% 기준 금액은 해마다 바뀌므로 본인 해당 여부는 공단 조회로 확인해야 한다. 내시경 중 조직검사나 수면(비급여) 선택 등 검진 범위를 넘는 항목은 별도 비용이 든다.</p>
+    <div class="warnbox">
+      <div class="wt">⚠️ 확인할 것</div>
+      <p>일반검진과 암검진은 대상 조건이 다르다. 올해 일반검진 대상이 아니어도 암검진 대상일 수 있고, 반대도 가능하다. 조회 화면에서 두 가지를 따로 확인한다.</p>
+    </div>
+
+    <h2 class="sec">7. 놓치기 쉬운 경우 — 이월, 비사무직 분류, 연말 몰림</h2>
+    <div class="case">
+      <div class="ct">사례 1 · 직장을 옮긴 짝수년생</div>
+      <p>사무직으로 일하다 현장직으로 옮기면 주기가 2년에서 매년으로 바뀐다. 입사 시점의 분류가 달라질 수 있으니 새 직장에서 대상 여부를 다시 확인한다.</p>
+    </div>
+    <div class="case">
+      <div class="ct">사례 2 · 지난해 대상이었는데 못 받은 경우</div>
+      <p>일부 안내에는 전년도 미수검자의 이월 제도가 언급된다. 적용 여부와 조건은 사람마다 다를 수 있으므로 공단(1577-1000)에 직접 문의하는 것이 가장 정확하다.</p>
+    </div>
+    <div class="case">
+      <div class="ct">사례 3 · 12월에 예약하려는 경우</div>
+      <p>검진 가능 기간이 보통 12월 31일까지라 연말에는 검진기관 예약이 몰린다. 특히 위·대장 내시경은 일정이 빨리 찬다. 10~11월에 예약하면 여유가 있다.</p>
+    </div>
+
+    <h2 class="sec">8. 검진 결과 활용과 전망</h2>
+    <p>검진은 받는 것으로 끝나지 않는다. 결과지에 '정상B(경계)'나 '질환의심'이 나오면 해당 항목의 추적 관찰이나 진료가 필요하다. 암검진에서 양성이 나오면 정밀검사로 이어진다. 결과는 공단 누리집과 앱에서도 조회할 수 있다.</p>
+    <p>정부는 검진 항목을 해마다 조정하고 있어, 올해 새로 추가된 검사나 대상 연령 변경이 있는지는 매년 초 공단 공지를 확인하는 것이 좋다. <b>① 올해 대상인지 조회 ② 일반검진과 암검진 따로 확인 ③ 비용 면제 여부 확인 ④ 12월 전에 예약</b> 순서로 움직이면 놓치는 일을 줄일 수 있다.</p>
+
+    <div class="hashtag-wrap"><span class="hashtag">#국가건강검진</span><span class="hashtag">#건강검진대상조회</span><span class="hashtag">#짝수년생</span><span class="hashtag">#비사무직</span><span class="hashtag">#국가암검진</span><span class="hashtag">#생애전환기검진</span><span class="hashtag">#의료복지</span></div>
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://www.nhis.or.kr" target="_blank" rel="noopener">국민건강보험공단 — 건강검진 대상 조회·안내</a>
+      <a href="https://www.korea.kr/news/policyNewsView.do?newsId=148923727" target="_blank" rel="noopener">대한민국 정책브리핑 — 건강검진 관련 정책 보도</a>
+      <a href="https://wikidocs.net/blog/@openwiki/21219/" target="_blank" rel="noopener">2026년 국가 건강검진 대상·검사 항목·비용 총정리</a>
+      <a href="https://wikidocs.net/blog/@insightbridge/25896/" target="_blank" rel="noopener">2026년 짝수년생 건강검진·생애전환기 검진 항목 안내</a>
+      <a href="https://glasswallet.com/calculate/endoscopy-cost/national-screening" target="_blank" rel="noopener">국가암검진 내시경 본인부담금 안내</a>
+    </div>
+    <p class="disclaimer">※ 본 아티클은 공단 안내와 공개 자료를 정리한 정보성 콘텐츠이며 의학적 조언이 아닙니다. 검진 대상·항목·본인부담 기준은 개정될 수 있고 개인의 가입 유형과 직종에 따라 달라집니다. 정확한 대상 여부는 국민건강보험공단(1577-1000, nhis.or.kr)에서 확인하시기 바랍니다.</p>
+  </div>
+<!-- HUB:RELATED:BEGIN -->
+<style>
+.hub-bc{font-size:13px;color:#5b6672;margin:0 0 18px;font-family:'Noto Sans KR',sans-serif}
+.hub-bc a{color:#5b6672;text-decoration:none}.hub-bc a:hover{text-decoration:underline}
+.hub-rel{margin:38px 0 6px;padding:20px 22px;border:1px solid #e3e8ee;border-radius:10px;
+  background:#fafbfc;font-family:'Noto Sans KR',sans-serif}
+.hub-rel h2{font-size:15px;margin:0 0 14px;font-weight:700;color:#12202e;
+  font-family:'Noto Sans KR',sans-serif;border:0;padding:0}
+.hub-rel ul{list-style:none;padding:0;margin:0}
+.hub-rel li{padding:7px 0;font-size:14.5px;line-height:1.55}
+.hub-rel li a{color:#12202e;text-decoration:none}
+.hub-rel li a:hover{color:#1a5f8a;text-decoration:underline}
+.hub-rel .hub-more{margin:14px 0 0;font-size:13.5px}
+.hub-rel .hub-more a{color:#1a5f8a;text-decoration:none;font-weight:700}
+</style>
+<aside class="hub-rel">
+  <h2>같은 분야 다른 글 — 건강보험·의료비</h2>
+  <ul>
+    <li><a href="/2026-08-12-본인부담상한제-환급금-신청방법">본인부담상한제 환급금 신청방법 — 소득분위별 상한액과 지급 시기</a></li>
+    <li><a href="/2026-08-20-피부양자-자격상실-소득요건">피부양자 자격상실 소득요건 — 재산 기준과 상실 후 보험료 계산</a></li>
+    <li><a href="/2026-08-27-산정특례-대상질환-본인부담률">산정특례 뜻과 대상 질환 — 본인부담률·적용 기간·연장 신청 절차 정리</a></li>
+    <li><a href="/2026-09-03-건강보험-임의계속가입-조건">건강보험 임의계속가입 조건 — 퇴직 후 보험료 차이와 신청 기한</a></li>
+    <li><a href="/2026-10-05-기초연금-선정기준액-소득인정액-계산법">기초연금 선정기준액 얼마 — 2026년 단독·부부가구 소득인정액 계산 방법</a></li>
+    <li><a href="/2026-10-13-부모급여-얼마-소급기한-어린이집-차액">부모급여 얼마 — 0세 100만원·1세 50만원, 소급 기한과 어린이집 차액</a></li>
+    <li><a href="/2026-10-21-난임-시술비-지원금액-얼마-신선동결-인공수정-한도">난임 시술비 지원금액 얼마 — 신선배아 110만원·동결 50만원·인공수정 30만원 한도</a></li>
+  </ul>
+  <p class="hub-more"><a href="/health/">건강보험·의료비 전체 보기 →</a></p>
+</aside>
+<!-- HUB:RELATED:END -->
+</article>
+</body>
+</html>
