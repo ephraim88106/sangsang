@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>해고예고수당 얼마 — 30일분 통상임금과 예고 의무 제외 사유 | 취업·노동</title>
+  <meta name="description" content="해고예고수당은 사용자가 30일 전에 해고를 알리지 않았을 때 30일분 이상의 통상임금을 지급하는 돈이다. 5인 미만 사업장에도 적용되고, 계속 근로 3개월 미만이면 제외된다. 예고일수별 감액 계산, 월급제 일급 환산, 청구 방법과 부당해고 구제신청 기한을 정리했다.">
+  <meta name="keywords" content="해고예고수당, 해고예고수당 계산, 해고예고수당 지급 조건, 30일분 통상임금, 해고예고 30일 전, 5인 미만 해고예고, 근로기준법 제26조, 부당해고 구제신청">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f2f4f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #004d40 0%, #00695c 45%, #00838f 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #b2dfdb; color: #004d40; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #e0f2f1; border-left: 5px solid #00695c; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #00695c; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #004d40; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #00695c; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #004d40; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #e0f2f1; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #00695c; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #004d40; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #f1f8f7; border-left: 4px solid #26a69a; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #004d40; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f4faf9; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #004d40; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #004d40; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #d5e8e5; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-teal { background: linear-gradient(90deg, #004d40, #26a69a); }
+    .bar-cyan { background: linear-gradient(90deg, #006064, #4dd0e1); }
+    .bar-amber { background: linear-gradient(90deg, #ef6c00, #ffb300); }
+    .bar-grey { background: linear-gradient(90deg, #546e7a, #90a4ae); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #c2ddd9; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #e0f2f1; color: #004d40; font-weight: 700; }
+    table.rate td.up { color: #004d40; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #ef6c00; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #00695c; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #004d40; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #b2dfdb; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #004d40; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #b2dfdb; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #00695c; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .formula { background: #f4faf9; border: 1.5px dashed #26a69a; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 16.5px; font-weight: 800; color: #004d40; line-height: 1.8; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #00838f; margin-top: 10px; margin-bottom: 0; }
+    .warnbox { background: #fff8e1; border-left: 5px solid #f9a825; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 26px 0; }
+    .warnbox .wt { font-size: 14px; font-weight: 800; color: #ef6c00; margin-bottom: 8px; }
+    .warnbox p { font-size: 15px; color: #5d4037; margin-bottom: 0; word-break: keep-all; }
+    .case { background: #fff; border: 1.5px solid #b2dfdb; border-left: 5px solid #00695c; border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; }
+    .case .ct { font-size: 13.5px; font-weight: 800; color: #004d40; margin-bottom: 6px; letter-spacing: 0.3px; }
+    .case p { font-size: 14.8px; margin-bottom: 8px; }
+    .case p:last-child { margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #e0f2f1; color: #00695c; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #00695c; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<!-- SEO:AUTO BEGIN -->
+<meta property="article:published_time" content="2026-10-30T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-30T09:00:00+09:00">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "해고예고수당 얼마 — 30일분 통상임금과 예고 의무 제외 사유",
+  "description": "해고예고수당은 사용자가 30일 전에 해고를 알리지 않았을 때 30일분 이상의 통상임금을 지급하는 돈이다. 5인 미만 사업장에도 적용되고, 계속 근로 3개월 미만이면 제외된다. 예고일수별 감액 계산, 월급제 일급 환산, 청구 방법과 부당해고 구제신청 기한을 정리했다.",
+  "url": "https://sangsang.ephseed.com/2026-10-30-%ED%95%B4%EA%B3%A0%EC%98%88%EA%B3%A0%EC%88%98%EB%8B%B9-%EC%96%BC%EB%A7%88-30%EC%9D%BC%EB%B6%84-%ED%86%B5%EC%83%81%EC%9E%84%EA%B8%88-%EC%A7%80%EA%B8%89-%EC%A0%9C%EC%99%B8-%EC%82%AC%EC%9C%A0",
+  "datePublished": "2026-10-30T09:00:00+09:00",
+  "dateModified": "2026-10-30T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-10-30-%ED%95%B4%EA%B3%A0%EC%98%88%EA%B3%A0%EC%88%98%EB%8B%B9-%EC%96%BC%EB%A7%88-30%EC%9D%BC%EB%B6%84-%ED%86%B5%EC%83%81%EC%9E%84%EA%B8%88-%EC%A7%80%EA%B8%89-%EC%A0%9C%EC%99%B8-%EC%82%AC%EC%9C%A0">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="해고예고수당 얼마 — 30일분 통상임금과 예고 의무 제외 사유 | 취업·노동">
+<meta property="og:description" content="해고예고수당은 사용자가 30일 전에 해고를 알리지 않았을 때 30일분 이상의 통상임금을 지급하는 돈이다. 5인 미만 사업장에도 적용되고, 계속 근로 3개월 미만이면 제외된다. 예고일수별 감액 계산, 월급제 일급 환산, 청구 방법과 부당해고 구제신청 기한을 정리했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-10-30-%ED%95%B4%EA%B3%A0%EC%98%88%EA%B3%A0%EC%88%98%EB%8B%B9-%EC%96%BC%EB%A7%88-30%EC%9D%BC%EB%B6%84-%ED%86%B5%EC%83%81%EC%9E%84%EA%B8%88-%EC%A7%80%EA%B8%89-%EC%A0%9C%EC%99%B8-%EC%82%AC%EC%9C%A0">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-10-30T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-30T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N28MJLW4W9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-N28MJLW4W9");</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-EVlth33UH8CTDu2u"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-KMCr4AoIjIDsi9XA"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-qqfX36xk8gz6faM6"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+<article class="article-wrap">
+<!-- HUB:BREADCRUMB:BEGIN -->
+<nav class="hub-bc"><a href="/">생생 정보통</a> &rsaquo; <a href="/labor/">노동·급여</a></nav>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "생생 정보통", "item": "https://sangsang.ephseed.com/"}, {"@type": "ListItem", "position": 2, "name": "노동·급여", "item": "https://sangsang.ephseed.com/labor/"}]}</script>
+<!-- HUB:BREADCRUMB:END -->
+  <header class="hero">
+    <div class="category-badge">💼 취업 · 노동</div>
+    <h1>해고예고수당 얼마 — 30일분 통상임금과 예고 의무 제외 사유</h1>
+    <p class="hero-sub">해고를 하루 전에 통보받았다면 회사는 <b>예고하지 않은 기간만큼의 통상임금</b>을 더 줘야 한다. 이 돈은 사업장 규모와 상관없이 따라붙는다.</p>
+    <div class="hero-meta">
+      <span>💼 취업 · 노동</span>
+      <span>📅 2026년 10월 30일</span>
+      <span>⏱️ 약 10분</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+
+    <div class="summary-box">
+      <h2>핵심 요약</h2>
+      <ul>
+        <li>사용자는 근로자를 해고하려면 <strong>적어도 30일 전에 예고</strong>해야 하고, 그러지 않았다면 <strong>30일분 이상의 통상임금</strong>을 해고예고수당으로 지급해야 한다(근로기준법 제26조).</li>
+        <li>계산은 <strong>1일 통상임금 × 예고하지 못한 일수(최대 30일)</strong>다. 20일 전에 알렸다면 부족한 10일분만 받는다.</li>
+        <li><strong>계속 근로 3개월 미만</strong>, 천재지변으로 사업 계속이 불가능한 경우, 근로자의 고의로 막대한 손해가 생긴 경우에는 예고 의무가 없다.</li>
+        <li><strong>5인 미만 사업장</strong>도 해고예고 의무는 적용된다. 다만 노동위원회 부당해고 구제신청은 할 수 없다.</li>
+      </ul>
+    </div>
+
+    <h2 class="sec">1. 해고예고수당이란 — 30일 전 예고가 원칙</h2>
+
+    <p>해고예고수당은 <strong>갑작스러운 해고로 생활 기반을 잃지 않도록</strong> 법이 만든 최소한의 완충 장치다. 근로기준법 제26조는 사용자가 근로자를 해고하려면 적어도 <strong>30일 전에 예고</strong>해야 하고, 30일 전에 예고하지 않았다면 <strong>30일분 이상의 통상임금</strong>을 지급해야 한다고 정한다. 경영상 이유에 의한 해고(정리해고)도 같다.</p>
+
+    <p>핵심은 해고가 <strong>정당한지와는 별개</strong>라는 점이다. 해고 사유가 아무리 정당해도 예고를 하지 않았다면 수당은 따로 줘야 한다. 거꾸로 해고가 부당해고로 판단되더라도 이미 받은 해고예고수당을 돌려줄 필요는 없다는 대법원 판단(2017다16778)이 있다.</p>
+
+    <div class="pullquote">예고는 "해고 사유의 정당성"이 아니라 "해고 시점을 미리 알려 줄 의무"다. 그래서 정당한 해고에도 수당이 붙는다.</div>
+
+    <h2 class="sec">2. 계산 방법 — 1일 통상임금 × 예고하지 못한 일수</h2>
+
+    <div class="formula">
+      <div class="f-main">해고예고수당 = 1일 통상임금 × (30일 − 실제 예고한 일수)</div>
+      <p class="f-note">예고 없이 즉시 해고되면 30일분, 20일 전에 알렸으면 10일분, 30일 이상 전에 알렸으면 수당 없음</p>
+    </div>
+
+    <h3 class="sub">시급제·일급제</h3>
+    <p>시급에 1일 소정근로시간(보통 8시간)을 곱해 1일 통상임금을 구한다. 시급 12,000원이라면 1일 통상임금은 96,000원, 30일분은 <strong>288만원</strong>이다. 2026년 최저임금 시급 10,320원으로 계산해도 1일 82,560원, 30일분 <strong>약 247만 6,800원</strong>이다.</p>
+
+    <h3 class="sub">월급제</h3>
+    <p>월 통상임금을 <strong>월 소정근로시간(주 40시간제는 주휴 포함 209시간)</strong>으로 나눠 시급을 구한 뒤 8시간을 곱한다. 월 통상임금이 313만 5천 원이면 시급 15,000원, 1일 12만 원, 30일분 <strong>360만 원</strong>이다. 통상임금에는 정기·일률·고정적으로 지급되는 수당이 들어가므로 기본급만 보지 말고 급여명세서를 확인한다.</p>
+
+    <div class="infographic-section">
+      <h3>예고 시점별 해고예고수당 (시급 12,000원 · 1일 96,000원 가정)</h3>
+      <div class="bar-chart">
+        <div class="bar-item"><div class="bar-label"><span>당일 통보 (예고 0일)</span><span class="val">30일분 288만원</span></div><div class="bar-track"><div class="bar-fill bar-amber" style="width:100%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>10일 전 예고</span><span class="val">20일분 192만원</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:67%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>20일 전 예고</span><span class="val">10일분 96만원</span></div><div class="bar-track"><div class="bar-fill bar-cyan" style="width:33%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>30일 이상 전 예고</span><span class="val">0원</span></div><div class="bar-track"><div class="bar-fill bar-grey" style="width:3%"></div></div></div>
+      </div>
+      <p class="note">※ 근로기준법 제26조를 가정 수치에 적용한 계산값. 세전 금액이며 실제 통상임금은 임금 구성에 따라 달라진다.</p>
+    </div>
+
+    <h2 class="sec">3. 지급하지 않아도 되는 경우 — 예고 의무 제외 사유</h2>
+
+    <table class="rate">
+      <tr><th>제외 사유</th><th>내용</th></tr>
+      <tr><td>계속 근로 3개월 미만</td><td class="up">입사 후 계속 근로한 기간이 3개월이 안 되면 예고 의무가 없다. 수습 기간 중 본채용 거부도 3개월 미만이면 같은 결론이다</td></tr>
+      <tr><td>천재지변 등 부득이한 사유</td><td class="up">사업장이 사라지는 등 사업 계속이 객관적으로 불가능한 경우. 경영 악화나 적자만으로는 인정되기 어렵다</td></tr>
+      <tr><td>근로자의 고의 비위</td><td class="up">고의로 사업에 막대한 지장을 주거나 재산상 손해를 끼친 데다 그 행위가 고용노동부령이 정한 사유에 해당해야 한다. 둘 다 충족해야 한다</td></tr>
+      <tr><td>일용·단기 기간제 등</td><td class="up">같은 법 제35조에 따라 일용근로자로서 3개월을 계속 근무하지 않은 사람, 2개월 이내 기간을 정해 일한 사람 등은 예고 규정 적용에서 빠진다</td></tr>
+    </table>
+
+    <div class="warnbox">
+      <div class="wt">"3개월 미만"은 입사일부터 해고일까지의 계속 근로 기간이다</div>
+      <p>3개월을 하루라도 넘겼다면 예고 의무가 생긴다. 반대로 해고 통보를 3개월이 되기 직전에 하면서 효력일을 뒤로 미루는 경우처럼 날짜가 애매하면 근로계약서, 출퇴근 기록, 급여명세서로 입사일과 통보일을 먼저 확정해 두는 것이 안전하다.</p>
+    </div>
+
+    <h2 class="sec">4. 5인 미만 사업장·아르바이트도 받을 수 있나</h2>
+
+    <p>해고예고(제26조)는 <strong>상시 근로자 수와 관계없이</strong> 적용된다. 5인 미만 사업장에서 일하는 근로자, 아르바이트와 단시간 근로자도 계속 근로 3개월 이상이면 같은 기준으로 청구할 수 있다.</p>
+
+    <p>5인 미만 사업장에서 적용이 <strong>빠지는 것</strong>은 부당해고 구제(제23조, 제28조)다. 즉 노동위원회에 구제신청을 할 수는 없지만, 해고예고수당은 따로 청구할 수 있다. 산재 요양 기간, 출산전후휴가 기간, 육아휴직 중 해고 금지는 5인 미만에서도 적용된다.</p>
+
+    <h2 class="sec">5. 못 받았을 때 청구 순서</h2>
+
+    <div class="steps">
+      <div class="step"><div class="step-t">해고 통보 증거 확보</div><div class="step-d">해고 통보 문자·카카오톡·이메일·통화 녹음과 마지막 출근일, 근로계약서, 급여명세서를 모은다. 통보일이 입증돼야 몇 일을 예고하지 않았는지 계산된다</div></div>
+      <div class="step"><div class="step-t">수당 금액 계산</div><div class="step-d">1일 통상임금에 예고하지 못한 일수를 곱해 청구액을 정한다. 통상임금이 헷갈리면 고용노동부 상담으로 확인한다</div></div>
+      <div class="step"><div class="step-t">사용자에게 지급 요구</div><div class="step-d">문자나 내용증명으로 금액과 지급 기한을 적어 요구한다. 기록이 남는 방식이 좋다</div></div>
+      <div class="step"><div class="step-t">고용노동부 진정</div><div class="step-d">지급하지 않으면 사업장 관할 지방고용노동관서에 진정을 낸다. 고용노동부 노동포털이나 국번 없이 1350 상담으로 시작할 수 있다. 해고예고 의무 위반은 사용자에 대한 형사처벌 대상이 될 수 있다</div></div>
+    </div>
+
+    <h2 class="sec">6. 부당해고 구제신청과의 관계 — 기한 3개월</h2>
+
+    <p>해고예고수당을 받는 것과 해고가 부당하다고 다투는 것은 <strong>별개 절차</strong>다. 5인 이상 사업장이라면 해고일부터 <strong>3개월 이내</strong>에 지방노동위원회에 부당해고 구제신청을 할 수 있다(제28조). 수당을 받았다고 해서 구제신청 권리가 사라지지 않는다.</p>
+
+    <p>또한 해고는 사유와 시기를 <strong>서면으로 통지</strong>해야 효력이 있다(제27조). 5인 미만 사업장에는 이 서면 통지 규정이 적용되지 않는다는 것이 일반적인 설명이지만, 서면을 받아두면 어떤 절차에서든 유리하다.</p>
+
+    <h2 class="sec">7. 해고 통보를 받았을 때 체크리스트</h2>
+
+    <ul class="plain">
+      <li>입사일부터 해고일까지 <strong>계속 근로가 3개월 이상</strong>인가</li>
+      <li>해고 통보를 <strong>언제, 어떤 방식으로</strong> 받았는지 기록이 남아 있는가</li>
+      <li>통보일부터 해고 효력일까지 <strong>며칠을 예고</strong>받았는가</li>
+      <li>급여명세서의 <strong>통상임금(정기 수당 포함)</strong>으로 1일 금액을 계산했는가</li>
+      <li>5인 이상이라면 <strong>3개월 안에 구제신청</strong>을 할지 판단했는가</li>
+    </ul>
+
+    <p>정리하면 해고예고수당은 <strong>"30일 전 예고, 아니면 부족한 일수만큼의 통상임금"</strong>이다. 계속 근로 3개월 이상이면 사업장 규모와 상관없이 적용되고, 금액은 예고 시점과 통상임금에 따라 0원부터 30일분까지 달라진다.</p>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#해고예고수당</span><span class="hashtag">#해고예고</span><span class="hashtag">#통상임금</span><span class="hashtag">#근로기준법제26조</span><span class="hashtag">#부당해고</span><span class="hashtag">#5인미만사업장</span><span class="hashtag">#노동상식</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://korea.legal/wiki/%ed%95%b4%ea%b3%a0%ec%98%88%ea%b3%a0%ec%99%80-%ed%95%b4%ea%b3%a0%ec%98%88%ea%b3%a0%ec%88%98%eb%8b%b9-%ec%b2%ad%ea%b5%ac/" target="_blank" rel="noopener">korea.legal — 해고예고와 해고예고수당 청구</a>
+      <a href="https://www.law.go.kr/LSW//detcInfoP.do?detcSeq=48679" target="_blank" rel="noopener">국가법령정보센터 — 해고예고 관련 판례</a>
+      <a href="https://www.law.go.kr/" target="_blank" rel="noopener">국가법령정보센터 — 근로기준법 제23조·제26조·제27조·제28조·제35조, 같은 법 시행규칙 제4조</a>
+    </div>
+
+    <p class="disclaimer">
+      ※ 본 아티클은 법령과 공개 자료를 정리한 정보성 콘텐츠이며 개별 사안에 대한 노무·법률 상담이 아닙니다. 사례의 금액은 가정한 수치로 계산한 근사값이며, 제외 사유의 해당 여부와 통상임금 범위는 사안마다 달라질 수 있으므로 고용노동부(1350)나 노무사 상담으로 확인하시기 바랍니다.
+    </p>
+
+  </div>
+<!-- HUB:RELATED:BEGIN -->
+<style>
+.hub-bc{font-size:13px;color:#5b6672;margin:0 0 18px;font-family:'Noto Sans KR',sans-serif}
+.hub-bc a{color:#5b6672;text-decoration:none}.hub-bc a:hover{text-decoration:underline}
+.hub-rel{margin:38px 0 6px;padding:20px 22px;border:1px solid #e3e8ee;border-radius:10px;
+  background:#fafbfc;font-family:'Noto Sans KR',sans-serif}
+.hub-rel h2{font-size:15px;margin:0 0 14px;font-weight:700;color:#12202e;
+  font-family:'Noto Sans KR',sans-serif;border:0;padding:0}
+.hub-rel ul{list-style:none;padding:0;margin:0}
+.hub-rel li{padding:7px 0;font-size:14.5px;line-height:1.55}
+.hub-rel li a{color:#12202e;text-decoration:none}
+.hub-rel li a:hover{color:#1a5f8a;text-decoration:underline}
+.hub-rel .hub-more{margin:14px 0 0;font-size:13.5px}
+.hub-rel .hub-more a{color:#1a5f8a;text-decoration:none;font-weight:700}
+</style>
+<aside class="hub-rel">
+  <h2>같은 분야 다른 글 — 노동·급여</h2>
+  <ul>
+    <li><a href="/2026-08-17-통상임금-계산법">통상임금 계산법 — 포함 항목과 평균임금 차이, 시간급 산정 기준</a></li>
+    <li><a href="/2026-09-02-육아휴직-급여-계산법">육아휴직 급여 계산법 — 월별 상한액과 사후지급금 폐지 시기</a></li>
+    <li><a href="/2026-09-29-주휴수당-지급조건-계산방법">주휴수당 지급 조건 — 주 15시간 기준과 결근 시 계산 방법</a></li>
+    <li><a href="/2026-10-06-퇴직금-계산-방법-평균임금-지급-기한">퇴직금 계산 방법 — 평균임금 산정과 지급 기한·IRP 입금 절차</a></li>
+    <li><a href="/2026-10-14-연차휴가-발생-기준-연차수당-계산방법">연차휴가 며칠 생기나 — 1년 미만 11일·근속 가산 25일과 연차수당 얼마</a></li>
+    <li><a href="/2026-10-22-실업급여-수급조건-180일-비자발적-이직-하루-지급액-계산방법">실업급여 수급조건 — 180일 요건·비자발적 이직 사유와 하루 지급액 계산방법</a></li>
+  </ul>
+  <p class="hub-more"><a href="/labor/">노동·급여 전체 보기 →</a></p>
+</aside>
+<!-- HUB:RELATED:END -->
+</article>
+</body>
+</html>
