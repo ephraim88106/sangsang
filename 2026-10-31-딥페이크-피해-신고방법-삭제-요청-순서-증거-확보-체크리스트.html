@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>딥페이크 피해 신고방법 — 삭제 요청 순서와 증거 확보 체크리스트 | 기술·플랫폼</title>
+  <meta name="description" content="딥페이크 성적 합성물 피해를 알았다면 URL과 화면을 증거로 남기고, 디지털성범죄피해자지원센터(디성센터) 삭제지원, 방송통신심의위원회 신고, 경찰 신고를 병행한다. 허위영상물 제작·반포 처벌, 소지·시청 처벌 기준과 피해 지원 창구를 순서대로 정리했다.">
+  <meta name="keywords" content="딥페이크 피해 신고방법, 딥페이크 삭제 요청, 디성센터, 방심위 신고, 딥페이크 증거 확보, 허위영상물 처벌, 딥페이크 1366, 딥페이크 경찰 신고">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f2f4f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #4527a0 0%, #5e35b1 45%, #7e57c2 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #d1c4e9; color: #4527a0; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #ede7f6; border-left: 5px solid #5e35b1; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #5e35b1; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #4527a0; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #5e35b1; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #4527a0; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #ede7f6; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #5e35b1; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #4527a0; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #f5f1fb; border-left: 4px solid #9575cd; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #4527a0; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f5f1fb; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #4527a0; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #4527a0; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #e1d8f1; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-teal { background: linear-gradient(90deg, #4527a0, #9575cd); }
+    .bar-cyan { background: linear-gradient(90deg, #4527a0, #b39ddb); }
+    .bar-amber { background: linear-gradient(90deg, #ef6c00, #ffb300); }
+    .bar-blue { background: linear-gradient(90deg, #4527a0, #9575cd); }
+    .bar-grey { background: linear-gradient(90deg, #546e7a, #90a4ae); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #d9cfee; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #ede7f6; color: #4527a0; font-weight: 700; }
+    table.rate td.up { color: #4527a0; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #ef6c00; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #5e35b1; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #4527a0; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #d1c4e9; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #4527a0; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #d1c4e9; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #5e35b1; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .formula { background: #f5f1fb; border: 1.5px dashed #9575cd; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 16.5px; font-weight: 800; color: #4527a0; line-height: 1.8; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #7e57c2; margin-top: 10px; margin-bottom: 0; }
+    .warnbox { background: #fff8e1; border-left: 5px solid #f9a825; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 26px 0; }
+    .warnbox .wt { font-size: 14px; font-weight: 800; color: #ef6c00; margin-bottom: 8px; }
+    .warnbox p { font-size: 15px; color: #5d4037; margin-bottom: 0; word-break: keep-all; }
+    .case { background: #fff; border: 1.5px solid #d1c4e9; border-left: 5px solid #5e35b1; border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; }
+    .case .ct { font-size: 13.5px; font-weight: 800; color: #4527a0; margin-bottom: 6px; letter-spacing: 0.3px; }
+    .case p { font-size: 14.8px; margin-bottom: 8px; }
+    .case p:last-child { margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #ede7f6; color: #5e35b1; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #5e35b1; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+
+<meta property="article:published_time" content="2026-10-31T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-31T09:00:00+09:00">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "딥페이크 피해 신고방법 — 삭제 요청 순서와 증거 확보 체크리스트",
+  "description": "딥페이크 성적 합성물 피해를 알았다면 URL과 화면을 증거로 남기고, 디지털성범죄피해자지원센터(디성센터) 삭제지원, 방송통신심의위원회 신고, 경찰 신고를 병행한다. 허위영상물 제작·반포 처벌, 소지·시청 처벌 기준과 피해 지원 창구를 순서대로 정리했다.",
+  "url": "https://sangsang.ephseed.com/2026-10-31-%EB%94%A5%ED%8E%98%EC%9D%B4%ED%81%AC-%ED%94%BC%ED%95%B4-%EC%8B%A0%EA%B3%A0%EB%B0%A9%EB%B2%95-%EC%82%AD%EC%A0%9C-%EC%9A%94%EC%B2%AD-%EC%88%9C%EC%84%9C-%EC%A6%9D%EA%B1%B0-%ED%99%95%EB%B3%B4-%EC%B2%B4%ED%81%AC%EB%A6%AC%EC%8A%A4%ED%8A%B8",
+  "datePublished": "2026-10-31T09:00:00+09:00",
+  "dateModified": "2026-10-31T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-10-31-%EB%94%A5%ED%8E%98%EC%9D%B4%ED%81%AC-%ED%94%BC%ED%95%B4-%EC%8B%A0%EA%B3%A0%EB%B0%A9%EB%B2%95-%EC%82%AD%EC%A0%9C-%EC%9A%94%EC%B2%AD-%EC%88%9C%EC%84%9C-%EC%A6%9D%EA%B1%B0-%ED%99%95%EB%B3%B4-%EC%B2%B4%ED%81%AC%EB%A6%AC%EC%8A%A4%ED%8A%B8">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="딥페이크 피해 신고방법 — 삭제 요청 순서와 증거 확보 체크리스트 | 기술·플랫폼">
+<meta property="og:description" content="딥페이크 성적 합성물 피해를 알았다면 URL과 화면을 증거로 남기고, 디지털성범죄피해자지원센터(디성센터) 삭제지원, 방송통신심의위원회 신고, 경찰 신고를 병행한다. 허위영상물 제작·반포 처벌, 소지·시청 처벌 기준과 피해 지원 창구를 순서대로 정리했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-10-31-%EB%94%A5%ED%8E%98%EC%9D%B4%ED%81%AC-%ED%94%BC%ED%95%B4-%EC%8B%A0%EA%B3%A0%EB%B0%A9%EB%B2%95-%EC%82%AD%EC%A0%9C-%EC%9A%94%EC%B2%AD-%EC%88%9C%EC%84%9C-%EC%A6%9D%EA%B1%B0-%ED%99%95%EB%B3%B4-%EC%B2%B4%ED%81%AC%EB%A6%AC%EC%8A%A4%ED%8A%B8">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-10-31T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-31T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N28MJLW4W9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-N28MJLW4W9");</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-EVlth33UH8CTDu2u"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-KMCr4AoIjIDsi9XA"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-qqfX36xk8gz6faM6"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+<article class="article-wrap">
+<!-- HUB:BREADCRUMB:BEGIN -->
+<nav class="hub-bc"><a href="/">생생 정보통</a> &rsaquo; <a href="/life/">통신·생활지원</a></nav>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "생생 정보통", "item": "https://sangsang.ephseed.com/"}, {"@type": "ListItem", "position": 2, "name": "통신·생활지원", "item": "https://sangsang.ephseed.com/life/"}]}</script>
+<!-- HUB:BREADCRUMB:END -->
+  <header class="hero">
+    <div class="category-badge">📱 기술 · 플랫폼</div>
+    <h1>딥페이크 피해 신고방법 —<br>삭제 요청 순서와 증거 확보 체크리스트</h1>
+    <p class="hero-sub">내 얼굴이 합성된 영상이나 사진을 발견했다면 <b>먼저 증거를 남기고, 디성센터에 삭제를 요청하고, 경찰에 신고하는 일</b>을 동시에 진행하는 것이 효과적이다. 어디에 무엇을 요청하는지, 어떤 처벌 규정이 적용되는지를 순서대로 정리했다.</p>
+    <div class="hero-meta">
+      <span>📱 기술 · 플랫폼</span>
+      <span>📅 2026년 10월 31일</span>
+      <span>⏱️ 약 9분</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+
+    <div class="summary-box">
+      <h2>핵심 요약</h2>
+      <ul>
+        <li>발견 즉시 <b>게시물 주소(URL), 게시자 계정, 게시 일시가 보이게 화면을 저장</b>한다. 삭제가 이뤄지면 증거를 다시 구하기 어렵다. 피해 영상 자체를 다른 사람에게 전송하지는 않는다.</li>
+        <li>삭제는 <b>디지털성범죄피해자지원센터(디성센터)</b>, 방송통신심의위원회(방심위), 해당 플랫폼 세 곳에 요청할 수 있고, 수사는 <b>경찰(182)</b>이 맡는다. 상담 창구는 여성긴급전화 <b>1366</b>으로 일원화됐다.</li>
+        <li>성폭력처벌법상 합성물 제작·반포는 <b>7년 이하 징역 또는 5천만 원 이하 벌금</b>, 소지·구입·저장·시청은 <b>3년 이하 징역 또는 3천만 원 이하 벌금</b>이다(2024년 10월 개정).</li>
+      </ul>
+    </div>
+
+    <p>딥페이크(deepfake)는 인공지능으로 실제 사람의 얼굴이나 목소리를 다른 영상에 합성하는 기술이다. 이 가운데 성적 영상물에 지인이나 연예인의 얼굴을 합성해 메신저·커뮤니티에 퍼뜨리는 범죄가 문제가 되고 있다. 피해자는 대개 "어디에 먼저 연락해야 하는지" 모른 채 시간을 보내는데, 영상은 시간이 지날수록 더 넓게 퍼진다. 이 글은 사건의 경과보다 <strong>피해를 알았을 때 무엇을 어떤 순서로 해야 하는지</strong>에 초점을 맞춘다. 처벌 수위와 범죄 증가 흐름은 <a href="/2026-08-07-딥페이크범죄17배폭증처벌솜방망이">딥페이크 범죄 증가와 처벌 실태</a> 글에서 다뤘다.</p>
+
+    <h2 class="sec">피해를 발견했을 때 첫 30분에 할 일</h2>
+    <p>가장 중요한 것은 당황해서 게시물만 신고하고 끝내지 않는 것이다. 신고가 받아들여져 게시물이 지워지면 나중에 수사기관에 제출할 자료가 사라진다. 그래서 <strong>증거를 남긴 뒤 삭제를 요청</strong>하는 순서가 기본이다.</p>
+
+    <div class="infographic-section">
+      <h3>대응 흐름 — 증거 확보 후 삭제·수사 병행</h3>
+      <div class="flow">
+        <div class="flow-box"><div class="ft">1단계 · 증거</div><div class="fd">URL 복사, 게시자 ID·일시가 보이는 화면 저장</div></div>
+        <div class="flow-box"><div class="ft">2단계 · 상담</div><div class="fd">1366 또는 디성센터에 삭제지원·모니터링 요청</div></div>
+        <div class="flow-box"><div class="ft">3단계 · 삭제</div><div class="fd">플랫폼 신고, 방심위 심의 요청으로 삭제·접속 차단</div></div>
+        <div class="flow-box"><div class="ft">4단계 · 수사</div><div class="fd">경찰서 방문 또는 사이버범죄 신고시스템(182)</div></div>
+      </div>
+    </div>
+
+    <div class="steps">
+      <div class="step"><div class="step-t">게시물 주소(URL)를 복사해 따로 저장한다</div><div class="step-d">게시글·영상의 고유 주소를 메모장이나 본인에게 보내는 메시지에 모아 둔다. 삭제 지원을 신청할 때 이 주소 목록이 가장 기본이 되는 자료다.</div></div>
+      <div class="step"><div class="step-t">화면을 캡처한다</div><div class="step-d">게시자 닉네임, 게시 일시, 댓글, 주소창이 한 화면에 보이도록 저장한다. 채팅방에 올라온 경우는 방 이름과 참여자 표시, 대화 시각까지 담는다. 증거 목적의 캡처 외에 영상 파일을 내려받아 보관·전송하는 일은 피한다.</div></div>
+      <div class="step"><div class="step-t">가해자를 직접 추궁하지 않는다</div><div class="step-d">가해자가 짐작되더라도 먼저 연락하면 게시물이 삭제되거나 계정이 사라져 수사에 불리할 수 있다. 연락 내용은 그대로 남겨 두고 대응은 수사기관과 지원센터를 통한다.</div></div>
+      <div class="step"><div class="step-t">혼자 판단하지 말고 상담부터 받는다</div><div class="step-d">여성긴급전화 1366이나 디성센터에 연락하면 삭제 지원, 유포 여부 모니터링, 수사·법률·의료 연계를 한 곳에서 안내받을 수 있다. 피해자가 직접 영상을 계속 검색해 확인하는 부담도 덜 수 있다.</div></div>
+    </div>
+
+    <h2 class="sec">삭제 요청은 어디에 — 디성센터, 방심위, 플랫폼의 차이</h2>
+    <p>삭제 요청 창구는 여러 곳이고 서로 배타적이지 않다. 같은 게시물을 여러 곳에 요청해도 되며, 실무에서는 동시에 진행하는 경우가 많다.</p>
+    <table class="rate">
+      <tr><th>창구</th><th>하는 일</th><th>이럴 때</th></tr>
+      <tr><td class="up">디성센터<br>(한국여성인권진흥원)</td><td>피해 영상물 삭제지원, 유포 모니터링, 수사·법률·의료 지원 연계. 2024년 11월부터 365일 24시간 운영으로 확대되었다고 정부가 발표</td><td>피해를 알게 된 직후, 어디서부터 해야 할지 모를 때</td></tr>
+      <tr><td class="up">방송통신심의위원회<br>(온라인 신고, 1377)</td><td>불법 정보에 대한 심의와 시정요구. 성적 허위영상물은 긴급 시정요구 대상으로 분류되며 접속 차단 조치가 가능</td><td>해외 사이트·커뮤니티처럼 개별 요청이 통하지 않을 때</td></tr>
+      <tr><td class="up">해당 플랫폼<br>(SNS·메신저·커뮤니티)</td><td>자체 신고 기능으로 게시물 삭제·계정 정지. 운영사별 처리 속도와 기준이 다름</td><td>게시 장소가 명확하고 빠른 삭제가 필요할 때</td></tr>
+      <tr><td class="up">경찰<br>(182, 경찰서 방문)</td><td>가해자 특정과 수사. 수사 접수 후 삭제·차단 협조 요청에도 쓰일 수 있음</td><td>가해자 처벌을 원하거나 협박을 받고 있을 때</td></tr>
+    </table>
+    <p>지자체 안내는 플랫폼에 먼저 삭제를 요청하고, 응하지 않거나 해외 서버처럼 접근이 어려운 경우 방심위에 심의·차단을 요청하는 흐름을 소개한다. 한 법률 해설은 수사기관 신고와 삭제 요청을 <b>동시에</b> 진행하는 것이 효과적이라고 설명한다. 방심위의 처리 기간을 "48시간 안팎"이라고 소개한 글도 있으나, 사안과 사이트에 따라 달라질 수 있으므로 정확한 기간은 접수할 때 확인하는 것이 안전하다.</p>
+
+    <div class="warnbox">
+      <div class="wt">⚠ 전화번호와 창구는 바뀔 수 있다</div>
+      <p>디성센터 직통번호가 자료마다 다르게 적힌 경우가 있다. 2024년 정부 발표 기준으로 상담 창구는 여성긴급전화 1366으로 일원화됐으니, 처음 연락은 1366이나 한국여성인권진흥원 공식 누리집에서 확인한 번호로 한다.</p>
+    </div>
+
+    <h2 class="sec">경찰 신고 — 무엇을 가져가야 하나</h2>
+    <p>경찰서 방문이나 사이버범죄 신고시스템(182)으로 접수한다. 미성년자 피해라면 보호자와 함께 가거나 학교·청소년 상담기관을 통해 연결할 수 있다. 접수할 때는 아래 자료를 준비하면 진술이 빨라진다.</p>
+    <ul class="plain">
+      <li><strong>게시물 URL 목록과 화면 캡처</strong> — 발견 날짜·시각을 함께 적어 둔다.</li>
+      <li><strong>가해자로 의심되는 사람의 정보</strong> — 닉네임, 계정 주소, 대화 내용. 짐작일 뿐이어도 단서가 된다.</li>
+      <li><strong>협박·금전 요구 메시지</strong> — "퍼뜨리겠다", "돈을 보내라"는 내용은 별도 범죄가 된다. 대화 전체를 지우지 말고 보존한다.</li>
+      <li><strong>원본 사진의 출처</strong> — 합성에 쓰인 사진이 내 SNS에서 나온 것인지, 누가 접근할 수 있었는지 정리해 둔다.</li>
+      <li><strong>삭제지원 이력</strong> — 디성센터·방심위에 접수한 번호와 날짜가 있으면 같이 낸다.</li>
+    </ul>
+
+    <h2 class="sec">처벌 기준 — 제작·반포뿐 아니라 소지·시청도 대상</h2>
+    <p>성폭력범죄의 처벌 등에 관한 특례법(성폭력처벌법) 제14조의2는 사람의 얼굴·신체·음성을 대상으로 한 성적 허위영상물을 처벌한다. 2024년 10월 16일 개정으로 처벌 범위가 넓어졌다.</p>
+    <table class="rate">
+      <tr><th>행위</th><th>법정형</th><th>비고</th></tr>
+      <tr><td>편집·합성·가공 또는 반포</td><td class="up">7년 이하 징역 또는 5천만 원 이하 벌금</td><td>기존 5년 이하에서 상향</td></tr>
+      <tr><td>영리 목적 반포</td><td class="up">3년 이상 유기징역</td><td>기존 7년 이하에서 상향</td></tr>
+      <tr><td>소지·구입·저장·시청</td><td class="up">3년 이하 징역 또는 3천만 원 이하 벌금</td><td>2024년 개정으로 신설</td></tr>
+      <tr><td>허위영상물로 협박·강요</td><td class="up">1년 이상 유기징역</td><td>제14조의3</td></tr>
+    </table>
+    <p>법률 해설 매체가 소개한 하급심 판결(수원지방법원 2025년 7월 25일 선고, 2024노2217)은 전송받아 시청한 것만으로도 소지·시청죄가 성립한다고 판단했다. 다만 실제 형량은 사안과 양형 요소에 따라 달라지고, 조문 표기도 출처마다 조금씩 달라서 <b>적용 전에는 국가법령정보센터의 현행 조문</b>을 확인해야 한다. 실존 인물이 나오지 않는 AI 생성 성적 영상물까지 처벌하자는 별도 법안은 발의 단계에서 논란이 되고 있으며, 통과된 것으로는 확인되지 않았다.</p>
+
+    <div class="pullquote">영상을 받아 보기만 한 사람도 처벌 대상이 될 수 있다. 피해자는 "퍼뜨린 사람"뿐 아니라 단체방에서 영상을 소지·저장한 사람까지 고소 범위를 상담해 볼 수 있다.</div>
+
+    <h2 class="sec">숫자로 본 디성센터 지원 현황</h2>
+    <p>성평등가족부와 한국여성인권진흥원이 낸 「2025 디지털성범죄 피해자 지원 보고서」를 인용한 보도에 따르면, 중앙 디성센터는 2025년에 피해자 <b>1만637명</b>을 지원했다. 전년보다 3.2% 늘어난 수치다. 이 가운데 피해 영상물 삭제지원이 <b>31만8020건</b>으로 가장 큰 비중을 차지했다. 같은 보도에서 피해자의 10·20대 비중은 77.6%였고, 합성·편집 피해에서는 91.2%였다.</p>
+
+    <div class="infographic-section">
+      <h3>디성센터 합성·편집 피해 접수 (보도 인용)</h3>
+      <div class="bar-chart">
+        <div class="bar-item"><div class="bar-label"><span>2023년</span><span class="val">423건</span></div><div class="bar-track"><div class="bar-fill bar-grey" style="width:31%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>2024년</span><span class="val">1,384건</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:100%">전년 대비 227.2% 증가</div></div></div>
+      </div>
+      <p class="note">※ 2024년 합성·편집 피해 접수가 전년보다 227.2% 늘었다고 보도된 수치. 2025년 합성·편집 피해의 정확한 건수는 보고서 원문에서 확인해야 한다.</p>
+    </div>
+
+    <div class="impact-grid">
+      <div class="impact-card"><span class="impact-num">1만637명</span><span class="impact-label">2025년 중앙 디성센터<br>지원 피해자</span></div>
+      <div class="impact-card"><span class="impact-num">31만8020건</span><span class="impact-label">피해영상물<br>삭제지원</span></div>
+      <div class="impact-card"><span class="impact-num">91.2%</span><span class="impact-label">합성·편집 피해 중<br>10·20대 비중</span></div>
+    </div>
+
+    <h2 class="sec">피해자가 놓치기 쉬운 것들</h2>
+    <ul class="plain">
+      <li><b>삭제 후에도 재유포를 모니터링한다</b> — 한 번 지운 영상이 다른 사이트에 다시 올라오는 일이 잦다. 디성센터의 모니터링 지원을 함께 요청한다.</li>
+      <li><b>협박에는 응하지 않는다</b> — 돈이나 추가 사진을 요구받아도 보내지 않고 대화를 보존한 채 경찰에 알린다. 중고거래나 메신저 사기 때처럼 대화 기록이 핵심 증거다. 사기 신고 절차는 <a href="/2026-10-16-중고거래-사기-신고방법-고소-배상명령-순서">중고거래 사기 신고방법</a>에도 정리했다.</li>
+      <li><b>정신적 피해도 지원 대상</b> — 디성센터는 의료·심리상담 연계를 안내한다. 피해 직후의 불안과 수면 문제를 혼자 견디지 않아도 된다.</li>
+      <li><b>손해배상은 별도 절차</b> — 형사 신고와 별개로 민사상 손해배상을 청구할 수 있다. 소송 전 법률 상담은 대한법률구조공단 등에서 안내받을 수 있다.</li>
+      <li><b>개인정보 침해가 겹쳤다면</b> — 사진·연락처가 유출돼 쓰인 경우 <a href="/2026-10-01-개인정보-분쟁조정-신청방법">개인정보 분쟁조정 신청방법</a>도 확인한다.</li>
+      <li><b>예방도 함께</b> — 공개 SNS 계정의 사진 공개 범위를 줄이고 비공개 전환을 검토한다. 다만 피해의 책임은 사진을 올린 사람이 아니라 합성한 가해자에게 있다.</li>
+    </ul>
+
+    <div class="case">
+      <div class="ct">사례 — 단체 채팅방에서 합성 이미지를 발견한 경우</div>
+      <p>친구가 알려 준 단체 채팅방에서 내 얼굴이 합성된 이미지를 발견했다. 이럴 때는 ① 채팅방 이름·참여자·시각이 보이게 화면 저장 ② 1366 또는 디성센터에 삭제지원·모니터링 요청 ③ 경찰서 또는 182에 신고 순으로 진행한다. 방을 먼저 나가면 증거 확인이 어려워질 수 있으므로 저장한 뒤에 나간다.</p>
+    </div>
+
+    <h2 class="sec">정리 — 신고 체크리스트</h2>
+    <ul class="plain">
+      <li>URL과 화면 저장, 영상 파일 전송 금지</li>
+      <li>1366 또는 디성센터에 삭제지원·모니터링·심리지원 요청</li>
+      <li>플랫폼 신고, 해외·커뮤니티 게시물은 방심위 심의 요청</li>
+      <li>경찰 신고(182 또는 경찰서 방문), 협박 메시지는 보존</li>
+      <li>필요하면 민사 손해배상과 법률 상담을 별도로 검토</li>
+    </ul>
+    <p>피해를 알았을 때 가장 큰 실수는 혼자 해결하려는 것이다. 증거를 남기고 지원센터와 수사기관에 알리면 삭제와 처벌이 함께 진행될 수 있다. 창구와 절차는 바뀔 수 있으므로 연락 전 공식 누리집에서 최신 안내를 확인하자.</p>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#딥페이크</span><span class="hashtag">#딥페이크신고방법</span><span class="hashtag">#디성센터</span><span class="hashtag">#방심위신고</span><span class="hashtag">#허위영상물처벌</span><span class="hashtag">#증거확보</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://www.etoday.co.kr/news/view/2394872" target="_blank" rel="noopener">이투데이 — 딥페이크 성범죄 피해 상담, 디성센터로 하세요…삭제지원·모니터링 등 제공</a>
+      <a href="https://mobile.newsis.com/view/NISX20241106_0002949322" target="_blank" rel="noopener">뉴시스 — 딥페이크 피해자센터 24시간 가동한다…삭제 인력도 2배 증원</a>
+      <a href="https://www.lawtalk.co.kr/posts/164974" target="_blank" rel="noopener">로톡 — 딥페이크 성범죄 피해 대응: 합성 영상 신고와 삭제 요청 절차</a>
+      <a href="https://www.lawtalk.co.kr/posts/92517" target="_blank" rel="noopener">로톡 — 딥페이크 범죄, 법 개정 이후 달라진 점은?</a>
+      <a href="https://www.lawtalk.co.kr/posts/186965" target="_blank" rel="noopener">로톡 — 딥페이크 성착취물, 보기만 해도 처벌되나(판례)</a>
+      <a href="https://v.daum.net/v/20260416121208801" target="_blank" rel="noopener">다음뉴스 — 디지털 성범죄 '친밀 관계' 가해자 30% 증가…딥페이크 범죄 늘어</a>
+      <a href="https://www.khan.co.kr/article/202504111006011" target="_blank" rel="noopener">경향신문 — 1만명 넘은 '디지털성범죄' 피해자…딥페이크 피해 99.6%는 여성</a>
+    </div>
+
+    <p class="disclaimer">※ 본 아티클은 공개 자료와 언론 보도를 정리한 정보성 콘텐츠이며 법률 상담이 아니다. 처벌 규정은 개정될 수 있어 실제 적용 전 국가법령정보센터의 현행 조문을 확인해야 하고, 지원 창구·전화번호·처리 기간은 바뀔 수 있으므로 1366, 한국여성인권진흥원, 방송통신심의위원회, 경찰에서 최신 안내를 확인하라. 통계 수치는 보도 인용이며 공식 보고서와 다를 수 있다. 피해를 겪고 있다면 혼자 대응하지 말고 전문 상담기관에 연락하라.</p>
+
+  </div>
+<!-- HUB:RELATED:BEGIN -->
+<style>
+.hub-bc{font-size:13px;color:#5b6672;margin:0 0 18px;font-family:'Noto Sans KR',sans-serif}
+.hub-bc a{color:#5b6672;text-decoration:none}.hub-bc a:hover{text-decoration:underline}
+.hub-rel{margin:38px 0 6px;padding:20px 22px;border:1px solid #e3e8ee;border-radius:10px;
+  background:#fafbfc;font-family:'Noto Sans KR',sans-serif}
+.hub-rel h2{font-size:15px;margin:0 0 14px;font-weight:700;color:#12202e;
+  font-family:'Noto Sans KR',sans-serif;border:0;padding:0}
+.hub-rel ul{list-style:none;padding:0;margin:0}
+.hub-rel li{padding:7px 0;font-size:14.5px;line-height:1.55}
+.hub-rel li a{color:#12202e;text-decoration:none}
+.hub-rel li a:hover{color:#1a5f8a;text-decoration:underline}
+.hub-rel .hub-more{margin:14px 0 0;font-size:13.5px}
+.hub-rel .hub-more a{color:#1a5f8a;text-decoration:none;font-weight:700}
+</style>
+<aside class="hub-rel">
+  <h2>같은 분야 다른 글 — 통신·생활지원</h2>
+  <ul>
+    <li><a href="/2026-08-23-휴대폰-위약금-계산법">휴대폰 위약금 계산법 — 선택약정 할인반환금과 공시지원금 반환금 차이</a></li>
+    <li><a href="/2026-08-30-휴대폰-명의도용-확인방법">휴대폰 명의도용 확인방법 — 가입사실현황조회와 가입제한 신청 절차</a></li>
+    <li><a href="/2026-08-11-탄소중립포인트-신청방법">탄소중립포인트 신청방법 — 지급 대상과 적립 기준, 예산 소진 문제 정리</a></li>
+    <li><a href="/2026-08-28-조기폐차-지원금-신청방법">조기폐차 지원금 신청방법 — 배출가스 5등급 차량 조회와 상한액 산정</a></li>
+    <li><a href="/2026-10-03-배출권거래제-뜻-유상할당-비율">배출권거래제 뜻 — 유상할당 비율과 배출권 가격, 전기요금 영향</a></li>
+    <li><a href="/2026-10-11-전기차-보조금-신청방법-전환지원금-조건">전기차 보조금 신청방법 — 국비 상한과 가격 구간, 전환지원금 조건</a></li>
+    <li><a href="/2026-10-19-에너지바우처-대상-자격-지원금액-사용기한">에너지바우처 대상 자격 — 세대원 수별 지원금액과 사용기한 언제까지</a></li>
+    <li><a href="/2026-10-23-스미싱-문자-클릭-대처방법-악성앱-삭제-118-신고-소액결제-차단">스미싱 문자 클릭 대처방법 — 악성앱 삭제·118 신고·소액결제 차단 순서</a></li>
+    <li><a href="/2026-10-25-폐가전-무상수거-품목-종류-냉장고-소형가전-5개-조건-수거불가-확인">폐가전 무상수거 품목 종류 — 냉장고 1대·소형가전 5개 조건과 수거 불가 확인</a></li>
+  </ul>
+  <p class="hub-more"><a href="/life/">통신·생활지원 전체 보기 →</a></p>
+</aside>
+<!-- HUB:RELATED:END -->
+</article>
+</body>
+</html>
