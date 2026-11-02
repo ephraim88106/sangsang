@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5등급 차량 운행제한 언제까지 — 계절관리제 단속 시간·과태료 얼마·면제 대상 | 환경·기후</title>
+  <meta name="description" content="배출가스 5등급 차량은 미세먼지 계절관리제(12월~3월) 평일 오전 6시~오후 9시 운행이 제한되고, 저공해 조치를 하지 않고 적발되면 하루 10만원 과태료가 부과된다. 등급 조회, 제외 대상, 면제받는 방법을 정리했다.">
+  <meta name="keywords" content="5등급 차량 운행제한, 계절관리제, 5등급 과태료, 배출가스 등급 조회, 저공해 조치, 운행제한 제외 대상, 미세먼지 계절관리제">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f2f4f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 45%, #388e3c 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #c8e6c9; color: #1b5e20; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #e8f5e9; border-left: 5px solid #2e7d32; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #2e7d32; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #1b5e20; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #2e7d32; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #1b5e20; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #e8f5e9; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #2e7d32; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #1b5e20; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #f1f8f2; border-left: 4px solid #66bb6a; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #1b5e20; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f1f8f2; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #1b5e20; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #1b5e20; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #d5e8d6; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-teal { background: linear-gradient(90deg, #1b5e20, #66bb6a); }
+    .bar-cyan { background: linear-gradient(90deg, #1b5e20, #81c784); }
+    .bar-amber { background: linear-gradient(90deg, #ef6c00, #ffb300); }
+    .bar-blue { background: linear-gradient(90deg, #1b5e20, #66bb6a); }
+    .bar-grey { background: linear-gradient(90deg, #546e7a, #90a4ae); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #c5e1c7; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #e8f5e9; color: #1b5e20; font-weight: 700; }
+    table.rate td.up { color: #1b5e20; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #ef6c00; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #2e7d32; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #1b5e20; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #c8e6c9; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #1b5e20; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #c8e6c9; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #2e7d32; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .formula { background: #f1f8f2; border: 1.5px dashed #66bb6a; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 16.5px; font-weight: 800; color: #1b5e20; line-height: 1.8; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #388e3c; margin-top: 10px; margin-bottom: 0; }
+    .warnbox { background: #fff8e1; border-left: 5px solid #f9a825; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 26px 0; }
+    .warnbox .wt { font-size: 14px; font-weight: 800; color: #ef6c00; margin-bottom: 8px; }
+    .warnbox p { font-size: 15px; color: #5d4037; margin-bottom: 0; word-break: keep-all; }
+    .case { background: #fff; border: 1.5px solid #c8e6c9; border-left: 5px solid #2e7d32; border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; }
+    .case .ct { font-size: 13.5px; font-weight: 800; color: #1b5e20; margin-bottom: 6px; letter-spacing: 0.3px; }
+    .case p { font-size: 14.8px; margin-bottom: 8px; }
+    .case p:last-child { margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #e8f5e9; color: #2e7d32; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #2e7d32; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<!-- SEO:AUTO BEGIN -->
+<meta property="article:published_time" content="2026-11-02T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-11-02T09:00:00+09:00">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "5등급 차량 운행제한 언제까지 — 계절관리제 단속 시간·과태료 얼마·면제 대상",
+  "description": "배출가스 5등급 차량은 미세먼지 계절관리제(12월~3월) 평일 오전 6시~오후 9시 운행이 제한되고, 저공해 조치를 하지 않고 적발되면 하루 10만원 과태료가 부과된다. 등급 조회, 제외 대상, 면제받는 방법을 정리했다.",
+  "url": "https://sangsang.ephseed.com/2026-11-02-5%EB%93%B1%EA%B8%89-%EC%B0%A8%EB%9F%89-%EC%9A%B4%ED%96%89%EC%A0%9C%ED%95%9C-%EB%8B%A8%EC%86%8D-%EA%B3%84%EC%A0%88%EA%B4%80%EB%A6%AC%EC%A0%9C-%EA%B3%BC%ED%83%9C%EB%A3%8C-%EC%A0%9C%EC%99%B8-%EB%8C%80%EC%83%81",
+  "datePublished": "2026-11-02T09:00:00+09:00",
+  "dateModified": "2026-11-02T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-11-02-5%EB%93%B1%EA%B8%89-%EC%B0%A8%EB%9F%89-%EC%9A%B4%ED%96%89%EC%A0%9C%ED%95%9C-%EB%8B%A8%EC%86%8D-%EA%B3%84%EC%A0%88%EA%B4%80%EB%A6%AC%EC%A0%9C-%EA%B3%BC%ED%83%9C%EB%A3%8C-%EC%A0%9C%EC%99%B8-%EB%8C%80%EC%83%81">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="5등급 차량 운행제한 언제까지 — 계절관리제 단속 시간·과태료 얼마·면제 대상 | 환경·기후">
+<meta property="og:description" content="배출가스 5등급 차량은 미세먼지 계절관리제(12월~3월) 평일 오전 6시~오후 9시 운행이 제한되고, 저공해 조치를 하지 않고 적발되면 하루 10만원 과태료가 부과된다. 등급 조회, 제외 대상, 면제받는 방법을 정리했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-11-02-5%EB%93%B1%EA%B8%89-%EC%B0%A8%EB%9F%89-%EC%9A%B4%ED%96%89%EC%A0%9C%ED%95%9C-%EB%8B%A8%EC%86%8D-%EA%B3%84%EC%A0%88%EA%B4%80%EB%A6%AC%EC%A0%9C-%EA%B3%BC%ED%83%9C%EB%A3%8C-%EC%A0%9C%EC%99%B8-%EB%8C%80%EC%83%81">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-11-02T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-11-02T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N28MJLW4W9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-N28MJLW4W9");</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-EVlth33UH8CTDu2u"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-KMCr4AoIjIDsi9XA"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-qqfX36xk8gz6faM6"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+<article class="article-wrap">
+<!-- HUB:BREADCRUMB:BEGIN -->
+<nav class="hub-bc"><a href="/">생생 정보통</a> &rsaquo; <a href="/life/">통신·생활지원</a></nav>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "생생 정보통", "item": "https://sangsang.ephseed.com/"}, {"@type": "ListItem", "position": 2, "name": "통신·생활지원", "item": "https://sangsang.ephseed.com/life/"}]}</script>
+<!-- HUB:BREADCRUMB:END -->
+  <header class="hero">
+    <div class="category-badge">🌱 환경 · 기후</div>
+    <h1>5등급 차량 운행제한 언제까지 — 계절관리제 단속 시간·과태료 얼마·면제 대상</h1>
+    <p class="hero-sub">12월부터 3월까지는 <b>저공해 조치를 하지 않은 배출가스 5등급 차량</b>이 평일 낮에 달리면 하루 10만원 과태료 대상이 된다. 내 차 등급 조회부터 제외 대상, 면제받는 방법까지 순서대로 정리했다.</p>
+    <div class="hero-meta">
+      <span>🌱 환경 · 기후</span>
+      <span>📅 2026년 11월 2일</span>
+      <span>⏱️ 약 7분</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+    <div class="summary-box">
+      <h2>핵심 요약</h2>
+      <ul>
+        <li>미세먼지 계절관리제 기간(<strong>12월~3월</strong>)에는 저공해 조치를 하지 않은 <strong>배출가스 5등급 차량</strong>의 운행이 제한된다.</li>
+        <li>제한 시간은 지자체 안내 기준 <strong>평일 오전 6시~오후 9시</strong>이고, 토·일요일과 공휴일은 제외된다. 적발되면 <strong>하루 10만원</strong> 과태료다.</li>
+        <li>긴급차량·장애인 차량·국가유공자 차량, 저감장치를 이미 단 차량 등은 <strong>제외 대상</strong>이다. 저감장치를 달 수 없는 차량은 소유자 요건에 따라 제외될 수 있다.</li>
+        <li>내 차가 5등급인지는 <strong>차량번호로 조회</strong>할 수 있고, 저공해 조치(저감장치 부착·조기폐차 등)를 하면 단속에서 빠진다.</li>
+      </ul>
+    </div>
+
+    <h2 class="sec">1. 5등급 차량 운행제한이란</h2>
+    <p>자동차는 배출가스 정도에 따라 1~5등급으로 나뉜다. 이 가운데 오염물질을 가장 많이 내는 <strong>5등급</strong>은 주로 오래된 경유차이고, 일부 노후 휘발유·LPG 차량도 포함된다. 고농도 미세먼지가 잦은 겨울철에 이 5등급 차량이 도심을 달리지 못하게 막는 제도가 <strong>미세먼지 계절관리제 운행제한</strong>이다.</p>
+    <p>운행제한은 매년 12월 1일부터 다음 해 3월 말까지 이어진다. 서울시는 저공해 조치를 하지 않은 5등급 차량을 서울 전역에서 제한한다고 안내하고 있고, 인천·경기 등 다른 지자체도 같은 기간 비슷한 방식으로 단속한다. 다만 적용 지역과 방식은 지자체마다 다를 수 있어 거주지·운행지 공지를 확인해야 한다.</p>
+
+    <h2 class="sec">2. 적용 기간과 시간 — 언제 단속되나</h2>
+    <table class="rate">
+      <tr><th>항목</th><th>내용</th></tr>
+      <tr><td>기간</td><td class="up">12월 1일 ~ 다음 해 3월 31일</td></tr>
+      <tr><td>시간</td><td class="up">평일 06:00 ~ 21:00</td></tr>
+      <tr><td>제외 요일</td><td>토·일요일, 공휴일</td></tr>
+      <tr><td>과태료</td><td class="down">1일 10만원 (1일 1회, 최초 적발 기준)</td></tr>
+      <tr><td>단속 방식</td><td>CCTV 등 무인단속카메라의 차량번호 판독</td></tr>
+    </table>
+    <p class="note">※ 서울시·대전시·수원시 등 지자체 안내를 정리한 것이다. 올해(2026년 12월~2027년 3월) 시행 세부 일정과 지역 확대 여부는 환경부·지자체 공고로 최종 확인한다.</p>
+
+    <h2 class="sec">3. 내 차가 5등급인지 확인하는 방법</h2>
+    <div class="steps">
+      <div class="step"><div class="step-t">자동차 배출가스 등급 조회</div><div class="step-d">자동차배출가스등급제 누리집에서 <strong>차량번호</strong>를 입력하면 등급이 나온다. 자동차 등록증이나 자동차세 고지서 안내 문구로도 5등급 여부를 알 수 있다.</div></div>
+      <div class="step"><div class="step-t">저공해 조치 이력 확인</div><div class="step-d">이미 매연저감장치(DPF) 부착이나 엔진 개조를 했다면 단속 대상이 아니다. 조치 이력이 등록돼 있는지 한국자동차환경협회나 지자체에 확인한다.</div></div>
+      <div class="step"><div class="step-t">운행 지역 확인</div><div class="step-d">서울·인천·경기 등 단속 지자체를 지나는지 확인한다. 거주지는 지방이어도 서울에 들어가면 단속 대상이 될 수 있다.</div></div>
+    </div>
+
+    <h2 class="sec">4. 단속 제외 대상 — 누가 빠지나</h2>
+    <ul class="plain">
+      <li><strong>저공해 조치를 한 차량</strong> — 매연저감장치를 달았거나 저공해 엔진으로 개조한 5등급 차량</li>
+      <li><strong>긴급자동차</strong> — 소방차·구급차 등</li>
+      <li><strong>장애인 차량·국가유공자 차량</strong> — 지자체별 등록 요건 충족 시</li>
+      <li><strong>저감장치 부착이 불가능한 차량</strong> 중 기초생활수급자·차상위계층·소상공인 소유 차량 (시즌별 안내 확인)</li>
+      <li><strong>저공해 조치를 신청했으나 예산 부족 등으로 지원받지 못한 차량</strong> — 과태료 부과가 유예되는 경우가 있다</li>
+    </ul>
+    <div class="warnbox">
+      <div class="wt">⚠️ 제외 대상도 사전 등록이 필요할 수 있다</div>
+      <p>장애인 차량·소상공인 차량 등은 지자체에 사전 등록하거나 서류를 내야 무인단속에서 걸러지는 경우가 있다. 등록하지 않으면 과태료 통지서가 먼저 올 수 있으니 12월 전에 지자체 안내를 확인한다.</p>
+    </div>
+
+    <h2 class="sec">5. 과태료를 피하는 방법 — 저공해 조치</h2>
+    <p>단속에서 벗어나는 가장 확실한 길은 <strong>저공해 조치</strong>다. 크게 세 가지가 있다.</p>
+    <div class="flow">
+      <div class="flow-box"><div class="ft">① 매연저감장치(DPF) 부착</div><div class="fd">부착 가능한 경유차는 정부·지자체 지원을 받아 장치를 단다. 한국자동차환경협회에서 부착 가능 여부를 먼저 확인한다.</div></div>
+      <div class="flow-box"><div class="ft">② 조기폐차</div><div class="fd">차를 폐차하고 보조금을 받는다. 대상 요건과 지원금은 해마다 달라 별도 확인이 필요하다.</div></div>
+      <div class="flow-box"><div class="ft">③ 엔진 개조·신차 대체</div><div class="fd">저공해 엔진으로 개조하거나 친환경차로 바꾸면 5등급에서 벗어난다.</div></div>
+    </div>
+    <p>조기폐차는 <a href="/2026-08-28-조기폐차-지원금-신청방법">조기폐차 지원금 신청방법</a> 글에서 지원 요건과 순서를 따로 정리했다. 조치를 신청한 뒤 기한 안에 완료하면 부과된 과태료가 취소되거나 환급되는 경우가 있으니, 통지서를 받았다면 지자체 대기환경 담당 부서에 문의한다.</p>
+
+    <h2 class="sec">6. 얼마나 걸렸나 — 단속 실적으로 본 효과</h2>
+    <p>환경부가 2020년 12월~2021년 2월 수도권 단속 결과를 집계했을 때, 석 달 동안 <strong>4만 6,037대</strong>가 적발됐다. 같은 기간 <strong>1만 2,355대</strong>가 저공해 조치에 참여했고, 하루 평균 적발 건수는 초반 2,605건에서 1,531건으로 줄었다. 단속이 시작되면 단속에 걸린 차주가 조치에 나서면서 적발이 줄어드는 흐름이다.</p>
+    <div class="infographic-section">
+      <h3>2020~21 첫 시즌 수도권 5등급 단속 실적 (환경부 집계)</h3>
+      <div class="bar-chart">
+        <div class="bar-item"><div class="bar-label"><span>적발 차량(3개월)</span><span class="val">46,037대</span></div><div class="bar-track"><div class="bar-fill bar-amber" style="width:100%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>저공해 조치 참여 차량</span><span class="val">12,355대</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:27%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>하루 평균 적발(초반)</span><span class="val">2,605건</span></div><div class="bar-track"><div class="bar-fill bar-grey" style="width:57%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>하루 평균 적발(후반)</span><span class="val">1,531건</span></div><div class="bar-track"><div class="bar-fill bar-cyan" style="width:33%"></div></div></div>
+      </div>
+      <p class="note">※ 막대 길이는 같은 단위끼리의 상대 비교용이다. 이후 시즌의 적발 건수는 환경부·지자체 발표를 확인한다.</p>
+    </div>
+
+    <h2 class="sec">7. 12월 전에 할 일 체크리스트</h2>
+    <ul class="plain">
+      <li>차량번호로 <strong>배출가스 등급</strong>을 조회한다. 5등급이 아니면 여기서 끝이다.</li>
+      <li>5등급이라면 <strong>저공해 조치 이력</strong>과 제외 대상 해당 여부를 확인한다.</li>
+      <li>제외 대상(장애인·소상공인 등)은 <strong>사전 등록</strong>이 필요한지 지자체에 묻는다.</li>
+      <li>조치가 필요하면 한국자동차환경협회(1544-0907)나 지자체에 DPF 부착·조기폐차 신청을 서두른다. 예산은 소진되면 신청이 막힌다.</li>
+      <li>서울 등 단속 지역으로 출퇴근한다면 <strong>평일 06~21시</strong>에는 대체 교통수단을 계획한다.</li>
+      <li>과태료 통지서를 받으면 <strong>납부 기한 안에</strong> 이의제기 또는 조치 완료 증빙을 낸다.</li>
+    </ul>
+    <div class="pullquote">5등급 단속은 일단 걸리면 10만원이 아니라, 매일 운행할 때마다 쌓이는 비용이다. 하루라도 먼저 조치를 신청하는 쪽이 이득이다.</div>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#5등급차량</span><span class="hashtag">#운행제한</span><span class="hashtag">#계절관리제</span><span class="hashtag">#미세먼지</span><span class="hashtag">#과태료</span><span class="hashtag">#저공해조치</span><span class="hashtag">#배출가스등급</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://news.seoul.go.kr/env/?p=505710" target="_blank" rel="noopener">서울특별시 환경분야 누리집 — 배출가스 5등급 차량 운행제한 제도</a>
+      <a href="https://mediahub.seoul.go.kr/archives/1303629" target="_blank" rel="noopener">서울시 미디어허브 — 저공해 미조치 5등급차 서울 운행 제한</a>
+      <a href="https://www.daejeon.go.kr/drh/DrhContentsHtmlView.do?menuSeq=6594" target="_blank" rel="noopener">대전광역시 — 배출가스 5등급 차량 운행제한 안내</a>
+      <a href="https://www.gangnam.go.kr/board/article/4530/view.do?mid=fm0503" target="_blank" rel="noopener">강남구 — 계절관리제 기간 배출가스 5등급 차량 운행제한 안내</a>
+      <a href="https://www.etoday.co.kr/news/view/2000908" target="_blank" rel="noopener">이투데이 — 배출가스 5등급 운행제한, 3개월간 4만6037대 적발 (환경부 집계)</a>
+    </div>
+
+    <p class="disclaimer">※ 본 아티클은 공개 자료를 정리한 정보성 콘텐츠이며 법률·행정 자문이 아닙니다. 적용 지역, 제외 대상, 과태료, 지원 금액은 해마다·지자체마다 달라질 수 있으므로 시행 전 환경부, 한국자동차환경협회, 거주지 지자체의 최신 공고를 확인하시기 바랍니다.</p>
+
+  </div>
+<!-- HUB:RELATED:BEGIN -->
+<style>
+.hub-bc{font-size:13px;color:#5b6672;margin:0 0 18px;font-family:'Noto Sans KR',sans-serif}
+.hub-bc a{color:#5b6672;text-decoration:none}.hub-bc a:hover{text-decoration:underline}
+.hub-rel{margin:38px 0 6px;padding:20px 22px;border:1px solid #e3e8ee;border-radius:10px;
+  background:#fafbfc;font-family:'Noto Sans KR',sans-serif}
+.hub-rel h2{font-size:15px;margin:0 0 14px;font-weight:700;color:#12202e;
+  font-family:'Noto Sans KR',sans-serif;border:0;padding:0}
+.hub-rel ul{list-style:none;padding:0;margin:0}
+.hub-rel li{padding:7px 0;font-size:14.5px;line-height:1.55}
+.hub-rel li a{color:#12202e;text-decoration:none}
+.hub-rel li a:hover{color:#1a5f8a;text-decoration:underline}
+.hub-rel .hub-more{margin:14px 0 0;font-size:13.5px}
+.hub-rel .hub-more a{color:#1a5f8a;text-decoration:none;font-weight:700}
+</style>
+<aside class="hub-rel">
+  <h2>같은 분야 다른 글 — 통신·생활지원</h2>
+  <ul>
+    <li><a href="/2026-08-23-휴대폰-위약금-계산법">휴대폰 위약금 계산법 — 선택약정 할인반환금과 공시지원금 반환금 차이</a></li>
+    <li><a href="/2026-08-30-휴대폰-명의도용-확인방법">휴대폰 명의도용 확인방법 — 가입사실현황조회와 가입제한 신청 절차</a></li>
+    <li><a href="/2026-08-11-탄소중립포인트-신청방법">탄소중립포인트 신청방법 — 지급 대상과 적립 기준, 예산 소진 문제 정리</a></li>
+    <li><a href="/2026-08-28-조기폐차-지원금-신청방법">조기폐차 지원금 신청방법 — 배출가스 5등급 차량 조회와 상한액 산정</a></li>
+    <li><a href="/2026-10-03-배출권거래제-뜻-유상할당-비율">배출권거래제 뜻 — 유상할당 비율과 배출권 가격, 전기요금 영향</a></li>
+    <li><a href="/2026-10-11-전기차-보조금-신청방법-전환지원금-조건">전기차 보조금 신청방법 — 국비 상한과 가격 구간, 전환지원금 조건</a></li>
+    <li><a href="/2026-10-19-에너지바우처-대상-자격-지원금액-사용기한">에너지바우처 대상 자격 — 세대원 수별 지원금액과 사용기한 언제까지</a></li>
+    <li><a href="/2026-10-23-스미싱-문자-클릭-대처방법-악성앱-삭제-118-신고-소액결제-차단">스미싱 문자 클릭 대처방법 — 악성앱 삭제·118 신고·소액결제 차단 순서</a></li>
+    <li><a href="/2026-10-25-폐가전-무상수거-품목-종류-냉장고-소형가전-5개-조건-수거불가-확인">폐가전 무상수거 품목 종류 — 냉장고 1대·소형가전 5개 조건과 수거 불가 확인</a></li>
+    <li><a href="/2026-10-31-딥페이크-피해-신고방법-삭제-요청-순서-증거-확보-체크리스트">딥페이크 피해 신고방법 — 삭제 요청 순서와 증거 확보 체크리스트</a></li>
+  </ul>
+  <p class="hub-more"><a href="/life/">통신·생활지원 전체 보기 →</a></p>
+</aside>
+<!-- HUB:RELATED:END -->
+</article>
+</body>
+</html>
