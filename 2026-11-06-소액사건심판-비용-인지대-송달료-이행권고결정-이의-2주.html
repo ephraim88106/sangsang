@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>소액사건심판 비용 — 인지대·송달료와 이행권고결정 이의 2주 | 정치·사법</title>
+  <meta name="description" content="소액사건심판은 소를 낼 때 청구금액이 3,000만 원 이하인 금전 청구에 적용되는 간이 절차다. 소장 접수 후 법원이 이행권고결정을 내리고, 피고가 2주 안에 이의하지 않으면 확정판결과 같은 효력이 생긴다. 신청 요건, 인지대·송달료 계산, 전자소송 접수 순서, 이의신청 이후 변론과 항소 제한을 정리했다.">
+  <meta name="keywords" content="소액사건심판 신청방법, 소액소송 방법, 소액사건 3천만원, 이행권고결정, 이행권고결정 이의신청, 소액소송 인지대, 소액소송 송달료, 소액사건심판법, 나홀로 소송, 소액소송 전자소송">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f2f4f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #311b92 0%, #4527a0 45%, #5e35b1 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #d1c4e9; color: #311b92; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #ede7f6; border-left: 5px solid #4527a0; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #4527a0; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #311b92; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #4527a0; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #311b92; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #ede7f6; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #4527a0; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #311b92; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #f3eefb; border-left: 4px solid #9575cd; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #311b92; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f5f1fc; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #311b92; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #311b92; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #e0d7f0; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-teal { background: linear-gradient(90deg, #311b92, #9575cd); }
+    .bar-cyan { background: linear-gradient(90deg, #311b92, #b39ddb); }
+    .bar-amber { background: linear-gradient(90deg, #ef6c00, #ffb300); }
+    .bar-blue { background: linear-gradient(90deg, #311b92, #9575cd); }
+    .bar-grey { background: linear-gradient(90deg, #546e7a, #90a4ae); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #d5cbe8; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #ede7f6; color: #311b92; font-weight: 700; }
+    table.rate td.up { color: #311b92; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #ef6c00; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #4527a0; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #311b92; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #d1c4e9; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #311b92; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #d1c4e9; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #4527a0; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .formula { background: #f5f1fc; border: 1.5px dashed #9575cd; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 16.5px; font-weight: 800; color: #311b92; line-height: 1.8; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #5e35b1; margin-top: 10px; margin-bottom: 0; }
+    .warnbox { background: #fff8e1; border-left: 5px solid #f9a825; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 26px 0; }
+    .warnbox .wt { font-size: 14px; font-weight: 800; color: #ef6c00; margin-bottom: 8px; }
+    .warnbox p { font-size: 15px; color: #5d4037; margin-bottom: 0; word-break: keep-all; }
+    .case { background: #fff; border: 1.5px solid #d1c4e9; border-left: 5px solid #4527a0; border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; }
+    .case .ct { font-size: 13.5px; font-weight: 800; color: #311b92; margin-bottom: 6px; letter-spacing: 0.3px; }
+    .case p { font-size: 14.8px; margin-bottom: 8px; }
+    .case p:last-child { margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #ede7f6; color: #4527a0; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #4527a0; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<!-- SEO:AUTO BEGIN -->
+<meta property="article:published_time" content="2026-11-06T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-11-06T09:00:00+09:00">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "소액사건심판 비용 — 인지대·송달료와 이행권고결정 이의 2주",
+  "description": "소액사건심판은 소를 낼 때 청구금액이 3,000만 원 이하인 금전 청구에 적용되는 간이 절차다. 소장 접수 후 법원이 이행권고결정을 내리고, 피고가 2주 안에 이의하지 않으면 확정판결과 같은 효력이 생긴다. 신청 요건, 인지대·송달료 계산, 전자소송 접수 순서, 이의신청 이후 변론과 항소 제한을 정리했다.",
+  "url": "https://sangsang.ephseed.com/2026-11-06-%EC%86%8C%EC%95%A1%EC%82%AC%EA%B1%B4%EC%8B%AC%ED%8C%90-%EB%B9%84%EC%9A%A9-%EC%9D%B8%EC%A7%80%EB%8C%80-%EC%86%A1%EB%8B%AC%EB%A3%8C-%EC%9D%B4%ED%96%89%EA%B6%8C%EA%B3%A0%EA%B2%B0%EC%A0%95-%EC%9D%B4%EC%9D%98-2%EC%A3%BC",
+  "datePublished": "2026-11-06T09:00:00+09:00",
+  "dateModified": "2026-11-06T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-11-06-%EC%86%8C%EC%95%A1%EC%82%AC%EA%B1%B4%EC%8B%AC%ED%8C%90-%EB%B9%84%EC%9A%A9-%EC%9D%B8%EC%A7%80%EB%8C%80-%EC%86%A1%EB%8B%AC%EB%A3%8C-%EC%9D%B4%ED%96%89%EA%B6%8C%EA%B3%A0%EA%B2%B0%EC%A0%95-%EC%9D%B4%EC%9D%98-2%EC%A3%BC">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="소액사건심판 비용 — 인지대·송달료와 이행권고결정 이의 2주 | 정치·사법">
+<meta property="og:description" content="소액사건심판은 소를 낼 때 청구금액이 3,000만 원 이하인 금전 청구에 적용되는 간이 절차다. 소장 접수 후 법원이 이행권고결정을 내리고, 피고가 2주 안에 이의하지 않으면 확정판결과 같은 효력이 생긴다. 신청 요건, 인지대·송달료 계산, 전자소송 접수 순서, 이의신청 이후 변론과 항소 제한을 정리했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-11-06-%EC%86%8C%EC%95%A1%EC%82%AC%EA%B1%B4%EC%8B%AC%ED%8C%90-%EB%B9%84%EC%9A%A9-%EC%9D%B8%EC%A7%80%EB%8C%80-%EC%86%A1%EB%8B%AC%EB%A3%8C-%EC%9D%B4%ED%96%89%EA%B6%8C%EA%B3%A0%EA%B2%B0%EC%A0%95-%EC%9D%B4%EC%9D%98-2%EC%A3%BC">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-11-06T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-11-06T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N28MJLW4W9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-N28MJLW4W9");</script>
+<!-- SEO:END -->
+</head>
+<body>
+
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-EVlth33UH8CTDu2u"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-KMCr4AoIjIDsi9XA"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-qqfX36xk8gz6faM6"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+<article class="article-wrap">
+<!-- HUB:BREADCRUMB:BEGIN -->
+<nav class="hub-bc"><a href="/">생생 정보통</a> &rsaquo; <a href="/law/">법률·행정</a></nav>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "생생 정보통", "item": "https://sangsang.ephseed.com/"}, {"@type": "ListItem", "position": 2, "name": "법률·행정", "item": "https://sangsang.ephseed.com/law/"}]}</script>
+<!-- HUB:BREADCRUMB:END -->
+  <header class="hero">
+    <div class="category-badge">🏛️ 정치 · 사법</div>
+    <h1>소액사건심판 비용 —<br>인지대·송달료와 이행권고결정 이의 2주</h1>
+    <p class="hero-sub">떼인 돈이 3,000만 원 이하라면 변호사 없이도 낼 수 있는 <b>간이 소송 절차</b>가 있다. 어디에 무엇을 내고, 비용은 얼마이며, 상대가 이의하면 어떻게 되는지 순서대로 정리했다.</p>
+    <div class="hero-meta">
+      <span>🏛️ 정치 · 사법</span>
+      <span>📅 2026년 11월 6일</span>
+      <span>⏱️ 약 8분</span>
+    </div>
+  </header>
+  <div class="body-content">
+    <div class="summary-box">
+      <h2>핵심 요약</h2>
+      <ul>
+        <li>소액사건은 <strong>소를 낼 때의 청구금액이 3,000만 원 이하이고 금전·대체물·유가증권의 일정 수량을 달라는 청구</strong>일 때 적용된다(소액사건심판규칙 제1조의2).</li>
+        <li>소장을 접수하면 법원은 먼저 <strong>이행권고결정</strong>을 보낸다. 피고가 송달받은 날부터 <strong>2주 안에 이의하지 않으면 확정판결과 같은 효력</strong>이 생긴다.</li>
+        <li>소송비용은 <strong>인지대 + 송달료(당사자 수 × 10회분)</strong>다. 청구 1,000만 원이면 인지대 5만 원과 송달료 5만 6,400원으로 약 10만 6천 원이다.</li>
+        <li>이의가 나오면 변론기일이 잡히고 가급적 1회 변론으로 끝내도록 되어 있으며, 상고는 헌법 위반이나 대법원 판례 상반 같은 사유로 제한된다.</li>
+      </ul>
+    </div>
+
+    <h2 class="sec">1. 소액사건심판이란 — 빠르고 간단한 소송 절차</h2>
+    <p>소액사건심판은 적은 금액의 분쟁을 <strong>신속하고 저렴하게 처리</strong>하려고 만든 민사소송의 특별 절차다. 근거 법률은 소액사건심판법이고, 세부 사항은 대법원의 소액사건심판규칙이 정한다. 일반 민사소송보다 서면 부담이 적고, 소송대리 요건이 완화되며, 판결 이유를 간단히 적을 수 있다.</p>
+    <p>빌려준 돈, 받지 못한 물품대금, 보증금 일부 반환, 중고거래 대금 반환처럼 <b>돈을 달라는 청구</b>가 대표적이다. 앞서 다룬 지급명령이 서류만으로 진행되는 독촉 절차라면, 소액사건은 처음부터 <b>소송으로 가되 절차를 간소화</b>한 것이다.</p>
+    <div class="pullquote">소액사건의 핵심은 금액 기준이 아니라 청구의 성격이다. 3,000만 원 이하여도 금전 지급 청구가 아니면 소액사건이 되지 않는다.</div>
+
+    <h2 class="sec">2. 신청 요건 — 3,000만 원 이하와 일부청구 금지</h2>
+    <table class="rate">
+      <tr><th>요건</th><th>내용</th><th>유의점</th></tr>
+      <tr><td class="up">금액</td><td>소를 제기할 때 청구금액 3,000만 원 이하</td><td>이자·지연손해금은 소가에 넣지 않는다</td></tr>
+      <tr><td class="up">청구 종류</td><td>금전, 그 밖의 대체물, 유가증권의 일정 수량 지급</td><td>건물 인도·소유권 이전은 해당하지 않는다</td></tr>
+      <tr><td class="up">제소 시점</td><td>소를 낼 때를 기준으로 판단</td><td>이후 청구 금액을 늘려도 소액사건 성격은 소제기 시점 기준</td></tr>
+    </table>
+    <p class="note">소액사건심판규칙 제1조의2 기준이다. 이 금액은 2016년 말 규칙 개정으로 2,000만 원에서 3,000만 원으로 올랐다. 접수 전 국가법령정보센터에서 현행 규정을 확인한다.</p>
+    <div class="warnbox">
+      <div class="wt">3,000만 원 넘는 채권을 쪼개 내면 각하된다</div>
+      <p>한 개의 채권 중 <b>일부만 청구해 소액사건으로 처리받으려는 경우</b>, 법원은 판결로 소를 각하한다(소액사건심판법 제5조의2). 5,000만 원 채권을 3,000만 원 이하로 나누어 내는 방식은 통하지 않는다.</p>
+    </div>
+
+    <h2 class="sec">3. 소송비용 — 인지대와 송달료 계산</h2>
+    <h3 class="sub">인지대</h3>
+    <p>인지대는 소송목적의 값(소가)에 따라 민사소송 등 인지법이 정한다. 소가 1,000만 원 미만은 <b>소가 × 0.5%</b>, 1,000만 원 이상 1억 원 미만은 <b>소가 × 0.45% + 5,000원</b>이다. 전자소송으로 내면 인지액의 10%가 감액된다고 안내되어 있으니 접수 화면에서 계산된 금액을 확인한다.</p>
+    <div class="formula">
+      <div class="f-main">인지대 = 소가 × 0.5% (1,000만 원 미만)<br>인지대 = 소가 × 0.45% + 5,000원 (1,000만 원 이상)</div>
+      <p class="f-note">예) 소가 3,000만 원 → 3,000만 × 0.45% + 5,000 = 140,000원</p>
+    </div>
+    <h3 class="sub">송달료</h3>
+    <p>송달료는 법원이 서류를 보내는 우편 비용을 미리 내는 돈이다. 소액사건은 <strong>당사자 수 × 10회분</strong>을 낸다. 법원 송달료 1회분은 <b>2026년 7월 1일부터 5,640원</b>으로 올라, 원고 1명·피고 1명이면 <b>원고가 예납하는 금액이 당사자 수 기준 112,800원</b>이다. 한 법률정보 사이트의 조견표를 근거로 한 금액이므로 접수할 때 법원 안내와 대조한다.</p>
+    <div class="infographic-section">
+      <h3>청구금액별 인지대 (전자소송 감액 전, 법정 산식 기준)</h3>
+      <div class="bar-chart">
+        <div class="bar-item"><div class="bar-label"><span>500만 원</span><span class="val">25,000원</span></div><div class="bar-track"><div class="bar-fill bar-grey" style="width:17.9%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>1,000만 원</span><span class="val">50,000원</span></div><div class="bar-track"><div class="bar-fill bar-amber" style="width:35.7%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>2,000만 원</span><span class="val">95,000원</span></div><div class="bar-track"><div class="bar-fill bar-cyan" style="width:67.9%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>3,000만 원</span><span class="val">140,000원</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:100%"></div></div></div>
+      </div>
+      <p class="note">막대 길이는 3,000만 원 구간을 100으로 환산한 비율이다. 송달료는 별도다. 승소하면 소송비용을 상대에게 부담시키는 결정을 받을 수 있다.</p>
+    </div>
+
+    <h2 class="sec">4. 접수 순서 — 소장 작성부터 제출까지</h2>
+    <div class="steps">
+      <div class="step"><div class="step-t">관할 법원 확인</div><div class="step-d">원칙적으로 피고 주소지 법원이다. 금전 지급 청구는 원고 주소지 등 의무이행지 법원에도 낼 수 있는 경우가 있다. 시·군법원이 관할하는 지역도 있어 접수 전 확인한다.</div></div>
+      <div class="step"><div class="step-t">소장 작성</div><div class="step-d">당사자 이름·주소, <b>청구취지</b>(얼마를 달라는지)와 <b>청구원인</b>(왜 받아야 하는지)을 쓴다. 빌린 날짜, 금액, 변제기, 독촉한 사실을 시간순으로 적는다.</div></div>
+      <div class="step"><div class="step-t">증거 준비</div><div class="step-d">차용증, 이체내역, 문자·카카오톡 대화, 계약서, 내용증명 등을 사본으로 낸다. <b>돈이 오간 사실과 갚기로 한 사실</b>을 보여 주는 자료가 핵심이다.</div></div>
+      <div class="step"><div class="step-t">인지대·송달료 납부</div><div class="step-d">전자소송이면 화면에서 계산된 금액을 결제하고, 종이 접수면 법원 구내 은행에서 송달료를 내고 인지는 현금 납부한다.</div></div>
+      <div class="step"><div class="step-t">소장 제출</div><div class="step-d">대한민국 법원 전자소송 누리집에서 온라인으로 내거나 관할 법원 민원실에 직접 낸다. 접수되면 사건번호가 나온다.</div></div>
+    </div>
+    <p>상대방 주소를 모르면 송달이 되지 않아 절차가 멈춘다. 주민등록 주소는 <b>법원에 사실조회·주소보정</b>을 신청해 확인하는 길이 있다.</p>
+
+    <h2 class="sec">5. 이행권고결정 — 이의하지 않으면 확정된다</h2>
+    <p>소장이 접수되면 법원은 변론 없이 <strong>청구 내용대로 갚으라는 이행권고결정</strong>을 하는 것이 일반적이다. 다만 법원이 필요 없다고 보면 하지 않을 수 있다. 결정서는 피고에게 소장 부본과 함께 송달된다.</p>
+    <div class="flow">
+      <div class="flow-box"><div class="ft">소장 접수</div><div class="fd">원고가 소장·증거 제출</div></div>
+      <div class="flow-box"><div class="ft">이행권고결정</div><div class="fd">법원이 결정서를 피고에게 송달</div></div>
+      <div class="flow-box"><div class="ft">2주 이내 이의?</div><div class="fd">이의 없으면 확정</div></div>
+      <div class="flow-box"><div class="ft">확정 또는 변론</div><div class="fd">확정판결과 같은 효력 / 변론기일 지정</div></div>
+    </div>
+    <p>피고가 <b>결정서를 송달받은 날부터 2주 안에 이의신청</b>을 하지 않으면 결정이 확정되어 확정판결과 같은 효력이 생기고, 이 결정으로 강제집행을 신청할 수 있다. 앞서 다룬 지급명령의 이의기간도 2주로 같아 혼동하기 쉽다. 부득이한 사정으로 기간을 놓쳤다면 사유가 없어진 뒤 2주 안에 추후보완 이의를 할 수 있지만, 이것만으로 집행이 자동 정지되지는 않는다.</p>
+
+    <h2 class="sec">6. 이의가 나오면 — 변론과 판결</h2>
+    <p>이의신청이 들어오면 <strong>변론기일</strong>이 정해진다. 별도의 소 제기 없이 이미 낸 소장이 그대로 소송으로 이어지므로, 지급명령처럼 인지 보정을 다시 하는 번거로움은 적다.</p>
+    <ul class="plain">
+      <li><strong>변론은 되도록 1회</strong> — 판사는 되도록 1회의 변론기일로 심리를 마치도록 해야 한다(소액사건심판법 제7조). 증거는 <b>기일 전에 모두 제출</b>하는 것이 안전하다.</li>
+      <li><strong>구술 제기</strong> — 소액사건은 말로 소를 제기할 수 있는 길도 있다. 다만 실무에서는 소장을 쓰는 것이 분명하다.</li>
+      <li><strong>소송대리</strong> — 당사자의 배우자·직계혈족·형제자매는 법원의 허가 없이 소송대리인이 될 수 있다(소액사건심판법 제8조). 신분관계와 위임은 서면으로 증명한다.</li>
+      <li><strong>상고 제한</strong> — 항소는 가능하나 상고·재항고는 헌법 위반 여부나 대법원 판례와 상반되는 판단 같은 사유로 한정된다(같은 법 제3조).</li>
+    </ul>
+
+    <h2 class="sec">7. 이면 — 이겨도 받지 못하는 경우가 있다</h2>
+    <p>판결이나 확정된 이행권고결정은 <strong>돈을 받을 권리를 확인해 줄 뿐</strong>, 자동으로 입금해 주지 않는다. 상대가 갚지 않으면 급여·예금 압류 같은 강제집행을 따로 신청해야 한다. 상대 재산을 모르면 <b>재산명시·재산조회</b> 신청으로 파악하는 절차를 밟는다.</p>
+    <div class="case">
+      <div class="ct">자주 막히는 지점</div>
+      <p><b>상대가 이사했다</b> — 송달이 안 되면 주소보정을 먼저 한다. 공시송달은 상대가 이를 모르는 채 결정이 나올 수 있어 법원이 신중하게 본다.</p>
+      <p><b>상대가 일부만 인정한다</b> — 인정 금액은 즉시 받고 나머지를 다투는 식으로 정리하는 방법도 있다.</p>
+    </div>
+    <p>소송 전에 <b>내용증명</b>으로 독촉 사실을 남기고 가압류가 필요한지 따져 보는 것도 방법이다. 소액이라도 상대 재산이 없으면 소송비용만 늘 수 있다.</p>
+
+    <h2 class="sec">8. 나에게 미치는 영향 — 접수 전 체크리스트</h2>
+    <ul class="plain">
+      <li><strong>청구금액이 3,000만 원 이하인가.</strong> 이자를 뺀 원금 기준으로 센다.</li>
+      <li><strong>채권을 쪼개 내려는 것은 아닌가.</strong> 일부청구로 판단되면 각하된다.</li>
+      <li><strong>증거가 있는가.</strong> 이체내역, 대화 기록, 차용증을 사본으로 준비한다.</li>
+      <li><strong>상대 주소를 정확히 아는가.</strong> 모르면 주소보정 방법을 먼저 확인한다.</li>
+      <li><strong>비용을 계산했는가.</strong> 인지대 + 송달료를 합산하고, 승소 시 상대에게 청구할 수 있다.</li>
+      <li><strong>2주 기한을 알고 있는가.</strong> 피고라면 이행권고결정을 받은 날부터 2주가 이의 기한이다.</li>
+    </ul>
+
+    <h2 class="sec">9. 전망과 행동 제안</h2>
+    <p>소액사건 상한이 바뀐다는 공식 발표는 확인되지 않았다. 행동은 단순하다. <b>① 증거를 모으고, ② 인지대·송달료를 계산해 보고, ③ 전자소송으로 접수</b>하는 순서다. 피고가 된 경우에는 이행권고결정이 우편으로 오면 <b>이의 기한 2주를 달력에 표시</b>하는 것이 먼저다. 어느 쪽이든 복잡하면 대한법률구조공단(국번 없이 132)에서 상담과 지원 요건을 확인한다.</p>
+
+    <div class="hashtag-wrap"><span class="hashtag">#소액사건심판</span><span class="hashtag">#소액소송</span><span class="hashtag">#이행권고결정</span><span class="hashtag">#소액사건3천만원</span><span class="hashtag">#소액소송인지대</span><span class="hashtag">#송달료</span><span class="hashtag">#전자소송</span><span class="hashtag">#나홀로소송</span></div>
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://www.law.go.kr" target="_blank" rel="noopener">국가법령정보센터 — 소액사건심판법·소액사건심판규칙·민사소송 등 인지법</a>
+      <a href="https://korea.legal/wiki/%ec%86%8c%ec%95%a1%ec%82%ac%ea%b1%b4%ec%8b%ac%ed%8c%90%eb%b2%95-%ec%a0%9c5%ec%a1%b0%ec%9d%984/" target="_blank" rel="noopener">korea.legal — 소액사건심판법 제5조의4(이행권고결정에 대한 이의신청)</a>
+      <a href="https://korea.legal/wiki/%ec%86%8c%ec%95%a1%ec%82%ac%ea%b1%b4%ec%8b%ac%ed%8c%90%eb%b2%95-%ec%a0%9c8%ec%a1%b0/" target="_blank" rel="noopener">korea.legal — 소액사건심판법 제8조(소송대리에 관한 특칙)</a>
+      <a href="https://korea.legal/실무자료/법원-송달료-1회분-5640원으로-인상-2026-07-01/" target="_blank" rel="noopener">korea.legal — 법원 송달료 1회분 5,640원 인상(2026.7.1)</a>
+      <a href="https://www.lawtalk.co.kr/posts/165079" target="_blank" rel="noopener">로톡 — 소액사건재판 혼자 하는 법</a>
+    </div>
+    <p class="disclaimer">※ 본 아티클은 법령과 공개 자료를 정리한 정보성 콘텐츠이며 법률 자문이 아닙니다. 인지대·송달료 금액과 관할은 개정과 법원 안내에 따라 달라질 수 있으므로 접수 전 법원 또는 대한법률구조공단(132)에서 확인하세요.</p>
+  </div>
+<!-- HUB:RELATED:BEGIN -->
+<style>
+.hub-bc{font-size:13px;color:#5b6672;margin:0 0 18px;font-family:'Noto Sans KR',sans-serif}
+.hub-bc a{color:#5b6672;text-decoration:none}.hub-bc a:hover{text-decoration:underline}
+.hub-rel{margin:38px 0 6px;padding:20px 22px;border:1px solid #e3e8ee;border-radius:10px;
+  background:#fafbfc;font-family:'Noto Sans KR',sans-serif}
+.hub-rel h2{font-size:15px;margin:0 0 14px;font-weight:700;color:#12202e;
+  font-family:'Noto Sans KR',sans-serif;border:0;padding:0}
+.hub-rel ul{list-style:none;padding:0;margin:0}
+.hub-rel li{padding:7px 0;font-size:14.5px;line-height:1.55}
+.hub-rel li a{color:#12202e;text-decoration:none}
+.hub-rel li a:hover{color:#1a5f8a;text-decoration:underline}
+.hub-rel .hub-more{margin:14px 0 0;font-size:13.5px}
+.hub-rel .hub-more a{color:#1a5f8a;text-decoration:none;font-weight:700}
+</style>
+<aside class="hub-rel">
+  <h2>같은 분야 다른 글 — 법률·행정</h2>
+  <ul>
+    <li><a href="/2026-08-14-공소시효-계산법">공소시효 계산법 — 죄목별 기간과 정지·폐지 기준 정리</a></li>
+    <li><a href="/2026-08-22-약식명령-정식재판-청구방법">약식명령 정식재판 청구 방법 — 7일 기간과 벌금 인상 가능 여부 정리</a></li>
+    <li><a href="/2026-08-31-기소유예-전과-기록-여부">기소유예 뜻 — 불기소 처분 종류와 전과 기록 남는지 여부</a></li>
+    <li><a href="/2026-08-15-모바일-주민등록증-발급방법">모바일 주민등록증 발급방법 — 신청 절차와 사용처, 재발급 기준 정리</a></li>
+    <li><a href="/2026-10-01-개인정보-분쟁조정-신청방법">개인정보 분쟁조정 신청방법 — 집단분쟁조정 참여 절차와 조정 효력</a></li>
+    <li><a href="/2026-10-04-국민참여재판-절차-의사확인서-평결효력">국민참여재판 절차 — 7일 의사확인서와 배제결정 사유, 평결 효력</a></li>
+    <li><a href="/2026-10-09-보이스피싱-피해금-환급-순서-지급정지-기한">보이스피싱 피해금 환급 순서 — 지급정지 요청 후 서류 제출 기한 확인</a></li>
+    <li><a href="/2026-10-12-지급명령-신청방법-인지대-이의신청-2주">지급명령 신청방법 — 인지대·송달료 계산과 이의신청 2주, 확정 후 강제집행 순서</a></li>
+    <li><a href="/2026-10-20-행정심판-청구방법-청구기간-90일-180일-재결절차">행정심판 청구방법 — 청구기간 90일·180일 계산과 재결 60일, 집행정지와 비용</a></li>
+    <li><a href="/2026-10-16-중고거래-사기-신고방법-고소-배상명령-순서">중고거래 사기 신고방법 — 지급정지 안 되는 이유와 고소·배상명령 순서</a></li>
+    <li><a href="/2026-10-28-국선변호인-선정-자격-직권-선정-6가지-사유-빈곤-청구-비용">국선변호인 선정 자격 — 구속·미성년자·70세 이상 직권 선정 사유와 빈곤 청구</a></li>
+  </ul>
+  <p class="hub-more"><a href="/law/">법률·행정 전체 보기 →</a></p>
+</aside>
+<!-- HUB:RELATED:END -->
+</article>
+</body>
+</html>
