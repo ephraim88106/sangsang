@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>에너지캐시백 지급 시기 — 절감률 1% 기준과 기준사용량·차감 방식·신규 입주 제외 | 환경·기후</title>
+  <meta name="description" content="주택용 에너지캐시백은 직전 2년 같은 달 평균보다 전기를 아끼면 다음 달 전기요금에서 차감해 주는 제도다. 2026년 하반기(7~12월 검침분)는 최소 절감률이 1%로 낮아졌다. 가입 절차, 기준사용량 산출, 지급 방식, 대상에서 빠지는 경우를 짚었다.">
+  <meta name="keywords" content="에너지캐시백 지급 시기, 에너지캐시백 가입, 한전 캐시백, 전기요금 절약, 기준사용량, 절감률, 주택용 전기요금">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f2f4f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 45%, #388e3c 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #c8e6c9; color: #1b5e20; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #e8f5e9; border-left: 5px solid #2e7d32; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #2e7d32; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #1b5e20; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #2e7d32; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #1b5e20; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #e8f5e9; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #2e7d32; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #1b5e20; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #f1f8f2; border-left: 4px solid #66bb6a; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #1b5e20; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f1f8f2; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #1b5e20; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #1b5e20; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #d5e8d6; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-teal { background: linear-gradient(90deg, #1b5e20, #66bb6a); }
+    .bar-cyan { background: linear-gradient(90deg, #1b5e20, #81c784); }
+    .bar-amber { background: linear-gradient(90deg, #ef6c00, #ffb300); }
+    .bar-blue { background: linear-gradient(90deg, #1b5e20, #66bb6a); }
+    .bar-grey { background: linear-gradient(90deg, #546e7a, #90a4ae); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #c5e1c7; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #e8f5e9; color: #1b5e20; font-weight: 700; }
+    table.rate td.up { color: #1b5e20; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #ef6c00; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #2e7d32; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #1b5e20; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #c8e6c9; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #1b5e20; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #c8e6c9; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #2e7d32; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .formula { background: #f1f8f2; border: 1.5px dashed #66bb6a; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 16.5px; font-weight: 800; color: #1b5e20; line-height: 1.8; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #388e3c; margin-top: 10px; margin-bottom: 0; }
+    .warnbox { background: #fff8e1; border-left: 5px solid #f9a825; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 26px 0; }
+    .warnbox .wt { font-size: 14px; font-weight: 800; color: #ef6c00; margin-bottom: 8px; }
+    .warnbox p { font-size: 15px; color: #5d4037; margin-bottom: 0; word-break: keep-all; }
+    .case { background: #fff; border: 1.5px solid #c8e6c9; border-left: 5px solid #2e7d32; border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; }
+    .case .ct { font-size: 13.5px; font-weight: 800; color: #1b5e20; margin-bottom: 6px; letter-spacing: 0.3px; }
+    .case p { font-size: 14.8px; margin-bottom: 8px; }
+    .case p:last-child { margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #e8f5e9; color: #2e7d32; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #2e7d32; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<!-- SEO:AUTO BEGIN -->
+<meta property="article:published_time" content="2026-11-10T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-11-10T09:00:00+09:00">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "에너지캐시백 지급 시기 — 절감률 1% 기준과 기준사용량·차감 방식·신규 입주 제외",
+  "description": "주택용 에너지캐시백은 직전 2년 같은 달 평균보다 전기를 아끼면 다음 달 전기요금에서 차감해 주는 제도다. 2026년 하반기(7~12월 검침분)는 최소 절감률이 1%로 낮아졌다. 가입 절차, 기준사용량 산출, 지급 방식, 대상에서 빠지는 경우를 짚었다.",
+  "url": "https://sangsang.ephseed.com/2026-11-10-%EC%97%90%EB%84%88%EC%A7%80%EC%BA%90%EC%8B%9C%EB%B0%B1-%EC%A7%80%EA%B8%89-%EC%8B%9C%EA%B8%B0-%EC%A0%88%EA%B0%90%EB%A5%A0-1%ED%8D%BC%EC%84%BC%ED%8A%B8-%EA%B8%B0%EC%A4%80%EC%82%AC%EC%9A%A9%EB%9F%89-%EC%B0%A8%EA%B0%90-%EB%B0%A9%EC%8B%9D-%EC%8B%A0%EA%B7%9C%EC%9E%85%EC%A3%BC",
+  "datePublished": "2026-11-10T09:00:00+09:00",
+  "dateModified": "2026-11-10T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-11-10-%EC%97%90%EB%84%88%EC%A7%80%EC%BA%90%EC%8B%9C%EB%B0%B1-%EC%A7%80%EA%B8%89-%EC%8B%9C%EA%B8%B0-%EC%A0%88%EA%B0%90%EB%A5%A0-1%ED%8D%BC%EC%84%BC%ED%8A%B8-%EA%B8%B0%EC%A4%80%EC%82%AC%EC%9A%A9%EB%9F%89-%EC%B0%A8%EA%B0%90-%EB%B0%A9%EC%8B%9D-%EC%8B%A0%EA%B7%9C%EC%9E%85%EC%A3%BC">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="에너지캐시백 지급 시기 — 절감률 1% 기준과 기준사용량·차감 방식·신규 입주 제외 | 환경·기후">
+<meta property="og:description" content="주택용 에너지캐시백은 직전 2년 같은 달 평균보다 전기를 아끼면 다음 달 전기요금에서 차감해 주는 제도다. 2026년 하반기(7~12월 검침분)는 최소 절감률이 1%로 낮아졌다. 가입 절차, 기준사용량 산출, 지급 방식, 대상에서 빠지는 경우를 짚었다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-11-10-%EC%97%90%EB%84%88%EC%A7%80%EC%BA%90%EC%8B%9C%EB%B0%B1-%EC%A7%80%EA%B8%89-%EC%8B%9C%EA%B8%B0-%EC%A0%88%EA%B0%90%EB%A5%A0-1%ED%8D%BC%EC%84%BC%ED%8A%B8-%EA%B8%B0%EC%A4%80%EC%82%AC%EC%9A%A9%EB%9F%89-%EC%B0%A8%EA%B0%90-%EB%B0%A9%EC%8B%9D-%EC%8B%A0%EA%B7%9C%EC%9E%85%EC%A3%BC">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-11-10T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-11-10T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N28MJLW4W9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-N28MJLW4W9");</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-EVlth33UH8CTDu2u"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-KMCr4AoIjIDsi9XA"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-qqfX36xk8gz6faM6"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+<article class="article-wrap">
+<!-- HUB:BREADCRUMB:BEGIN -->
+<nav class="hub-bc"><a href="/">생생 정보통</a> &rsaquo; <a href="/life/">통신·생활지원</a></nav>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "생생 정보통", "item": "https://sangsang.ephseed.com/"}, {"@type": "ListItem", "position": 2, "name": "통신·생활지원", "item": "https://sangsang.ephseed.com/life/"}]}</script>
+<!-- HUB:BREADCRUMB:END -->
+  <header class="hero">
+    <div class="category-badge">🌱 환경 · 기후</div>
+    <h1>에너지캐시백 지급 시기 — 절감률 1% 기준과 기준사용량·차감 방식·신규 입주 제외</h1>
+    <p class="hero-sub">전기를 <b>작년·재작년 같은 달 평균보다 조금만 덜 써도</b> 다음 달 전기요금에서 깎아 주는 제도다. 신청은 한 번이면 되고, 올해 하반기에는 문턱이 1%로 낮아졌다. 신청 창구와 계산 원리, 못 받는 경우까지 순서대로 정리했다.</p>
+    <div class="hero-meta">
+      <span>🌱 환경 · 기후</span>
+      <span>📅 2026년 11월 10일</span>
+      <span>⏱️ 약 6분</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+    <div class="summary-box">
+      <h2>핵심 요약</h2>
+      <ul>
+        <li>에너지캐시백은 <strong>직전 2개년 같은 달 평균 사용량</strong>보다 전기를 아낀 만큼 <strong>다음 달 전기요금에서 차감</strong>해 주는 주택용 제도다.</li>
+        <li>평소 최소 절감률은 3%지만, <strong>2026년 하반기(7~12월 검침분)</strong>에는 1%로 낮아지고 지급단가는 최대 <strong>1kWh당 120원</strong>까지 올랐다고 보도됐다.</li>
+        <li>신청은 <strong>한전ON 앱·웹</strong>이나 한전 고객센터(123) 등으로 하며, 한 번 신청하면 매달 자동으로 계산된다.</li>
+        <li><strong>신규 입주로 과거 사용량 자료가 없거나</strong>, 관리비에 전기요금이 합산돼 세대별 사용량이 한전에 없으면 대상에서 빠질 수 있다.</li>
+      </ul>
+    </div>
+
+    <h2 class="sec">1. 에너지캐시백이란 — 현금 지급이 아니라 요금 차감</h2>
+    <p>에너지캐시백은 한국전력이 주택용 전기 고객을 대상으로 운영하는 <strong>전기 절약 보상 제도</strong>다. 이름은 캐시백이지만 통장으로 입금되지 않는다. 절감량에 따라 계산된 금액이 <strong>다음 달 전기요금 청구서에서 차감</strong>되는 방식이다.</p>
+    <p>비교 대상은 이웃집이 아니라 <strong>내 집의 과거 사용량</strong>이다. 올해 11월에 쓴 전기를 작년 11월, 재작년 11월의 평균과 비교해서 그보다 적게 쓴 만큼이 절감량이 된다. 그래서 가구 규모가 크든 작든 같은 규칙이 적용된다.</p>
+
+    <h2 class="sec">2. 지급 기준 — 최소 절감률 1%와 단가</h2>
+    <table class="rate">
+      <tr><th>항목</th><th>내용</th></tr>
+      <tr><td>대상</td><td>주택용 전기 사용 세대 (본인 신청)</td></tr>
+      <tr><td>비교 기준</td><td class="up">직전 2개년 같은 달 평균 사용량</td></tr>
+      <tr><td>최소 절감률</td><td class="up">평소 3% → 2026년 하반기(7~12월 검침분) 1%</td></tr>
+      <tr><td>인정 최대 절감률</td><td>30%</td></tr>
+      <tr><td>지급 단가</td><td class="up">절감률 구간별 1kWh당 30원 ~ 최대 120원</td></tr>
+      <tr><td>지급 방식</td><td>다음 달 전기요금에서 차감</td></tr>
+    </table>
+    <p class="note">※ 하반기 확대 개편은 언론 보도와 2차 안내 자료를 기준으로 정리했다. 중간 구간(3~20%)의 kWh당 단가는 자료마다 표기가 엇갈려 이 글에는 싣지 않았다. 정확한 구간별 단가표는 한전ON 안내에서 확인한다.</p>
+
+    <h2 class="sec">3. 기준사용량 계산 — 내 절감량은 이렇게 나온다</h2>
+    <div class="formula">
+      <div class="f-main">절감량(kWh) = 직전 2개년 같은 달 평균 사용량 − 이번 달 사용량<br>절감률(%) = 절감량 ÷ 기준 사용량 × 100</div>
+      <p class="f-note">캐시백 = 절감량 × 절감률 구간의 kWh당 단가</p>
+    </div>
+    <div class="case">
+      <div class="ct">계산 예시 (가정)</div>
+      <p>1년 전 11월에 380kWh, 2년 전 11월에 420kWh를 썼다면 기준 사용량은 평균 <strong>400kWh</strong>다.</p>
+      <p>올해 11월에 380kWh를 썼다면 절감량은 20kWh, 절감률은 5%다. 이 5% 구간의 단가를 곱한 금액이 12월 요금에서 빠진다. 올해 11월에 396kWh를 썼다면 절감률이 1%라서 하반기 기준으로는 대상이 되지만, 평소 기준(3%)에서는 해당되지 않는다.</p>
+    </div>
+    <p>겨울에는 난방 방식에 따라 전기 사용량이 크게 달라진다. 전기장판·온풍기 사용이 늘어난 해와 비교하면 절감이 쉽고, 반대로 지난 두 해보다 전기를 더 쓰는 생활이 됐다면 절감이 어렵다.</p>
+
+    <h2 class="sec">4. 신청방법 — 한 번만 하면 된다</h2>
+    <div class="steps">
+      <div class="step"><div class="step-t">한전ON 앱 또는 웹에서 신청</div><div class="step-d">한전ON에 로그인한 뒤 에너지캐시백 신청 메뉴에서 본인인증 후 가입한다. 슬기로운 전기생활 같은 한전 연계 플랫폼에서도 가입할 수 있다고 안내된다.</div></div>
+      <div class="step"><div class="step-t">고객센터 123 또는 지사 방문</div><div class="step-d">온라인이 어렵다면 한전 고객센터(123)에 전화하거나 관할 사업소를 찾아 신청한다. 주소지에 등록된 가구 구성원이 신청하는 것이 기본이다.</div></div>
+      <div class="step"><div class="step-t">다음 달 청구서에서 차감 확인</div><div class="step-d">신청 후에는 매달 자동으로 비교·계산된다. 절감이 있으면 다음 달 전기요금 고지서에 캐시백 차감 항목이 찍힌다.</div></div>
+    </div>
+
+    <h2 class="sec">5. 신청해도 못 받는 경우</h2>
+    <ul class="plain">
+      <li><strong>신규 입주·신규 계약</strong> — 비교할 직전 같은 달 사용량 자료가 없으면 계산이 제한될 수 있다.</li>
+      <li><strong>관리비에 전기요금이 포함된 세대</strong> — 일부 아파트처럼 세대별 사용량이 한전에 제출되지 않으면 제외될 수 있다.</li>
+      <li><strong>절감률이 기준에 못 미칠 때</strong> — 지난 두 해 평균보다 더 쓴 달에는 캐시백이 없다.</li>
+      <li><strong>가입 전 기간</strong> — 신청 이전 달의 절감분은 소급해서 지급되지 않는다고 안내하는 자료가 많으니, 가입 시점 기준을 한전ON에서 확인한다.</li>
+    </ul>
+    <div class="warnbox">
+      <div class="wt">⚠️ 한 달 늦게 신청해도 손해는 크지 않지만, 12월 검침분이 마감이다</div>
+      <p>하반기 확대 기준은 7~12월 검침분에 적용된다고 보도됐다. 아직 신청하지 않았다면 12월 검침분이 끝나기 전에 가입해 1%의 낮은 문턱을 활용한다. 내년 이후 기준은 한전 공지를 확인한다.</p>
+    </div>
+
+    <h2 class="sec">6. 얼마나 아껴야 의미가 있나 — 절감률별 감각</h2>
+    <p>월 400kWh를 쓰는 가구가 1%를 줄이려면 4kWh, 5%는 20kWh, 10%는 40kWh를 덜 쓰면 된다. 20kWh는 소비전력 100W짜리 기기를 200시간 끄는 양이다. 하루 7시간가량 대기전력을 끄는 수준이다.</p>
+    <div class="infographic-section">
+      <h3>월 400kWh 가구가 절감률별로 줄여야 하는 전력량</h3>
+      <div class="bar-chart">
+        <div class="bar-item"><div class="bar-label"><span>1% 절감 (하반기 최소 기준)</span><span class="val">4kWh</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:3.3%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>5% 절감</span><span class="val">20kWh</span></div><div class="bar-track"><div class="bar-fill bar-cyan" style="width:16.7%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>10% 절감</span><span class="val">40kWh</span></div><div class="bar-track"><div class="bar-fill bar-amber" style="width:33.3%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>30% 절감 (인정 최대)</span><span class="val">120kWh</span></div><div class="bar-track"><div class="bar-fill bar-grey" style="width:100%"></div></div></div>
+      </div>
+      <p class="note">※ 기준 사용량 400kWh를 가정한 단순 계산이며 실제 가구 사용량에 따라 달라진다.</p>
+    </div>
+
+    <h2 class="sec">7. 신청 전 체크리스트</h2>
+    <ul class="plain">
+      <li>한전ON에서 <strong>내 가입 여부</strong>를 먼저 확인한다. 이미 가입돼 있으면 다시 할 필요가 없다.</li>
+      <li>이사·신규 계약이라면 <strong>과거 사용량 자료</strong>가 있는지 본다.</li>
+      <li>관리비 합산형 아파트라면 <strong>세대별 사용량이 한전에 연계되는지</strong> 관리사무소나 고객센터에 묻는다.</li>
+      <li>복지할인 대상이라면 <a href="/2026-10-19-에너지바우처-대상-자격-지원금액-사용기한">에너지바우처</a> 등 다른 지원과 함께 챙긴다.</li>
+      <li>계산된 캐시백은 <strong>현금이 아니라 요금 차감</strong>임을 기억하고 고지서 항목으로 확인한다.</li>
+    </ul>
+    <div class="pullquote">에너지캐시백은 목돈이 아니라 습관에 대한 보상이다. 신청은 5분이면 끝나고, 한 번 가입해 두면 매달 알아서 계산된다.</div>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#에너지캐시백</span><span class="hashtag">#한전ON</span><span class="hashtag">#전기요금</span><span class="hashtag">#기준사용량</span><span class="hashtag">#절감률</span><span class="hashtag">#주택용전기</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://v.daum.net/v/20260629111346906" target="_blank" rel="noopener">다음뉴스 — 한전, 에너지캐시백 확대…1% 이상만 절감해도 혜택·지급단가 120원으로 상향</a>
+      <a href="https://www.m-i.kr/news/articleView.html?idxno=1386135" target="_blank" rel="noopener">매일일보 — 한전, 주택용 에너지캐시백 확대 개편</a>
+      <a href="https://tilnote.io/en/pages/6ae0cf8ae402ea9db2a296c3" target="_blank" rel="noopener">TILNOTE — kWh당 최대 120원 받는 에너지캐시백, 12월 검침분 전 확인 3가지</a>
+      <a href="https://grant24info.com/blog/energy-cashback-guide/" target="_blank" rel="noopener">에너지캐시백 완벽 가이드 (2026 하반기 확대)</a>
+    </div>
+
+    <p class="disclaimer">※ 본 아티클은 공개 자료를 정리한 정보성 콘텐츠이며 행정 자문이 아닙니다. 지급 단가, 적용 기간, 대상 요건은 한국전력 공지에 따라 바뀔 수 있으므로 신청 전 한전ON 또는 고객센터(123)에서 최신 내용을 확인하시기 바랍니다. 구간별 단가는 자료마다 표기가 달라 본문에서 제외했습니다.</p>
+
+  </div>
+<!-- HUB:RELATED:BEGIN -->
+<style>
+.hub-bc{font-size:13px;color:#5b6672;margin:0 0 18px;font-family:'Noto Sans KR',sans-serif}
+.hub-bc a{color:#5b6672;text-decoration:none}.hub-bc a:hover{text-decoration:underline}
+.hub-rel{margin:38px 0 6px;padding:20px 22px;border:1px solid #e3e8ee;border-radius:10px;
+  background:#fafbfc;font-family:'Noto Sans KR',sans-serif}
+.hub-rel h2{font-size:15px;margin:0 0 14px;font-weight:700;color:#12202e;
+  font-family:'Noto Sans KR',sans-serif;border:0;padding:0}
+.hub-rel ul{list-style:none;padding:0;margin:0}
+.hub-rel li{padding:7px 0;font-size:14.5px;line-height:1.55}
+.hub-rel li a{color:#12202e;text-decoration:none}
+.hub-rel li a:hover{color:#1a5f8a;text-decoration:underline}
+.hub-rel .hub-more{margin:14px 0 0;font-size:13.5px}
+.hub-rel .hub-more a{color:#1a5f8a;text-decoration:none;font-weight:700}
+</style>
+<aside class="hub-rel">
+  <h2>같은 분야 다른 글 — 통신·생활지원</h2>
+  <ul>
+    <li><a href="/2026-08-23-휴대폰-위약금-계산법">휴대폰 위약금 계산법 — 선택약정 할인반환금과 공시지원금 반환금 차이</a></li>
+    <li><a href="/2026-08-30-휴대폰-명의도용-확인방법">휴대폰 명의도용 확인방법 — 가입사실현황조회와 가입제한 신청 절차</a></li>
+    <li><a href="/2026-08-11-탄소중립포인트-신청방법">탄소중립포인트 신청방법 — 지급 대상과 적립 기준, 예산 소진 문제 정리</a></li>
+    <li><a href="/2026-08-28-조기폐차-지원금-신청방법">조기폐차 지원금 신청방법 — 배출가스 5등급 차량 조회와 상한액 산정</a></li>
+    <li><a href="/2026-10-03-배출권거래제-뜻-유상할당-비율">배출권거래제 뜻 — 유상할당 비율과 배출권 가격, 전기요금 영향</a></li>
+    <li><a href="/2026-10-11-전기차-보조금-신청방법-전환지원금-조건">전기차 보조금 신청방법 — 국비 상한과 가격 구간, 전환지원금 조건</a></li>
+    <li><a href="/2026-10-19-에너지바우처-대상-자격-지원금액-사용기한">에너지바우처 대상 자격 — 세대원 수별 지원금액과 사용기한 언제까지</a></li>
+    <li><a href="/2026-10-23-스미싱-문자-클릭-대처방법-악성앱-삭제-118-신고-소액결제-차단">스미싱 문자 클릭 대처방법 — 악성앱 삭제·118 신고·소액결제 차단 순서</a></li>
+    <li><a href="/2026-10-25-폐가전-무상수거-품목-종류-냉장고-소형가전-5개-조건-수거불가-확인">폐가전 무상수거 품목 종류 — 냉장고 1대·소형가전 5개 조건과 수거 불가 확인</a></li>
+    <li><a href="/2026-10-31-딥페이크-피해-신고방법-삭제-요청-순서-증거-확보-체크리스트">딥페이크 피해 신고방법 — 삭제 요청 순서와 증거 확보 체크리스트</a></li>
+    <li><a href="/2026-11-02-5등급-차량-운행제한-단속-계절관리제-과태료-제외-대상">5등급 차량 운행제한 언제까지 — 계절관리제 단속 시간·과태료 얼마·면제 대상</a></li>
+  </ul>
+  <p class="hub-more"><a href="/life/">통신·생활지원 전체 보기 →</a></p>
+</aside>
+<!-- HUB:RELATED:END -->
+</article>
+</body>
+</html>
