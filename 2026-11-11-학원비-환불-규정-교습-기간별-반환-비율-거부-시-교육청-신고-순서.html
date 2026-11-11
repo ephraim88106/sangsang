@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>학원비 환불 규정 — 교습 기간별 반환 비율과 거부 시 교육청 신고 순서 | 교육·입시</title>
+  <meta name="description" content="학원비 환불은 학원 규정이 아니라 학원법 시행령 별표 4가 정한다. 교습 시작 전 전액, 총 교습시간 1/3 전 2/3, 1/2 전 1/2, 1/2 지나면 0원이고 여러 달 선납분은 남은 달 전액이 돌아온다. 반환 기한 5일, 거부 시 교육지원청·1372 신고 순서와 계산 예시를 정리했다.">
+  <meta name="keywords" content="학원비 환불, 학원비 환불 규정, 학원 수강료 환불, 교습비 반환 기준, 학원법 시행령 별표4, 학원비 환불 거부 신고, 교육청 학원 민원, 1372 소비자상담">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f2f4f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #311b92 0%, #5e35b1 45%, #7b1fa2 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #d6c7e6; color: #4a148c; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #f3e5f5; border-left: 5px solid #6a1b9a; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #6a1b9a; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #4a148c; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #6a1b9a; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #4a148c; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #f3e5f5; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #6a1b9a; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #4a148c; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #f5eefa; border-left: 4px solid #7e57c2; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #4a148c; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f8f4fb; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #4a148c; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #4a148c; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #e6dcef; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-blue { background: linear-gradient(90deg, #4a148c, #9575cd); }
+    .bar-teal { background: linear-gradient(90deg, #004d40, #00897b); }
+    .bar-amber { background: linear-gradient(90deg, #e65100, #f9a825); }
+    .bar-red { background: linear-gradient(90deg, #b71c1c, #e53935); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #ded0e8; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #f3e5f5; color: #4a148c; font-weight: 700; }
+    table.rate td.up { color: #4a148c; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #00695c; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #6a1b9a; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #4a148c; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #d6c7e6; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #4a148c; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #d6c7e6; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #6a1b9a; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .formula { background: #faf5fd; border: 1.5px dashed #7e57c2; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 16.5px; font-weight: 800; color: #4a148c; line-height: 1.8; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #7e57c2; margin-top: 10px; margin-bottom: 0; }
+    .warnbox { background: #fff8e1; border-left: 5px solid #f9a825; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 26px 0; }
+    .warnbox .wt { font-size: 14px; font-weight: 800; color: #e65100; margin-bottom: 8px; }
+    .warnbox p { font-size: 15px; color: #5d4037; margin-bottom: 0; word-break: keep-all; }
+    .case { background: #fff; border: 1.5px solid #d6c7e6; border-left: 5px solid #6a1b9a; border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; }
+    .case .ct { font-size: 13.5px; font-weight: 800; color: #4a148c; margin-bottom: 6px; letter-spacing: 0.3px; }
+    .case p { font-size: 14.8px; margin-bottom: 8px; }
+    .case p:last-child { margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #f3e5f5; color: #6a1b9a; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #6a1b9a; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-11-11-%ED%95%99%EC%9B%90%EB%B9%84-%ED%99%98%EB%B6%88-%EA%B7%9C%EC%A0%95-%EA%B5%90%EC%8A%B5-%EA%B8%B0%EA%B0%84%EB%B3%84-%EB%B0%98%ED%99%98-%EB%B9%84%EC%9C%A8-%EA%B1%B0%EB%B6%80-%EC%8B%9C-%EA%B5%90%EC%9C%A1%EC%B2%AD-%EC%8B%A0%EA%B3%A0-%EC%88%9C%EC%84%9C">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="학원비 환불 규정 — 교습 기간별 반환 비율과 거부 시 교육청 신고 순서 | 교육·입시">
+<meta property="og:description" content="학원비 환불은 학원 규정이 아니라 학원법 시행령 별표 4가 정한다. 교습 시작 전 전액, 총 교습시간 1/3 전 2/3, 1/2 전 1/2, 1/2 지나면 0원이고 여러 달 선납분은 남은 달 전액이 돌아온다. 반환 기한 5일, 거부 시 교육지원청·1372 신고 순서와 계산 예시를 정리했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-11-11-%ED%95%99%EC%9B%90%EB%B9%84-%ED%99%98%EB%B6%88-%EA%B7%9C%EC%A0%95-%EA%B5%90%EC%8A%B5-%EA%B8%B0%EA%B0%84%EB%B3%84-%EB%B0%98%ED%99%98-%EB%B9%84%EC%9C%A8-%EA%B1%B0%EB%B6%80-%EC%8B%9C-%EA%B5%90%EC%9C%A1%EC%B2%AD-%EC%8B%A0%EA%B3%A0-%EC%88%9C%EC%84%9C">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-11-11T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-11-11T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N28MJLW4W9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-N28MJLW4W9");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://sangsang.ephseed.com/#organization", "name": "생생 정보통", "url": "https://sangsang.ephseed.com/"}, {"@type": "WebSite", "@id": "https://sangsang.ephseed.com/#website", "url": "https://sangsang.ephseed.com/", "name": "생생 정보통", "description": "매일 아침 배달되는 경제·정책·생활 정보 브리핑", "inLanguage": "ko-KR", "publisher": {"@id": "https://sangsang.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://sangsang.ephseed.com/2026-11-11-%ED%95%99%EC%9B%90%EB%B9%84-%ED%99%98%EB%B6%88-%EA%B7%9C%EC%A0%95-%EA%B5%90%EC%8A%B5-%EA%B8%B0%EA%B0%84%EB%B3%84-%EB%B0%98%ED%99%98-%EB%B9%84%EC%9C%A8-%EA%B1%B0%EB%B6%80-%EC%8B%9C-%EA%B5%90%EC%9C%A1%EC%B2%AD-%EC%8B%A0%EA%B3%A0-%EC%88%9C%EC%84%9C#page", "url": "https://sangsang.ephseed.com/2026-11-11-%ED%95%99%EC%9B%90%EB%B9%84-%ED%99%98%EB%B6%88-%EA%B7%9C%EC%A0%95-%EA%B5%90%EC%8A%B5-%EA%B8%B0%EA%B0%84%EB%B3%84-%EB%B0%98%ED%99%98-%EB%B9%84%EC%9C%A8-%EA%B1%B0%EB%B6%80-%EC%8B%9C-%EA%B5%90%EC%9C%A1%EC%B2%AD-%EC%8B%A0%EA%B3%A0-%EC%88%9C%EC%84%9C", "headline": "학원비 환불 규정 — 교습 기간별 반환 비율과 거부 시 교육청 신고 순서 | 교육·입시", "description": "학원비 환불은 학원 규정이 아니라 학원법 시행령 별표 4가 정한다. 교습 시작 전 전액, 총 교습시간 1/3 전 2/3, 1/2 전 1/2, 1/2 지나면 0원이고 여러 달 선납분은 남은 달 전액이 돌아온다. 반환 기한 5일, 거부 시 교육지원청·1372 신고 순서와 계산 예시를 정리했다.", "inLanguage": "ko-KR", "image": "https://sangsang.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://sangsang.ephseed.com/#website"}, "datePublished": "2026-11-11", "dateModified": "2026-11-11", "author": {"@id": "https://sangsang.ephseed.com/#organization"}, "publisher": {"@id": "https://sangsang.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-EVlth33UH8CTDu2u"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-KMCr4AoIjIDsi9XA"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-qqfX36xk8gz6faM6"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+
+<article class="article-wrap">
+<!-- HUB:BREADCRUMB:BEGIN -->
+<nav class="hub-bc"><a href="/">생생 정보통</a> &rsaquo; <a href="/edu/">교육·학자금</a></nav>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "생생 정보통", "item": "https://sangsang.ephseed.com/"}, {"@type": "ListItem", "position": 2, "name": "교육·학자금", "item": "https://sangsang.ephseed.com/edu/"}]}</script>
+<!-- HUB:BREADCRUMB:END -->
+  <header class="hero">
+    <div class="category-badge">🎓 교육 · 입시</div>
+    <h1>학원비 환불 규정 —<br>교습 기간별 반환 비율과 거부 시 교육청 신고 순서</h1>
+    <p class="hero-sub">“환불은 안 됩니다”라는 학원 규정은 법보다 아래에 있다. 돌려받을 금액은 <b>학원법 시행령 별표 4</b>가 수업 진행 정도에 따라 정해 두었고, 기한은 <b>5일</b>이다. 비율 표와 계산 예시, 거부당했을 때 밟는 순서를 정리했다.</p>
+    <div class="hero-meta">
+      <span>🎓 교육 · 입시</span>
+      <span>📅 2026년 11월 11일</span>
+      <span>⏱️ 약 9분</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+    <div class="summary-box">
+      <h2>핵심 요약</h2>
+      <ul>
+        <li>학원비 반환은 <strong>학원법 제18조와 시행령 별표 4</strong>가 정한다. 학원이 따로 만든 “환불 불가” 약정은 이 기준보다 불리하면 효력이 없다.</li>
+        <li>한 달짜리 과정은 <strong>수업 시작 전 전액 → 총 교습시간 1/3 전 2/3 → 1/2 전 1/2 → 1/2 지나면 0원</strong>이다. 여러 달 선납했다면 그 달은 이 비율대로, <strong>남은 달은 전액</strong> 돌려받는다.</li>
+        <li>학원은 반환 사유가 생긴 날부터 <strong>5일 안에</strong> 돌려줘야 하고, 어기면 <strong>300만원 이하 과태료</strong> 대상이다. 정부는 상한을 1,000만원으로 올리는 개정을 추진 중이다.</li>
+        <li>거부당하면 <strong>문자·내용증명으로 해지일 고정 → 교육지원청 민원 → 1372 소비자상담 → 피해구제·조정 → 지급명령</strong> 순서로 간다.</li>
+      </ul>
+    </div>
+
+    <h2 class="sec">1. 환불 기준은 학원이 아니라 법이 정한다</h2>
+    <p>학원을 그만두겠다고 하면 “우리 학원은 중도 환불이 안 된다”, “등록할 때 동의했다”는 말을 듣는 경우가 많다. 그런데 학원·교습소·개인과외의 교습비 반환은 <strong>학원의 설립·운영 및 과외교습에 관한 법률(학원법) 제18조</strong>가 의무로 정해 놓았고, 반환 사유와 금액은 같은 법 시행령 제18조와 <strong>별표 4 ‘교습비등 반환기준’</strong>에 표로 적혀 있다. 학원이 세부 내용을 마음대로 정할 수 있는 영역이 아니다.</p>
+    <p>헌법재판소는 2024년 8월 29일 결정(2021헌바74)에서 이 조항이 합헌이라고 판단하면서, 단순 변심으로 중도에 그만두는 학습자도 적정한 금액을 돌려받도록 하는 것이 법의 취지라고 밝혔다. 즉 “사정이 생겨서”가 아니라 “그냥 다니기 싫어서” 그만둬도 반환 대상이다.</p>
+    <p>반환 사유는 시행령이 세 갈래로 적는다. ① 학원이 등록말소·교습정지 처분을 받아 수업을 못 하게 된 경우, ② 학원이 교습을 할 수 없거나 학습장소를 제공할 수 없게 된 경우, ③ 학습자가 <strong>본인 의사로 수강을 포기</strong>한 경우다. ①②는 학원 책임이라 돌려받는 폭이 더 넓고, ③이 가장 흔한 중도 환불 상황이다.</p>
+
+    <h2 class="sec">2. 반환 비율 표 — 수업이 얼마나 진행됐느냐가 전부</h2>
+    <p>학습자가 스스로 그만두는 경우(③)의 기준은 다음과 같다. 핵심 변수는 날짜가 아니라 <strong>총 교습시간 가운데 얼마나 지났는가</strong>다.</p>
+    <table class="rate">
+      <tr><th>구분</th><th>그만두는 시점</th><th>돌려받는 금액</th></tr>
+      <tr><td rowspan="4">교습기간 1개월 이내</td><td>교습 시작 전</td><td class="new">이미 낸 교습비 전액</td></tr>
+      <tr><td>총 교습시간의 1/3 지나기 전</td><td class="up">이미 낸 교습비의 2/3</td></tr>
+      <tr><td>총 교습시간의 1/2 지나기 전</td><td class="up">이미 낸 교습비의 1/2</td></tr>
+      <tr><td>총 교습시간의 1/2 지난 후</td><td class="down">반환하지 않음</td></tr>
+      <tr><td rowspan="2">교습기간 1개월 초과</td><td>교습 시작 전</td><td class="new">이미 낸 교습비 전액</td></tr>
+      <tr><td>교습 시작 후</td><td class="up">반환 사유가 생긴 달은 위 1개월 기준으로 계산한 금액 + 나머지 달 교습비 전액</td></tr>
+    </table>
+    <p class="note">※ 학원법 시행령 별표 4(2020년 3월 31일 개정)를 정리한 것이다. 원격교습(인터넷 강의)은 비고에 특례가 있어 실제 수강한 부분에 해당하는 금액을 뺀 나머지를 돌려준다. 독서실은 교습시간 대신 사용기간을 기준으로 같은 구조를 적용한다.</p>
+    <p>학원 책임으로 수업이 끊긴 경우(①②)는 시작 전이면 전액, 시작 후라면 <strong>수업을 못 받게 된 날 이후분</strong>을 돌려받는다. 교습비를 등록·게시한 금액보다 더 받았다면 초과분은 애초에 무효라서 비율과 관계없이 전액 반환 대상이다.</p>
+
+    <div class="infographic-section">
+      <h3>1개월 과정 — 그만두는 시점별 돌려받는 비율</h3>
+      <div class="bar-chart">
+        <div class="bar-item"><div class="bar-label"><span>수업 시작 전</span><span class="val">100%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:100%">전액</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>총 교습시간 1/3 지나기 전</span><span class="val">66.7%</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:66.7%">2/3</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>총 교습시간 1/2 지나기 전</span><span class="val">50%</span></div><div class="bar-track"><div class="bar-fill bar-amber" style="width:50%">1/2</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>총 교습시간 1/2 지난 후</span><span class="val">0%</span></div><div class="bar-track"><div class="bar-fill bar-red" style="width:2%"></div></div></div>
+      </div>
+      <p class="note">※ 학습자 본인 의사로 수강을 포기한 경우. 학원 귀책이면 이 비율이 아니라 못 받은 수업분 기준이다.</p>
+    </div>
+
+    <h2 class="sec">3. 계산 예시 — 월 40만원, 세 달 선납이면 얼마가 돌아오나</h2>
+    <div class="formula">
+      <div class="f-main">반환액 = 그만둔 달의 교습비 × (1 · 2/3 · 1/2 · 0 중 해당 비율) + 아직 시작하지 않은 달의 교습비 전액</div>
+      <p class="f-note">비율은 ‘날짜’가 아니라 ‘그 달 총 교습시간 중 지난 시간’으로 판단한다</p>
+    </div>
+    <div class="case">
+      <div class="ct">예시 1 — 월 40만원, 한 달 20회 수업, 6회 듣고 그만둠</div>
+      <p>6회 ÷ 20회 = 30%이므로 <strong>총 교습시간의 1/3이 지나기 전</strong>이다. 반환액은 40만원 × 2/3 = <strong>약 26만 7천원</strong>. 같은 조건에서 9회를 들었다면 45%로 1/2 전이라 20만원, 11회를 들었다면 55%로 반환액은 0원이다.</p>
+    </div>
+    <div class="case">
+      <div class="ct">예시 2 — 3개월 120만원 선납, 2개월째 절반 넘게 듣고 그만둠</div>
+      <p>2개월째는 1/2이 지나 반환액 0원이지만, 아직 시작하지 않은 <strong>3개월째 40만원은 전액</strong> 돌려받는다. 합계 40만원. “선납 할인이라 환불 불가”라는 조건을 달았더라도 법정 기준보다 불리한 부분은 효력이 없다.</p>
+    </div>
+    <div class="case">
+      <div class="ct">예시 3 — 결제 다음 날 취소, 수업은 한 번도 안 들음</div>
+      <p>교습 시작 전이므로 <strong>전액</strong>이다. 2025년 2월 서울중앙지방법원은 수강 시작 전 포기한 수강생에게 학원이 “절반만 환불” 계약서를 근거로 거부한 사건에서 남은 616만원을 전부 돌려주라고 판결했다. 법률구조공단이 대리한 이 사건에서 환불계약서는 불공정 법률행위로 무효라는 주장이 받아들여졌다.</p>
+    </div>
+
+    <h2 class="sec">4. 자주 다투는 지점 — 교재비·자습시간·‘환불 불가’ 약정</h2>
+    <h3 class="sub">교재비·모의고사비는 따로 본다</h3>
+    <p>별표 4의 비율은 교습비에 적용된다. 교재비는 <strong>이미 받아 사용한 교재는 반환이 어렵고, 미개봉·미사용 교재는 반품 대상</strong>이 되는 것이 일반적인 처리다. 한국소비자원 분쟁조정에서는 수강료에 교재비가 포함된 것으로 보아 별도 공제를 인정하지 않은 사례와, 교재비를 공제한 금액을 환급하도록 한 사례가 모두 있다. 결제 영수증에 교습비와 기타경비가 구분돼 있는지가 갈림길이 된다.</p>
+    <h3 class="sub">자습시간을 교습시간에 넣어 비율을 흐리는 경우</h3>
+    <p>“총 교습시간”은 실제 수업시간이다. 자습·보충을 교습시간에 끼워 넣으면 등록 교습비를 올리는 효과가 나고, 환불 계산에서도 분모가 부풀려진다. 교육부는 2026년 1~4월 특별점검에서 자습시간을 교습시간에 포함해 사실상 인상한 사례를 편법 인상 유형으로 적발했다. 수업 시간표와 교육청에 등록된 교습시간을 대조해 보면 된다.</p>
+    <h3 class="sub">“등록 후 환불 불가” 조항의 효력</h3>
+    <p>학원이 내건 환불 불가 특약은 약관규제법상 소비자의 정당한 해지권을 막는 불공정 조항으로 다뤄진다. 보도에 인용된 서울중앙지법 2018나29442 판결은 “등록 후 어떤 경우에도 환불 불가” 조항을 무효로 봤다. 서명했다는 사실만으로 법정 기준이 밀리지 않는다.</p>
+    <div class="warnbox">
+      <div class="wt">⚠ 계약서에 쓴 ‘개별 약정’이 늘 무효인 것은 아니다</div>
+      <p>법정 기준보다 <strong>학습자에게 유리한</strong> 약정(예: 1/2이 지나도 일부 반환)은 그대로 효력이 있다. 무효가 되는 건 법정 기준보다 불리한 부분이다. 계약서에 환불 조건이 있다면 별표 4와 비교해 어느 쪽이 유리한지부터 본다.</p>
+    </div>
+
+    <h2 class="sec">5. 반환 기한 5일과 과태료 — 지키지 않는 학원은 얼마나 되나</h2>
+    <p>시행령 제18조 제3항은 <strong>반환 사유가 발생한 날부터 5일 이내</strong>에 돌려주도록 정한다. “다음 달 정산 때”, “신규 수강생 들어오면”이라는 말은 근거가 없다. 반환하지 않으면 학원법상 300만원 이하 과태료 대상이고, 교습비 초과 징수는 과태료와 함께 교습정지 등 행정처분으로 이어진다.</p>
+    <div class="impact-grid">
+      <div class="impact-card"><span class="impact-num">5일</span><div class="impact-label">반환 사유 발생일부터 돌려줘야 하는 기한(시행령 제18조)</div></div>
+      <div class="impact-card"><span class="impact-num">300만원</span><div class="impact-label">현행 과태료 상한. 교육부는 1,000만원 상향과 과징금 신설을 추진</div></div>
+      <div class="impact-card"><span class="impact-num">596건</span><div class="impact-label">2026년 1~4월 교육부 특별점검에서 적발된 교습비 관련 위반</div></div>
+      <div class="impact-card"><span class="impact-num">469건</span><div class="impact-label">2022~2024년 8월 교습비 초과 징수 적발 누계(고민정 의원실)</div></div>
+    </div>
+    <div class="infographic-section">
+      <h3>교습비 초과 징수 적발 건수 추이 (17개 시도교육청 자료)</h3>
+      <div class="bar-chart">
+        <div class="bar-item"><div class="bar-label"><span>2022년</span><span class="val">128건</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:72%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>2023년</span><span class="val">164건</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:93%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>2024년 (8월까지)</span><span class="val">177건</span></div><div class="bar-track"><div class="bar-fill bar-amber" style="width:100%"></div></div></div>
+      </div>
+      <p class="note">※ 국회 교육위원회 고민정 의원실이 2025년 10월 공개한 자료. 3년 새 38.3% 증가했고, 지역별로는 경기 229건·서울 96건·광주 32건·세종 31건·부산 30건 순이었다.</p>
+    </div>
+    <p>교육부가 2026년 1월부터 4월 3일까지 시도교육청과 함께 학원·교습소 1만 5,925곳을 점검한 결과 위반 2,394건이 적발됐고, 처분은 고발·수사의뢰 58건, 등록말소 24건, 교습정지 69건, 과태료 707건(총 9억 3천만원)이었다. 교육부는 4월 9일 과태료 상한을 300만원에서 1,000만원으로 올리고 부당이득 환수용 과징금을 신설하는 방안을 발표했으나, 이 글 작성 시점에는 입법 추진 단계라 시행 여부를 별도로 확인해야 한다.</p>
+
+    <h2 class="sec">6. 환불을 거부당했을 때 — 이 순서로 간다</h2>
+    <div class="steps">
+      <div class="step"><div class="step-t">해지 의사를 문자·카카오톡·내용증명으로 남긴다</div><div class="step-d">반환 비율이 <strong>그만둔 시점</strong>으로 갈리므로 전화만으로 끝내면 날짜 다툼이 생긴다. “○월 ○일부로 수강을 중단하고 교습비 반환을 요청한다”는 문장과 날짜가 남아야 한다. 이날이 반환 사유 발생일이고 5일 기한의 시작점이다.</div></div>
+      <div class="step"><div class="step-t">등록 교습비와 수업 시간표를 확보한다</div><div class="step-d">학원은 교습비와 교습시간을 게시할 의무가 있다. 시도교육청 학원 정보 공개 페이지(서울은 ‘서울교육청 학원·교습소 조회’)에서 등록 교습비·교습시간을 확인하고, 영수증·결제내역·계약서를 사진으로 보관한다. 초과 징수가 확인되면 그 자체가 별도 신고 사유다.</div></div>
+      <div class="step"><div class="step-t">5일이 지나면 관할 교육지원청에 민원을 넣는다</div><div class="step-d">학원 소재지를 관할하는 <strong>교육지원청 학원 담당 부서</strong>(평생교육·학원 업무 담당)에 전화하거나 국민신문고로 접수한다. 학원법 위반은 행정처분 사안이라 교육청의 확인 전화 한 통으로 해결되는 경우가 많다. 접수할 때 1단계에서 남긴 해지 통지와 영수증을 첨부한다.</div></div>
+      <div class="step"><div class="step-t">1372 소비자상담센터 → 한국소비자원 피해구제</div><div class="step-d">전화 1372 또는 소비자24 온라인 상담을 먼저 거친 뒤 피해구제를 신청한다. 소비자원은 접수 후 30일 안에 처리하며 사안에 따라 90일까지 연장된다. 합의가 안 되면 소비자분쟁조정위원회 조정으로 넘어간다.</div></div>
+      <div class="step"><div class="step-t">그래도 안 주면 지급명령 또는 소액사건</div><div class="step-d">금액이 확정돼 있고 증거가 분명하므로 변호사 없이 법원 <a href="/2026-10-12-지급명령-신청방법-인지대-이의신청-2주">지급명령</a>을 신청할 수 있다. 3천만원 이하면 <a href="/2026-11-06-소액사건심판-비용-인지대-송달료-이행권고결정-이의-2주">소액사건</a>으로 간다. 학원 폐업으로 연락이 끊긴 경우에도 같은 길이다.</div></div>
+    </div>
+    <div class="infographic-section">
+      <h3>거부당했을 때 처리 흐름</h3>
+      <div class="flow">
+        <div class="flow-box"><div class="ft">① 해지 통지</div><div class="fd">문자·내용증명으로 날짜 고정. 5일 기한 시작.</div></div>
+        <div class="flow-box"><div class="ft">② 교육지원청</div><div class="fd">학원 담당 부서 민원·국민신문고. 행정처분 권한 보유.</div></div>
+        <div class="flow-box"><div class="ft">③ 1372·소비자원</div><div class="fd">상담 → 피해구제(30일) → 분쟁조정.</div></div>
+        <div class="flow-box"><div class="ft">④ 법원</div><div class="fd">지급명령·소액사건. 폐업 학원도 동일.</div></div>
+      </div>
+      <p class="note">※ ②와 ③은 동시에 진행해도 된다. 교육청은 처벌, 소비자원은 돈 받기에 각각 강하다.</p>
+    </div>
+
+    <h2 class="sec">7. 등록 전에 확인해 두면 분쟁이 줄어드는 것들</h2>
+    <ul class="plain">
+      <li>계약서나 안내문에 적힌 환불 조건을 <strong>별표 4 표와 비교</strong>한다. 더 불리하게 적혀 있으면 등록 전에 바로잡아 달라고 요구할 근거가 된다.</li>
+      <li><strong>교습비·교재비·모의고사비·차량비</strong>가 영수증에 구분돼 있는지 본다. 뭉뚱그린 금액은 환불 계산에서 불리하다.</li>
+      <li>여러 달 선납 할인은 매력적이지만, 그만둘 때 돌려받는 건 <strong>시작하지 않은 달</strong>뿐이다. 할인 폭과 비교해 결정한다.</li>
+      <li>수업 시간표의 총 교습시간을 메모해 둔다. 환불 비율은 이 숫자로 계산된다.</li>
+      <li>한 달 20회 과정이라면 <strong>7회째 수업이 시작되기 전</strong>이 2/3를 받는 마지막 기회이고, 11회째부터는 0원이다. 그만둘 생각이 들면 미루지 않는다.</li>
+    </ul>
+    <div class="pullquote">환불 비율은 학원 규정이 아니라 법령 표에 적혀 있고, 기한은 5일이다. 날짜가 남는 방식으로 해지를 알리고, 5일이 지나면 교육지원청과 1372에 같은 서류를 내면 된다.</div>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#학원비환불</span><span class="hashtag">#교습비반환기준</span><span class="hashtag">#학원법시행령별표4</span><span class="hashtag">#학원환불거부</span><span class="hashtag">#교육지원청민원</span><span class="hashtag">#1372소비자상담</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://www.law.go.kr/flDownload.do?gubun=&flSeq=102726823&bylClsCd=110201" target="_blank" rel="noopener">국가법령정보센터 — 학원의 설립·운영 및 과외교습에 관한 법률 시행령 [별표 4] 교습비등 반환기준(2020. 3. 31. 개정)</a>
+      <a href="https://easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=631&ccfNo=3&cciNo=1&cnpClsNo=3" target="_blank" rel="noopener">법제처 찾기쉬운 생활법령정보 — 학원 교습비등의 산정 및 반환(5일 이내 반환, 300만원 이하 과태료)</a>
+      <a href="https://www.ccourt.go.kr/site/kor/ex/bbs/View.do?cbIdx=1195&bcIdx=1008481" target="_blank" rel="noopener">헌법재판소 — 2021헌바74 학원법 교습비 반환 조항 합헌 결정(2024. 8. 29.)</a>
+      <a href="https://www.khan.co.kr/article/202502041115001" target="_blank" rel="noopener">경향신문 — 결제 다음날 수강 취소했는데 ‘절반만 환불’… 법원 “전액 반환하라”(2025. 2.)</a>
+      <a href="https://lawtalknews.co.kr/article/CSRE283OL66N" target="_blank" rel="noopener">로톡뉴스 — 학원 환불 거부와 ‘환불 불가’ 조항의 효력, 서울중앙지법 2018나29442 인용</a>
+      <a href="https://v.daum.net/v/20251012115747748" target="_blank" rel="noopener">뉴시스 — ‘학원비 초과 징수’ 적발 3년새 38.3% 증가, 고민정 의원실 시도교육청 자료(2025. 10.)</a>
+      <a href="https://www.fnnews.com/news/202604091825449389" target="_blank" rel="noopener">파이낸셜뉴스 — 교육부 특별점검 2,394건 적발, 과태료 상향·과징금 신설 추진(2026. 4. 9.)</a>
+      <a href="https://www.kca.go.kr/odr/pg/ma/pgProcssInfo2.do" target="_blank" rel="noopener">한국소비자원 — 피해구제 접수방법과 처리 기간</a>
+    </div>
+
+    <p class="disclaimer">※ 본 아티클은 공개된 법령과 보도를 정리한 정보성 콘텐츠이며 법률 자문이 아닙니다. 반환 비율과 과태료 기준은 법령 개정으로 달라질 수 있으므로, 실제 분쟁에서는 국가법령정보센터의 현행 별표 4와 관할 교육지원청·1372 소비자상담센터의 안내를 확인하세요. 과태료 상향·과징금 신설은 작성 시점 기준 입법 추진 사항입니다.</p>
+
+  </div>
+<!-- HUB:RELATED:BEGIN -->
+<style>
+.hub-bc{font-size:13px;color:#5b6672;margin:0 0 18px;font-family:'Noto Sans KR',sans-serif}
+.hub-bc a{color:#5b6672;text-decoration:none}.hub-bc a:hover{text-decoration:underline}
+.hub-rel{margin:38px 0 6px;padding:20px 22px;border:1px solid #e3e8ee;border-radius:10px;
+  background:#fafbfc;font-family:'Noto Sans KR',sans-serif}
+.hub-rel h2{font-size:15px;margin:0 0 14px;font-weight:700;color:#12202e;
+  font-family:'Noto Sans KR',sans-serif;border:0;padding:0}
+.hub-rel ul{list-style:none;padding:0;margin:0}
+.hub-rel li{padding:7px 0;font-size:14.5px;line-height:1.55}
+.hub-rel li a{color:#12202e;text-decoration:none}
+.hub-rel li a:hover{color:#1a5f8a;text-decoration:underline}
+.hub-rel .hub-more{margin:14px 0 0;font-size:13.5px}
+.hub-rel .hub-more a{color:#1a5f8a;text-decoration:none;font-weight:700}
+</style>
+<aside class="hub-rel">
+  <h2>같은 분야 다른 글 — 교육·학자금</h2>
+  <ul>
+    <li><a href="/2026-08-16-고교학점제-미이수-기준">고교학점제 미이수 기준 — 출석률·학업성취율 요건과 보충이수 절차 정리</a></li>
+    <li><a href="/2026-08-24-내신-5등급제-계산법">내신 5등급제 계산법 — 등급별 비율과 9등급제 환산 차이</a></li>
+    <li><a href="/2026-09-01-학자금-지원구간-확인방법">학자금 지원구간 확인 방법 — 소득인정액 산정과 구간별 국가장학금</a></li>
+    <li><a href="/2026-10-02-수능-표준점수-백분위-등급-차이">수능 표준점수 백분위 등급 차이 — 성적표 보는 방법과 산출 원리</a></li>
+    <li><a href="/2026-10-10-교육급여-신청-자격-기준">교육급여 자격 조건 — 중위소득 50% 소득인정액과 바우처 지원 금액</a></li>
+    <li><a href="/2026-10-18-수시-합격-정시-지원-제한-미등록충원-기준">수시 합격 후 정시 지원 가능 여부 — 6회 지원 제한과 미등록 충원 기준과 순서</a></li>
+    <li><a href="/2026-10-26-수능-반입금지-물품-종류-스마트워치-시계-부정행위-무효-사례">수능 반입금지 물품 종류 — 스마트워치·시계 규정과 부정행위 무효 사례</a></li>
+    <li><a href="/2026-11-03-수능-이의신청-기간-언제까지-접수-마감일-정답-확정일-성적-통지일">수능 이의신청 기간 언제까지 — 접수 마감일과 정답 확정일·성적 통지일</a></li>
+  </ul>
+  <p class="hub-more"><a href="/edu/">교육·학자금 전체 보기 →</a></p>
+</aside>
+<!-- HUB:RELATED:END -->
+</article>
+</body>
+</html>
