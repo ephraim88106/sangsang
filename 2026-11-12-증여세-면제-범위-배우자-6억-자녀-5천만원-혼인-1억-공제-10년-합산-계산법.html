@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>증여세 면제 범위 — 배우자 6억·자녀 5천만원·혼인 1억 공제와 10년 합산 계산법 | 경제·금융</title>
+  <meta name="description" content="증여세가 붙지 않는 금액은 받는 사람 기준 10년 합산으로 배우자 6억원, 부모·조부모에게서 성년 5천만원·미성년 2천만원, 기타 친족 1천만원이고 혼인·출산 때 1억원이 추가된다. 부모는 동일인으로 합산하는 계산 순서, 10~50% 세율과 손주 30% 할증, 3개월 신고기한과 예시 5가지를 정리했다.">
+  <meta name="keywords" content="증여세 면제 한도, 증여재산공제, 배우자 증여 6억, 자녀 증여세 5천만원, 미성년자 증여 2천만원, 혼인 출산 증여공제 1억, 증여세 10년 합산, 증여세 세율, 세대생략 할증, 증여세 신고기한">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f2f4f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #0d47a1 0%, #1565c0 45%, #0277bd 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #bbdefb; color: #0d47a1; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #e3f2fd; border-left: 5px solid #1565c0; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #1565c0; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #0d47a1; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #1565c0; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #0d47a1; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #e3f2fd; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #1565c0; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #0d47a1; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #f1f6fd; border-left: 4px solid #42a5f5; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #0d47a1; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f3f8fe; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #0d47a1; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #0d47a1; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #d6e4f5; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-teal { background: linear-gradient(90deg, #0d47a1, #42a5f5); }
+    .bar-cyan { background: linear-gradient(90deg, #0d47a1, #64b5f6); }
+    .bar-amber { background: linear-gradient(90deg, #ef6c00, #ffb300); }
+    .bar-blue { background: linear-gradient(90deg, #0d47a1, #42a5f5); }
+    .bar-grey { background: linear-gradient(90deg, #546e7a, #90a4ae); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #c3d5ee; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #e3f2fd; color: #0d47a1; font-weight: 700; }
+    table.rate td.up { color: #0d47a1; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #ef6c00; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #1565c0; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #0d47a1; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #bbdefb; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #0d47a1; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #bbdefb; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #1565c0; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .formula { background: #f3f8fe; border: 1.5px dashed #42a5f5; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 16.5px; font-weight: 800; color: #0d47a1; line-height: 1.8; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #0277bd; margin-top: 10px; margin-bottom: 0; }
+    .warnbox { background: #fff8e1; border-left: 5px solid #f9a825; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 26px 0; }
+    .warnbox .wt { font-size: 14px; font-weight: 800; color: #ef6c00; margin-bottom: 8px; }
+    .warnbox p { font-size: 15px; color: #5d4037; margin-bottom: 0; word-break: keep-all; }
+    .case { background: #fff; border: 1.5px solid #bbdefb; border-left: 5px solid #1565c0; border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; }
+    .case .ct { font-size: 13.5px; font-weight: 800; color: #0d47a1; margin-bottom: 6px; letter-spacing: 0.3px; }
+    .case p { font-size: 14.8px; margin-bottom: 8px; }
+    .case p:last-child { margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #e3f2fd; color: #1565c0; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #1565c0; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-11-12-%EC%A6%9D%EC%97%AC%EC%84%B8-%EB%A9%B4%EC%A0%9C-%EB%B2%94%EC%9C%84-%EB%B0%B0%EC%9A%B0%EC%9E%90-6%EC%96%B5-%EC%9E%90%EB%85%80-5%EC%B2%9C%EB%A7%8C%EC%9B%90-%ED%98%BC%EC%9D%B8-1%EC%96%B5-%EA%B3%B5%EC%A0%9C-10%EB%85%84-%ED%95%A9%EC%82%B0-%EA%B3%84%EC%82%B0%EB%B2%95">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="증여세 면제 범위 — 배우자 6억·자녀 5천만원·혼인 1억 공제와 10년 합산 계산법 | 경제·금융">
+<meta property="og:description" content="증여세가 붙지 않는 금액은 받는 사람 기준 10년 합산으로 배우자 6억원, 부모·조부모에게서 성년 5천만원·미성년 2천만원, 기타 친족 1천만원이고 혼인·출산 때 1억원이 추가된다. 부모는 동일인으로 합산하는 계산 순서, 10~50% 세율과 손주 30% 할증, 3개월 신고기한과 예시 5가지를 정리했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-11-12-%EC%A6%9D%EC%97%AC%EC%84%B8-%EB%A9%B4%EC%A0%9C-%EB%B2%94%EC%9C%84-%EB%B0%B0%EC%9A%B0%EC%9E%90-6%EC%96%B5-%EC%9E%90%EB%85%80-5%EC%B2%9C%EB%A7%8C%EC%9B%90-%ED%98%BC%EC%9D%B8-1%EC%96%B5-%EA%B3%B5%EC%A0%9C-10%EB%85%84-%ED%95%A9%EC%82%B0-%EA%B3%84%EC%82%B0%EB%B2%95">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-11-12T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-11-12T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N28MJLW4W9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-N28MJLW4W9");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://sangsang.ephseed.com/#organization", "name": "생생 정보통", "url": "https://sangsang.ephseed.com/"}, {"@type": "WebSite", "@id": "https://sangsang.ephseed.com/#website", "url": "https://sangsang.ephseed.com/", "name": "생생 정보통", "description": "매일 아침 배달되는 경제·정책·생활 정보 브리핑", "inLanguage": "ko-KR", "publisher": {"@id": "https://sangsang.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://sangsang.ephseed.com/2026-11-12-%EC%A6%9D%EC%97%AC%EC%84%B8-%EB%A9%B4%EC%A0%9C-%EB%B2%94%EC%9C%84-%EB%B0%B0%EC%9A%B0%EC%9E%90-6%EC%96%B5-%EC%9E%90%EB%85%80-5%EC%B2%9C%EB%A7%8C%EC%9B%90-%ED%98%BC%EC%9D%B8-1%EC%96%B5-%EA%B3%B5%EC%A0%9C-10%EB%85%84-%ED%95%A9%EC%82%B0-%EA%B3%84%EC%82%B0%EB%B2%95#page", "url": "https://sangsang.ephseed.com/2026-11-12-%EC%A6%9D%EC%97%AC%EC%84%B8-%EB%A9%B4%EC%A0%9C-%EB%B2%94%EC%9C%84-%EB%B0%B0%EC%9A%B0%EC%9E%90-6%EC%96%B5-%EC%9E%90%EB%85%80-5%EC%B2%9C%EB%A7%8C%EC%9B%90-%ED%98%BC%EC%9D%B8-1%EC%96%B5-%EA%B3%B5%EC%A0%9C-10%EB%85%84-%ED%95%A9%EC%82%B0-%EA%B3%84%EC%82%B0%EB%B2%95", "headline": "증여세 면제 범위 — 배우자 6억·자녀 5천만원·혼인 1억 공제와 10년 합산 계산법 | 경제·금융", "description": "증여세가 붙지 않는 금액은 받는 사람 기준 10년 합산으로 배우자 6억원, 부모·조부모에게서 성년 5천만원·미성년 2천만원, 기타 친족 1천만원이고 혼인·출산 때 1억원이 추가된다. 부모는 동일인으로 합산하는 계산 순서, 10~50% 세율과 손주 30% 할증, 3개월 신고기한과 예시 5가지를 정리했다.", "inLanguage": "ko-KR", "image": "https://sangsang.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://sangsang.ephseed.com/#website"}, "datePublished": "2026-11-12", "dateModified": "2026-11-12", "author": {"@id": "https://sangsang.ephseed.com/#organization"}, "publisher": {"@id": "https://sangsang.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-EVlth33UH8CTDu2u"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-KMCr4AoIjIDsi9XA"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-qqfX36xk8gz6faM6"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+
+<article class="article-wrap">
+<!-- HUB:BREADCRUMB:BEGIN -->
+<nav class="hub-bc"><a href="/">생생 정보통</a> &rsaquo; <a href="/money/">금융·대출</a></nav>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "생생 정보통", "item": "https://sangsang.ephseed.com/"}, {"@type": "ListItem", "position": 2, "name": "금융·대출", "item": "https://sangsang.ephseed.com/money/"}]}</script>
+<!-- HUB:BREADCRUMB:END -->
+  <header class="hero">
+    <div class="category-badge">💰 경제 · 금융</div>
+    <h1>증여세 면제 범위 —<br>배우자 6억·자녀 5천만원·혼인 1억 공제와 10년 합산 계산법</h1>
+    <p class="hero-sub">“얼마까지는 세금 없이 줄 수 있다”는 금액은 상속세 및 증여세법 제53조가 관계별로 정해 둔 <b>증여재산공제</b>다. 배우자 6억원, 성년 자녀 5천만원, 미성년 2천만원, 혼인·출산 때 1억원 추가. 다만 전부 <b>10년 합산</b>이라 과거에 받은 돈이 남은 한도를 깎는다. 관계별 표와 세율, 합산 계산 예시, 신고 기한을 정리했다.</p>
+    <div class="hero-meta">
+      <span>💰 경제 · 금융</span>
+      <span>📅 2026년 11월 12일</span>
+      <span>⏱️ 약 10분</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+    <div class="summary-box">
+      <h2>핵심 요약</h2>
+      <ul>
+        <li>증여세가 붙지 않는 금액은 <strong>받는 사람 기준·10년 합산</strong>으로 배우자 6억원, 직계존속(부모·조부모)에게서 받는 성년 5천만원·미성년 2천만원, 직계비속(자녀)에게서 5천만원, 기타 친족 1천만원이다.</li>
+        <li>혼인신고일 전후 2년 또는 자녀 출생일부터 2년 안에 부모·조부모에게서 받으면 <strong>혼인·출산 공제 1억원</strong>이 따로 붙는다. 혼인과 출산을 합쳐 평생 1억원이 한도다.</li>
+        <li>부모 두 사람은 <strong>한 명(동일인)으로 본다</strong>. 아버지 5천만원·어머니 5천만원이 아니라 부모 합쳐 5천만원이고, 10년 안에 받은 1천만원 이상 증여는 전부 더해 계산한다.</li>
+        <li>공제를 넘는 금액은 1억원 이하 10%부터 30억원 초과 50%까지 5단계 세율이 붙고, 조부모가 손주에게 주면 산출세액에 <strong>30% 할증</strong>이 붙는다. 신고는 <strong>증여받은 달 말일부터 3개월</strong> 안에 해야 3% 신고세액공제를 받는다.</li>
+      </ul>
+    </div>
+
+    <h2 class="sec">1. 공제액은 ‘주는 사람’이 아니라 ‘받는 사람’ 기준이다</h2>
+    <p>증여세는 재산을 받은 사람(수증자)이 내는 세금이고, 법이 정한 공제액은 받는 사람이 어떤 관계의 사람에게서 받았느냐로 갈린다. 근거는 <strong>상속세 및 증여세법 제53조(증여재산공제)</strong>다. 조문은 거주자가 다음 사람에게서 증여받은 경우 그 금액을 증여세 과세가액에서 빼 주도록 정하고 있고, 그 금액이 흔히 말하는 ‘증여세 면제 한도’다.</p>
+    <table class="rate">
+      <tr><th>증여자(주는 사람)</th><th>수증자(받는 사람)</th><th>공제액 (10년 합산)</th></tr>
+      <tr><td>배우자</td><td>배우자</td><td class="up">6억원</td></tr>
+      <tr><td>직계존속 (부모·조부모·외조부모)</td><td>성년 직계비속</td><td class="up">5천만원</td></tr>
+      <tr><td>직계존속</td><td>미성년 직계비속 (만 19세 미만)</td><td class="up">2천만원</td></tr>
+      <tr><td>직계비속 (자녀·손주)</td><td>직계존속</td><td class="up">5천만원</td></tr>
+      <tr><td>6촌 이내 혈족·4촌 이내 인척 (형제자매, 삼촌, 사위·며느리 등)</td><td>기타 친족</td><td class="up">1천만원</td></tr>
+      <tr><td>직계존속 (혼인·출산 요건 충족 시)</td><td>직계비속</td><td class="new">+ 1억원 (제53조의2, 별도 추가)</td></tr>
+    </table>
+    <p class="note">※ 상속세 및 증여세법 제53조·제53조의2를 정리한 것이다. 배우자 공제는 혼인신고가 된 법률혼 배우자에게만 적용되고 사실혼은 해당하지 않는다. 친족이 아닌 사람(친구, 연인 등)에게서 받으면 공제가 전혀 없다.</p>
+    <p>여기서 가장 많이 틀리는 지점이 있다. 공제는 <strong>증여자 ‘그룹’ 단위</strong>로 묶인다. 직계존속에게서 받는 5천만원은 아버지·어머니·할아버지·할머니를 전부 합쳐 10년에 5천만원이지, 사람마다 5천만원씩이 아니다. 반대로 배우자 6억원과 부모 5천만원은 별개의 그룹이라 각각 적용된다. 그래서 결혼한 자녀 부부가 각자 자기 부모에게 5천만원씩, 혼인공제 1억원씩 받으면 부부 합산 3억원까지 세금이 없다는 계산이 나온다.</p>
+
+    <div class="infographic-section">
+      <h3>관계별 증여재산공제 — 10년 동안 세금 없이 받을 수 있는 금액</h3>
+      <div class="bar-chart">
+        <div class="bar-item"><div class="bar-label"><span>배우자 → 배우자</span><span class="val">6억원</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:100%">6억</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>부모·조부모 → 성년 자녀 (혼인·출산 공제 포함 시)</span><span class="val">1억 5천만원</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:25%">1.5억</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>부모·조부모 → 성년 자녀 (기본)</span><span class="val">5천만원</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:8.3%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>자녀 → 부모</span><span class="val">5천만원</span></div><div class="bar-track"><div class="bar-fill bar-amber" style="width:8.3%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>부모·조부모 → 미성년 자녀</span><span class="val">2천만원</span></div><div class="bar-track"><div class="bar-fill bar-amber" style="width:3.3%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>형제자매·삼촌·사위·며느리 등 기타 친족</span><span class="val">1천만원</span></div><div class="bar-track"><div class="bar-fill bar-red" style="width:1.7%"></div></div></div>
+      </div>
+      <p class="note">※ 막대 길이는 배우자 6억원을 100%로 놓고 비율로 그렸다. 모두 받는 사람 기준 10년 누계다.</p>
+    </div>
+
+    <h2 class="sec">2. 혼인·출산 공제 1억원 — 2024년부터 생긴 추가 공제의 조건</h2>
+    <p>2024년 1월 1일 이후 증여분부터 <strong>제53조의2(혼인·출산 증여재산공제)</strong>가 적용된다. 조건은 세 가지다. ① 주는 사람이 <strong>직계존속</strong>일 것(배우자의 부모, 즉 시부모·장인·장모는 직계존속이 아니라서 안 된다), ② 혼인이면 <strong>혼인신고일 전후 2년 이내</strong>, 출산이면 <strong>자녀의 출생일 또는 입양신고일부터 2년 이내</strong>에 받을 것, ③ 혼인공제와 출산공제를 합쳐 받는 사람 평생 <strong>1억원</strong>까지일 것.</p>
+    <p>기준일은 결혼식이 아니라 가족관계등록부상 혼인신고일이다. 신고 전에 먼저 받아 두는 것도 가능하지만, 2년 안에 혼인신고를 하지 않으면 공제가 없던 것이 되어 수정신고와 이자상당액이 따라온다. 반대로 파혼 등 정당한 사유로 혼인이 무산돼 받은 재산을 사유가 생긴 달의 말일부터 3개월 안에 돌려주면 처음부터 증여가 없었던 것으로 본다.</p>
+    <div class="warnbox">
+      <div class="wt">⚠ 혼인공제 1억원은 기본공제 5천만원과 ‘따로’ 센다</div>
+      <p>혼인·출산 공제는 제53조의 10년 합산 5천만원과 별도 항목이다. 따라서 결혼한 성년 자녀는 부모에게서 최대 <strong>1억 5천만원</strong>까지 세금 없이 받을 수 있다. 다만 10년 안에 이미 기본공제를 다 써 버렸다면 혼인공제 1억원만 남는다.</p>
+    </div>
+
+    <h2 class="sec">3. ‘10년 합산’이 실제 한도를 정한다 — 계산 순서</h2>
+    <p>공제액이 6억·5천만원이라고 해서 오늘 그만큼 줄 수 있는 것이 아니다. <strong>상증세법 제47조 제2항</strong>은 해당 증여일 전 <strong>10년 이내에 같은 사람에게서 받은 증여재산가액이 1천만원 이상</strong>이면 그 금액을 이번 증여에 더해 과세가액을 계산하도록 정한다. 여기서 ‘같은 사람(동일인)’에는 증여자가 직계존속이면 <strong>그 배우자도 포함</strong>된다. 즉 아버지와 어머니는 세법상 한 사람이다. 할아버지와 할머니도 마찬가지다.</p>
+    <div class="formula">
+      <div class="f-main">과세표준 = (이번 증여액 + 10년 내 동일인에게서 받은 1천만원 이상 증여액) − 증여재산공제 − 혼인·출산 공제</div>
+      <p class="f-note">세액 = 과세표준 × 세율 − 누진공제, 여기에 세대생략이면 30% 할증, 기한 내 신고하면 3% 공제</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="step-t">증여일부터 거꾸로 10년 안에 같은 그룹에게서 받은 돈을 모은다</div><div class="step-d">부모(두 분 합산)에게서 받은 1천만원 이상 증여를 전부 더한다. 신고하지 않았더라도 통장에 남아 있으면 합산 대상이다. 10년은 날짜로 센다. 2016년 11월 15일에 받았다면 2026년 11월 15일 이후 증여에서는 빠진다.</div></div>
+      <div class="step"><div class="step-t">합계에서 공제액을 뺀다</div><div class="step-d">직계존속이면 5천만원(미성년 2천만원), 배우자면 6억원. 예전 증여 때 이미 공제를 썼다면 그만큼은 다시 못 쓴다. 공제는 10년에 한 번 채워지는 통장과 같다.</div></div>
+      <div class="step"><div class="step-t">혼인·출산 공제를 적용한다</div><div class="step-d">요건에 맞으면 1억원을 더 뺀다. 이 공제는 10년 주기가 아니라 평생 1회 1억원이다.</div></div>
+      <div class="step"><div class="step-t">세율을 곱하고 누진공제를 뺀 뒤, 과거에 낸 증여세를 뺀다</div><div class="step-d">합산 때문에 세율 구간이 올라갈 수 있다. 다만 과거 증여분에 대해 이미 낸 세금(기납부세액)은 이번 산출세액에서 공제되므로 이중과세는 아니다.</div></div>
+    </div>
+
+    <h2 class="sec">4. 세율표와 할증 — 공제를 넘기면 얼마를 내나</h2>
+    <table class="rate">
+      <tr><th>과세표준</th><th>세율</th><th>누진공제액</th><th>예: 과세표준 상한에서의 세액</th></tr>
+      <tr><td>1억원 이하</td><td class="new">10%</td><td>없음</td><td>1억원 → 1,000만원</td></tr>
+      <tr><td>1억원 초과 ~ 5억원 이하</td><td class="up">20%</td><td>1,000만원</td><td>5억원 → 9,000만원</td></tr>
+      <tr><td>5억원 초과 ~ 10억원 이하</td><td class="up">30%</td><td>6,000만원</td><td>10억원 → 2억 4,000만원</td></tr>
+      <tr><td>10억원 초과 ~ 30억원 이하</td><td class="down">40%</td><td>1억 6,000만원</td><td>30억원 → 10억 4,000만원</td></tr>
+      <tr><td>30억원 초과</td><td class="down">50%</td><td>4억 6,000만원</td><td>50억원 → 20억 4,000만원</td></tr>
+    </table>
+    <p class="note">※ 상속세 및 증여세법 제56조·제26조. 세율은 상속세와 같다. 표의 세액은 할증·신고세액공제 적용 전 산출세액이다.</p>
+    <p>세대를 건너뛰는 증여, 즉 조부모가 자녀를 거치지 않고 손주에게 바로 주면 <strong>제57조</strong>에 따라 산출세액에 <strong>30%</strong>를 더한다. 받는 손주가 미성년자이고 증여재산가액이 20억원을 넘으면 할증은 <strong>40%</strong>다. 자녀가 먼저 사망해 손주가 받는 경우에는 할증이 없다. 할증이 붙어도 상속 때 자녀 세대에서 한 번, 손주 세대에서 또 한 번 내는 것보다는 총액이 적은 경우가 많아 고액 자산가 사이에서 손주 증여가 늘었다.</p>
+    <div class="impact-grid">
+      <div class="impact-card"><span class="impact-num">15만 3,557건</span><div class="impact-label">2024년 증여세 신고 건수 (국세통계포털, 이투데이 보도 인용)</div></div>
+      <div class="impact-card"><span class="impact-num">39.6조원</span><div class="impact-label">같은 해 증여재산가액과 가산액 합계</div></div>
+      <div class="impact-card"><span class="impact-num">1만 4,178건</span><div class="impact-label">그중 만 20세 미만 수증자 신고 (전체의 9.2%, 2조 1,671억원)</div></div>
+      <div class="impact-card"><span class="impact-num">30%</span><div class="impact-label">조부모 → 손주 세대생략 증여 할증률 (미성년·20억 초과 40%)</div></div>
+    </div>
+
+    <h2 class="sec">5. 계산 예시 — 같은 1억원이라도 누가 언제 주느냐로 세금이 달라진다</h2>
+    <div class="case">
+      <div class="ct">예시 1 — 부모가 성년 자녀에게 1억원, 10년 안에 다른 증여 없음</div>
+      <p>1억원 − 공제 5천만원 = 과세표준 5천만원. 세율 10%라 산출세액 <strong>500만원</strong>. 증여받은 달 말일부터 3개월 안에 신고하면 3% 신고세액공제가 붙어 <strong>485만원</strong>을 낸다.</p>
+    </div>
+    <div class="case">
+      <div class="ct">예시 2 — 같은 1억원인데 8년 전 아버지에게서 4천만원을 받은 적이 있음</div>
+      <p>10년 안이고 1천만원 이상이므로 합산한다. 1억원 + 4천만원 = 1억 4천만원, 공제 5천만원을 빼면 과세표준 9천만원, 세액 900만원. 8년 전 증여는 공제 범위 안이라 낸 세금이 없으니 기납부세액 공제는 0원. 신고세액공제 후 <strong>873만원</strong>이다. 어머니가 준 것이어도 부모는 동일인이라 결과는 같다.</p>
+    </div>
+    <div class="case">
+      <div class="ct">예시 3 — 혼인신고 후 1년, 부모가 1억 5천만원 송금</div>
+      <p>기본공제 5천만원 + 혼인공제 1억원 = 1억 5천만원이 전부 공제되어 <strong>세금 0원</strong>. 다만 10년 안에 받은 다른 증여가 3천만원 있었다면 기본공제 잔여분은 2천만원뿐이라 과세표준 3천만원, 세액 300만원(신고세액공제 후 291만원)이 생긴다.</p>
+    </div>
+    <div class="case">
+      <div class="ct">예시 4 — 남편이 아내에게 7억원 아파트 지분을 증여</div>
+      <p>7억원 − 배우자공제 6억원 = 1억원, 세율 10%로 산출세액 1,000만원, 신고 후 <strong>970만원</strong>. 부동산은 시가(유사 매매사례가액·감정가액)로 평가하고, 취득세가 별도로 붙는다는 점이 현금과 다르다.</p>
+    </div>
+    <div class="case">
+      <div class="ct">예시 5 — 할아버지가 성년 손주에게 2억원</div>
+      <p>2억원 − 5천만원 = 1억 5천만원. 20% 구간이라 1억 5천만원 × 20% − 1,000만원 = 2,000만원. 세대생략 할증 30%를 더하면 2,600만원, 신고세액공제 3%를 빼면 <strong>2,522만원</strong>이다. 같은 돈을 아버지가 줬다면 할증 없이 1,940만원이다.</p>
+    </div>
+
+    <h2 class="sec">6. 자주 틀리는 것 — 생활비·용돈·차용증·‘안 걸린다’는 생각</h2>
+    <h3 class="sub">생활비·교육비는 비과세지만, 남겨서 모으면 증여다</h3>
+    <p>상증세법 제46조는 사회통념상 인정되는 피부양자의 생활비·교육비·치료비, 축하금·부의금은 비과세로 둔다. 핵심은 ‘그 용도로 바로 쓰였는가’다. 부모가 생활비 명목으로 보낸 돈을 자녀가 예금·주식·집 사는 데 썼다면 비과세가 아니라 증여다. 소득이 있는 성인 자녀에게 보내는 정기 송금도 피부양자 생활비로 보기 어렵다.</p>
+    <h3 class="sub">빌린 것으로 하려면 차용증·이자·상환 기록이 있어야 한다</h3>
+    <p>부모 자식 간 금전거래는 원칙적으로 증여로 추정된다. 차용으로 인정받으려면 차용증, 이자 지급 내역, 실제 상환 흔적이 필요하다. 법정이자율 4.6%보다 낮게 빌리면 그 차액이 1년 1천만원을 넘을 때 차액만큼 증여로 본다. 무이자로 2억원 안쪽을 빌리는 경우 차액이 1천만원 미만이라 과세되지 않는다는 계산이 여기서 나온다.</p>
+    <h3 class="sub">공제 범위 안이라도 신고해 두는 편이 유리하다</h3>
+    <p>5천만원 이하라서 낼 세금이 없어도 신고는 할 수 있다. 신고해 두면 나중에 집을 살 때 자금출처 조사에서 그 돈의 출처가 증명되고, 10년 합산 계산의 기준점도 분명해진다. 국세청은 2025년 12월 서울 강남4구·마용성 고가 아파트 증여 2,077건을 전수 검증한다고 밝혔다. 부동산 증여는 신고 여부와 평가액이 그대로 드러나는 영역이다.</p>
+    <div class="warnbox">
+      <div class="wt">⚠ 신고 기한을 넘기면 세금이 더 붙는다</div>
+      <p>신고 기한은 <strong>증여받은 날이 속하는 달의 말일부터 3개월</strong>이다. 3월 10일에 받았으면 6월 30일까지다. 기한 안에 신고하면 산출세액의 3%를 깎아 주지만, 넘기면 무신고 가산세 20%(부정 무신고 40%)와 납부지연 가산세(하루 0.022%)가 붙는다. 홈택스에서 현금 증여는 간편 신고가 가능하다.</p>
+    </div>
+
+    <h2 class="sec">7. 제도가 바뀔 수 있는 지점 — 상속세 개편안과 증여 공제</h2>
+    <p>정부는 2025년 상속세를 유산세에서 상속인별 취득분에 과세하는 <strong>유산취득세</strong>로 바꾸는 상속세 및 증여세법 개정안을 국무회의에서 의결했고, 이 안에는 상속 때 자녀 1인당 공제를 5천만원에서 5억원으로 올리는 내용이 들어 있었다. 그러나 국회 기획재정위원회 조세소위는 연간 세수 감소가 2조원에 이른다는 이유로 이를 장기 과제로 넘겼다. 여야가 낸 상속·증여세 개정안은 22건에 이르지만, 이 글 작성 시점에 <strong>증여재산공제 금액(6억·5천만·2천만·1천만원)과 세율은 바뀌지 않았다</strong>.</p>
+    <p>따라서 지금 계획을 세운다면 현행 기준으로 세금을 계산하되, 다음 세 가지를 확인해 두는 것이 좋다.</p>
+    <ul class="plain">
+      <li><strong>10년 시계를 먼저 본다.</strong> 자녀가 태어났을 때 2천만원, 성년이 된 뒤 5천만원, 결혼할 때 1억원을 나눠 주면 모두 공제 안에 들어간다. 한 번에 몰아 주면 같은 돈에 세금이 붙는다.</li>
+      <li><strong>부모는 한 사람이다.</strong> 아버지·어머니가 따로 5천만원씩 줬다고 믿는 가족이 많다. 10년 내 합산이라 초과분은 과세된다.</li>
+      <li><strong>조부모 증여는 할증 30%를 감안한다.</strong> 그래도 두 번 내는 것보다 적을 수 있으니 상속까지 포함해 비교한다.</li>
+      <li><strong>부동산은 평가액과 취득세까지 본다.</strong> 현금과 달리 시가 평가 다툼이 생기고, 증여 취득세(기본 3.5%, 조정대상지역 고가 주택은 12%)가 별도로 붙는다.</li>
+      <li>법이 바뀌면 적용은 ‘증여일’ 기준이다. 개정 전후로 증여 시점을 조정할 여지가 있는지 국가법령정보센터의 부칙을 확인한다.</li>
+    </ul>
+    <div class="pullquote">면제 금액은 관계별로 6억·5천만·2천만·1천만원에 혼인·출산 1억원이 붙지만, 전부 받는 사람 기준 10년 합산이다. 부모는 한 사람으로 세고, 넘는 금액은 10~50% 세율에 손주면 30% 할증, 신고는 받은 달 말일부터 3개월 안이다.</div>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#증여세면제한도</span><span class="hashtag">#증여재산공제</span><span class="hashtag">#배우자증여6억</span><span class="hashtag">#자녀증여5천만원</span><span class="hashtag">#혼인출산증여공제</span><span class="hashtag">#증여세10년합산</span><span class="hashtag">#증여세세율</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://www.law.go.kr/법령/상속세및증여세법" target="_blank" rel="noopener">국가법령정보센터 — 상속세 및 증여세법 제46조(비과세), 제47조(증여세 과세가액·10년 합산), 제53조(증여재산공제), 제53조의2(혼인·출산 증여재산공제), 제56조(세율), 제57조(세대생략 할증), 제68조(신고기한), 제69조(신고세액공제)</a>
+      <a href="https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?mi=6533&cntntsId=7960" target="_blank" rel="noopener">국세청 — 증여세 개인신고안내: 항목별 설명(증여재산공제·세율·신고기한)</a>
+      <a href="https://files-scs.pstatic.net/2024/06/14/d1MYXUqKXu/국세청 상속·증여 세금상식Ⅱ.pdf" target="_blank" rel="noopener">국세청 — 상속·증여 세금상식 Ⅱ(혼인·출산 증여재산공제 1억원, 동일인 합산 설명)</a>
+      <a href="https://m.etoday.co.kr/news/view/2575601" target="_blank" rel="noopener">이투데이 — 미성년자 증여 한 해 1만 4,178건, 전체 증여세 신고 15만 3,557건·39조 6,203억원(국세통계포털 인용)</a>
+      <a href="https://www.taxwatch.co.kr/article/tax/2024/09/09/0002" target="_blank" rel="noopener">택스워치 — 2023년 증여세 신고 16만 4,230건·증여재산가액 27조 3천억원(2024. 9.)</a>
+      <a href="https://www.sedaily.com/article/14147814" target="_blank" rel="noopener">서울경제 — 기재위, 세수감 2조원 유산취득세 장기 과제로 넘겨</a>
+      <a href="https://www.etoday.co.kr/news/view/2453919" target="_blank" rel="noopener">이투데이 — 정부, 유산취득세 도입 위한 상속세법 개정안 입법예고(자녀공제 5억원안)</a>
+      <a href="https://www.taxtimes.co.kr/mobile/article.html?no=272701" target="_blank" rel="noopener">한국세정신문 — 국세청, 강남4구·마용성 고가아파트 증여 2,077건 전수검증(2025. 12.)</a>
+    </div>
+
+    <p class="disclaimer">※ 본 아티클은 공개된 법령과 보도를 정리한 정보성 콘텐츠이며 세무 자문이 아닙니다. 공제액·세율·할증·가산세 기준은 법령 개정으로 달라질 수 있고, 부동산 평가액과 과거 증여 이력에 따라 실제 세액은 다르게 계산됩니다. 실제 증여 전에는 국가법령정보센터의 현행 조문과 국세청 홈택스 모의계산, 세무사 상담으로 확인하세요. 상속세 개편안은 작성 시점 기준 국회 계류 사항입니다.</p>
+
+  </div>
+<!-- HUB:RELATED:BEGIN -->
+<style>
+.hub-bc{font-size:13px;color:#5b6672;margin:0 0 18px;font-family:'Noto Sans KR',sans-serif}
+.hub-bc a{color:#5b6672;text-decoration:none}.hub-bc a:hover{text-decoration:underline}
+.hub-rel{margin:38px 0 6px;padding:20px 22px;border:1px solid #e3e8ee;border-radius:10px;
+  background:#fafbfc;font-family:'Noto Sans KR',sans-serif}
+.hub-rel h2{font-size:15px;margin:0 0 14px;font-weight:700;color:#12202e;
+  font-family:'Noto Sans KR',sans-serif;border:0;padding:0}
+.hub-rel ul{list-style:none;padding:0;margin:0}
+.hub-rel li{padding:7px 0;font-size:14.5px;line-height:1.55}
+.hub-rel li a{color:#12202e;text-decoration:none}
+.hub-rel li a:hover{color:#1a5f8a;text-decoration:underline}
+.hub-rel .hub-more{margin:14px 0 0;font-size:13.5px}
+.hub-rel .hub-more a{color:#1a5f8a;text-decoration:none;font-weight:700}
+</style>
+<aside class="hub-rel">
+  <h2>같은 분야 다른 글 — 금융·대출</h2>
+  <ul>
+    <li><a href="/2026-08-18-예금자보호-한도-1억원">예금자보호 한도 1억원 — 보호 대상 상품과 금융회사별 계산 기준 정리</a></li>
+    <li><a href="/2026-08-26-스트레스-DSR-3단계-적용-조건">스트레스 DSR 3단계 적용 조건 — 가산금리와 대출 한도 차이</a></li>
+    <li><a href="/2026-10-08-연금저축-IRP-세액공제-한도-환급액">연금저축 IRP 세액공제 한도 — 900만원 공제율과 환급액 구하는 방법</a></li>
+    <li><a href="/2026-10-17-금융소득종합과세-기준-2천만원-계산방법-신고시기">금융소득종합과세 2천만원 초과 시 세액 — 비교과세 방식과 신고 시기</a></li>
+    <li><a href="/2026-10-27-근로장려금-신청-자격-소득-재산-기준-기한후-신청-방법">근로장려금 자격 — 가구별 소득 한도·재산 한도와 지급액 차이</a></li>
+    <li><a href="/2026-11-04-종합부동산세-납부기간-12월-1일-15일-납부방법-분납-한도-가산세">종합부동산세 납부기간 언제까지 — 12월 1~15일 납부 방법과 분납 한도</a></li>
+  </ul>
+  <p class="hub-more"><a href="/money/">금융·대출 전체 보기 →</a></p>
+</aside>
+<!-- HUB:RELATED:END -->
+</article>
+</body>
+</html>
