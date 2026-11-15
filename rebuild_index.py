@@ -81,9 +81,12 @@ CAT_MAP = {
     '증시':('증시','증시'),
 }
 def cat(raw, title=''):
-    for k, (l, v) in CAT_MAP.items():
-        if k in raw or k in title:
-            return l, v
+    # 2026-11-15: 기사 배지(raw)를 제목보다 먼저 본다. 제목에 '금융인증서'처럼
+    # 다른 분야 단어가 들어가면 배지가 기술·AI 여도 경제·금융으로 잘못 붙던 문제.
+    for src in (raw, title):
+        for k, (l, v) in CAT_MAP.items():
+            if k in src:
+                return l, v
     return '일반', 'blue'
 
 # --- 2026-09-07 색인정리: 단일 기준 목록 -----------------------------------

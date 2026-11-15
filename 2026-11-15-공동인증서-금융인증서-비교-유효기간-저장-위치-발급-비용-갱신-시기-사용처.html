@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>공동인증서 금융인증서 비교 — 유효기간과 저장 위치, 발급 비용·갱신 시기, 사용처 | 기술·AI</title>
+  <meta name="description" content="공동인증서는 2020년 12월 10일 전자서명법 개정으로 '공인' 지위가 사라진 옛 공인인증서이고, 금융인증서는 같은 날 금융결제원이 내놓은 클라우드 저장형 인증서다. 공동인증서는 PC·USB·휴대폰에 파일로 저장하고 유효기간이 1년이라 매년 만료 30~60일 전에 갱신해야 하며, 개인 은행용은 무료·범용은 연 4,400원, 사업자 범용은 연 110,000원이다. 금융인증서는 금융결제원 서버에 보관해 기기를 바꿔도 옮길 필요가 없고 유효기간 3년에 6자리 비밀번호·지문으로 쓰며 무료다. 저장 위치와 보안, 발급 순서, 은행·정부24·홈택스·증권사별 사용처, 카카오·네이버·PASS 같은 간편인증과의 관계, 어느 것을 받아야 하는지까지 정리했다.">
+  <meta name="keywords" content="공동인증서 금융인증서 차이, 공동인증서 금융인증서 비교, 공동인증서 유효기간 1년, 금융인증서 유효기간 3년, 공동인증서 갱신 시기, 금융인증서 발급, 공동인증서 범용 4400원, 사업자 범용인증서 110000원, 금융인증서 클라우드, 공인인증서 폐지 2020년 12월 10일, 전자서명법 개정, 간편인증 민간인증서, 금융인증서 사용처 정부24 홈택스, 공동인증서 발급기관, 전자서명인증사업자 인정, 인증서 분실 폐기">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f2f4f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #0d47a1 0%, #1565c0 45%, #0277bd 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #bbdefb; color: #0d47a1; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #e3f2fd; border-left: 5px solid #1565c0; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #1565c0; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #0d47a1; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #1565c0; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #0d47a1; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #e3f2fd; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #1565c0; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #0d47a1; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #eef5fd; border-left: 4px solid #64b5f6; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #0d47a1; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f0f6fd; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #0d47a1; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #0d47a1; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #d6e6f7; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-teal { background: linear-gradient(90deg, #0d47a1, #64b5f6); }
+    .bar-cyan { background: linear-gradient(90deg, #0d47a1, #90caf9); }
+    .bar-amber { background: linear-gradient(90deg, #ef6c00, #ffb300); }
+    .bar-blue { background: linear-gradient(90deg, #0d47a1, #64b5f6); }
+    .bar-grey { background: linear-gradient(90deg, #546e7a, #90a4ae); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #c5d9ee; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #e3f2fd; color: #0d47a1; font-weight: 700; }
+    table.rate td.up { color: #0d47a1; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #ef6c00; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #1565c0; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #0d47a1; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #bbdefb; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #0d47a1; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #bbdefb; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #1565c0; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .formula { background: #f0f6fd; border: 1.5px dashed #64b5f6; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 16.5px; font-weight: 800; color: #0d47a1; line-height: 1.8; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #0277bd; margin-top: 10px; margin-bottom: 0; }
+    .warnbox { background: #fff8e1; border-left: 5px solid #f9a825; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 26px 0; }
+    .warnbox .wt { font-size: 14px; font-weight: 800; color: #ef6c00; margin-bottom: 8px; }
+    .warnbox p { font-size: 15px; color: #5d4037; margin-bottom: 0; word-break: keep-all; }
+    .case { background: #fff; border: 1.5px solid #bbdefb; border-left: 5px solid #1565c0; border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; }
+    .case .ct { font-size: 13.5px; font-weight: 800; color: #0d47a1; margin-bottom: 6px; letter-spacing: 0.3px; }
+    .case p { font-size: 14.8px; margin-bottom: 8px; }
+    .case p:last-child { margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #e3f2fd; color: #1565c0; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #1565c0; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-11-15-%EA%B3%B5%EB%8F%99%EC%9D%B8%EC%A6%9D%EC%84%9C-%EA%B8%88%EC%9C%B5%EC%9D%B8%EC%A6%9D%EC%84%9C-%EB%B9%84%EA%B5%90-%EC%9C%A0%ED%9A%A8%EA%B8%B0%EA%B0%84-%EC%A0%80%EC%9E%A5-%EC%9C%84%EC%B9%98-%EB%B0%9C%EA%B8%89-%EB%B9%84%EC%9A%A9-%EA%B0%B1%EC%8B%A0-%EC%8B%9C%EA%B8%B0-%EC%82%AC%EC%9A%A9%EC%B2%98">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="공동인증서 금융인증서 비교 — 유효기간과 저장 위치, 발급 비용·갱신 시기, 사용처 | 기술·AI">
+<meta property="og:description" content="공동인증서는 2020년 12월 10일 전자서명법 개정으로">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-11-15-%EA%B3%B5%EB%8F%99%EC%9D%B8%EC%A6%9D%EC%84%9C-%EA%B8%88%EC%9C%B5%EC%9D%B8%EC%A6%9D%EC%84%9C-%EB%B9%84%EA%B5%90-%EC%9C%A0%ED%9A%A8%EA%B8%B0%EA%B0%84-%EC%A0%80%EC%9E%A5-%EC%9C%84%EC%B9%98-%EB%B0%9C%EA%B8%89-%EB%B9%84%EC%9A%A9-%EA%B0%B1%EC%8B%A0-%EC%8B%9C%EA%B8%B0-%EC%82%AC%EC%9A%A9%EC%B2%98">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-11-15T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-11-15T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N28MJLW4W9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-N28MJLW4W9");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://sangsang.ephseed.com/#organization", "name": "생생 정보통", "url": "https://sangsang.ephseed.com/"}, {"@type": "WebSite", "@id": "https://sangsang.ephseed.com/#website", "url": "https://sangsang.ephseed.com/", "name": "생생 정보통", "description": "매일 아침 배달되는 경제·정책·생활 정보 브리핑", "inLanguage": "ko-KR", "publisher": {"@id": "https://sangsang.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://sangsang.ephseed.com/2026-11-15-%EA%B3%B5%EB%8F%99%EC%9D%B8%EC%A6%9D%EC%84%9C-%EA%B8%88%EC%9C%B5%EC%9D%B8%EC%A6%9D%EC%84%9C-%EB%B9%84%EA%B5%90-%EC%9C%A0%ED%9A%A8%EA%B8%B0%EA%B0%84-%EC%A0%80%EC%9E%A5-%EC%9C%84%EC%B9%98-%EB%B0%9C%EA%B8%89-%EB%B9%84%EC%9A%A9-%EA%B0%B1%EC%8B%A0-%EC%8B%9C%EA%B8%B0-%EC%82%AC%EC%9A%A9%EC%B2%98#page", "url": "https://sangsang.ephseed.com/2026-11-15-%EA%B3%B5%EB%8F%99%EC%9D%B8%EC%A6%9D%EC%84%9C-%EA%B8%88%EC%9C%B5%EC%9D%B8%EC%A6%9D%EC%84%9C-%EB%B9%84%EA%B5%90-%EC%9C%A0%ED%9A%A8%EA%B8%B0%EA%B0%84-%EC%A0%80%EC%9E%A5-%EC%9C%84%EC%B9%98-%EB%B0%9C%EA%B8%89-%EB%B9%84%EC%9A%A9-%EA%B0%B1%EC%8B%A0-%EC%8B%9C%EA%B8%B0-%EC%82%AC%EC%9A%A9%EC%B2%98", "headline": "공동인증서 금융인증서 비교 — 유효기간과 저장 위치, 발급 비용·갱신 시기, 사용처 | 기술·AI", "description": "공동인증서는 2020년 12월 10일 전자서명법 개정으로", "inLanguage": "ko-KR", "image": "https://sangsang.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://sangsang.ephseed.com/#website"}, "datePublished": "2026-11-15", "dateModified": "2026-11-15", "author": {"@id": "https://sangsang.ephseed.com/#organization"}, "publisher": {"@id": "https://sangsang.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-EVlth33UH8CTDu2u"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-KMCr4AoIjIDsi9XA"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-qqfX36xk8gz6faM6"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+<article class="article-wrap">
+<!-- HUB:BREADCRUMB:BEGIN -->
+<nav class="hub-bc"><a href="/">생생 정보통</a> &rsaquo; <a href="/law/">법률·행정</a></nav>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "생생 정보통", "item": "https://sangsang.ephseed.com/"}, {"@type": "ListItem", "position": 2, "name": "법률·행정", "item": "https://sangsang.ephseed.com/law/"}]}</script>
+<!-- HUB:BREADCRUMB:END -->
+  <header class="hero">
+    <div class="category-badge">📱 기술 · AI</div>
+    <h1>공동인증서 금융인증서 비교 —<br>유효기간과 저장 위치, 발급 비용·갱신 시기, 사용처</h1>
+    <p class="hero-sub">연말정산을 하려고 홈택스에 들어갔는데 "인증서가 만료되었습니다"가 뜨고, 은행 앱은 금융인증서를 권하고, 정부24는 카카오·네이버로 로그인하라고 한다. 이름이 비슷한 인증서가 셋이나 되는 것은 2020년 12월 10일 공인인증서 제도가 폐지되면서 생긴 결과다. 옛 공인인증서의 이름이 바뀐 <b>공동인증서</b>와 같은 날 새로 나온 <b>금융인증서</b>가 어디에 저장되고, 몇 년 쓰고, 얼마가 들고, 어느 사이트에서 통하는지를 발급기관 안내와 법령, 국세청·행정안전부 발표를 기준으로 정리했다.</p>
+    <div class="hero-meta">
+      <span>📱 기술 · AI</span>
+      <span>📅 2026년 11월 15일</span>
+      <span>⏱️ 약 10분</span>
+    </div>
+  </header>
+  <div class="body-content">
+    <div class="summary-box">
+      <h2>핵심 요약</h2>
+      <ul>
+        <li><strong>공동인증서</strong>는 1999년부터 쓰던 공인인증서가 2020년 12월 10일 전자서명법 전부개정 시행으로 '공인' 지위를 잃고 이름만 바뀐 것이다. 금융결제원·코스콤·한국정보인증·한국전자인증·한국무역정보통신 같은 옛 공인인증기관이 그대로 발급한다. <strong>금융인증서</strong>는 같은 날 금융결제원이 은행권 공동으로 내놓은 새 인증서다.</li>
+        <li>가장 큰 차이는 <strong>저장 위치와 유효기간</strong>이다. 공동인증서는 PC의 NPKI 폴더·USB·휴대폰에 <b>파일</b>로 저장하고 <b>1년</b>마다 갱신해야 한다. 금융인증서는 <b>금융결제원 클라우드</b>에 보관해 기기를 바꿔도 복사할 필요가 없고 유효기간이 <b>3년</b>이다.</li>
+        <li>비용은 공동인증서 개인 <strong>은행·카드·보험용 무료</strong>, 어디서나 쓰는 <strong>범용은 연 4,400원</strong>, 사업자 범용은 <strong>연 110,000원</strong>(부가세 포함)이다. 금융인증서는 <strong>무료</strong>다. 비밀번호는 공동인증서가 영문·숫자·특수문자 조합, 금융인증서는 6자리 숫자·패턴·지문이다.</li>
+        <li>사용처는 아직 공동인증서가 가장 넓다. 증권사 거래, 전자세금계산서, 법인·사업자 업무, 전자입찰은 공동인증서가 기본이고, 국세청 조사에서 홈택스 사업자 인증수단의 <strong>83%</strong>가 공동인증서였다. 금융인증서는 은행 대부분과 정부24·홈택스 등 공공기관에서 통하지만 일부 증권·보험사는 받지 않는다. 카카오·네이버·PASS 같은 민간 간편인증은 공공 웹사이트와 연말정산에서 빠르게 자리를 넓히고 있다.</li>
+      </ul>
+    </div>
+
+    <h2 class="sec">1. 두 인증서의 뜻 — 이름이 바뀐 것과 새로 생긴 것</h2>
+    <p>인증서는 온라인에서 "이 서명을 한 사람이 본인이다"를 증명하는 전자 신분증이다. 1999년 제정된 전자서명법은 정부가 지정한 공인인증기관의 인증서에만 법적 효력을 우선 인정했고, 그래서 은행·공공기관이 20여 년 동안 공인인증서 하나만 요구했다. 액티브X 설치, 1년마다 갱신, 파일 복사의 불편이 쌓이자 정부는 전자서명법을 전부개정해 <strong>2020년 12월 10일</strong>부터 공인인증서 제도를 폐지했다. 2018년 9월 국회에 제출돼 2020년 5월 통과, 6월 9일 공포된 법이다.</p>
+    <p>폐지된 것은 '공인'이라는 독점적 지위일 뿐 인증서 자체가 사라진 것은 아니다. 기존 공인인증서는 만료 전까지 그대로 쓸 수 있었고, 이름이 <strong>공동인증서</strong>로 바뀌어 지금도 같은 기관이 발급한다. 같은 날 금융결제원은 은행권이 함께 쓰는 새 인증서로 <strong>금융인증서</strong>를 출시했다. 파일을 기기에 저장하는 방식을 버리고 금융결제원 클라우드에 보관하는 것이 핵심 설계다. 여기에 전자서명법 제7조·제8조의 평가·인정 제도를 거친 <strong>민간 전자서명인증사업자</strong>의 인증서가 더해졌다. 한국인터넷진흥원(KISA) 안내에 따르면 현재 국내 21개 사업자가 23개 전자서명인증서를 운영하고 있고, 2026년에도 카카오뱅크가 제2026-001호로 새로 인정을 받았다.</p>
+    <div class="pullquote">공동인증서는 "예전 그 인증서를 이름만 바꿔 계속 쓰는 것"이고, 금융인증서는 "파일을 내 컴퓨터가 아니라 금융결제원 서버에 두고 쓰는 새 인증서"다. 저장 위치가 다르니 유효기간·비밀번호·기기 변경 방식이 전부 달라진다.</div>
+
+    <h2 class="sec">2. 항목별 비교 — 발급기관·저장·기간·비용·사용처</h2>
+    <table class="rate">
+      <tr><th>항목</th><th>공동인증서</th><th>금융인증서</th></tr>
+      <tr><td class="up">정체</td><td>옛 공인인증서(2020. 12. 10. 명칭 변경)</td><td>금융결제원이 2020. 12. 10. 출시한 새 인증서</td></tr>
+      <tr><td class="up">발급기관</td><td>금융결제원·코스콤·한국정보인증·한국전자인증·한국무역정보통신 등 옛 공인인증기관(은행·증권사 인증센터에서 대행)</td><td>금융결제원(은행 앱·인터넷뱅킹 인증센터에서 발급)</td></tr>
+      <tr><td class="up">저장 위치</td><td>PC 하드디스크(NPKI 폴더)·USB·스마트폰 등 이용자 기기</td><td>금융결제원 클라우드 서버</td></tr>
+      <tr><td class="up">유효기간</td><td>1년(발급기관 운영기준)</td><td>3년</td></tr>
+      <tr><td class="up">갱신</td><td>만료 30일(기관별 60일) 전부터 직접 갱신, 만료 후엔 재발급</td><td>만료 전 자동 연장 기능 제공, 만료 30일 전 알림</td></tr>
+      <tr><td class="up">비밀번호</td><td>영문·숫자·특수문자 조합의 긴 비밀번호</td><td>6자리 숫자 또는 패턴·지문·얼굴</td></tr>
+      <tr><td class="up">비용(개인)</td><td>은행·카드·보험용 무료, 범용 연 4,400원</td><td>무료</td></tr>
+      <tr><td class="up">비용(사업자)</td><td>은행용·전자세금용 연 4,400원, 범용 연 110,000원</td><td>무료(법인용은 거래 은행 지원 여부 확인)</td></tr>
+      <tr><td class="up">기기 변경</td><td>내보내기·가져오기(복사) 필요</td><td>새 기기에서 휴대폰 본인확인 후 바로 사용</td></tr>
+      <tr><td class="up">사용처</td><td>은행·증권·보험·카드, 정부24·홈택스·4대보험, 전자세금계산서·전자입찰 등 가장 넓음</td><td>은행 대부분, 정부24·홈택스 등 공공기관 다수, 일부 증권·보험사 미지원</td></tr>
+      <tr><td class="up">분실·유출 시</td><td>인증센터에서 즉시 폐기 후 재발급</td><td>은행 앱에서 폐기·연결기기 해제 후 재발급</td></tr>
+    </table>
+    <p class="note">금액은 부가세 포함 연간 수수료이며 우리은행·하나은행·스탠다드차타드 인증센터 안내 기준이다. 갱신 가능 시점은 우리투자증권 30일, 신한투자증권·한국정보인증 60일처럼 기관마다 달라 거래 기관 공지를 따른다.</p>
+
+    <h2 class="sec">3. 유효기간과 갱신 시기 — 1년과 3년이 만드는 차이</h2>
+    <h3 class="sub">공동인증서, 매년 한 번은 반드시 손을 대야 한다</h3>
+    <p>공동인증서의 1년 유효기간은 법령이 아니라 발급기관의 운영기준이다. 갱신은 만료 전 일정 기간 안에만 할 수 있고, 갱신하면 <b>기존 만료일부터</b> 1년이 연장되므로 미리 해도 손해가 없다. 문제는 만료일을 넘긴 뒤다. 만료된 인증서는 갱신이 불가능해 신분 확인부터 다시 하는 재발급을 거쳐야 하고, 재발급하면 인증서 일련번호가 바뀌어 홈택스·4대보험 사이트 같은 곳에 다시 등록해야 한다. 연말정산 직전이나 세금 신고 마감일에 만료가 겹치는 일이 반복되는 이유다.</p>
+    <h3 class="sub">금융인증서, 3년에 자동 연장이지만 알림은 봐야 한다</h3>
+    <p>금융인증서는 유효기간이 3년이고 만료 전 자동 연장 기능을 제공한다. 다만 은행 앱 설정이나 장기간 미사용 여부에 따라 직접 갱신을 요구받는 경우가 있어 "자동이니까 신경 안 써도 된다"고 단정하기는 어렵다. 만료 30일 전 알림이 오면 은행 앱 인증센터에서 연장 여부를 확인하는 것이 안전하다. 비밀번호를 잊으면 발급기관 안내상 폐기 후 재발급이 원칙이지만, 클라우드에 있어 파일을 다시 복사할 일은 없다.</p>
+    <div class="flow">
+      <div class="flow-box"><div class="ft">공동인증서 1년</div><div class="fd">만료 30~60일 전 갱신 창 열림 → 갱신하면 만료일부터 1년 연장 → 만료 후엔 재발급·재등록</div></div>
+      <div class="flow-box"><div class="ft">금융인증서 3년</div><div class="fd">만료 30일 전 알림 → 자동 연장 또는 앱에서 연장 확인 → 기기 바꿔도 재발급 불필요</div></div>
+      <div class="flow-box"><div class="ft">간편인증</div><div class="fd">사업자별 1~3년, 앱에서 재발급 → 공공 웹사이트 로그인·연말정산 간소화에 사용</div></div>
+    </div>
+
+    <h2 class="sec">4. 저장 위치와 보안 — 내 기기에 있는 파일과 서버에 있는 열쇠</h2>
+    <p>공동인증서는 기기 안에 <b>복사할 수 있는 파일</b>로 존재한다. 윈도우 PC라면 사용자 폴더 아래 NPKI 폴더에 들어가고, USB·스마트폰으로 옮기는 것도 이 파일을 복사하는 일이다. 편리한 만큼 악성코드에 감염된 PC에서는 파일이 그대로 빠져나간다. 공인인증서 시절인 2014년에는 악성코드에 감염된 PC에서 일주일 사이 6,947건의 인증서가 유출된 사례가 보고됐고, 보안 전문가들이 인증서를 하드디스크에 두지 말고 USB나 보안토큰에 보관하라고 권한 배경이다. 비밀번호가 함께 새면 대출·송금·민원서류 발급까지 가능한 범용 인증서는 피해 범위가 더 크다.</p>
+    <p>금융인증서는 기기에 파일이 남지 않는다. 금융결제원 클라우드에 인증서를 두고, 쓸 때마다 본인 명의 휴대폰 인증과 6자리 비밀번호(또는 지문·패턴)로 접근한다. 휴대폰을 잃어도 인증서 파일이 함께 사라지는 것이 아니라 은행 앱에서 연결된 기기를 해제하면 된다. 반대로 보안의 무게가 <b>휴대폰 본인확인</b>으로 옮겨 갔다는 점은 알아야 한다. 휴대폰이 명의도용되거나 스미싱으로 원격조종 앱이 깔리면 클라우드 접근 수단이 함께 넘어갈 수 있다. 금융인증서를 주로 쓴다면 통신사 가입제한 서비스와 휴대폰 보안 관리가 인증서 관리와 같은 일이 된다.</p>
+    <div class="warnbox">
+      <div class="wt">어느 쪽이든 유출이 의심되면 순서는 같다</div>
+      <p>① 발급받은 은행·증권사 인증센터나 발급기관에서 <b>즉시 폐기</b>한다. ② 폐기 뒤 재발급을 받고 비밀번호를 새로 만든다. ③ 금융결제원 '내계좌한눈에'나 은행 앱에서 모르는 거래가 없는지 확인하고, 이상 거래가 있으면 해당 금융회사와 경찰(112)에 신고한다. 공동인증서는 PC의 NPKI 폴더와 USB에 남은 파일까지 지워야 폐기가 끝난다.</p>
+    </div>
+
+    <h2 class="sec">5. 발급 비용과 발급 순서 — 무료인 것과 연 11만 원인 것</h2>
+    <div class="formula">
+      <div class="f-main">개인 공동인증서(은행·카드·보험용) 0원 · 개인 범용 4,400원/년<br>사업자 은행용·전자세금용 4,400원/년 · 사업자 범용 110,000원/년<br>금융인증서 0원</div>
+      <p class="f-note">용도가 좁은 인증서가 무료다. 증권 거래와 공공기관까지 하나로 쓰려면 범용을 사거나, 무료 인증서를 용도별로 여러 개 갖게 된다.</p>
+    </div>
+    <h3 class="sub">공동인증서 발급</h3>
+    <div class="steps">
+      <div class="step"><div class="step-t">거래 은행·증권사 인증센터 접속</div><div class="step-d">인터넷뱅킹이나 앱의 인증센터 → 공동인증서 발급/재발급. 처음이면 영업점에서 인터넷뱅킹 가입이 먼저다.</div></div>
+      <div class="step"><div class="step-t">용도 선택</div><div class="step-d">은행·카드·보험용(무료)인지 범용(유료)인지 고른다. 사업자는 은행용·전자세금용·범용 중 필요한 것을 택한다.</div></div>
+      <div class="step"><div class="step-t">본인 확인</div><div class="step-d">계좌 비밀번호, OTP 또는 보안카드, 본인 명의 휴대폰 인증을 거친다.</div></div>
+      <div class="step"><div class="step-t">저장 매체와 비밀번호 설정</div><div class="step-d">PC 하드디스크·USB·휴대폰 중 저장 위치를 고르고 영문·숫자·특수문자를 섞은 비밀번호를 만든다. 발급 즉시 쓸 수 있다.</div></div>
+      <div class="step"><div class="step-t">다른 기관에 등록</div><div class="step-d">홈택스·4대보험·다른 금융회사에서 쓰려면 각 사이트에 인증서를 한 번 등록한다. 재발급 때마다 다시 해야 한다.</div></div>
+    </div>
+    <h3 class="sub">금융인증서 발급</h3>
+    <div class="steps">
+      <div class="step"><div class="step-t">은행 앱 인증센터 → 금융인증서 발급</div><div class="step-d">주거래 은행 한 곳에서 받으면 된다. 수수료는 없다.</div></div>
+      <div class="step"><div class="step-t">본인 확인</div><div class="step-d">본인 명의 휴대폰 인증과 계좌 비밀번호, OTP·보안카드 인증을 거친다. 본인 명의 휴대폰이 없으면 발급이 막히는 경우가 있어 영업점 상담이 필요하다.</div></div>
+      <div class="step"><div class="step-t">6자리 비밀번호 설정</div><div class="step-d">숫자 6자리를 만들고 패턴·지문·얼굴 인식을 추가로 등록한다.</div></div>
+      <div class="step"><div class="step-t">다른 은행·기관에서 연결</div><div class="step-d">다른 은행 앱이나 정부24·홈택스에서 '금융인증서 로그인'을 누르면 금융결제원 클라우드에 접속해 같은 인증서를 쓸 수 있다. 기기를 바꿔도 같은 절차다.</div></div>
+    </div>
+
+    <h2 class="sec">6. 사용처 — 어디서 어느 것을 요구하나</h2>
+    <p><strong>은행</strong>은 두 인증서를 모두 받는 곳이 대부분이지만, 카카오뱅크·토스뱅크 같은 인터넷전문은행은 자체 인증 방식을 쓴다. <strong>증권사</strong>는 여전히 공동인증서가 기본이어서 금융인증서로 로그인이 안 되는 곳이 있고, <strong>보험사</strong>도 회사마다 다르다. <strong>정부24·홈택스·손택스</strong>는 공동인증서와 금융인증서를 모두 지원하며, 민간 간편인증도 함께 열려 있다. 행정안전부 발표 기준으로 민간인증서 간편인증을 쓸 수 있는 공공 웹사이트는 2021년 55곳에서 110곳으로 늘었고 이후에도 확대되고 있다.</p>
+    <p><strong>사업자 업무</strong>는 사정이 다르다. 전자세금계산서 발급, 법인 업무, 전자입찰, 4대보험 사업장 신고는 사업자용 공동인증서가 사실상 표준이었다. 국세청이 사업자 인증수단을 조사했을 때 공동인증서가 83%, 보안카드 14%, 생체인증 2%, 금융인증서는 1%였다. 국세청은 2026년 4월부터 850만 사업자를 대상으로 <b>사업자용 간편인증</b>을 도입해, 카카오뱅크·기업은행·국민은행 앱 인증으로도 세금계산서를 발급할 수 있게 했다. 연 110,000원짜리 범용 인증서를 사지 않아도 되는 길이 열린 것이다.</p>
+    <div class="case">
+      <div class="ct">사례 — 세 개를 다 갖게 되는 이유</div>
+      <p>직장인 A씨는 급여 통장 은행 앱에서 금융인증서를 받아 은행·정부24에 쓴다. 주식 계좌 증권사가 금융인증서를 받지 않아 은행용 공동인증서(무료)를 하나 더 발급해 증권사에 등록했다. 연말정산 간소화는 카카오 간편인증으로 들어간다. 세 가지 인증서를 쓰지만 돈은 한 푼도 내지 않는다. 반대로 개인사업자 B씨는 세금계산서 발급을 위해 전자세금용 공동인증서(연 4,400원)를 유지하고, 조달청 입찰까지 하려면 범용(연 110,000원)이 필요했다. 2026년부터는 은행 앱 간편인증으로 세금계산서를 발급할 수 있어 전자세금용은 갱신하지 않을 생각이다.</p>
+    </div>
+
+    <h2 class="sec">7. 숨겨진 이면 — 통합되지 않는 인증서 시장</h2>
+    <p>공인인증서 폐지의 목표는 "불편한 독점을 없애고 경쟁으로 편의를 높인다"였다. 결과는 경쟁은 생겼지만 <b>어디서나 통하는 하나의 인증서</b>는 아직 없다는 것이다. 사이트마다 지원하는 인증서 목록이 다르니 이용자는 공동·금융·간편인증을 겹쳐 발급받고, 각각의 유효기간과 비밀번호를 따로 관리한다. KB국민은행은 2026년 8월 KB국민인증서 누적 이용 고객이 1,800만 명을 넘었다고 밝혔는데, 은행·통신사·플랫폼마다 자기 인증서를 밀면서 인증서 수 자체가 늘어난 셈이다.</p>
+    <p>비용 구조도 비대칭이다. 개인 시장은 무료 금융인증서와 무료 간편인증이 장악해 범용 공동인증서(연 4,400원)를 살 이유가 줄었다. 반면 사업자 시장은 전자세금계산서·입찰·법인 업무가 공동인증서에 묶여 있어 연 110,000원 범용 수수료가 그대로 남았고, 국세청 조사에서 사업자 인증의 83%가 여전히 공동인증서였다. 2026년 사업자 간편인증 도입은 이 마지막 유료 영역을 건드린 첫 조치다.</p>
+    <p>보안의 성격도 바뀌었다. 파일을 지키는 문제였던 인증서 보안이 금융인증서·간편인증에서는 <b>휴대폰 본인확인을 지키는 문제</b>가 됐다. 인증서 탈취 대신 휴대폰 명의도용·스미싱·원격조종 앱이 공격 통로가 되는 이유다. 편의가 늘어난 만큼 통신 보안이 금융 보안이 됐다.</p>
+
+    <div class="infographic-section">
+      <h3>공동인증서 · 금융인증서 · 간편인증 — 숫자로 보는 차이</h3>
+      <div class="bar-chart">
+        <div class="bar-item"><div class="bar-label"><span>공동인증서 유효기간</span><span class="val">1년</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:33%">1년</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>금융인증서 유효기간</span><span class="val">3년</span></div><div class="bar-track"><div class="bar-fill bar-cyan" style="width:100%">3년</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>개인 범용 공동인증서 연간 수수료</span><span class="val">4,400원</span></div><div class="bar-track"><div class="bar-fill bar-amber" style="width:4%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>사업자 범용 공동인증서 연간 수수료</span><span class="val">110,000원</span></div><div class="bar-track"><div class="bar-fill bar-amber" style="width:100%">110,000원</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>금융인증서·간편인증 수수료</span><span class="val">0원</span></div><div class="bar-track"><div class="bar-fill bar-grey" style="width:1%"></div></div></div>
+      </div>
+      <h3 style="margin-top:32px">홈택스 사업자 인증수단 비율 (국세청 조사, 간편인증 도입 전)</h3>
+      <div class="bar-chart">
+        <div class="bar-item"><div class="bar-label"><span>공동인증서</span><span class="val">83%</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:83%">83%</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>보안카드</span><span class="val">14%</span></div><div class="bar-track"><div class="bar-fill bar-grey" style="width:14%">14%</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>생체인증</span><span class="val">2%</span></div><div class="bar-track"><div class="bar-fill bar-grey" style="width:2%"></div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>금융인증서</span><span class="val">1%</span></div><div class="bar-track"><div class="bar-fill bar-cyan" style="width:1%"></div></div></div>
+      </div>
+      <p class="note">수수료는 우리은행·하나은행·스탠다드차타드 인증센터 공시(부가세 포함). 사업자 인증수단 비율은 국세청이 2026년 4월 사업자 간편인증 도입을 발표하며 공개한 조사치로, 공급가액 1,000만 원 이하 거래 기준이다. 막대 길이는 항목별 최대값 대비 비율이다.</p>
+    </div>
+
+    <div class="impact-grid">
+      <div class="impact-card"><span class="impact-num">2020.12.10</span><span class="impact-label">공인인증서 제도 폐지·금융인증서 출시</span></div>
+      <div class="impact-card"><span class="impact-num">21곳</span><span class="impact-label">KISA 인정 전자서명인증사업자(23개 인증서)</span></div>
+      <div class="impact-card"><span class="impact-num">110곳</span><span class="impact-label">민간 간편인증 적용 공공 웹사이트(행안부 발표 기준)</span></div>
+      <div class="impact-card"><span class="impact-num">850만</span><span class="impact-label">2026년 4월 간편인증 대상 사업자</span></div>
+    </div>
+
+    <h2 class="sec">8. 나에게 미치는 영향 — 어느 것을 받아야 하나</h2>
+    <ul class="plain">
+      <li><strong>은행 거래와 공공 민원이 주된 개인</strong>이라면 금융인증서 하나와 간편인증 하나(카카오·네이버·PASS·은행 인증서 중 자주 쓰는 앱)로 충분하다. 둘 다 무료이고 기기를 바꿔도 복사할 일이 없다.</li>
+      <li><strong>증권사 거래·보험 청구를 자주 한다면</strong> 은행용 공동인증서(무료)를 하나 더 두고 해당 사이트에 등록해 둔다. 범용(연 4,400원)은 공공기관·증권·보험을 한 인증서로 묶어야 할 때만 필요하다.</li>
+      <li><strong>사업자</strong>는 전자세금용(연 4,400원) 또는 범용(연 110,000원) 공동인증서가 아직 기본이지만, 세금계산서 발급만 필요하면 2026년부터 은행 앱 사업자 간편인증으로 대체할 수 있는지 홈택스에서 확인한다. 입찰·법인 업무는 범용이 필요한지 해당 기관 공지를 본다.</li>
+      <li><strong>갱신일을 기록해 둔다.</strong> 공동인증서는 매년, 금융인증서는 3년마다다. 연말정산(1월)·종합소득세(5월)·부가세(1월·7월) 직전에 만료가 걸리지 않게 미리 갱신한다. 갱신해도 만료일부터 연장되니 일찍 해도 손해가 없다.</li>
+      <li><strong>저장 위치를 정리한다.</strong> 공동인증서를 PC 하드디스크에 두고 있다면 USB나 휴대폰으로 옮기고 PC의 사본은 지운다. 쓰지 않는 옛 인증서가 여러 기기에 흩어져 있으면 폐기한다.</li>
+      <li><strong>휴대폰이 열쇠다.</strong> 금융인증서·간편인증을 쓸수록 휴대폰 명의도용과 스미싱이 곧 금융 피해로 이어진다. 통신사 가입제한 서비스를 켜고, 출처 모를 앱 설치 요구는 거절한다.</li>
+    </ul>
+
+    <h2 class="sec">9. 전망과 행동 제안</h2>
+    <p>방향은 분명하다. 개인 영역은 금융인증서와 간편인증으로, 사업자 영역도 2026년 국세청 간편인증 도입을 계기로 공동인증서 의존이 줄어드는 쪽이다. 다만 증권·보험·입찰·법인 업무처럼 공동인증서만 받는 구간이 남아 있는 한 "하나만 있으면 된다"는 상태는 당분간 오지 않는다. 그래서 행동은 세 가지다. <b>① 주거래 은행 앱에서 금융인증서를 무료로 받아 은행·정부24·홈택스에 연결하고, ② 증권사·보험사 등 금융인증서를 받지 않는 곳이 있으면 은행용 공동인증서를 무료로 하나 더 발급해 그곳에만 등록하고, ③ 두 인증서의 만료일과 저장 위치를 적어 둔 뒤 PC에 남은 옛 인증서 파일은 폐기</b>한다. 사업자는 올해 안에 홈택스에서 사업자 간편인증 지원 여부를 확인해 연 110,000원 범용 수수료를 계속 낼지 결정한다. 인증서 종류별 지원 여부는 각 사이트 인증센터 안내가 기준이고, 분실·유출이 의심되면 폐기가 먼저다.</p>
+
+    <div class="hashtag-wrap"><span class="hashtag">#공동인증서</span><span class="hashtag">#금융인증서</span><span class="hashtag">#공동인증서금융인증서비교</span><span class="hashtag">#인증서유효기간</span><span class="hashtag">#공동인증서갱신</span><span class="hashtag">#금융인증서발급</span><span class="hashtag">#간편인증</span><span class="hashtag">#공인인증서폐지</span><span class="hashtag">#전자서명법</span><span class="hashtag">#범용인증서</span></div>
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://www.law.go.kr/법령/전자서명법" target="_blank" rel="noopener">국가법령정보센터 — 전자서명법(2020. 6. 9. 전부개정, 2020. 12. 10. 시행) 제7조·제8조 전자서명인증업무 운영기준·평가·인정</a>
+      <a href="https://m.korea.kr/news/policyNewsView.do?newsId=148880719" target="_blank" rel="noopener">대한민국 정책브리핑 — 10일부터 공인인증서 폐지, 민간인증서 확산 지원(2020. 12.)</a>
+      <a href="https://sgsg.hankyung.com/article/2020122429791" target="_blank" rel="noopener">한국경제 생글생글 — 2020년 12월 10일 공인인증서 의무 사용 21년 만에 폐지, 공동인증서로 명칭 변경</a>
+      <a href="https://www.kisa.or.kr/1050609" target="_blank" rel="noopener">한국인터넷진흥원(KISA) — 전자서명인증사업자 인정·평가 제도 안내</a>
+      <a href="https://trustesign.kisa.or.kr/" target="_blank" rel="noopener">KISA 전자서명인증 서비스 안내 — 국내 21개 사업자 23개 전자서명인증서 운영, 2026-001호 카카오뱅크 인정</a>
+      <a href="https://spot.wooribank.com/pot/Dream?withyou=CTCER0020" target="_blank" rel="noopener">우리은행 인증센터 — 공동인증서 종류 및 용도(개인 범용 4,400원/년, 은행·신용카드·보험용 무료)</a>
+      <a href="https://spot.wooribank.com/pot/Dream?withyou=CTCER0022" target="_blank" rel="noopener">우리은행 인증센터 — 전자세금용 공동인증서(사업자 4,400원/년)</a>
+      <a href="https://kebhana.com/cont/info/info01/info0103/index.jsp" target="_blank" rel="noopener">하나은행 — 공동인증서 발급기관과 용도별 수수료(사업자 범용 110,000원/년)</a>
+      <a href="https://www.standardchartered.co.kr/np/kr/cms/pl/et/ChargeElectronicFinance1.jsp" target="_blank" rel="noopener">SC제일은행 — 전자금융 수수료 안내(기업 은행용 4,400원 부가세 포함)</a>
+      <a href="https://kbthink.com/life/daily/certificate.html" target="_blank" rel="noopener">KB금융 — 공동인증서·금융인증서·KB국민인증서 발급 방법과 사용처</a>
+      <a href="https://kakaobankcontent.com/bank-story/contents/200" target="_blank" rel="noopener">카카오뱅크 — 공동인증서 vs 금융인증서(저장 위치·유효기간 1년/3년·갱신 방식)</a>
+      <a href="https://toss.im/tossfeed/article/certificate-difference" target="_blank" rel="noopener">토스피드 — 공동인증서, 금융인증서, 토스인증서 뭐가 다른가요</a>
+      <a href="https://www.110.go.kr/data/counselView.do?num=A01_659617" target="_blank" rel="noopener">국민권익위원회 110 정부민원안내콜센터 — 공동인증서와 금융인증서 차이 상담 자료</a>
+      <a href="https://www.shinhansec.com/siw/customer-center/certification/730501/view.do" target="_blank" rel="noopener">신한투자증권 — 공동인증서 갱신(만료 60일 전부터)</a>
+      <a href="https://fundsupermarket.wooriib.com/fmv/FMV1030001/main.do" target="_blank" rel="noopener">우리투자증권 — 공동인증서 갱신(만료 30일 전부터, 만료 후 재발급)</a>
+      <a href="https://www.thepublic.kr/news/articleView.html?idxno=302197" target="_blank" rel="noopener">더퍼블릭 — 국세청, 850만 사업자 간편인증 도입(2026. 4.), 사업자 인증수단 공동인증서 83%·보안카드 14%·생체 2%·금융인증서 1%</a>
+      <a href="https://www.korea.kr/news/policyNewsView.do?newsId=148910320" target="_blank" rel="noopener">대한민국 정책브리핑 — 민간인증서 적용 공공웹사이트 55곳 → 110곳 확대(행정안전부)</a>
+      <a href="https://www.g-enews.com/article/Finance/2026/08/202608191706504116bb91c46fcd_1" target="_blank" rel="noopener">글로벌이코노믹 — KB국민인증서 이용 고객 1,800만 명 돌파(2026. 8.)</a>
+      <a href="https://www.mt.co.kr/society/2020/06/15/2020061117172757635" target="_blank" rel="noopener">머니투데이 — 뚫리면 다 털리는 범용인증서, 2014년 일주일간 6,947건 유출 사례</a>
+      <a href="https://m.boannews.com/html/detail.html?idx=143255" target="_blank" rel="noopener">보안뉴스 — 인증서 PC 저장이 위험한 이유(NPKI 폴더·USB 보관 권고)</a>
+    </div>
+    <p class="disclaimer">※ 본 아티클은 법령·발급기관 공시·공공기관 발표를 정리한 정보성 콘텐츠이며 금융·법률 자문이 아닙니다. 인증서 수수료, 유효기간, 갱신 가능 시점, 사이트별 지원 인증서 목록은 발급기관과 각 기관 정책에 따라 바뀔 수 있으므로 발급·갱신 전 거래 금융회사 인증센터와 해당 사이트 안내를 확인하시기 바랍니다. 인증서 분실·유출이 의심되면 폐기 후 금융회사와 경찰에 신고하시기 바랍니다.</p>
+  </div>
+
+<!-- HUB:RELATED:BEGIN -->
+<style>
+.hub-bc{font-size:13px;color:#5b6672;margin:0 0 18px;font-family:'Noto Sans KR',sans-serif}
+.hub-bc a{color:#5b6672;text-decoration:none}.hub-bc a:hover{text-decoration:underline}
+.hub-rel{margin:38px 0 6px;padding:20px 22px;border:1px solid #e3e8ee;border-radius:10px;
+  background:#fafbfc;font-family:'Noto Sans KR',sans-serif}
+.hub-rel h2{font-size:15px;margin:0 0 14px;font-weight:700;color:#12202e;
+  font-family:'Noto Sans KR',sans-serif;border:0;padding:0}
+.hub-rel ul{list-style:none;padding:0;margin:0}
+.hub-rel li{padding:7px 0;font-size:14.5px;line-height:1.55}
+.hub-rel li a{color:#12202e;text-decoration:none}
+.hub-rel li a:hover{color:#1a5f8a;text-decoration:underline}
+.hub-rel .hub-more{margin:14px 0 0;font-size:13.5px}
+.hub-rel .hub-more a{color:#1a5f8a;text-decoration:none;font-weight:700}
+</style>
+<aside class="hub-rel">
+  <h2>같은 분야 다른 글 — 법률·행정</h2>
+  <ul>
+    <li><a href="/2026-08-14-공소시효-계산법">공소시효 계산법 — 죄목별 기간과 정지·폐지 기준 정리</a></li>
+    <li><a href="/2026-08-22-약식명령-정식재판-청구방법">약식명령 정식재판 청구 방법 — 7일 기간과 벌금 인상 가능 여부 정리</a></li>
+    <li><a href="/2026-08-31-기소유예-전과-기록-여부">기소유예 뜻 — 불기소 처분 종류와 전과 기록 남는지 여부</a></li>
+    <li><a href="/2026-08-15-모바일-주민등록증-발급방법">모바일 주민등록증 발급방법 — 신청 절차와 사용처, 재발급 기준 정리</a></li>
+    <li><a href="/2026-10-01-개인정보-분쟁조정-신청방법">개인정보 분쟁조정 신청방법 — 집단분쟁조정 참여 절차와 조정 효력</a></li>
+    <li><a href="/2026-10-04-국민참여재판-절차-의사확인서-평결효력">국민참여재판 절차 — 7일 의사확인서와 배제결정 사유, 평결 효력</a></li>
+    <li><a href="/2026-10-09-보이스피싱-피해금-환급-순서-지급정지-기한">보이스피싱 피해금 환급 순서 — 지급정지 요청 후 서류 제출 기한 확인</a></li>
+    <li><a href="/2026-10-12-지급명령-신청방법-인지대-이의신청-2주">지급명령 신청방법 — 인지대·송달료 계산과 이의신청 2주, 확정 후 강제집행 순서</a></li>
+    <li><a href="/2026-10-20-행정심판-청구방법-청구기간-90일-180일-재결절차">행정심판 청구방법 — 청구기간 90일·180일 계산과 재결 60일, 집행정지와 비용</a></li>
+    <li><a href="/2026-10-16-중고거래-사기-신고방법-고소-배상명령-순서">중고거래 사기 신고방법 — 지급정지 안 되는 이유와 고소·배상명령 순서</a></li>
+    <li><a href="/2026-10-28-국선변호인-선정-자격-직권-선정-6가지-사유-빈곤-청구-비용">국선변호인 선정 자격 — 구속·미성년자·70세 이상 직권 선정 사유와 빈곤 청구</a></li>
+    <li><a href="/2026-11-06-소액사건심판-비용-인지대-송달료-이행권고결정-이의-2주">소액사건심판 비용 — 인지대·송달료와 이행권고결정 이의 2주</a></li>
+    <li><a href="/2026-11-07-개인정보-열람-요구-어디에-기업-공공기관-요구-절차-수수료-거절-사유">개인정보 열람 요구 어디에 — 기업·공공기관 요구 절차와 수수료, 거절 사유</a></li>
+    <li><a href="/2026-11-14-상속포기-한정승인-비교-3개월-기한-비용-준비물-선택-이유">상속포기 한정승인 비교 — 3개월 기한과 비용·준비물, 선택 이유</a></li>
+  </ul>
+  <p class="hub-more"><a href="/law/">법률·행정 전체 보기 →</a></p>
+</aside>
+<!-- HUB:RELATED:END -->
+</article>
+</body>
+</html>
