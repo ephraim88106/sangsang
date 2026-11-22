@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>퇴직금 계산법 — 평균임금 산정 기준과 지급기한, 미지급 시 대처법 | 취업·노동</title>
+  <meta name="description" content="퇴직금은 월급이 아니라 퇴직 전 3개월 평균임금을 기준으로 계산한다. 근로자퇴직급여 보장법에 따라 평균임금 × 30일 × (재직일수÷365)로 산출하며, 평균임금이 통상임금보다 낮으면 통상임금을 적용한다. 상여금·연차수당의 반영 비율, 퇴직일로부터 14일 이내 지급 의무, 미지급 시 연 20% 지연이자와 고용노동부 진정 절차, 2025년 임금체불액 2조 679억원 중 퇴직금이 38%대를 차지하는 배경까지 계산 구조로 정리했다.">
+  <meta name="keywords" content="퇴직금 계산법, 평균임금 계산, 퇴직금 지급기한, 근로자퇴직급여 보장법, 퇴직금 미지급, 퇴직연금 DB DC, 퇴직금 지연이자, 평균임금 통상임금 차이, 퇴직금 상여금 반영, 임금체불 진정">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f2f4f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #004d40 0%, #00695c 45%, #00838f 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #b2dfdb; color: #004d40; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #e0f2f1; border-left: 5px solid #00695c; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #00695c; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #004d40; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #00695c; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #004d40; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #e0f2f1; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #00695c; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #004d40; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #f1f8f7; border-left: 4px solid #26a69a; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #004d40; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f4faf9; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #004d40; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #004d40; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #d5e8e5; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-teal { background: linear-gradient(90deg, #004d40, #26a69a); }
+    .bar-cyan { background: linear-gradient(90deg, #006064, #4dd0e1); }
+    .bar-amber { background: linear-gradient(90deg, #ef6c00, #ffb300); }
+    .bar-grey { background: linear-gradient(90deg, #546e7a, #90a4ae); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #c2ddd9; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #e0f2f1; color: #004d40; font-weight: 700; }
+    table.rate td.up { color: #004d40; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #ef6c00; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #00695c; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #004d40; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #b2dfdb; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #004d40; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #b2dfdb; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #00695c; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .formula { background: #f4faf9; border: 1.5px dashed #26a69a; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 16.5px; font-weight: 800; color: #004d40; line-height: 1.8; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #00838f; margin-top: 10px; margin-bottom: 0; }
+    .warnbox { background: #fff8e1; border-left: 5px solid #f9a825; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 26px 0; }
+    .warnbox .wt { font-size: 14px; font-weight: 800; color: #ef6c00; margin-bottom: 8px; }
+    .warnbox p { font-size: 15px; color: #5d4037; margin-bottom: 0; word-break: keep-all; }
+    .case { background: #fff; border: 1.5px solid #b2dfdb; border-left: 5px solid #00695c; border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; }
+    .case .ct { font-size: 13.5px; font-weight: 800; color: #004d40; margin-bottom: 6px; letter-spacing: 0.3px; }
+    .case p { font-size: 14.8px; margin-bottom: 8px; }
+    .case p:last-child { margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #e0f2f1; color: #00695c; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #00695c; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<!-- SEO:AUTO BEGIN -->
+<meta property="article:published_time" content="2026-09-22T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-09-22T09:00:00+09:00">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "퇴직금 계산법 — 평균임금 산정 기준과 지급기한, 미지급 시 대처법",
+  "description": "퇴직금은 평균임금 × 30일 × (재직일수÷365)로 계산한다. 평균임금 산정 방법과 포함·제외 항목, 14일 지급 기한, 미지급 시 지연이자와 진정 절차를 정리했다.",
+  "url": "https://sangsang.ephseed.com/2026-09-22-%ED%87%B4%EC%A7%81%EA%B8%88-%EA%B3%84%EC%82%B0%EB%B2%95",
+  "datePublished": "2026-09-22T09:00:00+09:00",
+  "dateModified": "2026-09-22T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-09-22-%ED%87%B4%EC%A7%81%EA%B8%88-%EA%B3%84%EC%82%B0%EB%B2%95">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="퇴직금 계산법 — 평균임금 산정 기준과 지급기한, 미지급 시 대처법 | 취업·노동">
+<meta property="og:description" content="퇴직금은 월급이 아니라 퇴직 전 3개월 평균임금을 기준으로 계산한다. 근로자퇴직급여 보장법에 따라 평균임금 × 30일 × (재직일수÷365)로 산출하며, 평균임금이 통상임금보다 낮으면 통상임금을 적용한다. 상여금·연차수당의 반영 비율, 퇴직일로부터 14일 이내 지급 의무, 미지급 시 연 20% 지연이자와 고용노동부 진정 절차, 2025년 임금체불액 2조 679억원 중 퇴직금이 38%대를 차지하는 배경까지 계산 구조로 정리했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-09-22-%ED%87%B4%EC%A7%81%EA%B8%88-%EA%B3%84%EC%82%B0%EB%B2%95">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-09-22T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-09-22T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N28MJLW4W9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-N28MJLW4W9");</script>
+<!-- SEO:END -->
+</head>
+
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-EVlth33UH8CTDu2u"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-KMCr4AoIjIDsi9XA"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-qqfX36xk8gz6faM6"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+<article class="article-wrap">
+<!-- HUB:BREADCRUMB:BEGIN -->
+<nav class="hub-bc"><a href="/">생생 정보통</a> &rsaquo; <a href="/labor/">노동·급여</a></nav>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "생생 정보통", "item": "https://sangsang.ephseed.com/"}, {"@type": "ListItem", "position": 2, "name": "노동·급여", "item": "https://sangsang.ephseed.com/labor/"}]}</script>
+<!-- HUB:BREADCRUMB:END -->
+  <header class="hero">
+    <div class="category-badge">💼 취업 · 노동</div>
+    <h1>퇴직금 계산법 —<br>평균임금 산정 기준과 지급기한, 미지급 시 대처법</h1>
+    <p class="hero-sub">퇴직금을 월급에 근속연수를 곱해 어림잡는 사람이 많다. 실제 법정 계산식은 다르다. 퇴직 전 3개월간 받은 돈을 그 기간의 날수로 나눈 <b>평균임금</b>이 출발점이고, 상여금·연차수당이 이 안에 얼마나 들어가는지에 따라 금액이 달라진다. 계산 공식과 지급 기한, 못 받았을 때의 절차까지 정리했다.</p>
+    <div class="hero-meta">
+      <span>💼 취업 · 노동</span>
+      <span>📅 2026년 9월 22일</span>
+      <span>⏱️ 약 9분</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+
+    <div class="summary-box">
+      <h2>핵심 요약</h2>
+      <ul>
+        <li>퇴직금 = <strong>평균임금 × 30일 × (재직일수 ÷ 365)</strong>. 평균임금은 퇴직 전 3개월간 받은 임금총액을 그 기간의 총일수로 나눠 구하며, 평균임금이 통상임금보다 낮으면 <strong>통상임금을 대신 적용</strong>한다.</li>
+        <li>지급 대상은 <strong>계속근로 1년 이상 + 4주 평균 주 15시간 이상</strong> 근무자로, 정규직·계약직·아르바이트를 가리지 않는다.</li>
+        <li>사업주는 퇴직일로부터 <strong>14일 이내</strong> 지급해야 한다(근로자퇴직급여 보장법 제9조). 넘기면 연 20% 지연이자가 붙고 형사처벌 대상이 된다.</li>
+        <li>2025년 임금체불액은 2년 연속 <strong>2조원대</strong>를 기록했고, 2023년 체불액의 38.3%(6,838억원)가 퇴직금이었다 — 정부는 2026년 2월 퇴직급여 사외적립 의무화를 논의 중이다.</li>
+      </ul>
+    </div>
+
+    <h2 class="sec">1. 누가 받을 수 있나 — 고용형태가 아니라 근속·근로시간이 기준</h2>
+
+    <p>퇴직금의 근거법은 <strong>근로자퇴직급여 보장법</strong>이다. 이 법에 따라 사업주는 <strong>계속근로기간 1년 이상</strong>이면서 <strong>4주간 평균해 1주 소정근로시간이 15시간 이상</strong>인 근로자에게 퇴직금을 지급할 의무가 있다. 여기서 중요한 것은 정규직·계약직·일용직 같은 고용형태 명칭이 아니라 <strong>실제 근속기간과 근로시간</strong>이라는 점이다. 아르바이트라도 이 두 요건을 채우면 퇴직금을 받을 권리가 생긴다. 반대로 1년을 하루라도 채우지 못하거나 주 15시간 미만으로 근무했다면 법정 지급 의무는 발생하지 않는다.</p>
+
+    <h2 class="sec">2. 계산 공식 — 핵심은 '평균임금'이다</h2>
+
+    <p>퇴직금 계산의 출발점은 월급이 아니라 <strong>평균임금</strong>이다. 평균임금은 퇴직 사유가 발생한 날 이전 <strong>3개월간 그 근로자에게 지급된 임금총액</strong>을 그 <strong>3개월의 총일수</strong>로 나눈 값이다. 이렇게 구한 하루치 평균임금에 30일을 곱하고, 여기에 재직일수를 365로 나눈 값(근속연수)을 곱하면 최종 퇴직금이 나온다.</p>
+
+    <div class="formula">
+      <div class="f-main">퇴직금 = 평균임금(1일) × 30일 × (재직일수 ÷ 365)<br>평균임금(1일) = 퇴직 전 3개월간 지급된 임금총액 ÷ 그 기간의 총일수</div>
+      <p class="f-note">평균임금이 통상임금보다 낮게 계산되면, 통상임금을 평균임금으로 대신 적용한다(하한 보장 규정).</p>
+    </div>
+
+    <p>통상임금은 정기적·일률적으로 지급되는 기본급성 임금을 시간급으로 환산한 값이라 상대적으로 변동이 적다. 반면 평균임금은 퇴직 직전 3개월의 실제 지급액을 그대로 반영하므로, 그 기간에 연장근로가 몰려 있었거나 상여금이 포함됐다면 평균임금이 통상임금보다 높게 나올 수 있다. 법은 근로자에게 불리하지 않도록 <strong>둘 중 높은 쪽</strong>을 적용하게 되어 있다.</p>
+
+    <div class="case">
+      <div class="ct">📌 계산 예시 — 월급 300만원, 3년(1,095일) 근속</div>
+      <p>퇴직 전 3개월(92일) 임금총액 = 300만원 × 3 = 900만원</p>
+      <p>평균임금(1일) = 900만원 ÷ 92일 ≈ <strong>97,826원</strong></p>
+      <p>퇴직금 = 97,826원 × 30 × (1,095 ÷ 365) ≈ <strong>약 880만원</strong> (상여금·연차수당 미반영 시)</p>
+    </div>
+
+    <h2 class="sec">3. 평균임금에 포함되는 것, 빠지는 것</h2>
+
+    <p>평균임금 산정에 들어가는 항목과 빠지는 항목을 구분하지 못하면 계산이 어긋난다. 기본급은 물론 연장·야간·휴일근로수당처럼 근로의 대가로 지급된 금품은 대부분 포함되며, <strong>상여금은 산정사유 발생일 이전 12개월간 지급분의 3/12</strong>, <strong>연차수당은 전년도 발생분의 3/12</strong>만 반영된다. 다만 퇴직하는 해에 아직 사용하지 않은 연차에 대한 수당은 이번 평균임금 계산에는 들어가지 않는다.</p>
+
+    <table class="rate">
+      <thead>
+        <tr><th>구분</th><th>포함 여부</th><th>내용</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>기본급</td><td class="up">포함</td><td>근로 제공의 대가로 매월 고정 지급</td></tr>
+        <tr><td>연장·야간·휴일근로수당</td><td class="up">포함</td><td>해당 3개월간 실제 지급액 그대로</td></tr>
+        <tr><td>상여금</td><td class="new">일부 포함</td><td>직전 12개월 지급분의 3/12만 반영</td></tr>
+        <tr><td>연차수당</td><td class="new">일부 포함</td><td>전년도 발생분의 3/12만 반영, 당해 미사용분 제외</td></tr>
+        <tr><td>비과세 식대·교통비</td><td class="down">제외</td><td>실비변상적 성격의 금품</td></tr>
+        <tr><td>경조금·비정기 성과급</td><td class="down">제외</td><td>은혜적·비정기적으로 지급되는 금품</td></tr>
+      </tbody>
+    </table>
+    <p class="note">※ 세부 포함·제외 기준은 근로기준법 시행령 제2조(평균임금의 범위)와 관련 행정해석을 따른다. 사업장별 수당 명칭이 달라 실제 적용 시 쟁점이 될 수 있다.</p>
+
+    <h2 class="sec">4. 지급 기한 — 14일을 넘기면 지연이자가 붙는다</h2>
+
+    <div class="steps">
+      <div class="step"><div class="step-t">퇴직 확정</div><div class="step-d">사직·계약만료·해고 등으로 근로관계가 종료된 날이 기준일이 된다.</div></div>
+      <div class="step"><div class="step-t">평균임금 산정</div><div class="step-d">사업주는 퇴직 전 3개월 임금총액을 확인해 평균임금과 통상임금을 비교·산출한다.</div></div>
+      <div class="step"><div class="step-t">퇴직금 지급</div><div class="step-d">근로자퇴직급여 보장법 제9조에 따라 <strong>퇴직일로부터 14일 이내</strong> 지급해야 한다. 특별한 사정이 있으면 당사자 간 합의로 지급기일을 연장할 수 있다.</div></div>
+      <div class="step"><div class="step-t">미지급 시 지연이자 발생</div><div class="step-d">14일이 지나도록 지급하지 않으면 그 다음 날부터 <strong>연 20%의 지연이자</strong>가 자동으로 붙는다.</div></div>
+    </div>
+
+    <div class="warnbox">
+      <div class="wt">⚠️ "나중에 준다"는 약속은 법적 근거가 되지 않는다</div>
+      <p>당사자 간 명시적 합의로 지급기일을 연장하지 않은 이상, 14일이라는 기한은 구두 약속이나 관행으로 미룰 수 없다. 기한을 넘긴 상태에서 지급이 계속 늦어지면 근로자는 곧바로 고용노동부에 진정을 제기할 수 있다.</p>
+    </div>
+
+    <h2 class="sec">5. 못 받았다면 — 진정부터 형사처벌까지</h2>
+
+    <p>퇴직금이 기한 내 지급되지 않으면 근로자는 <strong>고용노동부 고용노동포털 온라인 진정</strong> 또는 관할 고용노동관서 방문 신고로 구제를 요청할 수 있다. 근로계약서, 재직·퇴직증명서, 급여명세서, 입금내역, 퇴직금 산정내역서 등을 준비해 제출하면 원칙적으로 <strong>25일 이내</strong> 처리되며, 필요 시 한 차례 더 연장될 수 있다. 사업주가 정당한 사유 없이 퇴직금을 미지급하면 <strong>3년 이하의 징역 또는 3천만원 이하의 벌금</strong> 대상이 된다.</p>
+
+    <h2 class="sec">6. 이면 데이터 — 퇴직금은 왜 자꾸 체불의 진앙이 되나</h2>
+
+    <p>계산식과 절차가 명확해도, 실제로는 퇴직금이 체불의 큰 비중을 차지한다. 2023년 임금체불액 중 <strong>38.3%(6,838억원)가 퇴직금</strong>이었다. 전체 임금체불액은 2024년 2조 448억원, 2025년 2조 679억원으로 <strong>2년 연속 2조원대</strong>를 기록했고, 2026년 1월 한 달에만 1,916억원이 체불됐는데 이 중 <strong>68%가 소규모 사업장</strong>에 몰려 있었다. 퇴직 시점에는 회사와의 관계가 끝나 있어 근로자가 임금 항목보다 더 적극적으로 문제를 제기하기 어렵다는 점, 폐업·자금난 시기와 퇴직이 겹치는 경우가 많다는 점이 구조적 배경으로 꼽힌다.</p>
+
+    <div class="infographic-section">
+      <h3>📊 임금체불액 추이와 퇴직금 비중</h3>
+      <div class="bar-chart">
+        <div class="bar-item"><div class="bar-label"><span>2024년 임금체불액</span><span class="val">2조 448억원</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:96%">2조 448억원</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>2025년 임금체불액</span><span class="val">2조 679억원</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:100%">2조 679억원</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>2023년 체불 중 퇴직금 비중</span><span class="val">38.3%</span></div><div class="bar-track"><div class="bar-fill bar-amber" style="width:38%">6,838억원</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>2026년 1월 체불 중 소규모 사업장</span><span class="val">68%</span></div><div class="bar-track"><div class="bar-fill bar-cyan" style="width:68%">1,916억원 중 68%</div></div></div>
+      </div>
+      <p class="note">출처: 뉴스핌(2026.3.3), 뉴시스(2026.3.6), 대한민국 정책브리핑(korea.kr) 종합. 막대 폭은 각 수치의 상대적 크기를 보여주는 도식이며 동일 축의 절대 비교용은 아니다.</p>
+    </div>
+
+    <p>이런 배경 속에서 정부는 2026년 2월 노사정 태스크포스를 통해 <strong>퇴직급여 사외적립 의무화</strong>와 <strong>기금형 퇴직연금 도입</strong>을 논의하기 시작했다. 회사가 퇴직금 재원을 사내에 그대로 두는 대신 외부 금융기관에 의무적으로 적립하게 해, 회사 사정이 나빠져도 퇴직금 재원 자체는 보전되도록 하자는 취지다. 다만 법 개정이 필요한 사안이라 시행까지는 시간이 걸린다.</p>
+
+    <div class="pullquote">계산식이 아무리 정교해도, 그 결과를 실제로 손에 쥐는지는 회사의 지급 능력과 별개 문제다 — 그래서 지급 기한과 진정 절차를 아는 것 자체가 계산법만큼 중요하다.</div>
+
+    <h3 class="sub">퇴직금제도 vs 퇴직연금(DB·DC) — 재원을 어디에 쌓아두는가</h3>
+
+    <p>퇴직급여를 마련하는 방식은 퇴직금제도 하나만 있는 것이 아니다. <strong>DB형(확정급여형)</strong>은 회사가 재원을 직접 운용하고 근로자는 사전에 정해진 산식대로 급여를 받는 방식이고, <strong>DC형(확정기여형)</strong>은 회사가 매년 일정 부담금을 근로자 개인 계좌에 넣어주면 근로자가 직접 운용해 그 성과에 따라 수령액이 달라지는 방식이다. 2025년 말 기준 퇴직연금 전체 적립금은 <strong>501.4조원</strong>까지 불어났고, DB형 적립금 비중은 46.1%로 <strong>사상 처음 과반이 무너졌다</strong>. 운용수익률은 2025년 기준 DC형 8.5%, IRP 9.4%, DB형 3.5%로 근로자가 직접 운용하는 방식의 수익률이 눈에 띄게 높았다.</p>
+
+    <h2 class="sec">7. 나에게 미치는 영향 — 퇴직 전에 확인할 세 가지</h2>
+
+    <ul class="plain">
+      <li><strong>퇴직 시점을 조율할 수 있다면 3개월간의 임금 구성을 살펴본다.</strong> 상여금 지급월이나 연장근로가 많았던 시기가 평균임금 산정 기간에 걸치는지에 따라 금액이 달라질 수 있다.</li>
+      <li><strong>회사가 DC형 퇴직연금에 가입돼 있다면 계좌를 직접 확인한다.</strong> DC형은 매년 회사가 부담금을 납입했는지, 운용 성과가 반영됐는지를 근로자가 스스로 점검해야 한다.</li>
+      <li><strong>14일이 지나도록 소식이 없으면 곧바로 서류부터 챙긴다.</strong> 근로계약서·급여명세서·재직증명서를 미리 확보해 두면 진정 절차가 빨라진다.</li>
+    </ul>
+
+    <h2 class="sec">8. 전망과 행동 제안</h2>
+
+    <p>퇴직금 계산 구조 자체는 평균임금이라는 하나의 개념으로 정리돼 있다. 문제는 계산이 아니라 <strong>실제 지급</strong>이다. 2년 연속 2조원대에 이르는 임금체불, 그중 상당 부분을 차지하는 퇴직금 체불은 제도의 계산식보다 이행의 문제에 가깝다. 노사정이 논의 중인 사외적립 의무화가 실제로 법제화된다면 회사의 자금 사정과 퇴직금 지급이 분리되는 구조적 변화가 될 수 있지만, 아직은 논의 단계다.</p>
+
+    <p>지금 할 수 있는 일은 <strong>본인의 평균임금을 직접 계산해 보고, 14일이라는 기한을 기억해 두는 것</strong>이다. 고용노동부 퇴직금 계산기로 자신의 재직일수와 3개월 임금총액을 입력해 예상 금액을 미리 가늠해 두면, 실제 지급액이 맞는지 검증하는 기준이 생긴다. 기한을 넘기고도 지급이 늦어진다면 지연이자와 진정 절차가 있다는 사실을 아는 것만으로도 협상력이 달라진다.</p>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#퇴직금계산법</span>
+      <span class="hashtag">#평균임금계산</span>
+      <span class="hashtag">#퇴직금지급기한</span>
+      <span class="hashtag">#근로자퇴직급여보장법</span>
+      <span class="hashtag">#퇴직금미지급</span>
+      <span class="hashtag">#퇴직연금DBDC</span>
+      <span class="hashtag">#퇴직금지연이자</span>
+      <span class="hashtag">#임금체불진정</span>
+      <span class="hashtag">#평균임금통상임금차이</span>
+      <span class="hashtag">#퇴직금상여금반영</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://www.law.go.kr/lsInfoP.do?lsiSeq=115301" target="_blank" rel="noopener">국가법령정보센터 — 근로자퇴직급여 보장법: 지급 요건(계속근로 1년·주 15시간 이상), 제9조 지급기한(14일 이내), 벌칙 조항</a>
+      <a href="https://www.moel.go.kr/retirementpayCal.do" target="_blank" rel="noopener">고용노동부 — 퇴직금 계산기 및 FAQ: 평균임금 × 30일 × (재직일수÷365) 계산식, 통상임금 하한 적용 기준</a>
+      <a href="https://easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=1694&ccfNo=1&cciNo=2&cnpClsNo=1" target="_blank" rel="noopener">법제처 찾기 쉬운 생활법령정보 — 평균임금: 산정 방법, 상여금·연차수당 3/12 반영 기준</a>
+      <a href="https://www.korea.kr/news/policyNewsView.do?newsId=148960665" target="_blank" rel="noopener">대한민국 정책브리핑 — 2026년 2월 노사정 TF 퇴직급여 사외적립 의무화·기금형 퇴직연금 도입 논의, 2023년 체불액 중 퇴직금 38.3%(6,838억원)</a>
+      <a href="https://www.newspim.com/news/view/20260303000597" target="_blank" rel="noopener">뉴스핌(2026.3.3) — 임금체불액 2년 연속 2조원대: 2024년 2조448억원, 2025년 2조679억원</a>
+      <a href="https://www.newsis.com/view/NISX20260306_0003538301" target="_blank" rel="noopener">뉴시스(2026.3.6) — 2026년 1월 체불액 1,916억원, 소규모 사업장 68% 집중</a>
+      <a href="http://www.wealthm.co.kr/news/articleView.html?idxno=12557" target="_blank" rel="noopener">웰스매니지먼트 — 2025년 말 퇴직연금 적립금 501.4조원, DB형 비중 46.1%로 첫 과반 붕괴</a>
+      <a href="https://www.mt.co.kr/economy/2026/08/26/2026082609572718895" target="_blank" rel="noopener">머니투데이(2026.8.26) — 2025년 퇴직연금 유형별 수익률: DC형 8.5%, IRP 9.4%, DB형 3.5%</a>
+    </div>
+
+    <p class="disclaimer">
+      ※ 본 아티클은 국가법령정보센터·고용노동부·법제처 찾기 쉬운 생활법령정보의 공개 자료와 이를 인용한 언론 보도를 바탕으로 작성한 정보성 콘텐츠이며 개별 사안에 대한 법률 상담이 아닙니다. <strong>평균임금 산정 방법, 포함·제외 항목의 세부 기준은 근로기준법 시행령과 행정해석에 따라 달라질 수 있으므로 실제 계산 시 고용노동부 공식 계산기와 최신 안내를 반드시 확인하시기 바랍니다.</strong> 본문의 계산 예시(월급 300만원·3년 근속 시 약 880만원 등)는 상여금·연차수당을 반영하지 않은 단순 산출값이며, 실제 퇴직금은 개인의 임금 구성과 근속기간에 따라 달라집니다. 임금체불·퇴직연금 관련 통계는 언론 보도의 인용치로 원 통계와 차이가 있을 수 있습니다. 구체적인 상담이 필요한 경우 고용노동부 고객상담센터(☎1350) 또는 관할 고용노동관서에 문의하시기 바랍니다.
+    </p>
+
+  </div>
+<!-- HUB:RELATED:BEGIN -->
+<style>
+.hub-bc{font-size:13px;color:#5b6672;margin:0 0 18px;font-family:'Noto Sans KR',sans-serif}
+.hub-bc a{color:#5b6672;text-decoration:none}.hub-bc a:hover{text-decoration:underline}
+.hub-rel{margin:38px 0 6px;padding:20px 22px;border:1px solid #e3e8ee;border-radius:10px;
+  background:#fafbfc;font-family:'Noto Sans KR',sans-serif}
+.hub-rel h2{font-size:15px;margin:0 0 14px;font-weight:700;color:#12202e;
+  font-family:'Noto Sans KR',sans-serif;border:0;padding:0}
+.hub-rel ul{list-style:none;padding:0;margin:0}
+.hub-rel li{padding:7px 0;font-size:14.5px;line-height:1.55}
+.hub-rel li a{color:#12202e;text-decoration:none}
+.hub-rel li a:hover{color:#1a5f8a;text-decoration:underline}
+.hub-rel .hub-more{margin:14px 0 0;font-size:13.5px}
+.hub-rel .hub-more a{color:#1a5f8a;text-decoration:none;font-weight:700}
+</style>
+<aside class="hub-rel">
+  <h2>같은 분야 다른 글 — 노동·급여</h2>
+  <ul>
+    <li><a href="/2026-08-17-통상임금-계산법">통상임금 계산법 — 포함 항목과 평균임금 차이, 시간급 산정 기준</a></li>
+    <li><a href="/2026-09-02-육아휴직-급여-계산법">육아휴직 급여 계산법 — 월별 상한액과 사후지급금 폐지 시기</a></li>
+  </ul>
+  <p class="hub-more"><a href="/labor/">노동·급여 전체 보기 →</a></p>
+</aside>
+<!-- HUB:RELATED:END -->
+</article>
+</body>
+</html>

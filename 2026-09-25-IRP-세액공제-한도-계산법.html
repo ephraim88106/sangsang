@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IRP 세액공제 한도 계산법 — 연금저축 합산 900만원과 공제율 차이 | 경제·금융</title>
+  <meta name="description" content="IRP와 연금저축을 합산한 세액공제 한도는 연 900만 원이다. 연금저축 단독 한도는 600만 원까지이며 나머지 300만 원은 IRP를 함께 가입해야 채울 수 있다. 총급여 5,500만 원을 기준으로 공제율이 16.5%와 13.2%로 갈리고, ISA 만기 자금을 옮기면 한도가 1,200만 원까지 늘어난다. 중도 해지 시 기타소득세 16.5%가 붙는 구조와 부득이한 인출 사유의 저율과세 예외까지 국세청·금융권 자료로 정리했다.">
+  <meta name="keywords" content="IRP 세액공제 한도, 연금저축 세액공제 계산법, IRP 세액공제율, 연금저축 IRP 합산 900만원, ISA 연금계좌 전환 세액공제, IRP 중도인출 세금, 개인형퇴직연금 세액공제, 연금저축 600만원 한도, IRP 기타소득세, 퇴직연금 절세">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #eff1f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #14275e 0%, #1f3c8a 45%, #2f56b5 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #c9d4f2; color: #14275e; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #e9edfa; border-left: 5px solid #1f3c8a; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #1f3c8a; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #14275e; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #1f3c8a; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #14275e; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #dbe2f6; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #1f3c8a; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #14275e; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #e9edfa; border-left: 4px solid #5b78d6; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #14275e; line-height: 1.75; word-break: keep-all; }
+    .formula { background: #fff8e1; border: 1.5px dashed #ffb300; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 17px; font-weight: 800; color: #6d4c00; line-height: 1.7; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #8d6e63; margin-top: 10px; margin-bottom: 0; }
+    .infographic-section { background: #f5f7fd; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #14275e; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #14275e; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #dee4f6; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-teal { background: linear-gradient(90deg, #14275e, #5b78d6); }
+    .bar-blue { background: linear-gradient(90deg, #01579b, #4fc3f7); }
+    .bar-amber { background: linear-gradient(90deg, #e65100, #f9a825); }
+    .bar-grey { background: linear-gradient(90deg, #455a64, #90a4ae); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #d3daf0; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #e9edfa; color: #14275e; font-weight: 700; }
+    table.rate td.up { color: #1f3c8a; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #ef6c00; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #1f3c8a; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #14275e; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #c7d0ee; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #14275e; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #c7d0ee; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #1f3c8a; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .warnbox { background: #fff8e1; border-left: 5px solid #f9a825; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 26px 0; }
+    .warnbox .wt { font-size: 14px; font-weight: 800; color: #ef6c00; margin-bottom: 8px; }
+    .warnbox p { font-size: 15px; color: #5d4037; margin-bottom: 0; word-break: keep-all; }
+    .case { background: #fff; border: 1.5px solid #c7d0ee; border-left: 5px solid #1f3c8a; border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; }
+    .case .ct { font-size: 13.5px; font-weight: 800; color: #14275e; margin-bottom: 6px; letter-spacing: 0.3px; }
+    .case p { font-size: 14.8px; margin-bottom: 8px; }
+    .case p:last-child { margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #e9edfa; color: #1f3c8a; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #1f3c8a; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } .formula .f-main { font-size: 15px; } }
+  </style>
+<!-- SEO:AUTO BEGIN -->
+<meta property="article:published_time" content="2026-09-25T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-09-25T09:00:00+09:00">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "IRP 세액공제 한도 계산법 — 연금저축 합산 900만원과 공제율 차이",
+  "description": "IRP와 연금저축을 합산한 세액공제 한도는 연 900만 원이다. 총급여 5,500만 원을 기준으로 공제율이 16.5%와 13.2%로 갈리고, ISA 만기 자금을 옮기면 한도가 1,200만 원까지 늘어난다. 중도 해지 시 세금 구조까지 정리했다.",
+  "url": "https://sangsang.ephseed.com/2026-09-25-IRP-%EC%84%B8%EC%95%A1%EA%B3%B5%EC%A0%9C-%ED%95%9C%EB%8F%84-%EA%B3%84%EC%82%B0%EB%B2%95",
+  "datePublished": "2026-09-25T09:00:00+09:00",
+  "dateModified": "2026-09-25T09:00:00+09:00",
+  "inLanguage": "ko-KR",
+  "publisher": {"@type":"Organization","name":"생생 정보통","url":"https://sangsang.ephseed.com",
+    "logo":{"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}},
+  "image": {"@type":"ImageObject","url":"https://sangsang.ephseed.com/assets/og-default.png","width":1200,"height":630}
+}</script>
+<!-- SEO:AUTO END -->
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-09-25-IRP-%EC%84%B8%EC%95%A1%EA%B3%B5%EC%A0%9C-%ED%95%9C%EB%8F%84-%EA%B3%84%EC%82%B0%EB%B2%95">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="IRP 세액공제 한도 계산법 — 연금저축 합산 900만원과 공제율 차이 | 경제·금융">
+<meta property="og:description" content="IRP와 연금저축을 합산한 세액공제 한도는 연 900만 원이다. 연금저축 단독 한도는 600만 원까지이며 나머지 300만 원은 IRP를 함께 가입해야 채울 수 있다. 총급여 5,500만 원을 기준으로 공제율이 16.5%와 13.2%로 갈리고, ISA 만기 자금을 옮기면 한도가 1,200만 원까지 늘어난다. 중도 해지 시 기타소득세 16.5%가 붙는 구조와 부득이한 인출 사유의 저율과세 예외까지 국세청·금융권 자료로 정리했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-09-25-IRP-%EC%84%B8%EC%95%A1%EA%B3%B5%EC%A0%9C-%ED%95%9C%EB%8F%84-%EA%B3%84%EC%82%B0%EB%B2%95">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-09-25T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-09-25T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N28MJLW4W9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-N28MJLW4W9");</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-EVlth33UH8CTDu2u"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-KMCr4AoIjIDsi9XA"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-qqfX36xk8gz6faM6"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+<article class="article-wrap">
+<!-- HUB:BREADCRUMB:BEGIN -->
+<nav class="hub-bc"><a href="/">생생 정보통</a> &rsaquo; <a href="/money/">금융·대출</a></nav>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "생생 정보통", "item": "https://sangsang.ephseed.com/"}, {"@type": "ListItem", "position": 2, "name": "금융·대출", "item": "https://sangsang.ephseed.com/money/"}]}</script>
+<!-- HUB:BREADCRUMB:END -->
+  <header class="hero">
+    <div class="category-badge">💰 경제 · 금융</div>
+    <h1>IRP 세액공제 한도 계산법 —<br>연금저축 합산 900만원과<br>공제율 차이</h1>
+    <p class="hero-sub">연말정산 때마다 "IRP는 900만 원까지 넣으면 된다"는 말만 듣고, 정작 연금저축과 어떻게 합산되는지 몰라 한도를 못 채우는 사람이 많다. 한도는 계좌 두 개를 따로 세는 것이 아니라 하나로 묶어서 센다. 합산 방식과 공제율, ISA 전환 시 늘어나는 한도, 중도 해지하면 얼마를 토해내는지까지 계산식으로 정리했다.</p>
+    <div class="hero-meta">
+      <span>📅 2026년 9월 25일</span>
+      <span>✍️ 생생 정보통 정책팀</span>
+      <span>⏱️ 읽는 데 약 11분</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+    <div class="summary-box">
+      <h2>3줄 요약</h2>
+      <ul>
+        <li><strong>연금저축과 IRP를 합산한 세액공제 한도는 연 900만 원이다.</strong> 연금저축 단독으로는 600만 원까지만 공제 대상이고, 나머지 300만 원은 IRP를 함께 가입해야 채울 수 있다. IRP만 가입했다면 900만 원 전액이 IRP 한도로 인정된다.</li>
+        <li><strong>공제율은 소득 구간에 따라 갈린다.</strong> 총급여 5,500만 원 이하(종합소득 4,500만 원 이하)는 16.5%, 초과하면 13.2%가 적용돼 같은 900만 원을 넣어도 환급액이 <strong>148만 5천 원과 118만 8천 원</strong>으로 30만 원 가까이 차이난다.</li>
+        <li><strong>ISA 계좌 만기 자금을 연금계좌로 옮기면 한도가 더 늘어난다.</strong> 전환 금액의 10%(최대 300만 원)가 추가 공제 대상이 돼, 활용하면 한 해 최대 <strong>1,200만 원</strong>까지 세액공제 한도를 넓힐 수 있다.</li>
+      </ul>
+    </div>
+
+    <p>연말정산 시즌마다 "13월의 월급"으로 불리는 제도가 연금계좌 세액공제다. 그런데 정작 얼마를 넣어야 한도를 다 채우는지, 연금저축과 IRP 두 계좌를 어떻게 나눠 넣어야 하는지 헷갈려하는 사람이 많다. 계좌 이름이 다르다고 한도가 따로 있는 것이 아니라, 국세청은 두 계좌를 <strong>하나의 세액공제 한도</strong>로 합산해서 계산한다.</p>
+
+    <h2 class="sec">1. 한도부터 정확히 — 연금저축 600만원 + IRP 300만원 = 900만원</h2>
+
+    <p>가장 많이 틀리는 지점이 여기다. "연금저축 600만 원 넣고 IRP 900만 원 넣으면 1,500만 원 다 공제되는 것 아니냐"고 생각하기 쉬운데, 두 계좌는 <strong>같은 900만 원 한도 안에서 서로를 갉아먹는 관계</strong>다.</p>
+
+    <div class="formula">
+      <div class="f-main">연금저축 + IRP 세액공제 대상 납입액 ≤ 연 900만 원<br>(단, 연금저축만으로는 최대 600만 원까지만 인정)</div>
+      <p class="f-note">IRP는 단독으로 900만 원 전액을 채울 수 있지만, 연금저축은 단독으로 600만 원이 상한이다.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step"><div class="step-t">연금저축만 있는 경우</div><div class="step-d">아무리 많이 넣어도 <strong>연 600만 원까지만</strong> 세액공제 대상이다. 700만 원을 넣어도 초과분 100만 원은 공제받지 못한다.</div></div>
+      <div class="step"><div class="step-t">IRP만 있는 경우</div><div class="step-d">단독으로 <strong>연 900만 원 전액</strong>이 공제 대상이 된다. 두 계좌를 나눠 만들 필요 없이 IRP 하나로 한도를 다 채울 수 있다.</div></div>
+      <div class="step"><div class="step-t">둘 다 있는 경우 — 실무에서 가장 흔한 조합</div><div class="step-d">연금저축에 600만 원을 채웠다면, 남은 300만 원은 <strong>IRP로만</strong> 채워야 900만 원 전액이 공제된다. 연금저축에 400만 원만 넣었다면 IRP로 500만 원까지 채워야 한도를 다 쓴 것이다.</div></div>
+    </div>
+
+    <p class="pullquote">한도를 다 채우지 못했다고 손해가 나는 것은 아니다. 다만 세액공제라는 확정 수익률을 포기하는 셈이라, 여윳돈이 있다면 한도까지 채우는 편이 다른 절세 수단보다 유리한 경우가 많다.</p>
+
+    <h2 class="sec">2. 공제율은 소득에 따라 16.5%와 13.2%로 갈린다</h2>
+
+    <p>한도를 채웠다고 환급액이 똑같은 것은 아니다. 공제율은 <strong>근로소득자는 총급여, 사업소득자는 종합소득금액</strong>을 기준으로 두 구간으로 나뉜다.</p>
+
+    <table class="rate">
+      <thead>
+        <tr><th>소득 구간</th><th>공제율(지방소득세 포함)</th><th>900만 원 납입 시 환급액</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>총급여 5,500만 원 이하<br>(종합소득 4,500만 원 이하)</td><td class="up">16.5%</td><td class="up">148만 5,000원</td></tr>
+        <tr><td>총급여 5,500만 원 초과</td><td>13.2%</td><td>118만 8,000원</td></tr>
+      </tbody>
+    </table>
+    <p class="note">※ 국세청 「근로소득 연금계좌 세액공제」 기준. 한도(900만 원)는 소득 구간과 무관하게 동일하고, 달라지는 것은 공제율뿐이다.</p>
+
+    <div class="infographic-section">
+      <h3>📊 소득 구간별 900만원 납입 시 환급액</h3>
+      <div class="bar-chart">
+        <div class="bar-item"><div class="bar-label"><span>총급여 5,500만원 이하 (16.5%)</span><span class="val">148.5만원</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:100%">148만 5,000원</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>총급여 5,500만원 초과 (13.2%)</span><span class="val">118.8만원</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:80%">118만 8,000원</div></div></div>
+      </div>
+      <p class="note">같은 한도를 채워도 소득 구간에 따라 환급액이 약 30만 원 차이 난다.</p>
+    </div>
+
+    <h2 class="sec">3. 한도를 더 늘리는 방법 — ISA 만기 전환</h2>
+
+    <p>900만 원이 끝이 아니다. <strong>ISA(개인종합자산관리계좌)</strong> 만기 자금을 연금저축이나 IRP로 옮기면 한도가 더 늘어난다. 전환 금액의 <strong>10%(최대 300만 원)</strong>가 기존 900만 원 한도와 별도로 추가 공제 대상이 된다.</p>
+
+    <div class="case">
+      <div class="ct">📌 계산 예시 — ISA 만기금 3,000만 원을 연금계좌로 전환</div>
+      <p>전환 금액 3,000만 원 × 10% = <strong>300만 원</strong>(추가 공제 한도 상한에 도달)</p>
+      <p>기존 한도 900만 원 + ISA 전환 추가분 300만 원 = <strong>최대 1,200만 원</strong>까지 세액공제 대상 납입액을 늘릴 수 있다. 16.5% 구간이라면 1,200만 원 × 16.5% = <strong>198만 원</strong> 환급이 가능하다.</p>
+    </div>
+
+    <p>ISA는 만기 후 3년의 의무 가입 기간을 채우면 비과세·분리과세 혜택도 함께 받을 수 있어, 목돈을 굴리다 은퇴자금으로 이전하는 전형적인 절세 경로로 쓰인다.</p>
+
+    <h2 class="sec">4. 중도에 빼면 어떻게 되나 — 기타소득세 16.5%가 기본값</h2>
+
+    <div class="warnbox">
+      <div class="wt">⚠️ 세액공제 받은 돈, 함부로 빼면 그대로 토해낸다</div>
+      <p>연금계좌를 만 55세 이전에 특별한 사유 없이 해지하면, 세액공제를 받았던 납입금과 운용수익 전체에 <strong>기타소득세 16.5%</strong>가 부과된다. 148만 5천 원을 돌려받고 나중에 900만 원을 그냥 빼면, 세금으로 다시 148만 5천 원가량을 내는 셈이라 사실상 공제받은 혜택이 상쇄된다.</p>
+    </div>
+
+    <p>다만 소득세법이 정한 <strong>'부득이한 인출 사유'</strong>에 해당하면 세율이 크게 낮아진다. 이 경우 세액공제받은 납입금과 운용수익에는 일반 해지의 16.5% 대신 <strong>연금소득세 3.3~5.5%</strong>가 적용된다. KDI 경제교육·정보센터가 안내하는 부득이한 인출 사유에는 가입자 사망, 해외 이주, 개인회생·파산 선고, 3개월 이상 요양, 천재지변, 무주택자의 주택 구입·전세금 부담 등이 포함된다. 다만 사유별로 요구하는 증빙서류와 세부 요건이 다르고 세법 개정에 따라 적용 범위가 바뀔 수 있어, 인출 전 해당 사유가 실제로 저율과세 대상인지 가입한 금융회사나 국세청을 통해 반드시 확인해야 한다.</p>
+
+    <h3 class="sub">55세 이후 정상 수령하면?</h3>
+
+    <p>정해진 요건(가입 5년 이상 경과, 만 55세 이후)을 채워 <strong>연금으로 수령</strong>하면 세액공제받은 원금과 운용수익에 <strong>연금소득세 3.3~5.5%</strong>만 부과된다. 연금계좌가 절세 상품으로 불리는 이유는 이 세율 차이 때문이다. 급하게 빼면 16.5%, 제도가 설계한 대로 연금으로 받으면 3.3~5.5%라는 5배 가까운 격차가 만들어진다.</p>
+
+    <h2 class="sec">5. 숫자로 본 이면 — 빠르게 느는 적립금, 그만큼 느는 '방치 계좌'</h2>
+
+    <p>세액공제 혜택이 알려지면서 IRP 적립금은 빠르게 불어나고 있다. 2025년 기준 전체 퇴직연금 적립금은 500조 원을 넘어섰고, 이 중 IRP는 130조 원에 육박한다. 같은 해 퇴직연금 전체 수익률은 6.47%로 역대 최고 수준을 기록했고, IRP만 놓고 보면 9.44%에 달했다.</p>
+
+    <div class="impact-grid">
+      <div class="impact-card"><span class="impact-num">500조+</span><span class="impact-label">2025년 퇴직연금<br>전체 적립금</span></div>
+      <div class="impact-card"><span class="impact-num">130조</span><span class="impact-label">이 중 IRP<br>적립금 규모</span></div>
+      <div class="impact-card"><span class="impact-num">9.44%</span><span class="impact-label">2025년 IRP<br>연간 수익률</span></div>
+      <div class="impact-card"><span class="impact-num">148.5만원</span><span class="impact-label">900만원 납입 시<br>최대 환급액</span></div>
+    </div>
+
+    <p>문제는 세액공제만 받고 방치되는 계좌가 적지 않다는 점이다. 매년 한도를 채워 넣고도 어디에 어떻게 운용되는지 확인하지 않는 '예금성 방치' 계좌가 많다는 지적이 금융업계에서 꾸준히 나온다. IRP 안에서 정기예금형으로만 넣어 두면 세액공제는 받지만 물가상승률 수준의 수익률에 그칠 수 있어, 공제만 챙기고 운용은 잊어버리는 것은 절반만 절세하는 셈이다.</p>
+
+    <h2 class="sec">6. 나에게 미치는 영향 — 확인할 세 가지</h2>
+
+    <ul class="plain">
+      <li><strong>내 소득 구간부터 확인한다.</strong> 총급여 5,500만 원을 기준으로 공제율이 16.5%인지 13.2%인지가 갈리고, 이는 곧 같은 금액을 넣었을 때의 실제 환급액을 좌우한다.</li>
+      <li><strong>연금저축과 IRP 납입액 합계를 한도(900만 원) 안에서 조정한다.</strong> 연금저축에 이미 600만 원을 넣었다면 IRP로는 300만 원만 채우면 되고, 그 이상 넣어도 세액공제는 추가되지 않는다.</li>
+      <li><strong>55세 이전에는 함부로 해지하지 않는다.</strong> 급전이 필요하더라도 일반 해지의 기타소득세 16.5%와 부득이한 사유의 연금소득세 3.3~5.5% 사이의 세금 차이를 먼저 계산해 봐야 한다.</li>
+    </ul>
+
+    <h2 class="sec">7. 전망과 행동 제안</h2>
+
+    <p>연금계좌 세액공제는 매년 국세청이 발표하는 소득 구간과 한도 기준이 바뀔 수 있는 제도다. 다만 900만 원이라는 합산 한도와 16.5%·13.2% 공제율 구조는 최근 몇 년간 큰 틀에서 유지되고 있어, 지금 시점에서는 <strong>한도를 채우는 것 자체가 확정된 절세 효과</strong>로 통한다.</p>
+
+    <p>지금 할 수 있는 일은 명확하다. 첫째, 연말정산 전에 <strong>연금저축과 IRP 납입 합계가 900만 원에 얼마나 못 미치는지</strong> 계좌를 열어 확인한다. 둘째, 여유 자금이 있다면 연내에 부족분을 채워 넣는다. 셋째, ISA 계좌를 운용 중이라면 만기 시점에 연금계좌 전환으로 한도를 추가로 늘릴 수 있는지 따져본다. 넷째, IRP 안에서 자금이 어떤 상품으로 운용되고 있는지 최소 1년에 한 번은 점검해, 세액공제만 받고 수익률은 방치하는 상황을 피한다.</p>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#IRP세액공제</span>
+      <span class="hashtag">#IRP세액공제한도</span>
+      <span class="hashtag">#연금저축세액공제</span>
+      <span class="hashtag">#연금저축IRP합산</span>
+      <span class="hashtag">#IRP공제율</span>
+      <span class="hashtag">#ISA연금계좌전환</span>
+      <span class="hashtag">#IRP중도인출</span>
+      <span class="hashtag">#개인형퇴직연금</span>
+      <span class="hashtag">#연말정산절세</span>
+      <span class="hashtag">#기타소득세16.5%</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7875" target="_blank" rel="noopener">국세청 — 근로소득 연금계좌 세액공제: 한도 900만원(연금저축 600만원 포함), 공제율 16.5%·13.2% 기준</a>
+      <a href="https://www.banksalad.com/articles/%EC%86%8C%EB%93%9D%EA%B3%B5%EC%A0%9C-%EC%84%B8%EC%95%A1%EA%B3%B5%EC%A0%9C-%EA%B0%9C%EC%9D%B8%EC%97%B0%EA%B8%88-%EC%97%B0%EB%B4%89%EB%B3%84-%EB%B9%84%EA%B5%90" target="_blank" rel="noopener">뱅크샐러드 — 연금저축·IRP 세액공제 총정리: 한도·최대 환급액 계산 예시</a>
+      <a href="https://www.tossbank.com/articles/pension-savings-tax-deduction" target="_blank" rel="noopener">토스뱅크 — 연금저축·IRP 세액공제, 148만원 돌려받는 구조 설명</a>
+      <a href="https://www.nongmin.com/article/20251215500715" target="_blank" rel="noopener">농민신문(2025.12.15.) — '13월의 월급' 핵심은 연금계좌, 900만원까지 최대 16.5% 환급</a>
+      <a href="https://eiec.kdi.re.kr/policy/materialView.do?num=222927" target="_blank" rel="noopener">KDI 경제교육·정보센터 — 연금계좌 중도인출 시 저율과세되는 부득이한 인출사유 안내</a>
+      <a href="https://www.nongmin.com/article/20250509500670" target="_blank" rel="noopener">농민신문 — IRP 중도해지 시 세금환급액 이상 토해내는 구조(기타소득세 16.5%)</a>
+      <a href="https://www.newspim.com/news/view/20260420000266" target="_blank" rel="noopener">뉴스핌(2026.4.20.) — 한국투자증권 IRP 가입자 52만명 돌파, 적립금 증가율 18.6%</a>
+      <a href="https://bravo.etoday.co.kr/view/atc_view/19615" target="_blank" rel="noopener">브라보마이라이프 — 세액공제만 받고 방치된 IRP 계좌 점검의 필요성</a>
+    </div>
+
+    <p class="disclaimer">
+      ※ 본 아티클은 국세청 안내 자료, KDI 경제교육·정보센터, 금융권 공개 자료와 이를 인용한 언론 보도를 바탕으로 작성한 정보성 콘텐츠이며 개별 세무 상담이나 투자 권유가 아닙니다. <strong>세액공제 한도, 공제율, 소득 구간 기준은 세법 개정에 따라 변경될 수 있으므로 연말정산 시점의 국세청 공식 안내를 반드시 확인하시기 바랍니다.</strong> 중도인출 시 적용되는 '부득이한 인출 사유'의 구체적 요건과 증빙서류는 사유별로 다르고 변경될 수 있어, 실제 인출 전 가입 금융회사 또는 국세청(☎126)에 확인이 필요합니다. 본문의 계산 예시는 이해를 돕기 위한 것으로 실제 환급액·세액은 개인의 소득 구성과 다른 공제 항목에 따라 달라질 수 있습니다. 투자 상품의 수익률은 원금 손실 가능성이 있으므로 운용 상품 선택은 신중히 결정하시기 바랍니다.
+    </p>
+
+  </div>
+<!-- HUB:RELATED:BEGIN -->
+<style>
+.hub-bc{font-size:13px;color:#5b6672;margin:0 0 18px;font-family:'Noto Sans KR',sans-serif}
+.hub-bc a{color:#5b6672;text-decoration:none}.hub-bc a:hover{text-decoration:underline}
+.hub-rel{margin:38px 0 6px;padding:20px 22px;border:1px solid #e3e8ee;border-radius:10px;
+  background:#fafbfc;font-family:'Noto Sans KR',sans-serif}
+.hub-rel h2{font-size:15px;margin:0 0 14px;font-weight:700;color:#12202e;
+  font-family:'Noto Sans KR',sans-serif;border:0;padding:0}
+.hub-rel ul{list-style:none;padding:0;margin:0}
+.hub-rel li{padding:7px 0;font-size:14.5px;line-height:1.55}
+.hub-rel li a{color:#12202e;text-decoration:none}
+.hub-rel li a:hover{color:#1a5f8a;text-decoration:underline}
+.hub-rel .hub-more{margin:14px 0 0;font-size:13.5px}
+.hub-rel .hub-more a{color:#1a5f8a;text-decoration:none;font-weight:700}
+</style>
+<aside class="hub-rel">
+  <h2>같은 분야 다른 글 — 금융·대출</h2>
+  <ul>
+    <li><a href="/2026-08-18-예금자보호-한도-1억원">예금자보호 한도 1억원 — 보호 대상 상품과 금융회사별 계산 기준 정리</a></li>
+    <li><a href="/2026-08-26-스트레스-DSR-3단계-적용-조건">스트레스 DSR 3단계 적용 조건 — 가산금리와 대출 한도 차이</a></li>
+  </ul>
+  <p class="hub-more"><a href="/money/">금융·대출 전체 보기 →</a></p>
+</aside>
+<!-- HUB:RELATED:END -->
+</article>
+</body>
+</html>
