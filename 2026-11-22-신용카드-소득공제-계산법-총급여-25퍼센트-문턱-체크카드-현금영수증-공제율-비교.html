@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>신용카드 소득공제 계산법 — 총급여 25% 문턱과 체크카드·현금영수증 공제율 비교 | 경제·금융</title>
+  <meta name="description" content="신용카드 소득공제는 총급여의 25%를 넘긴 사용액에만 적용된다. 넘긴 금액에 신용카드 15%, 체크카드·현금영수증 30%, 전통시장·대중교통 40%를 곱하고 기본 한도 300만원(총급여 7,000만원 초과 250만원)에서 자른다. 문턱 계산 순서, 결제수단별 공제율 비교, 자녀 수별 한도, 공제 제외 항목, 2027년 개편안까지 정리했다.">
+  <meta name="keywords" content="신용카드 소득공제 계산법, 신용카드 소득공제 한도, 총급여 25%, 체크카드 공제율, 현금영수증 소득공제, 전통시장 대중교통 40%, 연말정산 카드 공제, 신용카드 체크카드 비교, 자녀 신용카드 공제 한도, 문화비 소득공제">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f2f4f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #0d47a1 0%, #1565c0 45%, #0277bd 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #bbdefb; color: #0d47a1; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #e3f2fd; border-left: 5px solid #1565c0; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #1565c0; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #0d47a1; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #1565c0; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #0d47a1; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #e3f2fd; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #1565c0; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #0d47a1; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #f1f6fd; border-left: 4px solid #42a5f5; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #0d47a1; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f3f8fe; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #0d47a1; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #0d47a1; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #d6e4f5; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-teal { background: linear-gradient(90deg, #0d47a1, #42a5f5); }
+    .bar-cyan { background: linear-gradient(90deg, #0d47a1, #64b5f6); }
+    .bar-amber { background: linear-gradient(90deg, #ef6c00, #ffb300); }
+    .bar-blue { background: linear-gradient(90deg, #0d47a1, #42a5f5); }
+    .bar-grey { background: linear-gradient(90deg, #546e7a, #90a4ae); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #c3d5ee; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #e3f2fd; color: #0d47a1; font-weight: 700; }
+    table.rate td.up { color: #0d47a1; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #ef6c00; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #1565c0; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #0d47a1; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #bbdefb; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #0d47a1; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #bbdefb; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #1565c0; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .formula { background: #f3f8fe; border: 1.5px dashed #42a5f5; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 16.5px; font-weight: 800; color: #0d47a1; line-height: 1.8; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #0277bd; margin-top: 10px; margin-bottom: 0; }
+    .warnbox { background: #fff8e1; border-left: 5px solid #f9a825; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 26px 0; }
+    .warnbox .wt { font-size: 14px; font-weight: 800; color: #ef6c00; margin-bottom: 8px; }
+    .warnbox p { font-size: 15px; color: #5d4037; margin-bottom: 0; word-break: keep-all; }
+    .case { background: #fff; border: 1.5px solid #bbdefb; border-left: 5px solid #1565c0; border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; }
+    .case .ct { font-size: 13.5px; font-weight: 800; color: #0d47a1; margin-bottom: 6px; letter-spacing: 0.3px; }
+    .case p { font-size: 14.8px; margin-bottom: 8px; }
+    .case p:last-child { margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #e3f2fd; color: #1565c0; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #1565c0; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-11-22-%EC%8B%A0%EC%9A%A9%EC%B9%B4%EB%93%9C-%EC%86%8C%EB%93%9D%EA%B3%B5%EC%A0%9C-%EA%B3%84%EC%82%B0%EB%B2%95-%EC%B4%9D%EA%B8%89%EC%97%AC-25%ED%8D%BC%EC%84%BC%ED%8A%B8-%EB%AC%B8%ED%84%B1-%EC%B2%B4%ED%81%AC%EC%B9%B4%EB%93%9C-%ED%98%84%EA%B8%88%EC%98%81%EC%88%98%EC%A6%9D-%EA%B3%B5%EC%A0%9C%EC%9C%A8-%EB%B9%84%EA%B5%90">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="신용카드 소득공제 계산법 — 총급여 25% 문턱과 체크카드·현금영수증 공제율 비교 | 경제·금융">
+<meta property="og:description" content="신용카드 소득공제는 총급여의 25%를 넘긴 사용액에만 적용된다. 넘긴 금액에 신용카드 15%, 체크카드·현금영수증 30%, 전통시장·대중교통 40%를 곱하고 기본 한도 300만원(총급여 7,000만원 초과 250만원)에서 자른다. 문턱 계산 순서, 결제수단별 공제율 비교, 자녀 수별 한도, 공제 제외 항목, 2027년 개편안까지 정리했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-11-22-%EC%8B%A0%EC%9A%A9%EC%B9%B4%EB%93%9C-%EC%86%8C%EB%93%9D%EA%B3%B5%EC%A0%9C-%EA%B3%84%EC%82%B0%EB%B2%95-%EC%B4%9D%EA%B8%89%EC%97%AC-25%ED%8D%BC%EC%84%BC%ED%8A%B8-%EB%AC%B8%ED%84%B1-%EC%B2%B4%ED%81%AC%EC%B9%B4%EB%93%9C-%ED%98%84%EA%B8%88%EC%98%81%EC%88%98%EC%A6%9D-%EA%B3%B5%EC%A0%9C%EC%9C%A8-%EB%B9%84%EA%B5%90">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-11-22T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-11-22T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N28MJLW4W9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-N28MJLW4W9");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://sangsang.ephseed.com/#organization", "name": "생생 정보통", "url": "https://sangsang.ephseed.com/"}, {"@type": "WebSite", "@id": "https://sangsang.ephseed.com/#website", "url": "https://sangsang.ephseed.com/", "name": "생생 정보통", "description": "매일 아침 배달되는 경제·정책·생활 정보 브리핑", "inLanguage": "ko-KR", "publisher": {"@id": "https://sangsang.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://sangsang.ephseed.com/2026-11-22-%EC%8B%A0%EC%9A%A9%EC%B9%B4%EB%93%9C-%EC%86%8C%EB%93%9D%EA%B3%B5%EC%A0%9C-%EA%B3%84%EC%82%B0%EB%B2%95-%EC%B4%9D%EA%B8%89%EC%97%AC-25%ED%8D%BC%EC%84%BC%ED%8A%B8-%EB%AC%B8%ED%84%B1-%EC%B2%B4%ED%81%AC%EC%B9%B4%EB%93%9C-%ED%98%84%EA%B8%88%EC%98%81%EC%88%98%EC%A6%9D-%EA%B3%B5%EC%A0%9C%EC%9C%A8-%EB%B9%84%EA%B5%90#page", "url": "https://sangsang.ephseed.com/2026-11-22-%EC%8B%A0%EC%9A%A9%EC%B9%B4%EB%93%9C-%EC%86%8C%EB%93%9D%EA%B3%B5%EC%A0%9C-%EA%B3%84%EC%82%B0%EB%B2%95-%EC%B4%9D%EA%B8%89%EC%97%AC-25%ED%8D%BC%EC%84%BC%ED%8A%B8-%EB%AC%B8%ED%84%B1-%EC%B2%B4%ED%81%AC%EC%B9%B4%EB%93%9C-%ED%98%84%EA%B8%88%EC%98%81%EC%88%98%EC%A6%9D-%EA%B3%B5%EC%A0%9C%EC%9C%A8-%EB%B9%84%EA%B5%90", "headline": "신용카드 소득공제 계산법 — 총급여 25% 문턱과 체크카드·현금영수증 공제율 비교 | 경제·금융", "description": "신용카드 소득공제는 총급여의 25%를 넘긴 사용액에만 적용된다. 넘긴 금액에 신용카드 15%, 체크카드·현금영수증 30%, 전통시장·대중교통 40%를 곱하고 기본 한도 300만원(총급여 7,000만원 초과 250만원)에서 자른다. 문턱 계산 순서, 결제수단별 공제율 비교, 자녀 수별 한도, 공제 제외 항목, 2027년 개편안까지 정리했다.", "inLanguage": "ko-KR", "image": "https://sangsang.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://sangsang.ephseed.com/#website"}, "datePublished": "2026-11-22", "dateModified": "2026-11-22", "author": {"@id": "https://sangsang.ephseed.com/#organization"}, "publisher": {"@id": "https://sangsang.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-EVlth33UH8CTDu2u"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-KMCr4AoIjIDsi9XA"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-qqfX36xk8gz6faM6"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+
+<article class="article-wrap">
+<!-- HUB:BREADCRUMB:BEGIN -->
+<nav class="hub-bc"><a href="/">생생 정보통</a> &rsaquo; <a href="/money/">금융·대출</a></nav>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "생생 정보통", "item": "https://sangsang.ephseed.com/"}, {"@type": "ListItem", "position": 2, "name": "금융·대출", "item": "https://sangsang.ephseed.com/money/"}]}</script>
+<!-- HUB:BREADCRUMB:END -->
+  <header class="hero">
+    <div class="category-badge">💰 경제 · 금융</div>
+    <h1>신용카드 소득공제 계산법 —<br>총급여 25% 문턱과 체크카드·현금영수증 공제율 비교</h1>
+    <p class="hero-sub">신용카드 소득공제는 쓴 돈 전부가 아니라 <b>총급여의 25%를 넘긴 금액</b>에만 붙는다. 넘긴 금액에 결제수단별 공제율(신용카드 15%, 체크카드·현금영수증 30%, 전통시장·대중교통 40%)을 곱하고, 마지막에 한도로 자른다. 문턱 계산, 공제율 비교, 한도, 공제에서 빠지는 항목, 2027년에 바뀔 수 있는 내용까지 계산 순서대로 정리했다.</p>
+    <div class="hero-meta">
+      <span>💰 경제 · 금융</span>
+      <span>📅 2026년 11월 22일</span>
+      <span>⏱️ 약 8분</span>
+    </div>
+  </header>
+
+  <div class="body-content">
+    <div class="summary-box">
+      <h2>핵심 요약</h2>
+      <ul>
+        <li>공제 대상은 1월 1일부터 12월 31일까지 쓴 금액 가운데 <strong>총급여의 25%를 넘는 부분</strong>이다. 총급여 5,000만원이면 1,250만원까지는 무엇으로 결제해도 공제액이 0원이다.</li>
+        <li>넘긴 금액에 곱하는 공제율은 <strong>신용카드 15%, 체크카드·현금영수증 30%, 전통시장·대중교통 40%</strong>다. 도서·공연·영화·수영장·헬스장 등 문화체육 사용분 30%는 총급여 7,000만원 이하만 적용된다.</li>
+        <li>기본 한도는 총급여 7,000만원 이하 <strong>300만원</strong>, 초과 <strong>250만원</strong>이다. 2026년 지출분부터 자녀가 있으면 1명 50만원, 2명 이상 100만원(7,000만원 초과자는 25만·50만원)이 더해진다.</li>
+        <li>소득공제는 세금을 직접 깎는 것이 아니라 과세표준을 줄인다. 실제로 줄어드는 세금은 <strong>공제액 × 본인 세율</strong>이다. 공제 300만원이면 세율 15% 구간에서 지방소득세 포함 약 49만 5천원이다.</li>
+      </ul>
+    </div>
+
+    <h2 class="sec">1. 누가, 어떤 지출로 받나</h2>
+    <p>정식 이름은 ‘신용카드 등 사용금액에 대한 소득공제’이고 근거는 <strong>조세특례제한법 제126조의2</strong>다. 대상은 근로소득이 있는 거주자, 곧 연말정산을 하는 직장인이다. 일용근로자와 사업소득만 있는 개인사업자·프리랜서는 받을 수 없다.</p>
+    <p>합산되는 사용액은 본인 것만이 아니다. <strong>연간 소득금액이 100만원 이하</strong>(근로소득만 있으면 총급여 500만원 이하)인 배우자와 부모·자녀 같은 직계존비속이 쓴 금액도 근로자 본인 공제에 넣을 수 있고, 이때 나이 제한은 없다. 반면 <strong>형제자매가 쓴 금액</strong>은 기본공제 대상자로 올려 두었더라도 합산되지 않는다. 맞벌이 부부는 각자 자기 명의 사용액만 자기 공제에 넣는다. 가족카드는 결제 대금을 누가 내든 카드에 이름이 적힌 사람의 사용액으로 본다.</p>
+    <p>결제수단은 신용카드, 체크·직불카드, 선불카드(실명 등록분), 현금영수증, 그리고 일부 간편결제가 포함된다. 현금으로 내고 현금영수증을 받지 않은 지출은 집계되지 않는다.</p>
+
+    <h2 class="sec">2. 계산 순서 — 문턱, 공제율, 한도</h2>
+    <div class="formula">
+      <div class="f-main">① 문턱 = 총급여 × 25%<br>② 공제 대상 = 연간 사용액 − 문턱<br>③ 공제액 = 공제 대상 × 결제수단별 공제율 (한도까지)</div>
+      <p class="f-note">총급여는 연봉에서 식대 등 비과세 소득을 뺀 금액이다. 근로소득 원천징수영수증에서 확인한다.</p>
+    </div>
+    <h3 class="sub">문턱은 공제율이 낮은 결제수단부터 채운다</h3>
+    <p>여러 결제수단을 섞어 썼을 때 문턱(최저사용금액)을 어느 사용액에서 빼느냐에 따라 공제액이 달라진다. 법은 납세자에게 유리하게 <strong>공제율이 낮은 순서</strong>로 문턱을 채운 것으로 본다. 신용카드 사용액에서 먼저 빼고, 모자라면 체크카드·현금영수증, 그다음 문화체육, 마지막으로 전통시장·대중교통 순이다. 그래서 신용카드를 문턱만큼 썼다면, 그 뒤에 쓴 체크카드와 전통시장 사용액은 전액이 30%·40% 공제 대상이 된다.</p>
+    <p>이 구조에서 흔히 말하는 사용 순서가 나온다. 문턱까지는 어떤 수단을 써도 공제가 0원이므로 포인트나 할인 혜택이 큰 신용카드를 쓰고, <strong>문턱을 넘은 뒤부터</strong> 공제율이 두 배인 체크카드나 현금영수증으로 바꾸는 방식이다. 다만 달마다 결제수단을 바꿀 필요는 없다. 연간 합계로 계산하므로 한 해 전체 비율만 맞으면 결과는 같다.</p>
+
+    <h2 class="sec">3. 결제수단별 공제율 비교</h2>
+    <table class="rate">
+      <tr><th>사용 구분</th><th>공제율</th><th>비고</th></tr>
+      <tr><td>신용카드</td><td>15%</td><td>후불 교통카드 기능을 뺀 일반 결제</td></tr>
+      <tr><td>체크카드·직불카드·선불카드</td><td class="up">30%</td><td>선불카드는 실명 등록분</td></tr>
+      <tr><td>현금영수증</td><td class="up">30%</td><td>소득공제용(휴대전화번호 등)으로 발급받은 것</td></tr>
+      <tr><td>도서·공연·박물관·미술관·영화관람료, 수영장·체력단련장</td><td class="up">30%</td><td>총급여 7,000만원 이하만. 수영장·체력단련장은 2025년 7월 1일 이후 이용분부터</td></tr>
+      <tr><td>전통시장</td><td class="up">40%</td><td>결제수단 관계없이 40%</td></tr>
+      <tr><td>대중교통</td><td class="up">40%</td><td>버스·지하철·철도 등. 택시·항공은 제외</td></tr>
+    </table>
+    <p class="note">※ 2026년 지출분(2027년 1~2월 연말정산)에 적용되는 조세특례제한법 제126조의2 기준이다. 2027년 이후 지출분은 6장의 개편안 통과 여부에 따라 달라질 수 있다.</p>
+
+    <div class="infographic-section">
+      <h3>같은 100만원을 써도 — 문턱을 넘긴 사용액 100만원당 공제액</h3>
+      <div class="bar-chart">
+        <div class="bar-item"><div class="bar-label"><span>신용카드 (15%)</span><span class="val">15만원</span></div><div class="bar-track"><div class="bar-fill bar-grey" style="width:37.5%">15%</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>체크카드·현금영수증 (30%)</span><span class="val">30만원</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:75%">30%</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>도서·공연·영화·수영장·헬스장 (30%, 총급여 7,000만원 이하)</span><span class="val">30만원</span></div><div class="bar-track"><div class="bar-fill bar-cyan" style="width:75%">30%</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>전통시장 (40%)</span><span class="val">40만원</span></div><div class="bar-track"><div class="bar-fill bar-amber" style="width:100%">40%</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>대중교통 (40%)</span><span class="val">40만원</span></div><div class="bar-track"><div class="bar-fill bar-amber" style="width:100%">40%</div></div></div>
+      </div>
+      <p class="note">※ 막대는 40%를 가득 찬 길이로 놓고 그렸다. 금액은 소득에서 빼 주는 공제액이며, 돌려받는 세금은 여기에 본인 세율을 곱한 값이다.</p>
+    </div>
+
+    <h2 class="sec">4. 한도 — 기본 300만원과 추가 한도</h2>
+    <p>공제율을 곱해 나온 금액은 한도 안에서만 인정된다. 한도는 기본 한도와 추가 한도 두 층이다. 기본 한도는 모든 사용분에 공통으로 적용되고, 기본 한도를 넘긴 금액 가운데 전통시장·대중교통·문화체육 사용분에서 나온 공제액만 추가 한도로 더 받을 수 있다.</p>
+    <table class="rate">
+      <tr><th>구분</th><th>총급여 7,000만원 이하</th><th>총급여 7,000만원 초과</th></tr>
+      <tr><td>기본 한도</td><td class="up">300만원</td><td>250만원</td></tr>
+      <tr><td>자녀 1명 (2026년 지출분부터)</td><td class="new">350만원</td><td class="new">275만원</td></tr>
+      <tr><td>자녀 2명 이상 (2026년 지출분부터)</td><td class="new">400만원</td><td class="new">300만원</td></tr>
+      <tr><td>추가 한도</td><td>전통시장·대중교통·문화체육 합계 300만원</td><td>전통시장·대중교통 합계 200만원</td></tr>
+    </table>
+    <p class="note">※ 자녀 수에 따른 기본 한도 상향은 2025년 세제개편으로 들어온 내용으로, 재정경제부 안내에 따르면 2026년 1월 1일 이후 지출분부터 적용된다. 자녀의 범위 등 세부 요건은 국세청 연말정산 안내에서 확인해야 한다.</p>
+    <p>한도를 거꾸로 계산하면 얼마까지 쓰는 것이 의미 있는지 나온다. 총급여 5,000만원인 사람이 문턱 1,250만원을 넘긴 뒤 체크카드만 쓴다면, 초과분 <strong>1,000만원</strong>에서 공제액이 300만원에 닿는다. 연간 2,250만원을 넘는 일반 지출은 더 써도 공제가 늘지 않고, 그 뒤로는 전통시장·대중교통·문화체육 사용분만 추가 한도로 쌓인다.</p>
+
+    <h2 class="sec">5. 계산 사례 — 총급여 5,000만원, 연 2,100만원 사용</h2>
+    <p>총급여 5,000만원이면 문턱은 1,250만원이다. 같은 2,100만원을 쓰더라도 결제수단 구성에 따라 공제액이 두 배까지 벌어진다.</p>
+    <div class="case">
+      <div class="ct">사례 ① 2,100만원 전부 신용카드</div>
+      <p>공제 대상: 2,100만 − 1,250만 = 850만원</p>
+      <p>공제액: 850만 × 15% = <strong>127만 5천원</strong></p>
+    </div>
+    <div class="case">
+      <div class="ct">사례 ② 신용카드 1,250만원 + 체크카드 850만원</div>
+      <p>문턱 1,250만원은 신용카드 사용액에서 모두 빠진다. 체크카드 850만원 전액이 공제 대상이다.</p>
+      <p>공제액: 850만 × 30% = <strong>255만원</strong></p>
+    </div>
+    <div class="case">
+      <div class="ct">사례 ③ 신용카드 1,500만원 + 체크카드 500만원 + 전통시장 100만원</div>
+      <p>신용카드: (1,500만 − 1,250만) × 15% = 37만 5천원</p>
+      <p>체크카드: 500만 × 30% = 150만원 / 전통시장: 100만 × 40% = 40만원</p>
+      <p>공제액 합계: <strong>227만 5천원</strong> (기본 한도 300만원 이내)</p>
+    </div>
+    <p>공제액은 돌려받는 돈이 아니다. 과세표준에서 빠지는 금액이므로 본인에게 적용되는 세율을 곱해야 줄어드는 세금이 나온다. 총급여 5,000만원 안팎의 직장인은 과세표준이 1,400만원 초과 5,000만원 이하 구간(세율 15%)에 드는 경우가 많다. 지방소득세 10%를 더하면 실효 16.5%다.</p>
+    <table class="rate">
+      <tr><th>사례</th><th>공제액</th><th>줄어드는 세금 (16.5% 가정)</th></tr>
+      <tr><td>① 전부 신용카드</td><td>127만 5천원</td><td>약 21만원</td></tr>
+      <tr><td>② 문턱까지 신용카드, 나머지 체크카드</td><td class="up">255만원</td><td class="up">약 42만원</td></tr>
+      <tr><td>③ 신용·체크·전통시장 혼합</td><td>227만 5천원</td><td>약 37만 5천원</td></tr>
+    </table>
+    <p class="note">※ 세율은 과세표준 구간에 따라 6%(1,400만원 이하), 15%, 24%(5,000만원 초과 8,800만원 이하), 35% 등으로 달라진다. 위 금액은 다른 공제를 고려하지 않은 예시다.</p>
+    <div class="warnbox">
+      <div class="wt">⚠ 문턱을 못 넘으면 공제는 0원이다</div>
+      <p>총급여 5,000만원인 사람이 한 해 1,200만원을 썼다면 체크카드만 썼더라도 공제액은 없다. 연말에 문턱까지 한참 남았다면 공제를 받으려고 지출을 늘리는 것은 손해다. 100만원을 더 써서 줄어드는 세금은 많아야 몇만원이다.</p>
+    </div>
+
+    <h2 class="sec">6. 공제에서 빠지는 지출과 겹쳐 받는 지출</h2>
+    <p>카드로 결제했더라도 사용액에 잡히지 않는 항목이 있다. 연말정산 간소화 자료의 사용액이 카드 명세서 합계보다 적게 나오는 이유다.</p>
+    <table class="rate">
+      <tr><th>구분</th><th>항목</th></tr>
+      <tr><td class="down">공제 제외</td><td>국세·지방세, 전기·수도·가스요금, 휴대전화·인터넷 요금, 아파트 관리비, 고속도로 통행료</td></tr>
+      <tr><td class="down">공제 제외</td><td>보험료, 유치원·초중고·대학 수업료, 상품권 구입, 신차 구입, 자동차 리스료, 금융 수수료·이자</td></tr>
+      <tr><td class="down">공제 제외</td><td>해외에서 쓴 금액, 면세점 사용액, 세액공제를 받은 월세·기부금, 사업 관련 경비</td></tr>
+      <tr><td class="new">일부 인정</td><td>중고차 구입액의 10%</td></tr>
+      <tr><td class="up">중복 공제 가능</td><td>의료비, 취학 전 아동 학원비, 중·고등학생 교복 구입비 — 각각의 세액공제와 카드 소득공제를 함께 받는다</td></tr>
+    </table>
+    <p class="note">※ 국세청 연말정산 안내와 금융·카드사 안내 자료를 종합했다. 개별 가맹점의 분류(전통시장, 문화체육 사업자 여부 등)는 홈택스 연말정산 간소화 자료에서 확인한다.</p>
+
+    <h2 class="sec">7. 이면 — 1999년에 만든 한시 제도가 27년째인 이유</h2>
+    <p>이 제도는 <strong>1999년</strong> 자영업자의 매출을 드러내 세원을 넓히려는 목적으로 도입됐다. 카드 결제가 일상이 된 뒤로는 정책 목표를 이미 달성했다는 평가가 반복됐지만, 일몰이 올 때마다 연장됐고 현재 적용기한은 <strong>2028년 12월 31일</strong>이다. 없애면 직장인의 세 부담이 곧바로 늘기 때문이다.</p>
+    <div class="impact-grid">
+      <div class="impact-card"><span class="impact-num">25%</span><div class="impact-label">총급여 대비 문턱 (최저사용금액)</div></div>
+      <div class="impact-card"><span class="impact-num">약 1,163만명</span><div class="impact-label">공제를 받은 근로자 (국세통계, 2023년 1월 보도)</div></div>
+      <div class="impact-card"><span class="impact-num">283만원</span><div class="impact-label">1인당 평균 공제액 (같은 통계)</div></div>
+      <div class="impact-card"><span class="impact-num">약 4.4조원</span><div class="impact-label">2025년 국세 감면액 추산 (조세지출예산서)</div></div>
+    </div>
+    <p>규모도 작지 않다. 국회예산정책처 분석으로 2022년 조세지출은 3조 2,675억원이었고, 2025년 조세지출예산서는 4조 3,693억원으로 추산했다. 소득공제 방식이라 세율이 높은 고소득자일수록 같은 공제액으로 더 많은 세금이 줄어든다는 형평성 지적도 꾸준하다. 총급여 7,000만원을 기준으로 한도와 문화체육 공제를 나눠 둔 것이 그 보완 장치다.</p>
+    <h3 class="sub">2027년 지출분부터 바뀔 수 있는 내용</h3>
+    <p>재정경제부가 2026년 8월 발표한 세제개편안에는 이 제도의 우대 공제를 손보는 내용이 들어 있다. 보도된 정부안은 다음과 같다.</p>
+    <ul class="plain">
+      <li><strong>대중교통 40% 우대 삭제</strong>: 대중교통 사용분은 결제수단에 따른 일반 공제율(신용카드 15%, 체크카드·현금영수증 30%)을 적용한다.</li>
+      <li><strong>문화체육 30% 소득 요건 폐지</strong>: 총급여 7,000만원 초과자도 도서·공연·영화·체육시설 사용분에 30%를 적용받는다.</li>
+      <li><strong>추가 한도 축소</strong>: 총급여 7,000만원 이하는 300만원에서 200만원으로, 초과자는 200만원에서 100만원 수준으로 줄이는 내용이 보도됐다. 초과자 한도의 세부 내용은 매체마다 표현이 다르다.</li>
+      <li><strong>그대로인 것</strong>: 기본 한도(300만·250만원)와 적용기한(2028년 12월 31일).</li>
+    </ul>
+    <p>적용 시기는 2027년 1월 1일 이후 시작하는 과세기간으로 제시됐다. 다만 이것은 정부안이고 국회 심의에서 바뀔 수 있다. <strong>2026년에 쓴 금액</strong>은 개편안과 관계없이 지금 기준으로 2027년 초에 정산한다.</p>
+
+    <h2 class="sec">8. 나에게 미치는 영향 — 상황별 확인 사항</h2>
+    <ul class="plain">
+      <li><strong>문턱을 아직 못 넘은 사람</strong>: 남은 기간에는 혜택이 좋은 결제수단을 그대로 쓴다. 공제를 위해 소비를 늘릴 이유는 없다.</li>
+      <li><strong>문턱을 넘었고 한도가 남은 사람</strong>: 남은 기간 지출을 체크카드·현금영수증으로 돌리면 같은 지출의 공제액이 두 배가 된다.</li>
+      <li><strong>기본 한도를 이미 채운 사람</strong>: 일반 지출은 더 써도 공제가 늘지 않는다. 전통시장·대중교통·문화체육 사용분만 추가 한도로 쌓인다.</li>
+      <li><strong>맞벌이 부부</strong>: 문턱은 각자 총급여의 25%다. 총급여가 낮은 쪽은 문턱이 낮아 넘기기 쉽고, 높은 쪽은 세율이 높아 같은 공제액의 효과가 크다. 두 경우의 세금을 비교해 한쪽 명의 카드로 모으는 것이 낫다.</li>
+      <li><strong>자녀가 있는 사람</strong>: 2026년 지출분부터 기본 한도가 늘어난다. 한도 때문에 잘렸던 사람만 체감하는 변화다.</li>
+      <li><strong>연중 입사·퇴사자</strong>: 근로를 제공한 기간에 쓴 금액만 공제 대상이다. 입사 전이나 퇴사 후 사용액은 빠진다.</li>
+    </ul>
+
+    <h2 class="sec">9. 확인 순서 — 연말 전에 할 일</h2>
+    <div class="steps">
+      <div class="step"><div class="step-t">총급여와 문턱을 계산한다</div><div class="step-d">올해 예상 총급여(비과세 제외)에 25%를 곱한다. 지난해 근로소득 원천징수영수증의 총급여에 올해 인상분을 더하면 근사치가 나온다.</div></div>
+      <div class="step"><div class="step-t">홈택스 ‘연말정산 미리보기’에서 사용액을 확인한다</div><div class="step-d">국세청은 매년 11월 무렵 홈택스에서 9월까지의 카드 사용액을 불러와 예상 공제액을 계산해 주는 미리보기 서비스를 연다. 10~12월 예상 지출을 직접 넣어 볼 수 있다.</div></div>
+      <div class="step"><div class="step-t">문턱 초과 여부에 따라 결제수단을 정한다</div><div class="step-d">문턱 전이면 그대로, 문턱을 넘었고 한도가 남았으면 체크카드·현금영수증으로 바꾼다. 현금 결제는 소득공제용 현금영수증을 요청한다.</div></div>
+      <div class="step"><div class="step-t">부양가족 자료 제공 동의를 받아 둔다</div><div class="step-d">소득금액 100만원 이하인 배우자·부모·성년 자녀의 사용액을 합산하려면 홈택스에서 자료 제공 동의가 필요하다. 미성년 자녀는 부모가 직접 등록한다.</div></div>
+      <div class="step"><div class="step-t">1월 간소화 자료에서 구분을 대조한다</div><div class="step-d">다음 해 1월 중순 열리는 연말정산 간소화 서비스에서 전통시장·대중교통·문화체육 사용분이 제대로 분류됐는지 확인하고, 빠진 현금영수증은 영수증을 근거로 수정 요청한다.</div></div>
+    </div>
+    <div class="pullquote">신용카드 소득공제는 총급여의 25%를 넘긴 사용액에만 적용된다. 넘긴 금액에 신용카드 15%, 체크카드·현금영수증 30%, 전통시장·대중교통 40%를 곱하고, 기본 한도 300만원(총급여 7,000만원 초과 250만원)에서 자른다. 문턱까지는 신용카드, 그 뒤는 체크카드가 계산상 유리하고, 줄어드는 세금은 공제액에 본인 세율을 곱한 만큼이다.</div>
+
+    <div class="hashtag-wrap">
+      <span class="hashtag">#신용카드소득공제</span><span class="hashtag">#신용카드소득공제계산법</span><span class="hashtag">#총급여25퍼센트</span><span class="hashtag">#체크카드공제율</span><span class="hashtag">#현금영수증소득공제</span><span class="hashtag">#연말정산카드공제</span><span class="hashtag">#전통시장대중교통공제</span>
+    </div>
+
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://www.law.go.kr/법령/조세특례제한법" target="_blank" rel="noopener">국가법령정보센터 — 조세특례제한법 제126조의2 (신용카드 등 사용금액에 대한 소득공제)</a>
+      <a href="https://nts.go.kr/nts/na/ntt/selectNttInfo.do?nttSn=1355059" target="_blank" rel="noopener">국세청 — 연말정산 안내 자료</a>
+      <a href="https://www.bokjiro.go.kr/ssis-tbu/cms/pc/news/promotion/1309120_1118.html" target="_blank" rel="noopener">복지로 — 2025년 귀속 연말정산, 무엇이 달라졌을까 (수영장·체력단련장 이용료 2025. 7. 1. 이후)</a>
+      <a href="https://www.newsis.com/view/NISX20251217_0003444516" target="_blank" rel="noopener">뉴시스 — 연말정산 신용카드 등 소득공제 안내 보도 (2025. 12.)</a>
+      <a href="https://news.mtn.co.kr/news-detail/2026080315521251297" target="_blank" rel="noopener">MTN — 대중교통 카드공제 축소…도서·공연은 고소득자도 공제 [2026 세제개편]</a>
+      <a href="https://www.hankyung.com/article/2026090286071" target="_blank" rel="noopener">한국경제 — 대중교통 카드 소득공제 줄어든다</a>
+      <a href="https://www.sidae.com/article/2026080316381542412" target="_blank" rel="noopener">동행미디어 시대 — 대중교통 카드 소득공제 없앤다…도서·공연 한도 축소</a>
+      <a href="https://studygov.kr/blog/0325-2026-credit-card-deduction-changes/" target="_blank" rel="noopener">studygov — 2026년 신용카드 소득공제 변경, 자녀당 50만원 상향 (재정경제부 안내 인용)</a>
+      <a href="https://www.mt.co.kr/economy/2025/05/21/2025051921151854883" target="_blank" rel="noopener">머니투데이 — 신용카드 소득공제 11번째 연장? 일몰 적용되지 않는 조세지출</a>
+      <a href="https://biz.newdaily.co.kr/site/data/html/2023/11/20/2023112000103.html" target="_blank" rel="noopener">뉴데일리경제 — 신용카드 소득공제 조세지출 규모 (국회예산정책처, 2022년 3조 2,675억원)</a>
+      <a href="https://v.daum.net/v/20250715131505602?f=p" target="_blank" rel="noopener">헤럴드경제 — 신용카드 소득공제 연장될까 (2025년 국세 감면액 4조 3,693억원 추산)</a>
+      <a href="https://www.fnnews.com/news/202301080531538686" target="_blank" rel="noopener">파이낸셜뉴스 — 신용카드 소득공제 1,163만 1천명·1인당 평균 283만원 (국세통계포털)</a>
+      <a href="https://toss.im/tossfeed/article/creditcard-tax-deduction" target="_blank" rel="noopener">토스피드 — 신용카드 소득공제에 대한 모든 것 (공제 대상 가족, 제외 항목)</a>
+    </div>
+
+    <p class="disclaimer">※ 본 아티클은 공개된 법령·국세청 안내와 보도를 정리한 정보성 콘텐츠이며 세무 자문이 아닙니다. 본문의 계산 사례는 다른 공제를 고려하지 않은 예시이고, 실제 공제액과 환급액은 총급여, 부양가족, 다른 공제 항목에 따라 달라집니다. 2026년 세제개편안의 내용은 정부안 기준으로, 국회 심의 과정에서 바뀔 수 있습니다. 정산 전에는 홈택스 연말정산 미리보기·간소화 서비스와 국세청 상담센터(126)에서 본인 기준을 직접 확인하시기 바랍니다.</p>
+
+  </div>
+<!-- HUB:RELATED:BEGIN -->
+<style>
+.hub-bc{font-size:13px;color:#5b6672;margin:0 0 18px;font-family:'Noto Sans KR',sans-serif}
+.hub-bc a{color:#5b6672;text-decoration:none}.hub-bc a:hover{text-decoration:underline}
+.hub-rel{margin:38px 0 6px;padding:20px 22px;border:1px solid #e3e8ee;border-radius:10px;
+  background:#fafbfc;font-family:'Noto Sans KR',sans-serif}
+.hub-rel h2{font-size:15px;margin:0 0 14px;font-weight:700;color:#12202e;
+  font-family:'Noto Sans KR',sans-serif;border:0;padding:0}
+.hub-rel ul{list-style:none;padding:0;margin:0}
+.hub-rel li{padding:7px 0;font-size:14.5px;line-height:1.55}
+.hub-rel li a{color:#12202e;text-decoration:none}
+.hub-rel li a:hover{color:#1a5f8a;text-decoration:underline}
+.hub-rel .hub-more{margin:14px 0 0;font-size:13.5px}
+.hub-rel .hub-more a{color:#1a5f8a;text-decoration:none;font-weight:700}
+</style>
+<aside class="hub-rel">
+  <h2>같은 분야 다른 글 — 금융·대출</h2>
+  <ul>
+    <li><a href="/2026-08-18-예금자보호-한도-1억원">예금자보호 한도 1억원 — 보호 대상 상품과 금융회사별 계산 기준 정리</a></li>
+    <li><a href="/2026-08-26-스트레스-DSR-3단계-적용-조건">스트레스 DSR 3단계 적용 조건 — 가산금리와 대출 한도 차이</a></li>
+    <li><a href="/2026-10-08-연금저축-IRP-세액공제-한도-환급액">연금저축 IRP 세액공제 한도 — 900만원 공제율과 환급액 구하는 방법</a></li>
+    <li><a href="/2026-10-17-금융소득종합과세-기준-2천만원-계산방법-신고시기">금융소득종합과세 2천만원 초과 시 세액 — 비교과세 방식과 신고 시기</a></li>
+    <li><a href="/2026-10-27-근로장려금-신청-자격-소득-재산-기준-기한후-신청-방법">근로장려금 자격 — 가구별 소득 한도·재산 한도와 지급액 차이</a></li>
+    <li><a href="/2026-11-04-종합부동산세-납부기간-12월-1일-15일-납부방법-분납-한도-가산세">종합부동산세 납부기간 언제까지 — 12월 1~15일 납부 방법과 분납 한도</a></li>
+    <li><a href="/2026-11-12-증여세-면제-범위-배우자-6억-자녀-5천만원-혼인-1억-공제-10년-합산-계산법">증여세 면제 범위 — 배우자 6억·자녀 5천만원·혼인 1억 공제와 10년 합산 계산법</a></li>
+  </ul>
+  <p class="hub-more"><a href="/money/">금융·대출 전체 보기 →</a></p>
+</aside>
+<!-- HUB:RELATED:END -->
+</article>
+</body>
+</html>
