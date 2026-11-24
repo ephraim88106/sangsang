@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eSIM 개통방법 — 듀얼심 사용 조건과 발급 비용, 지원 기종 | 기술·AI</title>
+  <meta name="description" content="eSIM은 폰에 내장된 칩에 통신사 프로파일을 내려받아 쓰는 방식으로 2022년 9월 1일 국내 도입됐다. 통신 3사 발급 비용 2,750원(부가세 포함)과 재발급 조건, 갤럭시 Z폴드4·플립4·S23 이후·아이폰 XS 이후 지원 기종, 유심+eSIM 듀얼심 사용 조건, 셀프개통 순서와 기기변경 주의점을 정리했다.">
+  <meta name="keywords" content="eSIM 개통방법, eSIM 발급 비용, eSIM 지원 기종, 듀얼심 사용 방법, 이심 개통, eSIM 셀프개통, 유심 eSIM 전환, eSIM 기기변경, EID 확인, 알뜰폰 eSIM">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f2f4f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #0d47a1 0%, #1565c0 45%, #0277bd 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #bbdefb; color: #0d47a1; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #e3f2fd; border-left: 5px solid #1565c0; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #1565c0; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #0d47a1; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #1565c0; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #0d47a1; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #e3f2fd; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #1565c0; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #0d47a1; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #eef5fd; border-left: 4px solid #64b5f6; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #0d47a1; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f0f6fd; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #0d47a1; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #0d47a1; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #d6e6f7; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-teal { background: linear-gradient(90deg, #0d47a1, #64b5f6); }
+    .bar-cyan { background: linear-gradient(90deg, #0d47a1, #90caf9); }
+    .bar-amber { background: linear-gradient(90deg, #ef6c00, #ffb300); }
+    .bar-blue { background: linear-gradient(90deg, #0d47a1, #64b5f6); }
+    .bar-grey { background: linear-gradient(90deg, #546e7a, #90a4ae); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #c5d9ee; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #e3f2fd; color: #0d47a1; font-weight: 700; }
+    table.rate td.up { color: #0d47a1; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #ef6c00; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #1565c0; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #0d47a1; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #bbdefb; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #0d47a1; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #bbdefb; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #1565c0; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .formula { background: #f0f6fd; border: 1.5px dashed #64b5f6; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 16.5px; font-weight: 800; color: #0d47a1; line-height: 1.8; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #0277bd; margin-top: 10px; margin-bottom: 0; }
+    .warnbox { background: #fff8e1; border-left: 5px solid #f9a825; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 26px 0; }
+    .warnbox .wt { font-size: 14px; font-weight: 800; color: #ef6c00; margin-bottom: 8px; }
+    .warnbox p { font-size: 15px; color: #5d4037; margin-bottom: 0; word-break: keep-all; }
+    .case { background: #fff; border: 1.5px solid #bbdefb; border-left: 5px solid #1565c0; border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; }
+    .case .ct { font-size: 13.5px; font-weight: 800; color: #0d47a1; margin-bottom: 6px; letter-spacing: 0.3px; }
+    .case p { font-size: 14.8px; margin-bottom: 8px; }
+    .case p:last-child { margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #e3f2fd; color: #1565c0; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #1565c0; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-11-24-eSIM-%EA%B0%9C%ED%86%B5%EB%B0%A9%EB%B2%95-%EB%93%80%EC%96%BC%EC%8B%AC-%EC%82%AC%EC%9A%A9-%EC%A1%B0%EA%B1%B4-%EB%B0%9C%EA%B8%89-%EB%B9%84%EC%9A%A9-%EC%A7%80%EC%9B%90-%EA%B8%B0%EC%A2%85">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="eSIM 개통방법 — 듀얼심 사용 조건과 발급 비용, 지원 기종 | 기술·AI">
+<meta property="og:description" content="eSIM은 폰에 내장된 칩에 통신사 프로파일을 내려받아 쓰는 방식으로 2022년 9월 1일 국내 도입됐다. 통신 3사 발급 비용 2,750원(부가세 포함)과 재발급 조건, 갤럭시 Z폴드4·플립4·S23 이후·아이폰 XS 이후 지원 기종, 유심+eSIM 듀얼심 사용 조건, 셀프개통 순서와 기기변경 주의점을 정리했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-11-24-eSIM-%EA%B0%9C%ED%86%B5%EB%B0%A9%EB%B2%95-%EB%93%80%EC%96%BC%EC%8B%AC-%EC%82%AC%EC%9A%A9-%EC%A1%B0%EA%B1%B4-%EB%B0%9C%EA%B8%89-%EB%B9%84%EC%9A%A9-%EC%A7%80%EC%9B%90-%EA%B8%B0%EC%A2%85">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-11-24T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-11-24T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N28MJLW4W9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-N28MJLW4W9");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://sangsang.ephseed.com/#organization", "name": "생생 정보통", "url": "https://sangsang.ephseed.com/"}, {"@type": "WebSite", "@id": "https://sangsang.ephseed.com/#website", "url": "https://sangsang.ephseed.com/", "name": "생생 정보통", "description": "매일 아침 배달되는 경제·정책·생활 정보 브리핑", "inLanguage": "ko-KR", "publisher": {"@id": "https://sangsang.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://sangsang.ephseed.com/2026-11-24-eSIM-%EA%B0%9C%ED%86%B5%EB%B0%A9%EB%B2%95-%EB%93%80%EC%96%BC%EC%8B%AC-%EC%82%AC%EC%9A%A9-%EC%A1%B0%EA%B1%B4-%EB%B0%9C%EA%B8%89-%EB%B9%84%EC%9A%A9-%EC%A7%80%EC%9B%90-%EA%B8%B0%EC%A2%85#page", "url": "https://sangsang.ephseed.com/2026-11-24-eSIM-%EA%B0%9C%ED%86%B5%EB%B0%A9%EB%B2%95-%EB%93%80%EC%96%BC%EC%8B%AC-%EC%82%AC%EC%9A%A9-%EC%A1%B0%EA%B1%B4-%EB%B0%9C%EA%B8%89-%EB%B9%84%EC%9A%A9-%EC%A7%80%EC%9B%90-%EA%B8%B0%EC%A2%85", "headline": "eSIM 개통방법 — 듀얼심 사용 조건과 발급 비용, 지원 기종 | 기술·AI", "description": "eSIM은 폰에 내장된 칩에 통신사 프로파일을 내려받아 쓰는 방식으로 2022년 9월 1일 국내 도입됐다. 통신 3사 발급 비용 2,750원(부가세 포함)과 재발급 조건, 갤럭시 Z폴드4·플립4·S23 이후·아이폰 XS 이후 지원 기종, 유심+eSIM 듀얼심 사용 조건, 셀프개통 순서와 기기변경 주의점을 정리했다.", "inLanguage": "ko-KR", "image": "https://sangsang.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://sangsang.ephseed.com/#website"}, "datePublished": "2026-11-24", "dateModified": "2026-11-24", "author": {"@id": "https://sangsang.ephseed.com/#organization"}, "publisher": {"@id": "https://sangsang.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-EVlth33UH8CTDu2u"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-KMCr4AoIjIDsi9XA"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-qqfX36xk8gz6faM6"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+<article class="article-wrap">
+<!-- HUB:BREADCRUMB:BEGIN -->
+<nav class="hub-bc"><a href="/">생생 정보통</a> &rsaquo; <a href="/life/">통신·생활지원</a></nav>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "생생 정보통", "item": "https://sangsang.ephseed.com/"}, {"@type": "ListItem", "position": 2, "name": "통신·생활지원", "item": "https://sangsang.ephseed.com/life/"}]}</script>
+<!-- HUB:BREADCRUMB:END -->
+  <header class="hero">
+    <div class="category-badge">📱 기술 · AI</div>
+    <h1>eSIM 개통방법 —<br>듀얼심 사용 조건과 발급 비용, 지원 기종</h1>
+    <p class="hero-sub">유심 카드를 사러 매장에 가지 않고, 휴대폰 화면에서 QR코드 하나를 찍어 번호를 개통하는 방식이 eSIM이다. 2022년 9월 국내에 도입됐지만 한동안 '세컨드 번호용'에 머물렀고, 2025년 4월 SK텔레콤 유심 정보 유출 사태 뒤 유심 교체 줄이 길어지자 대안으로 다시 주목받았다. 내 폰이 되는지, 얼마가 드는지, 두 번호를 어떻게 나눠 쓰는지, 기기를 바꿀 때 무엇을 조심해야 하는지를 순서대로 정리했다.</p>
+    <div class="hero-meta">
+      <span>📱 기술 · AI</span>
+      <span>📅 2026년 11월 24일</span>
+      <span>⏱️ 약 9분</span>
+    </div>
+  </header>
+  <div class="body-content">
+    <div class="summary-box">
+      <h2>핵심 요약</h2>
+      <ul>
+        <li><strong>eSIM</strong>은 휴대폰 안에 처음부터 박혀 있는 칩(eUICC)에 통신사 가입 정보(프로파일)를 <b>내려받아</b> 쓰는 방식이다. 국내에서는 과학기술정보통신부 도입방안에 따라 <strong>2022년 9월 1일</strong>부터 통신 3사 가입·개통이 가능해졌다.</li>
+        <li><strong>발급 비용</strong>은 통신 3사 기준 프로파일 다운로드 1회 <strong>2,750원</strong>(부가세 포함)이다. 물리 유심(통상 7,700원 안팎)보다 싸지만, 삭제 후 다시 내려받거나 기기를 바꿀 때마다 <b>다시 부과</b>된다. 알뜰폰은 사업자별로 면제·할인하는 곳이 있다.</li>
+        <li><strong>지원 기종</strong>은 국내판 기준 갤럭시 <b>Z폴드4·Z플립4(2022년 8월)</b>와 <b>S23 시리즈</b> 이후, 아이폰은 <b>XS·XR(2018년)</b> 이후다. 국내판 갤럭시 S22 이하는 하드웨어가 없어 쓸 수 없다. 해외 직구폰·통신사 잠금폰은 막힐 수 있다.</li>
+        <li><strong>듀얼심</strong>은 유심 1개 + eSIM 1개로 번호 두 개를 동시에 대기시키는 방식이다. 한쪽 번호로 통화 중이면 다른 번호 전화는 받지 못하고, 데이터는 한 번에 한 회선만 쓴다. 온라인 셀프개통은 대개 <strong>만 19세 이상 본인 명의</strong>여야 한다.</li>
+      </ul>
+    </div>
+
+    <h2 class="sec">1. eSIM 뜻 — 카드를 꽂는 대신 정보를 내려받는다</h2>
+    <div class="pullquote">유심은 "가입 정보가 담긴 카드를 꽂는 것", eSIM은 "폰에 이미 있는 칩에 가입 정보를 파일로 받아 넣는 것"이다. 하는 일은 같고, 정보가 들어가는 방식만 다르다.</div>
+    <p>휴대폰이 통신망에 접속하려면 "이 단말이 어느 통신사의 어떤 가입자인지"를 증명하는 정보가 필요하다. 지금까지는 그 정보가 손톱만 한 <strong>유심(USIM) 카드</strong>에 들어 있었다. 카드를 사서 트레이에 꽂아야 개통이 되고, 카드를 다른 폰으로 옮기면 번호도 따라간다.</p>
+    <p><strong>eSIM(embedded SIM)</strong>은 이 카드를 기판에 납땜된 칩으로 바꾼 것이다. 칩은 공장에서 이미 들어가 있고, 이용자는 통신사가 발급한 <b>프로파일</b>을 QR코드나 활성화 코드로 내려받는다. 칩 하나에 프로파일을 여러 개 저장해 두고 필요한 것을 켜고 끌 수 있다는 점이 유심과 다르다.</p>
+    <p>과기정통부는 2021년 12월 21일 '스마트폰 eSIM 도입방안'을 발표하면서 통신사·제조사·유관기관이 참여하는 'e심 협의체'를 꾸렸고, 2022년 9월 1일부터 통신 3사를 통한 eSIM 가입·개통이 시작됐다. 정부가 내건 목표는 두 가지였다. 유심을 따로 살 필요가 없어 <b>단말·개통 비용이 줄고</b>, 온라인으로 번호를 쉽게 옮길 수 있어 <b>알뜰폰 경쟁이 살아난다</b>는 것이다.</p>
+
+    <h2 class="sec">2. 지원 기종 — 내 폰에서 되는지 먼저 확인</h2>
+    <p>eSIM은 칩이 있어야 하므로 <strong>하드웨어가 없는 폰은 소프트웨어 업데이트로도 쓸 수 없다.</strong> 국내 정식 출시 모델 기준으로 정리하면 다음과 같다.</p>
+    <table class="rate">
+      <tr><th>제조사</th><th>eSIM 지원</th><th>미지원·주의</th></tr>
+      <tr><td class="up">삼성 갤럭시</td><td>Z폴드4·Z플립4(2022년 8월 출시)부터, S23·S23+·S23 Ultra·S23 FE 이후 S 시리즈, 이후 출시 폴더블</td><td>국내판 S22 시리즈 이하, 다수의 A 시리즈(모델별 확인)</td></tr>
+      <tr><td class="up">애플 아이폰</td><td>XS·XS Max·XR(2018년) 이후 전 모델</td><td>해외 구매폰은 통신사 잠금(캐리어 락) 여부 확인</td></tr>
+      <tr><td class="up">기타</td><td>구글 픽셀 등 일부 해외 모델</td><td>중국·홍콩판 등 지역판은 eSIM이 빠진 경우가 있음</td></tr>
+    </table>
+    <h3 class="sub">30초 확인법</h3>
+    <ul class="plain">
+      <li><strong>갤럭시</strong>: 설정 → 연결 → SIM 카드 관리자에 <b>'eSIM 추가'</b> 또는 <b>'모바일 요금제 추가'</b> 버튼이 보이면 지원 기종이다.</li>
+      <li><strong>아이폰</strong>: 설정 → 셀룰러(또는 모바일 데이터)에 <b>'eSIM 추가'·'요금제 추가'</b> 메뉴가 있으면 된다.</li>
+      <li><strong>EID 확인</strong>: 전화 앱에서 <b>*#06#</b>을 누르면 IMEI와 함께 32자리 EID가 뜬다. EID가 나오면 eSIM 칩이 있다는 뜻이다. 알뜰폰 신청서나 기기변경 때 이 번호를 입력하라고 요구하는 경우가 많으니 캡처해 둔다.</li>
+    </ul>
+
+    <h2 class="sec">3. 발급 비용 — 2,750원이 붙는 순간과 다시 붙는 순간</h2>
+    <div class="formula">
+      <div class="f-main">eSIM 프로파일 다운로드 2,750원(부가세 포함, 통신 3사)<br>물리 유심 구매 통상 7,700원 안팎(NFC 유심은 더 비쌈)</div>
+      <p class="f-note">eSIM 2,750원은 2018년 통신 3사가 다운로드 수수료로 정한 금액이 이어진 것이다. 알뜰폰은 면제·할인 이벤트가 잦아 가입 화면에서 실제 청구액을 확인해야 한다.</p>
+    </div>
+    <p>eSIM 비용은 "카드 값"이 아니라 <strong>"내려받기 1회당 설치 수수료"</strong>다. 그래서 다음 경우마다 다시 붙는다.</p>
+    <ul class="plain">
+      <li>처음 개통하거나 유심에서 eSIM으로 전환할 때</li>
+      <li>실수로 프로파일을 삭제했거나 초기화 후 다시 내려받을 때(같은 QR코드로 재등록이 안 되는 경우가 많아 <b>재발급</b>이 필요하다)</li>
+      <li>새 폰으로 기기변경해 프로파일을 새로 발급받을 때</li>
+    </ul>
+    <p>반대로 유심은 카드를 한 번 사 두면 다른 폰에 옮겨 꽂아도 추가 비용이 없다. 폰을 자주 바꾸거나 초기화를 자주 하는 사람이라면 eSIM의 누적 비용이 유심보다 커질 수도 있다.</p>
+
+    <h2 class="sec">4. eSIM 개통방법 — 신규·번호이동·유심 전환 순서</h2>
+    <h3 class="sub">기본 순서 (통신 3사 온라인몰·알뜰폰 공통)</h3>
+    <div class="steps">
+      <div class="step"><div class="step-t">기종·EID 확인</div><div class="step-d">위 30초 확인법으로 eSIM 지원 여부를 보고 EID·IMEI를 메모한다. 해외폰이라면 통신사 잠금이 풀려 있는지도 확인한다.</div></div>
+      <div class="step"><div class="step-t">요금제 선택 후 'eSIM' 선택</div><div class="step-d">통신사 다이렉트몰이나 알뜰폰 신청서의 유심 선택 단계에서 eSIM을 고른다. eSIM 선택지가 없는 요금제·사업자도 있으니 이 단계에서 먼저 걸러진다.</div></div>
+      <div class="step"><div class="step-t">본인 인증과 가입 신청서 작성</div><div class="step-d">신용카드·공동인증서·본인 명의 휴대폰 등으로 인증한다. 번호이동이면 기존 통신사 정보로 이동 동의를 거친다. 온라인 셀프개통은 대개 만 19세 이상 본인 명의만 가능하다.</div></div>
+      <div class="step"><div class="step-t">QR코드·활성화 코드 수신</div><div class="step-d">개통 처리가 끝나면 문자·이메일·앱으로 QR코드나 활성화 코드가 온다. QR코드는 다른 화면(PC 등)에 띄워 놓고 찍어야 하므로 한 기기만 있다면 활성화 코드 수동 입력을 쓴다.</div></div>
+      <div class="step"><div class="step-t">Wi-Fi 연결 후 프로파일 다운로드</div><div class="step-d">갤럭시는 SIM 카드 관리자 → eSIM 추가, 아이폰은 셀룰러 → eSIM 추가에서 QR을 스캔한다. 다운로드에는 인터넷 연결이 필요하므로 Wi-Fi를 먼저 켠다.</div></div>
+      <div class="step"><div class="step-t">회선 지정과 작동 확인</div><div class="step-d">듀얼심이면 기본 통화·문자·데이터 회선을 각각 지정한다. 전화 걸기·문자 수신·데이터 접속을 모두 시험한 뒤에야 기존 유심을 빼거나 회선을 해지한다.</div></div>
+    </div>
+    <h3 class="sub">쓰던 번호를 유심에서 eSIM으로 옮길 때</h3>
+    <p>같은 통신사 안에서 번호는 그대로 두고 유심만 eSIM으로 바꾸는 것은 대부분 <b>온라인 셀프 변경</b>을 지원한다. KT 다이렉트몰도 'USIM에서 eSIM으로 셀프 변경' 메뉴를 운영한다. 전환이 끝나는 순간 기존 유심은 효력을 잃으므로, 은행 OTP·인증 문자가 잠시 끊길 수 있다는 점을 감안해 업무 시간 이전에 처리한다.</p>
+
+    <h2 class="sec">5. 듀얼심 사용 조건 — 번호 두 개, 한 대의 폰</h2>
+    <div class="flow">
+      <div class="flow-box"><div class="ft">조합</div><div class="fd">물리 유심 1 + eSIM 1이 기본. 기종에 따라 eSIM 2개 동시 사용도 지원하지만 국내 모델은 확인이 필요하다.</div></div>
+      <div class="flow-box"><div class="ft">통화</div><div class="fd">두 번호 모두 대기 상태(듀얼심 듀얼 스탠바이). 한 번호로 통화 중이면 다른 번호로 온 전화는 받을 수 없다.</div></div>
+      <div class="flow-box"><div class="ft">데이터</div><div class="fd">한 번에 한 회선만 데이터 사용. 기본 데이터 회선을 정해 두고 필요할 때 전환한다.</div></div>
+    </div>
+    <p>가장 흔한 쓰임은 <strong>업무용·개인용 번호 분리</strong>, <strong>저렴한 데이터 전용 알뜰폰 회선 추가</strong>, <strong>해외여행 시 현지 eSIM 데이터</strong>다. 해외에서는 국내 번호를 유심으로 켜 두고 문자 인증을 받으면서, 데이터는 현지 eSIM으로 쓰는 식이다. 이때 국내 회선의 데이터 로밍은 꺼 두어야 요금 폭탄을 피한다.</p>
+    <p>통신 3사가 예전부터 팔아 온 '투넘버' 부가서비스와 헷갈리기 쉽다. 투넘버는 한 회선에 가상 번호를 하나 더 얹는 서비스라 같은 통신사, 같은 요금제 안에서 움직인다. eSIM 듀얼심은 <b>서로 다른 통신사·요금제의 회선 두 개</b>를 독립적으로 가입하는 것이라 요금도 각각 나온다.</p>
+
+    <h2 class="sec">6. 숨겨진 이면 — 유심 사태가 바꾼 eSIM의 위상</h2>
+    <p>도입 후 2년 넘게 eSIM은 조용했다. SK텔레콤 해킹 사태 초기 보도에 인용된 업계 집계로 국내 eSIM 가입자는 <strong>약 4만 명, 전체 통신 가입자의 0.2%</strong> 수준이었고 대부분 세컨드 번호 용도였다. 지원 기종이 2022년 이후 폰으로 한정되고, 매장 직원이 익숙하지 않으며, 기기변경이 번거롭다는 점이 발목을 잡았다.</p>
+    <p>분위기를 바꾼 것은 2025년 4월 22일 알려진 <strong>SK텔레콤 유심 정보 유출</strong>이다. 유심 무상 교체 신청이 몰리면서 재고가 바닥나자, 매장에 가지 않고 바로 바꿀 수 있는 eSIM이 대안으로 떠올랐다. 사고 공개 이후 SK텔레콤 가입자의 하루 eSIM 가입이 그 전보다 <strong>약 40배</strong> 늘었다는 보도가 나왔고, 회사는 eSIM으로 개통하는 판매점에 번호이동 장려금을 2만 원에서 10만 원으로, 기기변경 장려금을 5만 원에서 10만 원으로 올렸다. 같은 해 6월 신규 영업을 재개할 때도 eSIM 가입자부터 순차적으로 받았다.</p>
+    <div class="warnbox">
+      <div class="wt">eSIM이 해킹을 막아 주는 것은 아니다</div>
+      <p>이번 사태에서 유출된 것은 통신사 서버의 가입자 인증 정보였다. eSIM으로 바꾸면 새 인증값으로 교체되는 효과는 유심 교체와 같지만, 통신사 서버가 뚫리면 eSIM이든 유심이든 같은 위험에 놓인다. eSIM의 보안상 장점은 "폰을 잃어버렸을 때 누군가 카드를 빼서 다른 폰에 꽂을 수 없다"는 물리적 측면에 가깝다. 유심보호서비스·가입제한 서비스는 eSIM 사용자에게도 여전히 필요하다.</p>
+    </div>
+
+    <div class="infographic-section">
+      <h3>유심 vs eSIM — 비용과 확산 속도</h3>
+      <div class="bar-chart">
+        <div class="bar-item"><div class="bar-label"><span>물리 유심 구매(통상)</span><span class="val">7,700원</span></div><div class="bar-track"><div class="bar-fill bar-grey" style="width:93%">7,700원</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>eSIM 다운로드 1회(통신 3사)</span><span class="val">2,750원</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:33%">2,750원</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>eSIM 기기변경 2회 누적(최초+2회)</span><span class="val">8,250원</span></div><div class="bar-track"><div class="bar-fill bar-amber" style="width:100%">8,250원</div></div></div>
+      </div>
+      <h3 style="margin-top:32px">SK텔레콤 eSIM 개통 판매장려금 변화 (2025년 5월)</h3>
+      <div class="bar-chart">
+        <div class="bar-item"><div class="bar-label"><span>번호이동 — 이전</span><span class="val">2만 원</span></div><div class="bar-track"><div class="bar-fill bar-grey" style="width:20%">2만</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>번호이동 — 인상 후</span><span class="val">10만 원</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:100%">10만</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>기기변경 — 이전</span><span class="val">5만 원</span></div><div class="bar-track"><div class="bar-fill bar-grey" style="width:50%">5만</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>기기변경 — 인상 후</span><span class="val">10만 원</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:100%">10만</div></div></div>
+      </div>
+      <p class="note">유심 가격은 통신사·대리점 판매가 기준으로 사업자와 유심 종류에 따라 다르다. 누적 비용은 유심을 한 번 사서 계속 옮겨 쓰는 경우와 비교한 단순 계산이다. 장려금은 머니투데이 2025년 5월 26일 보도 기준.</p>
+    </div>
+
+    <div class="impact-grid">
+      <div class="impact-card"><span class="impact-num">2022.9.1</span><span class="impact-label">국내 스마트폰 eSIM 개통 시작</span></div>
+      <div class="impact-card"><span class="impact-num">2,750원</span><span class="impact-label">통신 3사 eSIM 다운로드 수수료(1회)</span></div>
+      <div class="impact-card"><span class="impact-num">약 40배</span><span class="impact-label">유출 사태 직후 SKT 하루 eSIM 가입 증가(보도)</span></div>
+      <div class="impact-card"><span class="impact-num">만 19세</span><span class="impact-label">온라인 셀프개통 일반 기준 연령</span></div>
+    </div>
+
+    <h2 class="sec">7. 기기변경·분실 때 주의할 점</h2>
+    <div class="case">
+      <div class="ct">사례 — 새 폰을 받자마자 옛 폰을 초기화했다면</div>
+      <p>A씨는 새 폰이 도착하자 기존 폰을 바로 공장 초기화해 중고로 넘겼다. 그런데 새 폰에 eSIM을 옮기는 단계에서 본인 인증 문자가 기존 회선으로 발송돼, 인증을 받을 수단이 사라졌다. 결국 신분증을 들고 매장을 찾아 프로파일을 재발급받고 2,750원을 다시 냈다.</p>
+      <p>순서를 바꾸면 피할 수 있다. 새 폰에서 통화·문자·데이터가 모두 되는 것을 확인한 뒤에 옛 폰의 eSIM을 삭제하고 초기화한다.</p>
+    </div>
+    <ul class="plain">
+      <li><strong>eSIM → eSIM 이동은 통신사마다 절차가 다르다.</strong> 최신 아이폰·갤럭시는 기기 간 'eSIM 전송' 기능을 지원하지만 통신사가 막아 둔 경우가 있고, KT처럼 eSIM에서 eSIM 변경은 매장 방문 예약을 요구하는 곳도 있다. 기기를 바꾸기 전에 통신사 안내를 먼저 본다.</li>
+      <li><strong>폰이 고장 나면 칩을 빼서 옮길 수 없다.</strong> 화면이 깨져 켜지지 않으면 유심처럼 다른 폰에 꽂아 급히 쓰는 방법이 없다. 고객센터·매장에서 새 기기로 재발급받아야 한다.</li>
+      <li><strong>분실 시</strong>에는 통신사에 분실 신고(회선 정지)를 먼저 한다. 칩을 뽑아 갈 수는 없지만, 잠금이 풀린 폰이라면 그 안의 회선으로 인증 문자를 받을 수 있다.</li>
+      <li><strong>중고로 팔기 전</strong>에는 eSIM 프로파일 삭제를 꼭 확인한다. 초기화 화면에서 'eSIM 유지' 옵션을 고르면 프로파일이 남는 기종이 있다.</li>
+    </ul>
+
+    <h2 class="sec">8. 나에게 맞는 선택 — 유심을 유지할 사람, eSIM으로 갈 사람</h2>
+    <ul class="plain">
+      <li><strong>eSIM이 유리한 경우</strong>: 2022년 이후 출시 폰을 쓰고, 해외여행이 잦거나 업무·개인 번호를 나눠야 하고, 매장 방문 없이 알뜰폰으로 번호이동하고 싶은 사람.</li>
+      <li><strong>유심이 편한 경우</strong>: 폰을 자주 바꾸거나 공기계·중고폰을 번갈아 쓰는 사람, 고장 시 급히 다른 폰에 꽂아 써야 하는 사람, 본인 명의 인증 수단이 마땅치 않은 고령자·미성년자.</li>
+      <li><strong>둘 다 쓰는 방법</strong>: 주 번호는 유심으로 두고 eSIM에 데이터 전용 알뜰폰 요금제를 얹으면, 기기변경 부담은 줄이면서 통신비를 나눠 관리할 수 있다.</li>
+    </ul>
+
+    <h2 class="sec">9. 전망과 행동 제안</h2>
+    <p>해외에서는 미국판 아이폰 14 이후처럼 유심 슬롯을 없앤 eSIM 전용 폰이 이미 나와 있다. 국내판은 아직 유심 슬롯을 유지하고 있지만, 새로 나오는 주요 스마트폰이 모두 eSIM을 지원하고 유출 사태로 이용자 경험이 쌓이면서 "번호를 파일로 옮기는" 방식은 점점 기본값이 되어 가고 있다. 남은 과제는 기기변경·재발급 절차를 통신사마다 다르게 운영하는 문제와, 다운로드할 때마다 붙는 수수료다.</p>
+    <p>지금 할 수 있는 일은 세 가지다. 첫째, <b>*#06#으로 EID를 확인</b>해 내 폰이 eSIM을 지원하는지 알아 둔다. 둘째, eSIM으로 바꾼다면 <b>새 기기에서 작동을 확인한 뒤에만 기존 회선을 지운다</b>는 원칙을 지킨다. 셋째, eSIM이든 유심이든 <b>유심보호서비스·명의도용 방지(가입제한) 서비스를 켜 둔다.</b> 번호가 칩에 있든 파일에 있든, 결국 열쇠는 통신사 계정과 내 명의이기 때문이다.</p>
+
+    <div class="hashtag-wrap"><span class="hashtag">#eSIM</span><span class="hashtag">#eSIM개통방법</span><span class="hashtag">#이심</span><span class="hashtag">#듀얼심</span><span class="hashtag">#eSIM지원기종</span><span class="hashtag">#eSIM발급비용</span><span class="hashtag">#유심교체</span><span class="hashtag">#알뜰폰eSIM</span><span class="hashtag">#기술AI</span></div>
+    <div class="sources">
+      <h4>📰 참고 출처</h4>
+      <a href="https://m.boannews.com/html/detail.html?idx=103506" target="_blank" rel="noopener">보안뉴스 — 2022년 9월 1일부터 스마트폰 eSIM 이용 가능(과기정통부 도입방안)</a>
+      <a href="https://biz.newdaily.co.kr/site/data/html/2021/12/21/2021122100169.amp.html" target="_blank" rel="noopener">뉴데일리 — 과기정통부 스마트폰 eSIM 도입방안 발표(2021. 12. 21.)</a>
+      <a href="https://www.newsis.com/view/NISX20220826_0001992318" target="_blank" rel="noopener">뉴시스 — 투넘버 서비스와 e심, '1폰 2번호' 비슷하지만 차이 커(2022. 8.)</a>
+      <a href="https://shop.kt.com/Etc/pc_esimself.html" target="_blank" rel="noopener">KT샵 — USIM에서 eSIM으로 셀프 변경하기(eSIM→eSIM 변경은 매장 방문 예약)</a>
+      <a href="https://shop.kt.com/directMain.do" target="_blank" rel="noopener">KT샵 — 온라인 가입 조건(만 19세 이상 본인, 개통 가능 단말, 국내 체류)</a>
+      <a href="https://www.samsungsvc.co.kr/solution/1314583" target="_blank" rel="noopener">삼성전자서비스 — 갤럭시 eSIM 지원 모델과 등록 방법</a>
+      <a href="https://r1.community.samsung.com/t5/%EC%86%90%EC%89%AC%EC%9A%B4-%ED%95%B4%EA%B2%B0-%EB%B0%A9%EB%B2%95/%EA%B0%A4%EB%9F%AD%EC%8B%9C-%EC%8A%A4%EB%A7%88%ED%8A%B8%ED%8F%B0%EC%97%90-%EC%A0%81%EC%9A%A9%EB%90%9C-esim-%EA%B8%B0%EB%8A%A5-%EB%B0%8F-%EC%82%AC%EC%9A%A9-%EB%B0%A9%EB%B2%95%EC%9D%B4-%EA%B6%81%EA%B8%88%ED%95%A9%EB%8B%88%EB%8B%A4/ba-p/18281765" target="_blank" rel="noopener">삼성 멤버스 — Z폴드4·Z플립4부터 국내 eSIM 하드웨어 적용</a>
+      <a href="https://www.moyoplan.com/tips/detail/esim" target="_blank" rel="noopener">모요 — eSIM으로 알뜰폰 개통하는 방법과 장단점</a>
+      <a href="https://biz.sbs.co.kr/amp/article/20000233647" target="_blank" rel="noopener">SBS Biz — SKT 해킹 사태와 eSIM 전환 수요(2025. 5.)</a>
+      <a href="https://m.boannews.com/html/detail.html?idx=137061" target="_blank" rel="noopener">보안뉴스 — 늘어선 유심 교체 줄, e심으로 갈아탈까(2025.)</a>
+      <a href="https://www.mt.co.kr/tech/2025/05/26/2025052614251130630" target="_blank" rel="noopener">머니투데이 — SKT, e심 개통 판매장려금 인상(번호이동 2만→10만, 기기변경 5만→10만)</a>
+      <a href="https://www.newsis.com/view/NISX20250506_0003164900?pc_view=1" target="_blank" rel="noopener">뉴시스 — SKT 가입자 유심보호서비스 96.4% 가입, 유심 교체 104만(2025. 5. 6.)</a>
+      <a href="https://www.asiae.co.kr/en/article/2025061611323556963" target="_blank" rel="noopener">아시아경제 — SKT, eSIM 이용자부터 신규 가입 재개(2025. 6. 16.)</a>
+    </div>
+    <p class="disclaimer">※ 본 아티클은 정부 발표·통신사 안내·언론 보도를 정리한 정보성 콘텐츠입니다. eSIM 발급 수수료, 지원 요금제, 셀프개통 가능 연령·시간, 기기변경 절차는 통신사·알뜰폰 사업자와 단말 모델에 따라 다르고 수시로 바뀔 수 있으므로 개통 전 가입하려는 사업자의 공식 안내를 반드시 확인하시기 바랍니다. 특정 통신사나 상품의 가입을 권유하지 않습니다.</p>
+  </div>
+
+<!-- HUB:RELATED:BEGIN -->
+<style>
+.hub-bc{font-size:13px;color:#5b6672;margin:0 0 18px;font-family:'Noto Sans KR',sans-serif}
+.hub-bc a{color:#5b6672;text-decoration:none}.hub-bc a:hover{text-decoration:underline}
+.hub-rel{margin:38px 0 6px;padding:20px 22px;border:1px solid #e3e8ee;border-radius:10px;
+  background:#fafbfc;font-family:'Noto Sans KR',sans-serif}
+.hub-rel h2{font-size:15px;margin:0 0 14px;font-weight:700;color:#12202e;
+  font-family:'Noto Sans KR',sans-serif;border:0;padding:0}
+.hub-rel ul{list-style:none;padding:0;margin:0}
+.hub-rel li{padding:7px 0;font-size:14.5px;line-height:1.55}
+.hub-rel li a{color:#12202e;text-decoration:none}
+.hub-rel li a:hover{color:#1a5f8a;text-decoration:underline}
+.hub-rel .hub-more{margin:14px 0 0;font-size:13.5px}
+.hub-rel .hub-more a{color:#1a5f8a;text-decoration:none;font-weight:700}
+</style>
+<aside class="hub-rel">
+  <h2>같은 분야 다른 글 — 통신·생활지원</h2>
+  <ul>
+    <li><a href="/2026-08-23-휴대폰-위약금-계산법">휴대폰 위약금 계산법 — 선택약정 할인반환금과 공시지원금 반환금 차이</a></li>
+    <li><a href="/2026-08-30-휴대폰-명의도용-확인방법">휴대폰 명의도용 확인방법 — 가입사실현황조회와 가입제한 신청 절차</a></li>
+    <li><a href="/2026-08-11-탄소중립포인트-신청방법">탄소중립포인트 신청방법 — 지급 대상과 적립 기준, 예산 소진 문제 정리</a></li>
+    <li><a href="/2026-08-28-조기폐차-지원금-신청방법">조기폐차 지원금 신청방법 — 배출가스 5등급 차량 조회와 상한액 산정</a></li>
+    <li><a href="/2026-10-03-배출권거래제-뜻-유상할당-비율">배출권거래제 뜻 — 유상할당 비율과 배출권 가격, 전기요금 영향</a></li>
+    <li><a href="/2026-10-11-전기차-보조금-신청방법-전환지원금-조건">전기차 보조금 신청방법 — 국비 상한과 가격 구간, 전환지원금 조건</a></li>
+    <li><a href="/2026-10-19-에너지바우처-대상-자격-지원금액-사용기한">에너지바우처 대상 자격 — 세대원 수별 지원금액과 사용기한 언제까지</a></li>
+    <li><a href="/2026-10-23-스미싱-문자-클릭-대처방법-악성앱-삭제-118-신고-소액결제-차단">스미싱 문자 클릭 대처방법 — 악성앱 삭제·118 신고·소액결제 차단 순서</a></li>
+    <li><a href="/2026-10-25-폐가전-무상수거-품목-종류-냉장고-소형가전-5개-조건-수거불가-확인">폐가전 무상수거 품목 종류 — 냉장고 1대·소형가전 5개 조건과 수거 불가 확인</a></li>
+    <li><a href="/2026-10-31-딥페이크-피해-신고방법-삭제-요청-순서-증거-확보-체크리스트">딥페이크 피해 신고방법 — 삭제 요청 순서와 증거 확보 체크리스트</a></li>
+    <li><a href="/2026-11-02-5등급-차량-운행제한-단속-계절관리제-과태료-제외-대상">5등급 차량 운행제한 언제까지 — 계절관리제 단속 시간·과태료 얼마·면제 대상</a></li>
+    <li><a href="/2026-11-10-에너지캐시백-지급-시기-절감률-1퍼센트-기준사용량-차감-방식-신규입주">에너지캐시백 지급 시기 — 절감률 1% 기준과 기준사용량·차감 방식·신규 입주 제외</a></li>
+    <li><a href="/2026-11-19-한파주의보-뜻-한파경보-발령-기온-비교-언제">한파주의보 뜻 — 한파경보와 발령 기온 비교, 언제 내려지나</a></li>
+  </ul>
+  <p class="hub-more"><a href="/life/">통신·생활지원 전체 보기 →</a></p>
+</aside>
+<!-- HUB:RELATED:END -->
+</article>
+</body>
+</html>
