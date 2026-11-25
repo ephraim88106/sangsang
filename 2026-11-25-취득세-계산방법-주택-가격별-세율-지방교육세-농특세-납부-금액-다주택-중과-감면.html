@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>취득세 계산방법 — 주택 가격별 세율과 지방교육세 포함 납부 금액 | 부동산·주거</title>
+  <meta name="description" content="주택 취득세는 취득가액이 6억원 이하면 1%, 9억원 초과면 3%이고 6억~9억원 구간은 (취득가액 억원 수 × 2/3 − 3)%로 1~3%가 적용된다. 여기에 지방교육세(취득세율의 10%)와 전용 85㎡ 초과 시 농어촌특별세 0.2%가 붙는다. 5억·7억·10억원 주택 납부 금액 계산 사례, 조정대상지역 2주택 8%·3주택 12% 중과, 생애최초 12억원 이하 200만원 감면, 신고 기한 60일과 가산세, 2026년 지방세제 개편안 내용까지 정리했다.">
+  <meta name="keywords" content="취득세 계산방법, 취득세 계산, 주택 취득세율, 취득세 1% 3%, 6억 9억 취득세, 지방교육세, 농어촌특별세 0.2%, 취득세 85제곱미터, 다주택자 취득세 중과, 취득세 8% 12%, 생애최초 취득세 감면 200만원, 취득세 신고 기한 60일, 취득세 가산세, 위택스 취득세 납부, 일시적 2주택 취득세">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 17px; line-height: 1.8; color: #1a1a1a; background: #f2f4f8; }
+    .article-wrap { max-width: 800px; margin: 0 auto; background: #fff; }
+    .hero { background: linear-gradient(135deg, #0d47a1 0%, #1565c0 45%, #0277bd 100%); padding: 48px 36px 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+    .category-badge { display: inline-block; background: #bbdefb; color: #0d47a1; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(21px, 3.8vw, 30px); font-weight: 900; color: #fff; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
+    .hero-sub { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.7; word-break: keep-all; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.58); display: flex; gap: 16px; flex-wrap: wrap; }
+    .body-content { padding: 40px 36px; }
+    .summary-box { background: #e3f2fd; border-left: 5px solid #1565c0; border-radius: 0 12px 12px 0; padding: 24px 28px; margin-bottom: 40px; }
+    .summary-box h2 { font-size: 14px; font-weight: 700; color: #1565c0; letter-spacing: 1px; margin-bottom: 14px; }
+    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .summary-box li { font-size: 15.5px; color: #0d47a1; font-weight: 500; padding-left: 22px; position: relative; word-break: keep-all; }
+    .summary-box li::before { content: '▶'; position: absolute; left: 0; color: #1565c0; font-size: 11px; top: 4px; }
+    h2.sec { font-size: 21px; font-weight: 800; color: #0d47a1; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #e3f2fd; word-break: keep-all; }
+    h3.sub { font-size: 17px; font-weight: 700; color: #1565c0; margin: 26px 0 10px; word-break: keep-all; }
+    p { margin-bottom: 16px; word-break: keep-all; color: #333; }
+    strong { color: #0d47a1; }
+    ul.plain { margin: 0 0 18px 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 8px; word-break: keep-all; }
+    .pullquote { background: #eef5fd; border-left: 4px solid #64b5f6; padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0; font-size: 16.5px; font-weight: 600; color: #0d47a1; line-height: 1.75; word-break: keep-all; }
+    .infographic-section { background: #f0f6fd; border-radius: 16px; padding: 36px 28px; margin: 40px 0; }
+    .infographic-section h3 { font-size: 16px; font-weight: 700; color: #0d47a1; margin-bottom: 28px; text-align: center; }
+    .bar-chart { display: flex; flex-direction: column; gap: 18px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-size: 13.5px; font-weight: 600; color: #37474f; display: flex; justify-content: space-between; gap: 10px; }
+    .bar-label .val { color: #0d47a1; font-weight: 700; white-space: nowrap; }
+    .bar-track { height: 26px; background: #d6e6f7; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .bar-teal { background: linear-gradient(90deg, #0d47a1, #64b5f6); }
+    .bar-cyan { background: linear-gradient(90deg, #0d47a1, #90caf9); }
+    .bar-amber { background: linear-gradient(90deg, #ef6c00, #ffb300); }
+    .bar-blue { background: linear-gradient(90deg, #0d47a1, #64b5f6); }
+    .bar-grey { background: linear-gradient(90deg, #546e7a, #90a4ae); }
+    table.rate { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 14.5px; }
+    table.rate th, table.rate td { border: 1px solid #c5d9ee; padding: 10px 12px; text-align: left; word-break: keep-all; }
+    table.rate th { background: #e3f2fd; color: #0d47a1; font-weight: 700; }
+    table.rate td.up { color: #0d47a1; font-weight: 700; }
+    table.rate td.down { color: #c62828; font-weight: 700; }
+    table.rate td.new { color: #ef6c00; font-weight: 700; }
+    .steps { counter-reset: st; display: flex; flex-direction: column; gap: 14px; margin: 22px 0; }
+    .step { position: relative; padding-left: 46px; }
+    .step::before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #1565c0; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+    .step-t { font-weight: 700; color: #0d47a1; margin-bottom: 2px; }
+    .step-d { font-size: 14.5px; color: #455a64; line-height: 1.65; word-break: keep-all; }
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .impact-card { background: #fff; border: 1.5px solid #bbdefb; border-radius: 12px; padding: 20px; text-align: center; }
+    .impact-num { font-size: 26px; font-weight: 900; color: #0d47a1; display: block; margin-bottom: 6px; }
+    .impact-label { font-size: 13px; color: #546e7a; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 8px 0 4px; }
+    .flow-box { flex: 1 1 150px; background: #fff; border: 1.5px solid #bbdefb; border-radius: 10px; padding: 14px 16px; }
+    .flow-box .ft { font-size: 13px; font-weight: 700; color: #1565c0; margin-bottom: 4px; }
+    .flow-box .fd { font-size: 13px; color: #546e7a; line-height: 1.55; word-break: keep-all; }
+    .legend { font-size: 13.5px; color: #37474f; }
+    .legend span.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+    .note { font-size: 12.5px; color: #90a4ae; margin-top: 12px; margin-bottom: 0; }
+    .formula { background: #f0f6fd; border: 1.5px dashed #64b5f6; border-radius: 12px; padding: 22px 24px; margin: 24px 0; text-align: center; }
+    .formula .f-main { font-size: 16.5px; font-weight: 800; color: #0d47a1; line-height: 1.8; word-break: keep-all; }
+    .formula .f-note { font-size: 13px; color: #0277bd; margin-top: 10px; margin-bottom: 0; }
+    .warnbox { background: #fff8e1; border-left: 5px solid #f9a825; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 26px 0; }
+    .warnbox .wt { font-size: 14px; font-weight: 800; color: #ef6c00; margin-bottom: 8px; }
+    .warnbox p { font-size: 15px; color: #5d4037; margin-bottom: 0; word-break: keep-all; }
+    .case { background: #fff; border: 1.5px solid #bbdefb; border-left: 5px solid #1565c0; border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; }
+    .case .ct { font-size: 13.5px; font-weight: 800; color: #0d47a1; margin-bottom: 6px; letter-spacing: 0.3px; }
+    .case p { font-size: 14.8px; margin-bottom: 8px; }
+    .case p:last-child { margin-bottom: 0; }
+    .hashtag-wrap { margin-top: 44px; padding-top: 24px; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #e3f2fd; color: #1565c0; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; }
+    .sources { margin-top: 36px; padding: 20px 24px; background: #fafafa; border-radius: 10px; border: 1px solid #e0e0e0; }
+    .sources h4 { font-size: 13px; font-weight: 700; color: #546e7a; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .sources a { display: block; font-size: 13px; color: #1565c0; text-decoration: none; margin-bottom: 5px; line-height: 1.5; word-break: break-all; }
+    .sources a:hover { text-decoration: underline; }
+    .disclaimer { margin-top: 20px; font-size: 12.5px; color: #9e9e9e; line-height: 1.7; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eeeeee; }
+    @media (max-width: 600px) { .hero { padding: 32px 20px 28px; } .body-content { padding: 28px 20px; } .infographic-section { padding: 24px 16px; } table.rate { font-size: 13px; } table.rate th, table.rate td { padding: 8px 7px; } }
+  </style>
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sangsang.ephseed.com/2026-11-25-%EC%B7%A8%EB%93%9D%EC%84%B8-%EA%B3%84%EC%82%B0%EB%B0%A9%EB%B2%95-%EC%A3%BC%ED%83%9D-%EA%B0%80%EA%B2%A9%EB%B3%84-%EC%84%B8%EC%9C%A8-%EC%A7%80%EB%B0%A9%EA%B5%90%EC%9C%A1%EC%84%B8-%EB%86%8D%ED%8A%B9%EC%84%B8-%EB%82%A9%EB%B6%80-%EA%B8%88%EC%95%A1-%EB%8B%A4%EC%A3%BC%ED%83%9D-%EC%A4%91%EA%B3%BC-%EA%B0%90%EB%A9%B4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="생생 정보통">
+<meta property="og:title" content="취득세 계산방법 — 주택 가격별 세율과 지방교육세 포함 납부 금액 | 부동산·주거">
+<meta property="og:description" content="주택 취득세는 취득가액이 6억원 이하면 1%, 9억원 초과면 3%이고 6억~9억원 구간은 (취득가액 억원 수 × 2/3 − 3)%로 1~3%가 적용된다. 여기에 지방교육세(취득세율의 10%)와 전용 85㎡ 초과 시 농어촌특별세 0.2%가 붙는다. 5억·7억·10억원 주택 납부 금액 계산 사례, 조정대상지역 2주택 8%·3주택 12% 중과, 생애최초 12억원 이하 200만원 감면, 신고 기한 60일과 가산세, 2026년 지방세제 개편안 내용까지 정리했다.">
+<meta property="og:url" content="https://sangsang.ephseed.com/2026-11-25-%EC%B7%A8%EB%93%9D%EC%84%B8-%EA%B3%84%EC%82%B0%EB%B0%A9%EB%B2%95-%EC%A3%BC%ED%83%9D-%EA%B0%80%EA%B2%A9%EB%B3%84-%EC%84%B8%EC%9C%A8-%EC%A7%80%EB%B0%A9%EA%B5%90%EC%9C%A1%EC%84%B8-%EB%86%8D%ED%8A%B9%EC%84%B8-%EB%82%A9%EB%B6%80-%EA%B8%88%EC%95%A1-%EB%8B%A4%EC%A3%BC%ED%83%9D-%EC%A4%91%EA%B3%BC-%EA%B0%90%EB%A9%B4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sangsang.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-11-25T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-11-25T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N28MJLW4W9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-N28MJLW4W9");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://sangsang.ephseed.com/#organization", "name": "생생 정보통", "url": "https://sangsang.ephseed.com/"}, {"@type": "WebSite", "@id": "https://sangsang.ephseed.com/#website", "url": "https://sangsang.ephseed.com/", "name": "생생 정보통", "description": "매일 아침 배달되는 경제·정책·생활 정보 브리핑", "inLanguage": "ko-KR", "publisher": {"@id": "https://sangsang.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://sangsang.ephseed.com/2026-11-25-%EC%B7%A8%EB%93%9D%EC%84%B8-%EA%B3%84%EC%82%B0%EB%B0%A9%EB%B2%95-%EC%A3%BC%ED%83%9D-%EA%B0%80%EA%B2%A9%EB%B3%84-%EC%84%B8%EC%9C%A8-%EC%A7%80%EB%B0%A9%EA%B5%90%EC%9C%A1%EC%84%B8-%EB%86%8D%ED%8A%B9%EC%84%B8-%EB%82%A9%EB%B6%80-%EA%B8%88%EC%95%A1-%EB%8B%A4%EC%A3%BC%ED%83%9D-%EC%A4%91%EA%B3%BC-%EA%B0%90%EB%A9%B4#page", "url": "https://sangsang.ephseed.com/2026-11-25-%EC%B7%A8%EB%93%9D%EC%84%B8-%EA%B3%84%EC%82%B0%EB%B0%A9%EB%B2%95-%EC%A3%BC%ED%83%9D-%EA%B0%80%EA%B2%A9%EB%B3%84-%EC%84%B8%EC%9C%A8-%EC%A7%80%EB%B0%A9%EA%B5%90%EC%9C%A1%EC%84%B8-%EB%86%8D%ED%8A%B9%EC%84%B8-%EB%82%A9%EB%B6%80-%EA%B8%88%EC%95%A1-%EB%8B%A4%EC%A3%BC%ED%83%9D-%EC%A4%91%EA%B3%BC-%EA%B0%90%EB%A9%B4", "headline": "취득세 계산방법 — 주택 가격별 세율과 지방교육세 포함 납부 금액 | 부동산·주거", "description": "주택 취득세는 취득가액이 6억원 이하면 1%, 9억원 초과면 3%이고 6억~9억원 구간은 (취득가액 억원 수 × 2/3 − 3)%로 1~3%가 적용된다. 여기에 지방교육세(취득세율의 10%)와 전용 85㎡ 초과 시 농어촌특별세 0.2%가 붙는다. 5억·7억·10억원 주택 납부 금액 계산 사례, 조정대상지역 2주택 8%·3주택 12% 중과, 생애최초 12억원 이하 200만원 감면, 신고 기한 60일과 가산세, 2026년 지방세제 개편안 내용까지 정리했다.", "inLanguage": "ko-KR", "image": "https://sangsang.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://sangsang.ephseed.com/#website"}, "datePublished": "2026-11-25", "dateModified": "2026-11-25", "author": {"@id": "https://sangsang.ephseed.com/#organization"}, "publisher": {"@id": "https://sangsang.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-EVlth33UH8CTDu2u"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-KMCr4AoIjIDsi9XA"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-qqfX36xk8gz6faM6"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+<article class="article-wrap">
+<!-- HUB:BREADCRUMB:BEGIN -->
+<nav class="hub-bc"><a href="/">생생 정보통</a> &rsaquo; <a href="/housing/">주거·임대차</a></nav>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "생생 정보통", "item": "https://sangsang.ephseed.com/"}, {"@type": "ListItem", "position": 2, "name": "주거·임대차", "item": "https://sangsang.ephseed.com/housing/"}]}</script>
+<!-- HUB:BREADCRUMB:END -->
+  <header class="hero">
+    <div class="category-badge">🏠 부동산 · 주거</div>
+    <h1>취득세 계산방법 —<br>주택 가격별 세율과 지방교육세 포함 납부 금액</h1>
+    <p class="hero-sub">집을 살 때 중개수수료와 함께 가장 먼저 들어가는 목돈이 취득세다. 매매가가 6억원 이하면 1%, 9억원을 넘으면 3%라는 것까지는 많이 알려져 있지만, 6억~9억원 구간은 가격에 따라 세율이 연속해서 달라지고 여기에 지방교육세와 농어촌특별세가 따로 붙는다. 이미 집이 있으면 조정대상지역 여부에 따라 8%나 12%까지 올라간다. 지방세법 기준 계산식, 가격별 납부 금액 사례, 중과 요건, 생애최초 감면, 신고 기한과 가산세를 순서대로 정리했다.</p>
+    <div class="hero-meta">
+      <span>🏠 부동산 · 주거</span>
+      <span>📅 2026년 11월 25일</span>
+      <span>⏱️ 약 9분</span>
+    </div>
+  </header>
+  <div class="body-content">
+    <div class="summary-box">
+      <h2>핵심 요약</h2>
+      <ul>
+        <li>1주택 취득세율은 취득가액 <strong>6억원 이하 1%, 9억원 초과 3%</strong>, 그 사이는 <b>(취득가액 억원 수 × 2/3 − 3)%</b>로 1~3%가 연속 적용된다. 7억원이면 약 1.67%, 7억 5천만원이면 2%다.</li>
+        <li>취득세 본세 외에 <strong>지방교육세</strong>(본세 세율의 10%, 즉 0.1~0.3%)와 전용면적 <strong>85㎡ 초과</strong> 주택의 <strong>농어촌특별세 0.2%</strong>가 따로 붙는다. 5억원 85㎡ 이하 주택은 약 550만원, 10억원은 약 3,300만원이다.</li>
+        <li>이미 주택이 있으면 조정대상지역 <strong>2주택 8%·3주택 이상 12%</strong>, 비조정대상지역은 3주택 8%·4주택 이상 12%의 중과세율이 적용된다. 종전 주택을 처분하는 <b>일시적 2주택</b>은 일반세율 대상이다.</li>
+        <li>신고·납부는 취득일(잔금일)부터 <strong>60일 이내</strong>다. 기한을 넘기면 무신고 가산세 20%와 납부지연 가산세가 붙는다. 무주택 세대가 12억원 이하 주택을 처음 사면 <b>최대 200만원</b>까지 감면받는 생애최초 제도도 있다.</li>
+      </ul>
+    </div>
+
+    <h2 class="sec">1. 취득세의 뜻 — 무엇에 얼마를 매기는 세금인가</h2>
+    <p>취득세는 부동산·차량·회원권 같은 자산을 취득할 때 한 번 내는 지방세다. 보유 기간 동안 매년 내는 재산세와 달리 <b>산 시점에 한 번</b> 내고, 집을 팔 때 내는 양도소득세와도 별개다. 세율과 과세표준의 근거는 지방세법 제10조 이하와 제11조이고, 신고·납부는 집이 있는 곳의 시·군·구에 한다. 인터넷으로는 지방세 포털 위택스에서 처리할 수 있다.</p>
+    <p>과세표준은 원칙적으로 <b>취득 당시의 가액</b>이다. 매매로 사는 유상승계취득은 사실상 취득가격, 즉 계약서에 적힌 매매대금에 중개·법무 비용이 아닌 실제로 매도인에게 지급하는 대금이 기준이다. 실거래가 신고를 마친 금액이 자료로 쓰이므로 계약서 금액을 낮춰 쓰는 이른바 다운계약은 취득세를 줄이지 못하고 가산세와 과태료 위험만 키운다. 분양권이나 입주권으로 사는 경우에는 분양대금에 옵션 비용·발코니 확장 비용이 포함되는 점도 확인해야 한다.</p>
+    <p>세금은 세 가지 이름으로 나뉘어 청구된다. <b>취득세 본세</b>, 여기에 <b>지방교육세</b>, 그리고 전용면적 85㎡를 넘는 주택에만 붙는 <b>농어촌특별세</b>다. 청구서에 총액만 찍혀 있어도 이 세 칸으로 풀어서 읽으면 어디서 금액이 달라졌는지 바로 알 수 있다.</p>
+
+    <h2 class="sec">2. 주택 취득세율 — 6억·9억 구간과 6억~9억 계산식</h2>
+    <p>1세대 1주택을 사는 일반적인 경우의 세율은 지방세법 제11조 제1항 제7호 나목에 따라 세 구간으로 나뉜다. 6억원 이하는 1%, 9억원 초과는 3%다. 6억원 초과 9억원 이하 구간은 가격을 계단식으로 끊지 않고 연속해서 올린다. 6억원일 때 1%에서 시작해 9억원일 때 3%가 되도록 직선으로 이어 붙이는 방식이다.</p>
+    <div class="formula">
+      <div class="f-main">6억 초과 ~ 9억 이하 세율(%) = (취득가액 ÷ 1억원) × 2/3 − 3</div>
+      <p class="f-note">예) 7억원 → 7 × 2/3 − 3 = 1.67% · 7억 5천만원 → 7.5 × 2/3 − 3 = 2% · 8억원 → 2.33%</p>
+    </div>
+    <table class="rate">
+      <tr><th>취득가액</th><th>취득세율</th><th>지방교육세</th><th>농어촌특별세</th></tr>
+      <tr><td>6억원 이하</td><td class="up">1%</td><td>0.1%</td><td>85㎡ 초과 시 0.2%</td></tr>
+      <tr><td>6억 초과 ~ 9억 이하</td><td class="up">1~3% (계산식 적용)</td><td>본세 세율의 10%</td><td>85㎡ 초과 시 0.2%</td></tr>
+      <tr><td>9억원 초과</td><td class="up">3%</td><td>0.3%</td><td>85㎡ 초과 시 0.2%</td></tr>
+    </table>
+    <p>전용면적 85㎡ 이하 국민주택 규모는 농어촌특별세가 면제된다. 그래서 같은 가격이라도 84㎡ 아파트와 85㎡를 넘는 아파트의 납부 총액이 달라진다. 다만 세율이 올라가는 경계에서 1만원 차이로 세율이 확 뛰는 구조는 아니므로, 6억원이나 9억원 근처 가격 협상에서 세금만 보고 가격을 맞출 이유는 크지 않다.</p>
+
+    <h2 class="sec">3. 가격별 취득세 계산 사례 — 5억·7억·9억·10억원</h2>
+    <p>가격별로 본세와 지방교육세를 합친 금액을 계산하면 아래와 같다. 모두 <b>1주택자가 85㎡ 이하 주택을 유상 취득하는 경우</b>이며, 85㎡를 넘으면 취득가액의 0.2%가 더해진다. 감면은 반영하지 않았다.</p>
+    <div class="infographic-section">
+      <h3>취득가액별 취득세 납부 총액 (85㎡ 이하, 감면 전)</h3>
+      <div class="bar-chart">
+        <div class="bar-item"><div class="bar-label"><span>5억원 (1%)</span><span class="val">약 550만원</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:17%">550만</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>7억원 (약 1.67%)</span><span class="val">약 1,283만원</span></div><div class="bar-track"><div class="bar-fill bar-cyan" style="width:39%">1,283만</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>9억원 (3%)</span><span class="val">약 2,970만원</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:90%">2,970만</div></div></div>
+        <div class="bar-item"><div class="bar-label"><span>10억원 (3%)</span><span class="val">약 3,300만원</span></div><div class="bar-track"><div class="bar-fill bar-amber" style="width:100%">3,300만</div></div></div>
+      </div>
+      <p class="note">취득세 본세 + 지방교육세 합계. 5억원 = 500만 + 50만, 7억원 = 약 1,167만 + 약 117만, 9억원 = 2,700만 + 270만, 10억원 = 3,000만 + 300만원. 85㎡ 초과 시 취득가액의 0.2% 추가.</p>
+    </div>
+    <div class="case">
+      <div class="ct">사례 ① 5억원, 전용 84㎡ 아파트</div>
+      <p>세율 1% → 본세 500만원, 지방교육세 0.1% → 50만원, 85㎡ 이하라 농어촌특별세는 없다. 합계 <strong>약 550만원</strong>이다. 같은 5억원이어도 전용 90㎡면 100만원이 더해져 약 650만원이다.</p>
+    </div>
+    <div class="case">
+      <div class="ct">사례 ② 7억원, 전용 84㎡ 아파트</div>
+      <p>세율 (7 × 2/3 − 3) = 약 1.67% → 본세 약 1,167만원, 지방교육세는 본세 세율의 10%인 약 0.167% → 약 117만원이다. 합계 <strong>약 1,283만원</strong>이다. 5억원 주택보다 가격은 2억원 높은데 세금은 2배 이상이다.</p>
+    </div>
+    <div class="case">
+      <div class="ct">사례 ③ 10억원, 전용 102㎡ 아파트</div>
+      <p>세율 3% → 본세 3,000만원, 지방교육세 0.3% → 300만원, 85㎡ 초과라 농어촌특별세 0.2% → 200만원이다. 합계 <strong>약 3,500만원</strong>이다. 9억원 이하로 가격이 내려가는 순간 세율이 낮아지므로 호가 협상에서 9억원 선은 세금 면에서도 의미가 있다.</p>
+    </div>
+
+    <h2 class="sec">4. 다주택자 취득세 중과 — 8%와 12%는 언제 적용되나</h2>
+    <p>이미 집을 가진 상태에서 추가로 주택을 사면 지방세법 제13조의2에 따라 일반세율이 아닌 <b>중과세율</b>이 적용된다. 핵심은 취득 후 <b>세대 기준 주택 수</b>와 새로 사는 집이 <b>조정대상지역</b>에 있는지다.</p>
+    <table class="rate">
+      <tr><th>취득 후 세대 주택 수</th><th>조정대상지역 취득</th><th>비조정대상지역 취득</th></tr>
+      <tr><td>1주택</td><td>1~3%</td><td>1~3%</td></tr>
+      <tr><td>2주택</td><td class="new">8%</td><td>1~3%</td></tr>
+      <tr><td>3주택</td><td class="new">12%</td><td class="new">8%</td></tr>
+      <tr><td>4주택 이상</td><td class="new">12%</td><td class="new">12%</td></tr>
+    </table>
+    <p>법인이 주택을 취득하는 경우에도 12%가 적용된다. 10억원 주택을 조정대상지역에서 두 번째 집으로 사면 본세만 8,000만원으로, 1주택자의 3,000만원보다 5,000만원이 많다. 지방교육세와 농어촌특별세 계산도 중과세율을 기준으로 따로 정해져 있어 총액은 더 커진다.</p>
+    <h3 class="sub">일시적 2주택은 중과에서 빠진다</h3>
+    <p>새 집을 사고 <b>일정 기간 안에 종전 주택을 처분</b>하는 일시적 2주택은 일반세율(1~3%)이 적용된다. 현행 처분 기한은 신규 주택 취득일로부터 3년이다. 2026년 8월 지방세제 개편안에서 이 기한을 <b>2년으로 줄이는 방안</b>이 보도됐고, 개편안 발표 전에 계약금을 지급한 계약은 종전 기한을 적용한다는 경과 규정도 함께 알려졌다. 다만 개편안은 국회 심의와 시행령 확정을 거쳐야 하므로, 계약 전에 반드시 위택스나 관할 구청 세무과에서 <b>확정된 시행일과 요건</b>을 확인해야 한다.</p>
+    <div class="warnbox">
+      <div class="wt">⚠️ 확인할 점</div>
+      <p>조정대상지역 지정 범위는 국토교통부 고시로 수시로 바뀐다. 계약 시점이 아니라 <b>취득(잔금·등기) 시점에 지정돼 있는지</b>로 판단하는 경우가 있어, 계약 후 잔금 사이에 지정이 달라질 수 있다. 주택 수에는 분양권·입주권, 같은 세대원의 주택도 포함될 수 있으므로 세대 합산으로 점검한다.</p>
+    </div>
+
+    <h2 class="sec">5. 생애최초 취득세 감면 — 12억원 이하 최대 200만원</h2>
+    <p>지방세특례제한법 제36조의3은 <b>무주택 세대의 세대원이 생애 처음으로 주택을 취득</b>하는 경우 취득세를 감면한다. 취득가액이 12억원 이하인 주택이 대상이고, 감면 한도는 <b>200만원</b>이다. 부부 합산 소득 7천만원 이하라는 과거 소득 요건은 폐지된 것으로 안내되고 있다. 한도가 200만원이라 5억원 안팎의 주택에서는 본세 500만원이 300만원 정도로 줄고, 7억원 이상 주택에서는 감면 효과가 상대적으로 작아진다.</p>
+    <ul class="plain">
+      <li><b>무주택 판단</b>: 본인뿐 아니라 세대원 전원이 주택을 소유한 적이 없어야 한다. 과거에 팔았더라도 주택을 가진 이력이 있으면 대상에서 빠지는 것이 원칙이다.</li>
+      <li><b>사후 관리</b>: 감면받은 뒤 일정 기간 안에 입주하지 않거나 단기간에 매각·임대하면 감면액을 추징당한다. 입주 기한과 매각 제한 기간은 개정이 잦으므로 신청 전에 조문을 확인한다.</li>
+      <li><b>2026년 개편안</b>: 40세 미만 청년의 감면 한도를 300만원으로 올리고 소형 주거용 오피스텔을 대상에 넣는 방안이 8월 개편안에 담긴 것으로 보도됐다. 시행 여부는 국회 확정 후 확인해야 한다.</li>
+    </ul>
+    <p>감면은 자동으로 적용되지 않는다. 취득세 신고서에 감면 신청란을 체크하고 증빙을 내는 방식이므로, 법무사에게 등기를 맡길 때도 생애최초 해당 여부를 먼저 알려야 한다. 감면 취득세에 대해서는 감면세액의 일정 비율로 농어촌특별세가 부과되는 경우도 있어 실제 납부액은 위택스 모의계산으로 확인하는 편이 안전하다.</p>
+
+    <h2 class="sec">6. 취득세 신고·납부 방법 — 60일 기한과 가산세</h2>
+    <p>유상 취득의 경우 취득일부터 <b>60일 이내</b>에 신고하고 납부해야 한다. 취득일은 잔금 지급일과 등기일 중 빠른 날이다. 실무에서는 등기를 신청할 때 취득세 납부 영수증이 필요해서 잔금 직후 법무사가 신고를 대행하는 경우가 대부분이다. 직접 하려면 아래 순서로 진행한다.</p>
+    <div class="steps">
+      <div class="step"><div class="step-t">계약서와 실거래 신고 금액 확인</div><div class="step-d">매매계약서 금액과 부동산 거래 신고 필증의 금액이 같은지 확인한다. 과세표준이 이 금액을 기준으로 정해진다.</div></div>
+      <div class="step"><div class="step-t">세율 구간과 면적 확인</div><div class="step-d">취득가액 구간, 전용면적 85㎡ 초과 여부, 세대 주택 수와 조정대상지역 해당 여부를 정리한다.</div></div>
+      <div class="step"><div class="step-t">위택스 또는 구청에서 신고서 작성</div><div class="step-d">위택스에서 취득세 신고를 선택하고 물건지와 취득일, 취득가액, 감면 여부를 입력하면 본세·지방교육세·농어촌특별세가 함께 계산된다.</div></div>
+      <div class="step"><div class="step-t">납부 후 등기 신청</div><div class="step-d">납부 영수증으로 소유권 이전 등기를 신청한다. 등기 때는 취득세와 별도로 등록면허세와 채권 매입 비용이 든다.</div></div>
+    </div>
+    <p>기한을 넘기면 신고하지 않은 세액의 20%가 <b>무신고 가산세</b>로 부과되고, 납부가 늦은 일수만큼 <b>납부지연 가산세</b>가 추가된다. 일부만 신고한 과소신고도 가산세 대상이다. 매매계약서 금액을 낮춘 신고처럼 의도적인 경우 가산세율은 더 올라간다. 한 번 놓치면 구제가 어려우니 잔금일을 기준으로 60일 기한을 달력에 표시해 두는 것이 가장 쉬운 방어책이다.</p>
+
+    <h2 class="sec">7. 내 상황별 체크리스트</h2>
+    <div class="impact-grid">
+      <div class="impact-card"><span class="impact-num">1~3%</span><span class="impact-label">무주택·1주택 일반 세율. 6억 이하 1%, 9억 초과 3%</span></div>
+      <div class="impact-card"><span class="impact-num">8%·12%</span><span class="impact-label">조정대상지역 2주택·3주택 이상 중과</span></div>
+      <div class="impact-card"><span class="impact-num">200만원</span><span class="impact-label">생애최초 12억 이하 감면 한도</span></div>
+      <div class="impact-card"><span class="impact-num">60일</span><span class="impact-label">취득일부터 신고·납부 기한</span></div>
+    </div>
+    <ul class="plain">
+      <li>무주택자라면 가격 구간과 생애최초 감면 가능 여부부터 계산한다.</li>
+      <li>집이 있다면 새 집이 <b>조정대상지역</b>인지, 종전 집을 언제까지 처분할 수 있는지부터 본다. 일시적 2주택 기한이 바뀌는 시기라면 계약 전에 확정 요건을 확인한다.</li>
+      <li>85㎡ 초과라면 농어촌특별세 0.2%를, 분양권이라면 옵션 비용 포함 여부를 예산에 넣는다.</li>
+      <li>자금 계획에는 취득세 외에 등기 비용, 중개수수료, 채권 매입 비용을 함께 넣는다. 중개수수료 계산은 <a href="/2026-11-01-중개수수료-계산방법-상한요율표-월세-환산-부가세-초과수수-반환">중개수수료 계산방법</a> 글에 정리해 두었다.</li>
+    </ul>
+
+    <div class="hashtag-wrap"><span class="hashtag">#취득세</span><span class="hashtag">#취득세계산방법</span><span class="hashtag">#주택취득세율</span><span class="hashtag">#지방교육세</span><span class="hashtag">#농어촌특별세</span><span class="hashtag">#다주택자중과</span><span class="hashtag">#생애최초감면</span><span class="hashtag">#일시적2주택</span><span class="hashtag">#위택스</span><span class="hashtag">#부동산세금</span></div>
+    <div class="sources">
+      <h4>참고 자료</h4>
+      <a href="https://www.law.go.kr" target="_blank" rel="noopener">국가법령정보센터 — 지방세법 제10조·제11조·제13조의2, 지방세특례제한법 제36조의3</a>
+      <a href="https://www.wetax.go.kr" target="_blank" rel="noopener">위택스 — 취득세 신고·납부 안내</a>
+      <a href="https://www.mois.go.kr" target="_blank" rel="noopener">행정안전부 — 2026년 지방세제 개편안 보도자료</a>
+    </div>
+    <p class="disclaimer">※ 본 아티클은 지방세법과 공개 자료를 정리한 정보성 콘텐츠이며 세무·법률 자문이 아닙니다. 계산 사례는 85㎡ 이하 1주택 일반세율, 감면 미적용을 가정한 개략 금액이며 실제 세액은 취득 시기, 세대 주택 수, 조정대상지역 지정, 감면·중과 요건, 지방자치단체 안내에 따라 달라질 수 있습니다. 2026년 지방세제 개편안 내용은 보도된 안으로서 최종 시행 여부와 시행일이 다를 수 있으니 계약 전 위택스·관할 구청 세무과·세무사를 통해 확인하시기 바랍니다.</p>
+  </div>
+
+<!-- HUB:RELATED:BEGIN -->
+<style>
+.hub-bc{font-size:13px;color:#5b6672;margin:0 0 18px;font-family:'Noto Sans KR',sans-serif}
+.hub-bc a{color:#5b6672;text-decoration:none}.hub-bc a:hover{text-decoration:underline}
+.hub-rel{margin:38px 0 6px;padding:20px 22px;border:1px solid #e3e8ee;border-radius:10px;
+  background:#fafbfc;font-family:'Noto Sans KR',sans-serif}
+.hub-rel h2{font-size:15px;margin:0 0 14px;font-weight:700;color:#12202e;
+  font-family:'Noto Sans KR',sans-serif;border:0;padding:0}
+.hub-rel ul{list-style:none;padding:0;margin:0}
+.hub-rel li{padding:7px 0;font-size:14.5px;line-height:1.55}
+.hub-rel li a{color:#12202e;text-decoration:none}
+.hub-rel li a:hover{color:#1a5f8a;text-decoration:underline}
+.hub-rel .hub-more{margin:14px 0 0;font-size:13.5px}
+.hub-rel .hub-more a{color:#1a5f8a;text-decoration:none;font-weight:700}
+</style>
+<aside class="hub-rel">
+  <h2>같은 분야 다른 글 — 주거·임대차</h2>
+  <ul>
+    <li><a href="/2026-08-13-계약갱신청구권-행사방법">계약갱신청구권 행사방법 — 집주인 실거주 거절 요건과 5% 상한 계산</a></li>
+    <li><a href="/2026-08-21-임차권등기명령-신청방법">임차권등기명령 신청방법 — 요건과 절차, 효력 발생 시점 정리</a></li>
+    <li><a href="/2026-08-29-소액임차인-최우선변제금-조건">소액임차인 최우선변제금 조건 — 지역별 보증금 범위와 배당 순위 계산</a></li>
+    <li><a href="/2026-09-30-청약-가점-계산법">청약 가점 계산법 — 무주택기간·부양가족·통장 가입기간별 점수</a></li>
+    <li><a href="/2026-10-07-전세보증보험-가입조건-보증료-계산방법">전세보증보험 가입 조건 — HUG 보증한도와 보증료 계산 방법</a></li>
+    <li><a href="/2026-10-15-월세-세액공제-조건-공제율-한도-서류">월세 세액공제 조건 — 총급여 8천만원 기준과 공제율·한도·서류</a></li>
+    <li><a href="/2026-10-24-확정일자-효력-발생시점-전입신고-대항력-받는곳-수수료-순서">확정일자 효력 발생 시점 — 전입신고 다음날 0시 대항력과 받는 곳·수수료·순서</a></li>
+    <li><a href="/2026-11-01-중개수수료-계산방법-상한요율표-월세-환산-부가세-초과수수-반환">중개수수료 계산방법 — 매매·전월세 상한요율표와 월세 환산·부가세 포함 금액</a></li>
+    <li><a href="/2026-11-09-전월세-신고제-신고방법-대상-기준-30일-기한-과태료-확정일자">전월세 신고제 신고방법 — 대상 보증금 6천만원·월세 30만원, 30일 기한과 과태료</a></li>
+    <li><a href="/2026-11-16-등기부등본-보는-법-갑구-을구-근저당-확인-순서-발급-비용">등기부등본 보는 법 — 갑구·을구 근저당 확인 순서와 발급 비용</a></li>
+  </ul>
+  <p class="hub-more"><a href="/housing/">주거·임대차 전체 보기 →</a></p>
+</aside>
+<!-- HUB:RELATED:END -->
+</article>
+</body>
+</html>
